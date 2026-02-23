@@ -6,19 +6,21 @@ import { repoStatus } from '../utils.js';
  * @param {Array} repos
  */
 export function renderStats(root, repos) {
-  const total     = repos.length;
-  const inProd    = repos.filter(r => r.production).length;
-  const upToDate  = repos.filter(r => repoStatus(r) === 'green').length;
-  const pending   = repos.filter(r => ['amber', 'red'].includes(repoStatus(r))).length;
-  const noRelease = repos.filter(r => repoStatus(r) === 'gray').length;
+  const total        = repos.length;
+  const inProd       = repos.filter(r => r.production).length;
+  const upToDate     = repos.filter(r => repoStatus(r) === 'green').length;
+  const pending      = repos.filter(r => ['amber', 'red'].includes(repoStatus(r))).length;
+  const needsRelease = repos.filter(r => repoStatus(r) === 'needs-release').length;
+  const inactive     = repos.filter(r => repoStatus(r) === 'gray').length;
 
   root.innerHTML = `
     <div class="stats-bar">
-      ${stat(total,     'Total de repositorios', '')}
-      ${stat(inProd,    'Con release en producción', 'green')}
-      ${stat(upToDate,  'Al día (sin cambios pendientes)', 'green')}
-      ${stat(pending,   'Con cambios pendientes', 'amber')}
-      ${stat(noRelease, 'Sin releases publicados', 'gray')}
+      ${stat(total,        'Total',                    '')}
+      ${stat(inProd,       'En producción',            'green')}
+      ${stat(upToDate,     'Al día',                   'green')}
+      ${stat(pending,      'Cambios pendientes',       'amber')}
+      ${stat(needsRelease, 'Sin sistema de releases',  'violet')}
+      ${stat(inactive,     'Inactivos',                'gray')}
     </div>
   `;
 }

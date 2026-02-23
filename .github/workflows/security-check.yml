@@ -28,6 +28,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      # ─── Nomenclatura del repositorio (advertencia, no bloquea) ───────────
+      - name: Check repo nomenclature
+        run: |
+          NAME="${{ github.repository }}"
+          NAME="${NAME#*/}"
+          PATTERN='^(raiz|tronco|ramas|fruto)-[a-z][a-z0-9]*(-[a-z][a-z0-9]*)+$'
+          if echo "$NAME" | grep -qE "$PATTERN"; then
+            echo "Nomenclatura OK: $NAME"
+          else
+            echo "::warning title=Nomenclatura::El repo '$NAME' no cumple el patrón [raiz|tronco|ramas|fruto]-[tipo]-[proyecto]. Ver CONTRIBUTING.md"
+          fi
+
       # ─── Archivos modificados en el PR ─────────────────────────────────────
       - name: Get changed files
         id: changed

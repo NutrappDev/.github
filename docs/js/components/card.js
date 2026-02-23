@@ -1,4 +1,4 @@
-import { formatDate, repoStatus, statusLabel, escHtml, shortName } from '../utils.js';
+import { formatDate, repoStatus, statusLabel, repoFase, FASE_LABELS, escHtml, shortName } from '../utils.js';
 
 /**
  * Genera el HTML de una tarjeta de repositorio.
@@ -23,6 +23,11 @@ export function repoCardHtml(repo) {
 }
 
 function cardHeader(repo, name, status) {
+  const fase = repoFase(repo);
+  const faseBadge = fase
+    ? `<span class="fase-badge fase-badge--${escHtml(fase)}">${escHtml(FASE_LABELS[fase] ?? fase)}</span>`
+    : '';
+
   const desc = repo.description
     ? `<div class="card-header__desc">${escHtml(repo.description)}</div>`
     : '';
@@ -34,6 +39,7 @@ function cardHeader(repo, name, status) {
           <a href="${escHtml(repo.url)}" target="_blank" rel="noopener">${escHtml(name)}</a>
         </div>
         ${desc}
+        ${faseBadge}
       </div>
       <span class="status-badge ${status}">${escHtml(statusLabel(status))}</span>
     </div>

@@ -13,6 +13,8 @@
   --c-red-light:    #fdecea;
   --c-gray:         #7a6e88;   /* gris violáceo — inactivo, muted */
   --c-gray-light:   #f2eef7;
+  --c-violet:       #5b21b6;   /* violeta — sin sistema de releases */
+  --c-violet-light: #ede9fe;
 
   /* Tipografía */
   --c-text:         #2d1c3e;   /* casi negro derivado del morado */
@@ -135,6 +137,7 @@ a:hover { text-decoration: underline; }
 
 .stat-card__number.green  { color: var(--c-green); }
 .stat-card__number.amber  { color: var(--c-amber); }
+.stat-card__number.violet { color: var(--c-violet); }
 .stat-card__number.gray   { color: var(--c-gray); }
 
 .stat-card__label {
@@ -150,7 +153,24 @@ a:hover { text-decoration: underline; }
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 8px;
+}
+
+.filters-bar--fase {
   margin-bottom: 20px;
+  padding: 8px 12px;
+  background: var(--c-purple-light);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-border);
+}
+
+.filters-bar__fase-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .filters-bar__search {
@@ -197,6 +217,16 @@ a:hover { text-decoration: underline; }
   color: var(--c-text-on-dark);
 }
 
+.filter-btn--fase {
+  font-size: 0.78rem;
+  padding: 5px 11px;
+}
+
+.filter-btn--fase.active {
+  background: var(--c-purple-mid);
+  border-color: var(--c-purple-mid);
+}
+
 .filters-bar__count {
   margin-left: auto;
   font-size: 0.8rem;
@@ -228,10 +258,11 @@ a:hover { text-decoration: underline; }
   transform: translateY(-1px);
 }
 
-.repo-card.status-green  { border-left-color: var(--c-green); }
-.repo-card.status-amber  { border-left-color: var(--c-amber); }
-.repo-card.status-red    { border-left-color: var(--c-red); }
-.repo-card.status-gray   { border-left-color: var(--c-gray); }
+.repo-card.status-green         { border-left-color: var(--c-green); }
+.repo-card.status-amber         { border-left-color: var(--c-amber); }
+.repo-card.status-red           { border-left-color: var(--c-red); }
+.repo-card.status-needs-release { border-left-color: var(--c-violet); }
+.repo-card.status-gray          { border-left-color: var(--c-gray); }
 
 /* Card header */
 .card-header {
@@ -268,10 +299,11 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
-.status-badge.green { background: var(--c-green-light); color: var(--c-green); }
-.status-badge.amber { background: var(--c-amber-light); color: var(--c-amber); }
-.status-badge.red   { background: var(--c-red-light);   color: var(--c-red); }
-.status-badge.gray  { background: var(--c-gray-light);  color: var(--c-gray); }
+.status-badge.green         { background: var(--c-green-light);  color: var(--c-green); }
+.status-badge.amber         { background: var(--c-amber-light);  color: var(--c-amber); }
+.status-badge.red           { background: var(--c-red-light);    color: var(--c-red); }
+.status-badge.needs-release { background: var(--c-violet-light); color: var(--c-violet); }
+.status-badge.gray          { background: var(--c-gray-light);   color: var(--c-gray); }
 
 /* Card body */
 .card-body {
@@ -383,6 +415,23 @@ a:hover { text-decoration: underline; }
   font-size: 0.7rem;
   color: var(--c-text-muted);
 }
+
+/* ─── Fase badge ─────────────────────────────────────────────────────────────── */
+.fase-badge {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fase-badge--raiz   { background: #f0ece4; color: #5c4a2a; }
+.fase-badge--tronco { background: #e0f7fa; color: #0e7490; }
+.fase-badge--ramas  { background: var(--c-purple-light); color: var(--c-purple-mid); }
+.fase-badge--fruto  { background: var(--c-green-light);  color: var(--c-green); }
 
 /* ─── Empty state ────────────────────────────────────────────────────────────── */
 .empty-state {

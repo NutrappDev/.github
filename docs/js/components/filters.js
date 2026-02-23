@@ -1,26 +1,44 @@
 /**
- * Barra de búsqueda y filtros.
- * Llama a onChange({ search, status }) cuando el usuario interactúa.
+ * Barra de búsqueda, filtros de estado y filtros de fase.
+ * Llama a onChange({ search, status, fase }) cuando el usuario interactúa.
  *
  * @param {HTMLElement} root
- * @param {(state: { search: string, status: string }) => void} onChange
+ * @param {(state: { search: string, status: string, fase: string }) => void} onChange
  */
 export function renderFilters(root, onChange) {
-  const filters = [
-    { key: 'all',   label: 'Todos' },
-    { key: 'green', label: '✓ Al día' },
-    { key: 'amber', label: '⚠ Pendientes' },
-    { key: 'red',   label: '↑ Muy desactualizados' },
-    { key: 'gray',  label: '— Sin releases' },
+  const statusFilters = [
+    { key: 'all',             label: 'Todos' },
+    { key: 'green',           label: '✓ Al día' },
+    { key: 'amber',           label: '⚠ Pendientes' },
+    { key: 'red',             label: '↑ Muy desactualizados' },
+    { key: 'needs-release',   label: '⬡ Sin releases' },
+    { key: 'gray',            label: '— Inactivos' },
   ];
 
-  let state = { search: '', status: 'all' };
+  const faseFilters = [
+    { key: 'all',    label: 'Todas las fases' },
+    { key: 'raiz',   label: 'Raíz' },
+    { key: 'tronco', label: 'Tronco' },
+    { key: 'ramas',  label: 'Ramas' },
+    { key: 'fruto',  label: 'Fruto' },
+  ];
+
+  let state = { search: '', status: 'all', fase: 'all' };
 
   function html() {
-    const btns = filters.map(f => `
+    const statusBtns = statusFilters.map(f => `
       <button
         class="filter-btn ${state.status === f.key ? 'active' : ''}"
-        data-status="${f.key}"
+        data-filter-type="status"
+        data-key="${f.key}"
+      >${f.label}</button>
+    `).join('');
+
+    const faseBtns = faseFilters.map(f => `
+      <button
+        class="filter-btn filter-btn--fase ${state.fase === f.key ? 'active' : ''}"
+        data-filter-type="fase"
+        data-key="${f.key}"
       >${f.label}</button>
     `).join('');
 
@@ -33,8 +51,12 @@ export function renderFilters(root, onChange) {
           value="${state.search}"
           aria-label="Buscar repositorio"
         />
-        ${btns}
+        ${statusBtns}
         <span class="filters-bar__count" id="visible-count"></span>
+      </div>
+      <div class="filters-bar filters-bar--fase">
+        <span class="filters-bar__fase-label">Fase:</span>
+        ${faseBtns}
       </div>
     `;
   }
@@ -44,12 +66,12 @@ export function renderFilters(root, onChange) {
     input.addEventListener('input', e => {
       state = { ...state, search: e.target.value };
       onChange(state);
-      updateActiveButtons();
     });
 
-    root.querySelectorAll('.filter-btn').forEach(btn => {
+    root.querySelectorAll('[data-filter-type]').forEach(btn => {
       btn.addEventListener('click', () => {
-        state = { ...state, status: btn.dataset.status };
+        const type = btn.dataset.filterType;
+        state = { ...state, [type]: btn.dataset.key };
         onChange(state);
         updateActiveButtons();
       });
@@ -57,8 +79,11 @@ export function renderFilters(root, onChange) {
   }
 
   function updateActiveButtons() {
-    root.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.status === state.status);
+    root.querySelectorAll('[data-filter-type="status"]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.key === state.status);
+    });
+    root.querySelectorAll('[data-filter-type="fase"]').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.key === state.fase);
     });
   }
 

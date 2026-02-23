@@ -7,7 +7,7 @@ import { renderHeader }  from './components/header.js';
 import { renderStats }   from './components/stats.js';
 import { renderFilters } from './components/filters.js';
 import { repoCardHtml }  from './components/card.js';
-import { repoStatus, shortName } from './utils.js';
+import { repoStatus, repoFase, shortName } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
 const headerRoot  = document.getElementById('header-root');
@@ -54,7 +54,7 @@ async function loadData() {
 }
 
 // ─── Filtrado ─────────────────────────────────────────────────────────────────
-function handleFilterChange({ search, status }) {
+function handleFilterChange({ search, status, fase }) {
   const query = search.trim().toLowerCase();
 
   const visible = allRepos.filter(repo => {
@@ -63,8 +63,9 @@ function handleFilterChange({ search, status }) {
 
     const matchesSearch = !query || name.includes(query) || desc.includes(query);
     const matchesStatus = status === 'all' || repoStatus(repo) === status;
+    const matchesFase   = !fase || fase === 'all' || repoFase(repo) === fase;
 
-    return matchesSearch && matchesStatus;
+    return matchesSearch && matchesStatus && matchesFase;
   });
 
   renderGrid(visible);

@@ -153,6 +153,25 @@ Reglas:
 
 ---
 
+## Integración con el dashboard
+
+El dashboard se regenera automáticamente cada día a las 06:00 UTC. Para actualizaciones en tiempo real tras un deploy, agrega este paso al final del workflow de despliegue de tu repo:
+
+```yaml
+- name: Actualizar dashboard
+  if: success()
+  run: |
+    gh api repos/NutrappDev/.github/dispatches \
+      -f event_type=deployment-completed \
+      -f "client_payload[repo]=${{ github.repository }}"
+  env:
+    GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+```
+
+El secret `ORG_READ_TOKEN` ya existe a nivel de organización. Solo necesita el scope `repo` para poder despachar el evento.
+
+---
+
 ## Tamaños máximos de PR
 
 Definidos en [`.github/pr-config.json`](.github/pr-config.json).

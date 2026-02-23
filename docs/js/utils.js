@@ -36,30 +36,54 @@ export function jiraUrl(ticket) {
 
 /**
  * Determina el estado visual de un repo.
- * @returns {'green'|'amber'|'red'|'gray'}
+ * @returns {'green'|'amber'|'red'|'needs-release'|'gray'}
  */
 export function repoStatus(repo) {
   if (repo.error) return 'gray';
-  if (!repo.production) return 'gray';
+
+  if (!repo.production) {
+    const daysSinceLastPush = repo.last_push
+      ? Math.floor((Date.now() - new Date(repo.last_push).getTime()) / 86400000)
+      : 999;
+    const hasPendingToQa = (repo.pending?.to_qa?.count ?? 0) > 0;
+    // Activo (<60 días) o con commits esperando QA → necesita adoptar sistema de releases
+    return (daysSinceLastPush < 60 || hasPendingToQa) ? 'needs-release' : 'gray';
+  }
 
   const pendingToProd = repo.pending?.to_production?.count ?? null;
-
-  if (pendingToProd === null) return 'amber'; // no se pudo calcular
+  if (pendingToProd === null) return 'amber';
   if (pendingToProd === 0) return 'green';
   if (pendingToProd <= 10) return 'amber';
   return 'red';
 }
 
 const STATUS_LABELS = {
-  green: 'Al día',
-  amber: 'Cambios pendientes',
-  red:   'Muy desactualizado',
-  gray:  'Sin releases',
+  green:           'Al día',
+  amber:           'Cambios pendientes',
+  red:             'Muy desactualizado',
+  'needs-release': 'Sin sistema de releases',
+  gray:            'Inactivo',
 };
 
 export function statusLabel(status) {
   return STATUS_LABELS[status] ?? status;
 }
+
+/**
+ * Extrae la fase del repo desde sus topics GitHub.
+ * @returns {'raiz'|'tronco'|'ramas'|'fruto'|null}
+ */
+export function repoFase(repo) {
+  const faseTopic = (repo.topics ?? []).find(t => t.startsWith('fase-'));
+  return faseTopic ? faseTopic.replace('fase-', '') : null;
+}
+
+export const FASE_LABELS = {
+  raiz:   'Raíz',
+  tronco: 'Tronco',
+  ramas:  'Ramas',
+  fruto:  'Fruto',
+};
 
 /** Escapa HTML para evitar XSS al insertar strings en innerHTML */
 export function escHtml(str) {
