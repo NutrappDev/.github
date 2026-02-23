@@ -25,28 +25,40 @@ jobs:
       contents: write # Para commitear repos.json
 
     steps:
-      # ─── 1. Checkout ──────────────────────────────────────────────────────────
+      # ─── Checkout ──────────────────────────────────────────────────────────
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ─── 2. Setup Node.js ─────────────────────────────────────────────────────
+      # ─── Setup Node.js ─────────────────────────────────────────────────────
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # ─── 3. Generar repos.json ────────────────────────────────────────────────
+      # ─── Verificar token antes de correr el script ────────────────────────
+      - name: Verify token
+        env:
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::El secret ORG_READ_TOKEN no está disponible para este repositorio."
+            echo "::error::Solución: GitHub → NutrappDev org → Settings → Secrets and variables → Actions → ORG_READ_TOKEN → editar → Repository access → incluir NutrappDev/.github"
+            exit 1
+          fi
+          echo "✅ Token disponible"
+
+      # ─── Generar repos.json ────────────────────────────────────────────────
       - name: Generate repos.json
         env:
           GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
         run: node .github/scripts/generate-dashboard.js docs/data/repos.json
 
-      # ─── 4. Mostrar resumen en el log ─────────────────────────────────────────
+      # ─── Mostrar resumen en el log ─────────────────────────────────────────
       - name: Show summary
         run: |
-          TOTAL=$(node -e "const d=require('./docs/data/repos.json'); console.log(d.total_repos)")
-          WITH_PROD=$(node -e "const d=require('./docs/data/repos.json'); console.log(d.repos.filter(r=>r.production).length)")
-          WITH_QA=$(node -e "const d=require('./docs/data/repos.json'); console.log(d.repos.filter(r=>r.qa).length)")
+          TOTAL=$(jq '.total_repos' docs/data/repos.json)
+          WITH_PROD=$(jq '[.repos[] | select(.production != null)] | length' docs/data/repos.json)
+          WITH_QA=$(jq '[.repos[] | select(.qa != null)] | length' docs/data/repos.json)
           echo "### Dashboard generado" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "| | |" >> "$GITHUB_STEP_SUMMARY"
@@ -56,7 +68,7 @@ jobs:
           echo "| Con tag de QA | $WITH_QA |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Generado | $(date -u '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
 
-      # ─── 5. Commit y push (solo si hay cambios y no es dry_run) ──────────────
+      # ─── Commit y push (solo si hay cambios y no es dry_run) ──────────────
       - name: Commit repos.json
         if: ${{ !inputs.dry_run }}
         run: |

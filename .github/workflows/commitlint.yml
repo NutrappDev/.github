@@ -26,13 +26,13 @@ jobs:
       pull-requests: write
 
     steps:
-      # ─── 1. Checkout ──────────────────────────────────────────────────────────
+      # ─── Checkout ──────────────────────────────────────────────────────────
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # ─── 2. Checkout config central (para leer pr-config.json) ───────────────
+      # ─── Checkout config central (para leer pr-config.json) ───────────────
       - name: Checkout central config
         uses: actions/checkout@v4
         with:
@@ -40,7 +40,7 @@ jobs:
           path: __central
           token: ${{ github.token }}
 
-      # ─── 3. Cargar tipos válidos y tipos que omiten Jira ─────────────────────
+      # ─── Cargar tipos válidos y tipos que omiten Jira ─────────────────────
       - name: Load config
         run: |
           CONFIG="__central/.github/pr-config.json"
@@ -49,7 +49,7 @@ jobs:
           echo "VALID_TYPES=$VALID_TYPES" >> "$GITHUB_ENV"
           echo "SKIP_JIRA_TYPES=$SKIP_JIRA" >> "$GITHUB_ENV"
 
-      # ─── 4. Validar commits ───────────────────────────────────────────────────
+      # ─── Validar commits ───────────────────────────────────────────────────
       - name: Validate commit messages
         id: validate
         env:
@@ -85,12 +85,12 @@ jobs:
 
             COMMIT_ERRORS=""
 
-            # ── 4.1 Formato: tipo(scope?): descripción ────────────────────────
+            # ── Formato: tipo(scope?): descripción ────────────────────────
             if ! echo "$SUBJECT" | grep -qP '^[a-z]+(\([^)]+\))?: .{10,}'; then
               COMMIT_ERRORS="$COMMIT_ERRORS\n  - Formato inválido. Esperado: \`tipo(scope): descripción TICKET-123\`"
               FAILED=$((FAILED + 1))
             else
-              # ── 4.2 Tipo válido ───────────────────────────────────────────
+              # ── Tipo válido ───────────────────────────────────────────
               COMMIT_TYPE=$(echo "$SUBJECT" | grep -oP '^[a-z]+')
               if ! echo "$COMMIT_TYPE" | grep -qP "^($VALID_TYPES)$"; then
                 VALID_LIST=$(echo "$VALID_TYPES" | tr '|' ', ')
@@ -98,7 +98,7 @@ jobs:
                 FAILED=$((FAILED + 1))
               fi
 
-              # ── 4.3 Ticket Jira ───────────────────────────────────────────
+              # ── Ticket Jira ───────────────────────────────────────────
               SKIP_COMMIT_JIRA=false
               echo "$COMMIT_TYPE" | grep -qP "^($SKIP_JIRA_TYPES)$" && SKIP_COMMIT_JIRA=true
               [ "$BRANCH_SKIPS_JIRA" = "true" ] && SKIP_COMMIT_JIRA=true
@@ -110,13 +110,13 @@ jobs:
                   COMMIT_ERRORS="$COMMIT_ERRORS\n  - Falta ticket Jira. Ejemplo: \`$COMMIT_TYPE(scope): descripción TICKET-123\`"
                   FAILED=$((FAILED + 1))
                 elif [ -n "$BRANCH_TICKET" ] && [ "$COMMIT_TICKET" != "$BRANCH_TICKET" ]; then
-                  # ── 4.4 Consistencia ticket commit ↔ rama ─────────────────
+                  # ── Consistencia ticket commit ↔ rama ─────────────────
                   COMMIT_ERRORS="$COMMIT_ERRORS\n  - Ticket \`$COMMIT_TICKET\` no coincide con el de la rama (\`$BRANCH_TICKET\`)"
                   FAILED=$((FAILED + 1))
                 fi
               fi
 
-              # ── 4.5 Longitud del header (warn, no bloquea) ────────────────
+              # ── Longitud del header (warn, no bloquea) ────────────────
               HEADER_LEN=${#SUBJECT}
               if [ "$HEADER_LEN" -gt 120 ]; then
                 echo "- \`$SHORT\` — header de $HEADER_LEN chars (máx recomendado: 120)" >> "$WARNINGS_FILE"
@@ -146,7 +146,7 @@ jobs:
             echo "validate_ok=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # ─── 5. Publicar comentario si hay errores ────────────────────────────────
+      # ─── Publicar comentario si hay errores ────────────────────────────────
       - name: Post comment on failure
         if: steps.validate.outputs.validate_ok == 'false'
         env:
@@ -210,7 +210,7 @@ jobs:
 
           gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
 
-      # ─── 6. Advertencias de longitud como annotations ────────────────────────
+      # ─── Advertencias de longitud como annotations ────────────────────────
       - name: Annotate long commit headers
         run: |
           if [ -s /tmp/commit_warnings.txt ]; then
@@ -220,7 +220,7 @@ jobs:
             done
           fi
 
-      # ─── 7. Fallar si hay errores ─────────────────────────────────────────────
+      # ─── Fallar si hay errores ─────────────────────────────────────────────
       - name: Fail if validation errors
         run: |
           [ "${{ steps.validate.outputs.validate_ok }}" = "false" ] && exit 1 || exit 0

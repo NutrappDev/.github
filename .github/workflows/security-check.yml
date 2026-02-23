@@ -22,13 +22,13 @@ jobs:
       pull-requests: write
 
     steps:
-      # ─── 1. Checkout ──────────────────────────────────────────────────────────
+      # ─── Checkout ──────────────────────────────────────────────────────────
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # ─── 2. Archivos modificados en el PR ─────────────────────────────────────
+      # ─── Archivos modificados en el PR ─────────────────────────────────────
       - name: Get changed files
         id: changed
         env:
@@ -40,7 +40,7 @@ jobs:
           echo "Total changed: $(wc -l < /tmp/changed_files.txt) files"
           cat /tmp/changed_files.txt
 
-      # ─── 3. Archivos prohibidos ────────────────────────────────────────────────
+      # ─── Archivos prohibidos ────────────────────────────────────────────────
       - name: Check prohibited filenames
         id: prohibited
         run: |
@@ -91,7 +91,7 @@ jobs:
             touch /tmp/prohibited_errors.txt
           fi
 
-      # ─── 4. Secretos en el contenido del diff ─────────────────────────────────
+      # ─── Secretos en el contenido del diff ─────────────────────────────────
       - name: Check secrets in diff content
         id: secrets
         env:
@@ -145,7 +145,7 @@ jobs:
             touch /tmp/secrets_findings.txt
           fi
 
-      # ─── 5. Tamaño de archivos binarios ───────────────────────────────────────
+      # ─── Tamaño de archivos binarios ───────────────────────────────────────
       - name: Check binary file sizes
         id: binary-size
         env:
@@ -185,7 +185,7 @@ jobs:
             touch /tmp/binary_warnings.txt
           fi
 
-      # ─── 6. Tamaño de archivos de código ──────────────────────────────────────
+      # ─── Tamaño de archivos de código ──────────────────────────────────────
       - name: Check code file sizes
         id: code-size
         run: |
@@ -228,7 +228,7 @@ jobs:
             touch /tmp/code_size_warnings.txt
           fi
 
-      # ─── 7. console.log en .ts (advertencia, no bloquea) ──────────────────────
+      # ─── console.log en .ts (advertencia, no bloquea) ──────────────────────
       - name: Warn console.log usage
         id: consolelog
         env:
@@ -257,7 +257,7 @@ jobs:
             touch /tmp/consolelog_files.txt
           fi
 
-      # ─── 8. Publicar comentario si hay hallazgos ──────────────────────────────
+      # ─── Publicar comentario si hay hallazgos ──────────────────────────────
       - name: Post findings comment
         if: >
           steps.prohibited.outputs.prohibited_ok == 'false' ||
@@ -343,7 +343,7 @@ jobs:
 
           gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
 
-      # ─── 9. Advertencia console.log como annotation (no bloquea) ──────────────
+      # ─── Advertencia console.log como annotation (no bloquea) ──────────────
       - name: Annotate console.log warnings
         run: |
           CONSOLELOG=$(cat /tmp/consolelog_files.txt)
@@ -355,7 +355,7 @@ jobs:
             done
           fi
 
-      # ─── 10. Fallar si hay errores críticos ───────────────────────────────────
+      # ─── Fallar si hay errores críticos ───────────────────────────────────
       - name: Fail if critical issues found
         run: |
           FAILED=false

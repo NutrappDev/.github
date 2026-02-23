@@ -25,13 +25,13 @@ jobs:
       issues: write
 
     steps:
-      # ─── 1. Checkout del repo que llama (para contar diff) ───────────────────
+      # ─── Checkout del repo que llama (para contar diff) ───────────────────
       - name: Checkout calling repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # ─── 2. Checkout de la config central ────────────────────────────────────
+      # ─── Checkout de la config central ────────────────────────────────────
       - name: Checkout central config
         uses: actions/checkout@v4
         with:
@@ -39,7 +39,7 @@ jobs:
           path: __central
           token: ${{ github.token }}
 
-      # ─── 3. Cargar config y exponer como env vars ─────────────────────────────
+      # ─── Cargar config y exponer como env vars ─────────────────────────────
       - name: Load pr-config.json
         id: load-config
         run: |
@@ -51,7 +51,7 @@ jobs:
           # Exportar config completa como JSON minificado
           echo "CONFIG=$(cat "$CONFIG_FILE" | jq -c 'del(._comment)')" >> "$GITHUB_ENV"
 
-      # ─── 4. Validar flujo de ramas ────────────────────────────────────────────
+      # ─── Validar flujo de ramas ────────────────────────────────────────────
       - name: Validate branch flow
         id: branch-flow
         env:
@@ -114,7 +114,7 @@ jobs:
             fi
           fi
 
-      # ─── 5. Extraer tipo del PR ───────────────────────────────────────────────
+      # ─── Extraer tipo del PR ───────────────────────────────────────────────
       - name: Extract PR type
         id: pr-type
         env:
@@ -136,7 +136,7 @@ jobs:
           echo "type_ok=$TYPE_OK" >> "$GITHUB_OUTPUT"
           echo "PR_TYPE=$PR_TYPE" >> "$GITHUB_ENV"
 
-      # ─── 6. Validar título del PR ─────────────────────────────────────────────
+      # ─── Validar título del PR ─────────────────────────────────────────────
       - name: Validate PR title
         id: title-check
         env:
@@ -202,7 +202,7 @@ jobs:
           echo "jira_ticket=$JIRA_TICKET" >> "$GITHUB_OUTPUT"
           echo "require_jira=$REQUIRE_JIRA" >> "$GITHUB_OUTPUT"
 
-      # ─── 7. Validar consistencia ticket rama ↔ título ────────────────────────
+      # ─── Validar consistencia ticket rama ↔ título ────────────────────────
       - name: Validate Jira consistency
         id: jira-check
         env:
@@ -234,7 +234,7 @@ jobs:
             echo "jira_consistency_result=✅ Ticket consistente en rama y título (\`$BRANCH_TICKET\`)" >> "$GITHUB_OUTPUT"
           fi
 
-      # ─── 8. Validar tamaño del PR ─────────────────────────────────────────────
+      # ─── Validar tamaño del PR ─────────────────────────────────────────────
       - name: Validate PR size
         id: size-check
         run: |
@@ -283,7 +283,7 @@ jobs:
           fi
           echo "size_result=$MSG" >> "$GITHUB_OUTPUT"
 
-      # ─── 9. Auto-etiquetar el PR ──────────────────────────────────────────────
+      # ─── Auto-etiquetar el PR ──────────────────────────────────────────────
       - name: Auto-label PR
         if: steps.pr-type.outputs.type_ok == 'true'
         env:
@@ -299,7 +299,7 @@ jobs:
             gh pr edit "$PR_NUMBER" --add-label "$LABEL" --repo "$REPO" 2>/dev/null || true
           fi
 
-      # ─── 10. Publicar comentario resumen ─────────────────────────────────────
+      # ─── Publicar comentario resumen ─────────────────────────────────────
       - name: Post summary comment
         if: github.event.action == 'opened' || github.event.action == 'synchronize'
         env:
@@ -348,7 +348,7 @@ jobs:
 
           gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
 
-      # ─── 11. Fallar si hay errores ────────────────────────────────────────────
+      # ─── Fallar si hay errores ────────────────────────────────────────────
       - name: Fail if validation errors
         run: |
           BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
