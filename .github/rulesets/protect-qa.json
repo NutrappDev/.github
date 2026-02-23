@@ -1,0 +1,55 @@
+{
+  "_comment": "Protección de la rama qa. Aplicar con: scripts/apply-rulesets.sh",
+
+  "name": "Protect qa",
+  "target": "branch",
+  "enforcement": "active",
+
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/heads/qa"],
+      "exclude": []
+    }
+  },
+
+  "bypass_actors": [
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    }
+  ],
+
+  "rules": [
+    {
+      "_comment": "Solo PRs — fuente válida: release/qa-YYYY-MM-DD (validado por pr-validation.yml)",
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 1,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true
+      }
+    },
+    {
+      "_comment": "SIN required_linear_history — qa debe recibir merge commits para preservar trazabilidad de cherry-picks",
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "required_status_checks": [
+          { "context": "validate" },
+          { "context": "security" }
+        ]
+      }
+    },
+    {
+      "_comment": "Bloquear force push",
+      "type": "non_fast_forward"
+    },
+    {
+      "_comment": "Bloquear eliminación de la rama",
+      "type": "deletion"
+    }
+  ]
+}

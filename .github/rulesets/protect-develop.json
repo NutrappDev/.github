@@ -1,0 +1,60 @@
+{
+  "_comment": "Protección de la rama develop. Aplicar con: scripts/apply-rulesets.sh",
+
+  "name": "Protect develop",
+  "target": "branch",
+  "enforcement": "active",
+
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/heads/develop"],
+      "exclude": []
+    }
+  },
+
+  "bypass_actors": [
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    }
+  ],
+
+  "rules": [
+    {
+      "_comment": "Bloquear pushes directos — toda integración debe ser via PR",
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 1,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true
+      }
+    },
+    {
+      "_comment": "Historial lineal — fuerza squash o rebase, impide merge commits en develop",
+      "type": "required_linear_history"
+    },
+    {
+      "_comment": "Workflows requeridos: checks del caller (pr-checks.yml en cada repo)",
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "required_status_checks": [
+          { "context": "validate" },
+          { "context": "security" },
+          { "context": "commitlint" }
+        ]
+      }
+    },
+    {
+      "_comment": "Bloquear force push",
+      "type": "non_fast_forward"
+    },
+    {
+      "_comment": "Bloquear eliminación de la rama",
+      "type": "deletion"
+    }
+  ]
+}

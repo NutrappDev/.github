@@ -1,0 +1,55 @@
+{
+  "_comment": "Protección de la rama main (producción). Aplicar con: scripts/apply-rulesets.sh",
+
+  "name": "Protect main",
+  "target": "branch",
+  "enforcement": "active",
+
+  "conditions": {
+    "ref_name": {
+      "include": ["refs/heads/main"],
+      "exclude": []
+    }
+  },
+
+  "bypass_actors": [
+    {
+      "actor_id": 1,
+      "actor_type": "OrganizationAdmin",
+      "bypass_mode": "always"
+    }
+  ],
+
+  "rules": [
+    {
+      "_comment": "2 aprobadores requeridos para producción. Fuentes válidas: release/prod-* o hotfix/* (validado por pr-validation.yml)",
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 2,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": true,
+        "required_review_thread_resolution": true
+      }
+    },
+    {
+      "_comment": "SIN required_linear_history — main debe recibir merge commits para preservar trazabilidad de cherry-picks desde qa",
+      "type": "required_status_checks",
+      "parameters": {
+        "strict_required_status_checks_policy": false,
+        "required_status_checks": [
+          { "context": "validate" },
+          { "context": "security" }
+        ]
+      }
+    },
+    {
+      "_comment": "Bloquear force push — nunca en producción",
+      "type": "non_fast_forward"
+    },
+    {
+      "_comment": "Bloquear eliminación de la rama",
+      "type": "deletion"
+    }
+  ]
+}
