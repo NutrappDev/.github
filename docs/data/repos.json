@@ -1,1 +1,1212 @@
-[]
+{
+  "generated_at": "2026-02-23T20:23:43.579Z",
+  "organization": "NutrappDev",
+  "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
+  "total_repos": 24,
+  "repos": [
+    {
+      "name": "alivia",
+      "full_name": "NutrappDev/alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T19:13:14Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "0d5355c",
+              "message": "checkout mx terminado",
+              "date": "2026-02-23T19:13:13Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 11,
+          "recent_commits": [
+            {
+              "sha": "3685fc8",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia",
+              "date": "2026-02-06T21:16:46Z",
+              "author": "cristigb",
+              "tickets": []
+            },
+            {
+              "sha": "9e23c0d",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia (#308)",
+              "date": "2026-02-06T21:22:04Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "51c4a1f",
+              "message": "Develop (#309)",
+              "date": "2026-02-06T21:36:54Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "5d48295",
+              "message": "fix: normalize patient data PMO-2634 (#310)",
+              "date": "2026-02-10T16:48:58Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "5b3ab05",
+              "message": "hotfix: normalize patient data PMO-2634 (#310) (#311)",
+              "date": "2026-02-10T20:54:22Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "62c85fc",
+              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
+              "date": "2026-02-16T21:42:53Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "c4e5fb6",
+              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
+              "date": "2026-02-16T21:43:07Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "bfe2410",
+              "message": "Develop (#314)",
+              "date": "2026-02-16T22:04:03Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "fc05958",
+              "message": "docs(terms): agregar términos y condiciones para México ALMX-228 (#315)",
+              "date": "2026-02-19T21:56:45Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            },
+            {
+              "sha": "a3421bb",
+              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
+              "date": "2026-02-19T22:57:41Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "ai-assistants-backend",
+      "full_name": "NutrappDev/ai-assistants-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T16:00:53Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "ai-assistants",
+      "full_name": "NutrappDev/ai-assistants",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T15:59:40Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "nutrabiotics-empresas",
+      "full_name": "NutrappDev/nutrabiotics-empresas",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-empresas",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-21T00:39:34Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 51,
+          "recent_commits": [
+            {
+              "sha": "ead131c",
+              "message": "Catalog intialización",
+              "date": "2026-01-23T15:31:42Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "ba3ad4b",
+              "message": "feat: Catalog section creation",
+              "date": "2026-01-29T15:57:55Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4e34791",
+              "message": "feat(catalog): Import adjustment and alias added",
+              "date": "2026-01-29T17:58:03Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "699399c",
+              "message": "Merge pull request #1 from NutrappDev/feat/B2B-37-import-adjustment",
+              "date": "2026-01-29T18:00:58Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
+                }
+              ]
+            },
+            {
+              "sha": "b43e1a7",
+              "message": "Merge pull request #2 from NutrappDev/develop",
+              "date": "2026-01-29T19:24:22Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "71b4244",
+              "message": "fix: Apply general SEO and SEM config B2B-77",
+              "date": "2026-01-29T21:27:59Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "1b73d5f",
+              "message": "Merge pull request #3 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T21:29:20Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "7aa2a05",
+              "message": "fix: add SEO and SEM config to home page B2B-77",
+              "date": "2026-01-29T22:03:44Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "a5c5d72",
+              "message": "Merge pull request #4 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T22:05:22Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "fcc08cc",
+              "message": "feat: Add not fpun page to avoid deploy AWS problems",
+              "date": "2026-01-29T22:21:30Z",
+              "author": "Aguilera",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "sso-micuenta",
+      "full_name": "NutrappDev/sso-micuenta",
+      "description": null,
+      "url": "https://github.com/NutrappDev/sso-micuenta",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-18T18:32:51Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "d0de038",
+              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
+              "date": "2026-02-18T17:23:09Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "d1bccc6",
+              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
+              "date": "2026-02-18T18:32:44Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-197",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "181eb53",
+              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
+              "date": "2026-02-16T20:16:48Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-113",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
+                }
+              ]
+            },
+            {
+              "sha": "e8a8fc6",
+              "message": "Merge pull request #61 from NutrappDev/develop",
+              "date": "2026-02-16T20:30:20Z",
+              "author": "k-aguilera",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-18T17:30:23Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "fruto-web-nutra-co",
+      "full_name": "NutrappDev/fruto-web-nutra-co",
+      "description": "Página web externa de Nutrabiotics Colombia",
+      "url": "https://github.com/NutrappDev/fruto-web-nutra-co",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T14:18:50Z",
+      "production": null,
+      "qa": {
+        "version": "qa-2026-02-17",
+        "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
+        "date": "2026-02-18T14:33:00Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17"
+      },
+      "pending": {
+        "to_qa": {
+          "count": 81,
+          "recent_commits": [
+            {
+              "sha": "b675f2a",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T21:49:47Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "0630493",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T21:52:16Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "333074c",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T22:01:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "598321a",
+              "message": "CheckBox Ajuste en Forms",
+              "date": "2026-01-07T14:35:57Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "cebce14",
+              "message": "se revisa y se pushea en cambio de nuevo en ambiente local OK",
+              "date": "2026-01-08T15:15:32Z",
+              "author": "Miller",
+              "tickets": []
+            },
+            {
+              "sha": "54dd229",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-13T21:42:48Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "b1e8b1d",
+              "message": "fix(slug): mostrar contraindicaciones para todos los medicamentos",
+              "date": "2026-01-14T13:31:30Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "316314a",
+              "message": "fix: disclaimer devuelve vacio",
+              "date": "2026-01-15T18:47:01Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "ab489ee",
+              "message": "ajsutes de la vista de slider inical de productos, ver todos los sliders",
+              "date": "2026-01-20T19:06:30Z",
+              "author": "millerladino",
+              "tickets": []
+            },
+            {
+              "sha": "863520f",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-22T21:03:32Z",
+              "author": "Jorge",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 39,
+          "recent_commits": [
+            {
+              "sha": "b3bb448",
+              "message": "SocialSidebar con ajustes de toggle",
+              "date": "2025-12-05T21:53:36Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "a6feb9a",
+              "message": "SocialSidebar con ajustes de toggle",
+              "date": "2025-12-05T22:26:00Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "57920db",
+              "message": "medications includes and fixed for reg. sanitario",
+              "date": "2025-12-11T00:43:02Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "4c1074f",
+              "message": "adjustment on view without login & order by des",
+              "date": "2025-12-11T16:13:57Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "f21b854",
+              "message": "fix:(alineación de descripciones) se alinearon descripciones de acuerdo a los textos concedidos por asuntos regulatorios",
+              "date": "2025-12-22T23:36:22Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "1f3b1e5",
+              "message": "fix(ajuste en las descripciones) ajustes visuales para mejorar la ux",
+              "date": "2025-12-23T18:55:56Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "1bdbedd",
+              "message": "CheckBox Ajuste en Forms",
+              "date": "2026-01-15T17:14:09Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "3368364",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-15T20:36:44Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "f3eba7a",
+              "message": "doc: ignore claude",
+              "date": "2026-01-20T21:32:23Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "b8b8bfa",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-20T23:18:03Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-17T13:41:07Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": {
+          "count": 20,
+          "recent_commits": [
+            {
+              "sha": "bd83439",
+              "message": "fix/FormFix",
+              "date": "2025-10-29T23:05:31Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "900d6aa",
+              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
+              "date": "2026-02-10T15:30:39Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4eda596",
+              "message": "feat: bussines selector config B2B-101",
+              "date": "2026-02-11T05:46:02Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "cfa9384",
+              "message": "feat: Forms selection B2B-101",
+              "date": "2026-02-12T12:33:23Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "511d81d",
+              "message": "fix: Temp adjustment to finalForm",
+              "date": "2026-02-12T20:04:54Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "11d7d08",
+              "message": "feat: Update business reitration flow  NE-106",
+              "date": "2026-02-13T19:26:15Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "NE-106",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
+                }
+              ]
+            },
+            {
+              "sha": "62020e9",
+              "message": "fix: Change data number for natural and legal",
+              "date": "2026-02-15T05:54:56Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "1efcce1",
+              "message": "build: pipeline qa",
+              "date": "2026-02-16T15:16:49Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "91550dd",
+              "message": "build(aws): pipeline to qa",
+              "date": "2026-02-16T15:18:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a7cf3c5",
+              "message": "fix(pipeline): env stage to qa",
+              "date": "2026-02-16T15:24:57Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
+      "description": null,
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-11T22:52:13Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "monorepo-alivia-backend",
+      "full_name": "NutrappDev/monorepo-alivia-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/monorepo-alivia-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T15:23:48Z",
+      "production": {
+        "version": "v2.0.0",
+        "sha": "77e6f13f730e683f6c54db1861e570d6a050fb48",
+        "date": "2026-02-10T13:13:58Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v2.0.0"
+      },
+      "qa": {
+        "version": "qa-2026-02-23",
+        "sha": "3f5c6566066271dab4e647e4b2f871ef5a5a5e79",
+        "date": "2026-02-23T14:36:15Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-23"
+      },
+      "pending": {
+        "to_qa": {
+          "count": 309,
+          "recent_commits": [
+            {
+              "sha": "23cad72",
+              "message": "build: final commit in ms-orders",
+              "date": "2025-08-20T22:39:31Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "b053a73",
+              "message": "build: final commit in ms-orders final",
+              "date": "2025-08-20T22:52:11Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "513749d",
+              "message": "build: clean lambda files",
+              "date": "2025-08-21T03:44:11Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "78d2d8e",
+              "message": "build: add github pr validation",
+              "date": "2025-08-21T05:19:24Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "26db40d",
+              "message": "ci: fixing pr validation",
+              "date": "2025-08-21T14:35:40Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "3f1fb06",
+              "message": "ci: no touch readme",
+              "date": "2025-08-21T16:36:07Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a8bcca8",
+              "message": "ci: fix qa branch",
+              "date": "2025-08-21T17:41:05Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "3ee505f",
+              "message": "ci: improving pr validation",
+              "date": "2025-08-22T03:17:47Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "503d5e7",
+              "message": "ci: re-run validation with updated title",
+              "date": "2025-08-22T03:26:57Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "7973549",
+              "message": "ci: fixing command syntax",
+              "date": "2025-08-22T03:31:27Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "16b0d7e",
+              "message": "fix: revertir configuracion VPC en qa",
+              "date": "2026-02-10T13:25:51Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "f3dace6",
+              "message": "revert: restaurar qa al estado previo al merge de main",
+              "date": "2026-02-10T17:56:40Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a729dbc",
+              "message": "feat(products): donation config GET endpoints ALCO-1392 (#233)",
+              "date": "2026-02-23T14:00:05Z",
+              "author": "Fabián Mauricio Romero lugo",
+              "tickets": [
+                {
+                  "id": "ALCO-1392",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1392"
+                }
+              ]
+            },
+            {
+              "sha": "3f5c656",
+              "message": "release: deploy PRs a QA - 2026-02-23",
+              "date": "2026-02-23T14:36:15Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "sso-terraform",
+      "full_name": "NutrappDev/sso-terraform",
+      "description": "terraform aws cuenta SSO - Nutrabiotics 861276125476",
+      "url": "https://github.com/NutrappDev/sso-terraform",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-09T00:49:58Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "rama-auto-nodos",
+      "full_name": "NutrappDev/rama-auto-nodos",
+      "description": "Nodes for automation",
+      "url": "https://github.com/NutrappDev/rama-auto-nodos",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-06T14:57:03Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "tronco-mcp-server",
+      "full_name": "NutrappDev/tronco-mcp-server",
+      "description": "Servidor Model Context Protocol",
+      "url": "https://github.com/NutrappDev/tronco-mcp-server",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-06T14:53:46Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "test-jira",
+      "full_name": "NutrappDev/test-jira",
+      "description": "Solo para pruebas",
+      "url": "https://github.com/NutrappDev/test-jira",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-04T16:01:30Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "fruto-landing-diplomado",
+      "full_name": "NutrappDev/fruto-landing-diplomado",
+      "description": null,
+      "url": "https://github.com/NutrappDev/fruto-landing-diplomado",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-01-27T21:08:26Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-01-25T04:54:59Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "whatsapp-alivia",
+      "full_name": "NutrappDev/whatsapp-alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/whatsapp-alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-01-23T20:42:25Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "tronco-api-crm",
+      "full_name": "NutrappDev/tronco-api-crm",
+      "description": "Integración del CRM con Mensajería",
+      "url": "https://github.com/NutrappDev/tronco-api-crm",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "master",
+      "last_push": "2026-01-21T17:35:28Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-01-05T22:50:53Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "nutrapp-gestion-proyectos",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-01-05T22:50:31Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2025-12-26T15:04:39Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "landing_essens_summit",
+      "full_name": "NutrappDev/landing_essens_summit",
+      "description": null,
+      "url": "https://github.com/NutrappDev/landing_essens_summit",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2025-12-12T21:49:25Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "virtual-visitor-serverless",
+      "full_name": "NutrappDev/virtual-visitor-serverless",
+      "description": null,
+      "url": "https://github.com/NutrappDev/virtual-visitor-serverless",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2025-11-20T19:18:30Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "alivia-whatsapp-n8n",
+      "full_name": "NutrappDev/alivia-whatsapp-n8n",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia-whatsapp-n8n",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2025-11-20T16:10:33Z",
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    }
+  ]
+}
