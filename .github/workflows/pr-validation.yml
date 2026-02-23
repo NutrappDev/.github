@@ -1,0 +1,365 @@
+name: PR Validation
+
+# Workflow reutilizable. Llamar desde otros repos así:
+#
+#   jobs:
+#     validate:
+#       uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
+#       secrets: inherit
+
+on:
+  workflow_call:
+    inputs:
+      config-path:
+        description: "Ruta a pr-config.json dentro de NutrappDev/.github"
+        type: string
+        default: ".github/pr-config.json"
+
+jobs:
+  validate:
+    name: Validate PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      # ─── 1. Checkout del repo que llama (para contar diff) ───────────────────
+      - name: Checkout calling repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ─── 2. Checkout de la config central ────────────────────────────────────
+      - name: Checkout central config
+        uses: actions/checkout@v4
+        with:
+          repository: NutrappDev/.github
+          path: __central
+          token: ${{ github.token }}
+
+      # ─── 3. Cargar config y exponer como env vars ─────────────────────────────
+      - name: Load pr-config.json
+        id: load-config
+        run: |
+          CONFIG_FILE="__central/${{ inputs.config-path }}"
+          if [ ! -f "$CONFIG_FILE" ]; then
+            echo "::error::No se encontró $CONFIG_FILE en NutrappDev/.github"
+            exit 1
+          fi
+          # Exportar config completa como JSON minificado
+          echo "CONFIG=$(cat "$CONFIG_FILE" | jq -c 'del(._comment)')" >> "$GITHUB_ENV"
+
+      # ─── 4. Validar flujo de ramas ────────────────────────────────────────────
+      - name: Validate branch flow
+        id: branch-flow
+        env:
+          SOURCE: ${{ github.head_ref }}
+          TARGET: ${{ github.base_ref }}
+        run: |
+          SOURCE_TYPE=$(echo "$SOURCE" | cut -d'/' -f1)
+          FLOW=$(echo "$CONFIG" | jq -r ".branch_flow[\"$TARGET\"] // empty")
+
+          if [ -z "$FLOW" ]; then
+            echo "branch_result=⚠️ Rama destino \`$TARGET\` no tiene reglas de flujo definidas." >> "$GITHUB_OUTPUT"
+            echo "branch_ok=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          ALLOWED=$(echo "$FLOW" | jq -r '.allowed_source_prefixes[]')
+          MATCH=false
+          for PREFIX in $ALLOWED; do
+            if [ "$SOURCE_TYPE" = "$PREFIX" ]; then
+              MATCH=true
+              break
+            fi
+          done
+
+          if [ "$MATCH" = "false" ]; then
+            ALLOWED_LIST=$(echo "$FLOW" | jq -r '[.allowed_source_prefixes[] | "`\(.)/*`"] | join(", ")')
+            echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+            echo "branch_result=❌ La rama \`$SOURCE\` (\`$SOURCE_TYPE\`) no puede hacer PR a \`$TARGET\`. Fuentes permitidas: $ALLOWED_LIST" >> "$GITHUB_OUTPUT"
+          else
+            STRATEGY=$(echo "$FLOW" | jq -r '.merge_strategy // "merge"')
+            echo "branch_ok=true" >> "$GITHUB_OUTPUT"
+            echo "branch_result=✅ Flujo válido: \`$SOURCE_TYPE\` → \`$TARGET\` (merge strategy: \`$STRATEGY\`)" >> "$GITHUB_OUTPUT"
+            echo "MERGE_STRATEGY=$STRATEGY" >> "$GITHUB_ENV"
+          fi
+
+          # Validar patrón de nombre si existe
+          PATTERNS=$(echo "$FLOW" | jq -r '.allowed_branch_pattern // .allowed_branch_patterns // empty')
+          if [ -n "$PATTERNS" ]; then
+            PATTERN_MATCH=false
+            # Si es array
+            if echo "$PATTERNS" | jq -e 'type == "array"' > /dev/null 2>&1; then
+              while IFS= read -r PAT; do
+                if echo "$SOURCE" | grep -qE "$PAT"; then
+                  PATTERN_MATCH=true
+                  break
+                fi
+              done < <(echo "$PATTERNS" | jq -r '.[]')
+            else
+              # String simple
+              PAT=$(echo "$PATTERNS" | jq -r '.')
+              if echo "$SOURCE" | grep -qE "$PAT"; then
+                PATTERN_MATCH=true
+              fi
+            fi
+
+            if [ "$PATTERN_MATCH" = "false" ]; then
+              EXAMPLE=$(echo "$CONFIG" | jq -r ".release_branch_naming | to_entries | map(select(.value | test(\"$TARGET\"))) | .[0].value // \"release/<tipo>-YYYY-MM-DD\"")
+              echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+              echo "branch_result=❌ El nombre de rama \`$SOURCE\` no cumple el patrón requerido para PRs a \`$TARGET\`. Ejemplo correcto: \`$EXAMPLE\`" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      # ─── 5. Extraer tipo del PR ───────────────────────────────────────────────
+      - name: Extract PR type
+        id: pr-type
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          # Tipo = primera palabra antes de '(' o ':'
+          PR_TYPE=$(echo "$PR_TITLE" | grep -oP '^[a-z]+' || true)
+          VALID_TYPES=$(echo "$CONFIG" | jq -r '.types | keys[]')
+
+          TYPE_OK=false
+          for T in $VALID_TYPES; do
+            if [ "$PR_TYPE" = "$T" ]; then
+              TYPE_OK=true
+              break
+            fi
+          done
+
+          echo "pr_type=$PR_TYPE" >> "$GITHUB_OUTPUT"
+          echo "type_ok=$TYPE_OK" >> "$GITHUB_OUTPUT"
+          echo "PR_TYPE=$PR_TYPE" >> "$GITHUB_ENV"
+
+      # ─── 6. Validar título del PR ─────────────────────────────────────────────
+      - name: Validate PR title
+        id: title-check
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          SOURCE: ${{ github.head_ref }}
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          TYPE_OK="${{ steps.pr-type.outputs.type_ok }}"
+
+          # Formato base: tipo(scope?): descripción
+          TITLE_FORMAT_OK=false
+          if echo "$PR_TITLE" | grep -qP '^[a-z]+(\([^)]+\))?: .{10,}'; then
+            TITLE_FORMAT_OK=true
+          fi
+
+          # ¿Requiere Jira ticket?
+          SKIP_JIRA_TYPES=$(echo "$CONFIG" | jq -r '.jira_ticket_skip_types[]')
+          REQUIRE_JIRA=true
+          for ST in $SKIP_JIRA_TYPES; do
+            if [ "$PR_TYPE" = "$ST" ]; then
+              REQUIRE_JIRA=false
+              break
+            fi
+          done
+          # También si la rama fuente es release/ o hotfix sin ticket explícito en config
+          SOURCE_TYPE=$(echo "$SOURCE" | cut -d'/' -f1)
+          if [ "$SOURCE_TYPE" = "release" ]; then
+            REQUIRE_JIRA=false
+          fi
+
+          JIRA_OK=true
+          JIRA_TICKET=""
+          if [ "$REQUIRE_JIRA" = "true" ]; then
+            JIRA_TICKET=$(echo "$PR_TITLE" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+            if [ -z "$JIRA_TICKET" ]; then
+              JIRA_OK=false
+            fi
+          fi
+
+          # Resultado
+          RESULT=""
+          ALL_OK=true
+
+          if [ "$TYPE_OK" = "false" ]; then
+            VALID_LIST=$(echo "$CONFIG" | jq -r '[.types | keys[] | "`\(.)`"] | join(", ")')
+            RESULT="❌ Tipo de PR desconocido: \`$PR_TYPE\`. Tipos válidos: $VALID_LIST"
+            ALL_OK=false
+          elif [ "$TITLE_FORMAT_OK" = "false" ]; then
+            RESULT="❌ Formato de título inválido. Esperado: \`tipo(scope): descripción TICKET-123\`"
+            ALL_OK=false
+          elif [ "$JIRA_OK" = "false" ]; then
+            RESULT="❌ Falta el ticket Jira en el título. Formato: \`$PR_TYPE(scope): descripción TICKET-123\`"
+            ALL_OK=false
+          else
+            RESULT="✅ Título válido"
+            if [ -n "$JIRA_TICKET" ]; then
+              RESULT="$RESULT (ticket: \`$JIRA_TICKET\`)"
+            fi
+          fi
+
+          echo "title_ok=$ALL_OK" >> "$GITHUB_OUTPUT"
+          echo "title_result=$RESULT" >> "$GITHUB_OUTPUT"
+          echo "jira_ticket=$JIRA_TICKET" >> "$GITHUB_OUTPUT"
+          echo "require_jira=$REQUIRE_JIRA" >> "$GITHUB_OUTPUT"
+
+      # ─── 7. Validar consistencia ticket rama ↔ título ────────────────────────
+      - name: Validate Jira consistency
+        id: jira-check
+        env:
+          SOURCE: ${{ github.head_ref }}
+        run: |
+          REQUIRE_JIRA="${{ steps.title-check.outputs.require_jira }}"
+          TITLE_TICKET="${{ steps.title-check.outputs.jira_ticket }}"
+
+          if [ "$REQUIRE_JIRA" = "false" ]; then
+            echo "jira_consistency_ok=true" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=⏭️ Consistencia Jira omitida (tipo \`$PR_TYPE\`)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Extraer ticket de la rama
+          BRANCH_TICKET=$(echo "$SOURCE" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+
+          if [ -z "$BRANCH_TICKET" ]; then
+            echo "jira_consistency_ok=false" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=❌ No se encontró ticket Jira en el nombre de la rama \`$SOURCE\`" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ "$TITLE_TICKET" != "$BRANCH_TICKET" ]; then
+            echo "jira_consistency_ok=false" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=❌ El ticket en el título (\`$TITLE_TICKET\`) no coincide con el de la rama (\`$BRANCH_TICKET\`)" >> "$GITHUB_OUTPUT"
+          else
+            echo "jira_consistency_ok=true" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=✅ Ticket consistente en rama y título (\`$BRANCH_TICKET\`)" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ─── 8. Validar tamaño del PR ─────────────────────────────────────────────
+      - name: Validate PR size
+        id: size-check
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          TYPE_OK="${{ steps.pr-type.outputs.type_ok }}"
+
+          if [ "$TYPE_OK" = "false" ]; then
+            echo "size_ok=true" >> "$GITHUB_OUTPUT"
+            echo "size_result=⏭️ Validación de tamaño omitida (tipo desconocido)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          MAX_LINES=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].max_lines // 0")
+          MAX_FILES=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].max_files // 0")
+
+          # Obtener estadísticas del diff
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+
+          CHANGED_FILES=$(git diff --name-only "$BASE"..."$HEAD" | wc -l)
+          CHANGED_LINES=$(git diff --shortstat "$BASE"..."$HEAD" | grep -oP '\d+(?= insertion)' | head -1 || echo 0)
+          CHANGED_LINES=$((CHANGED_LINES + $(git diff --shortstat "$BASE"..."$HEAD" | grep -oP '\d+(?= deletion)' | head -1 || echo 0)))
+
+          FILES_OK=true
+          LINES_OK=true
+          MSG=""
+
+          if [ "$MAX_FILES" -gt 0 ] && [ "$CHANGED_FILES" -gt "$MAX_FILES" ]; then
+            FILES_OK=false
+            MSG="$MSG ❌ Archivos: $CHANGED_FILES/$MAX_FILES."
+          else
+            MSG="$MSG ✅ Archivos: $CHANGED_FILES/$MAX_FILES."
+          fi
+
+          if [ "$MAX_LINES" -gt 0 ] && [ "$CHANGED_LINES" -gt "$MAX_LINES" ]; then
+            LINES_OK=false
+            MSG="$MSG ❌ Líneas: $CHANGED_LINES/$MAX_LINES."
+          else
+            MSG="$MSG ✅ Líneas: $CHANGED_LINES/$MAX_LINES."
+          fi
+
+          if [ "$FILES_OK" = "false" ] || [ "$LINES_OK" = "false" ]; then
+            echo "size_ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "size_ok=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "size_result=$MSG" >> "$GITHUB_OUTPUT"
+
+      # ─── 9. Auto-etiquetar el PR ──────────────────────────────────────────────
+      - name: Auto-label PR
+        if: steps.pr-type.outputs.type_ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          LABEL=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].label // \"\"")
+          if [ -n "$LABEL" ]; then
+            # Crear label si no existe
+            gh label create "$LABEL" --repo "$REPO" --color "ededed" 2>/dev/null || true
+            gh pr edit "$PR_NUMBER" --add-label "$LABEL" --repo "$REPO" 2>/dev/null || true
+          fi
+
+      # ─── 10. Publicar comentario resumen ─────────────────────────────────────
+      - name: Post summary comment
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
+          TITLE_OK="${{ steps.title-check.outputs.title_ok }}"
+          JIRA_OK="${{ steps.jira-check.outputs.jira_consistency_ok }}"
+          SIZE_OK="${{ steps.size-check.outputs.size_ok }}"
+
+          ALL_OK=true
+          if [ "$BRANCH_OK" = "false" ] || [ "$TITLE_OK" = "false" ] || [ "$JIRA_OK" = "false" ] || [ "$SIZE_OK" = "false" ]; then
+            ALL_OK=false
+          fi
+
+          HEADER="## 🤖 Validación automática de PR"
+          if [ "$ALL_OK" = "true" ]; then
+            STATUS="**Estado: ✅ Todo correcto**"
+          else
+            STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
+          fi
+
+          BODY="$HEADER
+
+          $STATUS
+
+          | Validación | Resultado |
+          |-----------|-----------|
+          | Flujo de ramas | ${{ steps.branch-flow.outputs.branch_result }} |
+          | Título del PR | ${{ steps.title-check.outputs.title_result }} |
+          | Consistencia Jira | ${{ steps.jira-check.outputs.jira_consistency_result }} |
+          | Tamaño del PR | ${{ steps.size-check.outputs.size_result }} |
+
+          ---
+          *Workflow: [pr-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/pr-validation.yml)*"
+
+          # Borrar comentario previo del bot en este PR (evitar spam)
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🤖 Validación"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+
+      # ─── 11. Fallar si hay errores ────────────────────────────────────────────
+      - name: Fail if validation errors
+        run: |
+          BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
+          TITLE_OK="${{ steps.title-check.outputs.title_ok }}"
+          JIRA_OK="${{ steps.jira-check.outputs.jira_consistency_ok }}"
+          SIZE_OK="${{ steps.size-check.outputs.size_ok }}"
+
+          FAILED=false
+          [ "$BRANCH_OK" = "false" ] && echo "::error::Flujo de ramas inválido" && FAILED=true
+          [ "$TITLE_OK" = "false" ] && echo "::error::Título del PR inválido" && FAILED=true
+          [ "$JIRA_OK" = "false" ] && echo "::error::Inconsistencia en ticket Jira" && FAILED=true
+          [ "$SIZE_OK" = "false" ] && echo "::error::PR excede el tamaño máximo permitido" && FAILED=true
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0

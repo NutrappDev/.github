@@ -1,0 +1,11 @@
+# Checkout temporal del workflow dashboard-generator
+__central/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+.claude

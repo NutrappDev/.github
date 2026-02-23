@@ -1,0 +1,56 @@
+{
+  "_comment": "Configuración central de validación de PRs para NutrappDev. Consumida por pr-validation.yml.",
+
+  "types": {
+    "feat":     { "label": "✨ feature",  "max_lines": 2000, "max_files": 60  },
+    "fix":      { "label": "🐛 fix",      "max_lines": 200,  "max_files": 10  },
+    "refactor": { "label": "♻️ refactor", "max_lines": 6500, "max_files": 150 },
+    "docs":     { "label": "📖 docs",     "max_lines": 5000, "max_files": 16  },
+    "chore":    { "label": "🔧 chore",    "max_lines": 250,  "max_files": 16  },
+    "build":    { "label": "🏗️ build",   "max_lines": 250,  "max_files": 15  },
+    "test":     { "label": "🧐 test",     "max_lines": 1000, "max_files": 50  },
+    "release":  { "label": "🎯 release",  "max_lines": 5000, "max_files": 350 },
+    "hotfix":   { "label": "🚑 hotfix",   "max_lines": 200,  "max_files": 10  },
+    "merge":    { "label": "🔗 merge",    "max_lines": 5000, "max_files": 350 }
+  },
+
+  "protected_branches": ["main", "qa", "develop"],
+
+  "branch_flow": {
+    "develop": {
+      "allowed_source_prefixes": ["feat", "fix", "chore", "docs", "refactor", "build", "test"],
+      "merge_strategy": "squash",
+      "require_jira_ticket": true,
+      "notes": "Squash merge para mantener historial limpio. Cada PR squasheado representa una unidad de trabajo con su ticket Jira."
+    },
+    "qa": {
+      "allowed_source_prefixes": ["release"],
+      "allowed_branch_pattern": "^release/qa-\\d{4}-\\d{2}-\\d{2}$",
+      "merge_strategy": "merge",
+      "require_jira_ticket": false,
+      "notes": "Solo acepta ramas release/qa-YYYY-MM-DD. Sin squash para preservar los commits cherry-picked desde develop y mantener trazabilidad completa."
+    },
+    "main": {
+      "allowed_source_prefixes": ["release", "hotfix"],
+      "allowed_branch_patterns": [
+        "^release/prod-\\d{4}-\\d{2}-\\d{2}$",
+        "^hotfix/.+"
+      ],
+      "merge_strategy": "merge",
+      "require_jira_ticket": false,
+      "notes": "Solo acepta ramas release/prod-YYYY-MM-DD (cherry-picks desde qa) y hotfix/TICKET-JIRA-descripcion. Sin squash para preservar trazabilidad completa."
+    }
+  },
+
+  "release_branch_naming": {
+    "to_qa":   "release/qa-YYYY-MM-DD",
+    "to_main": "release/prod-YYYY-MM-DD",
+    "notes": "Las ramas release son creadas manualmente antes de hacer cherry-picks. Un cherry-pick nunca va directo a qa o main."
+  },
+
+  "jira_ticket_skip_types": ["merge", "release"],
+
+  "hotfix_flow": {
+    "notes": "hotfix/TICKET-JIRA-descripcion se crea desde main, se arregla, y va directo a main via PR (rama release/ no aplica para hotfixes). El fix también debe backportearse a develop via PR normal de tipo fix."
+  }
+}

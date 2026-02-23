@@ -1,0 +1,116 @@
+import { formatDate, repoStatus, statusLabel, escHtml, shortName } from '../utils.js';
+
+/**
+ * Genera el HTML de una tarjeta de repositorio.
+ * @param {object} repo  Entrada de repos.json
+ * @returns {string} HTML string
+ */
+export function repoCardHtml(repo) {
+  const status = repoStatus(repo);
+  const name   = shortName(repo.full_name);
+
+  return `
+    <article class="repo-card status-${status}" data-name="${escHtml(name.toLowerCase())}">
+      ${cardHeader(repo, name, status)}
+      <div class="card-body">
+        ${releaseRow('prod', repo.production, 'Producción')}
+        ${releaseRow('qa',   repo.qa,         'QA')}
+        ${pendingSection(repo)}
+      </div>
+      ${cardFooter(repo)}
+    </article>
+  `;
+}
+
+function cardHeader(repo, name, status) {
+  const desc = repo.description
+    ? `<div class="card-header__desc">${escHtml(repo.description)}</div>`
+    : '';
+
+  return `
+    <div class="card-header">
+      <div>
+        <div class="card-header__name">
+          <a href="${escHtml(repo.url)}" target="_blank" rel="noopener">${escHtml(name)}</a>
+        </div>
+        ${desc}
+      </div>
+      <span class="status-badge ${status}">${escHtml(statusLabel(status))}</span>
+    </div>
+  `;
+}
+
+function releaseRow(type, release, label) {
+  if (!release) {
+    const msg = type === 'prod' ? 'Sin release de producción' : 'Sin release de QA';
+    return `
+      <div class="release-row none">
+        <span class="release-row__label">${label}</span>
+        <span>${msg}</span>
+      </div>
+    `;
+  }
+
+  const date = formatDate(release.date, { relative: true });
+  const dateFull = formatDate(release.date);
+  const version = type === 'qa'
+    ? release.version.replace(/^qa-/, '') // "2025-01-14" es más legible que "qa-2025-01-14"
+    : release.version;
+
+  return `
+    <div class="release-row ${type}">
+      <span class="release-row__label">${label}</span>
+      <span class="release-row__version">${escHtml(version)}</span>
+      <span class="release-row__date" title="${dateFull ?? ''}">${date ?? ''}</span>
+      <a class="release-row__link" href="${escHtml(release.url)}" target="_blank" rel="noopener" title="Ver en GitHub">↗</a>
+    </div>
+  `;
+}
+
+function pendingSection(repo) {
+  const toQa   = repo.pending?.to_qa;
+  const toProd = repo.pending?.to_production;
+
+  if (toQa === null && toProd === null) return '';
+
+  return `
+    <div class="pending-section">
+      ${pendingChip(toQa,   'to-qa',   'pendiente(s) a QA')}
+      ${pendingChip(toProd, 'to-prod', 'pendiente(s) a producción')}
+    </div>
+  `;
+}
+
+function pendingChip(data, cssClass, label) {
+  if (data === null || data === undefined) {
+    return `
+      <div class="pending-chip unknown">
+        <span class="pending-chip__count">—</span>
+        <span>${label}</span>
+      </div>
+    `;
+  }
+
+  const count = data.count ?? 0;
+  const chipClass = count === 0 ? 'ok' : cssClass;
+
+  return `
+    <div class="pending-chip ${chipClass}">
+      <span class="pending-chip__count">${count}</span>
+      <span>${count === 1 ? label.replace('(s)', '') : label}</span>
+    </div>
+  `;
+}
+
+function cardFooter(repo) {
+  const pushed = formatDate(repo.last_push, { relative: true });
+
+  return `
+    <div class="card-footer">
+      <a class="card-footer__link" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
+        Ver en GitHub →
+      </a>
+      ${pushed ? `<span class="card-footer__push">Última actividad: ${pushed}</span>` : ''}
+    </div>
+  `;
+}

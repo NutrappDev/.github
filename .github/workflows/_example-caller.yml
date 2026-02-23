@@ -1,0 +1,28 @@
+# EJEMPLO — Copiar este archivo en cada repo bajo .github/workflows/pr-checks.yml
+# Este archivo NO hace nada por sí solo (está en el repo .github y no se activa).
+#
+# Uso:
+#   cp _example-caller.yml <tu-repo>/.github/workflows/pr-checks.yml
+
+name: PR Checks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+    branches:
+      - main
+      - qa
+      - develop
+
+jobs:
+  validate:
+    uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
+    secrets: inherit
+
+  security:
+    uses: NutrappDev/.github/.github/workflows/security-check.yml@main
+    secrets: inherit
+
+  commitlint:
+    uses: NutrappDev/.github/.github/workflows/commitlint.yml@main
+    secrets: inherit

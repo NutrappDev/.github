@@ -1,0 +1,371 @@
+name: Security & Quality Check
+
+# Workflow reutilizable. Cubre las validaciones que hacen los hooks Husky locales
+# (pre-commit: validate-files.sh) en CI, sin depender de que Husky esté configurado.
+#
+# Llamar desde otros repos:
+#
+#   jobs:
+#     security:
+#       uses: NutrappDev/.github/.github/workflows/security-check.yml@main
+#       secrets: inherit
+
+on:
+  workflow_call:
+
+jobs:
+  security:
+    name: Security & Quality Check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      # ─── 1. Checkout ──────────────────────────────────────────────────────────
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ─── 2. Archivos modificados en el PR ─────────────────────────────────────
+      - name: Get changed files
+        id: changed
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Archivos agregados, copiados, modificados o renombrados (excluye eliminados)
+          git diff --name-only --diff-filter=ACMR "$BASE"..."$HEAD" > /tmp/changed_files.txt
+          echo "Total changed: $(wc -l < /tmp/changed_files.txt) files"
+          cat /tmp/changed_files.txt
+
+      # ─── 3. Archivos prohibidos ────────────────────────────────────────────────
+      - name: Check prohibited filenames
+        id: prohibited
+        run: |
+          ERRORS=""
+
+          while IFS= read -r FILE; do
+            BASENAME=$(basename "$FILE")
+
+            # .env (exacto) y .env.<cualquier-cosa> — excluye .env.example y .env.template
+            if echo "$BASENAME" | grep -qP '^\.env(\.(?!example|template|sample).+)?$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — archivo de entorno con posibles secretos"
+              continue
+            fi
+
+            # credentials.json
+            if [ "$BASENAME" = "credentials.json" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — archivo de credenciales"
+              continue
+            fi
+
+            # Claves SSH / certificados
+            if echo "$BASENAME" | grep -qP '\.(pem|key|p12|pfx|jks)$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — certificado o clave privada"
+              continue
+            fi
+
+            # Claves SSH por nombre
+            if echo "$BASENAME" | grep -qP '^id_(rsa|dsa|ecdsa|ed25519)(\.pub)?$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — clave SSH"
+              continue
+            fi
+
+            # Keystore de Android
+            if echo "$BASENAME" | grep -qP '\.keystore$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — Android keystore"
+              continue
+            fi
+
+          done < /tmp/changed_files.txt
+
+          if [ -n "$ERRORS" ]; then
+            echo "prohibited_ok=false" >> "$GITHUB_OUTPUT"
+            # Guardar en archivo para el paso de comentario (evita límite de env vars)
+            printf "%b" "$ERRORS" > /tmp/prohibited_errors.txt
+            echo "::error::Se encontraron archivos prohibidos en el PR"
+          else
+            echo "prohibited_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/prohibited_errors.txt
+          fi
+
+      # ─── 4. Secretos en el contenido del diff ─────────────────────────────────
+      - name: Check secrets in diff content
+        id: secrets
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Solo líneas AÑADIDAS (prefijo +), excluye cabeceras del diff (+++).
+          # Se excluyen archivos de prueba y ejemplos donde los patrones son ficticios.
+          DIFF_FILE="/tmp/pr_additions.txt"
+          git diff "$BASE"..."$HEAD" \
+            -- ':!*.spec.ts' ':!*.spec.js' ':!*.test.ts' ':!*.test.js' \
+               ':!*.example' ':!*.sample' ':!*/__mocks__/*' ':!*/fixtures/*' \
+            | grep -P '^\+[^+]' | sed 's/^\+//' > "$DIFF_FILE" || true
+
+          FINDINGS=""
+
+          check_pattern() {
+            local PATTERN="$1"
+            local LABEL="$2"
+            local FLAGS="${3:--P}"
+
+            # Busca el patrón, captura también el nombre de archivo del diff
+            if grep -q $FLAGS "$PATTERN" "$DIFF_FILE" 2>/dev/null; then
+              # Obtener líneas de ejemplo (max 3, truncadas a 120 chars)
+              EXAMPLES=$(grep $FLAGS "$PATTERN" "$DIFF_FILE" | head -3 | \
+                sed 's/./& /5' | cut -c1-120 | sed 's/$/…/' | \
+                awk '{print "  `" $0 "`"}' | tr '\n' '|' | sed 's/|$//')
+              FINDINGS="$FINDINGS\n**$LABEL**\n$EXAMPLES"
+            fi
+          }
+
+          # Patrones de secretos — assignment con valor real (no solo referencias)
+          check_pattern 'API_KEY\s*=\s*["\047][^"\047]{8,}' "API_KEY con valor"
+          check_pattern 'SECRET\s*=\s*["\047][^"\047]{8,}' "SECRET con valor"
+          check_pattern 'TOKEN\s*=\s*["\047][^"\047]{8,}' "TOKEN con valor"
+          check_pattern 'PASSWORD\s*=\s*["\047][^"\047]{4,}' "PASSWORD con valor" "-Pi"
+          check_pattern 'DB_PASSWORD\s*=\s*["\047][^"\047]{4,}' "DB_PASSWORD con valor" "-Pi"
+          check_pattern 'AWS_SECRET_ACCESS_KEY\s*=\s*["\047][^"\047]{8,}' "AWS_SECRET_ACCESS_KEY"
+          check_pattern 'PRIVATE_KEY\s*=\s*["\047][^"\047]{8,}' "PRIVATE_KEY con valor"
+          check_pattern '-----BEGIN (RSA |EC |OPENSSH |)PRIVATE KEY' "Clave privada embebida" "-P"
+          check_pattern 'ghp_[A-Za-z0-9]{36}' "GitHub Personal Access Token"
+          check_pattern 'AKIA[0-9A-Z]{16}' "AWS Access Key ID"
+          check_pattern 'eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.' "JWT hardcodeado"
+
+          if [ -n "$FINDINGS" ]; then
+            echo "secrets_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$FINDINGS" > /tmp/secrets_findings.txt
+            echo "::error::Se encontraron posibles secretos en el diff del PR"
+          else
+            echo "secrets_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/secrets_findings.txt
+          fi
+
+      # ─── 5. Tamaño de archivos binarios ───────────────────────────────────────
+      - name: Check binary file sizes
+        id: binary-size
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          ERRORS=""
+          WARNINGS=""
+
+          # numstat muestra "-  -  filename" para archivos binarios
+          BINARY_FILES=$(git diff --numstat "$BASE"..."$HEAD" | awk '$1 == "-" {print $3}')
+
+          for FILE in $BINARY_FILES; do
+            [ ! -f "$FILE" ] && continue
+            SIZE_BYTES=$(stat -c%s "$FILE" 2>/dev/null || echo 0)
+            SIZE_MB=$(echo "scale=2; $SIZE_BYTES / 1048576" | bc)
+
+            if [ "$SIZE_BYTES" -gt 5242880 ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — ${SIZE_MB}MB (máx: 5MB)"
+            elif [ "$SIZE_BYTES" -gt 1048576 ]; then
+              WARNINGS="$WARNINGS\n- \`$FILE\` — ${SIZE_MB}MB (recomendado: <1MB)"
+            fi
+          done
+
+          if [ -n "$ERRORS" ]; then
+            echo "binary_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$ERRORS" > /tmp/binary_errors.txt
+            echo "::error::Archivos binarios demasiado grandes (>5MB)"
+          else
+            echo "binary_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/binary_errors.txt
+          fi
+
+          if [ -n "$WARNINGS" ]; then
+            printf "%b" "$WARNINGS" > /tmp/binary_warnings.txt
+          else
+            touch /tmp/binary_warnings.txt
+          fi
+
+      # ─── 6. Tamaño de archivos de código ──────────────────────────────────────
+      - name: Check code file sizes
+        id: code-size
+        run: |
+          # Umbrales: >300 warn, >500 error, >800 hard error
+          WARN_THRESHOLD=300
+          ERROR_THRESHOLD=500
+          HARD_THRESHOLD=800
+
+          ERRORS=""
+          WARNINGS=""
+
+          while IFS= read -r FILE; do
+            # Solo archivos .ts y .js que existen (no eliminados)
+            echo "$FILE" | grep -qP '\.(ts|js)$' || continue
+            [ ! -f "$FILE" ] && continue
+
+            LINES=$(wc -l < "$FILE")
+
+            if [ "$LINES" -gt "$HARD_THRESHOLD" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas (hard limit: $HARD_THRESHOLD)"
+            elif [ "$LINES" -gt "$ERROR_THRESHOLD" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas (máx recomendado: $ERROR_THRESHOLD)"
+            elif [ "$LINES" -gt "$WARN_THRESHOLD" ]; then
+              WARNINGS="$WARNINGS\n- \`$FILE\` — $LINES líneas (considera dividirlo: >$WARN_THRESHOLD)"
+            fi
+          done < /tmp/changed_files.txt
+
+          if [ -n "$ERRORS" ]; then
+            echo "code_size_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$ERRORS" > /tmp/code_size_errors.txt
+            echo "::error::Archivos de código que superan el límite de líneas"
+          else
+            echo "code_size_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/code_size_errors.txt
+          fi
+
+          if [ -n "$WARNINGS" ]; then
+            printf "%b" "$WARNINGS" > /tmp/code_size_warnings.txt
+          else
+            touch /tmp/code_size_warnings.txt
+          fi
+
+      # ─── 7. console.log en .ts (advertencia, no bloquea) ──────────────────────
+      - name: Warn console.log usage
+        id: consolelog
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # Solo archivos .ts que NO sean specs ni mocks
+          CONSOLELOG_FILES=""
+
+          while IFS= read -r FILE; do
+            echo "$FILE" | grep -qP '\.ts$' || continue
+            echo "$FILE" | grep -qP '\.(spec|test)\.ts$' && continue
+            [ ! -f "$FILE" ] && continue
+
+            # Busca console.log solo en líneas añadidas
+            ADDED=$(git diff "$BASE"..."$HEAD" -- "$FILE" | grep -P '^\+[^+].*console\.log' || true)
+            if [ -n "$ADDED" ]; then
+              COUNT=$(echo "$ADDED" | wc -l)
+              CONSOLELOG_FILES="$CONSOLELOG_FILES\n- \`$FILE\` ($COUNT ocurrencia(s) añadida(s))"
+            fi
+          done < /tmp/changed_files.txt
+
+          if [ -n "$CONSOLELOG_FILES" ]; then
+            printf "%b" "$CONSOLELOG_FILES" > /tmp/consolelog_files.txt
+          else
+            touch /tmp/consolelog_files.txt
+          fi
+
+      # ─── 8. Publicar comentario si hay hallazgos ──────────────────────────────
+      - name: Post findings comment
+        if: >
+          steps.prohibited.outputs.prohibited_ok == 'false' ||
+          steps.secrets.outputs.secrets_ok == 'false' ||
+          steps.binary-size.outputs.binary_ok == 'false' ||
+          steps.code-size.outputs.code_size_ok == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          BODY="## 🔒 Security & Quality Check
+
+          "
+
+          # Archivos prohibidos
+          PROHIBITED=$(cat /tmp/prohibited_errors.txt)
+          if [ -n "$PROHIBITED" ]; then
+            BODY="${BODY}### ❌ Archivos prohibidos
+          Estos archivos no deben incluirse en el repositorio:
+          $(printf "%b" "$PROHIBITED")
+
+          "
+          fi
+
+          # Secretos en contenido
+          SECRETS=$(cat /tmp/secrets_findings.txt)
+          if [ -n "$SECRETS" ]; then
+            BODY="${BODY}### ❌ Posibles secretos en el diff
+          Revisar las siguientes líneas añadidas. Si son falsos positivos, agregar comentario \`# nosec\` en la línea:
+          $(printf "%b" "$SECRETS")
+
+          "
+          fi
+
+          # Binarios grandes
+          BIN_ERRORS=$(cat /tmp/binary_errors.txt)
+          BIN_WARNINGS=$(cat /tmp/binary_warnings.txt)
+          if [ -n "$BIN_ERRORS" ] || [ -n "$BIN_WARNINGS" ]; then
+            BODY="${BODY}### 📦 Tamaño de archivos binarios
+          "
+            [ -n "$BIN_ERRORS" ] && BODY="${BODY}**Errores (>5MB):**
+          $(printf "%b" "$BIN_ERRORS")
+          "
+            [ -n "$BIN_WARNINGS" ] && BODY="${BODY}**Advertencias (>1MB):**
+          $(printf "%b" "$BIN_WARNINGS")
+          "
+          fi
+
+          # Código grande
+          CODE_ERRORS=$(cat /tmp/code_size_errors.txt)
+          CODE_WARNINGS=$(cat /tmp/code_size_warnings.txt)
+          if [ -n "$CODE_ERRORS" ] || [ -n "$CODE_WARNINGS" ]; then
+            BODY="${BODY}### 📄 Tamaño de archivos de código
+          "
+            [ -n "$CODE_ERRORS" ] && BODY="${BODY}**Errores (>500 líneas):**
+          $(printf "%b" "$CODE_ERRORS")
+          "
+            [ -n "$CODE_WARNINGS" ] && BODY="${BODY}**Advertencias (>300 líneas):**
+          $(printf "%b" "$CODE_WARNINGS")
+          "
+          fi
+
+          # console.log (solo en footer del comentario, sin bloquear)
+          CONSOLELOG=$(cat /tmp/consolelog_files.txt)
+          if [ -n "$CONSOLELOG" ]; then
+            BODY="${BODY}---
+          > ⚠️ **console.log detectado** (no bloquea, pero considerar usar un logger):
+          $(printf "%b" "$CONSOLELOG")
+          "
+          fi
+
+          BODY="${BODY}---
+          *Workflow: [security-check.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/security-check.yml)*"
+
+          # Reemplazar comentario previo
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🔒 Security"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+
+      # ─── 9. Advertencia console.log como annotation (no bloquea) ──────────────
+      - name: Annotate console.log warnings
+        run: |
+          CONSOLELOG=$(cat /tmp/consolelog_files.txt)
+          if [ -n "$CONSOLELOG" ]; then
+            echo "::warning::console.log detectado en archivos .ts — considerar usar un logger estructurado"
+            printf "%b\n" "$CONSOLELOG" | while IFS= read -r LINE; do
+              [ -z "$LINE" ] && continue
+              echo "::warning::$LINE"
+            done
+          fi
+
+      # ─── 10. Fallar si hay errores críticos ───────────────────────────────────
+      - name: Fail if critical issues found
+        run: |
+          FAILED=false
+          [ "${{ steps.prohibited.outputs.prohibited_ok }}" = "false" ] && \
+            echo "::error::Archivos prohibidos detectados" && FAILED=true
+          [ "${{ steps.secrets.outputs.secrets_ok }}" = "false" ] && \
+            echo "::error::Posibles secretos en el código" && FAILED=true
+          [ "${{ steps.binary-size.outputs.binary_ok }}" = "false" ] && \
+            echo "::error::Archivos binarios >5MB" && FAILED=true
+          [ "${{ steps.code-size.outputs.code_size_ok }}" = "false" ] && \
+            echo "::error::Archivos de código superan el límite de líneas" && FAILED=true
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0
