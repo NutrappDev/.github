@@ -111,7 +111,7 @@ release(qa): promoción a QA 2025-01-15
 1. Identificar los commits de `develop` a incluir
 2. Crear rama: `git checkout -b release/qa-YYYY-MM-DD qa`
 3. Cherry-pick de cada commit: `git cherry-pick <sha>`
-4. Resolver conflictos si los hay (en `affected.txt` usar siempre `--theirs`)
+4. Resolver conflictos si los hay (tomar siempre `--theirs`; merge commits requieren flag `-m 1`)
 5. Abrir PR de `release/qa-YYYY-MM-DD` → `qa`
 6. Merge **sin squash** (merge commit)
 7. Crear tag anotado: `qa-YYYY-MM-DD`
@@ -123,7 +123,7 @@ release(qa): promoción a QA 2025-01-15
 3. Cherry-pick de los commits desde `qa`
 4. Abrir PR de `release/prod-YYYY-MM-DD` → `main`
 5. Merge **sin squash** (merge commit)
-6. Crear tag de versión: `v1.2.3`
+6. Crear tag anotado: `prod-YYYY-MM-DD`
 
 ## Proceso de hotfix
 
@@ -131,6 +131,25 @@ release(qa): promoción a QA 2025-01-15
 2. Aplicar el fix
 3. Abrir PR a `main` (merge sin squash)
 4. **Backport obligatorio:** abrir también un PR a `develop` con el mismo fix (tipo `fix/`)
+
+---
+
+## Nomenclatura de repositorios
+
+Patrón: `[fase]-[tipo]-[proyecto]`
+
+| Fase | Descripción | SLA |
+| ---- | ----------- | --- |
+| `raiz` | Backend, Core, SSO, Bases de datos, Infra | Crítica |
+| `tronco` | APIs de integración (ERP, CRM, IA) | Alta |
+| `ramas` | Frontends internos (Admin, Intranet) | Media |
+| `fruto` | Frontends de conversión (e-commerce, B2B) | Crítica |
+
+Ejemplos: `fruto-app-alivia`, `raiz-monorepo-core`, `tronco-api-mensajeria-automatizacion`
+
+Reglas:
+- No incluir la tecnología en el nombre (puede cambiar)
+- Topics obligatorios en GitHub: `fase-[raiz|tronco|ramas|fruto]`, `team-[roble|sakura|manglar]`
 
 ---
 

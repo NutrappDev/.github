@@ -22,7 +22,7 @@ const OUTPUT = process.argv[2] || 'docs/data/repos.json';
 const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
 const CONCURRENCY = 8; // repos procesados en paralelo
 
-const PROD_TAG_PATTERN = /^v\d+/;
+const PROD_TAG_PATTERN = /^(v\d|prod-\d{4}-\d{2}-\d{2})/;
 const QA_TAG_PATTERN = /^qa-\d{4}-\d{2}-\d{2}$/;
 const PENDING_COMMITS_LIMIT = 10; // commits recientes a incluir en "pending"
 
@@ -179,6 +179,7 @@ async function processRepo(repo) {
     is_fork: repo.fork,
     default_branch: repo.default_branch,
     last_push: repo.pushed_at,
+    topics: repo.topics ?? [],
 
     production: get(prodTag),
     qa: get(qaTag),
@@ -206,12 +207,11 @@ async function processRepo(repo) {
 async function main() {
   console.log(`\nFetching repos for ${ORG}...`);
 
-  const allRepos = await ghFetch(`/orgs/${ORG}/repos?type=all`, { paginated: true });
-  const repos = allRepos.filter(
-    r => !r.archived && !r.fork && r.name !== '.github'
-  );
+  // type=sources excluye forks desde la API (evita paginar repos que no usaremos)
+  const allRepos = await ghFetch(`/orgs/${ORG}/repos?type=sources`, { paginated: true });
+  const repos = allRepos.filter(r => !r.archived && r.name !== '.github');
 
-  console.log(`Found ${repos.length} active repos (${allRepos.length} total, forks/archived excluded)\n`);
+  console.log(`Found ${repos.length} active repos (${allRepos.length} non-fork total, archived excluded)\n`);
 
   // Procesar en lotes para respetar rate limit (5000 req/h con PAT)
   const results = [];
