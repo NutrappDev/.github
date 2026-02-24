@@ -1,6 +1,6 @@
 /**
  * Panel lateral de detalle de repositorio.
- * Muestra PRs del último release (prod y QA), commits pendientes y tickets Jira.
+ * Muestra PRs del último release (prod y QA), commits pendientes e historial de tags.
  */
 
 import { parseTagBody, formatDate, jiraUrl, escHtml, shortName } from '../utils.js';
@@ -29,9 +29,9 @@ export function initDetailPanel() {
 
   document.body.appendChild(panelEl);
 
-  panelEl.querySelector('.detail-panel__backdrop').addEventListener('click', close);
-  panelEl.querySelector('.detail-panel__close').addEventListener('click', close);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  panelEl.querySelector('.detail-panel__backdrop').addEventListener('click', closeDetailPanel);
+  panelEl.querySelector('.detail-panel__close').addEventListener('click', closeDetailPanel);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetailPanel(); });
 }
 
 export function openDetailPanel(repo) {
@@ -44,13 +44,22 @@ export function openDetailPanel(repo) {
   panelEl.setAttribute('aria-hidden', 'false');
   panelEl.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  const slug = shortName(repo.full_name);
+  if (location.hash !== `#${slug}`) {
+    history.pushState({ repo: repo.full_name }, '', `#${slug}`);
+  }
 }
 
-function close() {
+export function closeDetailPanel() {
   if (!panelEl) return;
   panelEl.classList.remove('open');
   panelEl.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
+
+  if (location.hash) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
 }
 
 // ─── Render ────────────────────────────────────────────────────────────────────
@@ -62,14 +71,14 @@ function renderBody(repo) {
     parts.push(`<p class="detail-desc">${escHtml(repo.description)}</p>`);
   }
 
-  parts.push(releaseSection('Producción', repo.production, 'prod', repo.url));
-  parts.push(releaseSection('QA', repo.qa, 'qa', repo.url));
+  parts.push(releaseSection('Producción', repo.production, 'prod', repo.url, repo.production_history ?? []));
+  parts.push(releaseSection('QA',         repo.qa,         'qa',   repo.url, repo.qa_history         ?? []));
   parts.push(pendingSection(repo));
 
   return parts.join('');
 }
 
-function releaseSection(label, release, type, repoUrl) {
+function releaseSection(label, release, type, repoUrl, history = []) {
   const heading = `<div class="detail-heading detail-heading--${type}">${label}</div>`;
 
   if (!release) {
@@ -92,7 +101,44 @@ function releaseSection(label, release, type, repoUrl) {
     ? prGroups(parsed, repoUrl)
     : `<p class="detail-empty">Tag sin detalle de PRs (formato libre o tag ligero)</p>`;
 
-  return `<div class="detail-section">${heading}${meta}${content}</div>`;
+  const histHtml = history.length ? historySection(history, type, repoUrl) : '';
+
+  return `<div class="detail-section">${heading}${meta}${content}${histHtml}</div>`;
+}
+
+function historySection(history, type, repoUrl) {
+  const items = history.map(rel => {
+    const version = type === 'qa' ? rel.version.replace(/^qa-/, '') : rel.version;
+    const date    = formatDate(rel.date);
+    const parsed  = parseTagBody(rel.body);
+    const prCount = parsed
+      ? parsed.features.length + parsed.fixes.length + parsed.other.length
+      : 0;
+
+    const summaryText = [
+      escHtml(version),
+      date,
+      prCount ? `${prCount} PRs` : null,
+    ].filter(Boolean).join(' · ');
+
+    const content = parsed
+      ? prGroups(parsed, repoUrl)
+      : `<p class="detail-empty">Sin detalle de PRs</p>`;
+
+    return `
+      <details class="detail-history-item">
+        <summary class="detail-history-item__summary">${summaryText}</summary>
+        <div class="detail-history-item__body">${content}</div>
+      </details>
+    `;
+  }).join('');
+
+  return `
+    <details class="detail-history">
+      <summary class="detail-history__toggle">Historial (${history.length} release${history.length !== 1 ? 's' : ''} anterior${history.length !== 1 ? 'es' : ''})</summary>
+      <div class="detail-history__items">${items}</div>
+    </details>
+  `;
 }
 
 function prGroups(parsed, repoUrl) {

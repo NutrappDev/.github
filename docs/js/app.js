@@ -7,7 +7,7 @@ import { renderHeader }    from './components/header.js';
 import { renderStats }     from './components/stats.js';
 import { renderFilters }   from './components/filters.js';
 import { repoCardHtml }    from './components/card.js';
-import { initDetailPanel, openDetailPanel } from './components/detail.js';
+import { initDetailPanel, openDetailPanel, closeDetailPanel } from './components/detail.js';
 import { repoStatus, repoFase, shortName } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
@@ -60,7 +60,24 @@ async function loadData() {
 
   renderGrid(allRepos);
   filtersCtrl.setCount(allRepos.length, allRepos.length);
+
+  // Hash routing: abrir panel si la URL contiene #nombre-del-repo
+  const initialSlug = location.hash.slice(1);
+  if (initialSlug) {
+    const repo = allRepos.find(r => r.full_name.split('/').pop() === initialSlug);
+    if (repo) openDetailPanel(repo);
+  }
 }
+
+// ─── Hash routing ──────────────────────────────────────────────────────────────
+window.addEventListener('popstate', e => {
+  if (e.state?.repo) {
+    const repo = allRepos.find(r => r.full_name === e.state.repo);
+    if (repo) openDetailPanel(repo);
+  } else {
+    closeDetailPanel();
+  }
+});
 
 // ─── Filtrado ─────────────────────────────────────────────────────────────────
 function handleFilterChange({ search, status, fase }) {

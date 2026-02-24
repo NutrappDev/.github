@@ -86,25 +86,16 @@ async function getCommitDate(owner, repo, sha) {
 // ─── Datos por repo ────────────────────────────────────────────────────────────
 
 /**
- * Último tag que cumple el patrón.
- * Para tags anotados, obtiene el cuerpo del mensaje (contiene resumen de PRs).
+ * Resuelve fecha y body de un único tag (anotado o ligero).
  */
-async function getLatestTag(owner, repo, pattern) {
-  const tags = await ghFetch(`/repos/${owner}/${repo}/tags`, { paginated: true });
-  if (!tags?.length) return null;
-
-  const match = tags.find(t => pattern.test(t.name));
-  if (!match) return null;
-
+async function fetchTagInfo(owner, repo, match) {
   let body = null;
   let date = null;
 
-  // Verificar si es un tag anotado (type=tag) o ligero (type=commit)
   const ref = await ghFetch(
     `/repos/${owner}/${repo}/git/ref/tags/${encodeURIComponent(match.name)}`
   );
   if (ref?.object?.type === 'tag') {
-    // Tag anotado: obtener objeto para mensaje y fecha del tagger
     const tagObj = await ghFetch(`/repos/${owner}/${repo}/git/tags/${ref.object.sha}`);
     if (tagObj) {
       body = tagObj.message ?? null;
@@ -112,7 +103,6 @@ async function getLatestTag(owner, repo, pattern) {
     }
   }
 
-  // Fallback a fecha del commit para tags ligeros o si falló el objeto
   if (!date) {
     date = await getCommitDate(owner, repo, match.commit.sha);
   }
@@ -124,6 +114,18 @@ async function getLatestTag(owner, repo, pattern) {
     url: `https://github.com/${owner}/${repo}/releases/tag/${match.name}`,
     body,
   };
+}
+
+/**
+ * Historial de los últimos N tags que cumplen el patrón.
+ * Recibe la lista ya obtenida para evitar doble paginación.
+ * El índice 0 es el más reciente.
+ */
+async function getTagHistory(owner, repo, allTags, pattern, limit = 5) {
+  if (!allTags?.length) return [];
+  const matching = allTags.filter(t => pattern.test(t.name)).slice(0, limit);
+  if (!matching.length) return [];
+  return Promise.all(matching.map(match => fetchTagInfo(owner, repo, match)));
 }
 
 /**
@@ -154,26 +156,6 @@ async function compareBranches(owner, repo, base, head) {
   };
 }
 
-/** Últimas N releases creadas (GitHub Releases, no solo tags) */
-async function getRecentReleases(owner, repo, limit = 5) {
-  const releases = await ghFetch(`/repos/${owner}/${repo}/releases?per_page=${limit}`);
-  if (!releases?.length) return [];
-
-  return releases.slice(0, limit).map(r => {
-    const tickets = extractJiraTickets(r.body ?? '');
-    return {
-      tag: r.tag_name,
-      name: r.name ?? r.tag_name,
-      date: r.published_at ?? r.created_at,
-      url: r.html_url,
-      is_prerelease: r.prerelease,
-      tickets: tickets.map(t => ({ id: t, url: jiraUrl(t) })),
-      // body del release: si sigue el formato "Features (N): / Fixes (N):" lo preservamos
-      body: r.body ? r.body.slice(0, 2000) : null,
-    };
-  });
-}
-
 /** Procesa un repo completo */
 async function processRepo(repo) {
   const owner = repo.owner.login;
@@ -181,18 +163,28 @@ async function processRepo(repo) {
 
   console.log(`  Processing ${name}...`);
 
-  // Lanzar todas las llamadas en paralelo — si alguna falla, no bloquea las demás
-  const [prodTag, qaTag, pendingToQa, pendingToProd, recentReleases] =
+  // Obtener lista de tags una vez (compartida para prod y qa)
+  let allTags = [];
+  try {
+    allTags = await ghFetch(`/repos/${owner}/${name}/tags`, { paginated: true }) ?? [];
+  } catch (err) {
+    console.warn(`  ⚠ ${name}: error fetching tags: ${err.message}`);
+  }
+
+  // Lanzar el resto de llamadas en paralelo
+  const [prodHistory, qaHistory, pendingToQa, pendingToProd] =
     await Promise.allSettled([
-      getLatestTag(owner, name, PROD_TAG_PATTERN),
-      getLatestTag(owner, name, QA_TAG_PATTERN),
+      getTagHistory(owner, name, allTags, PROD_TAG_PATTERN, 5),
+      getTagHistory(owner, name, allTags, QA_TAG_PATTERN, 5),
       compareBranches(owner, name, 'qa', 'develop'),
       compareBranches(owner, name, 'main', 'qa'),
-      getRecentReleases(owner, name, 5),
     ]);
 
   const get = result => (result.status === 'fulfilled' ? result.value : null);
   const getErr = result => (result.status === 'rejected' ? result.reason?.message : null);
+
+  const prodHist = get(prodHistory) ?? [];
+  const qaHist   = get(qaHistory)   ?? [];
 
   return {
     name,
@@ -205,23 +197,23 @@ async function processRepo(repo) {
     last_push: repo.pushed_at,
     topics: repo.topics ?? [],
 
-    production: get(prodTag),
-    qa: get(qaTag),
+    production:         prodHist[0] ?? null,
+    production_history: prodHist.slice(1),
+
+    qa:         qaHist[0] ?? null,
+    qa_history: qaHist.slice(1),
 
     pending: {
-      to_qa: get(pendingToQa),
-      to_production: get(pendingToProd),
+      to_qa:          get(pendingToQa),
+      to_production:  get(pendingToProd),
     },
 
-    recent_releases: get(recentReleases) ?? [],
-
-    // Errores no fatales: se incluyen para debugging sin romper el JSON
+    // Errores no fatales para debugging
     _errors: {
-      production: getErr(prodTag),
-      qa: getErr(qaTag),
-      pending_to_qa: getErr(pendingToQa),
+      production:           getErr(prodHistory),
+      qa:                   getErr(qaHistory),
+      pending_to_qa:        getErr(pendingToQa),
       pending_to_production: getErr(pendingToProd),
-      recent_releases: getErr(recentReleases),
     },
   };
 }
@@ -281,12 +273,13 @@ async function main() {
   await mkdir(dirname(OUTPUT), { recursive: true });
   await writeFile(OUTPUT, JSON.stringify(output, null, 2), 'utf8');
 
-  const withProd = results.filter(r => r.production).length;
-  const withQa = results.filter(r => r.qa).length;
+  const withProd   = results.filter(r => r.production).length;
+  const withQa     = results.filter(r => r.qa).length;
   const withErrors = results.filter(r => r.error).length;
+  const withHistory = results.filter(r => r.production_history?.length).length;
 
   console.log(`\n✅ Generado: ${OUTPUT}`);
-  console.log(`   ${results.length} repos | ${withProd} con prod | ${withQa} con QA${withErrors ? ` | ⚠️  ${withErrors} con errores` : ''}`);
+  console.log(`   ${results.length} repos | ${withProd} con prod | ${withQa} con QA | ${withHistory} con historial${withErrors ? ` | ⚠️  ${withErrors} con errores` : ''}`);
 }
 
 main().catch(err => {

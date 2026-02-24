@@ -758,6 +758,96 @@ a:hover { text-decoration: underline; }
   padding: 4px 0;
 }
 
+/* ─── Detail panel — Historial de releases ───────────────────────────────────── */
+
+.detail-history {
+  margin-top: 10px;
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.detail-history__toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  background: var(--c-gray-light);
+  list-style: none;
+  user-select: none;
+}
+
+.detail-history__toggle::-webkit-details-marker { display: none; }
+
+.detail-history__toggle::before {
+  content: '▶';
+  font-size: 0.6rem;
+  transition: transform 0.18s;
+  flex-shrink: 0;
+}
+
+.detail-history[open] > .detail-history__toggle::before {
+  transform: rotate(90deg);
+}
+
+.detail-history__toggle:hover {
+  background: var(--c-border);
+  color: var(--c-text);
+}
+
+.detail-history__items {
+  padding: 8px 0;
+}
+
+/* Cada release anterior */
+.detail-history-item {
+  border-bottom: 1px solid var(--c-border);
+}
+
+.detail-history-item:last-child {
+  border-bottom: none;
+}
+
+.detail-history-item__summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 0.78rem;
+  color: var(--c-text-muted);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.detail-history-item__summary::-webkit-details-marker { display: none; }
+
+.detail-history-item__summary::before {
+  content: '▶';
+  font-size: 0.55rem;
+  transition: transform 0.15s;
+  flex-shrink: 0;
+}
+
+.detail-history-item[open] > .detail-history-item__summary::before {
+  transform: rotate(90deg);
+}
+
+.detail-history-item__summary:hover {
+  background: var(--c-purple-light);
+  color: var(--c-text);
+}
+
+.detail-history-item__body {
+  padding: 0 14px 10px;
+  border-top: 1px solid var(--c-border);
+  background: #fafafa;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .main-content { padding: 16px 14px 32px; }
