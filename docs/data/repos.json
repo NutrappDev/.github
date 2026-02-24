@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-02-24T02:48:04.451Z",
+  "generated_at": "2026-02-24T06:18:55.392Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 24,
@@ -15,18 +15,18 @@
       "last_push": "2026-02-23T22:41:44Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -40,18 +40,18 @@
       "last_push": "2026-02-23T22:38:17Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -65,18 +65,18 @@
       "last_push": "2026-02-23T22:30:44Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -90,7 +90,9 @@
       "last_push": "2026-02-23T20:40:15Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 2,
@@ -212,13 +214,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -232,7 +232,9 @@
       "last_push": "2026-02-21T00:39:34Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 0,
@@ -339,13 +341,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -365,6 +365,7 @@
         "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-19",
         "body": "Release prod-2026-02-19\n\nFeatures (2):\nPR #2 by Steven León - Implementa la página de Línea Ética con sección de evidencias, canales y assets [NCOL-551]\nPR #4 by jsandoval-dev - Configura formulario HubSpot multi-paso para denuncia en Línea Ética [NCOL-515]\n\nFixes (5):\nPR #3 by Steven León - Corrige bucle infinito de peticiones al ms-products en vista individual de producto [NCOL-556]\nPR #6 by jsandoval-dev - Mejora estilos y estructura responsive del formulario HubSpot Línea Ética [NCOL-515]\nPR #8 by jsandoval-dev - Corrige estilos restantes del formulario HubSpot en Línea Ética [NCOL-515]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo - Oculta botón Me interesa en páginas de medicamentos con fórmula médica [NCOL-538]\n"
       },
+      "production_history": [],
       "qa": {
         "version": "qa-2026-02-17",
         "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
@@ -372,6 +373,7 @@
         "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17",
         "body": "Release qa-2026-02-17\n\nFixes (10):\nPR #3 by Steven León - Corrige bucle de peticiones en vista individual de producto al ms-products [NCOL-556]\nPR #14 by Steven León - Corrige títulos de productos en catálogo a mayúsculas desde lógica [NCOL-574]\nPR #15 by Steven León - Corrige título de página individual de producto a mayúsculas desde lógica [NCOL-572]\nPR #18 by k-aguilera - Corrige carga de eventos ajustando AppInitializer para inicializarlos correctamente [NCOL-561]\nPR #19 by Jorge Garay - Ajusta colSpan de 2 columnas para vista tablet 820x1180 en productos [NCOL-459]\nPR #20 by Steven León - Actualiza textos del banner hero en la página de educación [NCOL-563]\nPR #21 by Steven León - Corrige visualización del banner de aplicaciones funcionales en tablets iOS [NCOL-586]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #23 by Steven León - Corrige flechas de navegación en sliders y carrusel de doctores en mobile [NCOL-601] [NCOL-603] [NCOL-604]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo by millerladino - Ajustes de vista slider inicial de productos, ver todos los sliders [PMO-2221]\n"
       },
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 81,
@@ -524,13 +526,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -544,7 +544,9 @@
       "last_push": "2026-02-18T18:32:51Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 2,
@@ -595,13 +597,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -615,7 +615,9 @@
       "last_push": "2026-02-17T13:41:07Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": {
@@ -709,13 +711,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -729,7 +729,9 @@
       "last_push": "2026-02-11T22:52:13Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 0,
@@ -740,13 +742,11 @@
           "recent_commits": []
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -766,6 +766,22 @@
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v2.0.0",
         "body": "Release v2.0.0 - Deploy a produccion 2026-02-10\n\nFeatures (27):\nPR #139 by Jhelcy-Sandoval - Agrega tipo de documento al historial de credenciales\nPR #140 by Joredjs - Restaura nombre dinámico de email en órdenes\nPR #142 by fabianromerolu - Ajuste de límite para plantillas de prescripción\nPR #143 by aplicaciones-nutrapp - Configuración de Puppeteer para generación de PDFs\nPR #146 by fabianromerolu - Plantilla de compra para prescripciones [ALCO-1226]\nPR #152 by CristiGB - Paginación de usuarios en SSO [SSO-161]\nPR #155 by CristiGB - Mejora identificación de usuarios en prescripciones\nPR #158 by CristiGB - Eliminación de logs de debug en microservicios\nPR #165 by CristiGB - Fallback de dependencias para estabilidad de builds\nPR #172 by CristiGB - Obtener productos por canal de venta [ALCO-1217]\nPR #173 by fabianromerolu - CORS para prescripciones [SUP-220]\nPR #174 by CristiGB - Búsqueda global de usuarios por endpoint [SUP-222]\nPR #175 by fabianromerolu - Plantilla de prescripción médica [ALCO-1226]\nPR #176 by CristiGB - Filtros de búsqueda por nombre y apellido [SUP-222]\nPR #193 by CristiGB - Actualización de stock de productos [ALCO-1294]\nPR #194 by fabianromerolu - Nuevos parámetros para getAllOrders [SUP-200]\nPR #198 by Joredjs - Nuevo microservicio de pagos completo [ALCO-1101]\nPR #202 by CristiGB - Búsqueda masiva de usuarios para enriquecimiento de pacientes [ALCO-1316]\nPR #205 by CristiGB - Soporte binary media types en API Gateway para PDFs [ALCO-1298]\nPR #207 by fabianromerolu - PDF hormonal v3 [ALCO-1331]\nPR #208 by fabianromerolu - PDF hormonal v3 iteración [ALCO-1331]\nPR #209 by fabianromerolu - Ajuste de PDF hormonal [ALCO-1331]\nPR #210 by fabianromerolu - PDF hormonas prescripciones [ALCO-1331]\nPR #211 by fabianromerolu - Nueva lógica funcional de prescripciones [ALCO-1305]\n\nFixes (21):\nPR #141 by Jhelcy-Sandoval - Reorden de campo document_type en historial de credenciales\nPR #149 by marioeraso - Corrección de texto en asunto de email SSO\nPR #150 by CristiGB - Corrección de manejo de roles en servicio de productos\nPR #153 by CristiGB - Validación de fecha de inicio en cupones\nPR #154 by CristiGB - Remoción de externals en webpack de prescripciones\nPR #156 by CristiGB - Corrección de logging en build serverless\nPR #157 by CristiGB - Fix de build en prescripciones\nPR #159 by CristiGB - Actualización de configuración webpack para externals\nPR #168 by CristiGB - Actualización de implementación S3 upload [ALCO-1210]\nPR #170 by CristiGB - Corrección displayname y role en SSO [SSO-161]\nPR #177 by CristiGB - Corrección administración de productos [ALCO-1217]\nPR #186 by fabianromerolu - Corrección CORS en prescripciones [ALCO-1243]\nPR #187 by CristiGB - Eliminación en cascada de entidades relacionadas a categorías [SUP-208]\nPR #189 by CristiGB - Cambio de servicio de email a nodemailer en prescripciones\nPR #192 by CristiGB - Fix inyección de servicio de roles en filtrado de productos [NCOL-503]\nPR #200 by Joredjs - Ajuste de variables de entorno payments [ALCO-1101]\nPR #201 by Joredjs - Corrección variable DB URL payments [ALCO-1101]\nPR #203 by fabianromerolu - Generación de PDF en AWS [ALCO-1311]\nPR #204 by CristiGB - Mejora generación y manejo de respuesta PDF [ALCO-1298]\nPR #206 by fabianromerolu - PDF hormonas v2 [ALCO-1311]\nPR #212 by fabianromerolu - Ajuste final de PDF prescripciones [ALCO-1311]\n\nRefactors (8):\nPR #151 by Joredjs - Limpieza del microservicio de prescripciones\nPR #160 by Joredjs - Limpieza del microservicio de notificaciones\nPR #162 by Joredjs - Limpieza del microservicio de órdenes\nPR #166 by CristiGB - Refactorización get patients [ALCO-1207]\nPR #167 by Joredjs - Limpieza del microservicio de productos [ALCO-1201]\nPR #182 by fabianromerolu - Vigencia paginado [ALCO-1227]\nPR #185 by fabianromerolu - Cambio de lógica de vigencia [ALCO-1227]\nPR #190 by Joredjs - Limpieza del microservicio SSO [ALCO-1202]\n\nOther (4):\nPR #144 by Joredjs - Ajuste de límites de líneas en validaciones de build\nPR #147 by aplicaciones-nutrapp - Actualización de configuración webpack y serverless\nPR #179 by Joredjs - Ajuste en validaciones de commits [ALCO-1100]\nPR #184 by CristiGB - Mejora registro de usuarios e integración Keycloak [ALCO-1218]\nPR #191 by CristiGB - Check user bulk SSO [SSO-166]\nPR #180 by Joredjs - Documentación de validaciones [ALCO-1100]\n"
       },
+      "production_history": [
+        {
+          "version": "v1.0.1",
+          "sha": "dab9397a0907eddaa48ac7723a4c94ff4912120a",
+          "date": "2025-11-25T20:49:17Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v1.0.1",
+          "body": "Release v1.0.1: Ambiente productivo estabilizado\n\nIncluye:\n- Configuración de VPC en ambiente productivo\n- Corrección de subnets\n- Eliminación de logs de debug temporales\n\nEstado limpio y estable para producción.\n"
+        },
+        {
+          "version": "v1.0.0",
+          "sha": "964c682fa416e11d7ffa6fc9abf2b9169b1500fa",
+          "date": "2025-11-25T20:49:08Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v1.0.0",
+          "body": "Release v1.0.0: Primera versión en producción\n\nPrimer despliegue oficial a ambiente de producción desde QA.\nIncluye funcionalidad base del sistema validada en ambiente de pruebas.\n"
+        }
+      ],
       "qa": {
         "version": "qa-2026-02-23",
         "sha": "3f5c6566066271dab4e647e4b2f871ef5a5a5e79",
@@ -773,6 +789,36 @@
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-23",
         "body": "Release qa-2026-02-23\n\nFeatures (1):\nPR #233 by Fabián Mauricio Romero lugo - Agrega endpoints GET para consultar donation config dentro del módulo gamification en ms-products [ALCO-1392]\n"
       },
+      "qa_history": [
+        {
+          "version": "qa-2026-01-27",
+          "sha": "6e9ddc7c4d2543ecea29ed1372dfc1c736e5303e",
+          "date": "2026-01-27T14:44:27Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-27",
+          "body": "Release qa-2026-01-27\n\nFixes (1):\nPR #213 by Fabián Mauricio Romero lugo - Corrige error en generación de PDFs causado por orden incorrecto de PRs en releases anteriores [ALCO-1319]\n\nNota: Este hotfix corrige el estado del archivo PurchaseTemplateService.ts\nque quedó inconsistente debido a que los PRs #203, #206, #207 fueron\naplicados después de #208, #209, #210, #211 cuando cronológicamente\ndebieron ir primero.\n"
+        },
+        {
+          "version": "qa-2026-01-22",
+          "sha": "7116feeb8ed47d15a589903d820d828487cb75b3",
+          "date": "2026-01-22T20:47:15Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-22",
+          "body": "Release qa-2026-01-22\n\nFeatures (1):\nPR #207 by Fabián Romero - Servicio PurchaseTemplatePdfService para PDFs hormonales con división automática [ALCO-1331]\n\nFixes (3):\nPR #203 by Fabián Romero - Generación de PDFs en AWS Lambda usando puppeteer-core + @sparticuz/chromium [ALCO-1311]\nPR #206 by Fabián Romero - PDF hormonas v2 con detección automática de entorno AWS vs local [ALCO-1311]\nPR #212 by Fabián Romero - Ajuste de ruta de ejecución del binario para puppeteer-core [ALCO-1311]\n"
+        },
+        {
+          "version": "qa-2026-01-20",
+          "sha": "dbd0bc31b1d6296d8b1552241c11560e1d0cb310",
+          "date": "2026-01-20T21:23:00Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-20",
+          "body": "Release qa-2026-01-20\n\nFeatures (10):\nPR #193 by Isabel Gomez Balvin - Endpoint PATCH /products/stock para actualización batch de inventario con transacciones [ALCO-1294]\nPR #194 by Fabián Romero - Parámetros sortBy y sortOrder en getAllOrders para paginación ordenada [SUP-200]\nPR #198 by Jorge Garay - Nuevo microservicio payments con Openpay, Culqi, PayPal y Wompi integrados [ALCO-1101]\nPR #202 by Isabel Gomez Balvin - Bulk lookup de usuarios para enriquecer prescripciones con datos de doctores [ALCO-1316]\nPR #208 by Fabián Romero - Servicio PurchaseTemplatePdfService centralizado con Puppeteer para PDFs hormonales [ALCO-1331]\nPR #209 by Fabián Romero - Ajustes en generación de PDF para templates de compra hormonales [ALCO-1331]\nPR #210 by Fabián Romero - Comportamiento diferenciado por entorno en PDFs: síncrono en Lambda, async local [ALCO-1331]\nPR #211 by Fabián Romero - Gestión completa de templates médicos con filtros, validaciones y trazabilidad [ALCO-1305]\nPR #191 by Isabel Gomez Balvin - Endpoint bulk para verificar múltiples usuarios por email o documento [SSO-166]\nPR #205 by Isabel Gomez Balvin - Soporte para binary media types en API Gateway para respuestas PDF [ALCO-1298]\n\nFixes (7):\nPR #187 by Isabel Gomez Balvin - Eliminación en cascada de entidades relacionadas antes de borrar categorías [SUP-208]\nPR #189 by Isabel Gomez Balvin - Reemplazo del servicio de notificaciones por nodemailer para emails de prescripciones\nPR #192 by Isabel Gomez Balvin - Corrección de inyección de servicio de roles para filtrado de productos [NCOL-503]\nPR #200 by Jorge Garay - Ajuste de variables de entorno para microservicio de pagos [ALCO-1101]\nPR #201 by Jorge Garay - Corrección de variable DATABASE_URL en serverless de payments [ALCO-1101]\nPR #204 by Isabel Gomez Balvin - Mejoras en generación de PDF con headers adecuados y plantilla hormonal [ALCO-1298]\nPR #184 by Isabel Gomez Balvin - Validación mejorada de usuarios existentes en DB y Keycloak [ALCO-1218]\n\nOther (3):\nPR #180 by Jorge Garay - Documentación de validaciones de commits y workflow de desarrollo [ALCO-1100]\nPR #167 by Jorge Garay - Limpieza microservicio products: 34 endpoints eliminados, código muerto removido [ALCO-1201]\nPR #190 by Jorge Garay - Limpieza microservicio SSO: 43 rutas eliminadas, Firebase removido, logger NestJS [ALCO-1202]\n"
+        },
+        {
+          "version": "qa-2025-12-16",
+          "sha": "95f848d54d9913b127833caa3eaa02c7c11b91c3",
+          "date": "2025-12-18T17:05:03Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2025-12-16",
+          "body": "Release qa-2025-12-16\n\nFeatures (1):\nPR #173 by Fabián Mauricio Romero lugo - Habilita configuración CORS para endpoints de prescripciones [SUP-220]\n\nFixes (2):\nPR #177 by Isabel Gomez Balvin - Agrega campo vía de administración en DTO de presentación de productos [ALCO-1217]\nPR #186 by Fabián Mauricio Romero lugo - Corrige caídas del servicio comentando líneas problemáticas en CORS [ALCO-1243]\n\nOther (2):\nPR #182 by Fabián Mauricio Romero lugo - Implementa validación de vigencia en backend y mejora paginado de prescripciones [ALCO-1227]\nPR #185 by Fabián Mauricio Romero lugo - Refactoriza vigencia de prescripciones basándose en plan de tratamiento [ALCO-1227]\n"
+        }
+      ],
       "pending": {
         "to_qa": {
           "count": 309,
@@ -888,13 +934,11 @@
           ]
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -908,18 +952,18 @@
       "last_push": "2026-02-09T00:49:58Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -933,18 +977,18 @@
       "last_push": "2026-02-06T14:57:03Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -958,18 +1002,18 @@
       "last_push": "2026-02-06T14:53:46Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -983,18 +1027,18 @@
       "last_push": "2026-02-04T16:01:30Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1008,18 +1052,18 @@
       "last_push": "2026-01-27T21:08:26Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1033,18 +1077,18 @@
       "last_push": "2026-01-25T04:54:59Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1058,18 +1102,18 @@
       "last_push": "2026-01-23T20:42:25Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1083,18 +1127,18 @@
       "last_push": "2026-01-21T17:35:28Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1108,18 +1152,18 @@
       "last_push": "2026-01-05T22:50:53Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1133,18 +1177,18 @@
       "last_push": "2026-01-05T22:50:31Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1158,7 +1202,9 @@
       "last_push": "2025-12-26T15:04:39Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 0,
@@ -1169,13 +1215,11 @@
           "recent_commits": []
         }
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1189,18 +1233,18 @@
       "last_push": "2025-12-12T21:49:25Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1214,18 +1258,18 @@
       "last_push": "2025-11-20T19:18:30Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     },
     {
@@ -1239,18 +1283,18 @@
       "last_push": "2025-11-20T16:10:33Z",
       "topics": [],
       "production": null,
+      "production_history": [],
       "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": null,
         "to_production": null
       },
-      "recent_releases": [],
       "_errors": {
         "production": null,
         "qa": null,
         "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
+        "pending_to_production": null
       }
     }
   ]
