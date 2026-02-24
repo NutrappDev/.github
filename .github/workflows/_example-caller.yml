@@ -2,7 +2,22 @@
 # Este archivo NO hace nada por sí solo (está en el repo .github y no se activa).
 #
 # Uso:
-#   cp _example-caller.yml <tu-repo>/.github/workflows/pr-checks.yml
+#   cp .github/workflows/_example-caller.yml <tu-repo>/.github/workflows/pr-checks.yml
+#
+# Secrets necesarios (heredados automáticamente con `secrets: inherit`):
+#   • ORG_READ_TOKEN — PAT clásico con scopes: repo + read:org
+#     Configurar en NutrappDev → Settings → Secrets → Actions (Organization secret)
+#
+# Para actualizar el dashboard al hacer deploy, agregar en tu workflow de deploy:
+#
+#   - name: Actualizar dashboard
+#     if: success()
+#     run: |
+#       gh api repos/NutrappDev/.github/dispatches \
+#         -f event_type=deployment-completed \
+#         -f "client_payload[repo]=${{ github.repository }}"
+#     env:
+#       GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
 
 name: PR Checks
 

@@ -11,3 +11,6 @@ Thumbs.db
 .claude/*
 
 ignore
+
+# Archivos de contexto/briefing locales
+BRIEFING.md

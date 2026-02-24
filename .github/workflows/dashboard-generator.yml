@@ -4,8 +4,11 @@ name: Dashboard Generator
 # GitHub Pages sirve el JSON estático; el frontend nunca hace llamadas API directas.
 #
 # Requiere secret: ORG_READ_TOKEN
-#   → PAT clásico o fine-grained con scope: read:org + read:contents en todos los repos
+#   → PAT clásico con exactamente dos scopes:
+#       • repo      — lee repos privados, tags, commits, branches y workflow runs
+#       • read:org  — lista repos de la organización (/orgs/NutrappDev/repos)
 #   → Configurar como Organization Secret en NutrappDev (disponible para este repo)
+#   → NO se necesita: workflow, write:org, admin:*, packages ni ningún otro scope
 
 on:
   schedule:
