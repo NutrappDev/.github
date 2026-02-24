@@ -157,13 +157,22 @@ a:hover { text-decoration: underline; }
 }
 
 .filters-bar--fase {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   padding: 8px 12px;
   background: var(--c-purple-light);
   border-radius: var(--r-sm);
   border: 1px solid var(--c-border);
 }
 
+.filters-bar--team {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  background: var(--c-gray-light);
+  border-radius: var(--r-sm);
+  border: 1px solid var(--c-border);
+}
+
+.filters-bar__label,
 .filters-bar__fase-label {
   font-size: 0.75rem;
   font-weight: 700;
@@ -171,6 +180,17 @@ a:hover { text-decoration: underline; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   white-space: nowrap;
+}
+
+.filter-btn--team {
+  font-size: 0.78rem;
+  padding: 5px 11px;
+}
+
+.filter-btn--team.active {
+  background: var(--c-gray);
+  border-color: var(--c-gray);
+  color: #fff;
 }
 
 .filters-bar__search {
@@ -416,6 +436,28 @@ a:hover { text-decoration: underline; }
   color: var(--c-text-muted);
 }
 
+/* CI badge (card footer) */
+.ci-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.ci-badge:hover { opacity: 0.8; text-decoration: none; }
+
+.ci-badge--success         { background: var(--c-green-light);  color: var(--c-green); }
+.ci-badge--failure,
+.ci-badge--timed_out,
+.ci-badge--action_required { background: var(--c-red-light);    color: var(--c-red); }
+.ci-badge--running         { background: var(--c-amber-light);  color: var(--c-amber); }
+.ci-badge--cancelled,
+.ci-badge--skipped,
+.ci-badge--neutral,
+.ci-badge--unknown         { background: var(--c-gray-light);   color: var(--c-gray); }
+
 /* ─── Fase badge ─────────────────────────────────────────────────────────────── */
 .fase-badge {
   display: inline-block;
@@ -547,6 +589,25 @@ a:hover { text-decoration: underline; }
 
 .detail-panel__gh-link:hover { opacity: 1; text-decoration: none; }
 
+.detail-panel__copy-link {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--c-text-on-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 3px 9px;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.detail-panel__copy-link:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.22);
+}
+
 .detail-panel__close {
   background: none;
   border: none;
@@ -575,9 +636,36 @@ a:hover { text-decoration: underline; }
 .detail-desc {
   font-size: 0.85rem;
   color: var(--c-text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1.5;
 }
+
+/* CI status row in detail panel */
+.detail-ci {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: var(--r-sm);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.detail-ci__dot   { font-size: 0.9rem; flex-shrink: 0; }
+.detail-ci__label { font-weight: 600; }
+.detail-ci__label:hover { text-decoration: underline; }
+.detail-ci__date  { color: inherit; opacity: 0.7; font-size: 0.75rem; }
+.detail-ci__name  { color: inherit; opacity: 0.6; font-size: 0.72rem; margin-left: auto; }
+
+.detail-ci--success         { background: var(--c-green-light);  color: var(--c-green); }
+.detail-ci--failure,
+.detail-ci--timed_out,
+.detail-ci--action_required { background: var(--c-red-light);    color: var(--c-red); }
+.detail-ci--running         { background: var(--c-amber-light);  color: var(--c-amber); }
+.detail-ci--cancelled,
+.detail-ci--skipped,
+.detail-ci--neutral,
+.detail-ci--unknown         { background: var(--c-gray-light);   color: var(--c-gray); }
 
 .detail-section { margin-bottom: 24px; }
 

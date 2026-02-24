@@ -20,6 +20,7 @@ export function initDetailPanel() {
         <div class="detail-panel__title"></div>
         <div class="detail-panel__header-actions">
           <a class="detail-panel__gh-link" target="_blank" rel="noopener">GitHub ↗</a>
+          <button class="detail-panel__copy-link" aria-label="Copiar enlace directo">⎘ Copiar</button>
           <button class="detail-panel__close" aria-label="Cerrar panel">✕</button>
         </div>
       </div>
@@ -32,6 +33,16 @@ export function initDetailPanel() {
   panelEl.querySelector('.detail-panel__backdrop').addEventListener('click', closeDetailPanel);
   panelEl.querySelector('.detail-panel__close').addEventListener('click', closeDetailPanel);
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDetailPanel(); });
+
+  panelEl.querySelector('.detail-panel__copy-link').addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(location.href);
+      const btn = panelEl.querySelector('.detail-panel__copy-link');
+      const orig = btn.textContent;
+      btn.textContent = '✓ Copiado';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    } catch { /* clipboard no disponible */ }
+  });
 }
 
 export function openDetailPanel(repo) {
@@ -71,11 +82,42 @@ function renderBody(repo) {
     parts.push(`<p class="detail-desc">${escHtml(repo.description)}</p>`);
   }
 
+  if (repo.ci) {
+    parts.push(ciSection(repo.ci));
+  }
+
   parts.push(releaseSection('Producción', repo.production, 'prod', repo.url, repo.production_history ?? []));
   parts.push(releaseSection('QA',         repo.qa,         'qa',   repo.url, repo.qa_history         ?? []));
   parts.push(pendingSection(repo));
 
   return parts.join('');
+}
+
+function ciSection(ci) {
+  const running = ci.status !== 'completed';
+  const cls     = running ? 'running' : (ci.conclusion ?? 'unknown');
+  const LABELS  = {
+    success:         'CI pasando',
+    failure:         'CI fallando',
+    timed_out:       'CI timeout',
+    action_required: 'CI requiere acción',
+    running:         'CI en progreso',
+    cancelled:       'CI cancelado',
+    skipped:         'CI omitido',
+    neutral:         'CI neutral',
+    unknown:         'CI desconocido',
+  };
+  const label = LABELS[cls] ?? `CI: ${cls}`;
+  const date  = ci.updated_at ? formatDate(ci.updated_at, { relative: true }) : null;
+
+  return `
+    <div class="detail-ci detail-ci--${cls}">
+      <span class="detail-ci__dot">●</span>
+      <a class="detail-ci__label" href="${escHtml(ci.url)}" target="_blank" rel="noopener">${escHtml(label)}</a>
+      ${date   ? `<span class="detail-ci__date">${date}</span>`        : ''}
+      ${ci.name ? `<span class="detail-ci__name">${escHtml(ci.name)}</span>` : ''}
+    </div>
+  `;
 }
 
 function releaseSection(label, release, type, repoUrl, history = []) {

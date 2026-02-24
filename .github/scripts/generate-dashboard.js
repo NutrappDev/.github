@@ -77,6 +77,22 @@ function jiraUrl(ticket) {
   return `${JIRA_BASE}/${ticket}`;
 }
 
+/** Estado del último workflow run en la rama principal del repo */
+async function getCiStatus(owner, repo, branch) {
+  const data = await ghFetch(
+    `/repos/${owner}/${repo}/actions/runs?branch=${encodeURIComponent(branch)}&per_page=1`
+  );
+  if (!data?.workflow_runs?.length) return null;
+  const run = data.workflow_runs[0];
+  return {
+    status:     run.status,
+    conclusion: run.conclusion,
+    url:        run.html_url,
+    updated_at: run.updated_at,
+    name:       run.name,
+  };
+}
+
 /** Obtiene la fecha de un commit a partir de su SHA */
 async function getCommitDate(owner, repo, sha) {
   const commit = await ghFetch(`/repos/${owner}/${repo}/git/commits/${sha}`);
@@ -172,12 +188,13 @@ async function processRepo(repo) {
   }
 
   // Lanzar el resto de llamadas en paralelo
-  const [prodHistory, qaHistory, pendingToQa, pendingToProd] =
+  const [prodHistory, qaHistory, pendingToQa, pendingToProd, ciStatus] =
     await Promise.allSettled([
       getTagHistory(owner, name, allTags, PROD_TAG_PATTERN, 5),
       getTagHistory(owner, name, allTags, QA_TAG_PATTERN, 5),
       compareBranches(owner, name, 'qa', 'develop'),
       compareBranches(owner, name, 'main', 'qa'),
+      getCiStatus(owner, name, repo.default_branch),
     ]);
 
   const get = result => (result.status === 'fulfilled' ? result.value : null);
@@ -208,12 +225,15 @@ async function processRepo(repo) {
       to_production:  get(pendingToProd),
     },
 
+    ci: get(ciStatus),
+
     // Errores no fatales para debugging
     _errors: {
-      production:           getErr(prodHistory),
-      qa:                   getErr(qaHistory),
-      pending_to_qa:        getErr(pendingToQa),
+      production:            getErr(prodHistory),
+      qa:                    getErr(qaHistory),
+      pending_to_qa:         getErr(pendingToQa),
       pending_to_production: getErr(pendingToProd),
+      ci:                    getErr(ciStatus),
     },
   };
 }

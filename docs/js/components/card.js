@@ -116,7 +116,28 @@ function cardFooter(repo) {
       <a class="card-footer__link" href="${escHtml(repo.url)}" target="_blank" rel="noopener">
         Ver en GitHub →
       </a>
+      ${repo.ci ? ciBadge(repo.ci) : ''}
       ${pushed ? `<span class="card-footer__push">Última actividad: ${pushed}</span>` : ''}
     </div>
   `;
+}
+
+function ciBadge(ci) {
+  const running = ci.status !== 'completed';
+  const cls     = running ? 'running' : (ci.conclusion ?? 'unknown');
+  const LABELS  = {
+    success:         'CI ✓',
+    failure:         'CI ✗',
+    timed_out:       'CI ✗',
+    action_required: 'CI !',
+    running:         'CI …',
+    cancelled:       'CI —',
+    skipped:         'CI —',
+    neutral:         'CI —',
+    unknown:         'CI ?',
+  };
+  const label = LABELS[cls] ?? `CI: ${cls}`;
+  const title = running ? 'CI en progreso' : `CI: ${ci.conclusion ?? 'desconocido'}`;
+
+  return `<a class="ci-badge ci-badge--${escHtml(cls)}" href="${escHtml(ci.url)}" target="_blank" rel="noopener" title="${escHtml(title)}">${label}</a>`;
 }

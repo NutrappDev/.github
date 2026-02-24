@@ -8,7 +8,7 @@ import { renderStats }     from './components/stats.js';
 import { renderFilters }   from './components/filters.js';
 import { repoCardHtml }    from './components/card.js';
 import { initDetailPanel, openDetailPanel, closeDetailPanel } from './components/detail.js';
-import { repoStatus, repoFase, shortName } from './utils.js';
+import { repoStatus, repoFase, repoTeam, shortName } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
 const headerRoot  = document.getElementById('header-root');
@@ -80,7 +80,7 @@ window.addEventListener('popstate', e => {
 });
 
 // ─── Filtrado ─────────────────────────────────────────────────────────────────
-function handleFilterChange({ search, status, fase }) {
+function handleFilterChange({ search, status, fase, team }) {
   const query = search.trim().toLowerCase();
 
   const visible = allRepos.filter(repo => {
@@ -89,9 +89,10 @@ function handleFilterChange({ search, status, fase }) {
 
     const matchesSearch = !query || name.includes(query) || desc.includes(query);
     const matchesStatus = status === 'all' || repoStatus(repo) === status;
-    const matchesFase   = !fase || fase === 'all' || repoFase(repo) === fase;
+    const matchesFase   = !fase  || fase  === 'all' || repoFase(repo)  === fase;
+    const matchesTeam   = !team  || team  === 'all' || repoTeam(repo)  === team;
 
-    return matchesSearch && matchesStatus && matchesFase;
+    return matchesSearch && matchesStatus && matchesFase && matchesTeam;
   });
 
   renderGrid(visible);

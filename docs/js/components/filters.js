@@ -1,9 +1,9 @@
 /**
- * Barra de búsqueda, filtros de estado y filtros de fase.
- * Llama a onChange({ search, status, fase }) cuando el usuario interactúa.
+ * Barra de búsqueda, filtros de estado, fase y equipo.
+ * Llama a onChange({ search, status, fase, team }) cuando el usuario interactúa.
  *
  * @param {HTMLElement} root
- * @param {(state: { search: string, status: string, fase: string }) => void} onChange
+ * @param {(state: { search: string, status: string, fase: string, team: string }) => void} onChange
  */
 export function renderFilters(root, onChange) {
   const statusFilters = [
@@ -23,7 +23,14 @@ export function renderFilters(root, onChange) {
     { key: 'fruto',  label: 'Fruto' },
   ];
 
-  let state = { search: '', status: 'all', fase: 'all' };
+  const teamFilters = [
+    { key: 'all',     label: 'Todos los equipos' },
+    { key: 'roble',   label: 'Roble' },
+    { key: 'sakura',  label: 'Sakura' },
+    { key: 'manglar', label: 'Manglar' },
+  ];
+
+  let state = { search: '', status: 'all', fase: 'all', team: 'all' };
 
   function html() {
     const statusBtns = statusFilters.map(f => `
@@ -42,6 +49,14 @@ export function renderFilters(root, onChange) {
       >${f.label}</button>
     `).join('');
 
+    const teamBtns = teamFilters.map(f => `
+      <button
+        class="filter-btn filter-btn--team ${state.team === f.key ? 'active' : ''}"
+        data-filter-type="team"
+        data-key="${f.key}"
+      >${f.label}</button>
+    `).join('');
+
     return `
       <div class="filters-bar">
         <input
@@ -55,15 +70,18 @@ export function renderFilters(root, onChange) {
         <span class="filters-bar__count" id="visible-count"></span>
       </div>
       <div class="filters-bar filters-bar--fase">
-        <span class="filters-bar__fase-label">Fase:</span>
+        <span class="filters-bar__label">Fase:</span>
         ${faseBtns}
+      </div>
+      <div class="filters-bar filters-bar--team">
+        <span class="filters-bar__label">Equipo:</span>
+        ${teamBtns}
       </div>
     `;
   }
 
   function bind() {
-    const input = root.querySelector('.filters-bar__search');
-    input.addEventListener('input', e => {
+    root.querySelector('.filters-bar__search').addEventListener('input', e => {
       state = { ...state, search: e.target.value };
       onChange(state);
     });
@@ -79,11 +97,10 @@ export function renderFilters(root, onChange) {
   }
 
   function updateActiveButtons() {
-    root.querySelectorAll('[data-filter-type="status"]').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.key === state.status);
-    });
-    root.querySelectorAll('[data-filter-type="fase"]').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.key === state.fase);
+    ['status', 'fase', 'team'].forEach(type => {
+      root.querySelectorAll(`[data-filter-type="${type}"]`).forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.key === state[type]);
+      });
     });
   }
 

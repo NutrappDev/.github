@@ -86,6 +86,21 @@ export const FASE_LABELS = {
 };
 
 /**
+ * Extrae el equipo del repo desde sus topics GitHub.
+ * @returns {'roble'|'sakura'|'manglar'|null}
+ */
+export function repoTeam(repo) {
+  const teamTopic = (repo.topics ?? []).find(t => t.startsWith('team-'));
+  return teamTopic ? teamTopic.replace('team-', '') : null;
+}
+
+export const TEAM_LABELS = {
+  roble:   'Roble',
+  sakura:  'Sakura',
+  manglar: 'Manglar',
+};
+
+/**
  * Parsea el cuerpo de un tag anotado con el formato NutrappDev.
  *
  * Formato esperado:
