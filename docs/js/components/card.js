@@ -10,7 +10,7 @@ export function repoCardHtml(repo) {
   const name   = shortName(repo.full_name);
 
   return `
-    <article class="repo-card status-${status}" data-name="${escHtml(name.toLowerCase())}">
+    <article class="repo-card status-${status}" data-name="${escHtml(name.toLowerCase())}" data-fullname="${escHtml(repo.full_name)}">
       ${cardHeader(repo, name, status)}
       <div class="card-body">
         ${releaseRow('prod', repo.production, 'Producción')}

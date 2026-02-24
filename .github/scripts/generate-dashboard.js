@@ -85,7 +85,10 @@ async function getCommitDate(owner, repo, sha) {
 
 // ─── Datos por repo ────────────────────────────────────────────────────────────
 
-/** Último tag que cumple el patrón (los tags vienen ordenados: newest first) */
+/**
+ * Último tag que cumple el patrón.
+ * Para tags anotados, obtiene el cuerpo del mensaje (contiene resumen de PRs).
+ */
 async function getLatestTag(owner, repo, pattern) {
   const tags = await ghFetch(`/repos/${owner}/${repo}/tags`, { paginated: true });
   if (!tags?.length) return null;
@@ -93,12 +96,33 @@ async function getLatestTag(owner, repo, pattern) {
   const match = tags.find(t => pattern.test(t.name));
   if (!match) return null;
 
-  const date = await getCommitDate(owner, repo, match.commit.sha);
+  let body = null;
+  let date = null;
+
+  // Verificar si es un tag anotado (type=tag) o ligero (type=commit)
+  const ref = await ghFetch(
+    `/repos/${owner}/${repo}/git/ref/tags/${encodeURIComponent(match.name)}`
+  );
+  if (ref?.object?.type === 'tag') {
+    // Tag anotado: obtener objeto para mensaje y fecha del tagger
+    const tagObj = await ghFetch(`/repos/${owner}/${repo}/git/tags/${ref.object.sha}`);
+    if (tagObj) {
+      body = tagObj.message ?? null;
+      date = tagObj.tagger?.date ?? null;
+    }
+  }
+
+  // Fallback a fecha del commit para tags ligeros o si falló el objeto
+  if (!date) {
+    date = await getCommitDate(owner, repo, match.commit.sha);
+  }
+
   return {
     version: match.name,
     sha: match.commit.sha,
     date,
     url: `https://github.com/${owner}/${repo}/releases/tag/${match.name}`,
+    body,
   };
 }
 

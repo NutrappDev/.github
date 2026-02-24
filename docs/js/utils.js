@@ -85,6 +85,63 @@ export const FASE_LABELS = {
   fruto:  'Fruto',
 };
 
+/**
+ * Parsea el cuerpo de un tag anotado con el formato NutrappDev.
+ *
+ * Formato esperado:
+ *   Release qa-YYYY-MM-DD
+ *
+ *   Features (N):
+ *   PR #XXX by Autor - Resumen del cambio [TICKET-123]
+ *
+ *   Fixes (N):
+ *   PR #YYY by Autor - Resumen del fix
+ *
+ *   Other (N):
+ *   PR #ZZZ by Autor - Resumen
+ *
+ * @returns {{ features: PR[], fixes: PR[], other: PR[] } | null}
+ */
+export function parseTagBody(body) {
+  if (!body) return null;
+
+  const result = { features: [], fixes: [], other: [] };
+  let section = null;
+
+  for (const rawLine of body.split('\n')) {
+    const line = rawLine.trim();
+    if (!line) continue;
+
+    if (/^features?\s*\(\d+\)\s*:/i.test(line)) { section = 'features'; continue; }
+    if (/^fixes?\s*\(\d+\)\s*:/i.test(line))    { section = 'fixes';    continue; }
+    if (/^other\s*\(\d+\)\s*:/i.test(line))     { section = 'other';    continue; }
+
+    if (!section || !line.startsWith('PR #')) continue;
+
+    // "PR #123 by Autor Name - Resumen del cambio [TICKET-123]"
+    // Partir en "PR #NNN", " by ", primer " - " después del autor
+    const byIdx   = line.indexOf(' by ');
+    const dashIdx = line.indexOf(' - ', byIdx + 4);
+    if (byIdx === -1 || dashIdx === -1) continue;
+
+    const number = parseInt(line.slice(4, byIdx), 10);
+    const author = line.slice(byIdx + 4, dashIdx).trim();
+    const rest   = line.slice(dashIdx + 3).trim();
+
+    // Ticket opcional al final: [ALCO-123]
+    const ticketMatch = rest.match(/\[([A-Z]{2,}-\d+)\]$/);
+    const ticket  = ticketMatch ? ticketMatch[1] : null;
+    const summary = ticket ? rest.slice(0, rest.lastIndexOf(' [')).trim() : rest;
+
+    if (!isNaN(number) && author && summary) {
+      result[section].push({ number, author, summary, ticket });
+    }
+  }
+
+  const total = result.features.length + result.fixes.length + result.other.length;
+  return total > 0 ? result : null;
+}
+
 /** Escapa HTML para evitar XSS al insertar strings en innerHTML */
 export function escHtml(str) {
   if (!str) return '';

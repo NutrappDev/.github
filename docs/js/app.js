@@ -3,10 +3,11 @@
  * Carga repos.json y orquesta los componentes.
  */
 
-import { renderHeader }  from './components/header.js';
-import { renderStats }   from './components/stats.js';
-import { renderFilters } from './components/filters.js';
-import { repoCardHtml }  from './components/card.js';
+import { renderHeader }    from './components/header.js';
+import { renderStats }     from './components/stats.js';
+import { renderFilters }   from './components/filters.js';
+import { repoCardHtml }    from './components/card.js';
+import { initDetailPanel, openDetailPanel } from './components/detail.js';
 import { repoStatus, repoFase, shortName } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
@@ -48,6 +49,14 @@ async function loadData() {
   renderStats(statsRoot, allRepos);
 
   filtersCtrl = renderFilters(filtersRoot, handleFilterChange);
+
+  initDetailPanel();
+  gridRoot.addEventListener('click', e => {
+    const card = e.target.closest('.repo-card');
+    if (!card || e.target.closest('a')) return;
+    const repo = allRepos.find(r => r.full_name === card.dataset.fullname);
+    if (repo) openDetailPanel(repo);
+  });
 
   renderGrid(allRepos);
   filtersCtrl.setCount(allRepos.length, allRepos.length);
