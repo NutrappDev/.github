@@ -1,9 +1,84 @@
 {
-  "generated_at": "2026-02-23T20:23:43.579Z",
+  "generated_at": "2026-02-24T02:48:04.451Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 24,
   "repos": [
+    {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T22:41:44Z",
+      "topics": [],
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "ai-assistants",
+      "full_name": "NutrappDev/ai-assistants",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T22:38:17Z",
+      "topics": [],
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
+      "name": "ai-assistants-backend",
+      "full_name": "NutrappDev/ai-assistants-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-23T22:30:44Z",
+      "topics": [],
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -12,12 +87,13 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-23T19:13:14Z",
+      "last_push": "2026-02-23T20:40:15Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
             {
               "sha": "0d5355c",
@@ -25,6 +101,18 @@
               "date": "2026-02-23T19:13:13Z",
               "author": "fabianromerolu",
               "tickets": []
+            },
+            {
+              "sha": "dd3fb8a",
+              "message": "Feat(products): ALCO-1394 re fetch products (#319)",
+              "date": "2026-02-23T20:40:13Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "ALCO-1394",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1394"
+                }
+              ]
             }
           ]
         },
@@ -134,54 +222,6 @@
       }
     },
     {
-      "name": "ai-assistants-backend",
-      "full_name": "NutrappDev/ai-assistants-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/ai-assistants-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-23T16:00:53Z",
-      "production": null,
-      "qa": null,
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "recent_releases": [],
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
-      }
-    },
-    {
-      "name": "ai-assistants",
-      "full_name": "NutrappDev/ai-assistants",
-      "description": null,
-      "url": "https://github.com/NutrappDev/ai-assistants",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-23T15:59:40Z",
-      "production": null,
-      "qa": null,
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "recent_releases": [],
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -190,6 +230,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-21T00:39:34Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -308,100 +349,6 @@
       }
     },
     {
-      "name": "sso-micuenta",
-      "full_name": "NutrappDev/sso-micuenta",
-      "description": null,
-      "url": "https://github.com/NutrappDev/sso-micuenta",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-18T18:32:51Z",
-      "production": null,
-      "qa": null,
-      "pending": {
-        "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "d0de038",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-02-18T17:23:09Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "d1bccc6",
-              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
-              "date": "2026-02-18T18:32:44Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-197",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "181eb53",
-              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
-              "date": "2026-02-16T20:16:48Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
-                }
-              ]
-            },
-            {
-              "sha": "e8a8fc6",
-              "message": "Merge pull request #61 from NutrappDev/develop",
-              "date": "2026-02-16T20:30:20Z",
-              "author": "k-aguilera",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "recent_releases": [],
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-backend",
-      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-18T17:30:23Z",
-      "production": null,
-      "qa": null,
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "recent_releases": [],
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "recent_releases": null
-      }
-    },
-    {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
       "description": "Página web externa de Nutrabiotics Colombia",
@@ -410,12 +357,20 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-23T14:18:50Z",
-      "production": null,
+      "topics": [],
+      "production": {
+        "version": "prod-2026-02-19",
+        "sha": "314b09cacedf29a8bff202239a286e067d7d3c2f",
+        "date": "2026-02-19T21:33:22Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-19",
+        "body": "Release prod-2026-02-19\n\nFeatures (2):\nPR #2 by Steven León - Implementa la página de Línea Ética con sección de evidencias, canales y assets [NCOL-551]\nPR #4 by jsandoval-dev - Configura formulario HubSpot multi-paso para denuncia en Línea Ética [NCOL-515]\n\nFixes (5):\nPR #3 by Steven León - Corrige bucle infinito de peticiones al ms-products en vista individual de producto [NCOL-556]\nPR #6 by jsandoval-dev - Mejora estilos y estructura responsive del formulario HubSpot Línea Ética [NCOL-515]\nPR #8 by jsandoval-dev - Corrige estilos restantes del formulario HubSpot en Línea Ética [NCOL-515]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo - Oculta botón Me interesa en páginas de medicamentos con fórmula médica [NCOL-538]\n"
+      },
       "qa": {
         "version": "qa-2026-02-17",
         "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
-        "date": "2026-02-18T14:33:00Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17"
+        "date": "2026-02-19T20:22:11Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17",
+        "body": "Release qa-2026-02-17\n\nFixes (10):\nPR #3 by Steven León - Corrige bucle de peticiones en vista individual de producto al ms-products [NCOL-556]\nPR #14 by Steven León - Corrige títulos de productos en catálogo a mayúsculas desde lógica [NCOL-574]\nPR #15 by Steven León - Corrige título de página individual de producto a mayúsculas desde lógica [NCOL-572]\nPR #18 by k-aguilera - Corrige carga de eventos ajustando AppInitializer para inicializarlos correctamente [NCOL-561]\nPR #19 by Jorge Garay - Ajusta colSpan de 2 columnas para vista tablet 820x1180 en productos [NCOL-459]\nPR #20 by Steven León - Actualiza textos del banner hero en la página de educación [NCOL-563]\nPR #21 by Steven León - Corrige visualización del banner de aplicaciones funcionales en tablets iOS [NCOL-586]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #23 by Steven León - Corrige flechas de navegación en sliders y carrusel de doctores en mobile [NCOL-601] [NCOL-603] [NCOL-604]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo by millerladino - Ajustes de vista slider inicial de productos, ver todos los sliders [PMO-2221]\n"
       },
       "pending": {
         "to_qa": {
@@ -579,6 +534,77 @@
       }
     },
     {
+      "name": "sso-micuenta",
+      "full_name": "NutrappDev/sso-micuenta",
+      "description": null,
+      "url": "https://github.com/NutrappDev/sso-micuenta",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-18T18:32:51Z",
+      "topics": [],
+      "production": null,
+      "qa": null,
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "d0de038",
+              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
+              "date": "2026-02-18T17:23:09Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "d1bccc6",
+              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
+              "date": "2026-02-18T18:32:44Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-197",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "181eb53",
+              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
+              "date": "2026-02-16T20:16:48Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-113",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
+                }
+              ]
+            },
+            {
+              "sha": "e8a8fc6",
+              "message": "Merge pull request #61 from NutrappDev/develop",
+              "date": "2026-02-16T20:30:20Z",
+              "author": "k-aguilera",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "recent_releases": [],
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "recent_releases": null
+      }
+    },
+    {
       "name": "SSO-keycloak",
       "full_name": "NutrappDev/SSO-keycloak",
       "description": null,
@@ -587,6 +613,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-17T13:41:07Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -700,6 +727,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-11T22:52:13Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -730,17 +758,20 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-23T15:23:48Z",
+      "topics": [],
       "production": {
         "version": "v2.0.0",
         "sha": "77e6f13f730e683f6c54db1861e570d6a050fb48",
-        "date": "2026-02-10T13:13:58Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v2.0.0"
+        "date": "2026-02-10T13:17:37Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v2.0.0",
+        "body": "Release v2.0.0 - Deploy a produccion 2026-02-10\n\nFeatures (27):\nPR #139 by Jhelcy-Sandoval - Agrega tipo de documento al historial de credenciales\nPR #140 by Joredjs - Restaura nombre dinámico de email en órdenes\nPR #142 by fabianromerolu - Ajuste de límite para plantillas de prescripción\nPR #143 by aplicaciones-nutrapp - Configuración de Puppeteer para generación de PDFs\nPR #146 by fabianromerolu - Plantilla de compra para prescripciones [ALCO-1226]\nPR #152 by CristiGB - Paginación de usuarios en SSO [SSO-161]\nPR #155 by CristiGB - Mejora identificación de usuarios en prescripciones\nPR #158 by CristiGB - Eliminación de logs de debug en microservicios\nPR #165 by CristiGB - Fallback de dependencias para estabilidad de builds\nPR #172 by CristiGB - Obtener productos por canal de venta [ALCO-1217]\nPR #173 by fabianromerolu - CORS para prescripciones [SUP-220]\nPR #174 by CristiGB - Búsqueda global de usuarios por endpoint [SUP-222]\nPR #175 by fabianromerolu - Plantilla de prescripción médica [ALCO-1226]\nPR #176 by CristiGB - Filtros de búsqueda por nombre y apellido [SUP-222]\nPR #193 by CristiGB - Actualización de stock de productos [ALCO-1294]\nPR #194 by fabianromerolu - Nuevos parámetros para getAllOrders [SUP-200]\nPR #198 by Joredjs - Nuevo microservicio de pagos completo [ALCO-1101]\nPR #202 by CristiGB - Búsqueda masiva de usuarios para enriquecimiento de pacientes [ALCO-1316]\nPR #205 by CristiGB - Soporte binary media types en API Gateway para PDFs [ALCO-1298]\nPR #207 by fabianromerolu - PDF hormonal v3 [ALCO-1331]\nPR #208 by fabianromerolu - PDF hormonal v3 iteración [ALCO-1331]\nPR #209 by fabianromerolu - Ajuste de PDF hormonal [ALCO-1331]\nPR #210 by fabianromerolu - PDF hormonas prescripciones [ALCO-1331]\nPR #211 by fabianromerolu - Nueva lógica funcional de prescripciones [ALCO-1305]\n\nFixes (21):\nPR #141 by Jhelcy-Sandoval - Reorden de campo document_type en historial de credenciales\nPR #149 by marioeraso - Corrección de texto en asunto de email SSO\nPR #150 by CristiGB - Corrección de manejo de roles en servicio de productos\nPR #153 by CristiGB - Validación de fecha de inicio en cupones\nPR #154 by CristiGB - Remoción de externals en webpack de prescripciones\nPR #156 by CristiGB - Corrección de logging en build serverless\nPR #157 by CristiGB - Fix de build en prescripciones\nPR #159 by CristiGB - Actualización de configuración webpack para externals\nPR #168 by CristiGB - Actualización de implementación S3 upload [ALCO-1210]\nPR #170 by CristiGB - Corrección displayname y role en SSO [SSO-161]\nPR #177 by CristiGB - Corrección administración de productos [ALCO-1217]\nPR #186 by fabianromerolu - Corrección CORS en prescripciones [ALCO-1243]\nPR #187 by CristiGB - Eliminación en cascada de entidades relacionadas a categorías [SUP-208]\nPR #189 by CristiGB - Cambio de servicio de email a nodemailer en prescripciones\nPR #192 by CristiGB - Fix inyección de servicio de roles en filtrado de productos [NCOL-503]\nPR #200 by Joredjs - Ajuste de variables de entorno payments [ALCO-1101]\nPR #201 by Joredjs - Corrección variable DB URL payments [ALCO-1101]\nPR #203 by fabianromerolu - Generación de PDF en AWS [ALCO-1311]\nPR #204 by CristiGB - Mejora generación y manejo de respuesta PDF [ALCO-1298]\nPR #206 by fabianromerolu - PDF hormonas v2 [ALCO-1311]\nPR #212 by fabianromerolu - Ajuste final de PDF prescripciones [ALCO-1311]\n\nRefactors (8):\nPR #151 by Joredjs - Limpieza del microservicio de prescripciones\nPR #160 by Joredjs - Limpieza del microservicio de notificaciones\nPR #162 by Joredjs - Limpieza del microservicio de órdenes\nPR #166 by CristiGB - Refactorización get patients [ALCO-1207]\nPR #167 by Joredjs - Limpieza del microservicio de productos [ALCO-1201]\nPR #182 by fabianromerolu - Vigencia paginado [ALCO-1227]\nPR #185 by fabianromerolu - Cambio de lógica de vigencia [ALCO-1227]\nPR #190 by Joredjs - Limpieza del microservicio SSO [ALCO-1202]\n\nOther (4):\nPR #144 by Joredjs - Ajuste de límites de líneas en validaciones de build\nPR #147 by aplicaciones-nutrapp - Actualización de configuración webpack y serverless\nPR #179 by Joredjs - Ajuste en validaciones de commits [ALCO-1100]\nPR #184 by CristiGB - Mejora registro de usuarios e integración Keycloak [ALCO-1218]\nPR #191 by CristiGB - Check user bulk SSO [SSO-166]\nPR #180 by Joredjs - Documentación de validaciones [ALCO-1100]\n"
       },
       "qa": {
         "version": "qa-2026-02-23",
         "sha": "3f5c6566066271dab4e647e4b2f871ef5a5a5e79",
-        "date": "2026-02-23T14:36:15Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-23"
+        "date": "2026-02-23T14:36:30Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-23",
+        "body": "Release qa-2026-02-23\n\nFeatures (1):\nPR #233 by Fabián Mauricio Romero lugo - Agrega endpoints GET para consultar donation config dentro del módulo gamification en ms-products [ALCO-1392]\n"
       },
       "pending": {
         "to_qa": {
@@ -875,6 +906,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-09T00:49:58Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -899,6 +931,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-06T14:57:03Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -923,6 +956,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-06T14:53:46Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -947,6 +981,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-02-04T16:01:30Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -971,6 +1006,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-01-27T21:08:26Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -995,6 +1031,7 @@
       "is_fork": false,
       "default_branch": "LocalCode",
       "last_push": "2026-01-25T04:54:59Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1019,6 +1056,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-01-23T20:42:25Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1043,6 +1081,7 @@
       "is_fork": false,
       "default_branch": "master",
       "last_push": "2026-01-21T17:35:28Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1067,6 +1106,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-01-05T22:50:53Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1091,6 +1131,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-01-05T22:50:31Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1115,6 +1156,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2025-12-26T15:04:39Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1145,6 +1187,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2025-12-12T21:49:25Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1169,6 +1212,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2025-11-20T19:18:30Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
@@ -1193,6 +1237,7 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2025-11-20T16:10:33Z",
+      "topics": [],
       "production": null,
       "qa": null,
       "pending": {
