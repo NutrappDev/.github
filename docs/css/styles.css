@@ -461,7 +461,6 @@ a:hover { text-decoration: underline; }
 /* ─── Fase badge ─────────────────────────────────────────────────────────────── */
 .fase-badge {
   display: inline-block;
-  margin-top: 5px;
   font-size: 0.62rem;
   font-weight: 700;
   padding: 2px 7px;
@@ -474,6 +473,30 @@ a:hover { text-decoration: underline; }
 .fase-badge--tronco { background: #e0f7fa; color: #0e7490; }
 .fase-badge--ramas  { background: var(--c-purple-light); color: var(--c-purple-mid); }
 .fase-badge--fruto  { background: var(--c-green-light);  color: var(--c-green); }
+
+/* ─── Card header badges row ─────────────────────────────────────────────────── */
+.card-header__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 5px;
+  min-height: 20px; /* evita que la tarjeta salte si no hay badges */
+}
+
+/* ─── Team badge ─────────────────────────────────────────────────────────────── */
+.team-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-badge--roble   { background: #fef3c7; color: #92400e; } /* ámbar cálido */
+.team-badge--sakura  { background: #fce7f3; color: #9d174d; } /* rosa */
+.team-badge--manglar { background: #d1fae5; color: #065f46; } /* esmeralda */
 
 /* ─── Empty state ────────────────────────────────────────────────────────────── */
 .empty-state {
