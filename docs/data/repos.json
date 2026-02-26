@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-02-25T06:21:27.465Z",
+  "generated_at": "2026-02-26T06:18:10.167Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 25,
   "repos": [
     {
-      "name": "alivia",
-      "full_name": "NutrappDev/alivia",
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
       "description": null,
-      "url": "https://github.com/NutrappDev/alivia",
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-24T22:33:43Z",
+      "last_push": "2026-02-26T01:47:36Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -24,7 +24,227 @@
           "recent_commits": []
         },
         "to_production": {
-          "count": 15,
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-empresas",
+      "full_name": "NutrappDev/nutrabiotics-empresas",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-empresas",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-26T01:14:38Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "67bd09d",
+              "message": "fix: render and images bugs NE-37",
+              "date": "2026-02-26T00:39:27Z",
+              "author": "Aguilera Kevin",
+              "tickets": [
+                {
+                  "id": "NE-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
+                }
+              ]
+            },
+            {
+              "sha": "bc50981",
+              "message": "Merge pull request #28 from NutrappDev/fix/NE-37-home-bugs",
+              "date": "2026-02-26T01:14:38Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 54,
+          "recent_commits": [
+            {
+              "sha": "ead131c",
+              "message": "Catalog intialización",
+              "date": "2026-01-23T15:31:42Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "ba3ad4b",
+              "message": "feat: Catalog section creation",
+              "date": "2026-01-29T15:57:55Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4e34791",
+              "message": "feat(catalog): Import adjustment and alias added",
+              "date": "2026-01-29T17:58:03Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "699399c",
+              "message": "Merge pull request #1 from NutrappDev/feat/B2B-37-import-adjustment",
+              "date": "2026-01-29T18:00:58Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
+                }
+              ]
+            },
+            {
+              "sha": "b43e1a7",
+              "message": "Merge pull request #2 from NutrappDev/develop",
+              "date": "2026-01-29T19:24:22Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "71b4244",
+              "message": "fix: Apply general SEO and SEM config B2B-77",
+              "date": "2026-01-29T21:27:59Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "1b73d5f",
+              "message": "Merge pull request #3 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T21:29:20Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "7aa2a05",
+              "message": "fix: add SEO and SEM config to home page B2B-77",
+              "date": "2026-01-29T22:03:44Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "a5c5d72",
+              "message": "Merge pull request #4 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T22:05:22Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "fcc08cc",
+              "message": "feat: Add not fpun page to avoid deploy AWS problems",
+              "date": "2026-01-29T22:21:30Z",
+              "author": "Aguilera",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
+      "description": null,
+      "url": "https://github.com/NutrappDev/microservice_payments",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-26T00:47:03Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/22368300577",
+        "updated_at": "2026-02-24T20:15:15Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "alivia",
+      "full_name": "NutrappDev/alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-26T00:32:48Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 18,
           "recent_commits": [
             {
               "sha": "3685fc8",
@@ -136,7 +356,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-25T00:31:28Z",
+      "last_push": "2026-02-26T02:38:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-02-24",
@@ -172,7 +392,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 89,
+          "count": 92,
           "recent_commits": [
             {
               "sha": "b675f2a",
@@ -332,39 +552,6 @@
       }
     },
     {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-24T20:15:05Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/22368300577",
-        "updated_at": "2026-02-24T20:15:15Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
       "description": null,
@@ -435,135 +622,6 @@
       "pending": {
         "to_qa": null,
         "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-empresas",
-      "full_name": "NutrappDev/nutrabiotics-empresas",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-empresas",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-21T00:39:34Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 51,
-          "recent_commits": [
-            {
-              "sha": "ead131c",
-              "message": "Catalog intialización",
-              "date": "2026-01-23T15:31:42Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "ba3ad4b",
-              "message": "feat: Catalog section creation",
-              "date": "2026-01-29T15:57:55Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4e34791",
-              "message": "feat(catalog): Import adjustment and alias added",
-              "date": "2026-01-29T17:58:03Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "699399c",
-              "message": "Merge pull request #1 from NutrappDev/feat/B2B-37-import-adjustment",
-              "date": "2026-01-29T18:00:58Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "b43e1a7",
-              "message": "Merge pull request #2 from NutrappDev/develop",
-              "date": "2026-01-29T19:24:22Z",
-              "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "71b4244",
-              "message": "fix: Apply general SEO and SEM config B2B-77",
-              "date": "2026-01-29T21:27:59Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "1b73d5f",
-              "message": "Merge pull request #3 from NutrappDev/fix/B2B-77-seo-and-sem-config",
-              "date": "2026-01-29T21:29:20Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "7aa2a05",
-              "message": "fix: add SEO and SEM config to home page B2B-77",
-              "date": "2026-01-29T22:03:44Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "a5c5d72",
-              "message": "Merge pull request #4 from NutrappDev/fix/B2B-77-seo-and-sem-config",
-              "date": "2026-01-29T22:05:22Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "fcc08cc",
-              "message": "feat: Add not fpun page to avoid deploy AWS problems",
-              "date": "2026-01-29T22:21:30Z",
-              "author": "Aguilera",
-              "tickets": []
-            }
-          ]
-        }
       },
       "ci": null,
       "_errors": {
@@ -770,39 +828,6 @@
       }
     },
     {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
-      "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-11T22:52:13Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "monorepo-alivia-backend",
       "full_name": "NutrappDev/monorepo-alivia-backend",
       "description": null,
@@ -810,7 +835,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-24T20:59:43Z",
+      "last_push": "2026-02-25T21:48:50Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -874,15 +899,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 309,
+          "count": 310,
           "recent_commits": [
-            {
-              "sha": "23cad72",
-              "message": "build: final commit in ms-orders",
-              "date": "2025-08-20T22:39:31Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "b053a73",
               "message": "build: final commit in ms-orders final",
@@ -943,6 +961,13 @@
               "sha": "7973549",
               "message": "ci: fixing command syntax",
               "date": "2025-08-22T03:31:27Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "94fcbf8",
+              "message": "fix: ci command sntax",
+              "date": "2025-08-22T03:49:46Z",
               "author": "Jorge Garay",
               "tickets": []
             }
