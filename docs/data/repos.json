@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-02-26T06:18:10.167Z",
+  "generated_at": "2026-02-27T06:14:39.836Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 25,
   "repos": [
     {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
+      "name": "alivia",
+      "full_name": "NutrappDev/alivia",
       "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
+      "url": "https://github.com/NutrappDev/alivia",
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T01:47:36Z",
+      "last_push": "2026-02-27T00:43:12Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -20,12 +20,123 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "4980261",
+              "message": "fix/FormAndCheckout (#326)",
+              "date": "2026-02-26T13:38:39Z",
+              "author": "Fabián Mauricio Romero lugo",
+              "tickets": []
+            },
+            {
+              "sha": "d2b236a",
+              "message": "refactor(products): improve product unit calculation and enhance prescription handling ALMX-230",
+              "date": "2026-02-26T21:58:33Z",
+              "author": "cristigb",
+              "tickets": [
+                {
+                  "id": "ALMX-230",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-230"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
-          "count": 0,
-          "recent_commits": []
+          "count": 18,
+          "recent_commits": [
+            {
+              "sha": "3685fc8",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia",
+              "date": "2026-02-06T21:16:46Z",
+              "author": "cristigb",
+              "tickets": []
+            },
+            {
+              "sha": "9e23c0d",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia (#308)",
+              "date": "2026-02-06T21:22:04Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "51c4a1f",
+              "message": "Develop (#309)",
+              "date": "2026-02-06T21:36:54Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "5d48295",
+              "message": "fix: normalize patient data PMO-2634 (#310)",
+              "date": "2026-02-10T16:48:58Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "5b3ab05",
+              "message": "hotfix: normalize patient data PMO-2634 (#310) (#311)",
+              "date": "2026-02-10T20:54:22Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "62c85fc",
+              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
+              "date": "2026-02-16T21:42:53Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "c4e5fb6",
+              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
+              "date": "2026-02-16T21:43:07Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "bfe2410",
+              "message": "Develop (#314)",
+              "date": "2026-02-16T22:04:03Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "fc05958",
+              "message": "docs(terms): agregar términos y condiciones para México ALMX-228 (#315)",
+              "date": "2026-02-19T21:56:45Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            },
+            {
+              "sha": "a3421bb",
+              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
+              "date": "2026-02-19T22:57:41Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            }
+          ]
         }
       },
       "ci": null,
@@ -45,7 +156,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T01:14:38Z",
+      "last_push": "2026-02-26T17:54:56Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -53,36 +164,11 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "67bd09d",
-              "message": "fix: render and images bugs NE-37",
-              "date": "2026-02-26T00:39:27Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "bc50981",
-              "message": "Merge pull request #28 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-26T01:14:38Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
-          "count": 54,
+          "count": 63,
           "recent_commits": [
             {
               "sha": "ead131c",
@@ -192,6 +278,128 @@
       }
     },
     {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-26T16:12:00Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": {
+          "count": 20,
+          "recent_commits": [
+            {
+              "sha": "bd83439",
+              "message": "fix/FormFix",
+              "date": "2025-10-29T23:05:31Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "900d6aa",
+              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
+              "date": "2026-02-10T15:30:39Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4eda596",
+              "message": "feat: bussines selector config B2B-101",
+              "date": "2026-02-11T05:46:02Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "cfa9384",
+              "message": "feat: Forms selection B2B-101",
+              "date": "2026-02-12T12:33:23Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "511d81d",
+              "message": "fix: Temp adjustment to finalForm",
+              "date": "2026-02-12T20:04:54Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "11d7d08",
+              "message": "feat: Update business reitration flow  NE-106",
+              "date": "2026-02-13T19:26:15Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "NE-106",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
+                }
+              ]
+            },
+            {
+              "sha": "62020e9",
+              "message": "fix: Change data number for natural and legal",
+              "date": "2026-02-15T05:54:56Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "1efcce1",
+              "message": "build: pipeline qa",
+              "date": "2026-02-16T15:16:49Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "91550dd",
+              "message": "build(aws): pipeline to qa",
+              "date": "2026-02-16T15:18:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a7cf3c5",
+              "message": "fix(pipeline): env stage to qa",
+              "date": "2026-02-16T15:24:57Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/22450553445",
+        "updated_at": "2026-02-26T16:19:11Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
       "description": null,
@@ -199,7 +407,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T00:47:03Z",
+      "last_push": "2026-02-26T13:40:47Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -225,14 +433,14 @@
       }
     },
     {
-      "name": "alivia",
-      "full_name": "NutrappDev/alivia",
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
       "description": null,
-      "url": "https://github.com/NutrappDev/alivia",
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T00:32:48Z",
+      "last_push": "2026-02-26T01:47:36Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -244,99 +452,8 @@
           "recent_commits": []
         },
         "to_production": {
-          "count": 18,
-          "recent_commits": [
-            {
-              "sha": "3685fc8",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia",
-              "date": "2026-02-06T21:16:46Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "9e23c0d",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia (#308)",
-              "date": "2026-02-06T21:22:04Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "51c4a1f",
-              "message": "Develop (#309)",
-              "date": "2026-02-06T21:36:54Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "5d48295",
-              "message": "fix: normalize patient data PMO-2634 (#310)",
-              "date": "2026-02-10T16:48:58Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2634",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
-                }
-              ]
-            },
-            {
-              "sha": "5b3ab05",
-              "message": "hotfix: normalize patient data PMO-2634 (#310) (#311)",
-              "date": "2026-02-10T20:54:22Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2634",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
-                }
-              ]
-            },
-            {
-              "sha": "62c85fc",
-              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
-              "date": "2026-02-16T21:42:53Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "c4e5fb6",
-              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
-              "date": "2026-02-16T21:43:07Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "bfe2410",
-              "message": "Develop (#314)",
-              "date": "2026-02-16T22:04:03Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "fc05958",
-              "message": "docs(terms): agregar términos y condiciones para México ALMX-228 (#315)",
-              "date": "2026-02-19T21:56:45Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            },
-            {
-              "sha": "a3421bb",
-              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
-              "date": "2026-02-19T22:57:41Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         }
       },
       "ci": null,
@@ -356,7 +473,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T02:38:53Z",
+      "last_push": "2026-02-26T19:13:57Z",
       "topics": [],
       "production": {
         "version": "prod-2026-02-24",
@@ -392,7 +509,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 92,
+          "count": 94,
           "recent_commits": [
             {
               "sha": "b675f2a",
@@ -706,128 +823,6 @@
       }
     },
     {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-17T13:41:07Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": {
-          "count": 20,
-          "recent_commits": [
-            {
-              "sha": "bd83439",
-              "message": "fix/FormFix",
-              "date": "2025-10-29T23:05:31Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "900d6aa",
-              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
-              "date": "2026-02-10T15:30:39Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4eda596",
-              "message": "feat: bussines selector config B2B-101",
-              "date": "2026-02-11T05:46:02Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "cfa9384",
-              "message": "feat: Forms selection B2B-101",
-              "date": "2026-02-12T12:33:23Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "511d81d",
-              "message": "fix: Temp adjustment to finalForm",
-              "date": "2026-02-12T20:04:54Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "11d7d08",
-              "message": "feat: Update business reitration flow  NE-106",
-              "date": "2026-02-13T19:26:15Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "62020e9",
-              "message": "fix: Change data number for natural and legal",
-              "date": "2026-02-15T05:54:56Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "1efcce1",
-              "message": "build: pipeline qa",
-              "date": "2026-02-16T15:16:49Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "91550dd",
-              "message": "build(aws): pipeline to qa",
-              "date": "2026-02-16T15:18:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a7cf3c5",
-              "message": "fix(pipeline): env stage to qa",
-              "date": "2026-02-16T15:24:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/20725200334",
-        "updated_at": "2026-01-05T18:34:24Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "monorepo-alivia-backend",
       "full_name": "NutrappDev/monorepo-alivia-backend",
       "description": null,
@@ -835,7 +830,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-25T21:48:50Z",
+      "last_push": "2026-02-26T22:51:55Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -899,29 +894,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 310,
+          "count": 313,
           "recent_commits": [
-            {
-              "sha": "b053a73",
-              "message": "build: final commit in ms-orders final",
-              "date": "2025-08-20T22:52:11Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "513749d",
-              "message": "build: clean lambda files",
-              "date": "2025-08-21T03:44:11Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "78d2d8e",
-              "message": "build: add github pr validation",
-              "date": "2025-08-21T05:19:24Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "26db40d",
               "message": "ci: fixing pr validation",
@@ -968,6 +942,27 @@
               "sha": "94fcbf8",
               "message": "fix: ci command sntax",
               "date": "2025-08-22T03:49:46Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "0c94ad4",
+              "message": "fix: add lock files",
+              "date": "2025-08-22T03:58:37Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "1f6068e",
+              "message": "feat(products): deploying first version",
+              "date": "2025-08-31T15:10:03Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "c4a8031",
+              "message": "build(products): creating dist folder",
+              "date": "2025-09-01T01:25:37Z",
               "author": "Jorge Garay",
               "tickets": []
             }
