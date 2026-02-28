@@ -1,9 +1,161 @@
 {
-  "generated_at": "2026-02-27T06:14:39.836Z",
+  "generated_at": "2026-02-28T06:05:14.659Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
-  "total_repos": 25,
+  "total_repos": 26,
   "repos": [
+    {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-27T23:04:11Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-02-27T19:33:08Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": {
+          "count": 20,
+          "recent_commits": [
+            {
+              "sha": "bd83439",
+              "message": "fix/FormFix",
+              "date": "2025-10-29T23:05:31Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "900d6aa",
+              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
+              "date": "2026-02-10T15:30:39Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4eda596",
+              "message": "feat: bussines selector config B2B-101",
+              "date": "2026-02-11T05:46:02Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "cfa9384",
+              "message": "feat: Forms selection B2B-101",
+              "date": "2026-02-12T12:33:23Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "511d81d",
+              "message": "fix: Temp adjustment to finalForm",
+              "date": "2026-02-12T20:04:54Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "11d7d08",
+              "message": "feat: Update business reitration flow  NE-106",
+              "date": "2026-02-13T19:26:15Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "NE-106",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
+                }
+              ]
+            },
+            {
+              "sha": "62020e9",
+              "message": "fix: Change data number for natural and legal",
+              "date": "2026-02-15T05:54:56Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "1efcce1",
+              "message": "build: pipeline qa",
+              "date": "2026-02-16T15:16:49Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "91550dd",
+              "message": "build(aws): pipeline to qa",
+              "date": "2026-02-16T15:18:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a7cf3c5",
+              "message": "fix(pipeline): env stage to qa",
+              "date": "2026-02-16T15:24:57Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/22500839433",
+        "updated_at": "2026-02-27T20:05:26Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -12,7 +164,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-27T00:43:12Z",
+      "last_push": "2026-02-27T16:05:12Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -20,31 +172,11 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "4980261",
-              "message": "fix/FormAndCheckout (#326)",
-              "date": "2026-02-26T13:38:39Z",
-              "author": "Fabián Mauricio Romero lugo",
-              "tickets": []
-            },
-            {
-              "sha": "d2b236a",
-              "message": "refactor(products): improve product unit calculation and enhance prescription handling ALMX-230",
-              "date": "2026-02-26T21:58:33Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALMX-230",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-230"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
-          "count": 18,
+          "count": 21,
           "recent_commits": [
             {
               "sha": "3685fc8",
@@ -278,128 +410,6 @@
       }
     },
     {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-26T16:12:00Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": {
-          "count": 20,
-          "recent_commits": [
-            {
-              "sha": "bd83439",
-              "message": "fix/FormFix",
-              "date": "2025-10-29T23:05:31Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "900d6aa",
-              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
-              "date": "2026-02-10T15:30:39Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4eda596",
-              "message": "feat: bussines selector config B2B-101",
-              "date": "2026-02-11T05:46:02Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "cfa9384",
-              "message": "feat: Forms selection B2B-101",
-              "date": "2026-02-12T12:33:23Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "511d81d",
-              "message": "fix: Temp adjustment to finalForm",
-              "date": "2026-02-12T20:04:54Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "11d7d08",
-              "message": "feat: Update business reitration flow  NE-106",
-              "date": "2026-02-13T19:26:15Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "62020e9",
-              "message": "fix: Change data number for natural and legal",
-              "date": "2026-02-15T05:54:56Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "1efcce1",
-              "message": "build: pipeline qa",
-              "date": "2026-02-16T15:16:49Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "91550dd",
-              "message": "build(aws): pipeline to qa",
-              "date": "2026-02-16T15:18:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a7cf3c5",
-              "message": "fix(pipeline): env stage to qa",
-              "date": "2026-02-16T15:24:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/22450553445",
-        "updated_at": "2026-02-26T16:19:11Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
       "description": null,
@@ -473,7 +483,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T19:13:57Z",
+      "last_push": "2026-02-27T16:51:58Z",
       "topics": [],
       "production": {
         "version": "prod-2026-02-24",
@@ -830,7 +840,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-26T22:51:55Z",
+      "last_push": "2026-02-27T20:40:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
