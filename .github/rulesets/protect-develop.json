@@ -9,6 +9,11 @@
     "ref_name": {
       "include": ["refs/heads/develop"],
       "exclude": []
+    },
+    "repository_name": {
+      "include": ["~ALL"],
+      "exclude": [],
+      "protected": false
     }
   },
 

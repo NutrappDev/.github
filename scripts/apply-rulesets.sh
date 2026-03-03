@@ -18,6 +18,9 @@
 
 set -euo pipefail
 
+# Evitar que Git Bash en Windows reescriba paths de la API como rutas de filesystem
+export MSYS_NO_PATHCONV=1
+
 ORG="NutrappDev"
 RULESETS_DIR=".github/rulesets"
 SCOPE="${1:-all}"  # "all" | "develop" | "qa" | "main"
