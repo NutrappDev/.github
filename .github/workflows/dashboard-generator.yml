@@ -12,7 +12,7 @@ name: Dashboard Generator
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Diario a las 6 AM UTC (1 AM Colombia)
+    - cron: "0 5 * * 1" # Semanal, lunes 5 AM UTC (domingo 12 AM Colombia)
   workflow_dispatch:
     inputs:
       dry_run:
