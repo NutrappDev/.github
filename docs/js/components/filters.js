@@ -7,16 +7,15 @@
  */
 export function renderFilters(root, onChange) {
   const statusFilters = [
-    { key: 'all',             label: 'Todos' },
-    { key: 'green',           label: '✓ Al día' },
-    { key: 'amber',           label: '⚠ Pendientes' },
-    { key: 'red',             label: '↑ Muy desactualizados' },
-    { key: 'needs-release',   label: '⬡ Sin releases' },
-    { key: 'gray',            label: '— Inactivos' },
+    { key: 'all',       label: 'Todos' },
+    { key: 'green',     label: '✓ Al día' },
+    { key: 'pending',   label: '⚠ Actualización pendiente' },
+    { key: 'migrating', label: '◈ En migración' },
+    { key: 'gray',      label: '— Inactivos' },
   ];
 
   const faseFilters = [
-    { key: 'all',    label: 'Todas las fases' },
+    { key: 'all',    label: 'Todos los tipos' },
     { key: 'raiz',   label: 'Raíz' },
     { key: 'tronco', label: 'Tronco' },
     { key: 'ramas',  label: 'Ramas' },
@@ -70,7 +69,7 @@ export function renderFilters(root, onChange) {
         <span class="filters-bar__count" id="visible-count"></span>
       </div>
       <div class="filters-bar filters-bar--fase">
-        <span class="filters-bar__label">Fase:</span>
+        <span class="filters-bar__label">Tipo:</span>
         ${faseBtns}
       </div>
       <div class="filters-bar filters-bar--team">

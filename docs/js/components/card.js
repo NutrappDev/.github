@@ -1,4 +1,4 @@
-import { formatDate, repoStatus, statusLabel, repoFase, FASE_LABELS, repoTeam, TEAM_LABELS, escHtml, shortName } from '../utils.js';
+import { formatDate, repoStatus, statusLabel, repoFase, FASE_LABELS, repoTeam, TEAM_LABELS, repoNombreCompliant, escHtml, shortName } from '../utils.js';
 
 /**
  * Genera el HTML de una tarjeta de repositorio.
@@ -34,6 +34,10 @@ function cardHeader(repo, name, status) {
     ? `<span class="team-badge team-badge--${escHtml(team)}">${escHtml(TEAM_LABELS[team] ?? team)}</span>`
     : '';
 
+  const namingBadge = !repoNombreCompliant(repo)
+    ? `<span class="naming-badge" title="El nombre del repo no sigue la nomenclatura oficial (fase-tipo-proyecto)">⚠ Nombre</span>`
+    : '';
+
   const desc = repo.description
     ? `<div class="card-header__desc">${escHtml(repo.description)}</div>`
     : '';
@@ -45,7 +49,7 @@ function cardHeader(repo, name, status) {
           <a href="${escHtml(repo.url)}" target="_blank" rel="noopener">${escHtml(name)}</a>
         </div>
         ${desc}
-        <div class="card-header__badges">${faseBadge}${teamBadge}</div>
+        <div class="card-header__badges">${faseBadge}${teamBadge}${namingBadge}</div>
       </div>
       <span class="status-badge ${status}">${escHtml(statusLabel(status))}</span>
     </div>

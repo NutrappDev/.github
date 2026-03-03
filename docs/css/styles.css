@@ -278,11 +278,10 @@ a:hover { text-decoration: underline; }
   transform: translateY(-1px);
 }
 
-.repo-card.status-green         { border-left-color: var(--c-green); }
-.repo-card.status-amber         { border-left-color: var(--c-amber); }
-.repo-card.status-red           { border-left-color: var(--c-red); }
-.repo-card.status-needs-release { border-left-color: var(--c-violet); }
-.repo-card.status-gray          { border-left-color: var(--c-gray); }
+.repo-card.status-green     { border-left-color: var(--c-green); }
+.repo-card.status-pending   { border-left-color: var(--c-amber); }
+.repo-card.status-migrating { border-left-color: var(--c-violet); }
+.repo-card.status-gray      { border-left-color: var(--c-gray); }
 
 /* Card header */
 .card-header {
@@ -319,11 +318,10 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
-.status-badge.green         { background: var(--c-green-light);  color: var(--c-green); }
-.status-badge.amber         { background: var(--c-amber-light);  color: var(--c-amber); }
-.status-badge.red           { background: var(--c-red-light);    color: var(--c-red); }
-.status-badge.needs-release { background: var(--c-violet-light); color: var(--c-violet); }
-.status-badge.gray          { background: var(--c-gray-light);   color: var(--c-gray); }
+.status-badge.green     { background: var(--c-green-light);  color: var(--c-green); }
+.status-badge.pending   { background: var(--c-amber-light);  color: var(--c-amber); }
+.status-badge.migrating { background: var(--c-violet-light); color: var(--c-violet); }
+.status-badge.gray      { background: var(--c-gray-light);   color: var(--c-gray); }
 
 /* Card body */
 .card-body {
@@ -497,6 +495,20 @@ a:hover { text-decoration: underline; }
 .team-badge--roble   { background: #fef3c7; color: #92400e; } /* ámbar cálido */
 .team-badge--sakura  { background: #fce7f3; color: #9d174d; } /* rosa */
 .team-badge--manglar { background: #d1fae5; color: #065f46; } /* esmeralda */
+
+/* ─── Naming compliance badge ─────────────────────────────────────────────────── */
+.naming-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--c-red-light);
+  color: var(--c-red);
+  cursor: help;
+}
 
 /* ─── Empty state ────────────────────────────────────────────────────────────── */
 .empty-state {

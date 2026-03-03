@@ -8,7 +8,7 @@ import { renderStats }     from './components/stats.js';
 import { renderFilters }   from './components/filters.js';
 import { repoCardHtml }    from './components/card.js';
 import { initDetailPanel, openDetailPanel, closeDetailPanel } from './components/detail.js';
-import { repoStatus, repoFase, repoTeam, shortName } from './utils.js';
+import { repoStatus, repoFase, repoTeam, shortName, STATUS_WEIGHT } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
 const headerRoot  = document.getElementById('header-root');
@@ -39,7 +39,16 @@ async function loadData() {
     return;
   }
 
-  allRepos = data.repos;
+  // Ordenar por urgencia (pending → migrating → green → gray) y luego por actividad reciente
+  allRepos = data.repos.slice().sort((a, b) => {
+    const wa = STATUS_WEIGHT[repoStatus(a)] ?? 9;
+    const wb = STATUS_WEIGHT[repoStatus(b)] ?? 9;
+    if (wa !== wb) return wa - wb;
+    // Secundario: más actividad reciente primero
+    const da = a.last_push ? new Date(a.last_push).getTime() : 0;
+    const db = b.last_push ? new Date(b.last_push).getTime() : 0;
+    return db - da;
+  });
 
   renderHeader(headerRoot, {
     generatedAt: data.generated_at,

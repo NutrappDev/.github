@@ -36,7 +36,12 @@ export function jiraUrl(ticket) {
 
 /**
  * Determina el estado visual de un repo.
- * @returns {'green'|'amber'|'red'|'needs-release'|'gray'}
+ * @returns {'green'|'pending'|'migrating'|'gray'}
+ *
+ * green     — al día (prod tag + 0 commits pendientes a main)
+ * pending   — actualización pendiente (prod tag + >0 commits o rama inexistente)
+ * migrating — activo pero sin tag de producción (en migración a política de releases)
+ * gray      — sin actividad en >90 días y sin pendientes (o error al procesar)
  */
 export function repoStatus(repo) {
   if (repo.error) return 'gray';
@@ -46,27 +51,41 @@ export function repoStatus(repo) {
       ? Math.floor((Date.now() - new Date(repo.last_push).getTime()) / 86400000)
       : 999;
     const hasPendingToQa = (repo.pending?.to_qa?.count ?? 0) > 0;
-    // Activo (<60 días) o con commits esperando QA → necesita adoptar sistema de releases
-    return (daysSinceLastPush < 60 || hasPendingToQa) ? 'needs-release' : 'gray';
+    return (daysSinceLastPush < 90 || hasPendingToQa) ? 'migrating' : 'gray';
   }
 
   const pendingToProd = repo.pending?.to_production?.count ?? null;
-  if (pendingToProd === null) return 'amber';
-  if (pendingToProd === 0) return 'green';
-  if (pendingToProd <= 10) return 'amber';
-  return 'red';
+  if (pendingToProd === null || pendingToProd > 0) return 'pending';
+  return 'green';
 }
 
 const STATUS_LABELS = {
-  green:           'Al día',
-  amber:           'Cambios pendientes',
-  red:             'Muy desactualizado',
-  'needs-release': 'Sin sistema de releases',
-  gray:            'Inactivo',
+  green:     'Al día',
+  pending:   'Actualización pendiente',
+  migrating: 'En migración',
+  gray:      'Inactivo',
 };
 
 export function statusLabel(status) {
   return STATUS_LABELS[status] ?? status;
+}
+
+/**
+ * Peso para ordenar por urgencia (menor = más urgente).
+ */
+export const STATUS_WEIGHT = {
+  pending:   1,
+  migrating: 2,
+  green:     3,
+  gray:      4,
+};
+
+/**
+ * Indica si el nombre del repo sigue la nomenclatura oficial.
+ * Patrón: [raiz|tronco|ramas|fruto]-[servicio]-[proyecto]
+ */
+export function repoNombreCompliant(repo) {
+  return /^(raiz|tronco|ramas|fruto)-/.test(repo.name);
 }
 
 /**

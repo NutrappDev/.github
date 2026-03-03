@@ -136,7 +136,8 @@ Generado por `.github/workflows/dashboard-generator.yml`. **No editar manualment
 | Estado | Color | Condición |
 |---|---|---|
 | `green` | Verde | Tiene producción + `pending.to_production.count === 0` |
-| `amber` | Ámbar | Tiene producción + `pending.to_production.count` entre 1 y 10, o `pending.to_production === null` |
-| `red` | Rojo | Tiene producción + `pending.to_production.count > 10` |
-| `needs-release` | Violeta | Sin producción + activo (push < 60 días o `pending.to_qa.count > 0`) |
-| `gray` | Gris | Sin producción + inactivo (push ≥ 60 días y sin pendientes) |
+| `pending` | Ámbar | Tiene producción + `pending.to_production.count > 0` o `pending.to_production === null` |
+| `migrating` | Violeta | Sin producción + activo (push < 90 días o `pending.to_qa.count > 0`) |
+| `gray` | Gris | Sin producción + inactivo (push ≥ 90 días y sin pendientes) |
+
+Los repos se muestran ordenados por urgencia: `pending` → `migrating` → `green` → `gray`, con actividad reciente como criterio secundario.
