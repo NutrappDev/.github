@@ -1,9 +1,226 @@
 {
-  "generated_at": "2026-03-02T06:15:08.682Z",
+  "generated_at": "2026-03-03T06:13:13.022Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 26,
   "repos": [
+    {
+      "name": "fruto-web-nutra-co",
+      "full_name": "NutrappDev/fruto-web-nutra-co",
+      "description": "Página web externa de Nutrabiotics Colombia",
+      "url": "https://github.com/NutrappDev/fruto-web-nutra-co",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-02T22:34:12Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-03-02",
+        "sha": "111cb63340d1526daaf73164ac4ecbc2f1a6bb54",
+        "date": "2026-03-02T22:17:17Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02",
+        "body": "Release prod-2026-03-02\n\nFixes (1):\nPR #21 by Steven León - Ajuste de breakpoints responsive y detección de hover para diferenciar tablets de desktop en banner de apps funcionales [NCOL-586]\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-03-02-2",
+          "sha": "313699941d0742d8e755e85c140fffde2bcb7d6d",
+          "date": "2026-03-02T22:34:09Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02-2",
+          "body": "Release prod-2026-03-02-2\n\nFixes (1):\nPR #32 by Steven León - Corrige visualización de unidad de gramos en minúscula en títulos de productos con cantidad [PMO-2676]\n"
+        },
+        {
+          "version": "prod-2026-02-24",
+          "sha": "31b722317dce889d106a9994b438321f453ddd93",
+          "date": "2026-02-24T22:20:33Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-24",
+          "body": "Release prod-2026-02-24\n\nFixes (2):\nPR #5 by Steven León - Reemplaza carrusel apps funcionales con nueva implementación responsive en 3 breakpoints [NCOL-544]\nPR #9 by Steven León - Corrige carrusel videos doctores con modo infinito y consistencia visual [NCOL-543]\n"
+        },
+        {
+          "version": "prod-2026-02-19",
+          "sha": "314b09cacedf29a8bff202239a286e067d7d3c2f",
+          "date": "2026-02-19T21:33:22Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-19",
+          "body": "Release prod-2026-02-19\n\nFeatures (2):\nPR #2 by Steven León - Implementa la página de Línea Ética con sección de evidencias, canales y assets [NCOL-551]\nPR #4 by jsandoval-dev - Configura formulario HubSpot multi-paso para denuncia en Línea Ética [NCOL-515]\n\nFixes (5):\nPR #3 by Steven León - Corrige bucle infinito de peticiones al ms-products en vista individual de producto [NCOL-556]\nPR #6 by jsandoval-dev - Mejora estilos y estructura responsive del formulario HubSpot Línea Ética [NCOL-515]\nPR #8 by jsandoval-dev - Corrige estilos restantes del formulario HubSpot en Línea Ética [NCOL-515]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo - Oculta botón Me interesa en páginas de medicamentos con fórmula médica [NCOL-538]\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-02-24",
+        "sha": "d86ccd0d11f155f94a4f57db8343c987e5785727",
+        "date": "2026-02-25T00:17:15Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-24",
+        "body": "Release qa-2026-02-24\n\nOther (1):\nPR #25 by Jorge Garay - Actualiza links de políticas corporativas al bucket S3 y links directos de PDFs [PMO-2639]\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-02-17",
+          "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
+          "date": "2026-02-19T20:22:11Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17",
+          "body": "Release qa-2026-02-17\n\nFixes (10):\nPR #3 by Steven León - Corrige bucle de peticiones en vista individual de producto al ms-products [NCOL-556]\nPR #14 by Steven León - Corrige títulos de productos en catálogo a mayúsculas desde lógica [NCOL-574]\nPR #15 by Steven León - Corrige título de página individual de producto a mayúsculas desde lógica [NCOL-572]\nPR #18 by k-aguilera - Corrige carga de eventos ajustando AppInitializer para inicializarlos correctamente [NCOL-561]\nPR #19 by Jorge Garay - Ajusta colSpan de 2 columnas para vista tablet 820x1180 en productos [NCOL-459]\nPR #20 by Steven León - Actualiza textos del banner hero en la página de educación [NCOL-563]\nPR #21 by Steven León - Corrige visualización del banner de aplicaciones funcionales en tablets iOS [NCOL-586]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #23 by Steven León - Corrige flechas de navegación en sliders y carrusel de doctores en mobile [NCOL-601] [NCOL-603] [NCOL-604]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo by millerladino - Ajustes de vista slider inicial de productos, ver todos los sliders [PMO-2221]\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 94,
+          "recent_commits": [
+            {
+              "sha": "b675f2a",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T21:49:47Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "0630493",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T21:52:16Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "333074c",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-06T22:01:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "598321a",
+              "message": "CheckBox Ajuste en Forms",
+              "date": "2026-01-07T14:35:57Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "cebce14",
+              "message": "se revisa y se pushea en cambio de nuevo en ambiente local OK",
+              "date": "2026-01-08T15:15:32Z",
+              "author": "Miller",
+              "tickets": []
+            },
+            {
+              "sha": "54dd229",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-13T21:42:48Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "b1e8b1d",
+              "message": "fix(slug): mostrar contraindicaciones para todos los medicamentos",
+              "date": "2026-01-14T13:31:30Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "316314a",
+              "message": "fix: disclaimer devuelve vacio",
+              "date": "2026-01-15T18:47:01Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "ab489ee",
+              "message": "ajsutes de la vista de slider inical de productos, ver todos los sliders",
+              "date": "2026-01-20T19:06:30Z",
+              "author": "millerladino",
+              "tickets": []
+            },
+            {
+              "sha": "863520f",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-22T21:03:32Z",
+              "author": "Jorge",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 43,
+          "recent_commits": [
+            {
+              "sha": "b3bb448",
+              "message": "SocialSidebar con ajustes de toggle",
+              "date": "2025-12-05T21:53:36Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "a6feb9a",
+              "message": "SocialSidebar con ajustes de toggle",
+              "date": "2025-12-05T22:26:00Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "57920db",
+              "message": "medications includes and fixed for reg. sanitario",
+              "date": "2025-12-11T00:43:02Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "4c1074f",
+              "message": "adjustment on view without login & order by des",
+              "date": "2025-12-11T16:13:57Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "f21b854",
+              "message": "fix:(alineación de descripciones) se alinearon descripciones de acuerdo a los textos concedidos por asuntos regulatorios",
+              "date": "2025-12-22T23:36:22Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "1f3b1e5",
+              "message": "fix(ajuste en las descripciones) ajustes visuales para mejorar la ux",
+              "date": "2025-12-23T18:55:56Z",
+              "author": "Richard",
+              "tickets": []
+            },
+            {
+              "sha": "1bdbedd",
+              "message": "CheckBox Ajuste en Forms",
+              "date": "2026-01-15T17:14:09Z",
+              "author": "juanmedcas",
+              "tickets": []
+            },
+            {
+              "sha": "3368364",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-15T20:36:44Z",
+              "author": "jgaray@nutrapp.com.co",
+              "tickets": []
+            },
+            {
+              "sha": "f3eba7a",
+              "message": "doc: ignore claude",
+              "date": "2026-01-20T21:32:23Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "b8b8bfa",
+              "message": "Squashed commit of the following ",
+              "date": "2026-01-20T23:18:03Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "tronco-automatizacion-interna",
       "full_name": "NutrappDev/tronco-automatizacion-interna",
@@ -482,209 +699,6 @@
       }
     },
     {
-      "name": "fruto-web-nutra-co",
-      "full_name": "NutrappDev/fruto-web-nutra-co",
-      "description": "Página web externa de Nutrabiotics Colombia",
-      "url": "https://github.com/NutrappDev/fruto-web-nutra-co",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-27T16:51:58Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-02-24",
-        "sha": "31b722317dce889d106a9994b438321f453ddd93",
-        "date": "2026-02-24T22:20:33Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-24",
-        "body": "Release prod-2026-02-24\n\nFixes (2):\nPR #5 by Steven León - Reemplaza carrusel apps funcionales con nueva implementación responsive en 3 breakpoints [NCOL-544]\nPR #9 by Steven León - Corrige carrusel videos doctores con modo infinito y consistencia visual [NCOL-543]\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-02-19",
-          "sha": "314b09cacedf29a8bff202239a286e067d7d3c2f",
-          "date": "2026-02-19T21:33:22Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-19",
-          "body": "Release prod-2026-02-19\n\nFeatures (2):\nPR #2 by Steven León - Implementa la página de Línea Ética con sección de evidencias, canales y assets [NCOL-551]\nPR #4 by jsandoval-dev - Configura formulario HubSpot multi-paso para denuncia en Línea Ética [NCOL-515]\n\nFixes (5):\nPR #3 by Steven León - Corrige bucle infinito de peticiones al ms-products en vista individual de producto [NCOL-556]\nPR #6 by jsandoval-dev - Mejora estilos y estructura responsive del formulario HubSpot Línea Ética [NCOL-515]\nPR #8 by jsandoval-dev - Corrige estilos restantes del formulario HubSpot en Línea Ética [NCOL-515]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo - Oculta botón Me interesa en páginas de medicamentos con fórmula médica [NCOL-538]\n"
-        }
-      ],
-      "qa": {
-        "version": "qa-2026-02-24",
-        "sha": "d86ccd0d11f155f94a4f57db8343c987e5785727",
-        "date": "2026-02-25T00:17:15Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-24",
-        "body": "Release qa-2026-02-24\n\nOther (1):\nPR #25 by Jorge Garay - Actualiza links de políticas corporativas al bucket S3 y links directos de PDFs [PMO-2639]\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-02-17",
-          "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
-          "date": "2026-02-19T20:22:11Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-17",
-          "body": "Release qa-2026-02-17\n\nFixes (10):\nPR #3 by Steven León - Corrige bucle de peticiones en vista individual de producto al ms-products [NCOL-556]\nPR #14 by Steven León - Corrige títulos de productos en catálogo a mayúsculas desde lógica [NCOL-574]\nPR #15 by Steven León - Corrige título de página individual de producto a mayúsculas desde lógica [NCOL-572]\nPR #18 by k-aguilera - Corrige carga de eventos ajustando AppInitializer para inicializarlos correctamente [NCOL-561]\nPR #19 by Jorge Garay - Ajusta colSpan de 2 columnas para vista tablet 820x1180 en productos [NCOL-459]\nPR #20 by Steven León - Actualiza textos del banner hero en la página de educación [NCOL-563]\nPR #21 by Steven León - Corrige visualización del banner de aplicaciones funcionales en tablets iOS [NCOL-586]\nPR #22 by jsandoval-dev - Corrige sección Evidencias de Línea Ética en mobile: imagen, layout y tipografía [NCOL-595] [NCOL-598]\nPR #23 by Steven León - Corrige flechas de navegación en sliders y carrusel de doctores en mobile [NCOL-601] [NCOL-603] [NCOL-604]\nPR #24 by jsandoval-dev - Corrige pantalla de confirmación Gracias por su denuncia en Línea Ética [NCOL-593]\n\nOther (1):\nCommit directo by millerladino - Ajustes de vista slider inicial de productos, ver todos los sliders [PMO-2221]\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 94,
-          "recent_commits": [
-            {
-              "sha": "b675f2a",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-06T21:49:47Z",
-              "author": "jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "0630493",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-06T21:52:16Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "333074c",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-06T22:01:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "598321a",
-              "message": "CheckBox Ajuste en Forms",
-              "date": "2026-01-07T14:35:57Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "cebce14",
-              "message": "se revisa y se pushea en cambio de nuevo en ambiente local OK",
-              "date": "2026-01-08T15:15:32Z",
-              "author": "Miller",
-              "tickets": []
-            },
-            {
-              "sha": "54dd229",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-13T21:42:48Z",
-              "author": "jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "b1e8b1d",
-              "message": "fix(slug): mostrar contraindicaciones para todos los medicamentos",
-              "date": "2026-01-14T13:31:30Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "316314a",
-              "message": "fix: disclaimer devuelve vacio",
-              "date": "2026-01-15T18:47:01Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "ab489ee",
-              "message": "ajsutes de la vista de slider inical de productos, ver todos los sliders",
-              "date": "2026-01-20T19:06:30Z",
-              "author": "millerladino",
-              "tickets": []
-            },
-            {
-              "sha": "863520f",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-22T21:03:32Z",
-              "author": "Jorge",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 43,
-          "recent_commits": [
-            {
-              "sha": "b3bb448",
-              "message": "SocialSidebar con ajustes de toggle",
-              "date": "2025-12-05T21:53:36Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "a6feb9a",
-              "message": "SocialSidebar con ajustes de toggle",
-              "date": "2025-12-05T22:26:00Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "57920db",
-              "message": "medications includes and fixed for reg. sanitario",
-              "date": "2025-12-11T00:43:02Z",
-              "author": "Richard",
-              "tickets": []
-            },
-            {
-              "sha": "4c1074f",
-              "message": "adjustment on view without login & order by des",
-              "date": "2025-12-11T16:13:57Z",
-              "author": "Richard",
-              "tickets": []
-            },
-            {
-              "sha": "f21b854",
-              "message": "fix:(alineación de descripciones) se alinearon descripciones de acuerdo a los textos concedidos por asuntos regulatorios",
-              "date": "2025-12-22T23:36:22Z",
-              "author": "Richard",
-              "tickets": []
-            },
-            {
-              "sha": "1f3b1e5",
-              "message": "fix(ajuste en las descripciones) ajustes visuales para mejorar la ux",
-              "date": "2025-12-23T18:55:56Z",
-              "author": "Richard",
-              "tickets": []
-            },
-            {
-              "sha": "1bdbedd",
-              "message": "CheckBox Ajuste en Forms",
-              "date": "2026-01-15T17:14:09Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "3368364",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-15T20:36:44Z",
-              "author": "jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "f3eba7a",
-              "message": "doc: ignore claude",
-              "date": "2026-01-20T21:32:23Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "b8b8bfa",
-              "message": "Squashed commit of the following ",
-              "date": "2026-01-20T23:18:03Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
       "description": null,
@@ -846,7 +860,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-02-27T20:40:31Z",
+      "last_push": "2026-03-02T21:12:27Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -910,15 +924,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 313,
+          "count": 314,
           "recent_commits": [
-            {
-              "sha": "26db40d",
-              "message": "ci: fixing pr validation",
-              "date": "2025-08-21T14:35:40Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "3f1fb06",
               "message": "ci: no touch readme",
@@ -979,6 +986,13 @@
               "sha": "c4a8031",
               "message": "build(products): creating dist folder",
               "date": "2025-09-01T01:25:37Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "b9f5941",
+              "message": "build(products): creating serverless",
+              "date": "2025-09-01T02:44:32Z",
               "author": "Jorge Garay",
               "tickets": []
             }
@@ -1073,13 +1087,7 @@
           ]
         }
       },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/21866539784",
-        "updated_at": "2026-02-10T13:20:31Z",
-        "name": "pages build and deployment"
-      },
+      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
