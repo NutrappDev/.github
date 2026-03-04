@@ -45,6 +45,11 @@ on:
       - qa
       - develop
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   validate:
     uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
