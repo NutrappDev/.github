@@ -1,9 +1,295 @@
 {
-  "generated_at": "2026-03-04T02:58:49.690Z",
+  "generated_at": "2026-03-04T03:26:04.234Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 26,
-  "jira_tickets": {},
+  "jira_tickets": {
+    "SUP-222": {
+      "summary": "UX annotation Superadmin - Gestor de Productos Diseño",
+      "status": "Actividad completada",
+      "assignee": "Emily Alzate Garcia"
+    },
+    "SUP-220": {
+      "summary": "Descripciones",
+      "status": "Actividad completada",
+      "assignee": "Steven de la Rosa"
+    },
+    "SUP-208": {
+      "summary": "Conexiones API, Alivia y nutrabiotics.info productos",
+      "status": "Cancelado",
+      "assignee": "Steven de la Rosa"
+    },
+    "SUP-200": {
+      "summary": "Diseño de gestor \"Colaboradores\"",
+      "status": "Cancelado",
+      "assignee": "Emily Alzate Garcia"
+    },
+    "SSO-161": {
+      "summary": "BG | Cargar RUT | Botón no realiza acción",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "SSO-6": {
+      "summary": "Evitar tantos llamados por patientid desde prescripciones con un endpoint que reciba la lista en sso",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2676": {
+      "summary": "Categoría “Medicamentos” sin productos visibles",
+      "status": "Esperando aprobación",
+      "assignee": "Steven Leon"
+    },
+    "PMO-2639": {
+      "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
+      "status": "En despliegue",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2634": {
+      "summary": "Error en visualización de pacientes Alivia",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2585": {
+      "summary": "Banners pack de medicina funcional - página de nutra",
+      "status": "En despliegue",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2254": {
+      "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
+      "status": "En despliegue",
+      "assignee": "Kevin Aguilera"
+    },
+    "PMO-2221": {
+      "summary": "Solicitud de carga de piezas promocionales en sección “carrusel del productos” – Sitio Web Nutrabiotics Colombia",
+      "status": "En despliegue",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "NE-197": {
+      "summary": "HU-CAT-02 — Breadcrumb del catálogo",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "NE-113": {
+      "summary": "[Historia de usuario: Catálogos y reglas de selects (País/Ciudad/Documento/Celular) para Persona Natural]",
+      "status": "Detenido",
+      "assignee": "Kevin Aguilera"
+    },
+    "NE-106": {
+      "summary": "Creación de historias de usuario del Home (habilitador del desarrollo)",
+      "status": "Actividad completada",
+      "assignee": "Cristhian Camilo Ruiz Segura"
+    },
+    "NCOL-572": {
+      "summary": "Bitácora de despliegues a PROD - Sprints nueva versión Nutrabiotics Colombia",
+      "status": "Pruebas QE",
+      "assignee": "David Sarmiento"
+    },
+    "NCOL-563": {
+      "summary": "Sprint #7 - Bugs UI/UX",
+      "status": "En proceso",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-561": {
+      "summary": "Reporte quincenal de eventos adversos en Nutrabiotics Colombia (HubSpot) - Diciembre 2025",
+      "status": "Actividad completada",
+      "assignee": "Evelyn Herreño"
+    },
+    "NCOL-556": {
+      "summary": "Reporte quincenal de eventos adversos en Nutrabiotics Colombia (HubSpot) - Julio 2025",
+      "status": "Actividad completada",
+      "assignee": "Evelyn Herreño"
+    },
+    "NCOL-551": {
+      "summary": "Desarrollo Front End: Implementación de diseño y componentes login y registro.",
+      "status": "Actividad completada",
+      "assignee": "Wilson Mendoza"
+    },
+    "NCOL-544": {
+      "summary": " Aliados comerciales",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-543": {
+      "summary": "Contáctanos",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-538": {
+      "summary": "Los 6 principios de nuestras creaciones",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-515": {
+      "summary": "Desarrollar formulario en hubspot para ventas y herramientas .",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-503": {
+      "summary": "No aparece menú lateral MOBILE - DATOS PERSONALES",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "NCOL-466": {
+      "summary": "Educación: el carrusel de productos AMF es deslizable y no tiene flechas de navegación.",
+      "status": "Actividad completada",
+      "assignee": "Mario Eraso"
+    },
+    "NCOL-459": {
+      "summary": "Productos: difuminación de las cards",
+      "status": "Actividad completada",
+      "assignee": "Mario Eraso"
+    },
+    "NCOL-424": {
+      "summary": "BUG | HOME | TABLET | Cambio de Banner",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-421": {
+      "summary": "BG | Home | Flechas de navegación del carrusel no se visualizan al recargar la página",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-418": {
+      "summary": "BG | Home | Carrusel de videos presenta desalineación y estructura incorrecta",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-409": {
+      "summary": "BG | Home | Flechas de navegación del carrusel no se visualizan al recargar la página",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-401": {
+      "summary": "BG | Línea Ética | Campo “Teléfono” y campo de “Búsqueda” no corresponden al diseño aprobado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NCOL-400": {
+      "summary": "BG | Línea Ética | Pantalla de confirmación “Gracias por su denuncia” no respeta diseño aprobado",
+      "status": "Cancelado",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NCOL-399": {
+      "summary": "BG | Línea Ética | Sección de 'Evidencias' mobile no respeta diseño aprobado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NCOL-8": {
+      "summary": "Data - HTML Detalle Productos",
+      "status": "En despliegue",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-4": {
+      "summary": "Title Productos - Catalogo",
+      "status": "Revisión QA",
+      "assignee": "Steven Leon"
+    },
+    "ALPE-218": {
+      "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
+      "status": "Actividad completada",
+      "assignee": "Maria Alejandra Pedraza Cardenas"
+    },
+    "ALMX-228": {
+      "summary": "MCCT Alivia México",
+      "status": "Actividad completada",
+      "assignee": "David Sarmiento"
+    },
+    "ALCO-1243": {
+      "summary": "Ajustar los productos destacados en el home",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1227": {
+      "summary": "Corrección del error de conexión a Base de datos",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
+    "ALCO-1226": {
+      "summary": "Al momento de ingresar como medico, no redirecciona a datos personales",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1218": {
+      "summary": "BG | Testosterona x100 | No calcula correctamente la dosis",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-1217": {
+      "summary": "BG | Plural Pumps | PDF",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-1210": {
+      "summary": "Agregar a la card de usuario el estado del usuario ",
+      "status": "Cancelado",
+      "assignee": "Mario Eraso"
+    },
+    "ALCO-1207": {
+      "summary": "Poner tilde en la \"e\" en palabra \"Bioidénticas\"",
+      "status": "Actividad completada",
+      "assignee": "David Sarmiento"
+    },
+    "ALCO-1202": {
+      "summary": "solicitud acceso wp  woocomerce  para operación",
+      "status": "Cancelado",
+      "assignee": null
+    },
+    "ALCO-1201": {
+      "summary": "Ajuste - que se pueda identificar en el reporte de ventas de Google Sheets si una orden es de hormonas o no",
+      "status": "Actividad completada",
+      "assignee": "Juan Felipe Churio De La Rosa"
+    },
+    "ALCO-1101": {
+      "summary": "Ajustar con Juan David las URL de los productos de Alivia y Nutrabiotics",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1100": {
+      "summary": "Realizar una documentación técnica de front-end sobre Alivia",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "ALCO-1043": {
+      "summary": "Actualizar la llamada del metodo lookup dentro de prescripciones para que sea optimizado el numero de peticiones al sso",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-898": {
+      "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
+      "status": "Detenido",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-897": {
+      "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-895": {
+      "summary": "Construcción de 2 endpoints de visualización de las preferencias de donaciones del doctor, la preferencia general y la específica",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-448": {
+      "summary": "Despliegues semanales del backend de Alivia Colombia a ambiente de producción - Enero 2026",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
+    "ALCO-404": {
+      "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
+      "status": "Revisión QA",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-402": {
+      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    }
+  },
   "repos": [
     {
       "name": "alivia",
