@@ -316,6 +316,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
+          # Step outputs pasados como env vars para evitar que bash interprete
+          # los backticks de markdown como command substitution
+          BRANCH_RESULT: ${{ steps.branch-flow.outputs.branch_result }}
+          TITLE_RESULT: ${{ steps.title-check.outputs.title_result }}
+          JIRA_RESULT: ${{ steps.jira-check.outputs.jira_consistency_result }}
+          SIZE_RESULT: ${{ steps.size-check.outputs.size_result }}
         run: |
           BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
           TITLE_OK="${{ steps.title-check.outputs.title_ok }}"
@@ -327,26 +333,28 @@ jobs:
             ALL_OK=false
           fi
 
-          HEADER="## 🤖 Validación automática de PR"
           if [ "$ALL_OK" = "true" ]; then
             STATUS="**Estado: ✅ Todo correcto**"
           else
             STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
           fi
 
-          BODY="$HEADER
-
-          $STATUS
-
-          | Validación | Resultado |
-          |-----------|-----------|
-          | Flujo de ramas | ${{ steps.branch-flow.outputs.branch_result }} |
-          | Título del PR | ${{ steps.title-check.outputs.title_result }} |
-          | Consistencia Jira | ${{ steps.jira-check.outputs.jira_consistency_result }} |
-          | Tamaño del PR | ${{ steps.size-check.outputs.size_result }} |
-
-          ---
-          *Workflow: [pr-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/pr-validation.yml)*"
+          # Escribir body a archivo para evitar que bash interprete backticks
+          {
+            echo "## 🤖 Validación automática de PR"
+            echo ""
+            echo "$STATUS"
+            echo ""
+            echo "| Validación | Resultado |"
+            echo "|-----------|-----------|"
+            echo "| Flujo de ramas | $BRANCH_RESULT |"
+            echo "| Título del PR | $TITLE_RESULT |"
+            echo "| Consistencia Jira | $JIRA_RESULT |"
+            echo "| Tamaño del PR | $SIZE_RESULT |"
+            echo ""
+            echo "---"
+            echo "*Workflow: [pr-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/pr-validation.yml)*"
+          } > /tmp/pr_body.txt
 
           # Borrar comentario previo del bot en este PR (evitar spam)
           PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
@@ -356,7 +364,7 @@ jobs:
             gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
           fi
 
-          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file /tmp/pr_body.txt
 
       # ─── Fallar si hay errores ────────────────────────────────────────────
       - name: Fail if validation errors
