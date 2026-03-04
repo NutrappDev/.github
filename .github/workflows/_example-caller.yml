@@ -1,13 +1,28 @@
-# EJEMPLO — Copiar este archivo en cada repo bajo .github/workflows/pr-checks.yml
-# Este archivo NO hace nada por sí solo (está en el repo .github y no se activa).
+# ═══════════════════════════════════════════════════════════════════════════════
+# INSTRUCCIONES — Leer antes de copiar
+# ═══════════════════════════════════════════════════════════════════════════════
 #
-# Uso:
-#   cp .github/workflows/_example-caller.yml <tu-repo>/.github/workflows/pr-checks.yml
+# Paso 1: Copiar este archivo en tu repo como:
+#   .github/workflows/pr-checks.yml
 #
-# Secrets necesarios (heredados automáticamente con `secrets: inherit`):
-#   • ORG_READ_TOKEN — PAT clásico con scopes: repo + read:org
-#     Configurar en NutrappDev → Settings → Secrets → Actions (Organization secret)
+# Paso 2: Asegurarte de que GitHub Actions esté habilitado en el repo:
+#   Settings → Actions → General → Allow all actions
 #
+# Eso es todo. Los checks aparecerán automáticamente en los PRs.
+#
+# ───────────────────────────────────────────────────────────────────────────────
+# Checks que activa este workflow (requeridos por los rulesets de la org):
+#
+#   → develop : validate | security | commitlint
+#   → qa      : validate | security | release-validate
+#   → main    : validate | security | release-validate
+#
+# Si algún check queda en "pending" indefinidamente, verificar:
+#   1. Que el archivo esté en .github/workflows/pr-checks.yml (no en otro path)
+#   2. Que GitHub Actions esté habilitado en el repo
+#   3. Que el PR apunte a develop, qa o main (otras ramas no disparan el workflow)
+#
+# ───────────────────────────────────────────────────────────────────────────────
 # Para actualizar el dashboard al hacer deploy, agregar en tu workflow de deploy:
 #
 #   - name: Actualizar dashboard
@@ -18,6 +33,7 @@
 #         -f "client_payload[repo]=${{ github.repository }}"
 #     env:
 #       GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+# ═══════════════════════════════════════════════════════════════════════════════
 
 name: PR Checks
 
@@ -39,5 +55,11 @@ jobs:
     secrets: inherit
 
   commitlint:
+    if: github.base_ref == 'develop'
     uses: NutrappDev/.github/.github/workflows/commitlint.yml@main
+    secrets: inherit
+
+  release-validate:
+    if: startsWith(github.head_ref, 'release/')
+    uses: NutrappDev/.github/.github/workflows/release-validation.yml@main
     secrets: inherit
