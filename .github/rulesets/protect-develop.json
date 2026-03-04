@@ -12,7 +12,7 @@
     },
     "repository_name": {
       "include": ["~ALL"],
-      "exclude": [],
+      "exclude": [".github"],
       "protected": false
     }
   },
