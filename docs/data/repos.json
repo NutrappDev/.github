@@ -1,9 +1,263 @@
 {
-  "generated_at": "2026-03-03T06:13:13.022Z",
+  "generated_at": "2026-03-04T02:58:49.690Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 26,
+  "jira_tickets": {},
   "repos": [
+    {
+      "name": "alivia",
+      "full_name": "NutrappDev/alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-03T22:01:16Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 23,
+          "recent_commits": [
+            {
+              "sha": "3685fc8",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia",
+              "date": "2026-02-06T21:16:46Z",
+              "author": "cristigb",
+              "tickets": []
+            },
+            {
+              "sha": "9e23c0d",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia (#308)",
+              "date": "2026-02-06T21:22:04Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "51c4a1f",
+              "message": "Develop (#309)",
+              "date": "2026-02-06T21:36:54Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "5d48295",
+              "message": "fix: normalize patient data PMO-2634 (#310)",
+              "date": "2026-02-10T16:48:58Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "5b3ab05",
+              "message": "hotfix: normalize patient data PMO-2634 (#310) (#311)",
+              "date": "2026-02-10T20:54:22Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
+                }
+              ]
+            },
+            {
+              "sha": "62c85fc",
+              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
+              "date": "2026-02-16T21:42:53Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "c4e5fb6",
+              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
+              "date": "2026-02-16T21:43:07Z",
+              "author": "fabianromerolu",
+              "tickets": []
+            },
+            {
+              "sha": "bfe2410",
+              "message": "Develop (#314)",
+              "date": "2026-02-16T22:04:03Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": []
+            },
+            {
+              "sha": "fc05958",
+              "message": "docs(terms): agregar términos y condiciones para México ALMX-228 (#315)",
+              "date": "2026-02-19T21:56:45Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            },
+            {
+              "sha": "a3421bb",
+              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
+              "date": "2026-02-19T22:57:41Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-empresas",
+      "full_name": "NutrappDev/nutrabiotics-empresas",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-empresas",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-03T19:22:07Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 66,
+          "recent_commits": [
+            {
+              "sha": "ead131c",
+              "message": "Catalog intialización",
+              "date": "2026-01-23T15:31:42Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "ba3ad4b",
+              "message": "feat: Catalog section creation",
+              "date": "2026-01-29T15:57:55Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4e34791",
+              "message": "feat(catalog): Import adjustment and alias added",
+              "date": "2026-01-29T17:58:03Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "699399c",
+              "message": "Merge pull request #1 from NutrappDev/feat/B2B-37-import-adjustment",
+              "date": "2026-01-29T18:00:58Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
+                }
+              ]
+            },
+            {
+              "sha": "b43e1a7",
+              "message": "Merge pull request #2 from NutrappDev/develop",
+              "date": "2026-01-29T19:24:22Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "71b4244",
+              "message": "fix: Apply general SEO and SEM config B2B-77",
+              "date": "2026-01-29T21:27:59Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "1b73d5f",
+              "message": "Merge pull request #3 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T21:29:20Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "7aa2a05",
+              "message": "fix: add SEO and SEM config to home page B2B-77",
+              "date": "2026-01-29T22:03:44Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "a5c5d72",
+              "message": "Merge pull request #4 from NutrappDev/fix/B2B-77-seo-and-sem-config",
+              "date": "2026-01-29T22:05:22Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "B-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
+                }
+              ]
+            },
+            {
+              "sha": "fcc08cc",
+              "message": "feat: Add not fpun page to avoid deploy AWS problems",
+              "date": "2026-01-29T22:21:30Z",
+              "author": "Aguilera",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
@@ -12,7 +266,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-02T22:34:12Z",
+      "last_push": "2026-03-03T19:56:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -45,13 +299,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-02-24",
-        "sha": "d86ccd0d11f155f94a4f57db8343c987e5785727",
-        "date": "2026-02-25T00:17:15Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-24",
-        "body": "Release qa-2026-02-24\n\nOther (1):\nPR #25 by Jorge Garay - Actualiza links de políticas corporativas al bucket S3 y links directos de PDFs [PMO-2639]\n"
+        "version": "qa-2026-03-03",
+        "sha": "8eaaf8bf89d741ac3a6aec31e67447757f3e16c8",
+        "date": "2026-03-03T19:46:57Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-03",
+        "body": "Release qa-2026-03-03\n\nFeatures (2):\nPR #27 by Jorge Garay - Agrega sección de banner de packs en página de educación con contenido configurable [PMO-2585]\nPR #36 by Steven León - Agrega atributos cy-data en pantalla de producto individual y corrige visualización de disclaimer [NCOL-573]\n\nFixes (2):\nPR #31 by Jorge Garay - Corrige mensajes de error en rojo en formulario de farmacovigilancia [NCOL-466]\nPR #35 by k-aguilera - Corrige configuración del calendario de eventos en la página principal [PMO-2254]\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-02-24",
+          "sha": "d86ccd0d11f155f94a4f57db8343c987e5785727",
+          "date": "2026-02-25T00:17:15Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-24",
+          "body": "Release qa-2026-02-24\n\nOther (1):\nPR #25 by Jorge Garay - Actualiza links de políticas corporativas al bucket S3 y links directos de PDFs [PMO-2639]\n"
+        },
         {
           "version": "qa-2026-02-17",
           "sha": "c91ef124ffe1fec001a995bb3be59ce30ff07da5",
@@ -137,7 +398,7 @@
           ]
         },
         "to_production": {
-          "count": 43,
+          "count": 48,
           "recent_commits": [
             {
               "sha": "b3bb448",
@@ -380,259 +641,6 @@
       }
     },
     {
-      "name": "alivia",
-      "full_name": "NutrappDev/alivia",
-      "description": null,
-      "url": "https://github.com/NutrappDev/alivia",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-27T16:05:12Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 21,
-          "recent_commits": [
-            {
-              "sha": "3685fc8",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia",
-              "date": "2026-02-06T21:16:46Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "9e23c0d",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia (#308)",
-              "date": "2026-02-06T21:22:04Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "51c4a1f",
-              "message": "Develop (#309)",
-              "date": "2026-02-06T21:36:54Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "5d48295",
-              "message": "fix: normalize patient data PMO-2634 (#310)",
-              "date": "2026-02-10T16:48:58Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2634",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
-                }
-              ]
-            },
-            {
-              "sha": "5b3ab05",
-              "message": "hotfix: normalize patient data PMO-2634 (#310) (#311)",
-              "date": "2026-02-10T20:54:22Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2634",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
-                }
-              ]
-            },
-            {
-              "sha": "62c85fc",
-              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
-              "date": "2026-02-16T21:42:53Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "c4e5fb6",
-              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
-              "date": "2026-02-16T21:43:07Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "bfe2410",
-              "message": "Develop (#314)",
-              "date": "2026-02-16T22:04:03Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "fc05958",
-              "message": "docs(terms): agregar términos y condiciones para México ALMX-228 (#315)",
-              "date": "2026-02-19T21:56:45Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            },
-            {
-              "sha": "a3421bb",
-              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
-              "date": "2026-02-19T22:57:41Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-empresas",
-      "full_name": "NutrappDev/nutrabiotics-empresas",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-empresas",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-26T17:54:56Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 63,
-          "recent_commits": [
-            {
-              "sha": "ead131c",
-              "message": "Catalog intialización",
-              "date": "2026-01-23T15:31:42Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "ba3ad4b",
-              "message": "feat: Catalog section creation",
-              "date": "2026-01-29T15:57:55Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4e34791",
-              "message": "feat(catalog): Import adjustment and alias added",
-              "date": "2026-01-29T17:58:03Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "699399c",
-              "message": "Merge pull request #1 from NutrappDev/feat/B2B-37-import-adjustment",
-              "date": "2026-01-29T18:00:58Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "b43e1a7",
-              "message": "Merge pull request #2 from NutrappDev/develop",
-              "date": "2026-01-29T19:24:22Z",
-              "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "71b4244",
-              "message": "fix: Apply general SEO and SEM config B2B-77",
-              "date": "2026-01-29T21:27:59Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "1b73d5f",
-              "message": "Merge pull request #3 from NutrappDev/fix/B2B-77-seo-and-sem-config",
-              "date": "2026-01-29T21:29:20Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "7aa2a05",
-              "message": "fix: add SEO and SEM config to home page B2B-77",
-              "date": "2026-01-29T22:03:44Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "a5c5d72",
-              "message": "Merge pull request #4 from NutrappDev/fix/B2B-77-seo-and-sem-config",
-              "date": "2026-01-29T22:05:22Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "B-77",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-77"
-                }
-              ]
-            },
-            {
-              "sha": "fcc08cc",
-              "message": "feat: Add not fpun page to avoid deploy AWS problems",
-              "date": "2026-01-29T22:21:30Z",
-              "author": "Aguilera",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
       "description": null,
@@ -860,7 +868,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-02T21:12:27Z",
+      "last_push": "2026-03-03T21:25:57Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -924,29 +932,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 314,
+          "count": 317,
           "recent_commits": [
-            {
-              "sha": "3f1fb06",
-              "message": "ci: no touch readme",
-              "date": "2025-08-21T16:36:07Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a8bcca8",
-              "message": "ci: fix qa branch",
-              "date": "2025-08-21T17:41:05Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "3ee505f",
-              "message": "ci: improving pr validation",
-              "date": "2025-08-22T03:17:47Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "503d5e7",
               "message": "ci: re-run validation with updated title",
@@ -993,6 +980,27 @@
               "sha": "b9f5941",
               "message": "build(products): creating serverless",
               "date": "2025-09-01T02:44:32Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "4ea9c92",
+              "message": "build(products): buildinf",
+              "date": "2025-09-01T03:01:41Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "283021c",
+              "message": "build(products): deploy path",
+              "date": "2025-09-01T03:20:21Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "f90fe1a",
+              "message": "build: optimize affected apps",
+              "date": "2025-09-01T13:21:31Z",
               "author": "Jorge Garay",
               "tickets": []
             }
@@ -1087,7 +1095,13 @@
           ]
         }
       },
-      "ci": null,
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/21866539784",
+        "updated_at": "2026-02-10T13:20:31Z",
+        "name": "pages build and deployment"
+      },
       "_errors": {
         "production": null,
         "qa": null,
