@@ -16,8 +16,9 @@ const statsRoot   = document.getElementById('stats-root');
 const filtersRoot = document.getElementById('filters-root');
 const gridRoot    = document.getElementById('grid-root');
 
-// ─── Estado de filtros ────────────────────────────────────────────────────────
-let allRepos = [];
+// ─── Estado ───────────────────────────────────────────────────────────────────
+let allRepos    = [];
+let jiraTickets = {};
 let filtersCtrl = null;
 
 // ─── Carga de datos ───────────────────────────────────────────────────────────
@@ -35,16 +36,17 @@ async function loadData() {
   }
 
   if (!data.repos?.length) {
-    showEmpty('El dashboard aún no tiene datos. El workflow se ejecuta diariamente.');
+    showEmpty('El dashboard aún no tiene datos. El workflow se ejecuta semanalmente.');
     return;
   }
+
+  jiraTickets = data.jira_tickets ?? {};
 
   // Ordenar por urgencia (pending → migrating → green → gray) y luego por actividad reciente
   allRepos = data.repos.slice().sort((a, b) => {
     const wa = STATUS_WEIGHT[repoStatus(a)] ?? 9;
     const wb = STATUS_WEIGHT[repoStatus(b)] ?? 9;
     if (wa !== wb) return wa - wb;
-    // Secundario: más actividad reciente primero
     const da = a.last_push ? new Date(a.last_push).getTime() : 0;
     const db = b.last_push ? new Date(b.last_push).getTime() : 0;
     return db - da;
@@ -64,7 +66,7 @@ async function loadData() {
     const card = e.target.closest('.repo-card');
     if (!card || e.target.closest('a')) return;
     const repo = allRepos.find(r => r.full_name === card.dataset.fullname);
-    if (repo) openDetailPanel(repo);
+    if (repo) openDetailPanel(repo, jiraTickets);
   });
 
   renderGrid(allRepos);
@@ -74,7 +76,7 @@ async function loadData() {
   const initialSlug = location.hash.slice(1);
   if (initialSlug) {
     const repo = allRepos.find(r => r.full_name.split('/').pop() === initialSlug);
-    if (repo) openDetailPanel(repo);
+    if (repo) openDetailPanel(repo, jiraTickets);
   }
 }
 
@@ -82,7 +84,7 @@ async function loadData() {
 window.addEventListener('popstate', e => {
   if (e.state?.repo) {
     const repo = allRepos.find(r => r.full_name === e.state.repo);
-    if (repo) openDetailPanel(repo);
+    if (repo) openDetailPanel(repo, jiraTickets);
   } else {
     closeDetailPanel();
   }

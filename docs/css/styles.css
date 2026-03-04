@@ -827,6 +827,40 @@ a:hover { text-decoration: underline; }
 
 .detail-ticket:hover { background: var(--c-border); text-decoration: none; }
 
+/* Jira status pill — aparece junto al ticket link */
+.jira-status {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  /* default: neutro */
+  background: var(--c-gray-light);
+  color: var(--c-gray);
+}
+
+.jira-status--done,
+.jira-status--closed,
+.jira-status--cerrado       { background: var(--c-green-light);  color: var(--c-green); }
+
+.jira-status--in-progress,
+.jira-status--in-review,
+.jira-status--en-progreso   { background: var(--c-amber-light);  color: var(--c-amber); }
+
+.jira-status--to-do,
+.jira-status--por-hacer,
+.jira-status--open          { background: var(--c-gray-light);   color: var(--c-gray); }
+
+/* assignee en la misma línea de meta */
+.detail-pr-assignee {
+  font-size: 0.68rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
 /* Commit list */
 .detail-commit-list {
   display: flex;

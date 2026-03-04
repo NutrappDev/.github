@@ -17,9 +17,12 @@ import { dirname } from 'node:path';
 // ─── Configuración ────────────────────────────────────────────────────────────
 
 const ORG = 'NutrappDev';
-const JIRA_BASE = 'https://nutrabiotics.atlassian.net/browse';
+const JIRA_BASE     = 'https://nutrabiotics.atlassian.net/browse';
+const JIRA_BASE_API = 'https://nutrabiotics.atlassian.net/rest/api/3';
 const OUTPUT = process.argv[2] || 'docs/data/repos.json';
-const TOKEN = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const TOKEN       = process.env.GH_TOKEN || process.env.GITHUB_TOKEN;
+const JIRA_EMAIL  = process.env.JIRA_EMAIL;
+const JIRA_TOKEN  = process.env.JIRA_TOKEN;
 const CONCURRENCY = 8; // repos procesados en paralelo
 
 const PROD_TAG_PATTERN = /^(v\d|prod-\d{4}-\d{2}-\d{2})/;
@@ -75,6 +78,84 @@ function extractJiraTickets(text) {
 /** Construye URL de Jira a partir de un ticket */
 function jiraUrl(ticket) {
   return `${JIRA_BASE}/${ticket}`;
+}
+
+// ─── Jira ──────────────────────────────────────────────────────────────────────
+
+/** Recopila todos los ticket IDs únicos de los cuerpos de los tags y commits pendientes */
+function collectTicketIds(repos) {
+  const tickets = new Set();
+  const pattern = /\[([A-Z]{2,}-\d+)\]/g;
+  for (const repo of repos) {
+    for (const tag of [
+      repo.production,
+      repo.qa,
+      ...(repo.production_history ?? []),
+      ...(repo.qa_history ?? []),
+    ]) {
+      if (tag?.body) {
+        for (const m of tag.body.matchAll(pattern)) tickets.add(m[1]);
+      }
+    }
+    for (const pending of [repo.pending?.to_qa, repo.pending?.to_production]) {
+      for (const commit of pending?.recent_commits ?? []) {
+        for (const t of commit.tickets ?? []) tickets.add(t.id);
+      }
+    }
+  }
+  return [...tickets];
+}
+
+/**
+ * Consulta la API de Jira Cloud (v3) para obtener estado de los tickets.
+ * @returns {Record<string, { summary, status, assignee }>}
+ */
+async function getJiraTickets(ticketIds) {
+  if (!JIRA_EMAIL || !JIRA_TOKEN) {
+    console.log('  Jira: JIRA_EMAIL o JIRA_TOKEN no configurado — omitiendo enriquecimiento.');
+    return {};
+  }
+  if (!ticketIds.length) return {};
+
+  const auth = Buffer.from(`${JIRA_EMAIL}:${JIRA_TOKEN}`).toString('base64');
+  console.log(`  Jira: consultando ${ticketIds.length} tickets únicos...`);
+
+  try {
+    const res = await fetch(`${JIRA_BASE_API}/search`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${auth}`,
+        'Content-Type':  'application/json',
+        'Accept':        'application/json',
+      },
+      body: JSON.stringify({
+        jql:        `key in (${ticketIds.join(', ')})`,
+        fields:     ['summary', 'status', 'assignee'],
+        maxResults: 200,
+      }),
+    });
+
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      console.warn(`  ⚠ Jira API: ${res.status} ${res.statusText}${body ? ` — ${body.slice(0, 120)}` : ''}`);
+      return {};
+    }
+
+    const data = await res.json();
+    const result = {};
+    for (const issue of data.issues ?? []) {
+      result[issue.key] = {
+        summary:  issue.fields.summary ?? null,
+        status:   issue.fields.status?.name ?? null,
+        assignee: issue.fields.assignee?.displayName ?? null,
+      };
+    }
+    console.log(`  Jira: ✅ ${Object.keys(result).length} tickets enriquecidos`);
+    return result;
+  } catch (err) {
+    console.warn(`  ⚠ Jira API error: ${err.message}`);
+    return {};
+  }
 }
 
 /** Estado del último workflow run en la rama principal del repo */
@@ -282,12 +363,18 @@ async function main() {
     return dateB.localeCompare(dateA);
   });
 
+  // Enriquecer con datos de Jira
+  console.log('\nFetching Jira ticket data...');
+  const allTicketIds = collectTicketIds(results);
+  const jiraTickets  = await getJiraTickets(allTicketIds);
+
   const output = {
-    generated_at: new Date().toISOString(),
-    organization: ORG,
+    generated_at:  new Date().toISOString(),
+    organization:  ORG,
     jira_base_url: JIRA_BASE,
-    total_repos: results.length,
-    repos: results,
+    total_repos:   results.length,
+    jira_tickets:  jiraTickets,
+    repos:         results,
   };
 
   await mkdir(dirname(OUTPUT), { recursive: true });

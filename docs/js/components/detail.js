@@ -5,7 +5,8 @@
 
 import { parseTagBody, formatDate, jiraUrl, escHtml, shortName } from '../utils.js';
 
-let panelEl = null;
+let panelEl     = null;
+let jiraTickets = {}; // mapa { "NCOL-586": { summary, status, assignee } }
 
 // ─── Init ──────────────────────────────────────────────────────────────────────
 
@@ -45,8 +46,9 @@ export function initDetailPanel() {
   });
 }
 
-export function openDetailPanel(repo) {
+export function openDetailPanel(repo, jiraMap) {
   if (!panelEl) initDetailPanel();
+  if (jiraMap !== undefined) jiraTickets = jiraMap;
 
   panelEl.querySelector('.detail-panel__title').textContent = shortName(repo.full_name);
   panelEl.querySelector('.detail-panel__gh-link').href = repo.url;
@@ -191,11 +193,23 @@ function prGroups(parsed, repoUrl) {
   return `<div class="detail-pr-groups">${parts.join('')}</div>`;
 }
 
+function jiraStatusClass(status) {
+  return status.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+}
+
 function prGroup(title, prs, type, repoUrl) {
   const items = prs.map(pr => {
     const prUrl = `${repoUrl}/pull/${pr.number}`;
     const ticket = pr.ticket
       ? `<a class="detail-ticket" href="${escHtml(jiraUrl(pr.ticket))}" target="_blank" rel="noopener">${escHtml(pr.ticket)}</a>`
+      : '';
+
+    const jira       = pr.ticket ? jiraTickets[pr.ticket] : null;
+    const statusPill = jira?.status
+      ? `<span class="jira-status jira-status--${escHtml(jiraStatusClass(jira.status))}" title="${escHtml(jira.summary ?? '')}">${escHtml(jira.status)}</span>`
+      : '';
+    const assignee = jira?.assignee
+      ? `<span class="detail-pr-assignee">${escHtml(jira.assignee)}</span>`
       : '';
 
     return `
@@ -205,7 +219,7 @@ function prGroup(title, prs, type, repoUrl) {
           <div class="detail-pr-summary">${escHtml(pr.summary)}</div>
           <div class="detail-pr-meta">
             <span class="detail-pr-author">${escHtml(pr.author)}</span>
-            ${ticket}
+            ${ticket}${statusPill}${assignee}
           </div>
         </div>
       </div>

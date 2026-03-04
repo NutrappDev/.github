@@ -53,7 +53,9 @@ jobs:
       # ─── Generar repos.json ────────────────────────────────────────────────
       - name: Generate repos.json
         env:
-          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          GH_TOKEN:    ${{ secrets.ORG_READ_TOKEN }}
+          JIRA_EMAIL:  jgaray@nutrapp.com.co
+          JIRA_TOKEN:  ${{ secrets.JIRA_TOKEN }}
         run: node .github/scripts/generate-dashboard.js docs/data/repos.json
 
       # ─── Mostrar resumen en el log ─────────────────────────────────────────
