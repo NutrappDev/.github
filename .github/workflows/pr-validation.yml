@@ -87,7 +87,7 @@ jobs:
             echo "MERGE_STRATEGY=$STRATEGY" >> "$GITHUB_ENV"
           fi
 
-          # Validar patrón de nombre si existe
+          # Validar patrón de nombre si existe (release/* hacia qa/main)
           PATTERNS=$(echo "$FLOW" | jq -r '.allowed_branch_pattern // .allowed_branch_patterns // empty')
           if [ -n "$PATTERNS" ]; then
             PATTERN_MATCH=false
@@ -111,6 +111,16 @@ jobs:
               EXAMPLE=$(echo "$CONFIG" | jq -r ".release_branch_naming | to_entries | map(select(.value | test(\"$TARGET\"))) | .[0].value // \"release/<tipo>-YYYY-MM-DD\"")
               echo "branch_ok=false" >> "$GITHUB_OUTPUT"
               echo "branch_result=❌ El nombre de rama \`$SOURCE\` no cumple el patrón requerido para PRs a \`$TARGET\`. Ejemplo correcto: \`$EXAMPLE\`" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+          # Validar nomenclatura completa para ramas de feature hacia develop
+          # Patrón requerido: tipo/TICKET-123-descripcion-corta
+          if [ "$TARGET" = "develop" ] && [ "$MATCH" = "true" ]; then
+            ALLOWED_PREFIXES=$(echo "$FLOW" | jq -r '.allowed_source_prefixes | join("|")')
+            if ! echo "$SOURCE" | grep -qP "^($ALLOWED_PREFIXES)/[A-Z]+-[0-9]+-[a-z][a-z0-9-]+$"; then
+              echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+              echo "branch_result=❌ Nombre de rama inválido: \`$SOURCE\`. Patrón requerido: \`tipo/TICKET-123-descripcion-corta\` (ej: \`feat/NUTRI-123-login-google\`)" >> "$GITHUB_OUTPUT"
             fi
           fi
 

@@ -38,7 +38,7 @@ develop
 | Regla              | Detalle                                                                |
 | ------------------ | ---------------------------------------------------------------------- |
 | Fuentes permitidas | Solo `release/qa-YYYY-MM-DD`                                           |
-| Merge              | **Merge commit** — sin squash para preservar trazabilidad              |
+| Merge              | **Rebase merge** — mantiene historial lineal y trazabilidad de cherry-picks |
 | Jira ticket        | No requerido en el título del PR (la rama agrupa múltiples)            |
 | Commit directo     | ❌ Nunca                                                                |
 | Proceso            | Cherry-pick desde `develop` → rama `release/qa-YYYY-MM-DD` → PR a `qa` |
@@ -48,7 +48,7 @@ develop
 | Regla              | Detalle                                                               |
 | ------------------ | --------------------------------------------------------------------- |
 | Fuentes permitidas | `release/prod-YYYY-MM-DD` o `hotfix/TICKET-JIRA-descripcion`          |
-| Merge              | **Merge commit** — sin squash para preservar trazabilidad             |
+| Merge              | **Rebase merge** — mantiene historial lineal y trazabilidad de cherry-picks |
 | Jira ticket        | No requerido en el título del PR de release (sí en hotfix)            |
 | Commit directo     | ❌ Nunca                                                               |
 | Proceso            | Cherry-pick desde `qa` → rama `release/prod-YYYY-MM-DD` → PR a `main` |
@@ -108,22 +108,29 @@ release(qa): promoción a QA 2025-01-15
 
 ## Proceso de release a QA
 
-1. Identificar los commits de `develop` a incluir
+1. Identificar los commits de `develop` a incluir (merge commits, del más antiguo al más reciente)
 2. Crear rama: `git checkout -b release/qa-YYYY-MM-DD qa`
-3. Cherry-pick de cada commit: `git cherry-pick <sha>`
-4. Resolver conflictos si los hay (tomar siempre `--theirs`; merge commits requieren flag `-m 1`)
-5. Abrir PR de `release/qa-YYYY-MM-DD` → `qa`
-6. Merge **sin squash** (merge commit)
-7. Crear tag anotado: `qa-YYYY-MM-DD`
+3. Cherry-pick de cada commit en orden cronológico:
+   - Merge commit: `git cherry-pick -m 1 <sha>`
+   - Commit directo: `git cherry-pick <sha>`
+4. Resolver conflictos con cuidado — antes de usar `--theirs`, verificar que el conflicto no tenga contaminación de contexto (líneas de otro PR pendiente que no debería estar en QA)
+5. Crear commit vacío de resumen: `git commit --allow-empty -m "release: deploy PRs a QA - YYYY-MM-DD"`
+6. Abrir PR: `gh pr create --base qa --title "release: deploy PRs a QA - YYYY-MM-DD"`
+7. Obtener aprobación (1 revisor)
+8. Merge usando **"Rebase and merge"** (único método permitido por ruleset)
+9. Crear tag anotado apuntando al HEAD de `qa`: `git tag -a qa-YYYY-MM-DD`
 
 ## Proceso de promoción a producción
 
 1. Verificar que los commits estén probados y aprobados en QA
 2. Crear rama: `git checkout -b release/prod-YYYY-MM-DD main`
-3. Cherry-pick de los commits desde `qa`
-4. Abrir PR de `release/prod-YYYY-MM-DD` → `main`
-5. Merge **sin squash** (merge commit)
-6. Crear tag anotado: `prod-YYYY-MM-DD`
+3. Cherry-pick de los commits desde `qa` (los commits en QA tienen 1 solo padre — nunca usar `-m 1`)
+4. Resolver conflictos con cuidado (ver nota en proceso a QA)
+5. Crear commit vacío de resumen: `git commit --allow-empty -m "release: deploy PRs a producción - YYYY-MM-DD"`
+6. Abrir PR: `gh pr create --base main --title "release: deploy PRs a producción - YYYY-MM-DD"`
+7. Obtener 2 aprobaciones
+8. Merge usando **"Rebase and merge"** (único método permitido por ruleset)
+9. Crear tag anotado apuntando al HEAD de `main`: `git tag -a prod-YYYY-MM-DD`
 
 ## Proceso de hotfix
 

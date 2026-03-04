@@ -1,0 +1,197 @@
+name: Release Validation
+
+# Workflow reutilizable. Llamar desde otros repos en PRs de release/* → qa o main:
+#
+#   jobs:
+#     release-validate:
+#       if: startsWith(github.head_ref, 'release/')
+#       uses: NutrappDev/.github/.github/workflows/release-validation.yml@main
+#       secrets: inherit
+
+on:
+  workflow_call:
+
+jobs:
+  release-validate:
+    name: Validate Release PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ─── Contexto del PR ──────────────────────────────────────────────────
+      - name: Set release context
+        id: ctx
+        env:
+          SOURCE: ${{ github.head_ref }}
+          TARGET: ${{ github.base_ref }}
+        run: |
+          echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+
+          # Determinar rama fuente de los cherry-picks según destino
+          if [ "$TARGET" = "qa" ]; then
+            echo "origin_branch=develop" >> "$GITHUB_OUTPUT"
+          elif [ "$TARGET" = "main" ]; then
+            echo "origin_branch=qa" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::Este workflow solo aplica a PRs hacia qa o main"
+            exit 1
+          fi
+
+      # ─── Validación B — Archivos modificados que no existen en destino ───
+      - name: Validation B — Missing files in target
+        id: val-b
+        env:
+          TARGET: ${{ github.base_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch origin "$TARGET" --depth=1
+
+          MISSING_FILES=()
+
+          # Archivos MODIFICADOS (no creados) en este PR
+          MODIFIED=$(git diff --name-only --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null || true)
+
+          for FILE in $MODIFIED; do
+            # ¿Existe en la rama destino?
+            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -q "^${FILE}$"; then
+              # El archivo no existe en destino — buscar qué commit lo creó
+              CREATOR=$(git log "origin/${{ steps.ctx.outputs.origin_branch }}" \
+                --oneline --diff-filter=A -- "$FILE" 2>/dev/null | head -1 || true)
+              MISSING_FILES+=("$FILE (creado en: ${CREATOR:-desconocido})")
+            fi
+          done
+
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            echo "val_b_ok=false" >> "$GITHUB_OUTPUT"
+            MSG="❌ Archivos modificados en este release que NO existen en \`$TARGET\`:"
+            for F in "${MISSING_FILES[@]}"; do
+              MSG="$MSG\n- \`$F\`"
+            done
+            MSG="$MSG\n\nDebes incluir los commits que los crean en este release."
+            printf "val_b_result=%b" "$MSG" >> "$GITHUB_OUTPUT"
+          else
+            echo "val_b_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_b_result=✅ Todos los archivos modificados existen en \`$TARGET\`" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ─── Validación A — Commits pendientes con archivos en común ─────────
+      - name: Validation A — Pending commits with overlapping files
+        id: val-a
+        env:
+          TARGET: ${{ github.base_ref }}
+          ORIGIN_BRANCH: ${{ steps.ctx.outputs.origin_branch }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch origin "$TARGET" "$ORIGIN_BRANCH"
+
+          # Archivos tocados por este PR (creados y modificados)
+          PR_FILES=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null | sort || true)
+
+          if [ -z "$PR_FILES" ]; then
+            echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_a_result=✅ Sin archivos modificados en el PR" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Fecha del commit más antiguo en este PR
+          OLDEST_PR_DATE=$(git log "$BASE_SHA".."$HEAD_SHA" \
+            --no-merges --format="%ct" 2>/dev/null | tail -1 || echo 0)
+
+          # Commits en rama origen que NO están en destino (excluir merges)
+          PENDING=$(git log "origin/$ORIGIN_BRANCH" \
+            --no-merges \
+            --not "origin/$TARGET" \
+            --format="%H" 2>/dev/null || true)
+
+          BLOCKERS=()
+          WARNINGS=()
+
+          for P in $PENDING; do
+            # ¿Este commit pendiente es anterior al PR más antiguo?
+            P_DATE=$(git log --format="%ct" -1 "$P" 2>/dev/null || echo 0)
+            [ "$P_DATE" -ge "$OLDEST_PR_DATE" ] && continue  # más nuevo → no bloquea
+
+            P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | sort || true)
+            [ -z "$P_FILES" ] && continue
+
+            OVERLAP=$(comm -12 <(echo "$PR_FILES") <(echo "$P_FILES"))
+            if [ -n "$OVERLAP" ]; then
+              P_MSG=$(git log --format="%h %s" -1 "$P")
+              OVERLAP_LIST=$(echo "$OVERLAP" | tr '\n' ', ' | sed 's/,$//')
+              BLOCKERS+=("$P_MSG — archivos: $OVERLAP_LIST")
+            fi
+          done
+
+          if [ ${#BLOCKERS[@]} -gt 0 ]; then
+            echo "val_a_ok=false" >> "$GITHUB_OUTPUT"
+            MSG="❌ Commits anteriores en \`$ORIGIN_BRANCH\` tocan los mismos archivos y no están en \`$TARGET\`:"
+            for B in "${BLOCKERS[@]}"; do
+              MSG="$MSG\n- $B"
+            done
+            MSG="$MSG\n\nDebes incluirlos en este release o hacerlos primero."
+            printf "val_a_result=%b" "$MSG" >> "$GITHUB_OUTPUT"
+          else
+            echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_a_result=✅ Sin commits anteriores pendientes que compartan archivos" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ─── Publicar comentario resumen ──────────────────────────────────────
+      - name: Post summary comment
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          A_OK="${{ steps.val-a.outputs.val_a_ok }}"
+          B_OK="${{ steps.val-b.outputs.val_b_ok }}"
+
+          if [ "$A_OK" = "true" ] && [ "$B_OK" = "true" ]; then
+            STATUS="**Estado: ✅ Release listo para merge**"
+          else
+            STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
+          fi
+
+          BODY="## 🔍 Validación de Release
+
+          $STATUS
+
+          | Validación | Resultado |
+          |-----------|-----------|
+          | Dependencias pendientes (A) | ${{ steps.val-a.outputs.val_a_result }} |
+          | Módulos faltantes en destino (B) | ${{ steps.val-b.outputs.val_b_result }} |
+
+          ---
+          *Workflow: [release-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/release-validation.yml)*"
+
+          # Borrar comentario previo del bot
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🔍 Validación de Release"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+
+      # ─── Fallar si hay bloqueos ───────────────────────────────────────────
+      - name: Fail if blocked
+        run: |
+          A_OK="${{ steps.val-a.outputs.val_a_ok }}"
+          B_OK="${{ steps.val-b.outputs.val_b_ok }}"
+
+          FAILED=false
+          [ "$B_OK" = "false" ] && echo "::error::Validación B: archivos faltantes en rama destino" && FAILED=true
+          [ "$A_OK" = "false" ] && echo "::error::Validación A: commits anteriores pendientes con archivos en común" && FAILED=true
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0

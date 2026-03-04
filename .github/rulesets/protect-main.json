@@ -27,14 +27,15 @@
 
   "rules": [
     {
-      "_comment": "2 aprobadores requeridos para producción. Fuentes válidas: release/prod-* o hotfix/* (validado por pr-validation.yml)",
+      "_comment": "2 aprobadores requeridos para producción. Fuentes válidas: release/prod-* o hotfix/* (validado por pr-validation.yml). Rebase merge obligatorio para mantener historial lineal y trazabilidad de cherry-picks.",
       "type": "pull_request",
       "parameters": {
         "required_approving_review_count": 2,
         "dismiss_stale_reviews_on_push": true,
         "require_code_owner_review": false,
         "require_last_push_approval": true,
-        "required_review_thread_resolution": true
+        "required_review_thread_resolution": true,
+        "allowed_merge_methods": ["rebase"]
       }
     },
     {
