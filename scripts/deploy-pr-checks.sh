@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # deploy-pr-checks.sh
 #
-# Despliega .github/workflows/pr-checks.yml en todos los repos activos de la org.
+# Despliega .github/workflows/pr-checks.yml en todos los repos activos de la org,
+# en las ramas develop, qa y main (las tres ramas base que reciben PRs).
 # Es idempotente: si el archivo ya existe y es idéntico, lo omite.
 #
 # Requisitos:
-#   - gh CLI autenticado con scope: repo (para leer y escribir en repos de la org)
+#   - gh CLI autenticado con scope: repo
 #   - jq instalado
 #
 # Uso:
@@ -26,6 +27,8 @@ ORG="NutrappDev"
 TEMPLATE_REPO="NutrappDev/.github"
 TEMPLATE_PATH=".github/workflows/_example-caller.yml"
 TARGET_PATH=".github/workflows/pr-checks.yml"
+# Ramas que reciben PRs — el workflow debe existir en cada una
+TARGET_BRANCHES=("develop" "qa" "main")
 COMMIT_MSG="chore: agregar workflow de PR checks [skip ci]"
 COMMIT_MSG_UPDATE="chore: actualizar workflow de PR checks [skip ci]"
 
@@ -66,14 +69,13 @@ TEMPLATE_CONTENT=$(gh api "repos/${TEMPLATE_REPO}/contents/${TEMPLATE_PATH}" --j
   echo -e "${RED}❌ No se pudo leer el template. Verificar que existe: ${TEMPLATE_PATH}${NC}"
   exit 1
 }
-# Eliminar saltos de línea del base64 (la API los parte en líneas de 60 chars)
 TEMPLATE_CONTENT=$(echo "$TEMPLATE_CONTENT" | tr -d '\n')
 TEMPLATE_SHA=$(gh api "repos/${TEMPLATE_REPO}/contents/${TEMPLATE_PATH}" --jq '.sha' 2>/dev/null)
 
 echo ""
-echo "Org: ${ORG}"
+echo "Org:     ${ORG}"
 echo "Template: ${TEMPLATE_PATH} (sha: ${TEMPLATE_SHA:0:7})"
-echo "Destino:  ${TARGET_PATH}"
+echo "Destino:  ${TARGET_PATH} en ramas: ${TARGET_BRANCHES[*]}"
 [ "$FORCE" = true ] && warn "Modo --force: se sobreescribirá aunque el contenido sea igual"
 echo "────────────────────────────────────────────────────────────────"
 
@@ -82,7 +84,6 @@ if [ -n "$TARGET_REPO" ]; then
   REPOS=("$TARGET_REPO")
 else
   echo "Obteniendo repos de la org..."
-  # Obtener todos los repos no archivados (paginado)
   REPOS=()
   PAGE=1
   while true; do
@@ -90,7 +91,6 @@ else
       --jq '.[] | select(.archived == false and .fork == false) | .name' 2>/dev/null || true)
     [ -z "$BATCH" ] && break
     while IFS= read -r REPO; do
-      # Excluir el repo .github (no necesita el workflow)
       [ "$REPO" = ".github" ] && continue
       REPOS+=("$REPO")
     done <<< "$BATCH"
@@ -99,69 +99,85 @@ else
   echo "Repos encontrados: ${#REPOS[@]}"
 fi
 
-# ─── Contadores ───────────────────────────────────────────────────────────────
+# ─── Contadores globales ──────────────────────────────────────────────────────
 CREATED=0
 UPDATED=0
 SKIPPED=0
 ERRORS=0
 
-# ─── Procesar repos ───────────────────────────────────────────────────────────
-echo ""
-for REPO in "${REPOS[@]}"; do
-  FULL_REPO="${ORG}/${REPO}"
-  printf "%-50s" "  ${REPO}"
+# ─── Función: desplegar en una rama específica ────────────────────────────────
+deploy_to_branch() {
+  local FULL_REPO="$1"
+  local BRANCH="$2"
 
-  # Verificar si el archivo ya existe en el repo
-  EXISTING=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" 2>/dev/null || true)
+  # Verificar que la rama existe
+  BRANCH_EXISTS=$(gh api "repos/${FULL_REPO}/branches/${BRANCH}" 2>/dev/null | jq -r '.name // empty' || true)
+  if [ -z "$BRANCH_EXISTS" ]; then
+    printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GRAY}rama no existe — omitiendo${NC}")"
+    return
+  fi
+
+  # Verificar si el archivo ya existe en esa rama
+  EXISTING=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}?ref=${BRANCH}" 2>/dev/null || true)
 
   if [ -n "$EXISTING" ]; then
     EXISTING_SHA=$(echo "$EXISTING" | jq -r '.sha')
     EXISTING_CONTENT=$(echo "$EXISTING" | jq -r '.content' | tr -d '\n')
 
-    # Comparar contenido
     if [ "$EXISTING_CONTENT" = "$TEMPLATE_CONTENT" ] && [ "$FORCE" = false ]; then
-      skip "ya actualizado"
+      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GRAY}─  sin cambios${NC}")"
       SKIPPED=$((SKIPPED + 1))
-      continue
+      return
     fi
 
-    # Actualizar (necesita el SHA del archivo existente para el PUT)
     RESULT=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
       -X PUT \
       -f message="$COMMIT_MSG_UPDATE" \
       -f content="$TEMPLATE_CONTENT" \
-      -f sha="$EXISTING_SHA" 2>&1) && {
-      ok "actualizado"
+      -f sha="$EXISTING_SHA" \
+      -f branch="$BRANCH" 2>&1) && {
+      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GREEN}✅ actualizado${NC}")"
       UPDATED=$((UPDATED + 1))
     } || {
-      err "error al actualizar"
+      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${RED}❌ error al actualizar${NC}")"
       info "$RESULT"
       ERRORS=$((ERRORS + 1))
     }
   else
-    # Crear nuevo archivo
     RESULT=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
       -X PUT \
       -f message="$COMMIT_MSG" \
-      -f content="$TEMPLATE_CONTENT" 2>&1) && {
-      ok "creado"
+      -f content="$TEMPLATE_CONTENT" \
+      -f branch="$BRANCH" 2>&1) && {
+      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GREEN}✅ creado${NC}")"
       CREATED=$((CREATED + 1))
     } || {
-      err "error al crear"
+      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${RED}❌ error al crear${NC}")"
       info "$RESULT"
       ERRORS=$((ERRORS + 1))
     }
   fi
+}
+
+# ─── Procesar repos ───────────────────────────────────────────────────────────
+echo ""
+for REPO in "${REPOS[@]}"; do
+  FULL_REPO="${ORG}/${REPO}"
+  echo "  ${REPO}"
+
+  for BRANCH in "${TARGET_BRANCHES[@]}"; do
+    deploy_to_branch "$FULL_REPO" "$BRANCH"
+  done
+
+  echo ""
 done
 
 # ─── Resumen ──────────────────────────────────────────────────────────────────
-echo ""
 echo "────────────────────────────────────────────────────────────────"
-echo -e "  ${GREEN}Creados:     ${CREATED}${NC}"
+echo -e "  ${GREEN}Creados:      ${CREATED}${NC}"
 echo -e "  ${YELLOW}Actualizados: ${UPDATED}${NC}"
 echo -e "  ${GRAY}Sin cambios:  ${SKIPPED}${NC}"
 [ "$ERRORS" -gt 0 ] && echo -e "  ${RED}Errores:      ${ERRORS}${NC}"
 echo ""
-echo "Los repos con el archivo ahora mostrarán los checks correctos en PRs."
-echo "Si algún repo tenía PRs abiertos, cerrarlos y reabrirlos para disparar el workflow."
+echo "El workflow se activará en el próximo PR abierto o sincronizado."
 echo ""
