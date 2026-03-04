@@ -72,14 +72,18 @@ jobs:
           TOTAL=0
           FAILED=0
 
-          while IFS='|||' read -r SHA SUBJECT; do
+          while IFS=$'\t' read -r SHA SUBJECT; do
             [ -z "$SHA" ] && continue
             SHORT="${SHA:0:7}"
             TOTAL=$((TOTAL + 1))
 
             # ── Ignorar commits especiales ────────────────────────────────────
-            if echo "$SUBJECT" | grep -qP '^(Merge |Revert |\[skip ci\]|Initial commit)'; then
+            if echo "$SUBJECT" | grep -qP '^(Merge |Revert |Initial commit)'; then
               echo "  ⏭️  $SHORT — omitido (commit de sistema)" >> "$ERRORS_FILE.skipped"
+              continue
+            fi
+            if echo "$SUBJECT" | grep -qP '\[(skip ci|ci skip)\]'; then
+              echo "  ⏭️  $SHORT — omitido ([skip ci])" >> "$ERRORS_FILE.skipped"
               continue
             fi
 
@@ -131,7 +135,7 @@ jobs:
               } >> "$ERRORS_FILE"
             fi
 
-          done < <(git log --format="%H|||%s" "$BASE"..."$HEAD")
+          done < <(git log --format="%H%x09%s" "$BASE"..."$HEAD")
 
           echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
           echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
