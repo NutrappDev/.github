@@ -121,7 +121,7 @@ async function getJiraTickets(ticketIds) {
   console.log(`  Jira: consultando ${ticketIds.length} tickets únicos...`);
 
   try {
-    const res = await fetch(`${JIRA_BASE_API}/search`, {
+    const res = await fetch(`${JIRA_BASE_API}/search/jql`, {
       method: 'POST',
       headers: {
         'Authorization': `Basic ${auth}`,
