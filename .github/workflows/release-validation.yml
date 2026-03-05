@@ -72,12 +72,16 @@ jobs:
 
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             echo "val_b_ok=false" >> "$GITHUB_OUTPUT"
-            MSG="❌ Archivos modificados en este release que NO existen en \`$TARGET\`:"
-            for F in "${MISSING_FILES[@]}"; do
-              MSG="$MSG\n- \`$F\`"
-            done
-            MSG="$MSG\n\nDebes incluir los commits que los crean en este release."
-            printf "val_b_result=%b" "$MSG" >> "$GITHUB_OUTPUT"
+            {
+              echo "val_b_result<<__EOF__"
+              echo "❌ Archivos modificados en este release que NO existen en \`$TARGET\`:"
+              for F in "${MISSING_FILES[@]}"; do
+                echo "- \`$F\`"
+              done
+              echo ""
+              echo "Debes incluir los commits que los crean en este release."
+              echo "__EOF__"
+            } >> "$GITHUB_OUTPUT"
           else
             echo "val_b_ok=true" >> "$GITHUB_OUTPUT"
             echo "val_b_result=✅ Todos los archivos modificados existen en \`$TARGET\`" >> "$GITHUB_OUTPUT"
@@ -134,12 +138,16 @@ jobs:
 
           if [ ${#BLOCKERS[@]} -gt 0 ]; then
             echo "val_a_ok=false" >> "$GITHUB_OUTPUT"
-            MSG="❌ Commits anteriores en \`$ORIGIN_BRANCH\` tocan los mismos archivos y no están en \`$TARGET\`:"
-            for B in "${BLOCKERS[@]}"; do
-              MSG="$MSG\n- $B"
-            done
-            MSG="$MSG\n\nDebes incluirlos en este release o hacerlos primero."
-            printf "val_a_result=%b" "$MSG" >> "$GITHUB_OUTPUT"
+            {
+              echo "val_a_result<<__EOF__"
+              echo "❌ Commits anteriores en \`$ORIGIN_BRANCH\` tocan los mismos archivos y no están en \`$TARGET\`:"
+              for B in "${BLOCKERS[@]}"; do
+                echo "- $B"
+              done
+              echo ""
+              echo "Debes incluirlos en este release o hacerlos primero."
+              echo "__EOF__"
+            } >> "$GITHUB_OUTPUT"
           else
             echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
             echo "val_a_result=✅ Sin commits anteriores pendientes que compartan archivos" >> "$GITHUB_OUTPUT"
@@ -152,6 +160,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           REPO: ${{ github.repository }}
+          VAL_A_RESULT: ${{ steps.val-a.outputs.val_a_result }}
+          VAL_B_RESULT: ${{ steps.val-b.outputs.val_b_result }}
         run: |
           A_OK="${{ steps.val-a.outputs.val_a_ok }}"
           B_OK="${{ steps.val-b.outputs.val_b_ok }}"
@@ -162,17 +172,19 @@ jobs:
             STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
           fi
 
-          BODY="## 🔍 Validación de Release
-
-          $STATUS
-
-          | Validación | Resultado |
-          |-----------|-----------|
-          | Dependencias pendientes (A) | ${{ steps.val-a.outputs.val_a_result }} |
-          | Módulos faltantes en destino (B) | ${{ steps.val-b.outputs.val_b_result }} |
-
-          ---
-          *Workflow: [release-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/release-validation.yml)*"
+          {
+            echo "## 🔍 Validación de Release"
+            echo ""
+            echo "$STATUS"
+            echo ""
+            echo "| Validación | Resultado |"
+            echo "|-----------|-----------|"
+            echo "| Dependencias pendientes (A) | $VAL_A_RESULT |"
+            echo "| Módulos faltantes en destino (B) | $VAL_B_RESULT |"
+            echo ""
+            echo "---"
+            echo "*Workflow: [release-validation.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/release-validation.yml)*"
+          } > /tmp/release_comment.txt
 
           # Borrar comentario previo del bot
           PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
@@ -182,7 +194,7 @@ jobs:
             gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
           fi
 
-          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file /tmp/release_comment.txt
 
       # ─── Fallar si hay bloqueos ───────────────────────────────────────────
       - name: Fail if blocked
