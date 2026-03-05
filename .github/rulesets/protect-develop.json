@@ -48,9 +48,9 @@
       "parameters": {
         "strict_required_status_checks_policy": false,
         "required_status_checks": [
-          { "context": "validate" },
-          { "context": "security" },
-          { "context": "commitlint" }
+          { "context": "validate / Validate PR" },
+          { "context": "security / Security & Quality Check" },
+          { "context": "commitlint / Validate Commit Messages" }
         ]
       }
     },

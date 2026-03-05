@@ -32,20 +32,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ─── Checkout config central (para leer pr-config.json) ───────────────
-      - name: Checkout central config
-        uses: actions/checkout@v4
-        with:
-          repository: NutrappDev/.github
-          path: __central
-          token: ${{ github.token }}
-
-      # ─── Cargar tipos válidos y tipos que omiten Jira ─────────────────────
+      # ─── Descargar config central via API (sin clonar el repo) ────────────
       - name: Load config
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          CONFIG="__central/.github/pr-config.json"
-          VALID_TYPES=$(jq -r '.types | keys | join("|")' "$CONFIG")
-          SKIP_JIRA=$(jq -r '.jira_ticket_skip_types | join("|")' "$CONFIG")
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
+            --jq '.content' | base64 -d)
+          VALID_TYPES=$(echo "$CONFIG" | jq -r '.types | keys | join("|")')
+          SKIP_JIRA=$(echo "$CONFIG" | jq -r '.jira_ticket_skip_types | join("|")')
           echo "VALID_TYPES=$VALID_TYPES" >> "$GITHUB_ENV"
           echo "SKIP_JIRA_TYPES=$SKIP_JIRA" >> "$GITHUB_ENV"
 

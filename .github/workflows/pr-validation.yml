@@ -31,25 +31,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ─── Checkout de la config central ────────────────────────────────────
-      - name: Checkout central config
-        uses: actions/checkout@v4
-        with:
-          repository: NutrappDev/.github
-          path: __central
-          token: ${{ github.token }}
-
-      # ─── Cargar config y exponer como env vars ─────────────────────────────
+      # ─── Descargar config central via API (sin clonar el repo) ────────────
       - name: Load pr-config.json
         id: load-config
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          CONFIG_FILE="__central/${{ inputs.config-path }}"
-          if [ ! -f "$CONFIG_FILE" ]; then
-            echo "::error::No se encontró $CONFIG_FILE en NutrappDev/.github"
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/${{ inputs.config-path }}" \
+            --jq '.content' | base64 -d | jq -c 'del(._comment)')
+          if [ -z "$CONFIG" ] || [ "$CONFIG" = "null" ]; then
+            echo "::error::No se pudo leer ${{ inputs.config-path }} desde NutrappDev/.github"
             exit 1
           fi
-          # Exportar config completa como JSON minificado
-          echo "CONFIG=$(cat "$CONFIG_FILE" | jq -c 'del(._comment)')" >> "$GITHUB_ENV"
+          echo "CONFIG=$CONFIG" >> "$GITHUB_ENV"
+          SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.size_check_blocks // true')
+          echo "SIZE_BLOCKS=$SIZE_BLOCKS" >> "$GITHUB_ENV"
 
       # ─── Validar flujo de ramas ────────────────────────────────────────────
       - name: Validate branch flow
@@ -272,16 +268,20 @@ jobs:
           LINES_OK=true
           MSG=""
 
+          # Ícono según si el check bloquea o solo advierte
+          FAIL_ICON="❌"
+          [ "$SIZE_BLOCKS" = "false" ] && FAIL_ICON="⚠️"
+
           if [ "$MAX_FILES" -gt 0 ] && [ "$CHANGED_FILES" -gt "$MAX_FILES" ]; then
             FILES_OK=false
-            MSG="$MSG ❌ Archivos: $CHANGED_FILES/$MAX_FILES."
+            MSG="$MSG $FAIL_ICON Archivos: $CHANGED_FILES/$MAX_FILES."
           else
             MSG="$MSG ✅ Archivos: $CHANGED_FILES/$MAX_FILES."
           fi
 
           if [ "$MAX_LINES" -gt 0 ] && [ "$CHANGED_LINES" -gt "$MAX_LINES" ]; then
             LINES_OK=false
-            MSG="$MSG ❌ Líneas: $CHANGED_LINES/$MAX_LINES."
+            MSG="$MSG $FAIL_ICON Líneas: $CHANGED_LINES/$MAX_LINES."
           else
             MSG="$MSG ✅ Líneas: $CHANGED_LINES/$MAX_LINES."
           fi
@@ -378,6 +378,12 @@ jobs:
           [ "$BRANCH_OK" = "false" ] && echo "::error::Flujo de ramas inválido" && FAILED=true
           [ "$TITLE_OK" = "false" ] && echo "::error::Título del PR inválido" && FAILED=true
           [ "$JIRA_OK" = "false" ] && echo "::error::Inconsistencia en ticket Jira" && FAILED=true
-          [ "$SIZE_OK" = "false" ] && echo "::error::PR excede el tamaño máximo permitido" && FAILED=true
+          if [ "$SIZE_OK" = "false" ]; then
+            if [ "$SIZE_BLOCKS" = "true" ]; then
+              echo "::error::PR excede el tamaño máximo permitido" && FAILED=true
+            else
+              echo "::warning::PR excede el tamaño recomendado (size_check_blocks=false — no bloquea)"
+            fi
+          fi
 
           [ "$FAILED" = "true" ] && exit 1 || exit 0
