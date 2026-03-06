@@ -28,6 +28,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      # ─── Cargar flags de configuración central via API ────────────────────
+      - name: Load config flags
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
+            --jq '.content' | base64 -d)
+          FILE_SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.file_size_check_blocks // true')
+          echo "FILE_SIZE_BLOCKS=$FILE_SIZE_BLOCKS" >> "$GITHUB_ENV"
+
       # ─── Nomenclatura del repositorio (advertencia, no bloquea) ───────────
       - name: Check repo nomenclature
         run: |
@@ -216,10 +226,13 @@ jobs:
 
             LINES=$(wc -l < "$FILE")
 
+            FAIL_ICON="❌"
+            [ "$FILE_SIZE_BLOCKS" = "false" ] && FAIL_ICON="⚠️"
+
             if [ "$LINES" -gt "$HARD_THRESHOLD" ]; then
-              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas (hard limit: $HARD_THRESHOLD)"
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas ($FAIL_ICON hard limit: $HARD_THRESHOLD)"
             elif [ "$LINES" -gt "$ERROR_THRESHOLD" ]; then
-              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas (máx recomendado: $ERROR_THRESHOLD)"
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas ($FAIL_ICON máx recomendado: $ERROR_THRESHOLD)"
             elif [ "$LINES" -gt "$WARN_THRESHOLD" ]; then
               WARNINGS="$WARNINGS\n- \`$FILE\` — $LINES líneas (considera dividirlo: >$WARN_THRESHOLD)"
             fi
@@ -377,7 +390,12 @@ jobs:
             echo "::error::Posibles secretos en el código" && FAILED=true
           [ "${{ steps.binary-size.outputs.binary_ok }}" = "false" ] && \
             echo "::error::Archivos binarios >5MB" && FAILED=true
-          [ "${{ steps.code-size.outputs.code_size_ok }}" = "false" ] && \
-            echo "::error::Archivos de código superan el límite de líneas" && FAILED=true
+          if [ "${{ steps.code-size.outputs.code_size_ok }}" = "false" ]; then
+            if [ "$FILE_SIZE_BLOCKS" = "true" ]; then
+              echo "::error::Archivos de código superan el límite de líneas" && FAILED=true
+            else
+              echo "::warning::Archivos de código superan el límite recomendado (file_size_check_blocks=false — no bloquea)"
+            fi
+          fi
 
           [ "$FAILED" = "true" ] && exit 1 || exit 0

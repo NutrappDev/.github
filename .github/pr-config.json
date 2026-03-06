@@ -49,6 +49,7 @@
   },
 
   "size_check_blocks": false,
+  "file_size_check_blocks": false,
 
   "jira_ticket_skip_types": ["merge", "release"],
 
