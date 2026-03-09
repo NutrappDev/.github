@@ -169,9 +169,6 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
    git tag -a qa-YYYY-MM-DD origin/qa -m "Release qa-YYYY-MM-DD"
    git push origin qa-YYYY-MM-DD
    ```
-
-> El skill `/release-qa` en Claude Code automatiza este proceso.
-
 ---
 
 ## Proceso de promoción a producción
@@ -188,8 +185,6 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
    git tag -a prod-YYYY-MM-DD origin/main -m "Release prod-YYYY-MM-DD"
    git push origin prod-YYYY-MM-DD
    ```
-
-> El skill `/release-main` en Claude Code automatiza este proceso.
 
 ---
 
@@ -223,20 +218,7 @@ No incluir la tecnología en el nombre del repo (puede cambiar con el tiempo).
 
 ## Integración con el dashboard
 
-El [dashboard centralizado](https://nutrappdev.github.io/.github/) se regenera diariamente a las 06:00 UTC. Para actualizarlo en tiempo real tras un deploy, agrega en tu workflow de despliegue:
-
-```yaml
-- name: Actualizar dashboard
-  if: success()
-  run: |
-    gh api repos/NutrappDev/.github/dispatches \
-      -f event_type=deployment-completed \
-      -f "client_payload[repo]=${{ github.repository }}"
-  env:
-    GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
-```
-
-El secret `ORG_READ_TOKEN` ya existe a nivel de organización.
+El [dashboard centralizado](https://nutrappdev.github.io/.github/) se regenera diariamente a las 06:00 UTC.
 
 ---
 
@@ -255,4 +237,4 @@ Definidos en [`.github/pr-config.json`](.github/pr-config.json):
 | `test` | 1 000 | 50 |
 | `release` / `merge` | 5 000 | 350 |
 
-Superarlos muestra una advertencia pero no bloquea el merge por defecto. Si necesitas ajustar este comportamiento temporalmente, ver los flags `size_check_blocks` y `file_size_check_blocks` en `pr-config.json`.
+Superarlos muestra una advertencia pero no bloquea el merge por defecto.
