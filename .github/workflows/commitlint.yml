@@ -130,7 +130,8 @@ jobs:
               } >> "$ERRORS_FILE"
             fi
 
-          done < <(git log --format="%H%x09%s" "$BASE"..."$HEAD")
+          MERGE_BASE=$(git merge-base "$BASE" "$HEAD")
+          done < <(git log --format="%H%x09%s" "$MERGE_BASE".."$HEAD")
 
           echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
           echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
