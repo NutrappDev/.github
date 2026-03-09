@@ -1,0 +1,68 @@
+name: Auto Tag
+
+# Workflow reutilizable. Crea un tag anotado automáticamente cuando
+# se mergea un PR de release/* a qa o main.
+#
+# Tag generado:
+#   qa-YYYY-MM-DD   cuando el destino es qa
+#   prod-YYYY-MM-DD cuando el destino es main
+#
+# Si ya existe un tag con esa fecha (dos releases el mismo día),
+# agrega sufijo: qa-YYYY-MM-DD-2, qa-YYYY-MM-DD-3, etc.
+#
+# Llamar desde otros repos en pr-checks.yml — ver _example-caller.yml
+
+on:
+  workflow_call:
+
+jobs:
+  tag:
+    name: Create Release Tag
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create annotated tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE: ${{ github.event.pull_request.head.ref }}
+          TARGET: ${{ github.event.pull_request.base.ref }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Determinar prefijo según destino
+          if [ "$TARGET" = "qa" ]; then
+            PREFIX="qa"
+          elif [ "$TARGET" = "main" ]; then
+            PREFIX="prod"
+          else
+            echo "Rama destino '$TARGET' no requiere tag automático."
+            exit 0
+          fi
+
+          DATE=$(date -u +%Y-%m-%d)
+          TAG_NAME="${PREFIX}-${DATE}"
+
+          # Si ya existe un tag con esa fecha, agregar sufijo incremental
+          git fetch --tags
+          SUFFIX=1
+          CANDIDATE="$TAG_NAME"
+          while git tag | grep -qx "$CANDIDATE"; do
+            SUFFIX=$(( SUFFIX + 1 ))
+            CANDIDATE="${TAG_NAME}-${SUFFIX}"
+          done
+          TAG_NAME="$CANDIDATE"
+
+          # Crear tag anotado apuntando al HEAD de la rama destino
+          git fetch origin "$TARGET"
+          git tag -a "$TAG_NAME" "origin/$TARGET" -m "Release ${TAG_NAME}"
+          git push origin "$TAG_NAME"
+
+          echo "✅ Tag creado: $TAG_NAME"

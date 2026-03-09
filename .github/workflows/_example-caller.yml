@@ -39,32 +39,39 @@ name: PR Checks
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited]
+    types: [opened, synchronize, reopened, edited, closed]
     branches:
       - main
       - qa
       - develop
 
 permissions:
-  contents: read
+  contents: write   # write requerido para crear tags en el evento closed/merged
   pull-requests: write
   issues: write
 
 jobs:
   validate:
+    if: github.event.action != 'closed'
     uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
     secrets: inherit
 
   security:
+    if: github.event.action != 'closed'
     uses: NutrappDev/.github/.github/workflows/security-check.yml@main
     secrets: inherit
 
   commitlint:
-    if: github.base_ref == 'develop'
+    if: github.event.action != 'closed' && github.base_ref == 'develop'
     uses: NutrappDev/.github/.github/workflows/commitlint.yml@main
     secrets: inherit
 
   release-validate:
-    if: startsWith(github.head_ref, 'release/')
+    if: github.event.action != 'closed' && startsWith(github.head_ref, 'release/')
     uses: NutrappDev/.github/.github/workflows/release-validation.yml@main
+    secrets: inherit
+
+  auto-tag:
+    if: github.event.action == 'closed' && github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
+    uses: NutrappDev/.github/.github/workflows/auto-tag.yml@main
     secrets: inherit
