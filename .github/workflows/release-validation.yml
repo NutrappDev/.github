@@ -114,7 +114,13 @@ jobs:
           # Fecha del último commit en destino = límite inferior para commits pendientes.
           # Commits en ORIGIN_BRANCH anteriores a esta fecha ya fueron released
           # (sea via cherry-pick o squash), aunque sus SHAs/patches difieran.
+          #
+          # Fallback de 90 días: cubre repos con rama destino vacía, nueva, o con
+          # pushes directos. Evita que todo el historial de develop aparezca como
+          # pendiente en repos que aún no tienen releases formales via PR.
+          LOOKBACK_FALLBACK=$(date -d '90 days ago' +%s)
           LAST_RELEASE_DATE=$(git log "origin/$TARGET" --format="%ct" -1 2>/dev/null || echo 0)
+          [ "$LAST_RELEASE_DATE" -lt "$LOOKBACK_FALLBACK" ] && LAST_RELEASE_DATE="$LOOKBACK_FALLBACK"
 
           # Commits en rama origen genuinamente pendientes en destino.
           # --cherry-pick --left-only: excluye commits cuyo patch ya existe en destino
