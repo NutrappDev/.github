@@ -84,20 +84,24 @@ jobs:
           fi
 
           # Validar patrón de nombre si existe (release/* hacia qa/main)
-          PATTERNS=$(echo "$FLOW" | jq -r '.allowed_branch_pattern // .allowed_branch_patterns // empty')
-          if [ -n "$PATTERNS" ]; then
+          # PATTERNS_JSON conserva el valor como JSON para poder chequear su tipo.
+          # jq -r extraería el string crudo (ej: ^release/qa-\d{4}-\d{2}-\d{2}$) y
+          # al pasarlo a `jq -e 'type == "array"'` fallaría: jq lo parsea como JSON
+          # y el {4} del patrón provoca "Invalid numeric literal".
+          PATTERNS_JSON=$(echo "$FLOW" | jq -c '.allowed_branch_pattern // .allowed_branch_patterns // null')
+          if [ -n "$PATTERNS_JSON" ] && [ "$PATTERNS_JSON" != "null" ]; then
             PATTERN_MATCH=false
-            # Si es array
-            if echo "$PATTERNS" | jq -e 'type == "array"' > /dev/null 2>&1; then
+            # Si es array de patrones
+            if echo "$PATTERNS_JSON" | jq -e 'type == "array"' > /dev/null 2>&1; then
               while IFS= read -r PAT; do
                 if echo "$SOURCE" | grep -qP "$PAT"; then
                   PATTERN_MATCH=true
                   break
                 fi
-              done < <(echo "$PATTERNS" | jq -r '.[]')
+              done < <(echo "$PATTERNS_JSON" | jq -r '.[]')
             else
-              # String simple
-              PAT=$(echo "$PATTERNS" | jq -r '.')
+              # String simple — extraer raw solo aquí, no antes
+              PAT=$(echo "$PATTERNS_JSON" | jq -r '.')
               if echo "$SOURCE" | grep -qP "$PAT"; then
                 PATTERN_MATCH=true
               fi
