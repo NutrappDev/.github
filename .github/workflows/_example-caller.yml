@@ -8,19 +8,16 @@
 # Paso 2: Asegurarte de que GitHub Actions esté habilitado en el repo:
 #   Settings → Actions → General → Allow all actions
 #
-# Eso es todo. Los checks aparecerán automáticamente en los PRs.
+# Eso es todo.
 #
 # ───────────────────────────────────────────────────────────────────────────────
-# Checks que activa este workflow (requeridos por los rulesets de la org):
+# Los checks de validación (validate, security, commitlint, release-validate)
+# se disparan automáticamente vía los rulesets de la org — no requieren
+# ningún archivo en este repo.
 #
-#   → develop : validate | security | commitlint
-#   → qa      : validate | security | release-validate
-#   → main    : validate | security | release-validate
-#
-# Si algún check queda en "pending" indefinidamente, verificar:
-#   1. Que el archivo esté en .github/workflows/pr-checks.yml (no en otro path)
-#   2. Que GitHub Actions esté habilitado en el repo
-#   3. Que el PR apunte a develop, qa o main (otras ramas no disparan el workflow)
+# Este archivo solo maneja el auto-tag al hacer merge de un release:
+#   → Crea tag qa-YYYY-MM-DD   cuando se mergea release/* → qa
+#   → Crea tag prod-YYYY-MM-DD cuando se mergea release/* → main
 #
 # ───────────────────────────────────────────────────────────────────────────────
 # Para actualizar el dashboard al hacer deploy, agregar en tu workflow de deploy:
@@ -35,43 +32,20 @@
 #       GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
 # ═══════════════════════════════════════════════════════════════════════════════
 
-name: PR Checks
+name: Auto Tag on Release
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, edited, closed]
+    types: [closed]
     branches:
       - main
       - qa
-      - develop
 
 permissions:
-  contents: write   # write requerido para crear tags en el evento closed/merged
-  pull-requests: write
-  issues: write
+  contents: write
 
 jobs:
-  validate:
-    if: github.event.action != 'closed'
-    uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
-    secrets: inherit
-
-  security:
-    if: github.event.action != 'closed'
-    uses: NutrappDev/.github/.github/workflows/security-check.yml@main
-    secrets: inherit
-
-  commitlint:
-    if: github.event.action != 'closed' && github.base_ref == 'develop'
-    uses: NutrappDev/.github/.github/workflows/commitlint.yml@main
-    secrets: inherit
-
-  release-validate:
-    if: github.event.action != 'closed' && startsWith(github.head_ref, 'release/')
-    uses: NutrappDev/.github/.github/workflows/release-validation.yml@main
-    secrets: inherit
-
   auto-tag:
-    if: github.event.action == 'closed' && github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
     uses: NutrappDev/.github/.github/workflows/auto-tag.yml@main
     secrets: inherit
