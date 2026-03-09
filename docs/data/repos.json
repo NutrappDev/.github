@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-04T03:26:04.234Z",
+  "generated_at": "2026-03-09T05:25:08.933Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 26,
@@ -24,6 +24,11 @@
       "status": "Cancelado",
       "assignee": "Emily Alzate Garcia"
     },
+    "SUP-184": {
+      "summary": "BG | Datos Personales | Ajustes en actualización de datos",
+      "status": "Revisión QA",
+      "assignee": "ISABEL GOMEZ"
+    },
     "SSO-161": {
       "summary": "BG | Cargar RUT | Botón no realiza acción",
       "status": "Actividad completada",
@@ -36,7 +41,7 @@
     },
     "PMO-2676": {
       "summary": "Categoría “Medicamentos” sin productos visibles",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "PMO-2639": {
@@ -51,23 +56,28 @@
     },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "En despliegue",
+      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "En despliegue",
+      "status": "Revisión QA",
       "assignee": "Kevin Aguilera"
     },
     "PMO-2221": {
       "summary": "Solicitud de carga de piezas promocionales en sección “carrusel del productos” – Sitio Web Nutrabiotics Colombia",
-      "status": "En despliegue",
+      "status": "Detenido",
       "assignee": "Miller Ladino Osorio"
     },
     "NE-197": {
       "summary": "HU-CAT-02 — Breadcrumb del catálogo",
       "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
+    },
+    "NE-151": {
+      "summary": "Épica 5: Implementación “Mi cuenta” (Persona Natural) en Perfil Empresas – SSO B2B]",
+      "status": "Detenido",
+      "assignee": "David Sarmiento"
     },
     "NE-113": {
       "summary": "[Historia de usuario: Catálogos y reglas de selects (País/Ciudad/Documento/Celular) para Persona Natural]",
@@ -86,7 +96,7 @@
     },
     "NCOL-563": {
       "summary": "Sprint #7 - Bugs UI/UX",
-      "status": "En proceso",
+      "status": "Detenido",
       "assignee": "Steven Leon"
     },
     "NCOL-561": {
@@ -176,13 +186,18 @@
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
-      "status": "En despliegue",
+      "status": "En proceso",
       "assignee": "Steven Leon"
     },
     "NCOL-4": {
       "summary": "Title Productos - Catalogo",
-      "status": "Revisión QA",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
+    },
+    "AMN-15": {
+      "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
+      "status": "Done",
+      "assignee": "ISABEL GOMEZ"
     },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
@@ -193,6 +208,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1436": {
+      "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
+      "status": "En despliegue",
+      "assignee": "Felipe Berrio"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -292,14 +312,14 @@
   },
   "repos": [
     {
-      "name": "alivia",
-      "full_name": "NutrappDev/alivia",
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
       "description": null,
-      "url": "https://github.com/NutrappDev/alivia",
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-03T22:01:16Z",
+      "last_push": "2026-03-06T16:01:18Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -307,11 +327,393 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 5,
+          "recent_commits": [
+            {
+              "sha": "c59caf5",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:19:11Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "6b3a0f2",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:21:04Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "2813938",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:26:53Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "5920df8",
+              "message": "refactor: SUP-184 update users (#156)",
+              "date": "2026-03-05T20:37:33Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "SUP-184",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
+                }
+              ]
+            },
+            {
+              "sha": "133c8b1",
+              "message": "fix: remove unused pages and components for ecosystems, assets, and roles SUP-184 (#159)",
+              "date": "2026-03-05T21:33:42Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "SUP-184",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
-          "count": 23,
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "bd61e9f",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:19:14Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "27d3d7c",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:21:07Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "780dd8c",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:26:56Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-06T15:37:29Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": {
+          "count": 22,
+          "recent_commits": [
+            {
+              "sha": "bd83439",
+              "message": "fix/FormFix",
+              "date": "2025-10-29T23:05:31Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "900d6aa",
+              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
+              "date": "2026-02-10T15:30:39Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "4eda596",
+              "message": "feat: bussines selector config B2B-101",
+              "date": "2026-02-11T05:46:02Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "cfa9384",
+              "message": "feat: Forms selection B2B-101",
+              "date": "2026-02-12T12:33:23Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "B-101",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
+                }
+              ]
+            },
+            {
+              "sha": "511d81d",
+              "message": "fix: Temp adjustment to finalForm",
+              "date": "2026-02-12T20:04:54Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "11d7d08",
+              "message": "feat: Update business reitration flow  NE-106",
+              "date": "2026-02-13T19:26:15Z",
+              "author": "Aguilera",
+              "tickets": [
+                {
+                  "id": "NE-106",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
+                }
+              ]
+            },
+            {
+              "sha": "62020e9",
+              "message": "fix: Change data number for natural and legal",
+              "date": "2026-02-15T05:54:56Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "1efcce1",
+              "message": "build: pipeline qa",
+              "date": "2026-02-16T15:16:49Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "91550dd",
+              "message": "build(aws): pipeline to qa",
+              "date": "2026-02-16T15:18:33Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "a7cf3c5",
+              "message": "fix(pipeline): env stage to qa",
+              "date": "2026-02-16T15:24:57Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/22500839433",
+        "updated_at": "2026-02-27T20:05:26Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "sso-micuenta",
+      "full_name": "NutrappDev/sso-micuenta",
+      "description": null,
+      "url": "https://github.com/NutrappDev/sso-micuenta",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-06T15:21:17Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 5,
+          "recent_commits": [
+            {
+              "sha": "d0de038",
+              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
+              "date": "2026-02-18T17:23:09Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "d1bccc6",
+              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
+              "date": "2026-02-18T18:32:44Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-197",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
+                }
+              ]
+            },
+            {
+              "sha": "0065877",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:22:31Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "07075f7",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:28:18Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "35efdaa",
+              "message": "feat: All configuration to natural person NE-151 (#67)",
+              "date": "2026-03-06T15:21:16Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-151",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "181eb53",
+              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
+              "date": "2026-02-16T20:16:48Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-113",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
+                }
+              ]
+            },
+            {
+              "sha": "e8a8fc6",
+              "message": "Merge pull request #61 from NutrappDev/develop",
+              "date": "2026-02-16T20:30:20Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "89643e4",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:22:34Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "5734c0b",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:28:22Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "alivia",
+      "full_name": "NutrappDev/alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-05T21:53:57Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 5,
+          "recent_commits": [
+            {
+              "sha": "09ab906",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:18:58Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "198788a",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:20:36Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "73dee37",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:26:26Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "33e0819",
+              "message": "feat(navbar): AMN-15 add country-specific Nutrabiotics URLs for dynamic linking  (#334)",
+              "date": "2026-03-04T22:12:02Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "AMN-15",
+                  "url": "https://nutrabiotics.atlassian.net/browse/AMN-15"
+                }
+              ]
+            },
+            {
+              "sha": "30c4623",
+              "message": "refactor(notifications): migrar envio de notificacion de orden al endpoint dispatch ALCO-1436 (#333)",
+              "date": "2026-03-05T19:08:55Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALCO-1436",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1436"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 26,
           "recent_commits": [
             {
               "sha": "3685fc8",
@@ -416,6 +818,69 @@
       }
     },
     {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:29:27Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/22528455843",
+        "updated_at": "2026-02-28T20:31:44Z",
+        "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "test-jira",
+      "full_name": "NutrappDev/test-jira",
+      "description": "Solo para pruebas",
+      "url": "https://github.com/NutrappDev/test-jira",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:29:15Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -423,7 +888,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-03T19:22:07Z",
+      "last_push": "2026-03-04T21:29:00Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -431,11 +896,26 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "90ccfa2",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:23:08Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "3a83ca8",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:28:54Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
         },
         "to_production": {
-          "count": 66,
+          "count": 68,
           "recent_commits": [
             {
               "sha": "ead131c",
@@ -545,6 +1025,399 @@
       }
     },
     {
+      "name": "whatsapp-alivia",
+      "full_name": "NutrappDev/whatsapp-alivia",
+      "description": null,
+      "url": "https://github.com/NutrappDev/whatsapp-alivia",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:28:51Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "alivia-whatsapp-n8n",
+      "full_name": "NutrappDev/alivia-whatsapp-n8n",
+      "description": null,
+      "url": "https://github.com/NutrappDev/alivia-whatsapp-n8n",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:28:43Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-03-04T21:28:35Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "sso-terraform",
+      "full_name": "NutrappDev/sso-terraform",
+      "description": "terraform aws cuenta SSO - Nutrabiotics 861276125476",
+      "url": "https://github.com/NutrappDev/sso-terraform",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:28:30Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:58Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:51Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrapp-gestion-proyectos",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:44Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "virtual-visitor-serverless",
+      "full_name": "NutrappDev/virtual-visitor-serverless",
+      "description": null,
+      "url": "https://github.com/NutrappDev/virtual-visitor-serverless",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:36Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:27Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "4a30fca",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:21:30Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "9629e71",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:27:18Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "712bfc4",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:21:34Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "6ab4de4",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:27:22Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "ai-assistants-backend",
+      "full_name": "NutrappDev/ai-assistants-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:15Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "ai-assistants",
+      "full_name": "NutrappDev/ai-assistants",
+      "description": null,
+      "url": "https://github.com/NutrappDev/ai-assistants",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:27:08Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "landing_essens_summit",
+      "full_name": "NutrappDev/landing_essens_summit",
+      "description": null,
+      "url": "https://github.com/NutrappDev/landing_essens_summit",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:26:49Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
+      "description": null,
+      "url": "https://github.com/NutrappDev/microservice_payments",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-04T21:26:42Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/22368300577",
+        "updated_at": "2026-02-24T20:15:15Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
       "description": "Página web externa de Nutrabiotics Colombia",
@@ -552,7 +1425,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-03T19:56:31Z",
+      "last_push": "2026-03-05T20:50:23Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -609,7 +1482,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 94,
+          "count": 98,
           "recent_commits": [
             {
               "sha": "b675f2a",
@@ -684,7 +1557,7 @@
           ]
         },
         "to_production": {
-          "count": 48,
+          "count": 50,
           "recent_commits": [
             {
               "sha": "b3bb448",
@@ -769,384 +1642,6 @@
       }
     },
     {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-28T20:31:33Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/22528455843",
-        "updated_at": "2026-02-28T20:31:44Z",
-        "name": "Deploy n8n Workflows"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-27T19:33:08Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": {
-          "count": 20,
-          "recent_commits": [
-            {
-              "sha": "bd83439",
-              "message": "fix/FormFix",
-              "date": "2025-10-29T23:05:31Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "900d6aa",
-              "message": "Merge branch 'main' of https://github.com/NutrappDev/SSO-keycloak",
-              "date": "2026-02-10T15:30:39Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4eda596",
-              "message": "feat: bussines selector config B2B-101",
-              "date": "2026-02-11T05:46:02Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "cfa9384",
-              "message": "feat: Forms selection B2B-101",
-              "date": "2026-02-12T12:33:23Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "511d81d",
-              "message": "fix: Temp adjustment to finalForm",
-              "date": "2026-02-12T20:04:54Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "11d7d08",
-              "message": "feat: Update business reitration flow  NE-106",
-              "date": "2026-02-13T19:26:15Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "62020e9",
-              "message": "fix: Change data number for natural and legal",
-              "date": "2026-02-15T05:54:56Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "1efcce1",
-              "message": "build: pipeline qa",
-              "date": "2026-02-16T15:16:49Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "91550dd",
-              "message": "build(aws): pipeline to qa",
-              "date": "2026-02-16T15:18:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a7cf3c5",
-              "message": "fix(pipeline): env stage to qa",
-              "date": "2026-02-16T15:24:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/22500839433",
-        "updated_at": "2026-02-27T20:05:26Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-26T13:40:47Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/22368300577",
-        "updated_at": "2026-02-24T20:15:15Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
-      "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-26T01:47:36Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-backend",
-      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-23T22:41:44Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "ai-assistants",
-      "full_name": "NutrappDev/ai-assistants",
-      "description": null,
-      "url": "https://github.com/NutrappDev/ai-assistants",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-23T22:38:17Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "ai-assistants-backend",
-      "full_name": "NutrappDev/ai-assistants-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/ai-assistants-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-23T22:30:44Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "sso-micuenta",
-      "full_name": "NutrappDev/sso-micuenta",
-      "description": null,
-      "url": "https://github.com/NutrappDev/sso-micuenta",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-18T18:32:51Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "d0de038",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-02-18T17:23:09Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "d1bccc6",
-              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
-              "date": "2026-02-18T18:32:44Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-197",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "181eb53",
-              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
-              "date": "2026-02-16T20:16:48Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
-                }
-              ]
-            },
-            {
-              "sha": "e8a8fc6",
-              "message": "Merge pull request #61 from NutrappDev/develop",
-              "date": "2026-02-16T20:30:20Z",
-              "author": "k-aguilera",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "monorepo-alivia-backend",
       "full_name": "NutrappDev/monorepo-alivia-backend",
       "description": null,
@@ -1154,7 +1649,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-03T21:25:57Z",
+      "last_push": "2026-03-06T22:08:27Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -1218,50 +1713,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 317,
+          "count": 323,
           "recent_commits": [
-            {
-              "sha": "503d5e7",
-              "message": "ci: re-run validation with updated title",
-              "date": "2025-08-22T03:26:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "7973549",
-              "message": "ci: fixing command syntax",
-              "date": "2025-08-22T03:31:27Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "94fcbf8",
-              "message": "fix: ci command sntax",
-              "date": "2025-08-22T03:49:46Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "0c94ad4",
-              "message": "fix: add lock files",
-              "date": "2025-08-22T03:58:37Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "1f6068e",
-              "message": "feat(products): deploying first version",
-              "date": "2025-08-31T15:10:03Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "c4a8031",
-              "message": "build(products): creating dist folder",
-              "date": "2025-09-01T01:25:37Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "b9f5941",
               "message": "build(products): creating serverless",
@@ -1289,11 +1742,53 @@
               "date": "2025-09-01T13:21:31Z",
               "author": "Jorge Garay",
               "tickets": []
+            },
+            {
+              "sha": "f42dad4",
+              "message": "build: optimize affected apps",
+              "date": "2025-09-01T13:25:07Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "ae0aba3",
+              "message": "fix: buildspec syntax",
+              "date": "2025-09-01T13:36:00Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "c7a1a2e",
+              "message": "build: export variable instead use file",
+              "date": "2025-09-01T13:47:15Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "77cb0f4",
+              "message": "build: ignoring node modules",
+              "date": "2025-09-01T13:59:41Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "c4a1355",
+              "message": "feat(products): deploy products",
+              "date": "2025-09-02T03:51:15Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "62c385d",
+              "message": "feat(prescriptions): deploy prescriptions",
+              "date": "2025-09-02T17:31:35Z",
+              "author": "Jorge Garay",
+              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 9,
+          "count": 12,
           "recent_commits": [
             {
               "sha": "16b0d7e",
@@ -1377,6 +1872,13 @@
               "date": "2026-02-24T20:00:58Z",
               "author": "Jorge Garay",
               "tickets": []
+            },
+            {
+              "sha": "2fe8ec6",
+              "message": "chore: actualizar workflow de PR checks [skip ci]",
+              "date": "2026-03-04T21:19:25Z",
+              "author": "Jorge Garay",
+              "tickets": []
             }
           ]
         }
@@ -1384,37 +1886,10 @@
       "ci": {
         "status": "completed",
         "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/21866539784",
-        "updated_at": "2026-02-10T13:20:31Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/22690159997",
+        "updated_at": "2026-03-04T21:28:48Z",
         "name": "pages build and deployment"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "sso-terraform",
-      "full_name": "NutrappDev/sso-terraform",
-      "description": "terraform aws cuenta SSO - Nutrabiotics 861276125476",
-      "url": "https://github.com/NutrappDev/sso-terraform",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-09T00:49:58Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -1478,33 +1953,6 @@
       }
     },
     {
-      "name": "test-jira",
-      "full_name": "NutrappDev/test-jira",
-      "description": "Solo para pruebas",
-      "url": "https://github.com/NutrappDev/test-jira",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-02-04T16:01:30Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "fruto-landing-diplomado",
       "full_name": "NutrappDev/fruto-landing-diplomado",
       "description": null,
@@ -1532,60 +1980,6 @@
       }
     },
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-01-25T04:54:59Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "whatsapp-alivia",
-      "full_name": "NutrappDev/whatsapp-alivia",
-      "description": null,
-      "url": "https://github.com/NutrappDev/whatsapp-alivia",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-01-23T20:42:25Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-api-crm",
       "full_name": "NutrappDev/tronco-api-crm",
       "description": "Integración del CRM con Mensajería",
@@ -1594,174 +1988,6 @@
       "is_fork": false,
       "default_branch": "master",
       "last_push": "2026-01-21T17:35:28Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-01-05T22:50:53Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrapp-gestion-proyectos",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-01-05T22:50:31Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-admin",
-      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2025-12-26T15:04:39Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "landing_essens_summit",
-      "full_name": "NutrappDev/landing_essens_summit",
-      "description": null,
-      "url": "https://github.com/NutrappDev/landing_essens_summit",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2025-12-12T21:49:25Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "virtual-visitor-serverless",
-      "full_name": "NutrappDev/virtual-visitor-serverless",
-      "description": null,
-      "url": "https://github.com/NutrappDev/virtual-visitor-serverless",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2025-11-20T19:18:30Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "alivia-whatsapp-n8n",
-      "full_name": "NutrappDev/alivia-whatsapp-n8n",
-      "description": null,
-      "url": "https://github.com/NutrappDev/alivia-whatsapp-n8n",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2025-11-20T16:10:33Z",
       "topics": [],
       "production": null,
       "production_history": [],
