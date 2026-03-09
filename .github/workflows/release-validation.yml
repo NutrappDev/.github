@@ -124,8 +124,11 @@ jobs:
           PENDING=""
           while IFS= read -r SHA; do
             [ -z "$SHA" ] && continue
-            P_AT=$(git log --format="%at" -1 "$SHA" 2>/dev/null || echo 0)
-            [ "$P_AT" -gt "$LAST_RELEASE_DATE" ] && PENDING="$PENDING $SHA"
+            # Usamos committer date (%ct) para saber cuándo llegó a ORIGIN_BRANCH.
+            # Un PR puede tener author date anterior a la última release pero haber
+            # sido mergeado a develop después — %ct captura eso correctamente.
+            P_CT=$(git log --format="%ct" -1 "$SHA" 2>/dev/null || echo 0)
+            [ "$P_CT" -gt "$LAST_RELEASE_DATE" ] && PENDING="$PENDING $SHA"
           done < <(git log --cherry-pick --left-only \
             "origin/$ORIGIN_BRANCH"..."origin/$TARGET" \
             --no-merges \
