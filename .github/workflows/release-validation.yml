@@ -107,14 +107,28 @@ jobs:
             exit 0
           fi
 
-          # Fecha del commit más antiguo en este PR
+          # Fecha del commit más antiguo en este PR (author date — cherry-pick la preserva)
           OLDEST_PR_DATE=$(git log "$BASE_SHA".."$HEAD_SHA" \
-            --no-merges --format="%ct" 2>/dev/null | tail -1 || echo 0)
+            --no-merges --format="%at" 2>/dev/null | tail -1 || echo 0)
 
-          # Commits en rama origen que NO están en destino (excluir merges)
-          PENDING=$(git log "origin/$ORIGIN_BRANCH" \
+          # Fecha del último commit en destino = límite inferior para commits pendientes.
+          # Commits en ORIGIN_BRANCH anteriores a esta fecha ya fueron released
+          # (sea via cherry-pick o squash), aunque sus SHAs/patches difieran.
+          LAST_RELEASE_DATE=$(git log "origin/$TARGET" --format="%ct" -1 2>/dev/null || echo 0)
+
+          # Commits en rama origen genuinamente pendientes en destino.
+          # --cherry-pick --left-only: excluye commits cuyo patch ya existe en destino
+          #   (cubre historia de cherry-pick individuales).
+          # Filtro por LAST_RELEASE_DATE: excluye commits anteriores a la última release
+          #   (cubre historia de squash-merged releases).
+          PENDING=""
+          while IFS= read -r SHA; do
+            [ -z "$SHA" ] && continue
+            P_AT=$(git log --format="%at" -1 "$SHA" 2>/dev/null || echo 0)
+            [ "$P_AT" -gt "$LAST_RELEASE_DATE" ] && PENDING="$PENDING $SHA"
+          done < <(git log --cherry-pick --left-only \
+            "origin/$ORIGIN_BRANCH"..."origin/$TARGET" \
             --no-merges \
-            --not "origin/$TARGET" \
             --format="%H" 2>/dev/null || true)
 
           BLOCKERS=()
@@ -122,7 +136,8 @@ jobs:
 
           for P in $PENDING; do
             # ¿Este commit pendiente es anterior al PR más antiguo?
-            P_DATE=$(git log --format="%ct" -1 "$P" 2>/dev/null || echo 0)
+            # Usamos author date (%at) — cherry-pick preserva la fecha del autor original.
+            P_DATE=$(git log --format="%at" -1 "$P" 2>/dev/null || echo 0)
             [ "$P_DATE" -ge "$OLDEST_PR_DATE" ] && continue  # más nuevo → no bloquea
 
             P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | sort || true)
