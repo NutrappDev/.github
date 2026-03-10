@@ -13,6 +13,11 @@ on:
     types: [opened, synchronize, reopened, edited]
 
 jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Org PR Checks iniciado correctamente"
+
   validate:
     uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
 
