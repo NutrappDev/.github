@@ -107,7 +107,7 @@ release: prod-2025-01-20
 
 ## Validaciones automáticas
 
-Cada PR a `develop`, `qa` o `main` ejecuta los siguientes checks en paralelo. Todos deben pasar para poder hacer merge. El bot comenta en el PR con el detalle de los errores.
+Cada PR a `develop`, `qa` o `main` ejecuta los siguientes checks en paralelo vía los rulesets de la org — **no requieren ningún archivo en tu repo**. Todos deben pasar para poder hacer merge. El bot comenta en el PR con el detalle de los errores.
 
 ### `validate / Validate PR`
 
@@ -144,14 +144,20 @@ Solo en ramas `release/*`. Verifica antes del merge a qa o main:
 
 ## Configurar tu repo
 
-Cada repo necesita el archivo `.github/workflows/pr-checks.yml`. Sin él, los checks quedan en estado "pending" permanentemente y bloquean el merge.
+Los checks de validación (`validate`, `security`, `commitlint`, `release-validate`) se disparan automáticamente en todos los repos vía los rulesets de la org. No necesitas hacer nada para que aparezcan en tus PRs.
+
+Lo único que requiere configuración es el **auto-tag**: el tag `qa-YYYY-MM-DD` / `prod-YYYY-MM-DD` se crea automáticamente al mergear un PR de `release/*`, pero necesita el archivo `.github/workflows/pr-checks.yml` en tu repo.
 
 Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.yml) en `.github/workflows/pr-checks.yml` de tu repo. No necesitas cambiar nada.
 
-**Si los checks siguen en "pending" después de agregarlo:**
-1. Verifica que la ruta sea exactamente `.github/workflows/pr-checks.yml`
-2. Verifica que GitHub Actions esté habilitado: **Settings → Actions → General → Allow all actions**
-3. Verifica que el PR apunte a `develop`, `qa` o `main` (otras ramas no disparan el workflow)
+**Si los checks de validación no aparecen en un PR:**
+1. Verifica que GitHub Actions esté habilitado: **Settings → Actions → General → Allow all actions**
+2. Verifica que el PR apunte a `develop`, `qa` o `main` (otras ramas no disparan el workflow)
+
+**Si el auto-tag no se crea al mergear un release:**
+1. Verifica que el archivo esté en `.github/workflows/pr-checks.yml` (ruta exacta)
+2. Verifica que GitHub Actions esté habilitado en el repo
+3. Verifica que el PR sea de una rama `release/*` hacia `qa` o `main`
 
 ---
 
@@ -163,12 +169,8 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 4. Resolver conflictos si los hay — verificar que no incluyas cambios de PRs que no deberían ir en este release
 5. Push y PR: `gh pr create --base qa --title "release: qa-YYYY-MM-DD"`
 6. 1 aprobación → merge con **"Rebase and merge"**
-7. Crear tag anotado apuntando al HEAD de qa:
-   ```bash
-   git fetch origin qa
-   git tag -a qa-YYYY-MM-DD origin/qa -m "Release qa-YYYY-MM-DD"
-   git push origin qa-YYYY-MM-DD
-   ```
+7. El tag `qa-YYYY-MM-DD` se crea automáticamente al mergear
+
 ---
 
 ## Proceso de promoción a producción
@@ -179,12 +181,7 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 4. Resolver conflictos si los hay
 5. Push y PR: `gh pr create --base main --title "release: prod-YYYY-MM-DD"`
 6. **2 aprobaciones** → merge con **"Rebase and merge"**
-7. Crear tag anotado apuntando al HEAD de main:
-   ```bash
-   git fetch origin main
-   git tag -a prod-YYYY-MM-DD origin/main -m "Release prod-YYYY-MM-DD"
-   git push origin prod-YYYY-MM-DD
-   ```
+7. El tag `prod-YYYY-MM-DD` se crea automáticamente al mergear
 
 ---
 
