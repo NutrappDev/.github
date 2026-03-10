@@ -150,9 +150,10 @@ Lo único que requiere configuración es el **auto-tag**: el tag `qa-YYYY-MM-DD`
 
 Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.yml) en `.github/workflows/pr-checks.yml` de tu repo. No necesitas cambiar nada.
 
-**Si los checks de validación no aparecen en un PR:**
-1. Verifica que GitHub Actions esté habilitado: **Settings → Actions → General → Allow all actions**
-2. Verifica que el PR apunte a `develop`, `qa` o `main` (otras ramas no disparan el workflow)
+**Si los checks de validación no aparecen o el PR quedó bloqueado inesperadamente:**
+1. Haz un push a tu rama — los checks se disparan automáticamente en el próximo evento del PR
+2. Verifica que GitHub Actions esté habilitado: **Settings → Actions → General → Allow all actions**
+3. Verifica que el PR apunte a `develop`, `qa` o `main` (otras ramas no disparan el workflow)
 
 **Si el auto-tag no se crea al mergear un release:**
 1. Verifica que el archivo esté en `.github/workflows/pr-checks.yml` (ruta exacta)
