@@ -11,26 +11,18 @@ name: Org PR Checks
 on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
-    branches:
-      - main
-      - qa
-      - develop
 
 jobs:
   validate:
     uses: NutrappDev/.github/.github/workflows/pr-validation.yml@main
-    secrets: inherit
 
   security:
     uses: NutrappDev/.github/.github/workflows/security-check.yml@main
-    secrets: inherit
 
   commitlint:
     if: github.base_ref == 'develop'
     uses: NutrappDev/.github/.github/workflows/commitlint.yml@main
-    secrets: inherit
 
   release-validate:
     if: startsWith(github.head_ref, 'release/')
     uses: NutrappDev/.github/.github/workflows/release-validation.yml@main
-    secrets: inherit
