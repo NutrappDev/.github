@@ -19,7 +19,7 @@
 
   "bypass_actors": [
     {
-      "actor_id": 1,
+      "actor_id": null,
       "actor_type": "OrganizationAdmin",
       "bypass_mode": "always"
     }
@@ -40,13 +40,15 @@
     },
     {
       "_comment": "SIN required_linear_history — main debe recibir merge commits para preservar trazabilidad de cherry-picks desde qa",
-      "type": "required_status_checks",
+      "_comment2": "Dispara org-pr-checks.yml desde NutrappDev/.github via rulesets. No requiere pr-checks.yml en el repo.",
+      "type": "workflows",
       "parameters": {
-        "strict_required_status_checks_policy": false,
-        "required_status_checks": [
-          { "context": "validate / Validate PR" },
-          { "context": "security / Security & Quality Check" },
-          { "context": "release-validate / Validate Release PR" }
+        "workflows": [
+          {
+            "path": ".github/workflows/org-pr-checks.yml",
+            "repository_id": 1164892300,
+            "ref": "main"
+          }
         ]
       }
     },

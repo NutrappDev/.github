@@ -19,7 +19,7 @@
 
   "bypass_actors": [
     {
-      "actor_id": 1,
+      "actor_id": null,
       "actor_type": "OrganizationAdmin",
       "bypass_mode": "always"
     }
@@ -43,14 +43,15 @@
       "type": "required_linear_history"
     },
     {
-      "_comment": "Workflows requeridos: checks del caller (pr-checks.yml en cada repo)",
-      "type": "required_status_checks",
+      "_comment": "Dispara org-pr-checks.yml desde NutrappDev/.github via rulesets. No requiere pr-checks.yml en el repo.",
+      "type": "workflows",
       "parameters": {
-        "strict_required_status_checks_policy": false,
-        "required_status_checks": [
-          { "context": "validate / Validate PR" },
-          { "context": "security / Security & Quality Check" },
-          { "context": "commitlint / Validate Commit Messages" }
+        "workflows": [
+          {
+            "path": ".github/workflows/org-pr-checks.yml",
+            "repository_id": 1164892300,
+            "ref": "main"
+          }
         ]
       }
     },

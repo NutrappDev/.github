@@ -27,10 +27,11 @@ ORG="NutrappDev"
 TEMPLATE_REPO="NutrappDev/.github"
 TEMPLATE_PATH=".github/workflows/_example-caller.yml"
 TARGET_PATH=".github/workflows/pr-checks.yml"
-# Ramas que reciben PRs — el workflow debe existir en cada una
-TARGET_BRANCHES=("develop" "qa" "main")
-COMMIT_MSG="chore: agregar workflow de PR checks [skip ci]"
-COMMIT_MSG_UPDATE="chore: actualizar workflow de PR checks [skip ci]"
+# Solo qa y main — pr-checks.yml solo contiene auto-tag, que se activa en PRs hacia qa/main.
+# develop no lo necesita: los checks de validación se disparan via rulesets org-level.
+TARGET_BRANCHES=("qa" "main")
+COMMIT_MSG="chore: agregar pr-checks para auto-tag de releases [skip ci]"
+COMMIT_MSG_UPDATE="chore: actualizar pr-checks (auto-tag de releases) [skip ci]"
 
 # ─── Colores ──────────────────────────────────────────────────────────────────
 GREEN='\033[0;32m'
@@ -179,5 +180,7 @@ echo -e "  ${YELLOW}Actualizados: ${UPDATED}${NC}"
 echo -e "  ${GRAY}Sin cambios:  ${SKIPPED}${NC}"
 [ "$ERRORS" -gt 0 ] && echo -e "  ${RED}Errores:      ${ERRORS}${NC}"
 echo ""
-echo "El workflow se activará en el próximo PR abierto o sincronizado."
+echo "El auto-tag se activará al mergear el próximo PR de release/* hacia qa o main."
+echo "Los checks de validación (validate, security, commitlint, release-validate)"
+echo "se disparan automáticamente via rulesets — no requieren este archivo."
 echo ""
