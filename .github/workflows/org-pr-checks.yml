@@ -1,11 +1,1105 @@
 name: Org PR Checks
 
+# Workflow disparado automáticamente por los rulesets de la org via la regla "workflows".
+# NO copiar en repos individuales — vive exclusivamente en NutrappDev/.github.
+#
+# Checks que activa:
+#   → develop : validate | security | commitlint
+#   → qa      : validate | security | release-validate
+#   → main    : validate | security | release-validate
+
 on:
   pull_request:
     types: [opened, synchronize, reopened, edited]
 
 jobs:
-  test:
+  # ═══════════════════════════════════════════════════════════════════════════
+  # validate — Formato, flujo de ramas, ticket Jira, tamaño del PR
+  # ═══════════════════════════════════════════════════════════════════════════
+  validate:
+    name: Validate PR
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
     steps:
-      - run: echo "hello from required workflow"
+      - name: Checkout calling repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Load pr-config.json
+        id: load-config
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
+            --jq '.content' | base64 -d | jq -c 'del(._comment)')
+          if [ -z "$CONFIG" ] || [ "$CONFIG" = "null" ]; then
+            echo "::error::No se pudo leer .github/pr-config.json desde NutrappDev/.github"
+            exit 1
+          fi
+          echo "CONFIG=$CONFIG" >> "$GITHUB_ENV"
+          SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.size_check_blocks // true')
+          echo "SIZE_BLOCKS=$SIZE_BLOCKS" >> "$GITHUB_ENV"
+
+      - name: Validate branch flow
+        id: branch-flow
+        env:
+          SOURCE: ${{ github.head_ref }}
+          TARGET: ${{ github.base_ref }}
+        run: |
+          SOURCE_TYPE=$(echo "$SOURCE" | cut -d'/' -f1)
+          FLOW=$(echo "$CONFIG" | jq -r ".branch_flow[\"$TARGET\"] // empty")
+
+          if [ -z "$FLOW" ]; then
+            echo "branch_result=⚠️ Rama destino \`$TARGET\` no tiene reglas de flujo definidas." >> "$GITHUB_OUTPUT"
+            echo "branch_ok=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          ALLOWED=$(echo "$FLOW" | jq -r '.allowed_source_prefixes[]')
+          MATCH=false
+          for PREFIX in $ALLOWED; do
+            if [ "$SOURCE_TYPE" = "$PREFIX" ]; then
+              MATCH=true
+              break
+            fi
+          done
+
+          if [ "$MATCH" = "false" ]; then
+            ALLOWED_LIST=$(echo "$FLOW" | jq -r '[.allowed_source_prefixes[] | "`\(.)/*`"] | join(", ")')
+            echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+            echo "branch_result=❌ La rama \`$SOURCE\` (\`$SOURCE_TYPE\`) no puede hacer PR a \`$TARGET\`. Fuentes permitidas: $ALLOWED_LIST" >> "$GITHUB_OUTPUT"
+          else
+            STRATEGY=$(echo "$FLOW" | jq -r '.merge_strategy // "merge"')
+            echo "branch_ok=true" >> "$GITHUB_OUTPUT"
+            echo "branch_result=✅ Flujo válido: \`$SOURCE_TYPE\` → \`$TARGET\` (merge strategy: \`$STRATEGY\`)" >> "$GITHUB_OUTPUT"
+            echo "MERGE_STRATEGY=$STRATEGY" >> "$GITHUB_ENV"
+          fi
+
+          PATTERNS_JSON=$(echo "$FLOW" | jq -c '.allowed_branch_pattern // .allowed_branch_patterns // null')
+          if [ -n "$PATTERNS_JSON" ] && [ "$PATTERNS_JSON" != "null" ]; then
+            PATTERN_MATCH=false
+            if echo "$PATTERNS_JSON" | jq -e 'type == "array"' > /dev/null 2>&1; then
+              while IFS= read -r PAT; do
+                if echo "$SOURCE" | grep -qP "$PAT"; then
+                  PATTERN_MATCH=true
+                  break
+                fi
+              done < <(echo "$PATTERNS_JSON" | jq -r '.[]')
+            else
+              PAT=$(echo "$PATTERNS_JSON" | jq -r '.')
+              if echo "$SOURCE" | grep -qP "$PAT"; then
+                PATTERN_MATCH=true
+              fi
+            fi
+
+            if [ "$PATTERN_MATCH" = "false" ]; then
+              EXAMPLE=$(echo "$CONFIG" | jq -r ".release_branch_naming | to_entries | map(select(.value | test(\"$TARGET\"))) | .[0].value // \"release/<tipo>-YYYY-MM-DD\"")
+              echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+              echo "branch_result=❌ El nombre de rama \`$SOURCE\` no cumple el patrón requerido para PRs a \`$TARGET\`. Ejemplo correcto: \`$EXAMPLE\`" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+          if [ "$TARGET" = "develop" ] && [ "$MATCH" = "true" ]; then
+            ALLOWED_PREFIXES=$(echo "$FLOW" | jq -r '.allowed_source_prefixes | join("|")')
+            if ! echo "$SOURCE" | grep -qP "^($ALLOWED_PREFIXES)/[A-Z]+-[0-9]+-[a-z][a-z0-9-]+$"; then
+              echo "branch_ok=false" >> "$GITHUB_OUTPUT"
+              echo "branch_result=❌ Nombre de rama inválido: \`$SOURCE\`. Patrón requerido: \`tipo/TICKET-123-descripcion-corta\` (ej: \`feat/NUTRI-123-login-google\`)" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Extract PR type
+        id: pr-type
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          PR_TYPE=$(echo "$PR_TITLE" | grep -oP '^[a-z]+' || true)
+          VALID_TYPES=$(echo "$CONFIG" | jq -r '.types | keys[]')
+
+          TYPE_OK=false
+          for T in $VALID_TYPES; do
+            if [ "$PR_TYPE" = "$T" ]; then
+              TYPE_OK=true
+              break
+            fi
+          done
+
+          echo "pr_type=$PR_TYPE" >> "$GITHUB_OUTPUT"
+          echo "type_ok=$TYPE_OK" >> "$GITHUB_OUTPUT"
+          echo "PR_TYPE=$PR_TYPE" >> "$GITHUB_ENV"
+
+      - name: Validate PR title
+        id: title-check
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          SOURCE: ${{ github.head_ref }}
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          TYPE_OK="${{ steps.pr-type.outputs.type_ok }}"
+
+          TITLE_FORMAT_OK=false
+          if echo "$PR_TITLE" | grep -qP '^[a-z]+(\([^)]+\))?: .{10,}'; then
+            TITLE_FORMAT_OK=true
+          fi
+
+          SKIP_JIRA_TYPES=$(echo "$CONFIG" | jq -r '.jira_ticket_skip_types[]')
+          REQUIRE_JIRA=true
+          for ST in $SKIP_JIRA_TYPES; do
+            if [ "$PR_TYPE" = "$ST" ]; then
+              REQUIRE_JIRA=false
+              break
+            fi
+          done
+          SOURCE_TYPE=$(echo "$SOURCE" | cut -d'/' -f1)
+          if [ "$SOURCE_TYPE" = "release" ]; then
+            REQUIRE_JIRA=false
+          fi
+
+          JIRA_OK=true
+          JIRA_TICKET=""
+          if [ "$REQUIRE_JIRA" = "true" ]; then
+            JIRA_TICKET=$(echo "$PR_TITLE" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+            if [ -z "$JIRA_TICKET" ]; then
+              JIRA_OK=false
+            fi
+          fi
+
+          RESULT=""
+          ALL_OK=true
+
+          if [ "$TYPE_OK" = "false" ]; then
+            VALID_LIST=$(echo "$CONFIG" | jq -r '[.types | keys[] | "`\(.)`"] | join(", ")')
+            RESULT="❌ Tipo de PR desconocido: \`$PR_TYPE\`. Tipos válidos: $VALID_LIST"
+            ALL_OK=false
+          elif [ "$TITLE_FORMAT_OK" = "false" ]; then
+            RESULT="❌ Formato de título inválido. Esperado: \`tipo(scope): descripción TICKET-123\`"
+            ALL_OK=false
+          elif [ "$JIRA_OK" = "false" ]; then
+            RESULT="❌ Falta el ticket Jira en el título. Formato: \`$PR_TYPE(scope): descripción TICKET-123\`"
+            ALL_OK=false
+          else
+            RESULT="✅ Título válido"
+            if [ -n "$JIRA_TICKET" ]; then
+              RESULT="$RESULT (ticket: \`$JIRA_TICKET\`)"
+            fi
+          fi
+
+          echo "title_ok=$ALL_OK" >> "$GITHUB_OUTPUT"
+          echo "title_result=$RESULT" >> "$GITHUB_OUTPUT"
+          echo "jira_ticket=$JIRA_TICKET" >> "$GITHUB_OUTPUT"
+          echo "require_jira=$REQUIRE_JIRA" >> "$GITHUB_OUTPUT"
+
+      - name: Validate Jira consistency
+        id: jira-check
+        env:
+          SOURCE: ${{ github.head_ref }}
+        run: |
+          REQUIRE_JIRA="${{ steps.title-check.outputs.require_jira }}"
+          TITLE_TICKET="${{ steps.title-check.outputs.jira_ticket }}"
+
+          if [ "$REQUIRE_JIRA" = "false" ]; then
+            echo "jira_consistency_ok=true" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=⏭️ Consistencia Jira omitida (tipo \`$PR_TYPE\`)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          BRANCH_TICKET=$(echo "$SOURCE" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+
+          if [ -z "$BRANCH_TICKET" ]; then
+            echo "jira_consistency_ok=false" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=❌ No se encontró ticket Jira en el nombre de la rama \`$SOURCE\`" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [ "$TITLE_TICKET" != "$BRANCH_TICKET" ]; then
+            echo "jira_consistency_ok=false" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=❌ El ticket en el título (\`$TITLE_TICKET\`) no coincide con el de la rama (\`$BRANCH_TICKET\`)" >> "$GITHUB_OUTPUT"
+          else
+            echo "jira_consistency_ok=true" >> "$GITHUB_OUTPUT"
+            echo "jira_consistency_result=✅ Ticket consistente en rama y título (\`$BRANCH_TICKET\`)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validate PR size
+        id: size-check
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          TYPE_OK="${{ steps.pr-type.outputs.type_ok }}"
+
+          if [ "$TYPE_OK" = "false" ]; then
+            echo "size_ok=true" >> "$GITHUB_OUTPUT"
+            echo "size_result=⏭️ Validación de tamaño omitida (tipo desconocido)" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          MAX_LINES=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].max_lines // 0")
+          MAX_FILES=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].max_files // 0")
+
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+
+          CHANGED_FILES=$(git diff --name-only "$BASE"..."$HEAD" | wc -l)
+          CHANGED_LINES=$(git diff --shortstat "$BASE"..."$HEAD" | grep -oP '\d+(?= insertion)' | head -1 || echo 0)
+          CHANGED_LINES=$((CHANGED_LINES + $(git diff --shortstat "$BASE"..."$HEAD" | grep -oP '\d+(?= deletion)' | head -1 || echo 0)))
+
+          FILES_OK=true
+          LINES_OK=true
+          MSG=""
+
+          FAIL_ICON="❌"
+          [ "$SIZE_BLOCKS" = "false" ] && FAIL_ICON="⚠️"
+
+          if [ "$MAX_FILES" -gt 0 ] && [ "$CHANGED_FILES" -gt "$MAX_FILES" ]; then
+            FILES_OK=false
+            MSG="$MSG $FAIL_ICON Archivos: $CHANGED_FILES/$MAX_FILES."
+          else
+            MSG="$MSG ✅ Archivos: $CHANGED_FILES/$MAX_FILES."
+          fi
+
+          if [ "$MAX_LINES" -gt 0 ] && [ "$CHANGED_LINES" -gt "$MAX_LINES" ]; then
+            LINES_OK=false
+            MSG="$MSG $FAIL_ICON Líneas: $CHANGED_LINES/$MAX_LINES."
+          else
+            MSG="$MSG ✅ Líneas: $CHANGED_LINES/$MAX_LINES."
+          fi
+
+          if [ "$FILES_OK" = "false" ] || [ "$LINES_OK" = "false" ]; then
+            echo "size_ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "size_ok=true" >> "$GITHUB_OUTPUT"
+          fi
+          echo "size_result=$MSG" >> "$GITHUB_OUTPUT"
+
+      - name: Auto-label PR
+        if: steps.pr-type.outputs.type_ok == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          PR_TYPE="${{ steps.pr-type.outputs.pr_type }}"
+          LABEL=$(echo "$CONFIG" | jq -r ".types[\"$PR_TYPE\"].label // \"\"")
+          if [ -n "$LABEL" ]; then
+            gh label create "$LABEL" --repo "$REPO" --color "ededed" 2>/dev/null || true
+            gh pr edit "$PR_NUMBER" --add-label "$LABEL" --repo "$REPO" 2>/dev/null || true
+          fi
+
+      - name: Post summary comment
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          BRANCH_RESULT: ${{ steps.branch-flow.outputs.branch_result }}
+          TITLE_RESULT: ${{ steps.title-check.outputs.title_result }}
+          JIRA_RESULT: ${{ steps.jira-check.outputs.jira_consistency_result }}
+          SIZE_RESULT: ${{ steps.size-check.outputs.size_result }}
+        run: |
+          BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
+          TITLE_OK="${{ steps.title-check.outputs.title_ok }}"
+          JIRA_OK="${{ steps.jira-check.outputs.jira_consistency_ok }}"
+          SIZE_OK="${{ steps.size-check.outputs.size_ok }}"
+
+          ALL_OK=true
+          if [ "$BRANCH_OK" = "false" ] || [ "$TITLE_OK" = "false" ] || [ "$JIRA_OK" = "false" ] || [ "$SIZE_OK" = "false" ]; then
+            ALL_OK=false
+          fi
+
+          if [ "$ALL_OK" = "true" ]; then
+            STATUS="**Estado: ✅ Todo correcto**"
+          else
+            STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
+          fi
+
+          {
+            echo "## 🤖 Validación automática de PR"
+            echo ""
+            echo "$STATUS"
+            echo ""
+            echo "| Validación | Resultado |"
+            echo "|-----------|-----------|"
+            echo "| Flujo de ramas | $BRANCH_RESULT |"
+            echo "| Título del PR | $TITLE_RESULT |"
+            echo "| Consistencia Jira | $JIRA_RESULT |"
+            echo "| Tamaño del PR | $SIZE_RESULT |"
+            echo ""
+            echo "---"
+            echo "*Workflow: [org-pr-checks.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/org-pr-checks.yml)*"
+          } > /tmp/pr_body.txt
+
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🤖 Validación"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file /tmp/pr_body.txt
+
+      - name: Fail if validation errors
+        run: |
+          BRANCH_OK="${{ steps.branch-flow.outputs.branch_ok }}"
+          TITLE_OK="${{ steps.title-check.outputs.title_ok }}"
+          JIRA_OK="${{ steps.jira-check.outputs.jira_consistency_ok }}"
+          SIZE_OK="${{ steps.size-check.outputs.size_ok }}"
+
+          FAILED=false
+          [ "$BRANCH_OK" = "false" ] && echo "::error::Flujo de ramas inválido" && FAILED=true
+          [ "$TITLE_OK" = "false" ] && echo "::error::Título del PR inválido" && FAILED=true
+          [ "$JIRA_OK" = "false" ] && echo "::error::Inconsistencia en ticket Jira" && FAILED=true
+          if [ "$SIZE_OK" = "false" ]; then
+            if [ "$SIZE_BLOCKS" = "true" ]; then
+              echo "::error::PR excede el tamaño máximo permitido" && FAILED=true
+            else
+              echo "::warning::PR excede el tamaño recomendado (size_check_blocks=false — no bloquea)"
+            fi
+          fi
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # security — Secretos, archivos prohibidos, binarios, tamaño de código
+  # ═══════════════════════════════════════════════════════════════════════════
+  security:
+    name: Security & Quality Check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Load config flags
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
+            --jq '.content' | base64 -d)
+          FILE_SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.file_size_check_blocks // true')
+          echo "FILE_SIZE_BLOCKS=$FILE_SIZE_BLOCKS" >> "$GITHUB_ENV"
+
+      - name: Check repo nomenclature
+        run: |
+          NAME="${{ github.repository }}"
+          NAME="${NAME#*/}"
+          PATTERN='^(raiz|tronco|ramas|fruto)-[a-z][a-z0-9]*(-[a-z][a-z0-9]*)+$'
+          if echo "$NAME" | grep -qE "$PATTERN"; then
+            echo "Nomenclatura OK: $NAME"
+          else
+            echo "::warning title=Nomenclatura::El repo '$NAME' no cumple el patrón [raiz|tronco|ramas|fruto]-[tipo]-[proyecto]. Ver CONTRIBUTING.md"
+          fi
+
+      - name: Get changed files
+        id: changed
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git diff --name-only --diff-filter=ACMR "$BASE"..."$HEAD" > /tmp/changed_files.txt
+          echo "Total changed: $(wc -l < /tmp/changed_files.txt) files"
+          cat /tmp/changed_files.txt
+
+      - name: Check prohibited filenames
+        id: prohibited
+        run: |
+          ERRORS=""
+
+          while IFS= read -r FILE; do
+            BASENAME=$(basename "$FILE")
+
+            if echo "$BASENAME" | grep -qP '^\.env(\.(?!example|template|sample).+)?$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — archivo de entorno con posibles secretos"
+              continue
+            fi
+
+            if [ "$BASENAME" = "credentials.json" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — archivo de credenciales"
+              continue
+            fi
+
+            if echo "$BASENAME" | grep -qP '\.(pem|key|p12|pfx|jks)$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — certificado o clave privada"
+              continue
+            fi
+
+            if echo "$BASENAME" | grep -qP '^id_(rsa|dsa|ecdsa|ed25519)(\.pub)?$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — clave SSH"
+              continue
+            fi
+
+            if echo "$BASENAME" | grep -qP '\.keystore$'; then
+              ERRORS="$ERRORS\n- \`$FILE\` — Android keystore"
+              continue
+            fi
+
+          done < /tmp/changed_files.txt
+
+          if [ -n "$ERRORS" ]; then
+            echo "prohibited_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$ERRORS" > /tmp/prohibited_errors.txt
+            echo "::error::Se encontraron archivos prohibidos en el PR"
+          else
+            echo "prohibited_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/prohibited_errors.txt
+          fi
+
+      - name: Check secrets in diff content
+        id: secrets
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          DIFF_FILE="/tmp/pr_additions.txt"
+          git diff "$BASE"..."$HEAD" \
+            -- ':!*.spec.ts' ':!*.spec.js' ':!*.test.ts' ':!*.test.js' \
+               ':!*.example' ':!*.sample' ':!*/__mocks__/*' ':!*/fixtures/*' \
+            | grep -P '^\+[^+]' | sed 's/^\+//' > "$DIFF_FILE" || true
+
+          FINDINGS=""
+
+          check_pattern() {
+            local PATTERN="$1"
+            local LABEL="$2"
+            local FLAGS="${3:--P}"
+
+            if grep -q $FLAGS "$PATTERN" "$DIFF_FILE" 2>/dev/null; then
+              EXAMPLES=$(grep $FLAGS "$PATTERN" "$DIFF_FILE" | head -3 | \
+                sed 's/./& /5' | cut -c1-120 | sed 's/$/…/' | \
+                awk '{print "  `" $0 "`"}' | tr '\n' '|' | sed 's/|$//')
+              FINDINGS="$FINDINGS\n**$LABEL**\n$EXAMPLES"
+            fi
+          }
+
+          check_pattern 'API_KEY\s*=\s*["\047][^"\047]{8,}' "API_KEY con valor"
+          check_pattern 'SECRET\s*=\s*["\047][^"\047]{8,}' "SECRET con valor"
+          check_pattern 'TOKEN\s*=\s*["\047][^"\047]{8,}' "TOKEN con valor"
+          check_pattern 'PASSWORD\s*=\s*["\047][^"\047]{4,}' "PASSWORD con valor" "-Pi"
+          check_pattern 'DB_PASSWORD\s*=\s*["\047][^"\047]{4,}' "DB_PASSWORD con valor" "-Pi"
+          check_pattern 'AWS_SECRET_ACCESS_KEY\s*=\s*["\047][^"\047]{8,}' "AWS_SECRET_ACCESS_KEY"
+          check_pattern 'PRIVATE_KEY\s*=\s*["\047][^"\047]{8,}' "PRIVATE_KEY con valor"
+          check_pattern '-----BEGIN (RSA |EC |OPENSSH |)PRIVATE KEY' "Clave privada embebida" "-P"
+          check_pattern 'ghp_[A-Za-z0-9]{36}' "GitHub Personal Access Token"
+          check_pattern 'AKIA[0-9A-Z]{16}' "AWS Access Key ID"
+          check_pattern 'eyJ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{20,}\.' "JWT hardcodeado"
+
+          if [ -n "$FINDINGS" ]; then
+            echo "secrets_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$FINDINGS" > /tmp/secrets_findings.txt
+            echo "::error::Se encontraron posibles secretos en el diff del PR"
+          else
+            echo "secrets_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/secrets_findings.txt
+          fi
+
+      - name: Check binary file sizes
+        id: binary-size
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          ERRORS=""
+          WARNINGS=""
+
+          BINARY_FILES=$(git diff --numstat "$BASE"..."$HEAD" | awk '$1 == "-" {print $3}')
+
+          for FILE in $BINARY_FILES; do
+            [ ! -f "$FILE" ] && continue
+            SIZE_BYTES=$(stat -c%s "$FILE" 2>/dev/null || echo 0)
+            SIZE_MB=$(echo "scale=2; $SIZE_BYTES / 1048576" | bc)
+
+            if [ "$SIZE_BYTES" -gt 5242880 ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — ${SIZE_MB}MB (máx: 5MB)"
+            elif [ "$SIZE_BYTES" -gt 1048576 ]; then
+              WARNINGS="$WARNINGS\n- \`$FILE\` — ${SIZE_MB}MB (recomendado: <1MB)"
+            fi
+          done
+
+          if [ -n "$ERRORS" ]; then
+            echo "binary_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$ERRORS" > /tmp/binary_errors.txt
+            echo "::error::Archivos binarios demasiado grandes (>5MB)"
+          else
+            echo "binary_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/binary_errors.txt
+          fi
+
+          if [ -n "$WARNINGS" ]; then
+            printf "%b" "$WARNINGS" > /tmp/binary_warnings.txt
+          else
+            touch /tmp/binary_warnings.txt
+          fi
+
+      - name: Check code file sizes
+        id: code-size
+        run: |
+          WARN_THRESHOLD=300
+          ERROR_THRESHOLD=500
+          HARD_THRESHOLD=800
+
+          ERRORS=""
+          WARNINGS=""
+
+          while IFS= read -r FILE; do
+            echo "$FILE" | grep -qP '\.(ts|js)$' || continue
+            [ ! -f "$FILE" ] && continue
+
+            LINES=$(wc -l < "$FILE")
+
+            FAIL_ICON="❌"
+            [ "$FILE_SIZE_BLOCKS" = "false" ] && FAIL_ICON="⚠️"
+
+            if [ "$LINES" -gt "$HARD_THRESHOLD" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas ($FAIL_ICON hard limit: $HARD_THRESHOLD)"
+            elif [ "$LINES" -gt "$ERROR_THRESHOLD" ]; then
+              ERRORS="$ERRORS\n- \`$FILE\` — $LINES líneas ($FAIL_ICON máx recomendado: $ERROR_THRESHOLD)"
+            elif [ "$LINES" -gt "$WARN_THRESHOLD" ]; then
+              WARNINGS="$WARNINGS\n- \`$FILE\` — $LINES líneas (considera dividirlo: >$WARN_THRESHOLD)"
+            fi
+          done < /tmp/changed_files.txt
+
+          if [ -n "$ERRORS" ]; then
+            echo "code_size_ok=false" >> "$GITHUB_OUTPUT"
+            printf "%b" "$ERRORS" > /tmp/code_size_errors.txt
+            echo "::error::Archivos de código que superan el límite de líneas"
+          else
+            echo "code_size_ok=true" >> "$GITHUB_OUTPUT"
+            touch /tmp/code_size_errors.txt
+          fi
+
+          if [ -n "$WARNINGS" ]; then
+            printf "%b" "$WARNINGS" > /tmp/code_size_warnings.txt
+          else
+            touch /tmp/code_size_warnings.txt
+          fi
+
+      - name: Warn console.log usage
+        id: consolelog
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          CONSOLELOG_FILES=""
+
+          while IFS= read -r FILE; do
+            echo "$FILE" | grep -qP '\.ts$' || continue
+            echo "$FILE" | grep -qP '\.(spec|test)\.ts$' && continue
+            [ ! -f "$FILE" ] && continue
+
+            ADDED=$(git diff "$BASE"..."$HEAD" -- "$FILE" | grep -P '^\+[^+].*console\.log' || true)
+            if [ -n "$ADDED" ]; then
+              COUNT=$(echo "$ADDED" | wc -l)
+              CONSOLELOG_FILES="$CONSOLELOG_FILES\n- \`$FILE\` ($COUNT ocurrencia(s) añadida(s))"
+            fi
+          done < /tmp/changed_files.txt
+
+          if [ -n "$CONSOLELOG_FILES" ]; then
+            printf "%b" "$CONSOLELOG_FILES" > /tmp/consolelog_files.txt
+          else
+            touch /tmp/consolelog_files.txt
+          fi
+
+      - name: Post findings comment
+        if: >
+          steps.prohibited.outputs.prohibited_ok == 'false' ||
+          steps.secrets.outputs.secrets_ok == 'false' ||
+          steps.binary-size.outputs.binary_ok == 'false' ||
+          steps.code-size.outputs.code_size_ok == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          BODY="## 🔒 Security & Quality Check
+
+          "
+
+          PROHIBITED=$(cat /tmp/prohibited_errors.txt)
+          if [ -n "$PROHIBITED" ]; then
+            BODY="${BODY}### ❌ Archivos prohibidos
+          Estos archivos no deben incluirse en el repositorio:
+          $(printf "%b" "$PROHIBITED")
+
+          "
+          fi
+
+          SECRETS=$(cat /tmp/secrets_findings.txt)
+          if [ -n "$SECRETS" ]; then
+            BODY="${BODY}### ❌ Posibles secretos en el diff
+          Revisar las siguientes líneas añadidas. Si son falsos positivos, agregar comentario \`# nosec\` en la línea:
+          $(printf "%b" "$SECRETS")
+
+          "
+          fi
+
+          BIN_ERRORS=$(cat /tmp/binary_errors.txt)
+          BIN_WARNINGS=$(cat /tmp/binary_warnings.txt)
+          if [ -n "$BIN_ERRORS" ] || [ -n "$BIN_WARNINGS" ]; then
+            BODY="${BODY}### 📦 Tamaño de archivos binarios
+          "
+            [ -n "$BIN_ERRORS" ] && BODY="${BODY}**Errores (>5MB):**
+          $(printf "%b" "$BIN_ERRORS")
+          "
+            [ -n "$BIN_WARNINGS" ] && BODY="${BODY}**Advertencias (>1MB):**
+          $(printf "%b" "$BIN_WARNINGS")
+          "
+          fi
+
+          CODE_ERRORS=$(cat /tmp/code_size_errors.txt)
+          CODE_WARNINGS=$(cat /tmp/code_size_warnings.txt)
+          if [ -n "$CODE_ERRORS" ] || [ -n "$CODE_WARNINGS" ]; then
+            BODY="${BODY}### 📄 Tamaño de archivos de código
+          "
+            [ -n "$CODE_ERRORS" ] && BODY="${BODY}**Errores (>500 líneas):**
+          $(printf "%b" "$CODE_ERRORS")
+          "
+            [ -n "$CODE_WARNINGS" ] && BODY="${BODY}**Advertencias (>300 líneas):**
+          $(printf "%b" "$CODE_WARNINGS")
+          "
+          fi
+
+          CONSOLELOG=$(cat /tmp/consolelog_files.txt)
+          if [ -n "$CONSOLELOG" ]; then
+            BODY="${BODY}---
+          > ⚠️ **console.log detectado** (no bloquea, pero considerar usar un logger):
+          $(printf "%b" "$CONSOLELOG")
+          "
+          fi
+
+          BODY="${BODY}---
+          *Workflow: [org-pr-checks.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/org-pr-checks.yml)*"
+
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🔒 Security"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+
+      - name: Annotate console.log warnings
+        run: |
+          CONSOLELOG=$(cat /tmp/consolelog_files.txt)
+          if [ -n "$CONSOLELOG" ]; then
+            echo "::warning::console.log detectado en archivos .ts — considerar usar un logger estructurado"
+            printf "%b\n" "$CONSOLELOG" | while IFS= read -r LINE; do
+              [ -z "$LINE" ] && continue
+              echo "::warning::$LINE"
+            done
+          fi
+
+      - name: Fail if critical issues found
+        run: |
+          FAILED=false
+          [ "${{ steps.prohibited.outputs.prohibited_ok }}" = "false" ] && \
+            echo "::error::Archivos prohibidos detectados" && FAILED=true
+          [ "${{ steps.secrets.outputs.secrets_ok }}" = "false" ] && \
+            echo "::error::Posibles secretos en el código" && FAILED=true
+          [ "${{ steps.binary-size.outputs.binary_ok }}" = "false" ] && \
+            echo "::error::Archivos binarios >5MB" && FAILED=true
+          if [ "${{ steps.code-size.outputs.code_size_ok }}" = "false" ]; then
+            if [ "$FILE_SIZE_BLOCKS" = "true" ]; then
+              echo "::error::Archivos de código superan el límite de líneas" && FAILED=true
+            else
+              echo "::warning::Archivos de código superan el límite recomendado (file_size_check_blocks=false — no bloquea)"
+            fi
+          fi
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # commitlint — Mensajes de commit: formato, Jira, consistencia
+  # Solo en PRs hacia develop
+  # ═══════════════════════════════════════════════════════════════════════════
+  commitlint:
+    name: Validate Commit Messages
+    if: github.base_ref == 'develop'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Load config
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
+            --jq '.content' | base64 -d)
+          VALID_TYPES=$(echo "$CONFIG" | jq -r '.types | keys | join("|")')
+          SKIP_JIRA=$(echo "$CONFIG" | jq -r '.jira_ticket_skip_types | join("|")')
+          echo "VALID_TYPES=$VALID_TYPES" >> "$GITHUB_ENV"
+          echo "SKIP_JIRA_TYPES=$SKIP_JIRA" >> "$GITHUB_ENV"
+
+      - name: Validate commit messages
+        id: validate
+        env:
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          ERRORS_FILE="/tmp/commit_errors.txt"
+          WARNINGS_FILE="/tmp/commit_warnings.txt"
+          touch "$ERRORS_FILE" "$WARNINGS_FILE"
+
+          BRANCH_TICKET=$(echo "$BRANCH" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+          BRANCH_TYPE=$(echo "$BRANCH" | cut -d'/' -f1)
+
+          BRANCH_SKIPS_JIRA=false
+          echo "$BRANCH_TYPE" | grep -qP "^($SKIP_JIRA_TYPES)$" && BRANCH_SKIPS_JIRA=true
+
+          TOTAL=0
+          FAILED=0
+
+          while IFS=$'\t' read -r SHA SUBJECT; do
+            [ -z "$SHA" ] && continue
+            SHORT="${SHA:0:7}"
+            TOTAL=$((TOTAL + 1))
+
+            if echo "$SUBJECT" | grep -qP '^(Merge |Revert |Initial commit)'; then
+              echo "  ⏭️  $SHORT — omitido (commit de sistema)" >> "$ERRORS_FILE.skipped"
+              continue
+            fi
+            if echo "$SUBJECT" | grep -qP '\[(skip ci|ci skip)\]'; then
+              echo "  ⏭️  $SHORT — omitido ([skip ci])" >> "$ERRORS_FILE.skipped"
+              continue
+            fi
+
+            COMMIT_ERRORS=""
+
+            if ! echo "$SUBJECT" | grep -qP '^[a-z]+(\([^)]+\))?: .{10,}'; then
+              COMMIT_ERRORS="$COMMIT_ERRORS\n  - Formato inválido. Esperado: \`tipo(scope): descripción TICKET-123\`"
+              FAILED=$((FAILED + 1))
+            else
+              COMMIT_TYPE=$(echo "$SUBJECT" | grep -oP '^[a-z]+')
+              if ! echo "$COMMIT_TYPE" | grep -qP "^($VALID_TYPES)$"; then
+                VALID_LIST=$(echo "$VALID_TYPES" | tr '|' ', ')
+                COMMIT_ERRORS="$COMMIT_ERRORS\n  - Tipo \`$COMMIT_TYPE\` no válido. Tipos permitidos: $VALID_LIST"
+                FAILED=$((FAILED + 1))
+              fi
+
+              SKIP_COMMIT_JIRA=false
+              echo "$COMMIT_TYPE" | grep -qP "^($SKIP_JIRA_TYPES)$" && SKIP_COMMIT_JIRA=true
+              [ "$BRANCH_SKIPS_JIRA" = "true" ] && SKIP_COMMIT_JIRA=true
+
+              if [ "$SKIP_COMMIT_JIRA" = "false" ]; then
+                COMMIT_TICKET=$(echo "$SUBJECT" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+
+                if [ -z "$COMMIT_TICKET" ]; then
+                  COMMIT_ERRORS="$COMMIT_ERRORS\n  - Falta ticket Jira. Ejemplo: \`$COMMIT_TYPE(scope): descripción TICKET-123\`"
+                  FAILED=$((FAILED + 1))
+                elif [ -n "$BRANCH_TICKET" ] && [ "$COMMIT_TICKET" != "$BRANCH_TICKET" ]; then
+                  COMMIT_ERRORS="$COMMIT_ERRORS\n  - Ticket \`$COMMIT_TICKET\` no coincide con el de la rama (\`$BRANCH_TICKET\`)"
+                  FAILED=$((FAILED + 1))
+                fi
+              fi
+
+              HEADER_LEN=${#SUBJECT}
+              if [ "$HEADER_LEN" -gt 120 ]; then
+                echo "- \`$SHORT\` — header de $HEADER_LEN chars (máx recomendado: 120)" >> "$WARNINGS_FILE"
+              fi
+            fi
+
+            if [ -n "$COMMIT_ERRORS" ]; then
+              {
+                echo "- **\`$SHORT\`** \`$SUBJECT\`"
+                printf "%b\n" "$COMMIT_ERRORS"
+              } >> "$ERRORS_FILE"
+            fi
+
+          MERGE_BASE=$(git merge-base "$BASE" "$HEAD")
+          done < <(git log --format="%H%x09%s" "$MERGE_BASE".."$HEAD")
+
+          echo "total=$TOTAL" >> "$GITHUB_OUTPUT"
+          echo "failed=$FAILED" >> "$GITHUB_OUTPUT"
+
+          ERROR_COUNT=$(grep -c '^- \*\*' "$ERRORS_FILE" 2>/dev/null || echo 0)
+
+          if [ "$ERROR_COUNT" -gt 0 ]; then
+            echo "validate_ok=false" >> "$GITHUB_OUTPUT"
+            echo "::error::$ERROR_COUNT commit(s) con errores de formato o Jira"
+          else
+            echo "validate_ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post comment on failure
+        if: steps.validate.outputs.validate_ok == 'false'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          ERRORS=$(cat /tmp/commit_errors.txt)
+          WARNINGS=$(cat /tmp/commit_warnings.txt 2>/dev/null || true)
+          TOTAL="${{ steps.validate.outputs.total }}"
+          FAILED="${{ steps.validate.outputs.failed }}"
+          BRANCH_TICKET=$(echo "$BRANCH" | grep -oP '[A-Z]+-[0-9]+' | head -1 || true)
+
+          BODY="## 💬 Commitlint — Mensajes de commit inválidos
+
+          **$FAILED de $TOTAL commit(s) tienen errores.**
+
+          ### ❌ Commits con problemas
+
+          $ERRORS
+
+          ### Formato correcto
+
+          \`\`\`
+          tipo(scope): descripción breve TICKET-JIRA
+
+          Ejemplos:
+            feat(auth): agregar login con Google NUTRI-123
+            fix(api): corregir timeout en usuarios NUTRI-456
+            chore(deps): actualizar dependencias de seguridad NUTRI-789
+          \`\`\`
+
+          Tipos válidos: \`$VALID_TYPES\`
+          "
+
+          if [ -n "$BRANCH_TICKET" ]; then
+            BODY="${BODY}Ticket esperado en commits de esta rama: \`$BRANCH_TICKET\`
+          "
+          fi
+
+          if [ -n "$WARNINGS" ]; then
+            BODY="${BODY}
+          ---
+          > ⚠️ **Advertencias** (no bloquean):
+          $WARNINGS
+          "
+          fi
+
+          BODY="${BODY}
+          ---
+          *Referencia: [CONTRIBUTING.md](https://github.com/NutrappDev/.github/blob/main/CONTRIBUTING.md)*"
+
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 💬 Commitlint"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body "$BODY"
+
+      - name: Annotate long commit headers
+        run: |
+          if [ -s /tmp/commit_warnings.txt ]; then
+            echo "::warning::Algunos commits superan los 120 caracteres en el header"
+            cat /tmp/commit_warnings.txt | while IFS= read -r LINE; do
+              [ -n "$LINE" ] && echo "::warning::$LINE"
+            done
+          fi
+
+      - name: Fail if validation errors
+        run: |
+          [ "${{ steps.validate.outputs.validate_ok }}" = "false" ] && exit 1 || exit 0
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # release-validate — Dependencias y archivos faltantes en destino
+  # Solo en PRs de release/* → qa o main
+  # ═══════════════════════════════════════════════════════════════════════════
+  release-validate:
+    name: Validate Release PR
+    if: startsWith(github.head_ref, 'release/')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout with full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set release context
+        id: ctx
+        env:
+          SOURCE: ${{ github.head_ref }}
+          TARGET: ${{ github.base_ref }}
+        run: |
+          echo "source=$SOURCE" >> "$GITHUB_OUTPUT"
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+
+          if [ "$TARGET" = "qa" ]; then
+            echo "origin_branch=develop" >> "$GITHUB_OUTPUT"
+          elif [ "$TARGET" = "main" ]; then
+            echo "origin_branch=qa" >> "$GITHUB_OUTPUT"
+          else
+            echo "::error::Este workflow solo aplica a PRs hacia qa o main"
+            exit 1
+          fi
+
+      - name: Validation B — Missing files in target
+        id: val-b
+        env:
+          TARGET: ${{ github.base_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch origin "$TARGET" --depth=1
+
+          MISSING_FILES=()
+
+          MODIFIED=$(git diff --name-only --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null || true)
+
+          for FILE in $MODIFIED; do
+            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -q "^${FILE}$"; then
+              CREATOR=$(git log "origin/${{ steps.ctx.outputs.origin_branch }}" \
+                --oneline --diff-filter=A -- "$FILE" 2>/dev/null | head -1 || true)
+              MISSING_FILES+=("$FILE (creado en: ${CREATOR:-desconocido})")
+            fi
+          done
+
+          if [ ${#MISSING_FILES[@]} -gt 0 ]; then
+            echo "val_b_ok=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "val_b_result<<__EOF__"
+              echo "❌ Archivos modificados en este release que NO existen en \`$TARGET\`:"
+              for F in "${MISSING_FILES[@]}"; do
+                echo "- \`$F\`"
+              done
+              echo ""
+              echo "Debes incluir los commits que los crean en este release."
+              echo "__EOF__"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "val_b_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_b_result=✅ Todos los archivos modificados existen en \`$TARGET\`" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Validation A — Pending commits with overlapping files
+        id: val-a
+        env:
+          TARGET: ${{ github.base_ref }}
+          ORIGIN_BRANCH: ${{ steps.ctx.outputs.origin_branch }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git fetch origin "$TARGET" "$ORIGIN_BRANCH"
+
+          PR_FILES=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null | sort || true)
+
+          if [ -z "$PR_FILES" ]; then
+            echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_a_result=✅ Sin archivos modificados en el PR" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          OLDEST_PR_DATE=$(git log "$BASE_SHA".."$HEAD_SHA" \
+            --no-merges --format="%at" 2>/dev/null | tail -1 || echo 0)
+
+          LOOKBACK_FALLBACK=$(date -d '90 days ago' +%s)
+          LAST_RELEASE_DATE=$(git log "origin/$TARGET" --format="%ct" -1 2>/dev/null || echo 0)
+          [ "$LAST_RELEASE_DATE" -lt "$LOOKBACK_FALLBACK" ] && LAST_RELEASE_DATE="$LOOKBACK_FALLBACK"
+
+          PENDING=""
+          while IFS= read -r SHA; do
+            [ -z "$SHA" ] && continue
+            P_CT=$(git log --format="%ct" -1 "$SHA" 2>/dev/null || echo 0)
+            [ "$P_CT" -gt "$LAST_RELEASE_DATE" ] && PENDING="$PENDING $SHA"
+          done < <(git log --cherry-pick --left-only \
+            "origin/$ORIGIN_BRANCH"..."origin/$TARGET" \
+            --no-merges \
+            --format="%H" 2>/dev/null || true)
+
+          BLOCKERS=()
+
+          for P in $PENDING; do
+            P_DATE=$(git log --format="%at" -1 "$P" 2>/dev/null || echo 0)
+            [ "$P_DATE" -ge "$OLDEST_PR_DATE" ] && continue
+
+            P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | sort || true)
+            [ -z "$P_FILES" ] && continue
+
+            OVERLAP=$(comm -12 <(echo "$PR_FILES") <(echo "$P_FILES"))
+            if [ -n "$OVERLAP" ]; then
+              P_MSG=$(git log --format="%h %s" -1 "$P")
+              OVERLAP_LIST=$(echo "$OVERLAP" | tr '\n' ', ' | sed 's/,$//')
+              BLOCKERS+=("$P_MSG — archivos: $OVERLAP_LIST")
+            fi
+          done
+
+          if [ ${#BLOCKERS[@]} -gt 0 ]; then
+            echo "val_a_ok=false" >> "$GITHUB_OUTPUT"
+            {
+              echo "val_a_result<<__EOF__"
+              echo "❌ Commits anteriores en \`$ORIGIN_BRANCH\` tocan los mismos archivos y no están en \`$TARGET\`:"
+              for B in "${BLOCKERS[@]}"; do
+                echo "- $B"
+              done
+              echo ""
+              echo "Debes incluirlos en este release o hacerlos primero."
+              echo "__EOF__"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
+            echo "val_a_result=✅ Sin commits anteriores pendientes que compartan archivos" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post summary comment
+        if: github.event.action == 'opened' || github.event.action == 'synchronize'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          VAL_A_RESULT: ${{ steps.val-a.outputs.val_a_result }}
+          VAL_B_RESULT: ${{ steps.val-b.outputs.val_b_result }}
+        run: |
+          A_OK="${{ steps.val-a.outputs.val_a_ok }}"
+          B_OK="${{ steps.val-b.outputs.val_b_ok }}"
+
+          if [ "$A_OK" = "true" ] && [ "$B_OK" = "true" ]; then
+            STATUS="**Estado: ✅ Release listo para merge**"
+          else
+            STATUS="**Estado: ❌ Se encontraron problemas — revisar antes de hacer merge**"
+          fi
+
+          {
+            echo "## 🔍 Validación de Release"
+            echo ""
+            echo "$STATUS"
+            echo ""
+            echo "| Validación | Resultado |"
+            echo "|-----------|-----------|"
+            echo "| Dependencias pendientes (A) | $VAL_A_RESULT |"
+            echo "| Módulos faltantes en destino (B) | $VAL_B_RESULT |"
+            echo ""
+            echo "---"
+            echo "*Workflow: [org-pr-checks.yml](https://github.com/NutrappDev/.github/blob/main/.github/workflows/org-pr-checks.yml)*"
+          } > /tmp/release_comment.txt
+
+          PREV=$(gh api "repos/$REPO/issues/$PR_NUMBER/comments" \
+            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## 🔍 Validación de Release"))) | .id' \
+            | head -1 || true)
+          if [ -n "$PREV" ]; then
+            gh api -X DELETE "repos/$REPO/issues/comments/$PREV" > /dev/null 2>&1 || true
+          fi
+
+          gh pr comment "$PR_NUMBER" --repo "$REPO" --body-file /tmp/release_comment.txt
+
+      - name: Fail if blocked
+        run: |
+          A_OK="${{ steps.val-a.outputs.val_a_ok }}"
+          B_OK="${{ steps.val-b.outputs.val_b_ok }}"
+
+          FAILED=false
+          [ "$B_OK" = "false" ] && echo "::error::Validación B: archivos faltantes en rama destino" && FAILED=true
+          [ "$A_OK" = "false" ] && echo "::error::Validación A: commits anteriores pendientes con archivos en común" && FAILED=true
+
+          [ "$FAILED" = "true" ] && exit 1 || exit 0
