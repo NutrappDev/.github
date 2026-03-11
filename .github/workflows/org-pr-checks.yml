@@ -42,7 +42,7 @@ jobs:
             exit 1
           fi
           echo "CONFIG=$CONFIG" >> "$GITHUB_ENV"
-          SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.size_check_blocks // true')
+          SIZE_BLOCKS=$(echo "$CONFIG" | jq -r 'if .size_check_blocks == null then "true" else (.size_check_blocks | tostring) end')
           echo "SIZE_BLOCKS=$SIZE_BLOCKS" >> "$GITHUB_ENV"
 
       - name: Validate branch flow
@@ -382,7 +382,7 @@ jobs:
         run: |
           CONFIG=$(gh api "repos/NutrappDev/.github/contents/.github/pr-config.json" \
             --jq '.content' | base64 -d)
-          FILE_SIZE_BLOCKS=$(echo "$CONFIG" | jq -r '.file_size_check_blocks // true')
+          FILE_SIZE_BLOCKS=$(echo "$CONFIG" | jq -r 'if .file_size_check_blocks == null then "true" else (.file_size_check_blocks | tostring) end')
           echo "FILE_SIZE_BLOCKS=$FILE_SIZE_BLOCKS" >> "$GITHUB_ENV"
 
       - name: Check repo nomenclature
