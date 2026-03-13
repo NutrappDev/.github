@@ -15,9 +15,10 @@
 # se disparan automáticamente vía los rulesets de la org — no requieren
 # ningún archivo en este repo.
 #
-# Este archivo solo maneja el auto-tag al hacer merge de un release:
+# Este archivo maneja el auto-tag al hacer merge de un release o hotfix:
 #   → Crea tag qa-YYYY-MM-DD   cuando se mergea release/* → qa
 #   → Crea tag prod-YYYY-MM-DD cuando se mergea release/* → main
+#   → Crea tag prod-YYYY-MM-DD cuando se mergea hotfix/*  → main
 #
 # ───────────────────────────────────────────────────────────────────────────────
 # Para actualizar el dashboard al hacer deploy, agregar en tu workflow de deploy:
@@ -46,6 +47,9 @@ permissions:
 
 jobs:
   auto-tag:
-    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'release/')
+    if: |
+      github.event.pull_request.merged == true &&
+      (startsWith(github.head_ref, 'release/') ||
+       (startsWith(github.head_ref, 'hotfix/') && github.base_ref == 'main'))
     uses: NutrappDev/.github/.github/workflows/auto-tag.yml@main
     secrets: inherit
