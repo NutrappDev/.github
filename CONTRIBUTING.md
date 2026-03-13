@@ -39,7 +39,7 @@ develop
 | Regla | Detalle |
 |-------|---------|
 | Fuentes permitidas | Solo `release/qa-YYYY-MM-DD` |
-| Merge | **Rebase** |
+| Merge | **Merge commit** (sin squash, sin rebase) |
 | Proceso | Cherry-pick desde develop → rama `release/qa-YYYY-MM-DD` → PR a qa |
 | Commit directo | ❌ Nunca |
 
@@ -48,7 +48,7 @@ develop
 | Regla | Detalle |
 |-------|---------|
 | Fuentes permitidas | `release/prod-YYYY-MM-DD` o `hotfix/TICKET-descripcion` |
-| Merge | **Rebase** |
+| Merge | **Merge commit** (sin squash, sin rebase) |
 | Proceso | Cherry-pick desde qa → rama `release/prod-YYYY-MM-DD` → PR a main |
 | Aprobaciones | 2 requeridas |
 | Commit directo | ❌ Nunca |
@@ -169,7 +169,7 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 3. Cherry-pick en orden cronológico: `git cherry-pick <sha>`
 4. Resolver conflictos si los hay — verificar que no incluyas cambios de PRs que no deberían ir en este release
 5. Push y PR: `gh pr create --base qa --title "release: qa-YYYY-MM-DD"`
-6. 1 aprobación → merge con **"Rebase and merge"**
+6. 1 aprobación → merge con **"Create a merge commit"** — el merge commit actúa como marcador exacto del despliegue
 7. El tag `qa-YYYY-MM-DD` se crea automáticamente al mergear
 
 ---
@@ -181,7 +181,7 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 3. Cherry-pick desde qa en orden: `git cherry-pick <sha>`
 4. Resolver conflictos si los hay
 5. Push y PR: `gh pr create --base main --title "release: prod-YYYY-MM-DD"`
-6. **2 aprobaciones** → merge con **"Rebase and merge"**
+6. **2 aprobaciones** → merge con **"Create a merge commit"** — el merge commit actúa como marcador exacto del despliegue
 7. El tag `prod-YYYY-MM-DD` se crea automáticamente al mergear
 
 ---
@@ -191,7 +191,8 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 1. Crear rama desde main: `git checkout -b hotfix/TICKET-descripcion origin/main`
 2. Aplicar el fix
 3. PR a `main` — el ticket Jira es obligatorio, se requieren 2 aprobaciones
-4. **Backport obligatorio:** abrir también un PR a `develop` con el mismo fix (tipo `fix/`)
+4. Merge con **"Create a merge commit"** — tag `prod-YYYY-MM-DD` se crea automáticamente
+5. **Backport obligatorio:** abrir también un PR a `develop` con el mismo fix (tipo `fix/`) — merge Squash
 
 ---
 
