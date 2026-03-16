@@ -15,25 +15,19 @@
 # se disparan automáticamente vía los rulesets de la org — no requieren
 # ningún archivo en este repo.
 #
-# Este archivo maneja el auto-tag al hacer merge de un release o hotfix:
+# Este archivo maneja dos responsabilidades:
+#
+# 1. AUTO-TAG al mergear release o hotfix:
 #   → Crea tag qa-YYYY-MM-DD   cuando se mergea release/* → qa
 #   → Crea tag prod-YYYY-MM-DD cuando se mergea release/* → main
 #   → Crea tag prod-YYYY-MM-DD cuando se mergea hotfix/*  → main
 #
-# ───────────────────────────────────────────────────────────────────────────────
-# Para actualizar el dashboard al hacer deploy, agregar en tu workflow de deploy:
-#
-#   - name: Actualizar dashboard
-#     if: success()
-#     run: |
-#       gh api repos/NutrappDev/.github/dispatches \
-#         -f event_type=deployment-completed \
-#         -f "client_payload[repo]=${{ github.repository }}"
-#     env:
-#       GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+# 2. ACTUALIZACIÓN DEL DASHBOARD al hacer cualquier merge a develop/qa/main:
+#   → Dispara regeneración del dashboard centralizado en tiempo real
+#   → Requiere el secret ORG_READ_TOKEN configurado en la org
 # ═══════════════════════════════════════════════════════════════════════════════
 
-name: Auto Tag on Release
+name: PR Checks
 
 on:
   pull_request:
@@ -41,6 +35,7 @@ on:
     branches:
       - main
       - qa
+      - develop
 
 permissions:
   contents: write
@@ -53,3 +48,16 @@ jobs:
        (startsWith(github.head_ref, 'hotfix/') && github.base_ref == 'main'))
     uses: NutrappDev/.github/.github/workflows/auto-tag.yml@main
     secrets: inherit
+
+  update-dashboard:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger dashboard refresh
+        run: |
+          gh api repos/NutrappDev/.github/dispatches \
+            -f event_type=deployment-completed \
+            -f "client_payload[repo]=${{ github.repository }}" \
+            -f "client_payload[branch]=${{ github.base_ref }}"
+        env:
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}

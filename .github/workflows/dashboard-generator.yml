@@ -19,6 +19,8 @@ on:
         description: "Solo generar repos.json sin hacer commit (para pruebas)"
         type: boolean
         default: false
+  repository_dispatch:
+    types: [deployment-completed] # Disparado por pr-checks.yml de cada repo al hacer merge
 
 jobs:
   generate:
