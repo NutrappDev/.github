@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T21:33:58.222Z",
+  "generated_at": "2026-03-17T21:41:19.755Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -359,7 +359,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T19:53:31Z",
+      "last_push": "2026-03-17T21:40:54Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -381,7 +381,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 16,
           "recent_commits": [
             {
               "sha": "09ab906",
@@ -831,8 +831,22 @@
       "topics": [],
       "production": null,
       "production_history": [],
-      "qa": null,
-      "qa_history": [],
+      "qa": {
+        "version": "qa-2026-03-17",
+        "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
+        "date": "2026-03-17T13:15:47Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-17",
+        "body": "Release qa-2026-03-17\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-13",
+          "sha": "12c935c6bfab3dcbdb2d3befb65848eb15063989",
+          "date": "2026-03-13T15:40:21Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-13",
+          "body": "Release qa-2026-03-13\n"
+        }
+      ],
       "pending": {
         "to_qa": {
           "count": 0,
@@ -942,7 +956,7 @@
       "ci": null,
       "_errors": {
         "production": null,
-        "qa": "GET /repos/NutrappDev/nutrabiotics-empresas/git/ref/tags/qa-2026-03-17 → 502 Bad Gateway",
+        "qa": null,
         "pending_to_qa": null,
         "pending_to_production": null,
         "ci": null
@@ -2168,7 +2182,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T21:26:19Z",
+      "last_push": "2026-03-17T21:39:23Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
