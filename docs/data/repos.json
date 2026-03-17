@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T21:41:19.755Z",
+  "generated_at": "2026-03-17T22:19:28.694Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -71,7 +71,7 @@
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "Detenido",
+      "status": "Revisión QA",
       "assignee": "Kevin Aguilera"
     },
     "PMO-2221": {
@@ -2182,7 +2182,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T21:39:23Z",
+      "last_push": "2026-03-17T22:19:06Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2246,15 +2246,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 343,
+          "count": 344,
           "recent_commits": [
-            {
-              "sha": "829b883",
-              "message": "fix(env): not using aws region",
-              "date": "2025-09-18T16:34:59Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "f1d5832",
               "message": "fix(build): serverless syntax",
@@ -2316,6 +2309,13 @@
               "message": "fix(notifications): smtp variables in serverless (#7)",
               "date": "2025-10-02T21:19:39Z",
               "author": "Mario Eraso",
+              "tickets": []
+            },
+            {
+              "sha": "fa02a75",
+              "message": "doc: test",
+              "date": "2025-10-02T21:47:10Z",
+              "author": "Jorge Garay",
               "tickets": []
             }
           ]
