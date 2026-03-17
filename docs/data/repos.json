@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T17:14:01.526Z",
+  "generated_at": "2026-03-17T21:33:58.222Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -36,7 +36,7 @@
     },
     "SUP-13": {
       "summary": "Construcción de flujo para ordenes de alivia mexico y agregar banderas a las órdenes y usuarios",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SSO-161": {
@@ -206,7 +206,7 @@
     },
     "NCOL-5": {
       "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Steven Leon"
     },
     "NCOL-4": {
@@ -359,7 +359,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T16:18:11Z",
+      "last_push": "2026-03-17T19:53:31Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -831,22 +831,8 @@
       "topics": [],
       "production": null,
       "production_history": [],
-      "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
-        "date": "2026-03-17T13:15:47Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-03-13",
-          "sha": "12c935c6bfab3dcbdb2d3befb65848eb15063989",
-          "date": "2026-03-13T15:40:21Z",
-          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-13",
-          "body": "Release qa-2026-03-13\n"
-        }
-      ],
+      "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 0,
@@ -956,7 +942,7 @@
       "ci": null,
       "_errors": {
         "production": null,
-        "qa": null,
+        "qa": "GET /repos/NutrappDev/nutrabiotics-empresas/git/ref/tags/qa-2026-03-17 → 502 Bad Gateway",
         "pending_to_qa": null,
         "pending_to_production": null,
         "ci": null
@@ -1908,7 +1894,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T13:32:13Z",
+      "last_push": "2026-03-17T21:33:40Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -1941,13 +1927,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-10",
-        "sha": "5b77fabacb6a21f00ea3a9cf880a59599be39a9b",
-        "date": "2026-03-10T21:57:48Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
-        "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
+        "version": "qa-2026-03-17",
+        "sha": "2476952284e1f9c23971b0ebcc0c56945b6c5052",
+        "date": "2026-03-17T21:33:39Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-17",
+        "body": "Release qa-2026-03-17\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-10",
+          "sha": "5b77fabacb6a21f00ea3a9cf880a59599be39a9b",
+          "date": "2026-03-10T21:57:48Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
+          "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
+        },
         {
           "version": "qa-2026-03-03",
           "sha": "8eaaf8bf89d741ac3a6aec31e67447757f3e16c8",
@@ -2047,7 +2040,7 @@
           ]
         },
         "to_production": {
-          "count": 57,
+          "count": 59,
           "recent_commits": [
             {
               "sha": "b3bb448",
@@ -2175,7 +2168,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T17:13:37Z",
+      "last_push": "2026-03-17T21:26:19Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
