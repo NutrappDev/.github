@@ -61,8 +61,8 @@ export function repoStatus(repo) {
 
 const STATUS_LABELS = {
   green:     'Al día',
-  pending:   'Actualización pendiente',
-  migrating: 'En migración',
+  pending:   'Con pendientes',
+  migrating: 'Sin releases',
   gray:      'Inactivo',
 };
 

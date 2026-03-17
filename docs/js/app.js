@@ -1,29 +1,31 @@
 /**
- * app.js — punto de entrada del dashboard.
- * Carga repos.json y orquesta los componentes.
+ * app.js — orquestador principal del dashboard.
+ * Carga datos, gestiona navegación por tabs y delega el render a cada vista.
  */
 
-import { renderHeader }    from './components/header.js';
-import { renderStats }     from './components/stats.js';
-import { renderFilters }   from './components/filters.js';
-import { repoCardHtml }    from './components/card.js';
+import { renderHeader }   from './components/header.js';
+import { renderNav }      from './components/nav.js';
 import { initDetailPanel, openDetailPanel, closeDetailPanel } from './components/detail.js';
-import { repoStatus, repoFase, repoTeam, shortName, STATUS_WEIGHT } from './utils.js';
+import { renderResumen }  from './views/resumen.js';
+import { renderRepos }    from './views/repos.js';
+import { renderEquipo }   from './views/equipo.js';
+import { renderDeployments, bindDeploymentEvents } from './views/deployments.js';
+import { repoStatus, STATUS_WEIGHT, shortName } from './utils.js';
 
 // ─── DOM roots ────────────────────────────────────────────────────────────────
-const headerRoot  = document.getElementById('header-root');
-const statsRoot   = document.getElementById('stats-root');
-const filtersRoot = document.getElementById('filters-root');
-const gridRoot    = document.getElementById('grid-root');
+const headerRoot = document.getElementById('header-root');
+const navRoot    = document.getElementById('nav-root');
+const mainRoot   = document.getElementById('main-root');
 
 // ─── Estado ───────────────────────────────────────────────────────────────────
 let allRepos    = [];
 let jiraTickets = {};
-let filtersCtrl = null;
+let activeTab   = 'resumen';
+let navCtrl     = null;
 
 // ─── Carga de datos ───────────────────────────────────────────────────────────
 async function loadData() {
-  showSkeletons();
+  mainRoot.innerHTML = skeletonsHtml();
 
   let data;
   try {
@@ -31,18 +33,17 @@ async function loadData() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     data = await res.json();
   } catch (err) {
-    showError(err.message);
+    mainRoot.innerHTML = errorHtml(err.message);
     return;
   }
 
   if (!data.repos?.length) {
-    showEmpty('El dashboard aún no tiene datos. El workflow se ejecuta semanalmente.');
+    mainRoot.innerHTML = emptyHtml();
     return;
   }
 
   jiraTickets = data.jira_tickets ?? {};
 
-  // Ordenar por urgencia (pending → migrating → green → gray) y luego por actividad reciente
   allRepos = data.repos.slice().sort((a, b) => {
     const wa = STATUS_WEIGHT[repoStatus(a)] ?? 9;
     const wb = STATUS_WEIGHT[repoStatus(b)] ?? 9;
@@ -54,33 +55,92 @@ async function loadData() {
 
   renderHeader(headerRoot, {
     generatedAt: data.generated_at,
-    totalRepos: data.total_repos,
+    totalRepos:  data.total_repos,
+    repos:       allRepos,
   });
 
-  renderStats(statsRoot, allRepos);
+  // Leer tab inicial desde hash (e.g. #tab-repos)
+  const hashTab  = location.hash.startsWith('#tab-') ? location.hash.slice(5) : null;
+  const repoSlug = (!location.hash.startsWith('#tab-') && location.hash.length > 1)
+    ? location.hash.slice(1)
+    : null;
 
-  filtersCtrl = renderFilters(filtersRoot, handleFilterChange);
+  activeTab = ['resumen','repos','equipo','deployments'].includes(hashTab)
+    ? hashTab
+    : 'resumen';
 
+  navCtrl = renderNav(navRoot, activeTab, handleTabChange);
   initDetailPanel();
-  gridRoot.addEventListener('click', e => {
-    const card = e.target.closest('.repo-card');
-    if (!card || e.target.closest('a')) return;
-    const repo = allRepos.find(r => r.full_name === card.dataset.fullname);
-    if (repo) openDetailPanel(repo, jiraTickets);
-  });
 
-  renderGrid(allRepos);
-  filtersCtrl.setCount(allRepos.length, allRepos.length);
+  renderView();
 
-  // Hash routing: abrir panel si la URL contiene #nombre-del-repo
-  const initialSlug = location.hash.slice(1);
-  if (initialSlug) {
-    const repo = allRepos.find(r => r.full_name.split('/').pop() === initialSlug);
+  // Hash routing: abrir panel de detalle si hay slug de repo
+  if (repoSlug) {
+    const repo = allRepos.find(r => shortName(r.full_name) === repoSlug);
     if (repo) openDetailPanel(repo, jiraTickets);
   }
 }
 
-// ─── Hash routing ──────────────────────────────────────────────────────────────
+// ─── Tab routing ──────────────────────────────────────────────────────────────
+function handleTabChange(tab) {
+  activeTab = tab;
+  navCtrl?.setActive(tab);
+  renderView();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderView() {
+  switch (activeTab) {
+    case 'resumen':
+      mainRoot.innerHTML = renderResumen(allRepos);
+      bindResumenEvents();
+      break;
+
+    case 'repos':
+      renderRepos(mainRoot, allRepos, jiraTickets, (repo, tickets) => {
+        openDetailPanel(repo, tickets);
+      });
+      break;
+
+    case 'equipo':
+      mainRoot.innerHTML = renderEquipo(allRepos);
+      break;
+
+    case 'deployments':
+      mainRoot.innerHTML = renderDeployments(allRepos);
+      bindDeploymentEvents(mainRoot, allRepos);
+      bindRepoOpenEvents(mainRoot);
+      break;
+  }
+}
+
+function bindResumenEvents() {
+  mainRoot.querySelectorAll('[data-repo-open]').forEach(el => {
+    el.addEventListener('click', () => {
+      const name = el.dataset.repoOpen;
+      const repo = allRepos.find(r => shortName(r.full_name) === name);
+      if (repo) openDetailPanel(repo, jiraTickets);
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') el.click();
+    });
+  });
+}
+
+function bindRepoOpenEvents(root) {
+  root.querySelectorAll('[data-repo-open]').forEach(el => {
+    el.addEventListener('click', () => {
+      const name = el.dataset.repoOpen;
+      const repo = allRepos.find(r => shortName(r.full_name) === name);
+      if (repo) openDetailPanel(repo, jiraTickets);
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') el.click();
+    });
+  });
+}
+
+// ─── Hash / popstate ──────────────────────────────────────────────────────────
 window.addEventListener('popstate', e => {
   if (e.state?.repo) {
     const repo = allRepos.find(r => r.full_name === e.state.repo);
@@ -90,65 +150,29 @@ window.addEventListener('popstate', e => {
   }
 });
 
-// ─── Filtrado ─────────────────────────────────────────────────────────────────
-function handleFilterChange({ search, status, fase, team }) {
-  const query = search.trim().toLowerCase();
-
-  const visible = allRepos.filter(repo => {
-    const name = shortName(repo.full_name).toLowerCase();
-    const desc = (repo.description ?? '').toLowerCase();
-
-    const matchesSearch = !query || name.includes(query) || desc.includes(query);
-    const matchesStatus = status === 'all' || repoStatus(repo) === status;
-    const matchesFase   = !fase  || fase  === 'all' || repoFase(repo)  === fase;
-    const matchesTeam   = !team  || team  === 'all' || repoTeam(repo)  === team;
-
-    return matchesSearch && matchesStatus && matchesFase && matchesTeam;
-  });
-
-  renderGrid(visible);
-  filtersCtrl?.setCount(visible.length, allRepos.length);
-}
-
-// ─── Render del grid ──────────────────────────────────────────────────────────
-function renderGrid(repos) {
-  if (!repos.length) {
-    gridRoot.innerHTML = `
-      <div class="empty-state">
-        <div class="empty-state__icon">🔍</div>
-        <div class="empty-state__title">Sin resultados</div>
-        <div>Intenta con otro filtro o término de búsqueda.</div>
-      </div>
-    `;
-    return;
-  }
-
-  gridRoot.innerHTML = repos.map(repoCardHtml).join('');
-}
-
-// ─── Estados de UI ────────────────────────────────────────────────────────────
-function showSkeletons() {
-  gridRoot.innerHTML = Array.from({ length: 9 }, () =>
+// ─── UI states ────────────────────────────────────────────────────────────────
+function skeletonsHtml() {
+  return Array.from({ length: 9 }, () =>
     '<div class="skeleton-card"><div class="skeleton" style="height:100%;border-radius:8px"></div></div>'
   ).join('');
 }
 
-function showEmpty(message) {
-  gridRoot.innerHTML = `
+function emptyHtml() {
+  return `
     <div class="empty-state">
       <div class="empty-state__icon">📭</div>
       <div class="empty-state__title">Sin datos todavía</div>
-      <div>${message}</div>
+      <div>El workflow se ejecuta automáticamente con cada despliegue.</div>
     </div>
   `;
 }
 
-function showError(message) {
-  gridRoot.innerHTML = `
+function errorHtml(msg) {
+  return `
     <div class="empty-state">
       <div class="empty-state__icon">⚠️</div>
       <div class="empty-state__title">No se pudo cargar el dashboard</div>
-      <div>${message}</div>
+      <div>${msg}</div>
     </div>
   `;
 }
