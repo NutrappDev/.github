@@ -186,6 +186,24 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 
 ---
 
+## Criterios de urgencia para hotfix
+
+Un hotfix solo está justificado si se cumple **al menos uno** de los siguientes criterios objetivos:
+
+| # | Criterio | Ejemplos |
+|---|----------|---------|
+| 1 | **Servicio caído** — funcionalidad crítica completamente inoperativa en producción | Login roto, API principal sin respuesta, app no carga |
+| 2 | **Corrupción o pérdida de datos** — datos de usuarios o negocio en riesgo | Escrituras duplicadas, registros eliminados incorrectamente |
+| 3 | **Vulnerabilidad de seguridad activa** — brecha explotable en producción | Credenciales expuestas, endpoint sin autenticación, XSS explotado |
+| 4 | **Transacciones financieras fallando** — pagos, facturación o cobros no funcionan | Pasarela de pago caída, errores en checkout |
+| 5 | **Incumplimiento legal o regulatorio** — riesgo jurídico inmediato | Datos personales expuestos (GDPR/Habeas Data), términos contractuales incumplidos |
+
+**Requiere autorización previa** del Supervisor de Desarrollo antes de abrir la rama.
+
+Bugs menores, mejoras o problemas de UX que no cumplan ninguno de estos criterios van al flujo normal: `feat/` o `fix/` → `develop` → release a qa → release a main.
+
+---
+
 ## Proceso de hotfix
 
 1. Crear rama desde main: `git checkout -b hotfix/TICKET-descripcion origin/main`
