@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T17:06:44.653Z",
+  "generated_at": "2026-03-17T17:14:01.526Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -2175,7 +2175,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T17:06:12Z",
+      "last_push": "2026-03-17T17:13:37Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2239,15 +2239,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 342,
+          "count": 343,
           "recent_commits": [
-            {
-              "sha": "b0b7f3d",
-              "message": "fix(prescriptions): remove dependent task that doesnt exists",
-              "date": "2025-09-18T16:12:42Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "829b883",
               "message": "fix(env): not using aws region",
@@ -2308,6 +2301,13 @@
               "sha": "41f9f05",
               "message": "fix(notifications): added variable in serverless and logs in notifications",
               "date": "2025-10-02T19:57:54Z",
+              "author": "Mario Eraso",
+              "tickets": []
+            },
+            {
+              "sha": "41fa60f",
+              "message": "fix(notifications): smtp variables in serverless (#7)",
+              "date": "2025-10-02T21:19:39Z",
               "author": "Mario Eraso",
               "tickets": []
             }
