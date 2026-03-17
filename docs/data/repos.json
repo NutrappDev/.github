@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T22:19:28.694Z",
+  "generated_at": "2026-03-17T23:12:38.302Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -105,7 +105,7 @@
       "assignee": "Steven Leon"
     },
     "NCOL-572": {
-      "summary": "Bitácora de despliegues a PROD - Sprints nueva versión Nutrabiotics Colombia",
+      "summary": "Marzo 2026 - Bitácora de despliegues a PROD - Nutrabiotics Colombia",
       "status": "En proceso",
       "assignee": "Carlos Ali Parra"
     },
@@ -206,7 +206,7 @@
     },
     "NCOL-5": {
       "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Aprobado por QA",
+      "status": "Pruebas de Regresión",
       "assignee": "Steven Leon"
     },
     "NCOL-4": {
@@ -593,7 +593,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T16:16:51Z",
+      "last_push": "2026-03-17T22:20:56Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2182,7 +2182,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T22:19:06Z",
+      "last_push": "2026-03-17T23:12:18Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2246,15 +2246,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 344,
+          "count": 345,
           "recent_commits": [
-            {
-              "sha": "f1d5832",
-              "message": "fix(build): serverless syntax",
-              "date": "2025-09-18T19:21:31Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "46af13e",
               "message": "debug(prescriptions): build error",
@@ -2316,6 +2309,13 @@
               "message": "doc: test",
               "date": "2025-10-02T21:47:10Z",
               "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "84a2f10",
+              "message": "fix(notifations): added smtp host",
+              "date": "2025-10-02T22:10:17Z",
+              "author": "Mario Eraso",
               "tickets": []
             }
           ]
