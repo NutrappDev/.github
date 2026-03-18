@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-18T14:03:58.909Z",
+  "generated_at": "2026-03-18T15:39:49.399Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
-  "total_repos": 28,
+  "total_repos": 27,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -1047,33 +1047,6 @@
         "updated_at": "2026-02-28T20:31:44Z",
         "name": "Deploy n8n Workflows"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "test-jira",
-      "full_name": "NutrappDev/test-jira",
-      "description": "Solo para pruebas",
-      "url": "https://github.com/NutrappDev/test-jira",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-16T17:15:24Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -2182,7 +2155,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-18T14:03:32Z",
+      "last_push": "2026-03-18T15:39:35Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2208,13 +2181,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-02-24",
-        "sha": "c9ae835452f3d6693f08883193684ab18976b95b",
-        "date": "2026-02-24T15:00:45Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-24",
-        "body": "Release qa-2026-02-24\n\nFeatures (2):\nPR #193 by Isabel Gomez Balvin - New PATCH /products/stock endpoint with batch update support and transaction handling [ALCO-1294]\nPR #195 by Isabel Gomez Balvin - Stock reservation system in products+orders to prevent race conditions in simultaneous purchases [ALCO-1293]\n\nFixes (1):\nPR #227 by Isabel Gomez Balvin - Added missing PRODUCTS_SERVICE_URL env var to orders serverless config fixing order creation [ALPE-218]\n\n---\nNOTA DE VALIDACION: Se detectaron commits pendientes anteriores que tocan los mismos archivos.\nLos conflictos relevantes ya fueron incluidos en el release de produccion del 2026-02-10.\nSe procede con documentacion de la advertencia segun decision del equipo.\n"
+        "version": "qa-2026-03-18",
+        "sha": "f213f562be04f6a5ca9296a494aa50b5ea38a5f1",
+        "date": "2026-03-18T15:39:34Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-18",
+        "body": "Release qa-2026-03-18\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-02-24",
+          "sha": "c9ae835452f3d6693f08883193684ab18976b95b",
+          "date": "2026-02-24T15:00:45Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-24",
+          "body": "Release qa-2026-02-24\n\nFeatures (2):\nPR #193 by Isabel Gomez Balvin - New PATCH /products/stock endpoint with batch update support and transaction handling [ALCO-1294]\nPR #195 by Isabel Gomez Balvin - Stock reservation system in products+orders to prevent race conditions in simultaneous purchases [ALCO-1293]\n\nFixes (1):\nPR #227 by Isabel Gomez Balvin - Added missing PRODUCTS_SERVICE_URL env var to orders serverless config fixing order creation [ALPE-218]\n\n---\nNOTA DE VALIDACION: Se detectaron commits pendientes anteriores que tocan los mismos archivos.\nLos conflictos relevantes ya fueron incluidos en el release de produccion del 2026-02-10.\nSe procede con documentacion de la advertencia segun decision del equipo.\n"
+        },
         {
           "version": "qa-2026-02-23",
           "sha": "3f5c6566066271dab4e647e4b2f871ef5a5a5e79",
@@ -2235,26 +2215,12 @@
           "date": "2026-01-22T20:47:15Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-22",
           "body": "Release qa-2026-01-22\n\nFeatures (1):\nPR #207 by Fabián Romero - Servicio PurchaseTemplatePdfService para PDFs hormonales con división automática [ALCO-1331]\n\nFixes (3):\nPR #203 by Fabián Romero - Generación de PDFs en AWS Lambda usando puppeteer-core + @sparticuz/chromium [ALCO-1311]\nPR #206 by Fabián Romero - PDF hormonas v2 con detección automática de entorno AWS vs local [ALCO-1311]\nPR #212 by Fabián Romero - Ajuste de ruta de ejecución del binario para puppeteer-core [ALCO-1311]\n"
-        },
-        {
-          "version": "qa-2026-01-20",
-          "sha": "dbd0bc31b1d6296d8b1552241c11560e1d0cb310",
-          "date": "2026-01-20T21:23:00Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-20",
-          "body": "Release qa-2026-01-20\n\nFeatures (10):\nPR #193 by Isabel Gomez Balvin - Endpoint PATCH /products/stock para actualización batch de inventario con transacciones [ALCO-1294]\nPR #194 by Fabián Romero - Parámetros sortBy y sortOrder en getAllOrders para paginación ordenada [SUP-200]\nPR #198 by Jorge Garay - Nuevo microservicio payments con Openpay, Culqi, PayPal y Wompi integrados [ALCO-1101]\nPR #202 by Isabel Gomez Balvin - Bulk lookup de usuarios para enriquecer prescripciones con datos de doctores [ALCO-1316]\nPR #208 by Fabián Romero - Servicio PurchaseTemplatePdfService centralizado con Puppeteer para PDFs hormonales [ALCO-1331]\nPR #209 by Fabián Romero - Ajustes en generación de PDF para templates de compra hormonales [ALCO-1331]\nPR #210 by Fabián Romero - Comportamiento diferenciado por entorno en PDFs: síncrono en Lambda, async local [ALCO-1331]\nPR #211 by Fabián Romero - Gestión completa de templates médicos con filtros, validaciones y trazabilidad [ALCO-1305]\nPR #191 by Isabel Gomez Balvin - Endpoint bulk para verificar múltiples usuarios por email o documento [SSO-166]\nPR #205 by Isabel Gomez Balvin - Soporte para binary media types en API Gateway para respuestas PDF [ALCO-1298]\n\nFixes (7):\nPR #187 by Isabel Gomez Balvin - Eliminación en cascada de entidades relacionadas antes de borrar categorías [SUP-208]\nPR #189 by Isabel Gomez Balvin - Reemplazo del servicio de notificaciones por nodemailer para emails de prescripciones\nPR #192 by Isabel Gomez Balvin - Corrección de inyección de servicio de roles para filtrado de productos [NCOL-503]\nPR #200 by Jorge Garay - Ajuste de variables de entorno para microservicio de pagos [ALCO-1101]\nPR #201 by Jorge Garay - Corrección de variable DATABASE_URL en serverless de payments [ALCO-1101]\nPR #204 by Isabel Gomez Balvin - Mejoras en generación de PDF con headers adecuados y plantilla hormonal [ALCO-1298]\nPR #184 by Isabel Gomez Balvin - Validación mejorada de usuarios existentes en DB y Keycloak [ALCO-1218]\n\nOther (3):\nPR #180 by Jorge Garay - Documentación de validaciones de commits y workflow de desarrollo [ALCO-1100]\nPR #167 by Jorge Garay - Limpieza microservicio products: 34 endpoints eliminados, código muerto removido [ALCO-1201]\nPR #190 by Jorge Garay - Limpieza microservicio SSO: 43 rutas eliminadas, Firebase removido, logger NestJS [ALCO-1202]\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 346,
+          "count": 347,
           "recent_commits": [
-            {
-              "sha": "d9eb868",
-              "message": "fix(prescriptions): removing external dependencies",
-              "date": "2025-09-19T02:18:42Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "d63295e",
               "message": "fix(prescriptions): removing external dependencies",
@@ -2317,11 +2283,18 @@
               "date": "2025-10-06T22:53:08Z",
               "author": "Mario Eraso",
               "tickets": []
+            },
+            {
+              "sha": "7b53f3e",
+              "message": "fix(orders): added aws_region variable in serverless (#10)",
+              "date": "2025-10-07T14:07:30Z",
+              "author": "Mario Eraso",
+              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 15,
+          "count": 20,
           "recent_commits": [
             {
               "sha": "16b0d7e",
