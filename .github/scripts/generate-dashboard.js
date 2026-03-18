@@ -30,8 +30,12 @@ const QA_TAG_PATTERN = /^qa-\d{4}-\d{2}-\d{2}$/;
 const PENDING_COMMITS_LIMIT = 25; // commits recientes a incluir en "pending"
 
 // Autores y mensajes que son ruido automatizado (bots, commits de CI, NX)
-const BOT_AUTHOR_RE = /\[bot\]|github-actions/i;
-const NOISE_MSG_RE  = /^(chore:\s*update affected\.txt|\[skip[\s-]ci\])/i;
+const BOT_AUTHOR_RE  = /\[bot\]|github-actions/i;
+const NOISE_MSG_RE   = /^(chore:\s*update affected\.txt|\[skip[\s-]ci\])/i;
+// Merge commits de sincronización de rama, no de feature PRs
+const SYNC_MERGE_RE  = /^Merge branch '|^Merge remote-tracking branch '/i;
+// Días a mirar hacia atrás cuando no hay tag de referencia
+const FALLBACK_DAYS  = 90;
 
 if (!TOKEN) {
   console.error('Error: GH_TOKEN o GITHUB_TOKEN requerido');
@@ -230,34 +234,71 @@ async function getTagHistory(owner, repo, allTags, pattern, limit = 5) {
 }
 
 /**
- * Compara dos branches y devuelve cuántos commits tiene `head` que no tiene `base`,
- * más un resumen de los más recientes.
+ * Extrae número de PR de un mensaje de commit.
+ * Soporta squash merge "(#NNN)" y merge commit "Merge pull request #NNN".
  */
-async function compareBranches(owner, repo, base, head) {
-  const data = await ghFetch(`/repos/${owner}/${repo}/compare/${base}...${head}`);
-  if (!data) return null;
+function extractPrNumber(msg) {
+  const sq = msg.match(/\(#(\d+)\)\s*$/);
+  if (sq) return sq[1];
+  const mp = msg.match(/^Merge pull request #(\d+)\b/);
+  if (mp) return mp[1];
+  return null;
+}
 
-  const recentCommits = (data.commits ?? [])
-    .filter(c => {
-      const author = c.commit.author?.name ?? c.author?.login ?? '';
-      const msg    = c.commit.message.split('\n')[0];
-      return !BOT_AUTHOR_RE.test(author) && !NOISE_MSG_RE.test(msg);
-    })
-    .slice(0, PENDING_COMMITS_LIMIT)
-    .map(c => {
-      const message = c.commit.message.split('\n')[0];
-      const tickets = extractJiraTickets(message);
-      return {
-        sha: c.sha.slice(0, 7),
-        message,
-        date: c.commit.committer?.date ?? c.commit.author?.date ?? null,
-        author: c.commit.author?.name ?? c.author?.login ?? null,
-        tickets: tickets.map(t => ({ id: t, url: jiraUrl(t) })),
-      };
-    });
+/**
+ * Devuelve commits pendientes de headBranch respecto a targetBranch.
+ *
+ * Estrategia: usar el endpoint /commits?since=sinceDate para ambas ramas,
+ * luego deduplicar por PR number. Esto evita el ruido de SHAs históricos
+ * con squash/rebase y los commits que ya fueron cherry-pickeados al destino.
+ *
+ * @param {string|null} sinceDate  ISO date del último tag de referencia.
+ *                                 Si es null usa FALLBACK_DAYS hacia atrás.
+ */
+async function getPendingCommits(owner, repo, headBranch, targetBranch, sinceDate) {
+  const since = sinceDate
+    ? encodeURIComponent(sinceDate)
+    : encodeURIComponent(new Date(Date.now() - FALLBACK_DAYS * 86_400_000).toISOString());
+
+  const [headCommits, targetCommits] = await Promise.all([
+    ghFetch(`/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(headBranch)}&per_page=100&since=${since}`),
+    ghFetch(`/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(targetBranch)}&per_page=100&since=${since}`),
+  ]);
+
+  // PR numbers ya desplegados en la rama destino (cherry-picks)
+  const deployed = new Set();
+  for (const c of targetCommits ?? []) {
+    const n = extractPrNumber(c.commit.message.split('\n')[0]);
+    if (n) deployed.add(n);
+  }
+
+  // Filtrar noise, syncs y commits ya desplegados
+  const filtered = (headCommits ?? []).filter(c => {
+    const msg    = c.commit.message.split('\n')[0];
+    const author = c.commit.author?.name ?? c.author?.login ?? '';
+    if (BOT_AUTHOR_RE.test(author))  return false;
+    if (NOISE_MSG_RE.test(msg))      return false;
+    if (SYNC_MERGE_RE.test(msg))     return false;
+    const n = extractPrNumber(msg);
+    if (n && deployed.has(n))        return false;
+    return true;
+  });
+
+  // El endpoint /commits devuelve del más reciente al más antiguo
+  const recentCommits = filtered.slice(0, PENDING_COMMITS_LIMIT).map(c => {
+    const message = c.commit.message.split('\n')[0];
+    const tickets = extractJiraTickets(message);
+    return {
+      sha:     c.sha.slice(0, 7),
+      message,
+      date:    c.commit.committer?.date ?? c.commit.author?.date ?? null,
+      author:  c.commit.author?.name ?? c.author?.login ?? null,
+      tickets: tickets.map(t => ({ id: t, url: jiraUrl(t) })),
+    };
+  });
 
   return {
-    count: data.ahead_by,
+    count:          filtered.length,
     recent_commits: recentCommits,
   };
 }
@@ -277,9 +318,8 @@ async function processRepo(repo) {
     console.warn(`  ⚠ ${name}: error fetching tags: ${err.message}`);
   }
 
-  // Resolver historiales de tags primero para usar sus SHAs como base de comparación.
-  // Esto evita el ruido de squash/rebase histórico: el tag SHA es "lo último desplegado"
-  // y todo lo que venga después es genuinamente pendiente.
+  // Resolver historiales de tags: la fecha del tag es el punto de corte "desde cuándo mirar".
+  // Solo se procesan commits POSTERIORES al último tag → evita deuda histórica pre-workflow.
   const [prodHistory, qaHistory] = await Promise.all([
     getTagHistory(owner, name, allTags, PROD_TAG_PATTERN, 5).catch(() => []),
     getTagHistory(owner, name, allTags, QA_TAG_PATTERN,   5).catch(() => []),
@@ -288,16 +328,16 @@ async function processRepo(repo) {
   const prodHist = prodHistory ?? [];
   const qaHist   = qaHistory   ?? [];
 
-  // Base para la comparación: SHA del último tag si existe, rama si no.
-  // Con squash/rebase previos, comparar desde el HEAD de la rama infla el conteo
-  // con commits ya desplegados cuyos SHAs originales no están en la rama destino.
-  const qaBase   = qaHist[0]?.sha   ?? 'qa';
-  const prodBase = prodHist[0]?.sha ?? 'main';
+  // Fecha del último tag (null → getPendingCommits usará FALLBACK_DAYS)
+  const qaTagDate   = qaHist[0]?.date   ?? null;
+  const prodTagDate = prodHist[0]?.date ?? null;
 
   const [pendingToQa, pendingToProd, ciStatus] =
     await Promise.allSettled([
-      compareBranches(owner, name, qaBase,   'develop'),
-      compareBranches(owner, name, prodBase, 'qa'),
+      // develop→qa: commits en develop desde el último tag QA que aún no están en QA
+      getPendingCommits(owner, name, 'develop', 'qa',   qaTagDate),
+      // qa→main: commits en qa desde el último tag prod que aún no están en main
+      getPendingCommits(owner, name, 'qa',   'main', prodTagDate),
       getCiStatus(owner, name, repo.default_branch),
     ]);
 
