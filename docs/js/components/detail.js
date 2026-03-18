@@ -1,12 +1,12 @@
 /**
  * Panel lateral de detalle de repositorio.
- * Muestra PRs del último release (prod y QA), commits pendientes e historial de tags.
+ * Estructura: CI → Ruta a producción (pipeline) → Pendientes (con antigüedad) → Releases (colapsados)
  */
 
 import { parseTagBody, formatDate, jiraUrl, escHtml, shortName } from '../utils.js';
 
 let panelEl     = null;
-let jiraTickets = {}; // mapa { "NCOL-586": { summary, status, assignee } }
+let jiraTickets = {};
 
 // ─── Init ──────────────────────────────────────────────────────────────────────
 
@@ -75,7 +75,7 @@ export function closeDetailPanel() {
   }
 }
 
-// ─── Render ────────────────────────────────────────────────────────────────────
+// ─── Render principal ─────────────────────────────────────────────────────────
 
 function renderBody(repo) {
   const parts = [];
@@ -88,26 +88,26 @@ function renderBody(repo) {
     parts.push(ciSection(repo.ci));
   }
 
-  parts.push(releaseSection('Producción', repo.production, 'prod', repo.url, repo.production_history ?? []));
-  parts.push(releaseSection('QA',         repo.qa,         'qa',   repo.url, repo.qa_history         ?? []));
-  parts.push(pendingSection(repo));
+  // Ruta a producción — siempre presente, es la sección principal
+  parts.push(routeSection(repo));
+
+  // Releases anteriores — colapsados (información histórica)
+  parts.push(releaseSectionCollapsed('Producción', repo.production, 'prod', repo.url, repo.production_history ?? []));
+  parts.push(releaseSectionCollapsed('QA',         repo.qa,         'qa',   repo.url, repo.qa_history         ?? []));
 
   return parts.join('');
 }
+
+// ─── CI ───────────────────────────────────────────────────────────────────────
 
 function ciSection(ci) {
   const running = ci.status !== 'completed';
   const cls     = running ? 'running' : (ci.conclusion ?? 'unknown');
   const LABELS  = {
-    success:         'CI pasando',
-    failure:         'CI fallando',
-    timed_out:       'CI timeout',
-    action_required: 'CI requiere acción',
-    running:         'CI en progreso',
-    cancelled:       'CI cancelado',
-    skipped:         'CI omitido',
-    neutral:         'CI neutral',
-    unknown:         'CI desconocido',
+    success: 'CI pasando', failure: 'CI fallando', timed_out: 'CI timeout',
+    action_required: 'CI requiere acción', running: 'CI en progreso',
+    cancelled: 'CI cancelado', skipped: 'CI omitido',
+    neutral: 'CI neutral', unknown: 'CI desconocido',
   };
   const label = LABELS[cls] ?? `CI: ${cls}`;
   const date  = ci.updated_at ? formatDate(ci.updated_at, { relative: true }) : null;
@@ -116,38 +116,209 @@ function ciSection(ci) {
     <div class="detail-ci detail-ci--${cls}">
       <span class="detail-ci__dot">●</span>
       <a class="detail-ci__label" href="${escHtml(ci.url)}" target="_blank" rel="noopener">${escHtml(label)}</a>
-      ${date   ? `<span class="detail-ci__date">${date}</span>`        : ''}
+      ${date    ? `<span class="detail-ci__date">${date}</span>`         : ''}
       ${ci.name ? `<span class="detail-ci__name">${escHtml(ci.name)}</span>` : ''}
     </div>
   `;
 }
 
-function releaseSection(label, release, type, repoUrl, history = []) {
-  const heading = `<div class="detail-heading detail-heading--${type}">${label}</div>`;
+// ─── Ruta a producción ────────────────────────────────────────────────────────
 
-  if (!release) {
-    return `<div class="detail-section">${heading}<p class="detail-empty">Sin release</p></div>`;
-  }
+function routeSection(repo) {
+  const toQa   = repo.pending?.to_qa;
+  const toProd = repo.pending?.to_production;
 
-  const version  = type === 'qa' ? release.version.replace(/^qa-/, '') : release.version;
-  const date     = formatDate(release.date);
-  const parsed   = parseTagBody(release.body);
+  const pipeline = pipelineHtml(repo, toQa, toProd);
+  const pending  = pendingBlocks(repo, toQa, toProd);
+  const nextStep = nextStepHtml(toQa, toProd);
 
-  const meta = `
-    <div class="detail-release-meta">
-      <span class="detail-release-tag">${escHtml(version)}</span>
-      ${date ? `<span class="detail-release-date">${date}</span>` : ''}
-      <a class="detail-release-link" href="${escHtml(release.url)}" target="_blank" rel="noopener">Ver tag ↗</a>
+  return `
+    <div class="detail-route">
+      <div class="detail-route__title">Ruta a producción</div>
+      ${pipeline}
+      ${pending}
+      ${nextStep}
     </div>
   `;
+}
 
-  const content = parsed
-    ? prGroups(parsed, repoUrl)
-    : `<p class="detail-empty">Sin detalle de PRs — el tag fue creado con mensaje simple, no con el flujo de release automático.</p>`;
+function pipelineHtml(repo, toQa, toProd) {
+  // Nodo develop
+  const devActive   = repo.last_push && daysSince(repo.last_push) < 60;
+  const devDate     = repo.last_push ? formatDate(repo.last_push, { relative: true }) : null;
+  const devStatus   = devActive ? 'ok' : 'idle';
+  const devLabel    = devDate ? `activo ${devDate}` : 'sin actividad reciente';
+
+  // Nodo QA
+  let qaStatus, qaLabel;
+  if (repo.qa) {
+    const version = repo.qa.version.replace(/^qa-/, '');
+    const date    = formatDate(repo.qa.date, { relative: true });
+    const hasPending = (toQa?.count ?? 0) > 0;
+    qaStatus = hasPending ? 'pending' : 'ok';
+    qaLabel  = `${escHtml(version)}${date ? ` · ${date}` : ''}`;
+  } else {
+    qaStatus = 'missing';
+    qaLabel  = 'sin tag de QA';
+  }
+
+  // Nodo Producción
+  let prodStatus, prodLabel;
+  if (repo.production) {
+    const version = repo.production.version.replace(/^prod-/, '');
+    const date    = formatDate(repo.production.date, { relative: true });
+    const count   = toProd?.count ?? 0;
+    if (count === 0) {
+      prodStatus = 'ok';
+      prodLabel  = `${escHtml(version)}${date ? ` · ${date}` : ''} · al día`;
+    } else {
+      const days = oldestCommitDays(toProd?.recent_commits);
+      prodStatus = 'pending';
+      prodLabel  = `${count} commit${count !== 1 ? 's' : ''} pendiente${count !== 1 ? 's' : ''}${days !== null ? ` · más antiguo: ${ageBadgeText(days)}` : ''}`;
+    }
+  } else {
+    prodStatus = 'missing';
+    prodLabel  = 'sin tag de producción';
+  }
+
+  const node = (icon, label, status, name) => `
+    <div class="pipeline-node pipeline-node--${status}">
+      <span class="pipeline-node__icon">${icon}</span>
+      <div class="pipeline-node__info">
+        <span class="pipeline-node__name">${name}</span>
+        <span class="pipeline-node__label">${label}</span>
+      </div>
+    </div>
+  `;
+  const arrow = `<div class="pipeline-arrow">↓</div>`;
+
+  return `
+    <div class="pipeline">
+      ${node(devStatus === 'ok' ? '✅' : '○', devLabel, devStatus, 'develop')}
+      ${arrow}
+      ${node(qaStatus === 'ok' ? '✅' : qaStatus === 'pending' ? '⏳' : '○', qaLabel, qaStatus, 'QA')}
+      ${arrow}
+      ${node(prodStatus === 'ok' ? '✅' : prodStatus === 'pending' ? '⏳' : '○', prodLabel, prodStatus, 'Producción')}
+    </div>
+  `;
+}
+
+function pendingBlocks(repo, toQa, toProd) {
+  const parts = [];
+
+  if ((toProd?.count ?? 0) > 0 && toProd.recent_commits?.length) {
+    parts.push(pendingCommitList('Pendientes a producción', toProd.count, toProd.recent_commits, 'prod'));
+  }
+  if ((toQa?.count ?? 0) > 0 && toQa.recent_commits?.length) {
+    parts.push(pendingCommitList('Pendientes a QA', toQa.count, toQa.recent_commits, 'qa'));
+  }
+
+  return parts.join('');
+}
+
+function pendingCommitList(title, count, commits, type) {
+  const MAX   = 8;
+  const shown = commits.slice(0, MAX);
+
+  const items = shown.map(c => {
+    const days    = c.date ? daysSince(c.date) : null;
+    const ageCls  = days === null ? '' : days > 14 ? 'age--urgent' : days > 6 ? 'age--warn' : '';
+    const ageText = days !== null ? ageBadgeText(days) : null;
+
+    const tickets = (c.tickets ?? []).map(t =>
+      `<a class="detail-ticket" href="${escHtml(t.url)}" target="_blank" rel="noopener">${escHtml(t.id)}</a>`
+    ).join('');
+
+    return `
+      <div class="pending-commit">
+        <div class="pending-commit__left">
+          <code class="detail-commit-sha">${escHtml(c.sha)}</code>
+          ${ageText ? `<span class="pending-commit__age ${ageCls}">${ageText}</span>` : ''}
+        </div>
+        <div class="pending-commit__body">
+          <div class="pending-commit__msg">${escHtml(c.message)}</div>
+          <div class="pending-commit__meta">
+            ${c.author ? `<span class="pending-commit__author">${escHtml(c.author)}</span>` : ''}
+            ${tickets}
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const more = count > MAX
+    ? `<p class="detail-commits-more">+${count - MAX} commits más</p>`
+    : '';
+
+  return `
+    <div class="pending-block pending-block--${type}">
+      <div class="pending-block__title">
+        <span class="pending-block__dot">●</span>
+        ${escHtml(title)}
+        <span class="pending-block__count">${count}</span>
+      </div>
+      <div class="pending-block__commits">${items}</div>
+      ${more}
+    </div>
+  `;
+}
+
+function nextStepHtml(toQa, toProd) {
+  const today = new Date().toISOString().slice(0, 10);
+
+  if ((toProd?.count ?? 0) > 0) {
+    return `
+      <div class="detail-next-step">
+        <span class="detail-next-step__label">Próximo paso</span>
+        Crear <code>release/prod-${today}</code> con cherry-picks de los commits de arriba
+      </div>
+    `;
+  }
+  if ((toQa?.count ?? 0) > 0) {
+    return `
+      <div class="detail-next-step">
+        <span class="detail-next-step__label">Próximo paso</span>
+        Crear <code>release/qa-${today}</code> con cherry-picks de los commits de arriba
+      </div>
+    `;
+  }
+  return '';
+}
+
+// ─── Releases colapsados ──────────────────────────────────────────────────────
+
+function releaseSectionCollapsed(label, release, type, repoUrl, history = []) {
+  const version  = release
+    ? (type === 'qa' ? release.version.replace(/^qa-/, '') : release.version.replace(/^prod-/, ''))
+    : null;
+  const date   = release ? formatDate(release.date) : null;
+  const parsed = release ? parseTagBody(release.body) : null;
+  const prCount = parsed ? parsed.features.length + parsed.fixes.length + parsed.other.length : 0;
+
+  const summaryLabel = version
+    ? [escHtml(version), date, prCount ? `${prCount} PRs` : null].filter(Boolean).join(' · ')
+    : 'Sin release';
+
+  const content = !release
+    ? `<p class="detail-empty">Sin release</p>`
+    : parsed
+      ? prGroups(parsed, repoUrl)
+      : `<p class="detail-empty">Sin detalle de PRs — tag creado sin el flujo automático.</p>`;
 
   const histHtml = history.length ? historySection(history, type, repoUrl) : '';
 
-  return `<div class="detail-section">${heading}${meta}${content}${histHtml}</div>`;
+  return `
+    <details class="detail-release-block">
+      <summary class="detail-release-block__summary">
+        <span class="detail-release-block__type detail-release-block__type--${type}">${label}</span>
+        <span class="detail-release-block__meta">${summaryLabel}</span>
+      </summary>
+      <div class="detail-release-block__body">
+        ${content}
+        ${histHtml}
+      </div>
+    </details>
+  `;
 }
 
 function historySection(history, type, repoUrl) {
@@ -155,24 +326,17 @@ function historySection(history, type, repoUrl) {
     const version = type === 'qa' ? rel.version.replace(/^qa-/, '') : rel.version;
     const date    = formatDate(rel.date);
     const parsed  = parseTagBody(rel.body);
-    const prCount = parsed
-      ? parsed.features.length + parsed.fixes.length + parsed.other.length
-      : 0;
+    const prCount = parsed ? parsed.features.length + parsed.fixes.length + parsed.other.length : 0;
 
-    const summaryText = [
-      escHtml(version),
-      date,
-      prCount ? `${prCount} PRs` : null,
-    ].filter(Boolean).join(' · ');
-
-    const content = parsed
-      ? prGroups(parsed, repoUrl)
-      : `<p class="detail-empty">Sin detalle de PRs</p>`;
+    const summaryText = [escHtml(version), date, prCount ? `${prCount} PRs` : null]
+      .filter(Boolean).join(' · ');
 
     return `
       <details class="detail-history-item">
         <summary class="detail-history-item__summary">${summaryText}</summary>
-        <div class="detail-history-item__body">${content}</div>
+        <div class="detail-history-item__body">
+          ${parsed ? prGroups(parsed, repoUrl) : '<p class="detail-empty">Sin detalle de PRs</p>'}
+        </div>
       </details>
     `;
   }).join('');
@@ -184,6 +348,8 @@ function historySection(history, type, repoUrl) {
     </details>
   `;
 }
+
+// ─── PR groups ────────────────────────────────────────────────────────────────
 
 function prGroups(parsed, repoUrl) {
   const parts = [];
@@ -199,16 +365,15 @@ function jiraStatusClass(status) {
 
 function prGroup(title, prs, type, repoUrl) {
   const items = prs.map(pr => {
-    const prUrl = `${repoUrl}/pull/${pr.number}`;
-    const ticket = pr.ticket
+    const prUrl      = `${repoUrl}/pull/${pr.number}`;
+    const ticket     = pr.ticket
       ? `<a class="detail-ticket" href="${escHtml(jiraUrl(pr.ticket))}" target="_blank" rel="noopener">${escHtml(pr.ticket)}</a>`
       : '';
-
     const jira       = pr.ticket ? jiraTickets[pr.ticket] : null;
     const statusPill = jira?.status
       ? `<span class="jira-status jira-status--${escHtml(jiraStatusClass(jira.status))}" title="${escHtml(jira.summary ?? '')}">${escHtml(jira.status)}</span>`
       : '';
-    const assignee = jira?.assignee
+    const assignee   = jira?.assignee
       ? `<span class="detail-pr-assignee">${escHtml(jira.assignee)}</span>`
       : '';
 
@@ -234,48 +399,23 @@ function prGroup(title, prs, type, repoUrl) {
   `;
 }
 
-function pendingSection(repo) {
-  const toQa   = repo.pending?.to_qa;
-  const toProd = repo.pending?.to_production;
+// ─── Helpers ──────────────────────────────────────────────────────────────────
 
-  const parts = [];
-
-  if (toQa?.count > 0 && toQa.recent_commits?.length) {
-    parts.push(commitList('Pendientes a QA', toQa.count, toQa.recent_commits, 'qa'));
-  }
-  if (toProd?.count > 0 && toProd.recent_commits?.length) {
-    parts.push(commitList('Pendientes a producción', toProd.count, toProd.recent_commits, 'prod'));
-  }
-
-  if (!parts.length) return '';
-  return `<div class="detail-section">${parts.join('')}</div>`;
+function daysSince(isoString) {
+  if (!isoString) return null;
+  const d = new Date(isoString);
+  if (isNaN(d)) return null;
+  return Math.floor((Date.now() - d.getTime()) / 86400000);
 }
 
-function commitList(title, count, commits, type) {
-  const MAX = 8;
-  const items = commits.slice(0, MAX).map(c => {
-    const tickets = (c.tickets ?? []).map(t =>
-      `<a class="detail-ticket" href="${escHtml(t.url)}" target="_blank" rel="noopener">${escHtml(t.id)}</a>`
-    ).join('');
+function ageBadgeText(days) {
+  if (days === 0) return 'hoy';
+  if (days === 1) return '1 día';
+  return `${days} días`;
+}
 
-    return `
-      <div class="detail-commit-item">
-        <code class="detail-commit-sha">${escHtml(c.sha)}</code>
-        <div class="detail-commit-info">
-          <div class="detail-commit-msg">${escHtml(c.message)}</div>
-          ${tickets ? `<div class="detail-commit-tickets">${tickets}</div>` : ''}
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  const more = count > MAX
-    ? `<p class="detail-commits-more">+${count - MAX} commits más no mostrados</p>`
-    : '';
-
-  return `
-    <div class="detail-heading detail-heading--${type}">${escHtml(title)} (${count})</div>
-    <div class="detail-commit-list">${items}</div>
-    ${more}
-  `;
+function oldestCommitDays(commits) {
+  if (!commits?.length) return null;
+  const dates = commits.map(c => c.date ? daysSince(c.date) : null).filter(d => d !== null);
+  return dates.length ? Math.max(...dates) : null;
 }
