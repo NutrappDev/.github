@@ -1,0 +1,53 @@
+name: Activity Generator
+
+# Genera /docs/data/activity.json con métricas de actividad por desarrollador.
+# Fuente: PRs mergeados en los últimos 90 días en todos los repos de la org.
+#
+# Requiere secret: ORG_READ_TOKEN (mismo que usa dashboard-generator.yml)
+
+on:
+  schedule:
+    - cron: "30 5 * * 1"  # Semanal, lunes 5:30 AM UTC (justo después de repos.json a las 5:00)
+  workflow_dispatch:
+  repository_dispatch:
+    types: [deployment-completed]  # Mismo evento que dispara repos.json
+
+jobs:
+  generate:
+    name: Generate activity.json
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Verify token
+        env:
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::El secret ORG_READ_TOKEN no está disponible."
+            exit 1
+          fi
+          echo "✅ Token disponible"
+
+      - name: Generate activity.json
+        env:
+          GH_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: node .github/scripts/generate-activity.js docs/data/activity.json
+
+      - name: Commit activity.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/activity.json
+          git diff --cached --quiet && echo "Sin cambios" && exit 0
+          git commit -m "chore(dashboard): actualizar datos de actividad [skip ci]"
+          git push

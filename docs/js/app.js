@@ -8,7 +8,7 @@ import { renderNav }      from './components/nav.js';
 import { initDetailPanel, openDetailPanel, closeDetailPanel } from './components/detail.js';
 import { renderResumen }  from './views/resumen.js';
 import { renderRepos }    from './views/repos.js';
-import { renderEquipo }   from './views/equipo.js';
+import { renderEquipo, bindEquipoEvents } from './views/equipo.js';
 import { renderDeployments, bindDeploymentEvents } from './views/deployments.js';
 import { repoStatus, STATUS_WEIGHT, shortName } from './utils.js';
 
@@ -20,6 +20,7 @@ const mainRoot   = document.getElementById('main-root');
 // ─── Estado ───────────────────────────────────────────────────────────────────
 let allRepos    = [];
 let jiraTickets = {};
+let allActivity = null;
 let activeTab   = 'resumen';
 let navCtrl     = null;
 
@@ -43,6 +44,12 @@ async function loadData() {
   }
 
   jiraTickets = data.jira_tickets ?? {};
+
+  // Cargar activity.json de forma opcional (no bloquea si no existe)
+  try {
+    const actRes = await fetch('data/activity.json');
+    if (actRes.ok) allActivity = await actRes.json();
+  } catch { /* activity.json todavía no generado */ }
 
   allRepos = data.repos.slice().sort((a, b) => {
     const wa = STATUS_WEIGHT[repoStatus(a)] ?? 9;
@@ -103,7 +110,8 @@ function renderView() {
       break;
 
     case 'equipo':
-      mainRoot.innerHTML = renderEquipo(allRepos);
+      mainRoot.innerHTML = renderEquipo(allRepos, allActivity);
+      bindEquipoEvents(mainRoot, allActivity);
       break;
 
     case 'deployments':
