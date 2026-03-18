@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T23:12:38.302Z",
+  "generated_at": "2026-03-18T14:03:58.909Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -593,7 +593,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T22:20:56Z",
+      "last_push": "2026-03-18T02:55:11Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1908,7 +1908,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T21:33:40Z",
+      "last_push": "2026-03-18T04:50:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2182,7 +2182,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T23:12:18Z",
+      "last_push": "2026-03-18T14:03:32Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2246,15 +2246,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 345,
+          "count": 346,
           "recent_commits": [
-            {
-              "sha": "46af13e",
-              "message": "debug(prescriptions): build error",
-              "date": "2025-09-19T01:47:41Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "d9eb868",
               "message": "fix(prescriptions): removing external dependencies",
@@ -2315,6 +2308,13 @@
               "sha": "84a2f10",
               "message": "fix(notifations): added smtp host",
               "date": "2025-10-02T22:10:17Z",
+              "author": "Mario Eraso",
+              "tickets": []
+            },
+            {
+              "sha": "77e08bf",
+              "message": "feat(orders): added endpoint metrics and wompi (#9)",
+              "date": "2025-10-06T22:53:08Z",
               "author": "Mario Eraso",
               "tickets": []
             }
