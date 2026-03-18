@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-18T19:53:41.349Z",
+  "generated_at": "2026-03-18T21:09:01.581Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 27,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-222": {
@@ -254,9 +254,19 @@
       "status": "Actividad completada",
       "assignee": "Felipe Berrio"
     },
+    "ALMX-270": {
+      "summary": "BG | Validación de perfil | Se muestra indicador de error sin existir una incidencia",
+      "status": "Despliegue a QA",
+      "assignee": "Kevin Aguilera"
+    },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
       "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
+    "ALMX-256": {
+      "summary": "BG | Mi Dispensario | Línea de productos no muestra hormonas ni productos especiales",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-255": {
@@ -272,6 +282,11 @@
     "ALMX-247": {
       "summary": "BG | Autenticación | Botón no redirige a las pantallas de Login o Registro",
       "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALMX-246": {
+      "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
+      "status": "En proceso",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-238": {
@@ -296,7 +311,7 @@
     },
     "ALCO-1436": {
       "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1243": {
@@ -419,7 +434,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T21:40:54Z",
+      "last_push": "2026-03-18T20:21:01Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -441,7 +456,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 16,
+          "count": 17,
           "recent_commits": [
             {
               "sha": "09ab906",
@@ -602,6 +617,18 @@
                 {
                   "id": "ALMX-261",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-261"
+                }
+              ]
+            },
+            {
+              "sha": "1944a89",
+              "message": "fix(products): remover mensaje de hormonas en dispensario MX ALMX-256 (#355)",
+              "date": "2026-03-18T20:20:59Z",
+              "author": "Felipe Berrio",
+              "tickets": [
+                {
+                  "id": "ALMX-256",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-256"
                 }
               ]
             }
@@ -2249,7 +2276,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-18T19:19:17Z",
+      "last_push": "2026-03-18T20:58:21Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2263,7 +2290,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "d0de038",
@@ -2330,6 +2357,30 @@
               "date": "2026-03-16T17:14:25Z",
               "author": "Jorge Garay",
               "tickets": []
+            },
+            {
+              "sha": "de1e9f5",
+              "message": "fix: correccion del flujo de advertencias para credenciales ALMX-270 (#70)",
+              "date": "2026-03-18T20:02:26Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "ALMX-270",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-270"
+                }
+              ]
+            },
+            {
+              "sha": "e3e2aa0",
+              "message": "fix: Refactor ecosystem URLs to use utility functions for country-specific links ALMX-246 (#71)",
+              "date": "2026-03-18T20:02:40Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "ALMX-246",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-246"
+                }
+              ]
             }
           ]
         },
