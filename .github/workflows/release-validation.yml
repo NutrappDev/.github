@@ -58,17 +58,20 @@ jobs:
           MISSING_FILES=()
 
           # Archivos MODIFICADOS (no creados) en este PR
-          MODIFIED=$(git diff --name-only --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null || true)
-
-          for FILE in $MODIFIED; do
+          # Nota: usar while+read en lugar de for-in para soportar paths con espacios
+          while IFS= read -r FILE; do
+            [ -z "$FILE" ] && continue
+            # Desescapar paths citados por git (comillas + secuencias \NNN)
+            FILE=$(printf '%b' "${FILE//\\\"/\"}" | sed 's/^"\(.*\)"$/\1/')
             # ¿Existe en la rama destino?
-            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -q "^${FILE}$"; then
+            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -qxF "$FILE"; then
               # El archivo no existe en destino — buscar qué commit lo creó
               CREATOR=$(git log "origin/${{ steps.ctx.outputs.origin_branch }}" \
                 --oneline --diff-filter=A -- "$FILE" 2>/dev/null | head -1 || true)
               MISSING_FILES+=("$FILE (creado en: ${CREATOR:-desconocido})")
             fi
-          done
+          done < <(git diff --name-only -z --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null \
+            | tr '\0' '\n' || true)
 
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             echo "val_b_ok=false" >> "$GITHUB_OUTPUT"
