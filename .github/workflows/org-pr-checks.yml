@@ -956,15 +956,16 @@ jobs:
 
           MISSING_FILES=()
 
-          MODIFIED=$(git diff --name-only --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null || true)
-
-          for FILE in $MODIFIED; do
-            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -q "^${FILE}$"; then
+          # Usar -z (null-delimited) + while+read para soportar paths con espacios
+          while IFS= read -r FILE; do
+            [ -z "$FILE" ] && continue
+            if ! git ls-tree -r "origin/$TARGET" --name-only | grep -qxF "$FILE"; then
               CREATOR=$(git log "origin/${{ steps.ctx.outputs.origin_branch }}" \
                 --oneline --diff-filter=A -- "$FILE" 2>/dev/null | head -1 || true)
               MISSING_FILES+=("$FILE (creado en: ${CREATOR:-desconocido})")
             fi
-          done
+          done < <(git diff --name-only -z --diff-filter=M "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null \
+            | tr '\0' '\n' || true)
 
           if [ ${#MISSING_FILES[@]} -gt 0 ]; then
             echo "val_b_ok=false" >> "$GITHUB_OUTPUT"
