@@ -219,7 +219,33 @@ function pendingBlocks(repo, toQa, toProd) {
   return parts.join('');
 }
 
+/** Clasifica commits por tipo convencional (feat/fix/refactor/otros) */
+function analyzeCommits(commits) {
+  const counts = { feat: 0, fix: 0, refactor: 0, otros: 0 };
+  for (const c of commits) {
+    const m = c.message.match(/^(feat|fix|refactor|chore|docs|test|build|ci|perf)\s*[:(]/i);
+    if (!m) { counts.otros++; continue; }
+    const t = m[1].toLowerCase();
+    if      (t === 'feat')    counts.feat++;
+    else if (t === 'fix')     counts.fix++;
+    else if (t === 'refactor') counts.refactor++;
+    else                       counts.otros++;
+  }
+  return counts;
+}
+
+function breakdownHtml(counts) {
+  const parts = [];
+  if (counts.feat)    parts.push(`<span class="commit-type commit-type--feat">${counts.feat} feat</span>`);
+  if (counts.fix)     parts.push(`<span class="commit-type commit-type--fix">${counts.fix} fix</span>`);
+  if (counts.refactor) parts.push(`<span class="commit-type commit-type--refactor">${counts.refactor} refactor</span>`);
+  if (counts.otros)   parts.push(`<span class="commit-type commit-type--otros">${counts.otros} otros</span>`);
+  return parts.length ? `<div class="pending-block__breakdown">${parts.join('')}</div>` : '';
+}
+
 function pendingCommitList(title, count, commits, type, repoUrl, compareUrl) {
+  const breakdown = breakdownHtml(analyzeCommits(commits));
+
   const items = commits.map(c => {
     const days    = c.date ? daysSince(c.date) : null;
     const ageCls  = days === null ? '' : days > 14 ? 'age--urgent' : days > 6 ? 'age--warn' : '';
@@ -273,6 +299,7 @@ function pendingCommitList(title, count, commits, type, repoUrl, compareUrl) {
         <span class="pending-block__count">${count}</span>
         <a class="pending-block__compare" href="${escHtml(compareUrl)}" target="_blank" rel="noopener">Ver en GitHub ↗</a>
       </div>
+      ${breakdown}
       <div class="pending-block__commits">${items}</div>
       ${moreHtml}
     </div>

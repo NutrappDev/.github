@@ -29,6 +29,10 @@ const PROD_TAG_PATTERN = /^(v\d|prod-\d{4}-\d{2}-\d{2})/;
 const QA_TAG_PATTERN = /^qa-\d{4}-\d{2}-\d{2}$/;
 const PENDING_COMMITS_LIMIT = 25; // commits recientes a incluir en "pending"
 
+// Autores y mensajes que son ruido automatizado (bots, commits de CI, NX)
+const BOT_AUTHOR_RE = /\[bot\]|github-actions/i;
+const NOISE_MSG_RE  = /^(chore:\s*update affected\.txt|\[skip[\s-]ci\])/i;
+
 if (!TOKEN) {
   console.error('Error: GH_TOKEN o GITHUB_TOKEN requerido');
   process.exit(1);
@@ -234,6 +238,11 @@ async function compareBranches(owner, repo, base, head) {
   if (!data) return null;
 
   const recentCommits = (data.commits ?? [])
+    .filter(c => {
+      const author = c.commit.author?.name ?? c.author?.login ?? '';
+      const msg    = c.commit.message.split('\n')[0];
+      return !BOT_AUTHOR_RE.test(author) && !NOISE_MSG_RE.test(msg);
+    })
     .slice(0, PENDING_COMMITS_LIMIT)
     .map(c => {
       const message = c.commit.message.split('\n')[0];
