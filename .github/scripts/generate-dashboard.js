@@ -268,21 +268,32 @@ async function processRepo(repo) {
     console.warn(`  ⚠ ${name}: error fetching tags: ${err.message}`);
   }
 
-  // Lanzar el resto de llamadas en paralelo
-  const [prodHistory, qaHistory, pendingToQa, pendingToProd, ciStatus] =
+  // Resolver historiales de tags primero para usar sus SHAs como base de comparación.
+  // Esto evita el ruido de squash/rebase histórico: el tag SHA es "lo último desplegado"
+  // y todo lo que venga después es genuinamente pendiente.
+  const [prodHistory, qaHistory] = await Promise.all([
+    getTagHistory(owner, name, allTags, PROD_TAG_PATTERN, 5).catch(() => []),
+    getTagHistory(owner, name, allTags, QA_TAG_PATTERN,   5).catch(() => []),
+  ]);
+
+  const prodHist = prodHistory ?? [];
+  const qaHist   = qaHistory   ?? [];
+
+  // Base para la comparación: SHA del último tag si existe, rama si no.
+  // Con squash/rebase previos, comparar desde el HEAD de la rama infla el conteo
+  // con commits ya desplegados cuyos SHAs originales no están en la rama destino.
+  const qaBase   = qaHist[0]?.sha   ?? 'qa';
+  const prodBase = prodHist[0]?.sha ?? 'main';
+
+  const [pendingToQa, pendingToProd, ciStatus] =
     await Promise.allSettled([
-      getTagHistory(owner, name, allTags, PROD_TAG_PATTERN, 5),
-      getTagHistory(owner, name, allTags, QA_TAG_PATTERN, 5),
-      compareBranches(owner, name, 'qa', 'develop'),
-      compareBranches(owner, name, 'main', 'qa'),
+      compareBranches(owner, name, qaBase,   'develop'),
+      compareBranches(owner, name, prodBase, 'qa'),
       getCiStatus(owner, name, repo.default_branch),
     ]);
 
-  const get = result => (result.status === 'fulfilled' ? result.value : null);
-  const getErr = result => (result.status === 'rejected' ? result.reason?.message : null);
-
-  const prodHist = get(prodHistory) ?? [];
-  const qaHist   = get(qaHistory)   ?? [];
+  const get    = result => (result.status === 'fulfilled' ? result.value : null);
+  const getErr = result => (result.status === 'rejected'  ? result.reason?.message : null);
 
   return {
     name,
