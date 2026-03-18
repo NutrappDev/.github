@@ -204,26 +204,35 @@ function pipelineHtml(repo, toQa, toProd) {
 }
 
 function pendingBlocks(repo, toQa, toProd) {
-  const parts = [];
+  const parts      = [];
+  const repoUrl    = repo.url;
 
   if ((toProd?.count ?? 0) > 0 && toProd.recent_commits?.length) {
-    parts.push(pendingCommitList('Pendientes a producción', toProd.count, toProd.recent_commits, 'prod'));
+    const compareUrl = `${repoUrl}/compare/main...qa`;
+    parts.push(pendingCommitList('Pendientes a producción', toProd.count, toProd.recent_commits, 'prod', repoUrl, compareUrl));
   }
   if ((toQa?.count ?? 0) > 0 && toQa.recent_commits?.length) {
-    parts.push(pendingCommitList('Pendientes a QA', toQa.count, toQa.recent_commits, 'qa'));
+    const compareUrl = `${repoUrl}/compare/qa...develop`;
+    parts.push(pendingCommitList('Pendientes a QA', toQa.count, toQa.recent_commits, 'qa', repoUrl, compareUrl));
   }
 
   return parts.join('');
 }
 
-function pendingCommitList(title, count, commits, type) {
-  const MAX   = 8;
-  const shown = commits.slice(0, MAX);
-
-  const items = shown.map(c => {
+function pendingCommitList(title, count, commits, type, repoUrl, compareUrl) {
+  const items = commits.map(c => {
     const days    = c.date ? daysSince(c.date) : null;
     const ageCls  = days === null ? '' : days > 14 ? 'age--urgent' : days > 6 ? 'age--warn' : '';
     const ageText = days !== null ? ageBadgeText(days) : null;
+
+    // Extraer #PR del final del mensaje (squash merge de GitHub: "título (#NNN)")
+    const prMatch  = c.message.match(/\(#(\d+)\)\s*$/);
+    const prNum    = prMatch ? prMatch[1] : null;
+    const cleanMsg = prMatch ? c.message.replace(/\s*\(#\d+\)\s*$/, '').trim() : c.message;
+
+    const prLink = prNum
+      ? `<a class="pending-commit__pr" href="${escHtml(`${repoUrl}/pull/${prNum}`)}" target="_blank" rel="noopener">#${prNum}</a>`
+      : '';
 
     const tickets = (c.tickets ?? []).map(t =>
       `<a class="detail-ticket" href="${escHtml(t.url)}" target="_blank" rel="noopener">${escHtml(t.id)}</a>`
@@ -236,9 +245,10 @@ function pendingCommitList(title, count, commits, type) {
           ${ageText ? `<span class="pending-commit__age ${ageCls}">${ageText}</span>` : ''}
         </div>
         <div class="pending-commit__body">
-          <div class="pending-commit__msg">${escHtml(c.message)}</div>
+          <div class="pending-commit__msg">${escHtml(cleanMsg)}</div>
           <div class="pending-commit__meta">
             ${c.author ? `<span class="pending-commit__author">${escHtml(c.author)}</span>` : ''}
+            ${prLink}
             ${tickets}
           </div>
         </div>
@@ -246,8 +256,13 @@ function pendingCommitList(title, count, commits, type) {
     `;
   }).join('');
 
-  const more = count > MAX
-    ? `<p class="detail-commits-more">+${count - MAX} commits más</p>`
+  // Si count > commits mostrados, hay más que el generador no incluyó
+  const hiddenCount = count - commits.length;
+  const moreHtml = hiddenCount > 0
+    ? `<div class="pending-block__more">
+        +${hiddenCount} commits más —
+        <a href="${escHtml(compareUrl)}" target="_blank" rel="noopener">ver todos en GitHub ↗</a>
+      </div>`
     : '';
 
   return `
@@ -256,9 +271,10 @@ function pendingCommitList(title, count, commits, type) {
         <span class="pending-block__dot">●</span>
         ${escHtml(title)}
         <span class="pending-block__count">${count}</span>
+        <a class="pending-block__compare" href="${escHtml(compareUrl)}" target="_blank" rel="noopener">Ver en GitHub ↗</a>
       </div>
       <div class="pending-block__commits">${items}</div>
-      ${more}
+      ${moreHtml}
     </div>
   `;
 }

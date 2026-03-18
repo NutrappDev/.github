@@ -27,7 +27,7 @@ const CONCURRENCY = 8; // repos procesados en paralelo
 
 const PROD_TAG_PATTERN = /^(v\d|prod-\d{4}-\d{2}-\d{2})/;
 const QA_TAG_PATTERN = /^qa-\d{4}-\d{2}-\d{2}$/;
-const PENDING_COMMITS_LIMIT = 10; // commits recientes a incluir en "pending"
+const PENDING_COMMITS_LIMIT = 25; // commits recientes a incluir en "pending"
 
 if (!TOKEN) {
   console.error('Error: GH_TOKEN o GITHUB_TOKEN requerido');
