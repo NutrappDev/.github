@@ -10,6 +10,9 @@ name: Auto Tag
 # Si ya existe un tag con esa fecha (dos releases el mismo día),
 # agrega sufijo: qa-YYYY-MM-DD-2, qa-YYYY-MM-DD-3, etc.
 #
+# El cuerpo del tag se construye parseando los commits del PR de release,
+# agrupados en Features / Fixes / Other con referencia al PR y ticket Jira.
+#
 # Llamar desde otros repos en pr-checks.yml — ver _example-caller.yml
 
 on:
@@ -27,6 +30,87 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Build tag body from PR commits
+        id: body
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          node --input-type=commonjs << 'SCRIPT'
+          const { execSync } = require('child_process');
+          const fs = require('fs');
+
+          const repo     = process.env.REPO;
+          const prNumber = process.env.PR_NUMBER;
+
+          let commits;
+          try {
+            const raw = execSync(
+              `gh api repos/${repo}/pulls/${prNumber}/commits --paginate`,
+              { encoding: 'utf8' }
+            );
+            commits = JSON.parse(raw);
+          } catch (e) {
+            console.log('No se pudieron obtener commits del PR, usando cuerpo simple.');
+            fs.writeFileSync('tag_body.txt', '');
+            process.exit(0);
+          }
+
+          const features = [];
+          const fixes    = [];
+          const other    = [];
+
+          for (const c of commits) {
+            // Primera línea del mensaje de commit
+            const firstLine = c.commit.message.split('\n')[0].trim();
+            // GitHub añade "(#NNN)" al final en squash merge
+            const prMatch  = firstLine.match(/\(#(\d+)\)\s*$/);
+            if (!prMatch) continue; // ignorar merge commits sin referencia a PR
+
+            const prNum  = prMatch[1];
+            const author = c.author?.login || c.commit.author?.name || 'unknown';
+
+            // Quitar "(#NNN)" del final
+            let msg = firstLine.replace(/\s*\(#\d+\)\s*$/, '').trim();
+
+            // Extraer ticket Jira: [ALCO-123] o similar
+            const ticketMatch = msg.match(/\[([A-Z]{2,}-\d+)\]/);
+            const ticket = ticketMatch ? ticketMatch[1] : null;
+
+            // Quitar ticket del resumen
+            msg = msg.replace(/\s*\[[A-Z]{2,}-\d+\]/g, '').trim();
+
+            // Detectar tipo por prefijo conventional commit
+            const typeMatch = msg.match(/^(feat|fix|refactor|docs|chore|build|test|hotfix)(?:\([^)]*\))?:\s*/i);
+            const type      = typeMatch ? typeMatch[1].toLowerCase() : null;
+
+            // Resumen limpio sin prefijo de tipo
+            const summary = msg.replace(/^(feat|fix|refactor|docs|chore|build|test|hotfix)(\([^)]*\))?:\s*/i, '').trim() || msg;
+
+            const ticketSuffix = ticket ? ` [${ticket}]` : '';
+            const line = `PR #${prNum} by ${author} - ${summary}${ticketSuffix}`;
+
+            if (type === 'feat') {
+              features.push(line);
+            } else if (type === 'fix' || type === 'hotfix') {
+              fixes.push(line);
+            } else {
+              other.push(line);
+            }
+          }
+
+          const parts = [];
+          if (features.length) parts.push(`Features (${features.length}):\n${features.join('\n')}`);
+          if (fixes.length)    parts.push(`Fixes (${fixes.length}):\n${fixes.join('\n')}`);
+          if (other.length)    parts.push(`Other (${other.length}):\n${other.join('\n')}`);
+
+          const body = parts.join('\n\n');
+          fs.writeFileSync('tag_body.txt', body);
+          console.log('Tag body construido:');
+          console.log(body || '(vacío — se usará mensaje simple)');
+          SCRIPT
 
       - name: Create annotated tag
         env:
@@ -62,7 +146,14 @@ jobs:
 
           # Crear tag anotado apuntando al HEAD de la rama destino
           git fetch origin "$TARGET"
-          git tag -a "$TAG_NAME" "origin/$TARGET" -m "Release ${TAG_NAME}"
-          git push origin "$TAG_NAME"
 
+          # Si el body tiene contenido, usarlo; si no, mensaje simple
+          BODY_FILE="tag_body.txt"
+          if [ -s "$BODY_FILE" ]; then
+            git tag -a "$TAG_NAME" "origin/$TARGET" -F "$BODY_FILE"
+          else
+            git tag -a "$TAG_NAME" "origin/$TARGET" -m "Release ${TAG_NAME}"
+          fi
+
+          git push origin "$TAG_NAME"
           echo "✅ Tag creado: $TAG_NAME"

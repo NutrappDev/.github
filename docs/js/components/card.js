@@ -13,7 +13,7 @@ export function repoCardHtml(repo) {
     <article class="repo-card status-${status}" data-name="${escHtml(name.toLowerCase())}" data-fullname="${escHtml(repo.full_name)}">
       ${cardHeader(repo, name, status)}
       <div class="card-body">
-        ${releaseRow('prod', repo.production, 'Producción')}
+        ${releaseRow('prod', repo.production, 'PROD')}
         ${releaseRow('qa',   repo.qa,         'QA')}
         ${pendingSection(repo)}
       </div>
@@ -69,9 +69,9 @@ function releaseRow(type, release, label) {
 
   const date = formatDate(release.date, { relative: true });
   const dateFull = formatDate(release.date);
-  const version = type === 'qa'
-    ? release.version.replace(/^qa-/, '') // "2025-01-14" es más legible que "qa-2025-01-14"
-    : release.version;
+  const version = release.version
+    .replace(/^qa-/, '')    // qa-2025-01-14 → 2025-01-14
+    .replace(/^prod-/, ''); // prod-2025-01-14 → 2025-01-14
 
   return `
     <div class="release-row ${type}">

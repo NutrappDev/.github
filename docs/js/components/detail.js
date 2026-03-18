@@ -143,7 +143,7 @@ function releaseSection(label, release, type, repoUrl, history = []) {
 
   const content = parsed
     ? prGroups(parsed, repoUrl)
-    : `<p class="detail-empty">Tag sin detalle de PRs (formato libre o tag ligero)</p>`;
+    : `<p class="detail-empty">Sin detalle de PRs — el tag fue creado con mensaje simple, no con el flujo de release automático.</p>`;
 
   const histHtml = history.length ? historySection(history, type, repoUrl) : '';
 

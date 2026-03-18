@@ -27,7 +27,7 @@ export function renderHeader(root, { generatedAt, totalRepos, repos = [] }) {
         <div class="site-header__logo">ND</div>
         <div>
           <div class="site-header__title">NutrappDev</div>
-          <div class="site-header__subtitle">${totalRepos} repos · ${inProd} en producción</div>
+          <div class="site-header__subtitle">Estado de Releases · ${totalRepos} repos</div>
         </div>
       </div>
       <div class="site-header__pulse" aria-hidden="true">${pulseBars}</div>
