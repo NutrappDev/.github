@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T13:30:59.685Z",
+  "generated_at": "2026-03-19T13:39:05.004Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 27,
@@ -506,6 +506,223 @@
     }
   },
   "repos": [
+    {
+      "name": "sso-micuenta",
+      "full_name": "NutrappDev/sso-micuenta",
+      "description": null,
+      "url": "https://github.com/NutrappDev/sso-micuenta",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-19T13:38:53Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-03-19",
+        "sha": "3c750380de222c6a893d7f9dc99bb5aded19cadb",
+        "date": "2026-03-19T13:38:52Z",
+        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-19",
+        "body": "Release qa-2026-03-19\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-09",
+          "sha": "efffb0d5fbb380808c9d2fafde299b3a3d9c0af3",
+          "date": "2026-03-09T22:11:23Z",
+          "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-09",
+          "body": "Release qa-2026-03-09\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 7,
+          "recent_commits": [
+            {
+              "sha": "78a757f",
+              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
+              "date": "2026-03-16T17:14:25Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "fdcd879",
+              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
+              "date": "2026-03-12T13:47:22Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "d1bccc6",
+              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
+              "date": "2026-02-18T18:32:44Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-197",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
+                }
+              ]
+            },
+            {
+              "sha": "d0de038",
+              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
+              "date": "2026-02-18T17:23:09Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "19ed0de",
+              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
+              "date": "2026-02-16T19:23:40Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "2147cb8",
+              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
+              "date": "2026-01-08T13:54:10Z",
+              "author": "cristigb",
+              "tickets": [
+                {
+                  "id": "ALCO-1309",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
+                }
+              ]
+            },
+            {
+              "sha": "ce5069e",
+              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
+              "date": "2026-01-07T22:17:09Z",
+              "author": "cristigb",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 12,
+          "recent_commits": [
+            {
+              "sha": "3c75038",
+              "message": "Merge pull request #74 from NutrappDev/release/qa-2026-03-18",
+              "date": "2026-03-19T13:38:40Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "c3913b8",
+              "message": "fix: Refactor ecosystem URLs to use utility functions for country-specific links ALMX-246 (#71)",
+              "date": "2026-03-18T23:45:45Z",
+              "author": "Isabel Gomez Balvin",
+              "tickets": [
+                {
+                  "id": "ALMX-246",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-246"
+                }
+              ]
+            },
+            {
+              "sha": "a6474ca",
+              "message": "fix: correccion del flujo de advertencias para credenciales ALMX-270 (#70)",
+              "date": "2026-03-18T23:45:38Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "ALMX-270",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-270"
+                }
+              ]
+            },
+            {
+              "sha": "535c8aa",
+              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
+              "date": "2026-03-16T17:14:23Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "5f1d547",
+              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
+              "date": "2026-03-12T13:47:19Z",
+              "author": "Jorge Garay",
+              "tickets": []
+            },
+            {
+              "sha": "efffb0d",
+              "message": "feat: All configuration to natural person NE-151 (#67)",
+              "date": "2026-03-09T22:11:13Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-151",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
+                }
+              ]
+            },
+            {
+              "sha": "3fc02e0",
+              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
+              "date": "2026-03-09T22:11:13Z",
+              "author": "Aguilera Kevin",
+              "tickets": []
+            },
+            {
+              "sha": "e8a8fc6",
+              "message": "Merge pull request #61 from NutrappDev/develop",
+              "date": "2026-02-16T20:30:20Z",
+              "author": "k-aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "181eb53",
+              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
+              "date": "2026-02-16T20:16:48Z",
+              "author": "k-aguilera",
+              "tickets": [
+                {
+                  "id": "NE-113",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
+                }
+              ]
+            },
+            {
+              "sha": "19ed0de",
+              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
+              "date": "2026-02-16T19:23:40Z",
+              "author": "Aguilera",
+              "tickets": []
+            },
+            {
+              "sha": "2147cb8",
+              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
+              "date": "2026-01-08T13:54:10Z",
+              "author": "cristigb",
+              "tickets": [
+                {
+                  "id": "ALCO-1309",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
+                }
+              ]
+            },
+            {
+              "sha": "ce5069e",
+              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
+              "date": "2026-01-07T22:17:09Z",
+              "author": "cristigb",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -3674,208 +3891,6 @@
         "to_production": {
           "count": 0,
           "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "sso-micuenta",
-      "full_name": "NutrappDev/sso-micuenta",
-      "description": null,
-      "url": "https://github.com/NutrappDev/sso-micuenta",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-19T00:54:01Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-03-09",
-        "sha": "efffb0d5fbb380808c9d2fafde299b3a3d9c0af3",
-        "date": "2026-03-09T22:11:23Z",
-        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-09",
-        "body": "Release qa-2026-03-09\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 9,
-          "recent_commits": [
-            {
-              "sha": "e3e2aa0",
-              "message": "fix: Refactor ecosystem URLs to use utility functions for country-specific links ALMX-246 (#71)",
-              "date": "2026-03-18T20:02:40Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALMX-246",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-246"
-                }
-              ]
-            },
-            {
-              "sha": "de1e9f5",
-              "message": "fix: correccion del flujo de advertencias para credenciales ALMX-270 (#70)",
-              "date": "2026-03-18T20:02:26Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "ALMX-270",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-270"
-                }
-              ]
-            },
-            {
-              "sha": "78a757f",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:25Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "fdcd879",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:22Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "d1bccc6",
-              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
-              "date": "2026-02-18T18:32:44Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-197",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
-                }
-              ]
-            },
-            {
-              "sha": "d0de038",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-02-18T17:23:09Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "19ed0de",
-              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
-              "date": "2026-02-16T19:23:40Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "2147cb8",
-              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
-              "date": "2026-01-08T13:54:10Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALCO-1309",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
-                }
-              ]
-            },
-            {
-              "sha": "ce5069e",
-              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
-              "date": "2026-01-07T22:17:09Z",
-              "author": "cristigb",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 9,
-          "recent_commits": [
-            {
-              "sha": "535c8aa",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:23Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "5f1d547",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:19Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "efffb0d",
-              "message": "feat: All configuration to natural person NE-151 (#67)",
-              "date": "2026-03-09T22:11:13Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-151",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
-                }
-              ]
-            },
-            {
-              "sha": "3fc02e0",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-03-09T22:11:13Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "e8a8fc6",
-              "message": "Merge pull request #61 from NutrappDev/develop",
-              "date": "2026-02-16T20:30:20Z",
-              "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "181eb53",
-              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
-              "date": "2026-02-16T20:16:48Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
-                }
-              ]
-            },
-            {
-              "sha": "19ed0de",
-              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
-              "date": "2026-02-16T19:23:40Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "2147cb8",
-              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
-              "date": "2026-01-08T13:54:10Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALCO-1309",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
-                }
-              ]
-            },
-            {
-              "sha": "ce5069e",
-              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
-              "date": "2026-01-07T22:17:09Z",
-              "author": "cristigb",
-              "tickets": []
-            }
-          ]
         }
       },
       "ci": null,
