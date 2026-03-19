@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-19T16:17:05.267Z",
+  "generated_at": "2026-03-19T19:55:12.249Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 27,
-      "prs_90d": 78,
-      "last_activity": "2026-03-19T16:16:46Z",
+      "prs_30d": 28,
+      "prs_90d": 79,
+      "last_activity": "2026-03-19T19:54:55Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 52
+          "prs": 53
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -37,7 +37,7 @@
       "by_branch": {
         "develop": 45,
         "qa": 24,
-        "main": 9
+        "main": 10
       },
       "weekly": [
         {
@@ -90,7 +90,7 @@
         },
         {
           "week": "2026-W12",
-          "prs": 5
+          "prs": 6
         }
       ]
     },
@@ -257,13 +257,13 @@
     {
       "login": "meraso-nutra",
       "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 15,
-      "prs_90d": 20,
-      "last_activity": "2026-03-19T13:30:25Z",
+      "prs_30d": 16,
+      "prs_90d": 21,
+      "last_activity": "2026-03-19T17:27:58Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 17
+          "prs": 18
         },
         {
           "repo": "microservice_payments",
@@ -271,7 +271,7 @@
         }
       ],
       "by_branch": {
-        "develop": 19,
+        "develop": 20,
         "qa": 0,
         "main": 1
       },
@@ -326,7 +326,7 @@
         },
         {
           "week": "2026-W12",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
@@ -962,20 +962,16 @@
       "login": "marioeraso",
       "avatar_url": "https://avatars.githubusercontent.com/u/49280833?v=4",
       "prs_30d": 0,
-      "prs_90d": 3,
+      "prs_90d": 2,
       "last_activity": "2026-01-05T16:57:14Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
           "prs": 2
-        },
-        {
-          "repo": "microservice_payments",
-          "prs": 1
         }
       ],
       "by_branch": {
-        "develop": 3,
+        "develop": 2,
         "qa": 0,
         "main": 0
       },
