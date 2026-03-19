@@ -31,11 +31,14 @@ const PENDING_COMMITS_LIMIT = 25; // commits recientes a incluir en "pending"
 
 // Autores y mensajes que son ruido automatizado (bots, commits de CI, NX)
 const BOT_AUTHOR_RE  = /\[bot\]|github-actions/i;
-const NOISE_MSG_RE   = /^(chore:\s*update affected\.txt|\[skip[\s-]ci\])/i;
+const NOISE_MSG_RE   = /^chore:\s*update affected\.txt|\[skip[\s-]ci\]/i;
 // Merge commits de sincronización de rama, no de feature PRs
 const SYNC_MERGE_RE  = /^Merge branch '|^Merge remote-tracking branch '/i;
-// Días a mirar hacia atrás cuando no hay tag de referencia
-const FALLBACK_DAYS  = 90;
+// Ventana de tiempo para buscar commits pendientes.
+// Ventana fija — NO usar la fecha del tag como since: si el último release
+// solo incluyó C (de ayer) pero A y B (de 1 mes y 15 días) fueron deliberadamente
+// omitidos, con since=tag_date A y B desaparecerían del pendiente aunque sigan sin desplegarse.
+const PENDING_WINDOW_DAYS = 90;
 
 if (!TOKEN) {
   console.error('Error: GH_TOKEN o GITHUB_TOKEN requerido');
@@ -248,17 +251,14 @@ function extractPrNumber(msg) {
 /**
  * Devuelve commits pendientes de headBranch respecto a targetBranch.
  *
- * Estrategia: usar el endpoint /commits?since=sinceDate para ambas ramas,
- * luego deduplicar por PR number. Esto evita el ruido de SHAs históricos
- * con squash/rebase y los commits que ya fueron cherry-pickeados al destino.
- *
- * @param {string|null} sinceDate  ISO date del último tag de referencia.
- *                                 Si es null usa FALLBACK_DAYS hacia atrás.
+ * Estrategia: ventana fija de PENDING_WINDOW_DAYS hacia atrás + deduplicación por PR number.
+ * NO se usa la fecha del tag como since porque con cherry-pick selectivo (solo C pasa a QA
+ * aunque A y B estén en develop) la fecha del tag excluiría A y B incorrectamente.
  */
-async function getPendingCommits(owner, repo, headBranch, targetBranch, sinceDate) {
-  const since = sinceDate
-    ? encodeURIComponent(sinceDate)
-    : encodeURIComponent(new Date(Date.now() - FALLBACK_DAYS * 86_400_000).toISOString());
+async function getPendingCommits(owner, repo, headBranch, targetBranch) {
+  const since = encodeURIComponent(
+    new Date(Date.now() - PENDING_WINDOW_DAYS * 86_400_000).toISOString()
+  );
 
   const [headCommits, targetCommits] = await Promise.all([
     ghFetch(`/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(headBranch)}&per_page=100&since=${since}`),
@@ -328,16 +328,12 @@ async function processRepo(repo) {
   const prodHist = prodHistory ?? [];
   const qaHist   = qaHistory   ?? [];
 
-  // Fecha del último tag (null → getPendingCommits usará FALLBACK_DAYS)
-  const qaTagDate   = qaHist[0]?.date   ?? null;
-  const prodTagDate = prodHist[0]?.date ?? null;
-
   const [pendingToQa, pendingToProd, ciStatus] =
     await Promise.allSettled([
-      // develop→qa: commits en develop desde el último tag QA que aún no están en QA
-      getPendingCommits(owner, name, 'develop', 'qa',   qaTagDate),
-      // qa→main: commits en qa desde el último tag prod que aún no están en main
-      getPendingCommits(owner, name, 'qa',   'main', prodTagDate),
+      // develop→qa: commits en develop (últimos PENDING_WINDOW_DAYS) no presentes en QA
+      getPendingCommits(owner, name, 'develop', 'qa'),
+      // qa→main: commits en qa (últimos PENDING_WINDOW_DAYS) no presentes en main
+      getPendingCommits(owner, name, 'qa', 'main'),
       getCiStatus(owner, name, repo.default_branch),
     ]);
 
