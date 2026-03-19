@@ -237,68 +237,89 @@ async function getTagHistory(owner, repo, allTags, pattern, limit = 5) {
 }
 
 /**
- * Extrae número de PR de un mensaje de commit.
- * Soporta squash merge "(#NNN)" y merge commit "Merge pull request #NNN".
+ * Construye el set de PR numbers presentes en la rama destino (cherry-picks ya desplegados).
+ * Usa el endpoint de commits con ventana de PENDING_WINDOW_DAYS.
  */
-function extractPrNumber(msg) {
-  const sq = msg.match(/\(#(\d+)\)\s*$/);
-  if (sq) return sq[1];
-  const mp = msg.match(/^Merge pull request #(\d+)\b/);
-  if (mp) return mp[1];
-  return null;
-}
-
-/**
- * Devuelve commits pendientes de headBranch respecto a targetBranch.
- *
- * Estrategia: ventana fija de PENDING_WINDOW_DAYS hacia atrás + deduplicación por PR number.
- * NO se usa la fecha del tag como since porque con cherry-pick selectivo (solo C pasa a QA
- * aunque A y B estén en develop) la fecha del tag excluiría A y B incorrectamente.
- */
-async function getPendingCommits(owner, repo, headBranch, targetBranch) {
+async function getDeployedPrNumbers(owner, repo, branch) {
   const since = encodeURIComponent(
     new Date(Date.now() - PENDING_WINDOW_DAYS * 86_400_000).toISOString()
   );
+  const commits = await ghFetch(
+    `/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(branch)}&per_page=100&since=${since}`
+  );
+  const nums = new Set();
+  for (const c of commits ?? []) {
+    // Squash merge: "(#NNN)"
+    const sq = (c.commit.message.split('\n')[0]).match(/\(#(\d+)\)\s*$/);
+    if (sq) { nums.add(sq[1]); continue; }
+    // Merge commit: "Merge pull request #NNN"
+    const mp = (c.commit.message.split('\n')[0]).match(/^Merge pull request #(\d+)\b/);
+    if (mp) nums.add(mp[1]);
+  }
+  return nums;
+}
 
-  const [headCommits, targetCommits] = await Promise.all([
-    ghFetch(`/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(headBranch)}&per_page=100&since=${since}`),
-    ghFetch(`/repos/${owner}/${repo}/commits?sha=${encodeURIComponent(targetBranch)}&per_page=100&since=${since}`),
+/**
+ * Devuelve PRs pendientes de headBranch respecto a targetBranch.
+ *
+ * Usa el endpoint /pulls (PRs mergeados a headBranch) en vez de /commits.
+ * Ventajas sobre comparación de commits:
+ *   - Opera a nivel de PR (unidad semántica), no de commits individuales
+ *   - Acceso directo a labels → filtra "no-promote"
+ *   - Detecta pares PR + Revert que se cancelan entre sí
+ *   - Funciona correctamente con cualquier estrategia de merge (squash/rebase/merge commit)
+ *
+ * La deduplicación contra targetBranch sigue siendo por PR number (cherry-picks
+ * preservan el número en el mensaje de commit).
+ */
+async function getPendingPRs(owner, repo, headBranch, targetBranch) {
+  const sinceDate = new Date(Date.now() - PENDING_WINDOW_DAYS * 86_400_000).toISOString();
+
+  const [prs, deployedNums] = await Promise.all([
+    ghFetch(
+      `/repos/${owner}/${repo}/pulls?state=closed&base=${encodeURIComponent(headBranch)}&sort=updated&direction=desc&per_page=100`
+    ),
+    getDeployedPrNumbers(owner, repo, targetBranch),
   ]);
 
-  // PR numbers ya desplegados en la rama destino (cherry-picks)
-  const deployed = new Set();
-  for (const c of targetCommits ?? []) {
-    const n = extractPrNumber(c.commit.message.split('\n')[0]);
-    if (n) deployed.add(n);
+  // Solo PRs efectivamente mergeados dentro de la ventana
+  const merged = (prs ?? []).filter(pr => pr.merged_at && pr.merged_at >= sinceDate);
+
+  // Detectar PRs que revierten a otro dentro de la lista (ambos se cancelan)
+  // Patrón: 'Revert "...#NNN..."' o título que empieza por "revert-NNN-"
+  const revertTargets = new Set();
+  const revertPrs     = new Set();
+  for (const pr of merged) {
+    const m = pr.title.match(/^[Rr]evert\b.*?#(\d+)/) ?? pr.head?.ref?.match(/^revert-(\d+)-/);
+    if (m) {
+      revertTargets.add(m[1]);   // el PR original que se revierte
+      revertPrs.add(String(pr.number)); // el PR de revert en sí
+    }
   }
 
-  // Filtrar noise, syncs y commits ya desplegados
-  const filtered = (headCommits ?? []).filter(c => {
-    const msg    = c.commit.message.split('\n')[0];
-    const author = c.commit.author?.name ?? c.author?.login ?? '';
-    if (BOT_AUTHOR_RE.test(author))  return false;
-    if (NOISE_MSG_RE.test(msg))      return false;
-    if (SYNC_MERGE_RE.test(msg))     return false;
-    const n = extractPrNumber(msg);
-    if (n && deployed.has(n))        return false;
+  const pending = merged.filter(pr => {
+    const num = String(pr.number);
+    if (pr.labels?.some(l => l.name === 'no-promote')) return false; // marcado explícitamente
+    if (deployedNums.has(num))   return false; // ya cherry-pickeado al destino
+    if (revertTargets.has(num))  return false; // fue revertido por otro PR pendiente
+    if (revertPrs.has(num))      return false; // es un revert de otro PR pendiente
     return true;
   });
 
-  // El endpoint /commits devuelve del más reciente al más antiguo
-  const recentCommits = filtered.slice(0, PENDING_COMMITS_LIMIT).map(c => {
-    const message = c.commit.message.split('\n')[0];
-    const tickets = extractJiraTickets(message);
+  const recentCommits = pending.slice(0, PENDING_COMMITS_LIMIT).map(pr => {
+    const tickets = extractJiraTickets(pr.title);
     return {
-      sha:     c.sha.slice(0, 7),
-      message,
-      date:    c.commit.committer?.date ?? c.commit.author?.date ?? null,
-      author:  c.commit.author?.name ?? c.author?.login ?? null,
-      tickets: tickets.map(t => ({ id: t, url: jiraUrl(t) })),
+      sha:       pr.merge_commit_sha?.slice(0, 7) ?? null,
+      message:   pr.title,
+      date:      pr.merged_at,
+      author:    pr.user?.login ?? null,
+      pr_number: String(pr.number),   // número explícito para el enlace directo en el dashboard
+      tickets:   tickets.map(t => ({ id: t, url: jiraUrl(t) })),
     };
   });
 
   return {
-    count:          filtered.length,
+    count:          pending.length,
     recent_commits: recentCommits,
   };
 }
@@ -330,10 +351,10 @@ async function processRepo(repo) {
 
   const [pendingToQa, pendingToProd, ciStatus] =
     await Promise.allSettled([
-      // develop→qa: commits en develop (últimos PENDING_WINDOW_DAYS) no presentes en QA
-      getPendingCommits(owner, name, 'develop', 'qa'),
-      // qa→main: commits en qa (últimos PENDING_WINDOW_DAYS) no presentes en main
-      getPendingCommits(owner, name, 'qa', 'main'),
+      // PRs mergeados a develop (últimos PENDING_WINDOW_DAYS) no presentes en QA
+      getPendingPRs(owner, name, 'develop', 'qa'),
+      // PRs mergeados a QA (últimos PENDING_WINDOW_DAYS) no presentes en main
+      getPendingPRs(owner, name, 'qa', 'main'),
       getCiStatus(owner, name, repo.default_branch),
     ]);
 

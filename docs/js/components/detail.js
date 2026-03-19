@@ -251,10 +251,9 @@ function pendingCommitList(title, count, commits, type, repoUrl, compareUrl) {
     const ageCls  = days === null ? '' : days > 14 ? 'age--urgent' : days > 6 ? 'age--warn' : '';
     const ageText = days !== null ? ageBadgeText(days) : null;
 
-    // Extraer #PR del final del mensaje (squash merge de GitHub: "título (#NNN)")
-    const prMatch  = c.message.match(/\(#(\d+)\)\s*$/);
-    const prNum    = prMatch ? prMatch[1] : null;
-    const cleanMsg = prMatch ? c.message.replace(/\s*\(#\d+\)\s*$/, '').trim() : c.message;
+    // PR number: viene explícito del generador (datos de PRs API) o se extrae del mensaje (legacy)
+    const prNum    = c.pr_number ?? (c.message.match(/\(#(\d+)\)\s*$/)?.[1] ?? null);
+    const cleanMsg = c.message.replace(/\s*\(#\d+\)\s*$/, '').trim();
 
     const prLink = prNum
       ? `<a class="pending-commit__pr" href="${escHtml(`${repoUrl}/pull/${prNum}`)}" target="_blank" rel="noopener">#${prNum}</a>`
