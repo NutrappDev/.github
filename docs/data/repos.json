@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-19T13:39:05.004Z",
+  "generated_at": "2026-03-19T17:28:23.452Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
-  "total_repos": 27,
+  "total_repos": 28,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -31,18 +31,13 @@
     },
     "SUP-184": {
       "summary": "BG | Datos Personales | Ajustes en actualización de datos",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "SUP-152": {
       "summary": "BG | Usuario Migrado | Paso a ser profesional",
       "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
-    },
-    "SUP-13": {
-      "summary": "Construcción de flujo para ordenes de alivia mexico y agregar banderas a las órdenes y usuarios",
-      "status": "Detenido",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SSO-161": {
       "summary": "BG | Cargar RUT | Botón no realiza acción",
@@ -64,35 +59,25 @@
       "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
     },
-    "PMO-2646": {
-      "summary": "Certificados automáticos | Solicitud de datos ",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
     "PMO-2639": {
       "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
       "status": "Despliegue a DEV",
       "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2634": {
+      "summary": "Error en visualización de pacientes Alivia",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
     },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
       "status": "Aprobado por QA",
       "assignee": "Miller Ladino Osorio"
     },
-    "PMO-2518": {
-      "summary": "SSO | Revisión de documento",
+    "PMO-2508": {
+      "summary": "No permite eliminar Productos Doctor Elias Stambullie",
       "status": "Actividad completada",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
-    },
-    "PMO-2352": {
-      "summary": "Ajuste navbar – efecto “shrink on scroll” (Nutrabiotics México)",
-      "status": "Actividad completada",
-      "assignee": "Juan Medina"
-    },
-    "PMO-2280": {
-      "summary": "Solicitud: Botón “¡Me interesa!” en ficha de producto Nutrabiotics Colombia",
-      "status": "Aprobado por QA",
-      "assignee": "Juan Medina"
+      "assignee": "ISABEL GOMEZ"
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
@@ -104,23 +89,13 @@
       "status": "Detenido",
       "assignee": "Miller Ladino Osorio"
     },
-    "NMX-316": {
-      "summary": "BG | Tablet | Nosotros | Años | Espacio sin contenido",
-      "status": "Actividad completada",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "NMX-315": {
-      "summary": "BG | Tablet | Trabaja con nosotros | Ajustar la columnas en el formulario",
-      "status": "Esperando aprobación",
-      "assignee": "Miller Ladino Osorio"
+    "NE-221": {
+      "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
+      "status": "Despliegue a PROD",
+      "assignee": "Kevin Aguilera"
     },
     "NE-197": {
       "summary": "HU-CAT-02 — Breadcrumb del catálogo",
-      "status": "Actividad completada",
-      "assignee": "Kevin Aguilera"
-    },
-    "NE-162": {
-      "summary": "BG | Botón | No redireccione a formulario Registro",
       "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
     },
@@ -129,44 +104,29 @@
       "status": "Detenido",
       "assignee": "David Sarmiento"
     },
-    "NE-146": {
-      "summary": "Épica 6 | PAGO DE CONTADO- Construcción integral del checkout para Nutrabióticos Empresas ",
-      "status": "Backlog",
-      "assignee": null
-    },
-    "NE-138": {
-      "summary": "SPRINT #08: Nutrabiotics Empresas",
-      "status": "En proceso",
-      "assignee": "David Sarmiento"
-    },
-    "NE-113": {
-      "summary": "[Historia de usuario: Catálogos y reglas de selects (País/Ciudad/Documento/Celular) para Persona Natural]",
-      "status": "Detenido",
-      "assignee": "Kevin Aguilera"
-    },
-    "NE-106": {
-      "summary": "Creación de historias de usuario del Home (habilitador del desarrollo)",
-      "status": "Actividad completada",
-      "assignee": "Cristhian Camilo Ruiz Segura"
-    },
     "NE-74": {
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
-    },
-    "NE-37": {
-      "summary": "Test Performance",
-      "status": "Por hacer",
-      "assignee": "Carlos Ali Parra"
     },
     "NCR-79": {
       "summary": "Refactor: Extraer lógica de notificaciones del servicio de orders para cumplir límite de 300 líneas",
       "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
-    "NCOL-639": {
-      "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Revisión QA",
+    "NCOL-647": {
+      "summary": "BG | Diseño botones \"Ver más\" no corresponden",
+      "status": "Pruebas de Regresión",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCOL-646": {
+      "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
+      "status": "Pruebas de Regresión",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCOL-637": {
+      "summary": "BG | Faltan meses en el calendario",
+      "status": "Cancelado",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-635": {
@@ -177,7 +137,7 @@
     "NCOL-572": {
       "summary": "Marzo 2026 - Bitácora de despliegues a PROD - Nutrabiotics Colombia",
       "status": "En proceso",
-      "assignee": "Carlos Ali Parra"
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "NCOL-563": {
       "summary": "Sprint #7 - Bugs UI/UX",
@@ -259,11 +219,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "NCOL-402": {
-      "summary": "BG | Leer más contraindicaciones | En todos los medicamentos se muestra Nalden",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
     "NCOL-401": {
       "summary": "BG | Línea Ética | Campo “Teléfono” y campo de “Búsqueda” no corresponden al diseño aprobado",
       "status": "Actividad completada",
@@ -278,16 +233,6 @@
       "summary": "BG | Línea Ética | Sección de 'Evidencias' mobile no respeta diseño aprobado",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
-    },
-    "NCOL-391": {
-      "summary": "BG | Login Profesional | Se muestran los medicamentos",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
-    "NCOL-256": {
-      "summary": "Creacion filtro por compuesto individual - catalogo de productos Nutrabiotcs Colombia",
-      "status": "Detenido",
-      "assignee": "ISABEL GOMEZ"
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
@@ -304,60 +249,10 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "DMF-41": {
-      "summary": "Despliegue a DEV - 1 incidencia de DMF",
+    "DE-338": {
+      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
       "status": "Actividad completada",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
-    },
-    "DMF-21": {
-      "summary": "Sección galería de fotos",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-20": {
-      "summary": "Retiro de educador- Johanna Rodríguez",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-19": {
-      "summary": "Primera sección, video Hero",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-18": {
-      "summary": "Sección- Esta Formación es para Ti",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-17": {
-      "summary": "Sección educadores",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-16": {
-      "summary": "Botones de la landing",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-15": {
-      "summary": "Sección Plan de pagos",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-14": {
-      "summary": "Sección contador",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-12": {
-      "summary": "Segunda sección: Pack de Medicina Funcional ",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
-    },
-    "DMF-11": {
-      "summary": "Ajustes para versión mobile",
-      "status": "Actividad completada",
-      "assignee": "Andres Felipe Robin Gonzalez"
     },
     "AMN-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -371,23 +266,13 @@
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
-      "status": "Pruebas de Regresión",
-      "assignee": "Felipe Berrio"
-    },
-    "ALMX-274": {
-      "summary": "BG | Footer | Año de copyright incorrecto en el sitio",
-      "status": "Actividad completada",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "ALMX-273": {
       "summary": "BG | Checkout / Pasarela de pago | Redirección incorrecta a ambiente Develop cuando el pago es rechazado",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALMX-270": {
-      "summary": "BG | Validación de perfil | Se muestra indicador de error sin existir una incidencia",
-      "status": "Despliegue a QA",
-      "assignee": "Kevin Aguilera"
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
@@ -399,45 +284,15 @@
       "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
-    "ALMX-255": {
-      "summary": "BG | Alivia México | Botón de WhatsApp redirige al contacto de Colombia",
-      "status": "Actividad completada",
-      "assignee": "Felipe Berrio"
-    },
-    "ALMX-248": {
-      "summary": "BG | Redirección | Botón redirige  a ALIVIA primero a Colombia y luego a México (URL incorrecta)",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-247": {
-      "summary": "BG | Autenticación | Botón no redirige a las pantallas de Login o Registro",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALMX-246": {
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-238": {
-      "summary": "BG | Buscador de Pacientes | Espacios adicionales en el campo de búsqueda generan resultados incorrectos",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-230": {
-      "summary": "Ajustes Alivia México",
-      "status": "Cancelado",
-      "assignee": "David Sarmiento"
     },
     "ALMX-228": {
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "ALCO-1437": {
-      "summary": "Fix validaciones en selects de documento y país en checkout",
-      "status": "Pruebas de Regresión",
-      "assignee": "Felipe Berrio"
     },
     "ALCO-1436": {
       "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
@@ -469,11 +324,6 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "ALCO-1211": {
-      "summary": "Bug de Alivia: no permite ver actualizado los precios o stock de los productos",
-      "status": "Pruebas de Regresión",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALCO-1210": {
       "summary": "Agregar a la card de usuario el estado del usuario ",
       "status": "Cancelado",
@@ -483,11 +333,6 @@
       "summary": "Poner tilde en la \"e\" en palabra \"Bioidénticas\"",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "ALCO-1204": {
-      "summary": "BG | Subir Archivo PDF | Ajustar el feedback del sistema",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1202": {
       "summary": "solicitud acceso wp  woocomerce  para operación",
@@ -503,9 +348,281 @@
       "summary": "Ajustar con Juan David las URL de los productos de Alivia y Nutrabiotics",
       "status": "Actividad completada",
       "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1100": {
+      "summary": "Realizar una documentación técnica de front-end sobre Alivia",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "ALCO-1043": {
+      "summary": "Actualizar la llamada del metodo lookup dentro de prescripciones para que sea optimizado el numero de peticiones al sso",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-910": {
+      "summary": "Arreglar placeholders en el checkout de Alivia",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-905": {
+      "summary": "Actualización de flujo de plantillas en Alivia",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-898": {
+      "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
+      "status": "Detenido",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-897": {
+      "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-895": {
+      "summary": "Construcción de 2 endpoints de visualización de las preferencias de donaciones del doctor, la preferencia general y la específica",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-468": {
+      "summary": "BG | Rol Paciente | Herramientas Seleccionadas | Genera Error ",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-448": {
+      "summary": "Despliegues semanales del backend de Alivia Colombia a ambiente de producción - Enero 2026",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
+    "ALCO-404": {
+      "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
+      "status": "Revisión QA",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-402": {
+      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-392": {
+      "summary": "EP-03 -Aumentar las opciones de diagnóstico",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-384": {
+      "summary": "EP-04 - Envio de las notificaciones al Wp de Pacientes y Medicos",
+      "status": "Despliegue a QA",
+      "assignee": "Felipe Berrio"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
+    "ALCO-142": {
+      "summary": "Quienes somos - Rol Medico y Paciente ",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "AIA-43": {
+      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-34": {
+      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-32": {
+      "summary": "BG | Abrir chat genera error del token",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-74": {
+      "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
+      "status": "En Curso",
+      "assignee": "Mario Eraso"
+    },
+    "ACE-72": {
+      "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
+      "status": "Esperando Aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "ACE-67": {
+      "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-66": {
+      "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
+      "status": "En Curso",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-57": {
+      "summary": "Librería ERP - Pruebas de validación de nuevos artefactos de integración",
+      "status": "Esperando Aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "ACE-56": {
+      "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-54": {
+      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
+      "status": "En Curso",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-53": {
+      "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-8": {
+      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
+      "status": "En Curso",
+      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
+    {
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
+      "description": null,
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-19T16:17:01Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-03-19",
+        "sha": "72ba199a333012694f73ccba845cce50e1b55f33",
+        "date": "2026-03-19T16:17:00Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-19",
+        "body": "Release prod-2026-03-19\n"
+      },
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-03-17",
+        "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
+        "date": "2026-03-17T16:16:50Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
+        "body": "Release qa-2026-03-17\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-09",
+          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
+          "date": "2026-03-09T21:53:49Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
+          "body": "Release qa-2026-03-09\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "0ce8a3a",
+              "message": "feat(erp): conectar dashboard con endpoints reales de eventos ACE-67",
+              "date": "2026-03-16T21:46:10Z",
+              "author": "jsandoval-dev",
+              "pr_number": "165",
+              "tickets": [
+                {
+                  "id": "ACE-67",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-67"
+                }
+              ]
+            },
+            {
+              "sha": "882809a",
+              "message": "feat(erp): agregar dashboard de monitoreo con métricas y cola de transacciones ACE-66",
+              "date": "2026-03-11T22:41:33Z",
+              "author": "jsandoval-dev",
+              "pr_number": "162",
+              "tickets": [
+                {
+                  "id": "ACE-66",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "5a835dc",
+              "message": "release: qa 2026 03 17 SUP-272",
+              "date": "2026-03-17T16:16:37Z",
+              "author": "CristiGB",
+              "pr_number": "166",
+              "tickets": [
+                {
+                  "id": "SUP-272",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
+                }
+              ]
+            },
+            {
+              "sha": "d026f20",
+              "message": "release: QA2026-03-05 SUP-184",
+              "date": "2026-03-09T21:53:39Z",
+              "author": "CristiGB",
+              "pr_number": "160",
+              "tickets": [
+                {
+                  "id": "SUP-184",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-19T14:18:52Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": null,
+        "to_production": null
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-19T17%3A28%3A21.926Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-19T17%3A28%3A21.926Z → 409 Conflict",
+        "ci": null
+      }
+    },
     {
       "name": "sso-micuenta",
       "full_name": "NutrappDev/sso-micuenta",
@@ -536,84 +653,32 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 1,
           "recent_commits": [
             {
-              "sha": "78a757f",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:25Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "fdcd879",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:22Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "d1bccc6",
-              "message": "Merge pull request #65 from NutrappDev/fix/NE-197-backup-user-role-sso",
+              "message": "fix: Backup function for user role NE-197 ",
               "date": "2026-02-18T18:32:44Z",
               "author": "k-aguilera",
+              "pr_number": "65",
               "tickets": [
                 {
                   "id": "NE-197",
                   "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
                 }
               ]
-            },
-            {
-              "sha": "d0de038",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-02-18T17:23:09Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "19ed0de",
-              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
-              "date": "2026-02-16T19:23:40Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "2147cb8",
-              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
-              "date": "2026-01-08T13:54:10Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALCO-1309",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
-                }
-              ]
-            },
-            {
-              "sha": "ce5069e",
-              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
-              "date": "2026-01-07T22:17:09Z",
-              "author": "cristigb",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 12,
+          "count": 3,
           "recent_commits": [
             {
               "sha": "3c75038",
-              "message": "Merge pull request #74 from NutrappDev/release/qa-2026-03-18",
-              "date": "2026-03-19T13:38:40Z",
+              "message": "release: qa 2026 03 18 ALMX-246",
+              "date": "2026-03-19T13:38:41Z",
               "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "c3913b8",
-              "message": "fix: Refactor ecosystem URLs to use utility functions for country-specific links ALMX-246 (#71)",
-              "date": "2026-03-18T23:45:45Z",
-              "author": "Isabel Gomez Balvin",
+              "pr_number": "74",
               "tickets": [
                 {
                   "id": "ALMX-246",
@@ -622,36 +687,11 @@
               ]
             },
             {
-              "sha": "a6474ca",
-              "message": "fix: correccion del flujo de advertencias para credenciales ALMX-270 (#70)",
-              "date": "2026-03-18T23:45:38Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "ALMX-270",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-270"
-                }
-              ]
-            },
-            {
-              "sha": "535c8aa",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:23Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "5f1d547",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:19Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "efffb0d",
-              "message": "feat: All configuration to natural person NE-151 (#67)",
+              "message": "release: qa 2026 03 09 NE-151",
               "date": "2026-03-09T22:11:13Z",
-              "author": "k-aguilera",
+              "author": "CristiGB",
+              "pr_number": "69",
               "tickets": [
                 {
                   "id": "NE-151",
@@ -660,55 +700,11 @@
               ]
             },
             {
-              "sha": "3fc02e0",
-              "message": "fix: Add a backup function for user without group, config validation on bussines form and tooltip component creation",
-              "date": "2026-03-09T22:11:13Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
               "sha": "e8a8fc6",
-              "message": "Merge pull request #61 from NutrappDev/develop",
+              "message": "Merge QA",
               "date": "2026-02-16T20:30:20Z",
               "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "181eb53",
-              "message": "Merge pull request #60 from NutrappDev/fix/NE-113-types-refactor-and-bussines-flow",
-              "date": "2026-02-16T20:16:48Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-113"
-                }
-              ]
-            },
-            {
-              "sha": "19ed0de",
-              "message": "fix: Refactor on some types and utils for bussines flow, refactor on ecosystems visibles on Navbar and UserLayoyt, and add alias import on some files",
-              "date": "2026-02-16T19:23:40Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "2147cb8",
-              "message": "fix: Enhance file validation with specific error messages for unsupported formats and size limits ALCO-1309",
-              "date": "2026-01-08T13:54:10Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALCO-1309",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1309"
-                }
-              ]
-            },
-            {
-              "sha": "ce5069e",
-              "message": "feat(CredentialsUpdate): Support simultaneous updates for seal and credentials files, improve validation and error handling",
-              "date": "2026-01-07T22:17:09Z",
-              "author": "cristigb",
+              "pr_number": "61",
               "tickets": []
             }
           ]
@@ -739,13 +735,14 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "936fe9b",
-              "message": "feat(payments): status update ACE-74 (#59)",
-              "date": "2026-03-19T13:16:35Z",
+              "message": "feat(payments): status update ACE-74",
+              "date": "2026-03-19T13:16:36Z",
               "author": "meraso-nutra",
+              "pr_number": "59",
               "tickets": [
                 {
                   "id": "ACE-74",
@@ -754,17 +751,11 @@
               ]
             },
             {
-              "sha": "82d53a7",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:51Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "c1f8fa9",
-              "message": "fix(paypal): config paypal ALMX-273 (#58)",
-              "date": "2026-03-12T15:42:43Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "message": "fix(paypal): config paypal ALMX-273",
+              "date": "2026-03-12T15:42:44Z",
+              "author": "fabianromerolu",
+              "pr_number": "58",
               "tickets": [
                 {
                   "id": "ALMX-273",
@@ -773,17 +764,11 @@
               ]
             },
             {
-              "sha": "3387865",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:52Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "3b8f35b",
-              "message": "fix(paypal): config serveless ALMX-273 (#57)",
-              "date": "2026-03-11T20:55:39Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:55:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "57",
               "tickets": [
                 {
                   "id": "ALMX-273",
@@ -793,9 +778,10 @@
             },
             {
               "sha": "54c2151",
-              "message": "fix(paypal): config serveless ALMX-273 (#56)",
+              "message": "fix(paypal): config serveless ALMX-273",
               "date": "2026-03-11T20:19:06Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "author": "fabianromerolu",
+              "pr_number": "56",
               "tickets": [
                 {
                   "id": "ALMX-273",
@@ -805,9 +791,10 @@
             },
             {
               "sha": "55b8a10",
-              "message": "feat(paypal): agg environment ALMX-273 (#54)",
+              "message": "feat(paypal): agg environment ALMX-273",
               "date": "2026-03-11T17:52:41Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "author": "fabianromerolu",
+              "pr_number": "54",
               "tickets": [
                 {
                   "id": "ALMX-273",
@@ -817,9 +804,10 @@
             },
             {
               "sha": "f144cc7",
-              "message": "feat(paypal): ajustar paypal return url ALMX-273 (#53)",
+              "message": "feat(paypal): ajustar paypal return url ALMX-273",
               "date": "2026-03-09T21:35:02Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "author": "fabianromerolu",
+              "pr_number": "53",
               "tickets": [
                 {
                   "id": "ALMX-273",
@@ -829,30 +817,34 @@
             },
             {
               "sha": "699d4c8",
-              "message": "Fix/paypal (#49)",
+              "message": "Fix/paypal",
               "date": "2026-02-26T13:38:30Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "author": "fabianromerolu",
+              "pr_number": "49",
               "tickets": []
             },
             {
               "sha": "9c01b2a",
-              "message": "Fix/paypal (#48)",
-              "date": "2026-02-25T19:58:33Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "message": "Fix/paypal",
+              "date": "2026-02-25T19:58:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "48",
               "tickets": []
             },
             {
               "sha": "72a5995",
-              "message": "feat(env): commit for deploying aws variables (#46)",
-              "date": "2026-02-24T20:07:40Z",
+              "message": "feat(env): commit for deploying aws variables",
+              "date": "2026-02-24T20:07:41Z",
               "author": "meraso-nutra",
+              "pr_number": "46",
               "tickets": []
             },
             {
               "sha": "e40a0ff",
-              "message": "feat(cors): added local host 3300 in cors (#45)",
+              "message": "feat(cors): added local host 3300 in cors",
               "date": "2025-12-19T17:32:15Z",
-              "author": "Mario Eraso",
+              "author": "marioeraso",
+              "pr_number": "45",
               "tickets": []
             }
           ]
@@ -897,211 +889,22 @@
           "recent_commits": []
         },
         "to_production": {
-          "count": 34,
+          "count": 2,
           "recent_commits": [
             {
-              "sha": "abbff73",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:30Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "40b9ee7",
-              "message": "test: update readme to debug deploy",
-              "date": "2026-03-13T15:58:59Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "6639812",
-              "message": "fix: build latest no quemado",
-              "date": "2026-03-13T15:46:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "43e4e70",
-              "message": "test: add reamde for debug deploy",
-              "date": "2026-03-13T15:43:23Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "2358014",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:18Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "22ebbd7",
-              "message": "fix: latest quemado",
-              "date": "2026-02-17T13:41:07Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "3144cdd",
-              "message": "Merge pull request #38 from NutrappDev/feat/NE-106-business-type-flow-config",
-              "date": "2026-02-16T20:40:40Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "ae6c2ef",
               "message": "fix: Adjust on cmd",
-              "date": "2026-02-16T20:39:46Z",
-              "author": "Aguilera Kevin",
+              "date": "2026-02-16T20:40:41Z",
+              "author": "k-aguilera",
+              "pr_number": "38",
               "tickets": []
             },
             {
               "sha": "a673ab9",
-              "message": "Merge pull request #37 from NutrappDev/feat/NE-106-business-type-flow-config",
+              "message": "Business type flow config",
               "date": "2026-02-16T19:16:10Z",
               "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "1f33244",
-              "message": "fix: Add scrolling section on forms  NE-106",
-              "date": "2026-02-16T19:00:51Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "07e544d",
-              "message": "fix: repository de variable - espacios",
-              "date": "2026-02-16T17:11:38Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "5f59abb",
-              "message": "fix: repository de variable",
-              "date": "2026-02-16T17:06:31Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "b711149",
-              "message": "fix: cluster de variable",
-              "date": "2026-02-16T15:57:45Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "6eb41cb",
-              "message": "fix(pipeline): quemado cluster",
-              "date": "2026-02-16T15:37:34Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "00cec3d",
-              "message": "build: ecr quemado a qa",
-              "date": "2026-02-16T15:31:44Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a7cf3c5",
-              "message": "fix(pipeline): env stage to qa",
-              "date": "2026-02-16T15:24:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "91550dd",
-              "message": "build(aws): pipeline to qa",
-              "date": "2026-02-16T15:18:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "1efcce1",
-              "message": "build: pipeline qa",
-              "date": "2026-02-16T15:16:49Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "62020e9",
-              "message": "fix: Change data number for natural and legal",
-              "date": "2026-02-15T05:54:56Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "11d7d08",
-              "message": "feat: Update business reitration flow  NE-106",
-              "date": "2026-02-13T19:26:15Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "NE-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-106"
-                }
-              ]
-            },
-            {
-              "sha": "511d81d",
-              "message": "fix: Temp adjustment to finalForm",
-              "date": "2026-02-12T20:04:54Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "cfa9384",
-              "message": "feat: Forms selection B2B-101",
-              "date": "2026-02-12T12:33:23Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "4eda596",
-              "message": "feat: bussines selector config B2B-101",
-              "date": "2026-02-11T05:46:02Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-101",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-101"
-                }
-              ]
-            },
-            {
-              "sha": "659e7ce",
-              "message": "fix(sso-127): reiniciar pasos al cancelar",
-              "date": "2026-01-05T18:29:05Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "1549554",
-              "message": "fix(sso-165): ajuste final redirecci+on",
-              "date": "2026-01-05T15:22:17Z",
-              "author": "Jorge Garay",
+              "pr_number": "37",
               "tickets": []
             }
           ]
@@ -1130,7 +933,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-18T20:21:01Z",
+      "last_push": "2026-03-19T16:27:35Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1152,13 +955,14 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "1944a89",
-              "message": "fix(products): remover mensaje de hormonas en dispensario MX ALMX-256 (#355)",
+              "message": "fix(products): remover mensaje de hormonas en dispensario MX ALMX-256",
               "date": "2026-03-18T20:20:59Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "355",
               "tickets": [
                 {
                   "id": "ALMX-256",
@@ -1168,9 +972,10 @@
             },
             {
               "sha": "8437bfe",
-              "message": "fix(navbar): eliminar punto blanco visible en área de autenticación ALMX-261 (#352)",
+              "message": "fix(navbar): eliminar punto blanco visible en área de autenticación ALMX-261",
               "date": "2026-03-17T21:40:52Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "352",
               "tickets": [
                 {
                   "id": "ALMX-261",
@@ -1179,24 +984,11 @@
               ]
             },
             {
-              "sha": "85206dd",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:13:47Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "928daed",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:50Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "30c4623",
-              "message": "refactor(notifications): migrar envio de notificacion de orden al endpoint dispatch ALCO-1436 (#333)",
-              "date": "2026-03-05T19:08:55Z",
-              "author": "Felipe Berrio",
+              "message": "refactor(notifications): migrar envio de notificacion de orden al endpoint dispatch ALCO-1436",
+              "date": "2026-03-05T19:08:56Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "333",
               "tickets": [
                 {
                   "id": "ALCO-1436",
@@ -1206,98 +998,52 @@
             },
             {
               "sha": "d2b236a",
-              "message": "refactor(products): improve product unit calculation and enhance prescription handling ALMX-230",
+              "message": "refactor(products): improve product unit calculation and enhance pres…",
               "date": "2026-02-26T21:58:33Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALMX-230",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-230"
-                }
-              ]
+              "author": "CristiGB",
+              "pr_number": "327",
+              "tickets": []
             },
             {
               "sha": "0d5355c",
               "message": "checkout mx terminado",
               "date": "2026-02-23T19:13:13Z",
               "author": "fabianromerolu",
+              "pr_number": "318",
               "tickets": []
             },
             {
               "sha": "c4e5fb6",
-              "message": "fix(prescriptions): se actualizo el flujo de plantillas para que engranara nuevamente con base a los nuevos requermientos y la nueva logica implementada en el back y portal-admin",
-              "date": "2026-02-16T21:43:07Z",
+              "message": "fix/ALCO-1390_templates",
+              "date": "2026-02-16T21:43:08Z",
               "author": "fabianromerolu",
-              "tickets": []
+              "pr_number": "312",
+              "tickets": [
+                {
+                  "id": "ALCO-1390",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1390"
+                }
+              ]
             },
             {
               "sha": "62c85fc",
-              "message": "refactor(checkout): Actualizacion de placeholders para el checkout de alivia",
+              "message": "refactor/ALCO-1391_placeholders_checkout",
               "date": "2026-02-16T21:42:53Z",
               "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "3685fc8",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia",
-              "date": "2026-02-06T21:16:46Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "7edaa86",
-              "message": "fix: update maximum base for free hormones shipping eligibility",
-              "date": "2026-02-02T15:10:00Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "76cd361",
-              "message": "fix: reduce maximum input length for product batch field in ReclamationsBook component",
-              "date": "2026-01-28T22:42:59Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "7d95d26",
-              "message": "feat: enhance input validation and max length handling in ReclamationsBook component",
-              "date": "2026-01-28T21:29:01Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "d3380e8",
-              "message": "fix: add optional chaining for presentations in PrescriptionReview and usePatientDetail components",
-              "date": "2026-01-23T20:59:25Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "208dd52",
-              "message": "feat: add quantity parsing logic to PrescriptionReview component",
-              "date": "2026-01-23T19:32:30Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "f96c6e8",
-              "message": "feat: implement custom amount input handling in MomentsDayPrescription component",
-              "date": "2026-01-23T15:53:30Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "1bccdfb",
-              "message": "feat: add Animation_9 video and enable preload in nosotros page",
-              "date": "2026-01-23T14:43:13Z",
-              "author": "cristigb",
-              "tickets": []
+              "pr_number": "313",
+              "tickets": [
+                {
+                  "id": "ALCO-1391",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1391"
+                }
+              ]
             },
             {
               "sha": "14c88d1",
               "message": "refactor: textos regulatorios ALCO-1279",
               "date": "2026-01-15T14:59:53Z",
               "author": "fabianromerolu",
+              "pr_number": "282",
               "tickets": [
                 {
                   "id": "ALCO-1279",
@@ -1310,128 +1056,54 @@
               "message": "dosis en plural dependiendo de la cantidad",
               "date": "2026-01-14T14:10:53Z",
               "author": "fabianromerolu",
+              "pr_number": "280",
               "tickets": []
             },
             {
               "sha": "c730f8f",
-              "message": "feat: nuevos diagnosticos agregados",
+              "message": "Feat/ALCO-1299/new diagnosis",
               "date": "2026-01-07T19:09:31Z",
               "author": "fabianromerolu",
-              "tickets": []
+              "pr_number": "272",
+              "tickets": [
+                {
+                  "id": "ALCO-1299",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1299"
+                }
+              ]
             }
           ]
         },
         "to_production": {
-          "count": 43,
+          "count": 21,
           "recent_commits": [
             {
               "sha": "ac9d089",
-              "message": "release: qa 2026 03 17 ALMX-277 (#353)",
-              "date": "2026-03-17T16:17:00Z",
-              "author": "Isabel Gomez Balvin",
+              "message": "release: qa 2026 03 17 ALMX-277",
+              "date": "2026-03-17T16:17:01Z",
+              "author": "CristiGB",
+              "pr_number": "353",
               "tickets": [
                 {
                   "id": "ALMX-277",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-277"
                 }
               ]
-            },
-            {
-              "sha": "f885751",
-              "message": "fix(products): ajustar tamaño de fuente del título en detalle de producto para móvil ALMX-277 (#351)",
-              "date": "2026-03-17T15:35:55Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-277",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-277"
-                }
-              ]
-            },
-            {
-              "sha": "a4e2258",
-              "message": "fix(orders): corregir validaciones select tipo documento y país en checkout ALCO-1437 (#350)",
-              "date": "2026-03-17T15:35:27Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALCO-1437",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1437"
-                }
-              ]
-            },
-            {
-              "sha": "ddf9a93",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:13:45Z",
-              "author": "Jorge Garay",
-              "tickets": []
             },
             {
               "sha": "9aa7003",
-              "message": "fix(navbar): update Alivia link ALMX-248 (#346)",
+              "message": "release: qa 2026-03-12",
               "date": "2026-03-12T22:52:30Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALMX-248",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-248"
-                }
-              ]
-            },
-            {
-              "sha": "e7df5ca",
-              "message": "refactor(search): optimize search term handling by trimming whitespace ALMX-238 (#345)",
-              "date": "2026-03-12T22:52:30Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALMX-238",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-238"
-                }
-              ]
-            },
-            {
-              "sha": "e84e8f8",
-              "message": "feat(auth): add authentication buttons for user login ALMX-247 (#344)",
-              "date": "2026-03-12T22:52:30Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALMX-247",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-247"
-                }
-              ]
-            },
-            {
-              "sha": "77418b5",
-              "message": "fix(footer): mostrar año dinámico en lugar de año hardcodeado ALMX-274 (#347)",
-              "date": "2026-03-12T22:52:30Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-274",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-274"
-                }
-              ]
-            },
-            {
-              "sha": "e5fa5fe",
-              "message": "fix: corregir número de whatsapp según país ALMX-255 (#340)",
-              "date": "2026-03-12T22:52:30Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-255",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-255"
-                }
-              ]
+              "author": "CristiGB",
+              "pr_number": "348",
+              "tickets": []
             },
             {
               "sha": "8a1eded",
-              "message": "feat(navbar): AMN-15 add country-specific Nutrabiotics URLs for dynamic linking  (#334)",
+              "message": "feat(navbar): AMN-15 add Country-specific nutrabiotics URLs for dynamics",
               "date": "2026-03-12T22:51:12Z",
-              "author": "Isabel Gomez Balvin",
+              "author": "CristiGB",
+              "pr_number": "349",
               "tickets": [
                 {
                   "id": "AMN-15",
@@ -1440,29 +1112,11 @@
               ]
             },
             {
-              "sha": "b4cbaa3",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:48Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "56061ec",
-              "message": "fix(shipping): update shipping cost thresholds for Mexico PMO-2667 (#330)",
+              "message": "fix(shipping): update shipping cost thresholds for Mexico PMO-2667",
               "date": "2026-03-03T19:33:27Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2667",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2667"
-                }
-              ]
-            },
-            {
-              "sha": "4fadcd2",
-              "message": "fix(shipping): update shipping cost thresholds for Mexico PMO-2667 (#329)",
-              "date": "2026-03-03T14:46:15Z",
-              "author": "Isabel Gomez Balvin",
+              "author": "CristiGB",
+              "pr_number": "330",
               "tickets": [
                 {
                   "id": "PMO-2667",
@@ -1472,89 +1126,34 @@
             },
             {
               "sha": "78e8922",
-              "message": "Develop (#328)",
+              "message": "Develop",
               "date": "2026-02-27T16:05:12Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "d2b236a",
-              "message": "refactor(products): improve product unit calculation and enhance prescription handling ALMX-230",
-              "date": "2026-02-26T21:58:33Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "ALMX-230",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-230"
-                }
-              ]
-            },
-            {
-              "sha": "4980261",
-              "message": "fix/FormAndCheckout (#326)",
-              "date": "2026-02-26T13:38:39Z",
-              "author": "Fabián Mauricio Romero lugo",
+              "author": "CristiGB",
+              "pr_number": "328",
               "tickets": []
             },
             {
               "sha": "6c17fbe",
-              "message": "Develop (#325)",
+              "message": "Develop",
               "date": "2026-02-25T20:53:59Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "241d19e",
-              "message": "feat(checkout): add OrderErrorModal for handling order processing errors (#324)",
-              "date": "2026-02-25T16:30:52Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "f7186ea",
-              "message": "Fix/calculare prices alco 1293 (#323)",
-              "date": "2026-02-25T13:10:42Z",
-              "author": "Isabel Gomez Balvin",
+              "author": "CristiGB",
+              "pr_number": "325",
               "tickets": []
             },
             {
               "sha": "8c8a5b7",
-              "message": "Develop (#321)",
-              "date": "2026-02-24T21:58:51Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": []
-            },
-            {
-              "sha": "14001b9",
-              "message": "Feat/checkout mx (#320)",
-              "date": "2026-02-24T17:14:54Z",
-              "author": "Fabián Mauricio Romero lugo",
-              "tickets": []
-            },
-            {
-              "sha": "dd3fb8a",
-              "message": "Feat(products): ALCO-1394 re fetch products (#319)",
-              "date": "2026-02-23T20:40:13Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALCO-1394",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1394"
-                }
-              ]
-            },
-            {
-              "sha": "0d5355c",
-              "message": "checkout mx terminado",
-              "date": "2026-02-23T19:13:13Z",
-              "author": "fabianromerolu",
+              "message": "Develop",
+              "date": "2026-02-24T21:58:52Z",
+              "author": "CristiGB",
+              "pr_number": "321",
               "tickets": []
             },
             {
               "sha": "6673b2a",
-              "message": "docs(terms): terminos y condiciones mexico ALMX-228 (#317)",
+              "message": "docs(terms): terminos y condiciones mexico ALMX-228",
               "date": "2026-02-20T14:17:11Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "317",
               "tickets": [
                 {
                   "id": "ALMX-228",
@@ -1563,373 +1162,122 @@
               ]
             },
             {
-              "sha": "a3421bb",
-              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228 (#316)",
-              "date": "2026-02-19T22:57:41Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
-      "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-18T02:55:11Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
-        "date": "2026-03-17T16:16:50Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-03-09",
-          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
-          "date": "2026-03-09T21:53:49Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
-          "body": "Release qa-2026-03-09\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 17,
-          "recent_commits": [
+              "sha": "bfe2410",
+              "message": "Develop",
+              "date": "2026-02-16T22:04:03Z",
+              "author": "fabianromerolu",
+              "pr_number": "314",
+              "tickets": []
+            },
             {
-              "sha": "0ce8a3a",
-              "message": "feat(erp): conectar dashboard con endpoints reales de eventos ACE-67 (#165)",
-              "date": "2026-03-16T21:46:10Z",
-              "author": "jsandoval-dev",
+              "sha": "5b3ab05",
+              "message": "hotfix: normalize patient data PMO-2634 (#310)",
+              "date": "2026-02-10T20:54:22Z",
+              "author": "CristiGB",
+              "pr_number": "311",
               "tickets": [
                 {
-                  "id": "ACE-67",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-67"
+                  "id": "PMO-2634",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
                 }
               ]
             },
             {
-              "sha": "c5c8014",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:19Z",
-              "author": "Jorge Garay",
+              "sha": "51c4a1f",
+              "message": "Develop",
+              "date": "2026-02-06T21:36:54Z",
+              "author": "CristiGB",
+              "pr_number": "309",
               "tickets": []
             },
             {
-              "sha": "75dfe1b",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:58Z",
-              "author": "Jorge Garay",
+              "sha": "2f164d8",
+              "message": "refactor: update shipping logic  (#286)",
+              "date": "2026-01-19T22:16:36Z",
+              "author": "CristiGB",
+              "pr_number": "287",
               "tickets": []
             },
             {
-              "sha": "882809a",
-              "message": "feat(erp): agregar dashboard de monitoreo con métricas y cola de transacciones ACE-66 (#162)",
-              "date": "2026-03-11T22:41:33Z",
-              "author": "jsandoval-dev",
+              "sha": "5ec5ae0",
+              "message": "Develop",
+              "date": "2026-01-15T20:29:00Z",
+              "author": "CristiGB",
+              "pr_number": "284",
+              "tickets": []
+            },
+            {
+              "sha": "907f8e9",
+              "message": "fix: clean cart PMO-2508 (#278)",
+              "date": "2026-01-13T21:36:50Z",
+              "author": "CristiGB",
+              "pr_number": "279",
               "tickets": [
                 {
-                  "id": "ACE-66",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
+                  "id": "PMO-2508",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2508"
                 }
               ]
             },
             {
-              "sha": "1b8e96e",
-              "message": "ajuste de unidades en ordenes con pdf",
-              "date": "2026-02-04T20:24:49Z",
+              "sha": "e48740e",
+              "message": "Develop",
+              "date": "2026-01-08T20:17:09Z",
               "author": "fabianromerolu",
+              "pr_number": "277",
               "tickets": []
             },
             {
-              "sha": "cb0c247",
-              "message": "se eliminaron archivos innecesarios del flujo de plantillas",
-              "date": "2026-02-03T21:37:29Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "76a4b12",
-              "message": "actualizacion y visual individual de plantillas",
-              "date": "2026-02-03T21:25:13Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "067bc1f",
-              "message": "diseño para plantillas",
-              "date": "2026-02-01T00:54:37Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "e34e33e",
-              "message": "diseño para plantillas",
-              "date": "2026-01-28T23:06:11Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "29e40c4",
-              "message": "diseño para plantillas",
-              "date": "2026-01-28T22:40:33Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "048f8cd",
-              "message": "feat: templates styles",
-              "date": "2026-01-28T18:20:46Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "8e548fa",
-              "message": "feat(templates): diseño aplicado a grid de plantillas ALCO-1305",
-              "date": "2026-01-26T21:41:09Z",
-              "author": "fabianromerolu",
+              "sha": "8032ef0",
+              "message": "fix: fix patient selected tools ALCO-1308",
+              "date": "2026-01-07T22:28:31Z",
+              "author": "CristiGB",
+              "pr_number": "275",
               "tickets": [
                 {
-                  "id": "ALCO-1305",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1305"
+                  "id": "ALCO-1308",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1308"
                 }
               ]
             },
             {
-              "sha": "9674847",
-              "message": "feat: diseño aplicado a plantillas",
-              "date": "2026-01-22T15:19:15Z",
+              "sha": "c730f8f",
+              "message": "Develop",
+              "date": "2026-01-07T19:48:00Z",
               "author": "fabianromerolu",
+              "pr_number": "273",
               "tickets": []
             },
             {
-              "sha": "e69e61f",
-              "message": "feat(product-detail): enhance content display by grouping and translating role labels",
-              "date": "2026-01-08T22:08:07Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "e355e74",
-              "message": "fix: update toast messages for category deletion in CategoriesPage",
-              "date": "2025-12-30T19:36:17Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "c3a9ec6",
-              "message": "feat(orders): nuevos parametros para getAllOrders SUP-200",
-              "date": "2025-12-29T19:53:16Z",
+              "sha": "6c9ba12",
+              "message": "Develop",
+              "date": "2026-01-07T14:50:20Z",
               "author": "fabianromerolu",
-              "tickets": [
-                {
-                  "id": "SUP-200",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-200"
-                }
-              ]
+              "pr_number": "271",
+              "tickets": []
             },
             {
-              "sha": "2fa22a1",
-              "message": "fix: se ajusto el cambio de estado de los pedidos y el copyright",
-              "date": "2025-12-26T15:57:08Z",
+              "sha": "f8a63e1",
+              "message": "Develop",
+              "date": "2026-01-06T21:57:08Z",
+              "author": "CristiGB",
+              "pr_number": "269",
+              "tickets": []
+            },
+            {
+              "sha": "a6dcd70",
+              "message": "text baner for cart (#266)",
+              "date": "2026-01-06T21:12:31Z",
               "author": "fabianromerolu",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 20,
-          "recent_commits": [
-            {
-              "sha": "5a835dc",
-              "message": "Merge pull request #166 from NutrappDev/release/qa-2026-03-17",
-              "date": "2026-03-17T16:16:37Z",
-              "author": "Isabel Gomez Balvin",
+              "pr_number": "267",
               "tickets": []
             },
             {
-              "sha": "5aa2ae3",
-              "message": "refactor(users): create-user-block SUP-272 (#163)",
-              "date": "2026-03-17T16:10:31Z",
-              "author": "Fabián Mauricio Romero lugo",
-              "tickets": [
-                {
-                  "id": "SUP-272",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
-                }
-              ]
-            },
-            {
-              "sha": "3163e46",
-              "message": "refactor(orders): flags new section orders SUP-13 (#161)",
-              "date": "2026-03-17T16:09:52Z",
-              "author": "Fabián Mauricio Romero lugo",
-              "tickets": [
-                {
-                  "id": "SUP-13",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-13"
-                }
-              ]
-            },
-            {
-              "sha": "6024a87",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:17Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "0772ccc",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:56Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "d026f20",
-              "message": "fix: remove unused pages and components for ecosystems, assets, and roles SUP-184 (#159)",
-              "date": "2026-03-09T21:53:39Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "SUP-184",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
-                }
-              ]
-            },
-            {
-              "sha": "7cc724f",
-              "message": "refactor: SUP-184 update users (#156)",
-              "date": "2026-03-09T21:53:39Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "SUP-184",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
-                }
-              ]
-            },
-            {
-              "sha": "1b8e96e",
-              "message": "ajuste de unidades en ordenes con pdf",
-              "date": "2026-02-04T20:24:49Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "cb0c247",
-              "message": "se eliminaron archivos innecesarios del flujo de plantillas",
-              "date": "2026-02-03T21:37:29Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "76a4b12",
-              "message": "actualizacion y visual individual de plantillas",
-              "date": "2026-02-03T21:25:13Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "067bc1f",
-              "message": "diseño para plantillas",
-              "date": "2026-02-01T00:54:37Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "e34e33e",
-              "message": "diseño para plantillas",
-              "date": "2026-01-28T23:06:11Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "29e40c4",
-              "message": "diseño para plantillas",
-              "date": "2026-01-28T22:40:33Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "048f8cd",
-              "message": "feat: templates styles",
-              "date": "2026-01-28T18:20:46Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "8e548fa",
-              "message": "feat(templates): diseño aplicado a grid de plantillas ALCO-1305",
-              "date": "2026-01-26T21:41:09Z",
-              "author": "fabianromerolu",
-              "tickets": [
-                {
-                  "id": "ALCO-1305",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1305"
-                }
-              ]
-            },
-            {
-              "sha": "9674847",
-              "message": "feat: diseño aplicado a plantillas",
-              "date": "2026-01-22T15:19:15Z",
-              "author": "fabianromerolu",
-              "tickets": []
-            },
-            {
-              "sha": "e69e61f",
-              "message": "feat(product-detail): enhance content display by grouping and translating role labels",
-              "date": "2026-01-08T22:08:07Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "e355e74",
-              "message": "fix: update toast messages for category deletion in CategoriesPage",
-              "date": "2025-12-30T19:36:17Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "c3a9ec6",
-              "message": "feat(orders): nuevos parametros para getAllOrders SUP-200",
-              "date": "2025-12-29T19:53:16Z",
-              "author": "fabianromerolu",
-              "tickets": [
-                {
-                  "id": "SUP-200",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-200"
-                }
-              ]
-            },
-            {
-              "sha": "2fa22a1",
-              "message": "fix: se ajusto el cambio de estado de los pedidos y el copyright",
-              "date": "2025-12-26T15:57:08Z",
-              "author": "fabianromerolu",
+              "sha": "880aecf",
+              "message": "Develop merge qa",
+              "date": "2025-12-22T21:13:16Z",
+              "author": "Alejandra230301",
+              "pr_number": "262",
               "tickets": []
             }
           ]
@@ -1974,530 +1322,126 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 44,
+          "count": 1,
           "recent_commits": [
-            {
-              "sha": "3763d89",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:12Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
               "date": "2026-03-13T13:44:39Z",
               "author": "k-aguilera",
+              "pr_number": "35",
               "tickets": [
                 {
                   "id": "NE-74",
                   "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
                 }
               ]
-            },
-            {
-              "sha": "af97899",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "d231804",
-              "message": "feat: Creation of contact directory page and bugs resolition NE-74",
-              "date": "2026-03-03T19:04:11Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-74",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
-                }
-              ]
-            },
-            {
-              "sha": "1f7025e",
-              "message": "fix: Corrections bugs on home and catalog NE-37",
-              "date": "2026-02-26T17:49:08Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "8417c81",
-              "message": "text: keycloak contexxt config NE-37",
-              "date": "2026-02-26T07:24:04Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "509755e",
-              "message": "fix: check-silten config  NE-37",
-              "date": "2026-02-26T07:07:38Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "67bd09d",
-              "message": "fix: render and images bugs NE-37",
-              "date": "2026-02-26T00:39:27Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "90c7f97",
-              "message": "fix(home): Home bugs resolution, add keycloack instance, images update and card products functional NE-37",
-              "date": "2026-02-25T12:34:30Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "f304059",
-              "message": "fix(home): Responsive bug resolution on carrousel cards and sidecartBar",
-              "date": "2026-02-21T00:35:42Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "28020d3",
-              "message": "fix(home): change image management and Safaria restrictions",
-              "date": "2026-02-19T22:12:59Z",
-              "author": "Aguilera Kevin",
-              "tickets": []
-            },
-            {
-              "sha": "8d3525e",
-              "message": "feat(contact-form): agregar formulario te contactamos y ajustar estilos NE-162",
-              "date": "2026-02-18T13:50:17Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NE-162",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-162"
-                }
-              ]
-            },
-            {
-              "sha": "1fc248f",
-              "message": "feat(ContactForm): agregar formulario te contactamos y ajustar estilos NE-162",
-              "date": "2026-02-17T22:36:33Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NE-162",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-162"
-                }
-              ]
-            },
-            {
-              "sha": "c939324",
-              "message": "test: remove condition B2B-37",
-              "date": "2026-02-06T15:32:35Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "2958c21",
-              "message": "test: testing load products B2B-37",
-              "date": "2026-02-06T15:21:20Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "a8d03f6",
-              "message": "test: keycloack context config B2B-37",
-              "date": "2026-02-06T14:56:37Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "58d2c81",
-              "message": "test: add silentcheck B2B-37",
-              "date": "2026-02-06T14:33:02Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "51ffe9c",
-              "message": "feat: component view adjustment B2B-37",
-              "date": "2026-02-06T14:16:16Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "17f9718",
-              "message": "test: remove silentCheckSso B2B-37",
-              "date": "2026-02-06T08:46:24Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "09065be",
-              "message": "refactor: VideoCarrousel responsive fix, add animations in home and catalog features and files orden and review  B2B-37",
-              "date": "2026-02-06T07:49:58Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "045132c",
-              "message": "fix: Add products config, fix cartside bar and no stock config",
-              "date": "2026-02-03T16:45:14Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "4712443",
-              "message": "feat(catalog): Add load more products button",
-              "date": "2026-02-02T22:33:07Z",
-              "author": "Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "f87e454",
-              "message": "fix: adjustment on the layer of the header and other components to keep header as top B2B-65",
-              "date": "2026-01-30T09:35:46Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-65",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-65"
-                }
-              ]
-            },
-            {
-              "sha": "8c63aa9",
-              "message": "fix: fix and reorder providers B2B-37",
-              "date": "2026-01-30T08:56:49Z",
-              "author": "Aguilera",
-              "tickets": [
-                {
-                  "id": "B-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
-                }
-              ]
-            },
-            {
-              "sha": "10f8f89",
-              "message": "fix: folder casing NackgroundImage",
-              "date": "2026-01-30T08:38:25Z",
-              "author": "Aguilera",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 86,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "ebf0153",
-              "message": "Merge pull request #43 from NutrappDev/release/qa-2026-03-16",
+              "message": "release: config build NE-221",
               "date": "2026-03-17T13:15:35Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "7aa6f03",
-              "message": "chore: eliminacion culqi NE-146 (#41)",
-              "date": "2026-03-16T22:25:45Z",
               "author": "k-aguilera",
+              "pr_number": "43",
               "tickets": [
                 {
-                  "id": "NE-146",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-146"
-                }
-              ]
-            },
-            {
-              "sha": "3763d89",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:12Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "fd35d3a",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:10Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "28475f6",
-              "message": "chore: limpieza archivo NE-138",
-              "date": "2026-03-13T21:47:44Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-138",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-138"
-                }
-              ]
-            },
-            {
-              "sha": "efa2a30",
-              "message": "chore: ajuste del build NE-138 (#37)",
-              "date": "2026-03-13T21:37:47Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-138",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-138"
+                  "id": "NE-221",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-221"
                 }
               ]
             },
             {
               "sha": "12c935c",
-              "message": "Merge pull request #36 from NutrappDev/release/qa-2026-03-13",
+              "message": "release: flujo de checkout 2 primeros pasos NE-74",
               "date": "2026-03-13T15:40:10Z",
               "author": "k-aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "c56929f",
-              "message": "feat: flujo de checkout 2 primeros pasos NE-74",
-              "date": "2026-03-13T14:55:56Z",
-              "author": "k-aguilera",
+              "pr_number": "36",
               "tickets": [
                 {
                   "id": "NE-74",
                   "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
                 }
               ]
-            },
-            {
-              "sha": "199eb6a",
-              "message": "feat: flujo de checkout 2 primeros pasos NE-74",
-              "date": "2026-03-13T13:44:39Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-74",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
-                }
-              ]
-            },
-            {
-              "sha": "af97899",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:33Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "fea3970",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:31Z",
-              "author": "Jorge Garay",
-              "tickets": []
             },
             {
               "sha": "684723f",
-              "message": "Merge pull request #34 from NutrappDev/develop",
+              "message": "Merge to QA",
               "date": "2026-03-03T19:13:13Z",
               "author": "k-aguilera",
+              "pr_number": "34",
               "tickets": []
-            },
-            {
-              "sha": "fd147f2",
-              "message": "Merge pull request #33 from NutrappDev/feat/NE-74-contact-directory-page",
-              "date": "2026-03-03T19:12:25Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-74",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
-                }
-              ]
-            },
-            {
-              "sha": "d231804",
-              "message": "feat: Creation of contact directory page and bugs resolition NE-74",
-              "date": "2026-03-03T19:04:11Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-74",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-74"
-                }
-              ]
             },
             {
               "sha": "ddb6009",
-              "message": "Merge pull request #32 from NutrappDev/develop",
+              "message": "Merge to QA",
               "date": "2026-02-26T17:54:56Z",
               "author": "k-aguilera",
+              "pr_number": "32",
               "tickets": []
-            },
-            {
-              "sha": "ccd005c",
-              "message": "Merge pull request #31 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-26T17:53:02Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "1f7025e",
-              "message": "fix: Corrections bugs on home and catalog NE-37",
-              "date": "2026-02-26T17:49:08Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "dc0bf8b",
-              "message": "Merge pull request #30 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-26T07:25:35Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "8417c81",
-              "message": "text: keycloak contexxt config NE-37",
-              "date": "2026-02-26T07:24:04Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "6de421e",
-              "message": "Merge pull request #29 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-26T07:08:31Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "509755e",
-              "message": "fix: check-silten config  NE-37",
-              "date": "2026-02-26T07:07:38Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "bc50981",
-              "message": "Merge pull request #28 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-26T01:14:38Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
-            },
-            {
-              "sha": "67bd09d",
-              "message": "fix: render and images bugs NE-37",
-              "date": "2026-02-26T00:39:27Z",
-              "author": "Aguilera Kevin",
-              "tickets": [
-                {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
-                }
-              ]
             },
             {
               "sha": "663e80b",
-              "message": "Merge pull request #27 from NutrappDev/develop",
+              "message": "Merge to QA",
               "date": "2026-02-25T13:12:32Z",
               "author": "k-aguilera",
+              "pr_number": "27",
               "tickets": []
             },
             {
-              "sha": "39e3edf",
-              "message": "Merge pull request #26 from NutrappDev/fix/NE-37-home-bugs",
-              "date": "2026-02-25T12:40:03Z",
+              "sha": "8cb24a1",
+              "message": "Merge to QA",
+              "date": "2026-02-21T00:39:34Z",
               "author": "k-aguilera",
+              "pr_number": "24",
+              "tickets": []
+            },
+            {
+              "sha": "3a100af",
+              "message": "integrate develop to qa",
+              "date": "2026-02-06T15:37:43Z",
+              "author": "k-aguilera",
+              "pr_number": "21",
+              "tickets": []
+            },
+            {
+              "sha": "5b89384",
+              "message": "integrate develop to qa",
+              "date": "2026-02-06T14:17:49Z",
+              "author": "k-aguilera",
+              "pr_number": "16",
+              "tickets": []
+            },
+            {
+              "sha": "1b40c7d",
+              "message": "merge: integrate develop to qa",
+              "date": "2026-02-06T07:52:07Z",
+              "author": "k-aguilera",
+              "pr_number": "13",
+              "tickets": []
+            },
+            {
+              "sha": "7c04453",
+              "message": "merge: deploy develop to qa",
+              "date": "2026-01-30T09:38:28Z",
+              "author": "k-aguilera",
+              "pr_number": "10",
+              "tickets": []
+            },
+            {
+              "sha": "b43e1a7",
+              "message": "refactor(catalog): catalog intialization B2B-37",
+              "date": "2026-01-29T19:24:23Z",
+              "author": "k-aguilera",
+              "pr_number": "2",
               "tickets": [
                 {
-                  "id": "NE-37",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-37"
+                  "id": "B-37",
+                  "url": "https://nutrabiotics.atlassian.net/browse/B-37"
                 }
               ]
             }
@@ -2532,239 +1476,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 73,
-          "recent_commits": [
-            {
-              "sha": "bc489dc",
-              "message": "Fix: se ajusta el precio",
-              "date": "2026-03-10T20:18:03Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "1cdb002",
-              "message": "Fix: duplicate information",
-              "date": "2026-02-26T13:48:21Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "57b1339",
-              "message": "release(dev): DMF-113",
-              "date": "2026-02-24T21:28:04Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-113"
-                }
-              ]
-            },
-            {
-              "sha": "2e7ef74",
-              "message": "ajustes al video hero y texto sobre el video",
-              "date": "2026-02-24T17:27:32Z",
-              "author": "millerladino",
-              "tickets": []
-            },
-            {
-              "sha": "1fae6f8",
-              "message": "release(dev): DMF-120",
-              "date": "2026-02-24T14:07:49Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-120",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-120"
-                }
-              ]
-            },
-            {
-              "sha": "a6f3cfa",
-              "message": "release(dev): DMF-121",
-              "date": "2026-02-24T14:03:32Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-121",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-121"
-                }
-              ]
-            },
-            {
-              "sha": "d716081",
-              "message": "Fix: se hace el ajuste de cambio de fecha del popup",
-              "date": "2026-02-20T22:22:08Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "2463cf4",
-              "message": "release(dev): DMF-105",
-              "date": "2026-02-20T13:31:27Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-105",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-105"
-                }
-              ]
-            },
-            {
-              "sha": "03354c0",
-              "message": "release(dev): DMF-107",
-              "date": "2026-02-20T01:11:03Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-107",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-107"
-                }
-              ]
-            },
-            {
-              "sha": "cb4fdd3",
-              "message": "release(dev): DMF-106",
-              "date": "2026-02-20T00:51:28Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-106",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-106"
-                }
-              ]
-            },
-            {
-              "sha": "8710c5a",
-              "message": "release(dev): DMF-108",
-              "date": "2026-02-19T23:24:57Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-108",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-108"
-                }
-              ]
-            },
-            {
-              "sha": "6159bff",
-              "message": "release(dev): DMF-109",
-              "date": "2026-02-19T23:14:34Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-109",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-109"
-                }
-              ]
-            },
-            {
-              "sha": "dd62d9d",
-              "message": "release(dev): DMF-110",
-              "date": "2026-02-19T23:08:04Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-110",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-110"
-                }
-              ]
-            },
-            {
-              "sha": "bf4fbc2",
-              "message": "release(dev): DMF-111",
-              "date": "2026-02-19T22:56:31Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-111",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-111"
-                }
-              ]
-            },
-            {
-              "sha": "42aea54",
-              "message": "Se realiza el ajsute de los enalces",
-              "date": "2026-02-17T20:34:56Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "70d7160",
-              "message": "Squashed commit of the following ",
-              "date": "2026-02-13T22:43:46Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": []
-            },
-            {
-              "sha": "b9fdee3",
-              "message": "Conflicts resolved in the console.",
-              "date": "2026-02-12T19:45:58Z",
-              "author": "AWSReservedSSO_DevOps-Pipeline-FullAccess_337aac43792adc64/jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "7b1f74a",
-              "message": "ajsutes finales y anclas del menu",
-              "date": "2026-02-12T17:13:09Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "5fc732d",
-              "message": "Conflicts resolved in the console.",
-              "date": "2026-02-12T16:48:27Z",
-              "author": "AWSReservedSSO_DevOps-Pipeline-FullAccess_337aac43792adc64/jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "28ec388",
-              "message": "Se finaliza el style del diplomado",
-              "date": "2026-02-12T16:03:17Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "20eea89",
-              "message": "Creación de PopUp con formulario HubsPot",
-              "date": "2026-02-12T15:47:11Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "9621f2e",
-              "message": "se ajutan imagenes de los logos",
-              "date": "2026-02-12T15:40:30Z",
-              "author": "Andres Robin",
-              "tickets": []
-            },
-            {
-              "sha": "c1a1c25",
-              "message": "Conflicts resolved in the console.",
-              "date": "2026-02-12T15:27:53Z",
-              "author": "AWSReservedSSO_DevOps-Pipeline-FullAccess_337aac43792adc64/jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "416ba2a",
-              "message": "Conflicts resolved in the console.",
-              "date": "2026-02-12T15:25:35Z",
-              "author": "AWSReservedSSO_DevOps-Pipeline-FullAccess_337aac43792adc64/jgaray@nutrapp.com.co",
-              "tickets": []
-            },
-            {
-              "sha": "c30cf2b",
-              "message": "DMF-41",
-              "date": "2026-02-12T15:00:03Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "DMF-41",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DMF-41"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3003,30 +1716,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "da3d74a",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:15:13Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "3421008",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:29Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "903e55d",
-              "message": "chore: initial project setup",
-              "date": "2026-01-21T13:10:00Z",
-              "author": "steven-leon-007",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3058,23 +1749,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "43a7ba3",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:15:08Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "2507127",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:08Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3106,23 +1782,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "b557140",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:15:04Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "bdccef4",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:12Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3154,23 +1815,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "69a2664",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:59Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "fe8385b",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:10Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3202,121 +1848,14 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 1,
           "recent_commits": [
             {
-              "sha": "5d3ef62",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:55Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "af0d673",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:14Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "dddaa9b",
-              "message": "feat(certificates): Enhance certificate type retrieval logic in certificates service",
-              "date": "2026-02-18T17:29:42Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
               "sha": "baa98e0",
-              "message": "Merge pull request #86 from NutrappDev/feat/getAllcertificates-PMO-2646",
+              "message": "feat(certificates): Add endpoint to list all certificates ",
               "date": "2026-02-16T22:09:36Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "PMO-2646",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2646"
-                }
-              ]
-            },
-            {
-              "sha": "e9344cd",
-              "message": "feat(certificates): Add endpoint to list all certificates with pagination support PMO-2646",
-              "date": "2026-02-16T21:46:54Z",
-              "author": "cristigb",
-              "tickets": [
-                {
-                  "id": "PMO-2646",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2646"
-                }
-              ]
-            },
-            {
-              "sha": "9e47aff",
-              "message": "fix(otp.service): Correct terminology in verification code message for Nutrabiotics certificate system",
-              "date": "2026-02-12T21:22:16Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "349ea70",
-              "message": "fix(otp.service): Update verification code message to reflect new terminology in the Nutrabiotics certificate system",
-              "date": "2026-02-11T20:40:02Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "713ab01",
-              "message": "fix(serverless): Update VPC configuration for dev and staging environments to use null values",
-              "date": "2026-02-05T22:02:22Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "7518732",
-              "message": "fix(pdf-generator): Remove emoji from executable path log message for clarity",
-              "date": "2026-02-05T21:45:03Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "7633e32",
-              "message": "fix(serverless): Remove empty object from VPC configuration in serverless.yml",
-              "date": "2026-01-28T22:48:31Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "d788bfa",
-              "message": "fix(serverless): Update VPC configuration for dev and staging environments to use empty objects",
-              "date": "2026-01-28T22:31:49Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "a22faf1",
-              "message": "feat(serverless): Configure VPC settings for production environment to enable RDS connectivity",
-              "date": "2026-01-28T22:17:32Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "c64a0a6",
-              "message": "fix(mailer.module): Update default email sender address to use .com.co domain",
-              "date": "2026-01-21T20:53:05Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "64f7a27",
-              "message": "fix(otp.service): Update error message for failed OTP attempts and improve log output formatting",
-              "date": "2026-01-21T20:33:04Z",
-              "author": "cristigb",
-              "tickets": []
-            },
-            {
-              "sha": "23c5db1",
-              "message": "chore(.gitignore): Add static files directory to .gitignore",
-              "date": "2026-01-20T22:56:10Z",
-              "author": "cristigb",
+              "author": "CristiGB",
+              "pr_number": "86",
               "tickets": []
             }
           ]
@@ -3351,23 +1890,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "9be084b",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:46Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "1aef17d",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:46:54Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3399,23 +1923,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "5dd0ccc",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:42Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "53f85cb",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:26Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -3447,132 +1956,48 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 5,
           "recent_commits": [
             {
-              "sha": "a81d161",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:38Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "662a854",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:02Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "5258702",
-              "message": "Merge pull request #8 from NutrappDev/fix/AIA-57-recuperacion-contrasena-validacion-correo-no-registrado",
-              "date": "2026-02-23T22:30:30Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-57",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-57"
-                }
-              ]
-            },
-            {
-              "sha": "c08558e",
               "message": "fix(auth): manejar validacion de usuario inexistente en recovery AIA-57",
-              "date": "2026-02-23T16:00:49Z",
+              "date": "2026-02-23T22:30:31Z",
               "author": "jsandoval-dev",
+              "pr_number": "8",
               "tickets": [
                 {
                   "id": "AIA-57",
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-57"
                 }
               ]
-            },
-            {
-              "sha": "d5406a5",
-              "message": "fix: ensure mail templates are copied in docker production stage",
-              "date": "2026-02-13T18:33:49Z",
-              "author": "jsandoval-dev",
-              "tickets": []
-            },
-            {
-              "sha": "0885d33",
-              "message": "fix(mail): correct handlebars template path to avoid duplicated common directory in dist",
-              "date": "2026-02-13T16:59:25Z",
-              "author": "jsandoval-dev",
-              "tickets": []
             },
             {
               "sha": "a71bf55",
-              "message": "Merge pull request #7 from NutrappDev/fix/AIA-34-corregir-correo-recuperar-contrasena",
+              "message": "fix(mail): correct handlebars template path for production build",
               "date": "2026-02-13T16:46:30Z",
               "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-34",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-34"
-                }
-              ]
-            },
-            {
-              "sha": "7b8eaca",
-              "message": "fix(mail): correct handlebars template path for production build",
-              "date": "2026-02-13T16:42:32Z",
-              "author": "jsandoval-dev",
+              "pr_number": "7",
               "tickets": []
             },
             {
               "sha": "fb07f27",
-              "message": "Merge pull request #6 from NutrappDev/fix/AIA-34-corregir-correo-recuperar-contrasena",
-              "date": "2026-02-13T16:14:40Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-34",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-34"
-                }
-              ]
-            },
-            {
-              "sha": "aabf90a",
               "message": "fix: corregir envio de correo en recuperar contraseña AIA-34",
-              "date": "2026-02-13T15:26:13Z",
+              "date": "2026-02-13T16:14:41Z",
               "author": "jsandoval-dev",
+              "pr_number": "6",
               "tickets": [
                 {
                   "id": "AIA-34",
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-34"
-                }
-              ]
-            },
-            {
-              "sha": "a95990d",
-              "message": "Revert \"Merge pull request #5 from NutrappDev/fix/sockets/AIA-32-optimize-response-time\"",
-              "date": "2026-01-16T15:52:09Z",
-              "author": "jhelcy sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
             },
             {
               "sha": "d999ee7",
-              "message": "Merge pull request #5 from NutrappDev/fix/sockets/AIA-32-optimize-response-time",
+              "message": "fix: implement streaming responses and optimize OpenAI service (AIA-32)",
               "date": "2026-01-16T14:04:06Z",
-              "author": "Jhelcy Sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "3e79ccc",
-              "message": "fix: optimize response handling and improve error messaging in OpenAI service AIA-32",
-              "date": "2026-01-13T20:06:08Z",
-              "author": "jhelcy sandoval",
+              "author": "Jhelcy-Sandoval",
+              "pr_number": "5",
               "tickets": [
                 {
                   "id": "AIA-32",
@@ -3582,9 +2007,10 @@
             },
             {
               "sha": "57a0faa",
-              "message": "Merge pull request #4 from NutrappDev/feature/password-reset",
+              "message": "feat(auth): implement password reset with secure token validation",
               "date": "2026-01-02T15:18:21Z",
-              "author": "Richard",
+              "author": "Jhelcy-Sandoval",
+              "pr_number": "4",
               "tickets": []
             }
           ]
@@ -3619,39 +2045,14 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 6,
           "recent_commits": [
             {
-              "sha": "30c0101",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:34Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "80faf48",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:00Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "0e0ff7e",
-              "message": "Merge pull request #30 from NutrappDev/fix/AIA-57-recuperacion-contrasena-validacion-correo-no-registrado",
+              "message": "fix(auth): validar correo no registrado en recuperacion de contrasena AIA-57",
               "date": "2026-02-23T22:36:01Z",
               "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-57",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-57"
-                }
-              ]
-            },
-            {
-              "sha": "a7c3a8c",
-              "message": "fix(auth): validar correo no registrado en recuperacion de contrasena AIA-57",
-              "date": "2026-02-23T15:59:36Z",
-              "author": "jsandoval-dev",
+              "pr_number": "30",
               "tickets": [
                 {
                   "id": "AIA-57",
@@ -3661,119 +2062,52 @@
             },
             {
               "sha": "6f186b5",
-              "message": "Merge pull request #28 from NutrappDev/fix/sockets/AIA-32-optimize-response-time",
+              "message": "comentario para despliegue",
               "date": "2026-01-21T14:17:12Z",
               "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "a796af0",
-              "message": "comentario para despliegue",
-              "date": "2026-01-21T14:15:43Z",
-              "author": "jsandoval-dev",
+              "pr_number": "28",
               "tickets": []
             },
             {
               "sha": "9268caf",
-              "message": "Merge pull request #27 from NutrappDev/fix/sockets/AIA-32-optimize-response-time",
+              "message": "fix(chat): optimize socket connection lifecycle and improve message handling (AIA-32)",
               "date": "2026-01-19T16:13:49Z",
               "author": "jsandoval-dev",
+              "pr_number": "27",
               "tickets": [
                 {
                   "id": "AIA-32",
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
-            },
-            {
-              "sha": "57c0ef7",
-              "message": "fix(chat): optimize socket connection lifecycle and improve message handling AIA-32",
-              "date": "2026-01-19T14:42:15Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "f52b555",
-              "message": "refactor(chat): improve socket connection management and cleanup",
-              "date": "2026-01-16T15:46:42Z",
-              "author": "jhelcy sandoval",
-              "tickets": []
             },
             {
               "sha": "a06e5fe",
-              "message": "Merge pull request #26 from NutrappDev/fix/sockets/AIA-32-optimize-response-time",
+              "message": "fix: separate useEffect hooks and improve streaming message handling (AIA-32)",
               "date": "2026-01-16T14:12:41Z",
-              "author": "Jhelcy Sandoval",
+              "author": "Jhelcy-Sandoval",
+              "pr_number": "26",
               "tickets": [
                 {
                   "id": "AIA-32",
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "afc1cdc",
-              "message": "fix(chat): optimize socket connection handling and improve logging AIA-32",
-              "date": "2026-01-13T20:05:37Z",
-              "author": "jhelcy sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "8aef4eb",
-              "message": "Merge pull request #25 from NutrappDev/refactor/AIA-49-socket-token-connection",
-              "date": "2026-01-08T20:32:41Z",
-              "author": "Jhelcy Sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-49",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-49"
-                }
-              ]
-            },
-            {
-              "sha": "754c16f",
-              "message": "refactor(socket-service): improve code readability AIA-49",
-              "date": "2026-01-08T13:43:50Z",
-              "author": "jhelcy sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-49",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-49"
-                }
-              ]
-            },
-            {
-              "sha": "17682c8",
-              "message": "refactor(socket-service): improve code readability AIA-49",
-              "date": "2026-01-08T13:42:15Z",
-              "author": "jhelcy sandoval",
-              "tickets": [
-                {
-                  "id": "AIA-49",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-49"
                 }
               ]
             },
             {
               "sha": "9f18948",
-              "message": "Merge pull request #24 from NutrappDev/feat/assistant-management",
+              "message": "Feat/assistant management",
               "date": "2026-01-02T15:19:30Z",
-              "author": "Richard",
+              "author": "Jhelcy-Sandoval",
+              "pr_number": "24",
+              "tickets": []
+            },
+            {
+              "sha": "8aef4eb",
+              "message": "Refactor/aia 49 socket token connection",
+              "date": "2026-01-08T20:32:42Z",
+              "author": "Jhelcy-Sandoval",
+              "pr_number": "25",
               "tickets": []
             }
           ]
@@ -3808,56 +2142,12 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "886134b",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:06Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "ac9a556",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:06Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "486e828",
-              "message": "feat: Integrate Google Tag Manager for enhanced tracking and analytics",
-              "date": "2025-12-26T14:54:51Z",
-              "author": "cristigb",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "af32ee1",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:04Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "bcb750b",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:04Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "486e828",
-              "message": "feat: Integrate Google Tag Manager for enhanced tracking and analytics",
-              "date": "2025-12-26T14:54:51Z",
-              "author": "cristigb",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         }
       },
       "ci": null,
@@ -3981,13 +2271,14 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 61,
+          "count": 5,
           "recent_commits": [
             {
               "sha": "a3bab74",
-              "message": "fix: ajuste tamaño de formulario farmacovigilancia NCOL-467 (#50)",
+              "message": "fix(NCOL-467): ajuste tamaño de formulario farmacovigilancia",
               "date": "2026-03-18T16:43:58Z",
               "author": "Dev-Juan-Medina-NutraApp",
+              "pr_number": "50",
               "tickets": [
                 {
                   "id": "NCOL-467",
@@ -3996,520 +2287,70 @@
               ]
             },
             {
-              "sha": "37308c5",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:13:54Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "c893ba1",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:37Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "deb1ff2",
-              "message": "feat(products): Agregar atributos cy-data a pantalla de producto individual y corregir disclaimer NCOL-573",
-              "date": "2026-02-26T18:52:20Z",
-              "author": "steven-leon-007",
+              "sha": "6db76c8",
+              "message": "fix(products): arreglar validación botón me interesa en productos tipo medicamento NCOL-538",
+              "date": "2026-02-09T13:42:31Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "11",
               "tickets": [
                 {
-                  "id": "NCOL-573",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-573"
-                }
-              ]
-            },
-            {
-              "sha": "dc7f005",
-              "message": "fix: data duplicated and mobile view on home config PMO-2254",
-              "date": "2026-02-25T18:46:48Z",
-              "author": "Kevin Aguilera",
-              "tickets": [
-                {
-                  "id": "PMO-2254",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2254"
-                }
-              ]
-            },
-            {
-              "sha": "7d25a57",
-              "message": "fix: calendar next event on home config and detail event redirection PMO-2254",
-              "date": "2026-02-25T18:14:42Z",
-              "author": "Kevin Aguilera",
-              "tickets": [
-                {
-                  "id": "PMO-2254",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2254"
-                }
-              ]
-            },
-            {
-              "sha": "9d34aad",
-              "message": "fix(products): corregir titulo productos con cantidad en su nombre para mostrar en minuscula PMO-2676",
-              "date": "2026-02-24T16:15:40Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "PMO-2676",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2676"
-                }
-              ]
-            },
-            {
-              "sha": "75687ed",
-              "message": "Merge pull request #30 from NutrappDev/revert-29-NCOL-616-arreglar-error-profesionales-viendo-medicamentos",
-              "date": "2026-02-23T14:18:50Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-616",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-616"
-                }
-              ]
-            },
-            {
-              "sha": "acb5da2",
-              "message": "Revert \"fix(products): arreglar error rol profesional de la salud viendo listado de medicamentos NCOL-616\"",
-              "date": "2026-02-23T14:18:37Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-616",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-616"
-                }
-              ]
-            },
-            {
-              "sha": "504fa84",
-              "message": "Merge pull request #29 from NutrappDev/NCOL-616-arreglar-error-profesionales-viendo-medicamentos",
-              "date": "2026-02-20T21:15:00Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-616",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-616"
-                }
-              ]
-            },
-            {
-              "sha": "80fb7bd",
-              "message": "fix(products): arreglar error rol profesional de la salud viendo listado de productos NCOL-616",
-              "date": "2026-02-20T21:11:06Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "NCOL-616",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-616"
-                }
-              ]
-            },
-            {
-              "sha": "13e9c87",
-              "message": "fix(products): Corregir vista de contradicciones para productos que no deben mostrarlo NCOL-615",
-              "date": "2026-02-20T19:45:57Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "NCOL-615",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-615"
-                }
-              ]
-            },
-            {
-              "sha": "d59d9c3",
-              "message": "Fix NCOL-466: mensajes de error en rojo en formulario de farmacovigilancia",
-              "date": "2026-02-19T23:10:03Z",
-              "author": "juanmedcas",
-              "tickets": [
-                {
-                  "id": "NCOL-466",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-466"
-                }
-              ]
-            },
-            {
-              "sha": "a22f91f",
-              "message": "Merge pull request #26 from NutrappDev/Feat/PMO-2280_boton-me-interesa",
-              "date": "2026-02-17T23:03:34Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "PMO-2280",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2280"
-                }
-              ]
-            },
-            {
-              "sha": "8ab57a8",
-              "message": "Rama Recargada en Nuevo repo para despliegue con ultimos ajustes",
-              "date": "2026-02-17T16:19:39Z",
-              "author": "juanmedcas",
-              "tickets": []
-            },
-            {
-              "sha": "5c82c5a",
-              "message": "fix(ethical-line): corregir ticket confirmacion gracias por su denuncia NCOL-593",
-              "date": "2026-02-17T13:35:21Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NCOL-593",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-593"
-                }
-              ]
-            },
-            {
-              "sha": "7b649c9",
-              "message": "fix(ethical-line): corregir pantalla confirmacion gracias por su denuncia NCOL-593",
-              "date": "2026-02-17T13:32:23Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NCOL-593",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-593"
-                }
-              ]
-            },
-            {
-              "sha": "4d00ae4",
-              "message": "fix: corregir bug de flechas de navegación en sliders y arreglar carrusel slider doctores NCOL-601",
-              "date": "2026-02-17T12:41:38Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "NCOL-601",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-601"
-                }
-              ]
-            },
-            {
-              "sha": "e6e7b32",
-              "message": "fix(change slider): Se cambio el comportamiento del primer slide del slider de la pagina de educacion",
-              "date": "2026-02-16T23:02:39Z",
-              "author": "millerladino",
-              "tickets": []
-            },
-            {
-              "sha": "562e34c",
-              "message": "fix(ethical-line): ocultar file input en safari ios con supports query NCOL-595",
-              "date": "2026-02-16T19:17:48Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NCOL-595",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-595"
-                }
-              ]
-            },
-            {
-              "sha": "13aef51",
-              "message": "fix(ethical-line): ocultar boton nativo file input en safari NCOL-595",
-              "date": "2026-02-16T17:25:45Z",
-              "author": "jsandoval-dev",
-              "tickets": [
-                {
-                  "id": "NCOL-595",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-595"
-                }
-              ]
-            },
-            {
-              "sha": "8726960",
-              "message": "fix: Corregir bug banner aplicaciones funcionales para tablets iOS y similares NCOL-586",
-              "date": "2026-02-16T15:26:43Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "NCOL-586",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-586"
-                }
-              ]
-            },
-            {
-              "sha": "68f9af0",
-              "message": "fix: Cambiar textos sobre el banner hero de educación NCOL-563",
-              "date": "2026-02-12T19:19:12Z",
-              "author": "steven-leon-007",
-              "tickets": [
-                {
-                  "id": "NCOL-563",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-563"
+                  "id": "NCOL-538",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-538"
                 }
               ]
             },
             {
               "sha": "0aeec58",
-              "message": "Merge pull request #19 from NutrappDev/Feature/NCOL-459",
+              "message": "fix: ajustes al colSpan de 2 columnas para la vista tablet",
               "date": "2026-02-12T18:57:46Z",
-              "author": "Jorge Garay",
+              "author": "jgaray-nutrapp",
+              "pr_number": "19",
+              "tickets": []
+            },
+            {
+              "sha": "e7a7cc9",
+              "message": "fix: se corrigen estilos del formulario NCOL-551",
+              "date": "2026-02-11T21:22:10Z",
+              "author": "jsandoval-dev",
+              "pr_number": "16",
               "tickets": [
                 {
-                  "id": "NCOL-459",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-459"
+                  "id": "NCOL-551",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-551"
                 }
               ]
             },
             {
-              "sha": "8ad0ffe",
-              "message": "fix: Change AppInitializer to load events  NCOL-561",
-              "date": "2026-02-12T16:47:03Z",
-              "author": "Kevin Aguilera",
-              "tickets": [
-                {
-                  "id": "NCOL-561",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-561"
-                }
-              ]
+              "sha": "b01357a",
+              "message": "se revisa y se pushea en cambio de nuevo en ambiente local OK",
+              "date": "2026-01-27T20:23:31Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "1",
+              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 40,
+          "count": 1,
           "recent_commits": [
             {
               "sha": "2476952",
-              "message": "Merge pull request #51 from NutrappDev/release/qa-2026-03-17",
+              "message": "release: deploy PR #44 a QA (NCOL-637, NCOL-646, NCOL-647)",
               "date": "2026-03-17T21:33:24Z",
-              "author": "Steven León",
-              "tickets": []
-            },
-            {
-              "sha": "0142a26",
-              "message": "fix: espacio del footer y calendario del home NCOL-639 (#44)",
-              "date": "2026-03-17T19:50:28Z",
-              "author": "k-aguilera",
+              "author": "Steven-Leon-007",
+              "pr_number": "51",
               "tickets": [
                 {
-                  "id": "NCOL-639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-639"
-                }
-              ]
-            },
-            {
-              "sha": "8f7fafc",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:13:52Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "808480e",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:35Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "5b77fab",
-              "message": "release: deploy PRs a QA - 2026-03-10",
-              "date": "2026-03-10T21:47:36Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "251ba2f",
-              "message": "fix: Arreglar titulos desktop y mobile en vistas de producto devuelto por QA NCOL-573 (#40)",
-              "date": "2026-03-10T21:35:59Z",
-              "author": "Steven León",
-              "tickets": [
+                  "id": "NCOL-637",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-637"
+                },
                 {
-                  "id": "NCOL-573",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-573"
-                }
-              ]
-            },
-            {
-              "sha": "b5bed4f",
-              "message": "chore: implementar archivo CODEOWNERS en el repositorio NCOL-635 (#38)",
-              "date": "2026-03-10T21:35:47Z",
-              "author": "Steven León",
-              "tickets": [
+                  "id": "NCOL-646",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-646"
+                },
                 {
-                  "id": "NCOL-635",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-635"
-                }
-              ]
-            },
-            {
-              "sha": "d9315b3",
-              "message": "fix: Arreglar carrusel en home principal (congresos y productos) para mostrar correctamente las flechas de navegacion NCOL-5 (#37)",
-              "date": "2026-03-10T21:35:33Z",
-              "author": "Steven León",
-              "tickets": [
-                {
-                  "id": "NCOL-5",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-5"
-                }
-              ]
-            },
-            {
-              "sha": "8eaaf8b",
-              "message": "release: deploy PRs a QA - 2026-03-03",
-              "date": "2026-03-03T19:43:54Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "46b184d",
-              "message": "Merge pull request #36 from NutrappDev/feat/NCOL-573-agregar-cydata-detalle-productos",
-              "date": "2026-03-03T19:41:45Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-573",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-573"
-                }
-              ]
-            },
-            {
-              "sha": "502dac1",
-              "message": "Merge pull request #35 from NutrappDev/fix/PMO-2254-calendari-config",
-              "date": "2026-03-03T19:41:36Z",
-              "author": "k-aguilera",
-              "tickets": [
-                {
-                  "id": "PMO-2254",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2254"
-                }
-              ]
-            },
-            {
-              "sha": "fcf09b2",
-              "message": "Merge pull request #31 from NutrappDev/Fix/NCOL-466_labels-error-formfarmaco",
-              "date": "2026-03-03T19:41:22Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-466",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-466"
-                }
-              ]
-            },
-            {
-              "sha": "2d879c4",
-              "message": "Merge pull request #27 from NutrappDev/Feat/PMO-2585_add_banner_packs",
-              "date": "2026-03-03T19:39:20Z",
-              "author": "Miller Ladino Nutrapp",
-              "tickets": [
-                {
-                  "id": "PMO-2585",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2585"
-                }
-              ]
-            },
-            {
-              "sha": "253c6f4",
-              "message": "release: deploy PRs a QA - 2026-02-24",
-              "date": "2026-02-25T00:29:56Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "d86ccd0",
-              "message": "release: deploy PRs a QA - 2026-02-24",
-              "date": "2026-02-25T00:14:51Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "db0adb4",
-              "message": "Merge pull request #25 from NutrappDev/Feat/PMO-2639_update_policy",
-              "date": "2026-02-25T00:07:20Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "PMO-2639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
-                }
-              ]
-            },
-            {
-              "sha": "c91ef12",
-              "message": "fix: restaurar fix NCOL-572 pisado por cherry-pick de PR #12 en [slug].jsx",
-              "date": "2026-02-18T14:33:00Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-572",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-572"
-                }
-              ]
-            },
-            {
-              "sha": "aeb9a6a",
-              "message": "fix: limpiar console.logs y codigo comentado en serverless.js pisados por cherry-pick de PR #12",
-              "date": "2026-02-18T14:10:58Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "1f0014d",
-              "message": "fix: restaurar cambios de PR #18 y PR #23 pisados por cherry-pick de PR #12",
-              "date": "2026-02-17T23:25:24Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "8e03be8",
-              "message": "Merge pull request #13 from NutrappDev/feat/NCOL-561-events-on-home-page",
-              "date": "2026-02-17T21:36:07Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-561",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-561"
-                }
-              ]
-            },
-            {
-              "sha": "62bc68e",
-              "message": "Merge pull request #12 from NutrappDev/feat/NCOL-561-events-on-home-page",
-              "date": "2026-02-17T21:35:55Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-561",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-561"
-                }
-              ]
-            },
-            {
-              "sha": "8e41dd9",
-              "message": "Creation of Calendar event on education tab",
-              "date": "2026-02-17T21:35:19Z",
-              "author": "Kevin Aguilera",
-              "tickets": []
-            },
-            {
-              "sha": "5fe5a2e",
-              "message": "release: deploy PRs a QA - 2026-02-17",
-              "date": "2026-02-17T20:53:38Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "434dcd9",
-              "message": "Merge pull request #23 from NutrappDev/fix/NCOL-601-corregir-bug-flechas-navegación-y-carrusel",
-              "date": "2026-02-17T20:53:08Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-601",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-601"
-                }
-              ]
-            },
-            {
-              "sha": "5b5fb5e",
-              "message": "Merge pull request #20 from NutrappDev/chore/NCOL-563-cambiar-banner-hero-educacion",
-              "date": "2026-02-17T20:51:48Z",
-              "author": "Jorge Garay",
-              "tickets": [
-                {
-                  "id": "NCOL-563",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-563"
+                  "id": "NCOL-647",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-647"
                 }
               ]
             }
@@ -4533,7 +2374,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-16T19:03:29Z",
+      "last_push": "2026-03-19T15:50:44Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -4550,66 +2391,8 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 6,
-          "recent_commits": [
-            {
-              "sha": "b6a71da",
-              "message": "feat(config): add GSC config",
-              "date": "2026-03-03T21:27:10Z",
-              "author": "millerladino",
-              "tickets": []
-            },
-            {
-              "sha": "cf73b15",
-              "message": "release(dev): NMX-377",
-              "date": "2026-02-26T22:26:09Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "NMX-377",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-377"
-                }
-              ]
-            },
-            {
-              "sha": "5c838cd",
-              "message": "release(dev): PMO-2352",
-              "date": "2026-02-20T13:49:50Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "PMO-2352",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2352"
-                }
-              ]
-            },
-            {
-              "sha": "b151845",
-              "message": "release(dev): NMX-376",
-              "date": "2026-02-20T13:46:47Z",
-              "author": "Jorge Eduardo Garay Gutiérrez",
-              "tickets": [
-                {
-                  "id": "NMX-376",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-376"
-                }
-              ]
-            },
-            {
-              "sha": "bf482f5",
-              "message": "fix cols page about us",
-              "date": "2026-02-13T21:59:26Z",
-              "author": "millerladino",
-              "tickets": []
-            },
-            {
-              "sha": "08606a5",
-              "message": "ajustes al redireccionamiento de el link contactanos del footer",
-              "date": "2026-01-05T19:48:41Z",
-              "author": "Miller",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -4633,7 +2416,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T13:30:28Z",
+      "last_push": "2026-03-19T17:28:01Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -4700,10 +2483,24 @@
           "count": 52,
           "recent_commits": [
             {
+              "sha": "bca604b",
+              "message": "feat(erp): added new parameter in epicor order ACE-8",
+              "date": "2026-03-19T17:27:58Z",
+              "author": "meraso-nutra",
+              "pr_number": "284",
+              "tickets": [
+                {
+                  "id": "ACE-8",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-8"
+                }
+              ]
+            },
+            {
               "sha": "ce47f2d",
-              "message": "feat(orders): logic for updating payment status ACE-74 (#283)",
+              "message": "feat(orders): logic for updating payment status ACE-74",
               "date": "2026-03-19T13:30:25Z",
               "author": "meraso-nutra",
+              "pr_number": "283",
               "tickets": [
                 {
                   "id": "ACE-74",
@@ -4713,9 +2510,10 @@
             },
             {
               "sha": "11593f9",
-              "message": "feat(orders): agregar variable LOG_WEBHOOK_URL a configuracion de lambda ACE-54 (#282)",
-              "date": "2026-03-18T19:53:16Z",
+              "message": "feat(orders): habilitar envio de logs a webhook y mejorar logger ACE-54",
+              "date": "2026-03-18T19:53:17Z",
               "author": "jsandoval-dev",
+              "pr_number": "282",
               "tickets": [
                 {
                   "id": "ACE-54",
@@ -4724,17 +2522,37 @@
               ]
             },
             {
-              "sha": "110a048",
-              "message": "chore: eliminar pr-validation.yml (reemplazado por org-level checks via rulesets)",
-              "date": "2026-03-18T14:36:32Z",
-              "author": "Jorge Garay",
-              "tickets": []
+              "sha": "435e078",
+              "message": "feat(sso): integrar SendGrid con soporte completo para México ALCO-384",
+              "date": "2026-02-26T22:32:58Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "240",
+              "tickets": [
+                {
+                  "id": "ALCO-384",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
+                }
+              ]
+            },
+            {
+              "sha": "3508679",
+              "message": "feat(notifications): integrar SendGrid y WhatsApp con templates dinámicos ALCO-384",
+              "date": "2026-02-26T22:14:31Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "239",
+              "tickets": [
+                {
+                  "id": "ALCO-384",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
+                }
+              ]
             },
             {
               "sha": "b170f26",
-              "message": "refactor(logging): hacer el logger no bloqueante y evitar fallos en flujo ERP ACE-54 (#279)",
+              "message": "refactor(logging): hacer el logger no bloqueante y evitar fallos en flujo ERP ACE-54",
               "date": "2026-03-18T14:03:29Z",
               "author": "jsandoval-dev",
+              "pr_number": "279",
               "tickets": [
                 {
                   "id": "ACE-54",
@@ -4744,9 +2562,10 @@
             },
             {
               "sha": "cb31e39",
-              "message": "refactor(orders): extraer lógica de notificaciones de webhook a helpers NCR-79 (#278)",
+              "message": "refactor(orders): extraer lógica de notificaciones de webhook a helpers NCR-79",
               "date": "2026-03-17T23:12:15Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "278",
               "tickets": [
                 {
                   "id": "NCR-79",
@@ -4756,9 +2575,10 @@
             },
             {
               "sha": "ecc1bf0",
-              "message": "refactor(logging): usar orderId como correlationId en logs de flujo ERP ACE-54 (#277)",
+              "message": "refactor(logging): usar orderId como correlationId en logs de flujo ERP ACE-54",
               "date": "2026-03-17T22:19:04Z",
               "author": "jsandoval-dev",
+              "pr_number": "277",
               "tickets": [
                 {
                   "id": "ACE-54",
@@ -4768,9 +2588,10 @@
             },
             {
               "sha": "b3e0777",
-              "message": "feat(build): logs estructurados de observabilidad en el pipeline de despliegue NCR-00 (#276)",
+              "message": "feat(build): logs estructurados de observabilidad en el pipeline de despliegue NCR-00",
               "date": "2026-03-17T17:13:34Z",
-              "author": "Jorge Garay",
+              "author": "jgaray-nutrapp",
+              "pr_number": "276",
               "tickets": [
                 {
                   "id": "NCR-00",
@@ -4780,9 +2601,10 @@
             },
             {
               "sha": "43cd68a",
-              "message": "chore(sso): eliminar variables de entorno obsoletas del serverless ALCO-384 (#275)",
+              "message": "chore(sso): eliminar variables de entorno obsoletas del serverless ALCO-384",
               "date": "2026-03-17T17:06:10Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "275",
               "tickets": [
                 {
                   "id": "ALCO-384",
@@ -4792,9 +2614,10 @@
             },
             {
               "sha": "3a1ed15",
-              "message": "refactor(notifications): integrar dispatch centralizado y corregir templates ALCO-384 (#272)",
+              "message": "refactor(notifications): integrar dispatch centralizado y corregir templates ALCO-384",
               "date": "2026-03-17T14:03:40Z",
-              "author": "Felipe Berrio",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "272",
               "tickets": [
                 {
                   "id": "ALCO-384",
@@ -4804,9 +2627,10 @@
             },
             {
               "sha": "e19d43f",
-              "message": "fix(logging): mejorar logs para obtener mayor informacion de integracion ERP ACE-56 (#274)",
+              "message": "fix(logging): mejorar logs para obtener mayor informacion en integracion ERP ACE-56",
               "date": "2026-03-16T22:15:06Z",
               "author": "jsandoval-dev",
+              "pr_number": "274",
               "tickets": [
                 {
                   "id": "ACE-56",
@@ -4815,17 +2639,11 @@
               ]
             },
             {
-              "sha": "a6c580b",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:14:00Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
               "sha": "d369507",
-              "message": "refactor(orders): wip eslint ms orders ACE-8 (#271)",
-              "date": "2026-03-16T16:47:56Z",
+              "message": "refactor(orders): wip eslint ms orders ACE-8",
+              "date": "2026-03-16T16:47:57Z",
               "author": "meraso-nutra",
+              "pr_number": "271",
               "tickets": [
                 {
                   "id": "ACE-8",
@@ -4835,9 +2653,10 @@
             },
             {
               "sha": "853e314",
-              "message": "refactor(sso): extract auth helpers and update auth dto with userType SUP-152 (#270)",
-              "date": "2026-03-16T16:46:27Z",
-              "author": "Isabel Gomez Balvin",
+              "message": "refactor(sso): extract auth helpers and update auth dto with userType SUP-152",
+              "date": "2026-03-16T16:46:29Z",
+              "author": "CristiGB",
+              "pr_number": "270",
               "tickets": [
                 {
                   "id": "SUP-152",
@@ -4847,9 +2666,10 @@
             },
             {
               "sha": "6bacfe3",
-              "message": "fix(erp): corregir envio de data de transacciones ACE-54 (#269)",
-              "date": "2026-03-13T19:25:22Z",
+              "message": "fix(erp): corregir envio de data de transacciones ACE-54",
+              "date": "2026-03-13T19:25:23Z",
               "author": "jsandoval-dev",
+              "pr_number": "269",
               "tickets": [
                 {
                   "id": "ACE-54",
@@ -4859,9 +2679,10 @@
             },
             {
               "sha": "1587104",
-              "message": "feat(execution-manager): agregar nuevo estado de ejecución para el procesamiento de eventos ACE-54 (#267)",
+              "message": "feat(execution-manager): agregar estado processing para ejecuciones de eventos ACE-54",
               "date": "2026-03-13T14:04:37Z",
               "author": "jsandoval-dev",
+              "pr_number": "267",
               "tickets": [
                 {
                   "id": "ACE-54",
@@ -4871,9 +2692,10 @@
             },
             {
               "sha": "a61e64e",
-              "message": "refactor(erp): updated normalize state ACE-72 (#268)",
+              "message": "refactor(erp): updated normalize state ACE-72",
               "date": "2026-03-13T13:44:56Z",
               "author": "meraso-nutra",
+              "pr_number": "268",
               "tickets": [
                 {
                   "id": "ACE-72",
@@ -4883,9 +2705,10 @@
             },
             {
               "sha": "ddca3c7",
-              "message": "refactor(erp): added key in map ACE-72 (#265)",
+              "message": "refactor(erp): added key in map ACE-72",
               "date": "2026-03-12T23:23:04Z",
               "author": "meraso-nutra",
+              "pr_number": "265",
               "tickets": [
                 {
                   "id": "ACE-72",
@@ -4895,9 +2718,10 @@
             },
             {
               "sha": "c91945c",
-              "message": "refactor(erp): added active parameter in orders ACE-72 (#264)",
-              "date": "2026-03-12T15:29:53Z",
+              "message": "refactor(erp): added active parameter in orders ACE-72",
+              "date": "2026-03-12T15:29:54Z",
               "author": "meraso-nutra",
+              "pr_number": "264",
               "tickets": [
                 {
                   "id": "ACE-72",
@@ -4907,9 +2731,10 @@
             },
             {
               "sha": "45051ce",
-              "message": "feat(events): integración de execution-manager y endpoints de monitoreo de eventos ACE-53 (#258)",
+              "message": "feat(events): integración de execution-manager y endpoints de monitoreo de eventos ACE-53",
               "date": "2026-03-11T21:14:25Z",
               "author": "jsandoval-dev",
+              "pr_number": "258",
               "tickets": [
                 {
                   "id": "ACE-53",
@@ -4919,16 +2744,23 @@
             },
             {
               "sha": "e20f0ee",
-              "message": "fix(workflow): quitando validaciones locales para usar las de la org (#263)",
+              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
               "date": "2026-03-11T21:07:52Z",
-              "author": "Jorge Garay",
-              "tickets": []
+              "author": "jgaray-nutrapp",
+              "pr_number": "263",
+              "tickets": [
+                {
+                  "id": "DE-338",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
+                }
+              ]
             },
             {
               "sha": "fe0f345",
-              "message": "chore(notifications): trigger deployment ms-notifications ALCO-384 (#262)",
-              "date": "2026-03-11T17:08:04Z",
-              "author": "Felipe Berrio",
+              "message": "chore(notifications): trigger deployment ms-notifications ALCO-384",
+              "date": "2026-03-11T17:08:05Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "262",
               "tickets": [
                 {
                   "id": "ALCO-384",
@@ -4938,9 +2770,10 @@
             },
             {
               "sha": "102d0d6",
-              "message": "chore(notifications): agregar comentario descriptivo al modulo ALCO-384 (#260)",
-              "date": "2026-03-11T15:24:24Z",
-              "author": "Felipe Berrio",
+              "message": "chore(notifications): agregar comentario descriptivo al modulo ALCO-384",
+              "date": "2026-03-11T15:24:25Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "260",
               "tickets": [
                 {
                   "id": "ALCO-384",
@@ -4950,9 +2783,10 @@
             },
             {
               "sha": "92cdb8f",
-              "message": "feat(erp): created methods for customer ACE-72 (#261)",
-              "date": "2026-03-11T14:56:08Z",
+              "message": "feat(erp): created methods for customer ACE-72",
+              "date": "2026-03-11T14:56:09Z",
               "author": "meraso-nutra",
+              "pr_number": "261",
               "tickets": [
                 {
                   "id": "ACE-72",
@@ -4962,228 +2796,42 @@
             },
             {
               "sha": "e5a5e20",
-              "message": "refactor(erp): endpoint type update order builder ACE-57 (#259)",
+              "message": "refactor(erp): endpoint type update order builder ACE-57",
               "date": "2026-03-09T22:10:59Z",
               "author": "meraso-nutra",
+              "pr_number": "259",
               "tickets": [
                 {
                   "id": "ACE-57",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-57"
                 }
               ]
-            },
-            {
-              "sha": "d199c07",
-              "message": "fix(prescriptions): eliminar variable URL_REDIRECT del serverless ALCO-384 (#257)",
-              "date": "2026-03-09T21:14:44Z",
-              "author": "Felipe Berrio",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 23,
+          "count": 2,
           "recent_commits": [
             {
               "sha": "f213f56",
-              "message": "Merge pull request #280 from NutrappDev/release/qa-2026-03-18",
+              "message": "release: qa-2026-03-18",
               "date": "2026-03-18T15:39:18Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "f89606c",
-              "message": "chore: eliminar pr-validation.yml (reemplazado por org-level checks)",
-              "date": "2026-03-18T15:03:55Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "de78519",
-              "message": "chore: re-ejecutar checks de CI",
-              "date": "2026-03-18T14:54:47Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "f54a4d5",
-              "message": "chore: re-ejecutar checks de CI",
-              "date": "2026-03-18T14:45:48Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "3d90bcd",
-              "message": "feat(products): NCOL-602 filter products (#238)",
-              "date": "2026-03-18T14:11:15Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "NCOL-602",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-602"
-                }
-              ]
-            },
-            {
-              "sha": "0e29263",
-              "message": "chore(ci): actualizar pr-checks.yml con dashboard en tiempo real y auto-tag hotfix",
-              "date": "2026-03-16T17:13:58Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a71bc53",
-              "message": "fix(ci): actualizar pr-checks.yml a version solo auto-tag",
-              "date": "2026-03-12T13:47:16Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "6d597b8",
-              "message": "fix: corregir affected.txt para incluir ms-products y ms-orders [skip ci nota: trigger deploy]",
-              "date": "2026-02-24T20:00:58Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "c9ae835",
-              "message": "release: deploy PRs a QA - 2026-02-24",
-              "date": "2026-02-24T14:59:57Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "7255746",
-              "message": "fix(orders): add PRODUCTS_SERVICE_URL to serverless configuratio ALPE-218 (#227)",
-              "date": "2026-02-24T14:59:41Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALPE-218",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALPE-218"
-                }
-              ]
-            },
-            {
-              "sha": "d8169c3",
-              "message": "feat: stock reservation ALCO-1293 (#195)",
-              "date": "2026-02-24T14:56:29Z",
-              "author": "Isabel Gomez Balvin",
-              "tickets": [
-                {
-                  "id": "ALCO-1293",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1293"
-                }
-              ]
-            },
-            {
-              "sha": "3f5c656",
-              "message": "release: deploy PRs a QA - 2026-02-23",
-              "date": "2026-02-23T14:36:15Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "a729dbc",
-              "message": "feat(products): donation config GET endpoints ALCO-1392 (#233)",
-              "date": "2026-02-23T14:00:05Z",
-              "author": "Fabián Mauricio Romero lugo",
-              "tickets": [
-                {
-                  "id": "ALCO-1392",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1392"
-                }
-              ]
-            },
-            {
-              "sha": "f3dace6",
-              "message": "revert: restaurar qa al estado previo al merge de main",
-              "date": "2026-02-10T17:56:40Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "16b0d7e",
-              "message": "fix: revertir configuracion VPC en qa",
-              "date": "2026-02-10T13:25:51Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "77e6f13",
-              "message": "release: deploy QA a produccion - 2026-02-10",
-              "date": "2026-02-10T13:13:58Z",
-              "author": "Jorge Garay",
+              "author": "jgaray-nutrapp",
+              "pr_number": "280",
               "tickets": []
             },
             {
               "sha": "6e9ddc7",
-              "message": "fix(prescriptions): hotfix de error cronologico de releases ALCO-1319",
-              "date": "2026-01-27T14:35:04Z",
-              "author": "jgaray-nutrapp",
-              "tickets": [
-                {
-                  "id": "ALCO-1319",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1319"
-                }
-              ]
-            },
-            {
-              "sha": "14a517c",
-              "message": "docs: test for jira integration PMO-2518",
-              "date": "2026-01-26T21:30:19Z",
-              "author": "jgaray-nutrapp",
-              "tickets": [
-                {
-                  "id": "PMO-2518",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2518"
-                }
-              ]
-            },
-            {
-              "sha": "06c9ce7",
               "message": "hotfix(prescriptions): orden de prs ALCO-1319",
-              "date": "2026-01-23T01:18:05Z",
+              "date": "2026-01-27T14:35:05Z",
               "author": "fabianromerolu",
+              "pr_number": "213",
               "tickets": [
                 {
                   "id": "ALCO-1319",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1319"
                 }
               ]
-            },
-            {
-              "sha": "7116fee",
-              "message": "release: deploy PRs a QA - 2026-01-22",
-              "date": "2026-01-22T20:46:09Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "92c29b5",
-              "message": "debug: modificando affected para probar el despliegue CI",
-              "date": "2026-01-21T12:23:25Z",
-              "author": "jgaray-nutrapp",
-              "tickets": []
-            },
-            {
-              "sha": "dbd0bc3",
-              "message": "release: deploy PRs a QA - 2026-01-20",
-              "date": "2026-01-20T21:20:18Z",
-              "author": "Jorge Garay",
-              "tickets": []
-            },
-            {
-              "sha": "2cf94bc",
-              "message": "fix(token): cambiando el token para el nuevo usuario",
-              "date": "2026-01-19T15:07:20Z",
-              "author": "Jorge Garay",
-              "tickets": []
             }
           ]
         }
