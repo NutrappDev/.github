@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-19T20:16:06.046Z",
+  "generated_at": "2026-03-19T20:16:30.074Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 28,
@@ -504,7 +504,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T20:15:44Z",
+      "last_push": "2026-03-19T20:16:01Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -1027,8 +1027,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-19T20%3A16%3A04.986Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-19T20%3A16%3A04.986Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-19T20%3A16%3A28.466Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-19T20%3A16%3A28.466Z → 409 Conflict",
         "ci": null
       }
     },
