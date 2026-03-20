@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T15:08:35.072Z",
+  "generated_at": "2026-03-20T18:13:03.946Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -51,7 +51,7 @@
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2676": {
@@ -286,7 +286,7 @@
     },
     "ALMX-262": {
       "summary": "BG | Home / Responsive | Animación de fondo verde desaparece al dividir la pantalla",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-261": {
@@ -1143,8 +1143,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T15%3A08%3A32.486Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T15%3A08%3A32.487Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T18%3A13%3A02.362Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T18%3A13%3A02.363Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2510,7 +2510,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T14:49:01Z",
+      "last_push": "2026-03-20T18:12:39Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2574,8 +2574,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 53,
+          "count": 54,
           "recent_commits": [
+            {
+              "sha": "aad76f2",
+              "message": "refactor(logger): optimizar envio asincrono y latencia de logs ACE-56",
+              "date": "2026-03-20T18:12:37Z",
+              "author": "jsandoval-dev",
+              "pr_number": "286",
+              "tickets": [
+                {
+                  "id": "ACE-56",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-56"
+                }
+              ]
+            },
             {
               "sha": "56ef270",
               "message": "refactor(events): test instance change ACE-8",
@@ -2885,19 +2898,6 @@
                 {
                   "id": "ALCO-384",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
-              "sha": "92cdb8f",
-              "message": "feat(erp): created methods for customer ACE-72",
-              "date": "2026-03-11T14:56:09Z",
-              "author": "meraso-nutra",
-              "pr_number": "261",
-              "tickets": [
-                {
-                  "id": "ACE-72",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
                 }
               ]
             }
