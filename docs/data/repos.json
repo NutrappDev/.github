@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T14:40:32.168Z",
+  "generated_at": "2026-03-20T14:49:23.285Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -464,11 +464,6 @@
       "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
     },
-    "ACE-57": {
-      "summary": "Librería ERP - Pruebas de validación de nuevos artefactos de integración",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
-    },
     "ACE-56": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
       "status": "Esperando Aprobación",
@@ -499,9 +494,15 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T14:40:05Z",
+      "last_push": "2026-03-20T14:40:31Z",
       "topics": [],
-      "production": null,
+      "production": {
+        "version": "prod-2026-03-20",
+        "sha": "8caa995770b198639d68df44a63b5db8101a7426",
+        "date": "2026-03-20T14:40:27Z",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-03-20",
+        "body": "Release prod-2026-03-20\n"
+      },
       "production_history": [],
       "qa": null,
       "qa_history": [],
@@ -591,7 +592,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T14:17:13Z",
+      "last_push": "2026-03-20T14:43:25Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -1124,8 +1125,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T14%3A40%3A31.002Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T14%3A40%3A31.002Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T14%3A49%3A22.266Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T14%3A49%3A22.267Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2491,7 +2492,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T13:20:36Z",
+      "last_push": "2026-03-20T14:49:01Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2555,8 +2556,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 52,
+          "count": 53,
           "recent_commits": [
+            {
+              "sha": "56ef270",
+              "message": "refactor(events): test instance change ACE-8",
+              "date": "2026-03-20T14:48:59Z",
+              "author": "meraso-nutra",
+              "pr_number": "285",
+              "tickets": [
+                {
+                  "id": "ACE-8",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-8"
+                }
+              ]
+            },
             {
               "sha": "bca604b",
               "message": "feat(erp): added new parameter in epicor order ACE-8",
@@ -2866,19 +2880,6 @@
                 {
                   "id": "ACE-72",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
-                }
-              ]
-            },
-            {
-              "sha": "e5a5e20",
-              "message": "refactor(erp): endpoint type update order builder ACE-57",
-              "date": "2026-03-09T22:10:59Z",
-              "author": "meraso-nutra",
-              "pr_number": "259",
-              "tickets": [
-                {
-                  "id": "ACE-57",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-57"
                 }
               ]
             }
