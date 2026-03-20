@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-19T20:43:32.553Z",
+  "generated_at": "2026-03-20T14:40:32.168Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
-  "total_repos": 28,
+  "total_repos": 29,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -31,7 +31,7 @@
     },
     "SUP-184": {
       "summary": "BG | Datos Personales | Ajustes en actualización de datos",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
     "SUP-152": {
@@ -111,7 +111,7 @@
     },
     "NCR-79": {
       "summary": "Refactor: Extraer lógica de notificaciones del servicio de orders para cumplir límite de 300 líneas",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCOL-647": {
@@ -286,16 +286,6 @@
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
-    "ALMX-259": {
-      "summary": "BG | Productos / Favoritos | No muestra mensaje de advertencia al intentar agregar a favoritos sin estar registrado",
-      "status": "Despliegue a DEV",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALMX-256": {
-      "summary": "BG | Mi Dispensario | Línea de productos no muestra hormonas ni productos especiales",
       "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
@@ -313,11 +303,6 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "ALCO-1436": {
-      "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
-      "status": "Despliegue a QA",
-      "assignee": "Felipe Berrio"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -461,7 +446,7 @@
     },
     "ACE-74": {
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "En Curso",
+      "status": "Esperando Aprobación",
       "assignee": "Mario Eraso"
     },
     "ACE-72": {
@@ -507,6 +492,98 @@
   },
   "repos": [
     {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-20T14:40:05Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "3144cdd",
+              "message": "fix: Adjust on cmd",
+              "date": "2026-02-16T20:40:41Z",
+              "author": "k-aguilera",
+              "pr_number": "38",
+              "tickets": []
+            },
+            {
+              "sha": "a673ab9",
+              "message": "Business type flow config",
+              "date": "2026-02-16T19:16:10Z",
+              "author": "k-aguilera",
+              "pr_number": "37",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23347885916",
+        "updated_at": "2026-03-20T14:40:09Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-20T13:50:14Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -514,7 +591,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T20:43:12Z",
+      "last_push": "2026-03-20T14:17:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -523,15 +600,30 @@
         "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-19",
         "body": "Release prod-2026-03-19\n"
       },
-      "production_history": [],
+      "production_history": [
+        {
+          "version": "prod-2026-03-19-2",
+          "sha": "096948a4f901ae29d5cb1ea23a312a3637414c8e",
+          "date": "2026-03-19T20:43:34Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-19-2",
+          "body": "Release prod-2026-03-19-2\n"
+        }
+      ],
       "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "ac9d08989bb679ac20222b55a0f23c9b02f48ba4",
-        "date": "2026-03-17T16:18:10Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
+        "version": "qa-2026-03-20",
+        "sha": "affd71ba2ef5bd8f2cba591695b7404345fb487e",
+        "date": "2026-03-20T14:17:13Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-20",
+        "body": "Release qa-2026-03-20\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-17",
+          "sha": "ac9d08989bb679ac20222b55a0f23c9b02f48ba4",
+          "date": "2026-03-17T16:18:10Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-17",
+          "body": "Release qa-2026-03-17\n"
+        },
         {
           "version": "qa-2026-03-12",
           "sha": "8a1eded9915be6a5369fb5810eb252122444e58e",
@@ -542,7 +634,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "0d7fe47",
@@ -554,19 +646,6 @@
                 {
                   "id": "ALMX-262",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-262"
-                }
-              ]
-            },
-            {
-              "sha": "1ac5269",
-              "message": "feat(products): producto en bolsa y momentos ALMX-259",
-              "date": "2026-03-19T20:24:36Z",
-              "author": "fabianromerolu",
-              "pr_number": "362",
-              "tickets": [
-                {
-                  "id": "ALMX-259",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-259"
                 }
               ]
             },
@@ -597,19 +676,6 @@
               ]
             },
             {
-              "sha": "1944a89",
-              "message": "fix(products): remover mensaje de hormonas en dispensario MX ALMX-256",
-              "date": "2026-03-18T20:20:59Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "355",
-              "tickets": [
-                {
-                  "id": "ALMX-256",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-256"
-                }
-              ]
-            },
-            {
               "sha": "8437bfe",
               "message": "fix(navbar): eliminar punto blanco visible en área de autenticación ALMX-261",
               "date": "2026-03-17T21:40:52Z",
@@ -619,19 +685,6 @@
                 {
                   "id": "ALMX-261",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-261"
-                }
-              ]
-            },
-            {
-              "sha": "30c4623",
-              "message": "refactor(notifications): migrar envio de notificacion de orden al endpoint dispatch ALCO-1436",
-              "date": "2026-03-05T19:08:56Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "333",
-              "tickets": [
-                {
-                  "id": "ALCO-1436",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1436"
                 }
               ]
             },
@@ -714,8 +767,16 @@
           ]
         },
         "to_production": {
-          "count": 21,
+          "count": 22,
           "recent_commits": [
+            {
+              "sha": "affd71b",
+              "message": "release: qa 2026 03 19",
+              "date": "2026-03-20T14:16:50Z",
+              "author": "CristiGB",
+              "pr_number": "365",
+              "tickets": []
+            },
             {
               "sha": "ac9d089",
               "message": "release: qa 2026 03 17 ALMX-277",
@@ -1063,8 +1124,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-19T20%3A43%3A31.632Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-19T20%3A43%3A31.633Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T14%3A40%3A31.002Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T14%3A40%3A31.002Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1307,62 +1368,6 @@
       }
     },
     {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-19T12:17:02Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "3144cdd",
-              "message": "fix: Adjust on cmd",
-              "date": "2026-02-16T20:40:41Z",
-              "author": "k-aguilera",
-              "pr_number": "38",
-              "tickets": []
-            },
-            {
-              "sha": "a673ab9",
-              "message": "Business type flow config",
-              "date": "2026-02-16T19:16:10Z",
-              "author": "k-aguilera",
-              "pr_number": "37",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23156446520",
-        "updated_at": "2026-03-16T17:46:58Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -1370,7 +1375,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-17T13:15:47Z",
+      "last_push": "2026-03-20T13:52:27Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2486,7 +2491,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T17:28:01Z",
+      "last_push": "2026-03-20T13:20:36Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
