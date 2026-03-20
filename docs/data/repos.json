@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T18:13:03.946Z",
+  "generated_at": "2026-03-20T20:39:13.472Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -239,6 +239,16 @@
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
+    "NCOL-363": {
+      "summary": "BG | Inicio Sesión | No muestra imagen de perfil",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "NCOL-362": {
+      "summary": "BG | Mobile | Logo pequeño en el header",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
       "status": "Pruebas de Regresión",
@@ -253,6 +263,11 @@
       "summary": "Title Productos - Catalogo",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
+    },
+    "DE-339": {
+      "summary": "Ajustes de aws - Error en dependencias",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "DE-338": {
       "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
@@ -597,7 +612,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T15:08:03Z",
+      "last_push": "2026-03-20T20:05:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -640,8 +655,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "3284745",
+              "message": "fix(config): remove @nutrabiotics/sso-core completed DE-339",
+              "date": "2026-03-20T19:06:29Z",
+              "author": "CristiGB",
+              "pr_number": "366",
+              "tickets": [
+                {
+                  "id": "DE-339",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-339"
+                }
+              ]
+            },
             {
               "sha": "2b93c92",
               "message": "feat(shipping): refresh CartItem pricing and update Peru shipping rules PMO-2725",
@@ -1143,8 +1171,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T18%3A13%3A02.362Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T18%3A13%3A02.363Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T20%3A39%3A12.198Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T20%3A39%3A12.199Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2294,7 +2322,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T19:41:08Z",
+      "last_push": "2026-03-20T20:38:51Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2365,8 +2393,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "d3f8193",
+              "message": "fix(NCOL-363): no se muestra el perfil",
+              "date": "2026-03-20T20:38:50Z",
+              "author": "mladino-source",
+              "pr_number": "57",
+              "tickets": [
+                {
+                  "id": "NCOL-363",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-363"
+                }
+              ]
+            },
+            {
+              "sha": "e2b41e2",
+              "message": "fix(NCOL-362): fix_responsive_in_navbar",
+              "date": "2026-03-20T20:35:04Z",
+              "author": "mladino-source",
+              "pr_number": "54",
+              "tickets": [
+                {
+                  "id": "NCOL-362",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-362"
+                }
+              ]
+            },
             {
               "sha": "a3bab74",
               "message": "fix(NCOL-467): ajuste tamaño de formulario farmacovigilancia",
