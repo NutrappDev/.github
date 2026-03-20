@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-19T20:24:53.806Z",
+  "generated_at": "2026-03-20T14:17:08.603Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 28,
-      "prs_90d": 79,
-      "last_activity": "2026-03-19T19:54:55Z",
+      "prs_30d": 30,
+      "prs_90d": 81,
+      "last_activity": "2026-03-20T14:16:50Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 53
+          "prs": 55
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -36,8 +36,8 @@
       ],
       "by_branch": {
         "develop": 45,
-        "qa": 24,
-        "main": 10
+        "qa": 25,
+        "main": 11
       },
       "weekly": [
         {
@@ -90,7 +90,7 @@
         },
         {
           "week": "2026-W12",
-          "prs": 6
+          "prs": 8
         }
       ]
     },
@@ -181,13 +181,13 @@
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 24,
-      "prs_90d": 24,
-      "last_activity": "2026-03-19T20:15:59Z",
+      "prs_30d": 25,
+      "prs_90d": 25,
+      "last_activity": "2026-03-19T20:26:13Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 12
+          "prs": 13
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -195,7 +195,7 @@
         }
       ],
       "by_branch": {
-        "develop": 23,
+        "develop": 24,
         "qa": 1,
         "main": 0
       },
@@ -250,7 +250,7 @@
         },
         {
           "week": "2026-W12",
-          "prs": 7
+          "prs": 8
         }
       ]
     },
@@ -509,7 +509,7 @@
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 12,
+      "prs_30d": 10,
       "prs_90d": 20,
       "last_activity": "2026-03-18T15:39:18Z",
       "by_repo": [
