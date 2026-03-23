@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T22:15:16.441Z",
+  "generated_at": "2026-03-23T05:55:48.088Z",
   "window_days": 90,
   "developers": [
     {
@@ -40,10 +40,6 @@
         "main": 11
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 5
-        },
         {
           "week": "2026-W01",
           "prs": 2
@@ -91,13 +87,17 @@
         {
           "week": "2026-W12",
           "prs": 11
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 25,
+      "prs_30d": 22,
       "prs_90d": 25,
       "last_activity": "2026-03-19T20:26:13Z",
       "by_repo": [
@@ -116,10 +116,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 0
-        },
         {
           "week": "2026-W01",
           "prs": 0
@@ -167,13 +163,17 @@
         {
           "week": "2026-W12",
           "prs": 8
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
     {
       "login": "k-aguilera",
       "avatar_url": "https://avatars.githubusercontent.com/u/256123414?v=4",
-      "prs_30d": 24,
+      "prs_30d": 21,
       "prs_90d": 55,
       "last_activity": "2026-03-20T14:40:02Z",
       "by_repo": [
@@ -200,10 +200,6 @@
         "main": 4
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 0
-        },
         {
           "week": "2026-W01",
           "prs": 0
@@ -251,6 +247,10 @@
         {
           "week": "2026-W12",
           "prs": 5
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
@@ -276,10 +276,6 @@
         "main": 1
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 0
-        },
         {
           "week": "2026-W01",
           "prs": 0
@@ -327,13 +323,101 @@
         {
           "week": "2026-W12",
           "prs": 5
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
+        }
+      ]
+    },
+    {
+      "login": "fabianromerolu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
+      "prs_30d": 13,
+      "prs_90d": 47,
+      "last_activity": "2026-03-19T20:24:36Z",
+      "by_repo": [
+        {
+          "repo": "alivia",
+          "prs": 18
+        },
+        {
+          "repo": "portal-nutrabiotics",
+          "prs": 11
+        },
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 11
+        },
+        {
+          "repo": "microservice_payments",
+          "prs": 7
+        }
+      ],
+      "by_branch": {
+        "develop": 37,
+        "qa": 9,
+        "main": 1
+      },
+      "weekly": [
+        {
+          "week": "2026-W01",
+          "prs": 4
+        },
+        {
+          "week": "2026-W02",
+          "prs": 8
+        },
+        {
+          "week": "2026-W03",
+          "prs": 7
+        },
+        {
+          "week": "2026-W04",
+          "prs": 3
+        },
+        {
+          "week": "2026-W05",
+          "prs": 1
+        },
+        {
+          "week": "2026-W06",
+          "prs": 5
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 4
+        },
+        {
+          "week": "2026-W09",
+          "prs": 5
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 7
+        },
+        {
+          "week": "2026-W12",
+          "prs": 1
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 14,
+      "prs_30d": 13,
       "prs_90d": 27,
       "last_activity": "2026-03-20T18:12:37Z",
       "by_repo": [
@@ -369,10 +453,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 0
         },
@@ -419,90 +499,10 @@
         {
           "week": "2026-W12",
           "prs": 6
-        }
-      ]
-    },
-    {
-      "login": "fabianromerolu",
-      "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 13,
-      "prs_90d": 47,
-      "last_activity": "2026-03-19T20:24:36Z",
-      "by_repo": [
-        {
-          "repo": "alivia",
-          "prs": 18
         },
         {
-          "repo": "portal-nutrabiotics",
-          "prs": 11
-        },
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 11
-        },
-        {
-          "repo": "microservice_payments",
-          "prs": 7
-        }
-      ],
-      "by_branch": {
-        "develop": 37,
-        "qa": 9,
-        "main": 1
-      },
-      "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 2
-        },
-        {
-          "week": "2026-W01",
-          "prs": 4
-        },
-        {
-          "week": "2026-W02",
-          "prs": 8
-        },
-        {
-          "week": "2026-W03",
-          "prs": 7
-        },
-        {
-          "week": "2026-W04",
-          "prs": 3
-        },
-        {
-          "week": "2026-W05",
-          "prs": 1
-        },
-        {
-          "week": "2026-W06",
-          "prs": 5
-        },
-        {
-          "week": "2026-W07",
+          "week": "2026-W13",
           "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 4
-        },
-        {
-          "week": "2026-W09",
-          "prs": 5
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 7
-        },
-        {
-          "week": "2026-W12",
-          "prs": 1
         }
       ]
     },
@@ -533,10 +533,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 0
         },
@@ -583,13 +579,17 @@
         {
           "week": "2026-W12",
           "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 8,
+      "prs_30d": 6,
       "prs_90d": 21,
       "last_activity": "2026-03-17T21:33:24Z",
       "by_repo": [
@@ -604,10 +604,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 0
-        },
         {
           "week": "2026-W01",
           "prs": 0
@@ -655,6 +651,10 @@
         {
           "week": "2026-W12",
           "prs": 1
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
@@ -677,10 +677,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 0
         },
@@ -727,6 +723,10 @@
         {
           "week": "2026-W12",
           "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
@@ -749,10 +749,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 0
         },
@@ -799,81 +795,9 @@
         {
           "week": "2026-W12",
           "prs": 1
-        }
-      ]
-    },
-    {
-      "login": "Joredjs",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3341088?v=4",
-      "prs_30d": 0,
-      "prs_90d": 7,
-      "last_activity": "2026-01-08T19:35:05Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 4
         },
         {
-          "repo": "SSO-keycloak",
-          "prs": 3
-        }
-      ],
-      "by_branch": {
-        "develop": 4,
-        "qa": 0,
-        "main": 3
-      },
-      "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 2
-        },
-        {
-          "week": "2026-W01",
-          "prs": 2
-        },
-        {
-          "week": "2026-W02",
-          "prs": 3
-        },
-        {
-          "week": "2026-W03",
-          "prs": 0
-        },
-        {
-          "week": "2026-W04",
-          "prs": 0
-        },
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
+          "week": "2026-W13",
           "prs": 0
         }
       ]
@@ -905,10 +829,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 2
         },
@@ -954,39 +874,43 @@
         },
         {
           "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
           "prs": 0
         }
       ]
     },
     {
-      "login": "Alejandra230301",
-      "avatar_url": "https://avatars.githubusercontent.com/u/49566189?v=4",
+      "login": "Joredjs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3341088?v=4",
       "prs_30d": 0,
-      "prs_90d": 4,
-      "last_activity": "2025-12-23T23:09:04Z",
+      "prs_90d": 6,
+      "last_activity": "2026-01-08T19:35:05Z",
       "by_repo": [
         {
-          "repo": "alivia",
-          "prs": 4
+          "repo": "monorepo-alivia-backend",
+          "prs": 3
+        },
+        {
+          "repo": "SSO-keycloak",
+          "prs": 3
         }
       ],
       "by_branch": {
         "develop": 3,
-        "qa": 1,
-        "main": 0
+        "qa": 0,
+        "main": 3
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 4
-        },
-        {
           "week": "2026-W01",
-          "prs": 0
+          "prs": 2
         },
         {
           "week": "2026-W02",
-          "prs": 0
+          "prs": 3
         },
         {
           "week": "2026-W03",
@@ -1026,6 +950,10 @@
         },
         {
           "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
           "prs": 0
         }
       ]
@@ -1049,10 +977,6 @@
       },
       "weekly": [
         {
-          "week": "2025-W52",
-          "prs": 0
-        },
-        {
           "week": "2026-W01",
           "prs": 0
         },
@@ -1099,6 +1023,82 @@
         {
           "week": "2026-W12",
           "prs": 0
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
+        }
+      ]
+    },
+    {
+      "login": "Alejandra230301",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49566189?v=4",
+      "prs_30d": 0,
+      "prs_90d": 1,
+      "last_activity": "2025-12-23T23:09:04Z",
+      "by_repo": [
+        {
+          "repo": "alivia",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 1,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W01",
+          "prs": 0
+        },
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
         }
       ]
     },
@@ -1120,10 +1120,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2025-W52",
-          "prs": 0
-        },
         {
           "week": "2026-W01",
           "prs": 0
@@ -1170,6 +1166,10 @@
         },
         {
           "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
           "prs": 0
         }
       ]
