@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-20T20:39:13.472Z",
+  "generated_at": "2026-03-23T05:30:25.555Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -51,7 +51,7 @@
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2676": {
@@ -481,7 +481,7 @@
     },
     "ACE-66": {
       "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
-      "status": "En Curso",
+      "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "ACE-56": {
@@ -491,7 +491,7 @@
     },
     "ACE-54": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "En Curso",
+      "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "ACE-53": {
@@ -612,7 +612,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T20:05:33Z",
+      "last_push": "2026-03-20T22:15:19Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -655,7 +655,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 12,
           "recent_commits": [
             {
               "sha": "3284745",
@@ -667,19 +667,6 @@
                 {
                   "id": "DE-339",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-339"
-                }
-              ]
-            },
-            {
-              "sha": "2b93c92",
-              "message": "feat(shipping): refresh CartItem pricing and update Peru shipping rules PMO-2725",
-              "date": "2026-03-20T15:08:01Z",
-              "author": "CristiGB",
-              "pr_number": "364",
-              "tickets": [
-                {
-                  "id": "PMO-2725",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2725"
                 }
               ]
             },
@@ -816,6 +803,19 @@
         "to_production": {
           "count": 22,
           "recent_commits": [
+            {
+              "sha": "bb65ec1",
+              "message": "release: refresh CartItem pricing and update Peru shipping rules 2026-03-20 PMO-2725",
+              "date": "2026-03-20T22:14:57Z",
+              "author": "CristiGB",
+              "pr_number": "369",
+              "tickets": [
+                {
+                  "id": "PMO-2725",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2725"
+                }
+              ]
+            },
             {
               "sha": "affd71b",
               "message": "release: qa 2026 03 19",
@@ -1018,14 +1018,6 @@
               "author": "fabianromerolu",
               "pr_number": "267",
               "tickets": []
-            },
-            {
-              "sha": "880aecf",
-              "message": "Develop merge qa",
-              "date": "2025-12-22T21:13:16Z",
-              "author": "Alejandra230301",
-              "pr_number": "262",
-              "tickets": []
             }
           ]
         }
@@ -1171,8 +1163,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-20T20%3A39%3A12.198Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-20T20%3A39%3A12.199Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-23T05%3A30%3A23.552Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-23T05%3A30%3A23.553Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2322,7 +2314,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T20:38:51Z",
+      "last_push": "2026-03-20T21:42:05Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
