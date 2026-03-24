@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T21:22:59.659Z",
+  "generated_at": "2026-03-24T22:03:58.690Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -301,7 +301,7 @@
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Felipe Berrio"
     },
     "ALMX-273": {
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T21:11:02Z",
+      "last_push": "2026-03-24T22:03:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -974,7 +974,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T14:40:31Z",
+      "last_push": "2026-03-24T21:36:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-20",
@@ -1015,9 +1015,9 @@
       },
       "ci": {
         "status": "completed",
-        "conclusion": "cancelled",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23347885916",
-        "updated_at": "2026-03-20T15:07:52Z",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23513385633",
+        "updated_at": "2026-03-24T21:48:05Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
       },
       "_errors": {
@@ -1209,8 +1209,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T21%3A22%3A57.640Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T21%3A22%3A57.641Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T22%3A03%3A57.264Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T22%3A03%3A57.264Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1222,7 +1222,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T13:38:53Z",
+      "last_push": "2026-03-24T22:00:40Z",
       "topics": [],
       "production": null,
       "production_history": [],
