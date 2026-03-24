@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T22:03:58.690Z",
+  "generated_at": "2026-03-24T22:32:05.220Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -276,7 +276,7 @@
     },
     "DE-339": {
       "summary": "Ajustes de aws - Error en dependencias",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
     "DE-338": {
@@ -293,6 +293,11 @@
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
+    },
+    "ALMX-283": {
+      "summary": "BG | Historial de puntos | El total de puntos no de adapta a la tarjetas",
+      "status": "Despliegue a DEV",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-280": {
       "summary": "BG | Visualización | La imagen de Alivia se visualiza demasiado pequeña",
@@ -498,11 +503,6 @@
       "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
       "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-67": {
-      "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T22:03:36Z",
+      "last_push": "2026-03-24T22:31:44Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -524,6 +524,13 @@
         "body": "Release prod-2026-03-24\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-03-24-2",
+          "sha": "307bd7f13bb1c514913e45c3e0c6cf6cbc163be3",
+          "date": "2026-03-24T22:03:55Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-24-2",
+          "body": "Release prod-2026-03-24-2\n"
+        },
         {
           "version": "prod-2026-03-19",
           "sha": "ce82986e320ad60d7d2d15d5d9cace46eda7dc40",
@@ -564,8 +571,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 15,
           "recent_commits": [
+            {
+              "sha": "8ecbf11",
+              "message": "fix(points): ajuste de modal ALMX-283",
+              "date": "2026-03-24T22:31:42Z",
+              "author": "fabianromerolu",
+              "pr_number": "373",
+              "tickets": [
+                {
+                  "id": "ALMX-283",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-283"
+                }
+              ]
+            },
             {
               "sha": "bb416b0",
               "message": "fix(prescription): corregir imagen rota en carrusel ALMX-242",
@@ -1209,8 +1229,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T22%3A03%3A57.264Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T22%3A03%3A57.264Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T22%3A32%3A04.100Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T22%3A32%3A04.101Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2360,7 +2380,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T21:02:28Z",
+      "last_push": "2026-03-24T22:04:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2628,7 +2648,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T19:20:31Z",
+      "last_push": "2026-03-24T22:04:00Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
