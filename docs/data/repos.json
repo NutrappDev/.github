@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T19:20:52.954Z",
+  "generated_at": "2026-03-24T19:27:03.859Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -329,6 +329,11 @@
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
+    "ALMX-242": {
+      "summary": "BG | Para Paciente | No se muestra imagen del producto ni imagen de reemplazo",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "ALMX-228": {
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
@@ -498,11 +503,6 @@
       "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-56": {
-      "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T16:46:47Z",
+      "last_push": "2026-03-24T19:26:38Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -564,8 +564,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 14,
           "recent_commits": [
+            {
+              "sha": "bb416b0",
+              "message": "fix(prescription): corregir imagen rota en carrusel ALMX-242",
+              "date": "2026-03-24T19:26:34Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "371",
+              "tickets": [
+                {
+                  "id": "ALMX-242",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-242"
+                }
+              ]
+            },
             {
               "sha": "f1d0861",
               "message": "fix(navbar): adjust styles for improved layout and responsiveness ALMX-280",
@@ -1183,8 +1196,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T19%3A20%3A52.059Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T19%3A20%3A52.060Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T19%3A27%3A02.400Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T19%3A27%3A02.400Z → 409 Conflict",
         "ci": null
       }
     },
