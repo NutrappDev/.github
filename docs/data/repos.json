@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T19:20:31.652Z",
+  "generated_at": "2026-03-24T19:20:52.954Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -1183,8 +1183,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T19%3A20%3A30.568Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T19%3A20%3A30.568Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T19%3A20%3A52.059Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T19%3A20%3A52.060Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2589,7 +2589,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T18:05:58Z",
+      "last_push": "2026-03-24T19:20:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2653,8 +2653,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 55,
+          "count": 56,
           "recent_commits": [
+            {
+              "sha": "0e4e253",
+              "message": "fix(orders): usar id cuando exista en getOrCreateOrder ACE-54",
+              "date": "2026-03-24T19:20:29Z",
+              "author": "jsandoval-dev",
+              "pr_number": "288",
+              "tickets": [
+                {
+                  "id": "ACE-54",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
+                }
+              ]
+            },
             {
               "sha": "397cd0e",
               "message": "feat(event-monitoring): reactivacion manual de transacciones ACE-69",
@@ -2964,19 +2977,6 @@
                 {
                   "id": "DE-338",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
-                }
-              ]
-            },
-            {
-              "sha": "fe0f345",
-              "message": "chore(notifications): trigger deployment ms-notifications ALCO-384",
-              "date": "2026-03-11T17:08:05Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "262",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
                 }
               ]
             }
