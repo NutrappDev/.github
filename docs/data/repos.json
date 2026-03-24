@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-24T16:36:23.118Z",
+  "generated_at": "2026-03-24T19:20:31.652Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-222": {
@@ -76,7 +76,7 @@
     },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "Aprobado por QA",
+      "status": "Pruebas de Regresión",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2508": {
@@ -128,6 +128,11 @@
       "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
       "status": "Pruebas de Regresión",
       "assignee": "Kevin Aguilera"
+    },
+    "NCOL-645": {
+      "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
+      "status": "Despliegue a QA",
+      "assignee": "Steven Leon"
     },
     "NCOL-637": {
       "summary": "BG | Faltan meses en el calendario",
@@ -498,112 +503,9 @@
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-54": {
-      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
-    {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-20T14:40:31Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-03-20",
-        "sha": "8caa995770b198639d68df44a63b5db8101a7426",
-        "date": "2026-03-20T14:40:27Z",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-03-20",
-        "body": "Release prod-2026-03-20\n"
-      },
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "3144cdd",
-              "message": "fix: Adjust on cmd",
-              "date": "2026-02-16T20:40:41Z",
-              "author": "k-aguilera",
-              "pr_number": "38",
-              "tickets": []
-            },
-            {
-              "sha": "a673ab9",
-              "message": "Business type flow config",
-              "date": "2026-02-16T19:16:10Z",
-              "author": "k-aguilera",
-              "pr_number": "37",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "cancelled",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23347885916",
-        "updated_at": "2026-03-20T15:07:52Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-20T13:50:14Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -612,16 +514,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T16:36:05Z",
+      "last_push": "2026-03-24T16:46:47Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-03-19",
-        "sha": "ce82986e320ad60d7d2d15d5d9cace46eda7dc40",
-        "date": "2026-03-19T19:55:16Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-19",
-        "body": "Release prod-2026-03-19\n"
+        "version": "prod-2026-03-24",
+        "sha": "ac65e48d16641d6d70f8f80581d6494c16eb46d5",
+        "date": "2026-03-24T16:36:25Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-24",
+        "body": "Release prod-2026-03-24\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-03-19",
+          "sha": "ce82986e320ad60d7d2d15d5d9cace46eda7dc40",
+          "date": "2026-03-19T19:55:16Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-19",
+          "body": "Release prod-2026-03-19\n"
+        },
         {
           "version": "prod-2026-03-19-2",
           "sha": "096948a4f901ae29d5cb1ea23a312a3637414c8e",
@@ -1045,6 +954,104 @@
       }
     },
     {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-20T14:40:31Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-03-20",
+        "sha": "8caa995770b198639d68df44a63b5db8101a7426",
+        "date": "2026-03-20T14:40:27Z",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-03-20",
+        "body": "Release prod-2026-03-20\n"
+      },
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "3144cdd",
+              "message": "fix: Adjust on cmd",
+              "date": "2026-02-16T20:40:41Z",
+              "author": "k-aguilera",
+              "pr_number": "38",
+              "tickets": []
+            },
+            {
+              "sha": "a673ab9",
+              "message": "Business type flow config",
+              "date": "2026-02-16T19:16:10Z",
+              "author": "k-aguilera",
+              "pr_number": "37",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "cancelled",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23347885916",
+        "updated_at": "2026-03-20T15:07:52Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-20T13:50:14Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "portal-nutrabiotics",
       "full_name": "NutrappDev/portal-nutrabiotics",
       "description": null,
@@ -1176,8 +1183,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T16%3A36%3A21.989Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T16%3A36%3A21.990Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T19%3A20%3A30.568Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T19%3A20%3A30.568Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2327,7 +2334,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T21:42:05Z",
+      "last_push": "2026-03-24T19:20:09Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2398,8 +2405,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "39c9801",
+              "message": "feat: creacion pagina de impacto sostenible NCOL-645",
+              "date": "2026-03-24T19:20:06Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "58",
+              "tickets": [
+                {
+                  "id": "NCOL-645",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-645"
+                }
+              ]
+            },
             {
               "sha": "d3f8193",
               "message": "fix(NCOL-363): no se muestra el perfil",
@@ -2569,7 +2589,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T14:41:55Z",
+      "last_push": "2026-03-24T18:05:58Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
