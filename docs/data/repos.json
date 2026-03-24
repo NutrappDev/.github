@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-23T05:30:25.555Z",
+  "generated_at": "2026-03-24T16:36:23.118Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-222": {
@@ -86,7 +86,7 @@
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
     "PMO-2221": {
@@ -284,6 +284,11 @@
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
     },
+    "ALMX-280": {
+      "summary": "BG | Visualización | La imagen de Alivia se visualiza demasiado pequeña",
+      "status": "Despliegue a DEV",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Despliegue a PROD",
@@ -474,6 +479,11 @@
       "status": "Esperando Aprobación",
       "assignee": "Mario Eraso"
     },
+    "ACE-69": {
+      "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
+      "status": "En Curso",
+      "assignee": "Jhelcy Sandoval"
+    },
     "ACE-67": {
       "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
       "status": "Esperando Aprobación",
@@ -492,16 +502,6 @@
     "ACE-54": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-53": {
-      "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-8": {
-      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
-      "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
     }
   },
@@ -612,7 +612,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T22:15:19Z",
+      "last_push": "2026-03-24T16:36:05Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-19",
@@ -655,8 +655,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "f1d0861",
+              "message": "fix(navbar): adjust styles for improved layout and responsiveness ALMX-280",
+              "date": "2026-03-24T16:35:55Z",
+              "author": "CristiGB",
+              "pr_number": "370",
+              "tickets": [
+                {
+                  "id": "ALMX-280",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-280"
+                }
+              ]
+            },
             {
               "sha": "3284745",
               "message": "fix(config): remove @nutrabiotics/sso-core completed DE-339",
@@ -1163,8 +1176,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-23T05%3A30%3A23.552Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-23T05%3A30%3A23.553Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T16%3A36%3A21.989Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T16%3A36%3A21.990Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2556,7 +2569,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-20T18:12:39Z",
+      "last_push": "2026-03-24T14:41:55Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2620,8 +2633,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 54,
+          "count": 55,
           "recent_commits": [
+            {
+              "sha": "397cd0e",
+              "message": "feat(event-monitoring): reactivacion manual de transacciones ACE-69",
+              "date": "2026-03-24T14:41:52Z",
+              "author": "jsandoval-dev",
+              "pr_number": "287",
+              "tickets": [
+                {
+                  "id": "ACE-69",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-69"
+                }
+              ]
+            },
             {
               "sha": "aad76f2",
               "message": "refactor(logger): optimizar envio asincrono y latencia de logs ACE-56",
@@ -2927,19 +2953,6 @@
               "date": "2026-03-11T17:08:05Z",
               "author": "Felipe-Berrio-dev",
               "pr_number": "262",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
-              "sha": "102d0d6",
-              "message": "chore(notifications): agregar comentario descriptivo al modulo ALCO-384",
-              "date": "2026-03-11T15:24:25Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "260",
               "tickets": [
                 {
                   "id": "ALCO-384",
