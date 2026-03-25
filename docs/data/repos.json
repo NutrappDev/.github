@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T19:43:03.936Z",
+  "generated_at": "2026-03-25T20:03:33.698Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -98,6 +98,11 @@
       "summary": "Solicitud de carga de piezas promocionales en sección “carrusel del productos” – Sitio Web Nutrabiotics Colombia",
       "status": "Detenido",
       "assignee": "Miller Ladino Osorio"
+    },
+    "NE-225": {
+      "summary": "BG | Campo Obligatorio | Escribe tu pregunta | No posee hover rojo",
+      "status": "En proceso",
+      "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
@@ -496,11 +501,6 @@
     },
     "AIA-34": {
       "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-32": {
-      "summary": "BG | Abrir chat genera error del token",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -1297,8 +1297,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T19%3A43%3A02.661Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T19%3A43%3A02.661Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T20%3A03%3A32.090Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T20%3A03%3A32.090Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1548,7 +1548,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T15:39:31Z",
+      "last_push": "2026-03-25T20:03:07Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1570,8 +1570,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "b7b7631",
+              "message": "fix(contact-form): mostrar borde rojo en campo obligatorio NE-225",
+              "date": "2026-03-25T20:03:05Z",
+              "author": "jsandoval-dev",
+              "pr_number": "44",
+              "tickets": [
+                {
+                  "id": "NE-225",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-225"
+                }
+              ]
+            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
