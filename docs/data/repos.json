@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-24T22:32:05.220Z",
+  "generated_at": "2026-03-25T14:01:08.035Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -111,7 +111,7 @@
     },
     "NE-151": {
       "summary": "Épica 5: Implementación “Mi cuenta” (Persona Natural) en Perfil Empresas – SSO B2B]",
-      "status": "Detenido",
+      "status": "Esperando aprobación",
       "assignee": "David Sarmiento"
     },
     "NE-74": {
@@ -279,11 +279,6 @@
       "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
-    "DE-338": {
-      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
-      "status": "Actividad completada",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
-    },
     "AMN-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Done",
@@ -298,6 +293,11 @@
       "summary": "BG | Historial de puntos | El total de puntos no de adapta a la tarjetas",
       "status": "Despliegue a DEV",
       "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALMX-281": {
+      "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
     },
     "ALMX-280": {
       "summary": "BG | Visualización | La imagen de Alivia se visualiza demasiado pequeña",
@@ -316,7 +316,7 @@
     },
     "ALMX-268": {
       "summary": "BG | Detalle de producto | Imagen del producto tapa el banner “Comercialización única para México”",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-262": {
@@ -336,18 +336,23 @@
     },
     "ALMX-245": {
       "summary": "BG | Productos | Versión móvil | Botón de categoría se corta en la interfaz",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-242": {
       "summary": "BG | Para Paciente | No se muestra imagen del producto ni imagen de reemplazo",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-228": {
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1440": {
+      "summary": "crear campo en productos",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -498,11 +503,6 @@
       "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
       "status": "Esperando Aprobación",
       "assignee": "Mario Eraso"
-    },
-    "ACE-69": {
-      "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
-      "status": "En Curso",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T22:31:44Z",
+      "last_push": "2026-03-24T23:29:27Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -994,7 +994,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T21:36:13Z",
+      "last_push": "2026-03-25T13:29:29Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-20",
@@ -1036,8 +1036,8 @@
       "ci": {
         "status": "completed",
         "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23513385633",
-        "updated_at": "2026-03-24T21:48:05Z",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23543538890",
+        "updated_at": "2026-03-25T13:41:14Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
       },
       "_errors": {
@@ -1229,8 +1229,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-24T22%3A32%3A04.100Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-24T22%3A32%3A04.101Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T14%3A01%3A06.917Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T14%3A01%3A06.918Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2648,7 +2648,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T22:04:00Z",
+      "last_push": "2026-03-25T14:00:41Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2712,8 +2712,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 56,
+          "count": 58,
           "recent_commits": [
+            {
+              "sha": "63bd1c0",
+              "message": "feat(products): add 'inventariado' field to product model ALCO-1440",
+              "date": "2026-03-25T14:00:39Z",
+              "author": "CristiGB",
+              "pr_number": "290",
+              "tickets": [
+                {
+                  "id": "ALCO-1440",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1440"
+                }
+              ]
+            },
+            {
+              "sha": "7d6f039",
+              "message": "refactor(orders): centralizar despacho de notificaciones en updateOrder ALMX-281",
+              "date": "2026-03-25T13:50:36Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "289",
+              "tickets": [
+                {
+                  "id": "ALMX-281",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-281"
+                }
+              ]
+            },
             {
               "sha": "0e4e253",
               "message": "fix(orders): usar id cuando exista en getOrCreateOrder ACE-54",
@@ -3010,32 +3036,6 @@
                 {
                   "id": "ACE-72",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
-                }
-              ]
-            },
-            {
-              "sha": "45051ce",
-              "message": "feat(events): integración de execution-manager y endpoints de monitoreo de eventos ACE-53",
-              "date": "2026-03-11T21:14:25Z",
-              "author": "jsandoval-dev",
-              "pr_number": "258",
-              "tickets": [
-                {
-                  "id": "ACE-53",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-53"
-                }
-              ]
-            },
-            {
-              "sha": "e20f0ee",
-              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
-              "date": "2026-03-11T21:07:52Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "263",
-              "tickets": [
-                {
-                  "id": "DE-338",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
                 }
               ]
             }
