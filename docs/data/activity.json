@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-24T14:42:13.084Z",
+  "generated_at": "2026-03-25T13:50:54.072Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 33,
-      "prs_90d": 81,
-      "last_activity": "2026-03-20T22:14:57Z",
+      "prs_30d": 36,
+      "prs_90d": 84,
+      "last_activity": "2026-03-24T22:03:34Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 58
+          "prs": 61
         },
         {
           "repo": "portal-nutrabiotics",
@@ -35,9 +35,9 @@
         }
       ],
       "by_branch": {
-        "develop": 44,
+        "develop": 45,
         "qa": 26,
-        "main": 11
+        "main": 13
       },
       "weekly": [
         {
@@ -90,28 +90,28 @@
         },
         {
           "week": "2026-W13",
-          "prs": 0
+          "prs": 3
         }
       ]
     },
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 22,
-      "prs_90d": 25,
-      "last_activity": "2026-03-19T20:26:13Z",
+      "prs_30d": 24,
+      "prs_90d": 27,
+      "last_activity": "2026-03-25T13:50:36Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 13
+          "prs": 14
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 12
+          "prs": 13
         }
       ],
       "by_branch": {
-        "develop": 24,
+        "develop": 26,
         "qa": 1,
         "main": 0
       },
@@ -166,7 +166,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 0
+          "prs": 2
         }
       ]
     },
@@ -333,13 +333,13 @@
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 14,
-      "prs_90d": 28,
-      "last_activity": "2026-03-24T14:41:52Z",
+      "prs_30d": 16,
+      "prs_90d": 30,
+      "last_activity": "2026-03-24T21:22:33Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 12
+          "prs": 13
         },
         {
           "repo": "fruto-web-nutra-co",
@@ -350,12 +350,12 @@
           "prs": 4
         },
         {
-          "repo": "ai-assistants-backend",
+          "repo": "portal-nutrabiotics",
           "prs": 3
         },
         {
-          "repo": "portal-nutrabiotics",
-          "prs": 2
+          "repo": "ai-assistants-backend",
+          "prs": 3
         },
         {
           "repo": "nutrabiotics-empresas",
@@ -363,7 +363,7 @@
         }
       ],
       "by_branch": {
-        "develop": 27,
+        "develop": 29,
         "qa": 0,
         "main": 1
       },
@@ -418,20 +418,20 @@
         },
         {
           "week": "2026-W13",
-          "prs": 1
+          "prs": 3
         }
       ]
     },
     {
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 13,
-      "prs_90d": 47,
-      "last_activity": "2026-03-19T20:24:36Z",
+      "prs_30d": 14,
+      "prs_90d": 48,
+      "last_activity": "2026-03-24T22:31:42Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 18
+          "prs": 19
         },
         {
           "repo": "portal-nutrabiotics",
@@ -447,7 +447,7 @@
         }
       ],
       "by_branch": {
-        "develop": 37,
+        "develop": 38,
         "qa": 9,
         "main": 1
       },
@@ -502,7 +502,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
@@ -589,17 +589,17 @@
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 6,
-      "prs_90d": 21,
-      "last_activity": "2026-03-17T21:33:24Z",
+      "prs_30d": 8,
+      "prs_90d": 23,
+      "last_activity": "2026-03-24T19:46:07Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 21
+          "prs": 23
         }
       ],
       "by_branch": {
-        "develop": 20,
+        "develop": 22,
         "qa": 1,
         "main": 0
       },
@@ -654,7 +654,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 0
+          "prs": 2
         }
       ]
     },
