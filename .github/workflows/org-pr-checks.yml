@@ -1019,6 +1019,13 @@ jobs:
             --no-merges \
             --format="%H" 2>/dev/null || true)
 
+          # Índice de patch-ids de los commits incluidos en este PR
+          # Permite detectar cherry-picks equivalentes a commits pendientes en develop
+          PR_PATCHES=$(git log "$BASE_SHA".."$HEAD_SHA" --no-merges --format="%H" 2>/dev/null | \
+            while IFS= read -r C; do
+              git diff "${C}^1" "$C" 2>/dev/null | git patch-id --stable 2>/dev/null | awk '{print $1}'
+            done | grep -v '^$' | sort || true)
+
           BLOCKERS=()
 
           for P in $PENDING; do
@@ -1027,6 +1034,15 @@ jobs:
 
             P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | sort || true)
             [ -z "$P_FILES" ] && continue
+
+            # Si el patch-id del commit pendiente ya está cubierto por un cherry-pick en este PR,
+            # no es un bloqueante real — el cambio está incluido aunque el SHA sea diferente
+            if [ -n "$PR_PATCHES" ]; then
+              P_PATCH=$(git diff "${P}^1" "$P" 2>/dev/null | git patch-id --stable 2>/dev/null | awk '{print $1}')
+              if [ -n "$P_PATCH" ] && echo "$PR_PATCHES" | grep -q "^$P_PATCH$"; then
+                continue
+              fi
+            fi
 
             OVERLAP=$(comm -12 <(echo "$PR_FILES") <(echo "$P_FILES"))
             if [ -n "$OVERLAP" ]; then
