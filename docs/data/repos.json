@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T14:22:48.886Z",
+  "generated_at": "2026-03-25T19:43:03.936Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -306,7 +306,7 @@
     },
     "ALMX-280": {
       "summary": "BG | Visualización | La imagen de Alivia se visualiza demasiado pequeña",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-277": {
@@ -353,6 +353,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1445": {
+      "summary": "Adicionar nueva key o param, al body que se arma al crear una orden desde el Front de Alivia",
+      "status": "Despliegue a DEV",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1440": {
       "summary": "crear campo en productos",
@@ -498,14 +503,51 @@
       "summary": "BG | Abrir chat genera error del token",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-74": {
-      "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
     }
   },
   "repos": [
+    {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-25T16:56:23Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23551911790",
+        "updated_at": "2026-03-25T16:24:38Z",
+        "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -514,7 +556,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T14:22:22Z",
+      "last_push": "2026-03-25T19:42:40Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -571,8 +613,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 16,
+          "count": 17,
           "recent_commits": [
+            {
+              "sha": "bf170a1",
+              "message": "feat(order): new key in order ALCO-1445",
+              "date": "2026-03-25T19:42:38Z",
+              "author": "fabianromerolu",
+              "pr_number": "375",
+              "tickets": [
+                {
+                  "id": "ALCO-1445",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1445"
+                }
+              ]
+            },
             {
               "sha": "0cf8557",
               "message": "feat(product-detail): ALMX-285 zoom product image",
@@ -1007,7 +1062,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T13:29:29Z",
+      "last_push": "2026-03-25T16:49:10Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-20",
@@ -1048,9 +1103,9 @@
       },
       "ci": {
         "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23543538890",
-        "updated_at": "2026-03-25T13:41:14Z",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23553056422",
+        "updated_at": "2026-03-25T16:52:39Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
       },
       "_errors": {
@@ -1242,8 +1297,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T14%3A22%3A47.702Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T14%3A22%3A47.702Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T19%3A43%3A02.661Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T19%3A43%3A02.661Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1493,7 +1548,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T14:11:26Z",
+      "last_push": "2026-03-25T15:39:31Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1711,48 +1766,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-16T17:15:26Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/22528455843",
-        "updated_at": "2026-02-28T20:31:44Z",
-        "name": "Deploy n8n Workflows"
-      },
       "_errors": {
         "production": null,
         "qa": null,
@@ -2393,7 +2406,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-24T22:04:47Z",
+      "last_push": "2026-03-25T16:36:28Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2661,7 +2674,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T14:00:41Z",
+      "last_push": "2026-03-25T15:00:24Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
