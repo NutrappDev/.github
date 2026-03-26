@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T17:57:58.559Z",
+  "generated_at": "2026-03-26T18:17:36.946Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -73,6 +73,11 @@
       "summary": "Alivia México: Fase de Desarrollo ¡Hagámoslo realidad!",
       "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2651": {
+      "summary": "Actualización Manual PTEE en Ingles",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2639": {
       "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
@@ -1417,8 +1422,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T17%3A57%3A57.423Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T17%3A57%3A57.423Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T18%3A17%3A35.630Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T18%3A17%3A35.630Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2328,7 +2333,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T16:59:26Z",
+      "last_push": "2026-03-26T18:17:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2399,8 +2404,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "256bd12",
+              "message": "feat: actualizacion manual PTEE en ingles PMO-2651",
+              "date": "2026-03-26T18:17:11Z",
+              "author": "mladino-source",
+              "pr_number": "66",
+              "tickets": [
+                {
+                  "id": "PMO-2651",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2651"
+                }
+              ]
+            },
+            {
+              "sha": "441a4c2",
+              "message": "feat(policy): actualizar configuracion de politicas PMO-2639",
+              "date": "2026-03-26T18:13:23Z",
+              "author": "mladino-source",
+              "pr_number": "64",
+              "tickets": [
+                {
+                  "id": "PMO-2639",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
+                }
+              ]
+            },
             {
               "sha": "cdc4d80",
               "message": "test: agregar scripts cypress QA-428",
