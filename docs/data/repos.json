@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T14:16:06.957Z",
+  "generated_at": "2026-03-26T17:57:58.559Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -36,7 +36,7 @@
     },
     "SUP-152": {
       "summary": "BG | Usuario Migrado | Paso a ser profesional",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -146,12 +146,12 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Steven Leon"
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Steven Leon"
     },
     "NCOL-637": {
@@ -288,6 +288,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1450": {
+      "summary": "Ajuste de creacion de ordenes en las pasarelas",
+      "status": "En proceso",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1441": {
       "summary": "validar envio por campo creado en productos",
@@ -482,14 +487,14 @@
   },
   "repos": [
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
       "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
+      "url": "https://github.com/NutrappDev/microservice_payments",
       "is_archived": false,
       "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-03-26T13:55:48Z",
+      "default_branch": "main",
+      "last_push": "2026-03-26T17:57:38Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -497,15 +502,137 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 10,
+          "recent_commits": [
+            {
+              "sha": "519fa4b",
+              "message": "fix(transaction): ajuste de transaction ALCO-1450",
+              "date": "2026-03-26T17:57:35Z",
+              "author": "fabianromerolu",
+              "pr_number": "60",
+              "tickets": [
+                {
+                  "id": "ALCO-1450",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
+                }
+              ]
+            },
+            {
+              "sha": "936fe9b",
+              "message": "feat(payments): status update ACE-74",
+              "date": "2026-03-19T13:16:36Z",
+              "author": "meraso-nutra",
+              "pr_number": "59",
+              "tickets": [
+                {
+                  "id": "ACE-74",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-74"
+                }
+              ]
+            },
+            {
+              "sha": "c1f8fa9",
+              "message": "fix(paypal): config paypal ALMX-273",
+              "date": "2026-03-12T15:42:44Z",
+              "author": "fabianromerolu",
+              "pr_number": "58",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "3b8f35b",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:55:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "57",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "54c2151",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:19:06Z",
+              "author": "fabianromerolu",
+              "pr_number": "56",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "55b8a10",
+              "message": "feat(paypal): agg environment ALMX-273",
+              "date": "2026-03-11T17:52:41Z",
+              "author": "fabianromerolu",
+              "pr_number": "54",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "f144cc7",
+              "message": "feat(paypal): ajustar paypal return url ALMX-273",
+              "date": "2026-03-09T21:35:02Z",
+              "author": "fabianromerolu",
+              "pr_number": "53",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "699d4c8",
+              "message": "Fix/paypal",
+              "date": "2026-02-26T13:38:30Z",
+              "author": "fabianromerolu",
+              "pr_number": "49",
+              "tickets": []
+            },
+            {
+              "sha": "9c01b2a",
+              "message": "Fix/paypal",
+              "date": "2026-02-25T19:58:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "48",
+              "tickets": []
+            },
+            {
+              "sha": "72a5995",
+              "message": "feat(env): commit for deploying aws variables",
+              "date": "2026-02-24T20:07:41Z",
+              "author": "meraso-nutra",
+              "pr_number": "46",
+              "tickets": []
+            }
+          ]
         },
         "to_production": {
           "count": 0,
           "recent_commits": []
         }
       },
-      "ci": null,
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
+        "updated_at": "2026-03-16T17:15:04Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
+      },
       "_errors": {
         "production": null,
         "qa": null,
@@ -522,7 +649,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T21:56:24Z",
+      "last_push": "2026-03-26T17:09:34Z",
       "topics": [
         "fase-tronco",
         "team-roble"
@@ -543,11 +670,44 @@
       },
       "ci": {
         "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23566164623",
-        "updated_at": "2026-03-25T21:56:37Z",
-        "name": "Deploy n8n Workflows"
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23607748238",
+        "updated_at": "2026-03-26T17:09:36Z",
+        "name": ".github/workflows/deploy-n8n.yml"
       },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-03-26T15:53:14Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -600,7 +760,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T14:15:44Z",
+      "last_push": "2026-03-26T14:16:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -633,13 +793,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-20",
-        "sha": "affd71ba2ef5bd8f2cba591695b7404345fb487e",
-        "date": "2026-03-20T14:17:13Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-20",
-        "body": "Release qa-2026-03-20\n"
+        "version": "qa-2026-03-26",
+        "sha": "14b3bc56b685aba4d62e6c6ef41f65cef37e8ca9",
+        "date": "2026-03-26T14:16:06Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-26",
+        "body": "Release qa-2026-03-26\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-20",
+          "sha": "affd71ba2ef5bd8f2cba591695b7404345fb487e",
+          "date": "2026-03-20T14:17:13Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-20",
+          "body": "Release qa-2026-03-20\n"
+        },
         {
           "version": "qa-2026-03-17",
           "sha": "ac9d08989bb679ac20222b55a0f23c9b02f48ba4",
@@ -1250,8 +1417,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T14%3A16%3A05.821Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T14%3A16%3A05.821Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T17%3A57%3A57.423Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T17%3A57%3A57.423Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1343,148 +1510,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-19T13:16:38Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 9,
-          "recent_commits": [
-            {
-              "sha": "936fe9b",
-              "message": "feat(payments): status update ACE-74",
-              "date": "2026-03-19T13:16:36Z",
-              "author": "meraso-nutra",
-              "pr_number": "59",
-              "tickets": [
-                {
-                  "id": "ACE-74",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-74"
-                }
-              ]
-            },
-            {
-              "sha": "c1f8fa9",
-              "message": "fix(paypal): config paypal ALMX-273",
-              "date": "2026-03-12T15:42:44Z",
-              "author": "fabianromerolu",
-              "pr_number": "58",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "3b8f35b",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:55:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "54c2151",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:19:06Z",
-              "author": "fabianromerolu",
-              "pr_number": "56",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "55b8a10",
-              "message": "feat(paypal): agg environment ALMX-273",
-              "date": "2026-03-11T17:52:41Z",
-              "author": "fabianromerolu",
-              "pr_number": "54",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "f144cc7",
-              "message": "feat(paypal): ajustar paypal return url ALMX-273",
-              "date": "2026-03-09T21:35:02Z",
-              "author": "fabianromerolu",
-              "pr_number": "53",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "699d4c8",
-              "message": "Fix/paypal",
-              "date": "2026-02-26T13:38:30Z",
-              "author": "fabianromerolu",
-              "pr_number": "49",
-              "tickets": []
-            },
-            {
-              "sha": "9c01b2a",
-              "message": "Fix/paypal",
-              "date": "2026-02-25T19:58:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "48",
-              "tickets": []
-            },
-            {
-              "sha": "72a5995",
-              "message": "feat(env): commit for deploying aws variables",
-              "date": "2026-02-24T20:07:41Z",
-              "author": "meraso-nutra",
-              "pr_number": "46",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
-        "updated_at": "2026-03-16T17:15:04Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
-      },
       "_errors": {
         "production": null,
         "qa": null,
@@ -2303,7 +2328,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T13:37:02Z",
+      "last_push": "2026-03-26T16:59:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
