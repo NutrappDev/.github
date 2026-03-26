@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T23:15:24.453Z",
+  "generated_at": "2026-03-26T14:16:06.957Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -49,9 +49,14 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "QA-428": {
+      "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
+      "status": "Detenido",
+      "assignee": "Carlos Ali Parra"
+    },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2690": {
@@ -79,9 +84,14 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "PMO-2609": {
+      "summary": "Error de indexado en Google para Nutrabiotics MX",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2508": {
@@ -126,12 +136,12 @@
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-646": {
       "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-645": {
@@ -226,12 +236,12 @@
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Steven Leon"
     },
     "NCOL-5": {
       "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Steven Leon"
     },
     "DE-339": {
@@ -249,25 +259,10 @@
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
     },
-    "ALMX-285": {
-      "summary": "Hacer zoom en imagen",
-      "status": "Despliegue a QA",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-283": {
-      "summary": "BG | Historial de puntos | El total de puntos no de adapta a la tarjetas",
-      "status": "Despliegue a DEV",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
-    },
-    "ALMX-280": {
-      "summary": "BG | Visualización | La imagen de Alivia se visualiza demasiado pequeña",
-      "status": "Despliegue a QA",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
@@ -279,16 +274,6 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "ALMX-268": {
-      "summary": "BG | Detalle de producto | Imagen del producto tapa el banner “Comercialización única para México”",
-      "status": "Revisión QA",
-      "assignee": "Felipe Berrio"
-    },
-    "ALMX-262": {
-      "summary": "BG | Home / Responsive | Animación de fondo verde desaparece al dividir la pantalla",
-      "status": "Revisión QA",
-      "assignee": "Felipe Berrio"
-    },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
       "status": "Revisión QA",
@@ -299,25 +284,10 @@
       "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
-    "ALMX-245": {
-      "summary": "BG | Productos | Versión móvil | Botón de categoría se corta en la interfaz",
-      "status": "Revisión QA",
-      "assignee": "Felipe Berrio"
-    },
-    "ALMX-242": {
-      "summary": "BG | Para Paciente | No se muestra imagen del producto ni imagen de reemplazo",
-      "status": "Despliegue a QA",
-      "assignee": "Felipe Berrio"
-    },
     "ALMX-228": {
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "ALCO-1445": {
-      "summary": "Adicionar nueva key o param, al body que se arma al crear una orden desde el Front de Alivia",
-      "status": "Despliegue a DEV",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1441": {
       "summary": "validar envio por campo creado en productos",
@@ -503,9 +473,47 @@
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-8": {
+      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
+      "status": "En Curso",
+      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-03-26T13:55:48Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "tronco-automatizacion-interna",
       "full_name": "NutrappDev/tronco-automatizacion-interna",
@@ -592,7 +600,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T22:06:49Z",
+      "last_push": "2026-03-26T14:15:44Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -649,7 +657,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 18,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "574a314",
@@ -665,71 +673,6 @@
               ]
             },
             {
-              "sha": "bf170a1",
-              "message": "feat(order): new key in order ALCO-1445",
-              "date": "2026-03-25T19:42:38Z",
-              "author": "fabianromerolu",
-              "pr_number": "375",
-              "tickets": [
-                {
-                  "id": "ALCO-1445",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1445"
-                }
-              ]
-            },
-            {
-              "sha": "0cf8557",
-              "message": "feat(product-detail): ALMX-285 zoom product image",
-              "date": "2026-03-25T14:22:19Z",
-              "author": "CristiGB",
-              "pr_number": "374",
-              "tickets": [
-                {
-                  "id": "ALMX-285",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-285"
-                }
-              ]
-            },
-            {
-              "sha": "8ecbf11",
-              "message": "fix(points): ajuste de modal ALMX-283",
-              "date": "2026-03-24T22:31:42Z",
-              "author": "fabianromerolu",
-              "pr_number": "373",
-              "tickets": [
-                {
-                  "id": "ALMX-283",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-283"
-                }
-              ]
-            },
-            {
-              "sha": "bb416b0",
-              "message": "fix(prescription): corregir imagen rota en carrusel ALMX-242",
-              "date": "2026-03-24T19:26:34Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "371",
-              "tickets": [
-                {
-                  "id": "ALMX-242",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-242"
-                }
-              ]
-            },
-            {
-              "sha": "f1d0861",
-              "message": "fix(navbar): adjust styles for improved layout and responsiveness ALMX-280",
-              "date": "2026-03-24T16:35:55Z",
-              "author": "CristiGB",
-              "pr_number": "370",
-              "tickets": [
-                {
-                  "id": "ALMX-280",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-280"
-                }
-              ]
-            },
-            {
               "sha": "3284745",
               "message": "fix(config): remove @nutrabiotics/sso-core completed DE-339",
               "date": "2026-03-20T19:06:29Z",
@@ -739,58 +682,6 @@
                 {
                   "id": "DE-339",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-339"
-                }
-              ]
-            },
-            {
-              "sha": "0d7fe47",
-              "message": "fix(animations): scroll animations se rompen al redimensionar ALMX-262",
-              "date": "2026-03-19T20:26:13Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "360",
-              "tickets": [
-                {
-                  "id": "ALMX-262",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-262"
-                }
-              ]
-            },
-            {
-              "sha": "5616ce0",
-              "message": "fix(products): wrap de categorías en mobile MX y CO ALMX-245",
-              "date": "2026-03-19T20:15:59Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "359",
-              "tickets": [
-                {
-                  "id": "ALMX-245",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-245"
-                }
-              ]
-            },
-            {
-              "sha": "ebf2e2a",
-              "message": "fix(products): ajustar imagen en detalle de producto MX ALMX-268",
-              "date": "2026-03-19T20:15:42Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "358",
-              "tickets": [
-                {
-                  "id": "ALMX-268",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-268"
-                }
-              ]
-            },
-            {
-              "sha": "8437bfe",
-              "message": "fix(navbar): eliminar punto blanco visible en área de autenticación ALMX-261",
-              "date": "2026-03-17T21:40:52Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "352",
-              "tickets": [
-                {
-                  "id": "ALMX-261",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-261"
                 }
               ]
             },
@@ -873,8 +764,21 @@
           ]
         },
         "to_production": {
-          "count": 22,
+          "count": 23,
           "recent_commits": [
+            {
+              "sha": "14b3bc5",
+              "message": "release: qa 2026 03 25 ALMX-261",
+              "date": "2026-03-26T14:15:42Z",
+              "author": "CristiGB",
+              "pr_number": "379",
+              "tickets": [
+                {
+                  "id": "ALMX-261",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-261"
+                }
+              ]
+            },
             {
               "sha": "bb65ec1",
               "message": "release: refresh CartItem pricing and update Peru shipping rules 2026-03-20 PMO-2725",
@@ -1346,8 +1250,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-25T23%3A15%3A23.266Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-25T23%3A15%3A23.267Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T14%3A16%3A05.821Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T14%3A16%3A05.821Z → 409 Conflict",
         "ci": null
       }
     },
@@ -1842,39 +1746,6 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-03-16T17:15:20Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-03-16T17:15:17Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2432,7 +2303,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T21:09:00Z",
+      "last_push": "2026-03-26T13:37:02Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2503,8 +2374,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "cdc4d80",
+              "message": "test: agregar scripts cypress QA-428",
+              "date": "2026-03-26T13:37:00Z",
+              "author": "CarlosParraQA",
+              "pr_number": "61",
+              "tickets": [
+                {
+                  "id": "QA-428",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
+                }
+              ]
+            },
             {
               "sha": "d3f8193",
               "message": "fix(NCOL-363): no se muestra el perfil",
@@ -2640,7 +2524,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-19T15:50:44Z",
+      "last_push": "2026-03-26T13:53:13Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2657,8 +2541,22 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "2d39c74",
+              "message": "chore(PMO-2609): add google search console verification meta tag",
+              "date": "2026-03-26T13:53:11Z",
+              "author": "mladino-source",
+              "pr_number": "3",
+              "tickets": [
+                {
+                  "id": "PMO-2609",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2609"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 0,
