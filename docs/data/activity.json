@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-03-25T13:50:54.072Z",
+  "generated_at": "2026-03-26T13:37:18.280Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 36,
-      "prs_90d": 84,
-      "last_activity": "2026-03-24T22:03:34Z",
+      "prs_30d": 37,
+      "prs_90d": 87,
+      "last_activity": "2026-03-25T20:32:13Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 61
-        },
-        {
-          "repo": "portal-nutrabiotics",
-          "prs": 7
+          "prs": 63
         },
         {
           "repo": "monorepo-alivia-backend",
+          "prs": 8
+        },
+        {
+          "repo": "portal-nutrabiotics",
           "prs": 7
         },
         {
@@ -35,7 +35,7 @@
         }
       ],
       "by_branch": {
-        "develop": 45,
+        "develop": 48,
         "qa": 26,
         "main": 13
       },
@@ -90,7 +90,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 3
+          "prs": 6
         }
       ]
     },
@@ -257,13 +257,13 @@
     {
       "login": "meraso-nutra",
       "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 17,
-      "prs_90d": 22,
-      "last_activity": "2026-03-20T14:48:59Z",
+      "prs_30d": 18,
+      "prs_90d": 23,
+      "last_activity": "2026-03-25T23:14:58Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 19
+          "prs": 20
         },
         {
           "repo": "microservice_payments",
@@ -271,7 +271,7 @@
         }
       ],
       "by_branch": {
-        "develop": 21,
+        "develop": 22,
         "qa": 0,
         "main": 1
       },
@@ -326,16 +326,16 @@
         },
         {
           "week": "2026-W13",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 16,
-      "prs_90d": 30,
-      "last_activity": "2026-03-24T21:22:33Z",
+      "prs_30d": 15,
+      "prs_90d": 31,
+      "last_activity": "2026-03-25T20:03:05Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
@@ -359,11 +359,11 @@
         },
         {
           "repo": "nutrabiotics-empresas",
-          "prs": 1
+          "prs": 2
         }
       ],
       "by_branch": {
-        "develop": 29,
+        "develop": 30,
         "qa": 0,
         "main": 1
       },
@@ -418,7 +418,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
@@ -426,12 +426,12 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 14,
-      "prs_90d": 48,
-      "last_activity": "2026-03-24T22:31:42Z",
+      "prs_90d": 49,
+      "last_activity": "2026-03-25T19:42:38Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 19
+          "prs": 20
         },
         {
           "repo": "portal-nutrabiotics",
@@ -447,7 +447,7 @@
         }
       ],
       "by_branch": {
-        "develop": 38,
+        "develop": 39,
         "qa": 9,
         "main": 1
       },
@@ -502,14 +502,86 @@
         },
         {
           "week": "2026-W13",
+          "prs": 2
+        }
+      ]
+    },
+    {
+      "login": "Steven-Leon-007",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
+      "prs_30d": 9,
+      "prs_90d": 24,
+      "last_activity": "2026-03-25T20:34:49Z",
+      "by_repo": [
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 24
+        }
+      ],
+      "by_branch": {
+        "develop": 22,
+        "qa": 2,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W01",
+          "prs": 0
+        },
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 5
+        },
+        {
+          "week": "2026-W07",
+          "prs": 6
+        },
+        {
+          "week": "2026-W08",
+          "prs": 4
+        },
+        {
+          "week": "2026-W09",
+          "prs": 2
+        },
+        {
+          "week": "2026-W10",
+          "prs": 2
+        },
+        {
+          "week": "2026-W11",
           "prs": 1
+        },
+        {
+          "week": "2026-W12",
+          "prs": 1
+        },
+        {
+          "week": "2026-W13",
+          "prs": 3
         }
       ]
     },
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 10,
+      "prs_30d": 8,
       "prs_90d": 20,
       "last_activity": "2026-03-18T15:39:18Z",
       "by_repo": [
@@ -587,78 +659,6 @@
       ]
     },
     {
-      "login": "Steven-Leon-007",
-      "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 8,
-      "prs_90d": 23,
-      "last_activity": "2026-03-24T19:46:07Z",
-      "by_repo": [
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 23
-        }
-      ],
-      "by_branch": {
-        "develop": 22,
-        "qa": 1,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W01",
-          "prs": 0
-        },
-        {
-          "week": "2026-W02",
-          "prs": 0
-        },
-        {
-          "week": "2026-W03",
-          "prs": 0
-        },
-        {
-          "week": "2026-W04",
-          "prs": 0
-        },
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 5
-        },
-        {
-          "week": "2026-W07",
-          "prs": 6
-        },
-        {
-          "week": "2026-W08",
-          "prs": 4
-        },
-        {
-          "week": "2026-W09",
-          "prs": 2
-        },
-        {
-          "week": "2026-W10",
-          "prs": 2
-        },
-        {
-          "week": "2026-W11",
-          "prs": 1
-        },
-        {
-          "week": "2026-W12",
-          "prs": 1
-        },
-        {
-          "week": "2026-W13",
-          "prs": 2
-        }
-      ]
-    },
-    {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
       "prs_30d": 2,
@@ -727,6 +727,78 @@
         {
           "week": "2026-W13",
           "prs": 0
+        }
+      ]
+    },
+    {
+      "login": "CarlosParraQA",
+      "avatar_url": "https://avatars.githubusercontent.com/u/232940545?v=4",
+      "prs_30d": 1,
+      "prs_90d": 1,
+      "last_activity": "2026-03-26T13:37:00Z",
+      "by_repo": [
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 1,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W01",
+          "prs": 0
+        },
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
+          "prs": 1
         }
       ]
     },
