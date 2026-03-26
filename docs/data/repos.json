@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T18:17:36.946Z",
+  "generated_at": "2026-03-26T19:47:29.628Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -36,7 +36,7 @@
     },
     "SUP-152": {
       "summary": "BG | Usuario Migrado | Paso a ser profesional",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -151,12 +151,12 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Detenido",
+      "status": "Revisión QA",
       "assignee": "Steven Leon"
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Aprobado por QA",
+      "status": "Pruebas de Regresión",
       "assignee": "Steven Leon"
     },
     "NCOL-637": {
@@ -281,7 +281,7 @@
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-246": {
@@ -296,7 +296,7 @@
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1441": {
@@ -492,6 +492,81 @@
   },
   "repos": [
     {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-03-26T19:47:03Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-26T19:25:49Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23613798318",
+        "updated_at": "2026-03-26T19:25:51Z",
+        "name": ".github/workflows/deploy-n8n.yml"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
       "description": null,
@@ -638,81 +713,6 @@
         "updated_at": "2026-03-16T17:15:04Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-26T17:09:34Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23607748238",
-        "updated_at": "2026-03-26T17:09:36Z",
-        "name": ".github/workflows/deploy-n8n.yml"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-03-26T15:53:14Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -1422,8 +1422,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T18%3A17%3A35.630Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T18%3A17%3A35.630Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T19%3A47%3A27.803Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T19%3A47%3A27.804Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2636,7 +2636,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T23:15:01Z",
+      "last_push": "2026-03-26T19:29:08Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
