@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-03-26T21:51:53.132Z",
+  "generated_at": "2026-03-26T22:29:51.445Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
       "prs_30d": 40,
-      "prs_90d": 88,
-      "last_activity": "2026-03-26T21:46:57Z",
+      "prs_90d": 89,
+      "last_activity": "2026-03-26T22:29:35Z",
       "by_repo": [
         {
           "repo": "alivia",
           "prs": 66
         },
         {
-          "repo": "monorepo-alivia-backend",
+          "repo": "portal-nutrabiotics",
           "prs": 8
         },
         {
-          "repo": "portal-nutrabiotics",
-          "prs": 7
+          "repo": "monorepo-alivia-backend",
+          "prs": 8
         },
         {
           "repo": "sso-micuenta",
@@ -33,7 +33,7 @@
       "by_branch": {
         "develop": 48,
         "qa": 27,
-        "main": 13
+        "main": 14
       },
       "weekly": [
         {
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 9
+          "prs": 10
         }
       ]
     },
