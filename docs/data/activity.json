@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-26T18:13:42.227Z",
+  "generated_at": "2026-03-26T21:24:44.735Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 38,
-      "prs_90d": 86,
-      "last_activity": "2026-03-26T14:15:42Z",
+      "prs_30d": 39,
+      "prs_90d": 87,
+      "last_activity": "2026-03-26T20:34:51Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 64
+          "prs": 65
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -31,7 +31,7 @@
         }
       ],
       "by_branch": {
-        "develop": 47,
+        "develop": 48,
         "qa": 27,
         "main": 12
       },
@@ -86,16 +86,16 @@
         },
         {
           "week": "2026-W13",
-          "prs": 7
+          "prs": 8
         }
       ]
     },
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 24,
-      "prs_90d": 27,
-      "last_activity": "2026-03-25T13:50:36Z",
+      "prs_30d": 25,
+      "prs_90d": 28,
+      "last_activity": "2026-03-26T21:24:29Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -103,11 +103,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 13
+          "prs": 14
         }
       ],
       "by_branch": {
-        "develop": 26,
+        "develop": 27,
         "qa": 1,
         "main": 0
       },
@@ -162,7 +162,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 2
+          "prs": 3
         }
       ]
     },
@@ -253,7 +253,7 @@
     {
       "login": "meraso-nutra",
       "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 18,
+      "prs_30d": 16,
       "prs_90d": 23,
       "last_activity": "2026-03-25T23:14:58Z",
       "by_repo": [
@@ -577,7 +577,7 @@
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 8,
+      "prs_30d": 7,
       "prs_90d": 20,
       "last_activity": "2026-03-18T15:39:18Z",
       "by_repo": [
@@ -657,13 +657,13 @@
     {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 4,
-      "prs_90d": 4,
-      "last_activity": "2026-03-26T18:13:23Z",
+      "prs_30d": 5,
+      "prs_90d": 5,
+      "last_activity": "2026-03-26T18:17:11Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 3
+          "prs": 4
         },
         {
           "repo": "fruto-web-nutra-mx",
@@ -671,7 +671,7 @@
         }
       ],
       "by_branch": {
-        "develop": 4,
+        "develop": 5,
         "qa": 0,
         "main": 0
       },
@@ -726,20 +726,20 @@
         },
         {
           "week": "2026-W13",
-          "prs": 2
+          "prs": 3
         }
       ]
     },
     {
       "login": "Dev-Juan-Medina-NutraApp",
       "avatar_url": "https://avatars.githubusercontent.com/u/138901484?v=4",
-      "prs_30d": 2,
-      "prs_90d": 2,
-      "last_activity": "2026-03-26T14:43:47Z",
+      "prs_30d": 3,
+      "prs_90d": 3,
+      "last_activity": "2026-03-26T19:47:01Z",
       "by_repo": [
         {
           "repo": "Ilumina",
-          "prs": 1
+          "prs": 2
         },
         {
           "repo": "fruto-web-nutra-co",
@@ -749,7 +749,7 @@
       "by_branch": {
         "develop": 1,
         "qa": 0,
-        "main": 1
+        "main": 2
       },
       "weekly": [
         {
@@ -802,7 +802,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
