@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T19:47:29.628Z",
+  "generated_at": "2026-03-26T20:35:16.174Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -54,6 +54,11 @@
       "status": "Detenido",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2753": {
+      "summary": "Descuento Probioessens - Alivia",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
       "status": "Aprobado por QA",
@@ -76,12 +81,12 @@
     },
     "PMO-2651": {
       "summary": "Actualización Manual PTEE en Ingles",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2639": {
       "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2634": {
@@ -91,7 +96,7 @@
     },
     "PMO-2609": {
       "summary": "Error de indexado en Google para Nutrabiotics MX",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2585": {
@@ -296,7 +301,7 @@
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1441": {
@@ -492,6 +497,48 @@
   },
   "repos": [
     {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-26T20:32:54Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23616642641",
+        "updated_at": "2026-03-26T20:33:06Z",
+        "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "Ilumina",
       "full_name": "NutrappDev/Ilumina",
       "description": null,
@@ -516,48 +563,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-26T19:25:49Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23613798318",
-        "updated_at": "2026-03-26T19:25:51Z",
-        "name": ".github/workflows/deploy-n8n.yml"
-      },
       "_errors": {
         "production": null,
         "qa": null,
@@ -765,7 +770,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T14:16:07Z",
+      "last_push": "2026-03-26T20:34:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-24",
@@ -829,8 +834,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "4531932",
+              "message": "feat(seasonal-promotions): add seasonal product badges and promotional banner PMO-2753",
+              "date": "2026-03-26T20:34:51Z",
+              "author": "CristiGB",
+              "pr_number": "380",
+              "tickets": [
+                {
+                  "id": "PMO-2753",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2753"
+                }
+              ]
+            },
             {
               "sha": "574a314",
               "message": "feat(cart): add inventariado property to CartItem ALCO-1441",
@@ -1422,8 +1440,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T19%3A47%3A27.803Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T19%3A47%3A27.804Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T20%3A35%3A14.620Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T20%3A35%3A14.620Z → 409 Conflict",
         "ci": null
       }
     },
