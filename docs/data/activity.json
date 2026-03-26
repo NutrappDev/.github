@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-26T13:37:18.280Z",
+  "generated_at": "2026-03-26T14:44:05.925Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 37,
-      "prs_90d": 87,
-      "last_activity": "2026-03-25T20:32:13Z",
+      "prs_30d": 38,
+      "prs_90d": 88,
+      "last_activity": "2026-03-26T14:15:42Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 63
+          "prs": 64
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -36,7 +36,7 @@
       ],
       "by_branch": {
         "develop": 48,
-        "qa": 26,
+        "qa": 27,
         "main": 13
       },
       "weekly": [
@@ -90,7 +90,7 @@
         },
         {
           "week": "2026-W13",
-          "prs": 6
+          "prs": 7
         }
       ]
     },
@@ -661,17 +661,21 @@
     {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 2,
-      "prs_90d": 2,
-      "last_activity": "2026-03-20T20:38:50Z",
+      "prs_30d": 3,
+      "prs_90d": 3,
+      "last_activity": "2026-03-26T13:53:11Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
           "prs": 2
+        },
+        {
+          "repo": "fruto-web-nutra-mx",
+          "prs": 1
         }
       ],
       "by_branch": {
-        "develop": 2,
+        "develop": 3,
         "qa": 0,
         "main": 0
       },
@@ -726,7 +730,83 @@
         },
         {
           "week": "2026-W13",
+          "prs": 1
+        }
+      ]
+    },
+    {
+      "login": "Dev-Juan-Medina-NutraApp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138901484?v=4",
+      "prs_30d": 2,
+      "prs_90d": 2,
+      "last_activity": "2026-03-26T14:43:47Z",
+      "by_repo": [
+        {
+          "repo": "Ilumina",
+          "prs": 1
+        },
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 1,
+        "qa": 0,
+        "main": 1
+      },
+      "weekly": [
+        {
+          "week": "2026-W01",
           "prs": 0
+        },
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 1
+        },
+        {
+          "week": "2026-W13",
+          "prs": 1
         }
       ]
     },
@@ -799,78 +879,6 @@
         {
           "week": "2026-W13",
           "prs": 1
-        }
-      ]
-    },
-    {
-      "login": "Dev-Juan-Medina-NutraApp",
-      "avatar_url": "https://avatars.githubusercontent.com/u/138901484?v=4",
-      "prs_30d": 1,
-      "prs_90d": 1,
-      "last_activity": "2026-03-18T16:43:58Z",
-      "by_repo": [
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 1,
-        "qa": 0,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W01",
-          "prs": 0
-        },
-        {
-          "week": "2026-W02",
-          "prs": 0
-        },
-        {
-          "week": "2026-W03",
-          "prs": 0
-        },
-        {
-          "week": "2026-W04",
-          "prs": 0
-        },
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
-          "prs": 1
-        },
-        {
-          "week": "2026-W13",
-          "prs": 0
         }
       ]
     },
