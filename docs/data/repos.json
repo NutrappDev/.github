@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-03-26T21:50:33.486Z",
+  "generated_at": "2026-03-26T23:12:15.492Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-222": {
@@ -32,11 +32,6 @@
     "SUP-184": {
       "summary": "BG | Datos Personales | Ajustes en actualización de datos",
       "status": "Esperando aprobación",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "SUP-152": {
-      "summary": "BG | Usuario Migrado | Paso a ser profesional",
-      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -121,7 +116,7 @@
     },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Kevin Aguilera"
     },
     "NE-197": {
@@ -139,10 +134,10 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
-    "NCR-79": {
-      "summary": "Refactor: Extraer lógica de notificaciones del servicio de orders para cumplir límite de 300 líneas",
-      "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
+    "NCOL-655": {
+      "summary": "Implementar configuración de Prettier, EditorConfig y Husky para estandarización de código en el repositorio de Nutrabiotics Colombia",
+      "status": "En proceso",
+      "assignee": "Steven Leon"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -259,6 +254,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "DE-338": {
+      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
     "AMN-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Done",
@@ -286,7 +286,7 @@
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "ALMX-246": {
@@ -424,11 +424,6 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "ALCO-384": {
-      "summary": "EP-04 - Envio de las notificaciones al Wp de Pacientes y Medicos",
-      "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
-    },
     "ALCO-270": {
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
@@ -479,6 +474,11 @@
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     },
+    "ACE-57": {
+      "summary": "Librería ERP - Pruebas de validación de nuevos artefactos de integración",
+      "status": "Esperando Aprobación",
+      "assignee": "Mario Eraso"
+    },
     "ACE-56": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
       "status": "Esperando Aprobación",
@@ -489,6 +489,11 @@
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     },
+    "ACE-53": {
+      "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
     "ACE-8": {
       "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
       "status": "En Curso",
@@ -496,6 +501,134 @@
     }
   },
   "repos": [
+    {
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
+      "description": null,
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-26T22:29:45Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-03-26",
+        "sha": "b41d03cb494adeda70b8becb9f7ca25248416224",
+        "date": "2026-03-26T22:29:44Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-26",
+        "body": "Release prod-2026-03-26\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-03-19",
+          "sha": "72ba199a333012694f73ccba845cce50e1b55f33",
+          "date": "2026-03-19T16:17:00Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-19",
+          "body": "Release prod-2026-03-19\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-03-17",
+        "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
+        "date": "2026-03-17T16:16:50Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
+        "body": "Release qa-2026-03-17\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-09",
+          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
+          "date": "2026-03-09T21:53:49Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
+          "body": "Release qa-2026-03-09\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "ca268c9",
+              "message": "feat(erp): agregar reactivación manual de transacciones y vista de logs ACE-69",
+              "date": "2026-03-24T21:22:33Z",
+              "author": "jsandoval-dev",
+              "pr_number": "169",
+              "tickets": [
+                {
+                  "id": "ACE-69",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-69"
+                }
+              ]
+            },
+            {
+              "sha": "0ce8a3a",
+              "message": "feat(erp): conectar dashboard con endpoints reales de eventos ACE-67",
+              "date": "2026-03-16T21:46:10Z",
+              "author": "jsandoval-dev",
+              "pr_number": "165",
+              "tickets": [
+                {
+                  "id": "ACE-67",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-67"
+                }
+              ]
+            },
+            {
+              "sha": "882809a",
+              "message": "feat(erp): agregar dashboard de monitoreo con métricas y cola de transacciones ACE-66",
+              "date": "2026-03-11T22:41:33Z",
+              "author": "jsandoval-dev",
+              "pr_number": "162",
+              "tickets": [
+                {
+                  "id": "ACE-66",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "5a835dc",
+              "message": "release: qa 2026 03 17 SUP-272",
+              "date": "2026-03-17T16:16:37Z",
+              "author": "CristiGB",
+              "pr_number": "166",
+              "tickets": [
+                {
+                  "id": "SUP-272",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
+                }
+              ]
+            },
+            {
+              "sha": "d026f20",
+              "message": "release: QA2026-03-05 SUP-184",
+              "date": "2026-03-09T21:53:39Z",
+              "author": "CristiGB",
+              "pr_number": "160",
+              "tickets": [
+                {
+                  "id": "SUP-184",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
@@ -1487,126 +1620,6 @@
       }
     },
     {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
-      "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-24T21:22:35Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-03-19",
-        "sha": "72ba199a333012694f73ccba845cce50e1b55f33",
-        "date": "2026-03-19T16:17:00Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-19",
-        "body": "Release prod-2026-03-19\n"
-      },
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
-        "date": "2026-03-17T16:16:50Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-03-09",
-          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
-          "date": "2026-03-09T21:53:49Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
-          "body": "Release qa-2026-03-09\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "ca268c9",
-              "message": "feat(erp): agregar reactivación manual de transacciones y vista de logs ACE-69",
-              "date": "2026-03-24T21:22:33Z",
-              "author": "jsandoval-dev",
-              "pr_number": "169",
-              "tickets": [
-                {
-                  "id": "ACE-69",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-69"
-                }
-              ]
-            },
-            {
-              "sha": "0ce8a3a",
-              "message": "feat(erp): conectar dashboard con endpoints reales de eventos ACE-67",
-              "date": "2026-03-16T21:46:10Z",
-              "author": "jsandoval-dev",
-              "pr_number": "165",
-              "tickets": [
-                {
-                  "id": "ACE-67",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-67"
-                }
-              ]
-            },
-            {
-              "sha": "882809a",
-              "message": "feat(erp): agregar dashboard de monitoreo con métricas y cola de transacciones ACE-66",
-              "date": "2026-03-11T22:41:33Z",
-              "author": "jsandoval-dev",
-              "pr_number": "162",
-              "tickets": [
-                {
-                  "id": "ACE-66",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "5a835dc",
-              "message": "release: qa 2026 03 17 SUP-272",
-              "date": "2026-03-17T16:16:37Z",
-              "author": "CristiGB",
-              "pr_number": "166",
-              "tickets": [
-                {
-                  "id": "SUP-272",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
-                }
-              ]
-            },
-            {
-              "sha": "d026f20",
-              "message": "release: QA2026-03-05 SUP-184",
-              "date": "2026-03-09T21:53:39Z",
-              "author": "CristiGB",
-              "pr_number": "160",
-              "tickets": [
-                {
-                  "id": "SUP-184",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-api-erp",
       "full_name": "NutrappDev/tronco-api-erp",
       "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
@@ -1631,8 +1644,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T21%3A50%3A32.010Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T21%3A50%3A32.010Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-26T23%3A12%3A14.510Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-26T23%3A12%3A14.510Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2364,7 +2377,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T18:17:13Z",
+      "last_push": "2026-03-26T23:11:55Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2435,8 +2448,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "d672ea6",
+              "message": "refactor: agregar editorconfig, prettier, husky para validaciones y estandarizacion NCOL-655",
+              "date": "2026-03-26T23:11:53Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "67",
+              "tickets": [
+                {
+                  "id": "NCOL-655",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-655"
+                }
+              ]
+            },
             {
               "sha": "256bd12",
               "message": "feat: actualizacion manual PTEE en ingles PMO-2651",
@@ -2667,7 +2693,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T21:24:30Z",
+      "last_push": "2026-03-26T21:51:50Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2693,13 +2719,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-18",
-        "sha": "f213f562be04f6a5ca9296a494aa50b5ea38a5f1",
-        "date": "2026-03-18T15:39:34Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-18",
-        "body": "Release qa-2026-03-18\n"
+        "version": "qa-2026-03-26",
+        "sha": "0c7bd1e1bb180df2e2975d3a959bde85112e18c4",
+        "date": "2026-03-26T21:51:50Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-26",
+        "body": "Release qa-2026-03-26\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-18",
+          "sha": "f213f562be04f6a5ca9296a494aa50b5ea38a5f1",
+          "date": "2026-03-18T15:39:34Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-18",
+          "body": "Release qa-2026-03-18\n"
+        },
         {
           "version": "qa-2026-02-24",
           "sha": "c9ae835452f3d6693f08883193684ab18976b95b",
@@ -2720,18 +2753,11 @@
           "date": "2026-01-27T14:44:27Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-27",
           "body": "Release qa-2026-01-27\n\nFixes (1):\nPR #213 by Fabián Mauricio Romero lugo - Corrige error en generación de PDFs causado por orden incorrecto de PRs en releases anteriores [ALCO-1319]\n\nNota: Este hotfix corrige el estado del archivo PurchaseTemplateService.ts\nque quedó inconsistente debido a que los PRs #203, #206, #207 fueron\naplicados después de #208, #209, #210, #211 cuando cronológicamente\ndebieron ir primero.\n"
-        },
-        {
-          "version": "qa-2026-01-22",
-          "sha": "7116feeb8ed47d15a589903d820d828487cb75b3",
-          "date": "2026-01-22T20:47:15Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-01-22",
-          "body": "Release qa-2026-01-22\n\nFeatures (1):\nPR #207 by Fabián Romero - Servicio PurchaseTemplatePdfService para PDFs hormonales con división automática [ALCO-1331]\n\nFixes (3):\nPR #203 by Fabián Romero - Generación de PDFs en AWS Lambda usando puppeteer-core + @sparticuz/chromium [ALCO-1311]\nPR #206 by Fabián Romero - PDF hormonas v2 con detección automática de entorno AWS vs local [ALCO-1311]\nPR #212 by Fabián Romero - Ajuste de ruta de ejecución del binario para puppeteer-core [ALCO-1311]\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 60,
+          "count": 47,
           "recent_commits": [
             {
               "sha": "bed70ec",
@@ -2877,32 +2903,6 @@
               ]
             },
             {
-              "sha": "435e078",
-              "message": "feat(sso): integrar SendGrid con soporte completo para México ALCO-384",
-              "date": "2026-02-26T22:32:58Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "240",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
-              "sha": "3508679",
-              "message": "feat(notifications): integrar SendGrid y WhatsApp con templates dinámicos ALCO-384",
-              "date": "2026-02-26T22:14:31Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "239",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
               "sha": "b170f26",
               "message": "refactor(logging): hacer el logger no bloqueante y evitar fallos en flujo ERP ACE-54",
               "date": "2026-03-18T14:03:29Z",
@@ -2912,19 +2912,6 @@
                 {
                   "id": "ACE-54",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
-                }
-              ]
-            },
-            {
-              "sha": "cb31e39",
-              "message": "refactor(orders): extraer lógica de notificaciones de webhook a helpers NCR-79",
-              "date": "2026-03-17T23:12:15Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "278",
-              "tickets": [
-                {
-                  "id": "NCR-79",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-79"
                 }
               ]
             },
@@ -2955,32 +2942,6 @@
               ]
             },
             {
-              "sha": "43cd68a",
-              "message": "chore(sso): eliminar variables de entorno obsoletas del serverless ALCO-384",
-              "date": "2026-03-17T17:06:10Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "275",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
-              "sha": "3a1ed15",
-              "message": "refactor(notifications): integrar dispatch centralizado y corregir templates ALCO-384",
-              "date": "2026-03-17T14:03:40Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "272",
-              "tickets": [
-                {
-                  "id": "ALCO-384",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-384"
-                }
-              ]
-            },
-            {
               "sha": "e19d43f",
               "message": "fix(logging): mejorar logs para obtener mayor informacion en integracion ERP ACE-56",
               "date": "2026-03-16T22:15:06Z",
@@ -3003,19 +2964,6 @@
                 {
                   "id": "ACE-8",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-8"
-                }
-              ]
-            },
-            {
-              "sha": "853e314",
-              "message": "refactor(sso): extract auth helpers and update auth dto with userType SUP-152",
-              "date": "2026-03-16T16:46:29Z",
-              "author": "CristiGB",
-              "pr_number": "270",
-              "tickets": [
-                {
-                  "id": "SUP-152",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-152"
                 }
               ]
             },
@@ -3057,12 +3005,98 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
                 }
               ]
+            },
+            {
+              "sha": "ddca3c7",
+              "message": "refactor(erp): added key in map ACE-72",
+              "date": "2026-03-12T23:23:04Z",
+              "author": "meraso-nutra",
+              "pr_number": "265",
+              "tickets": [
+                {
+                  "id": "ACE-72",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
+                }
+              ]
+            },
+            {
+              "sha": "c91945c",
+              "message": "refactor(erp): added active parameter in orders ACE-72",
+              "date": "2026-03-12T15:29:54Z",
+              "author": "meraso-nutra",
+              "pr_number": "264",
+              "tickets": [
+                {
+                  "id": "ACE-72",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
+                }
+              ]
+            },
+            {
+              "sha": "45051ce",
+              "message": "feat(events): integración de execution-manager y endpoints de monitoreo de eventos ACE-53",
+              "date": "2026-03-11T21:14:25Z",
+              "author": "jsandoval-dev",
+              "pr_number": "258",
+              "tickets": [
+                {
+                  "id": "ACE-53",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-53"
+                }
+              ]
+            },
+            {
+              "sha": "e20f0ee",
+              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
+              "date": "2026-03-11T21:07:52Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "263",
+              "tickets": [
+                {
+                  "id": "DE-338",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
+                }
+              ]
+            },
+            {
+              "sha": "92cdb8f",
+              "message": "feat(erp): created methods for customer ACE-72",
+              "date": "2026-03-11T14:56:09Z",
+              "author": "meraso-nutra",
+              "pr_number": "261",
+              "tickets": [
+                {
+                  "id": "ACE-72",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
+                }
+              ]
+            },
+            {
+              "sha": "e5a5e20",
+              "message": "refactor(erp): endpoint type update order builder ACE-57",
+              "date": "2026-03-09T22:10:59Z",
+              "author": "meraso-nutra",
+              "pr_number": "259",
+              "tickets": [
+                {
+                  "id": "ACE-57",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-57"
+                }
+              ]
             }
           ]
         },
         "to_production": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "0c7bd1e",
+              "message": "release: qa-2026-03-25",
+              "date": "2026-03-26T21:51:38Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "291",
+              "tickets": []
+            },
             {
               "sha": "f213f56",
               "message": "release: qa-2026-03-18",
