@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-27T13:50:00.557Z",
+  "generated_at": "2026-03-27T19:40:31.575Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -31,7 +31,7 @@
     },
     "SUP-184": {
       "summary": "BG | Datos Personales | Ajustes en actualización de datos",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -94,6 +94,11 @@
       "status": "Despliegue a PROD",
       "assignee": "Miller Ladino Osorio"
     },
+    "PMO-2537": {
+      "summary": "SEO estandar para Academia de medicina funcional",
+      "status": "Despliegue a QA",
+      "assignee": "Miller Ladino Osorio"
+    },
     "PMO-2508": {
       "summary": "No permite eliminar Productos Doctor Elias Stambullie",
       "status": "Actividad completada",
@@ -146,7 +151,7 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Steven Leon"
     },
     "NCOL-639": {
@@ -266,7 +271,7 @@
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Felipe Berrio"
     },
     "ALMX-273": {
@@ -281,7 +286,12 @@
     },
     "ALMX-246": {
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALMX-239": {
+      "summary": "BG |  Carrito | Contador de la bolsa cambia incorrectamente al cambiar de módulo",
+      "status": "En proceso",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-228": {
@@ -303,6 +313,11 @@
       "summary": "crear campo en productos",
       "status": "En proceso",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-1436": {
+      "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
+      "status": "Aprobado por QA",
+      "assignee": "Felipe Berrio"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -439,6 +454,11 @@
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
+    "ACE-77": {
+      "summary": "Manejo de Hormonas y envió de nuevos params a Epicor, desde librería ERP",
+      "status": "En Curso",
+      "assignee": "Mario Eraso"
+    },
     "ACE-74": {
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
       "status": "Esperando Aprobación",
@@ -464,11 +484,6 @@
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     },
-    "ACE-57": {
-      "summary": "Librería ERP - Pruebas de validación de nuevos artefactos de integración",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
-    },
     "ACE-56": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
       "status": "Esperando Aprobación",
@@ -491,6 +506,98 @@
     }
   },
   "repos": [
+    {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-27T19:21:40Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23663578862",
+        "updated_at": "2026-03-27T19:21:51Z",
+        "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-amf",
+      "full_name": "NutrappDev/fruto-landing-amf",
+      "description": "Landing diplomado AMF",
+      "url": "https://github.com/NutrappDev/fruto-landing-amf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-27T19:18:38Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "c8c5b62",
+              "message": "feat: seo estandar academia medicina funcional PMO-2537",
+              "date": "2026-03-27T19:18:36Z",
+              "author": "mladino-source",
+              "pr_number": "1",
+              "tickets": [
+                {
+                  "id": "PMO-2537",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2537"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "portal-nutrabiotics",
       "full_name": "NutrappDev/portal-nutrabiotics",
@@ -811,7 +918,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-27T13:49:39Z",
+      "last_push": "2026-03-27T19:24:49Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -851,13 +958,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-26",
-        "sha": "14b3bc56b685aba4d62e6c6ef41f65cef37e8ca9",
-        "date": "2026-03-26T14:16:06Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-26",
-        "body": "Release qa-2026-03-26\n"
+        "version": "qa-2026-03-27",
+        "sha": "a7bb0ee67473b13c238f85bcb7bdef05149651f2",
+        "date": "2026-03-27T13:49:58Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-27",
+        "body": "Release qa-2026-03-27\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-26",
+          "sha": "14b3bc56b685aba4d62e6c6ef41f65cef37e8ca9",
+          "date": "2026-03-26T14:16:06Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-26",
+          "body": "Release qa-2026-03-26\n"
+        },
         {
           "version": "qa-2026-03-20",
           "sha": "affd71ba2ef5bd8f2cba591695b7404345fb487e",
@@ -882,8 +996,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "2694b0a",
+              "message": "fix(navbar): remove counter wiggle ALMX-239",
+              "date": "2026-03-27T19:24:47Z",
+              "author": "CristiGB",
+              "pr_number": "384",
+              "tickets": [
+                {
+                  "id": "ALMX-239",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-239"
+                }
+              ]
+            },
+            {
+              "sha": "dfd7bb6",
+              "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
+              "date": "2026-03-27T14:24:51Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "383",
+              "tickets": [
+                {
+                  "id": "ALCO-1436",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1436"
+                }
+              ]
+            },
             {
               "sha": "574a314",
               "message": "feat(cart): add inventariado property to CartItem ALCO-1441",
@@ -1228,48 +1368,6 @@
       }
     },
     {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-26T21:46:07Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23619610298",
-        "updated_at": "2026-03-26T21:46:21Z",
-        "name": "Deploy n8n Workflows"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "Ilumina",
       "full_name": "NutrappDev/Ilumina",
       "description": null,
@@ -1458,42 +1556,6 @@
       }
     },
     {
-      "name": "fruto-landing-amf",
-      "full_name": "NutrappDev/fruto-landing-amf",
-      "description": "Landing diplomado AMF",
-      "url": "https://github.com/NutrappDev/fruto-landing-amf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-25T21:48:26Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "SSO-keycloak",
       "full_name": "NutrappDev/SSO-keycloak",
       "description": null,
@@ -1616,8 +1678,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-27T13%3A49%3A59.046Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-27T13%3A49%3A59.047Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-27T19%3A40%3A30.564Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-27T19%3A40%3A30.564Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2665,7 +2727,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-27T13:40:47Z",
+      "last_push": "2026-03-27T19:40:09Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2729,8 +2791,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 47,
+          "count": 49,
           "recent_commits": [
+            {
+              "sha": "5249091",
+              "message": "fix(erp): epicor test variables ACE-77",
+              "date": "2026-03-27T19:40:08Z",
+              "author": "meraso-nutra",
+              "pr_number": "296",
+              "tickets": [
+                {
+                  "id": "ACE-77",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-77"
+                }
+              ]
+            },
+            {
+              "sha": "2e4a4dc",
+              "message": "fix(event-monitoring): corregir retry de eventos outbox ACE-54",
+              "date": "2026-03-27T19:26:52Z",
+              "author": "jsandoval-dev",
+              "pr_number": "295",
+              "tickets": [
+                {
+                  "id": "ACE-54",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
+                }
+              ]
+            },
             {
               "sha": "bed70ec",
               "message": "fix(orders): corregir crash en notificación por incompatibilidad Decimal/string ALMX-281",
@@ -3027,32 +3115,6 @@
                 {
                   "id": "DE-338",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
-                }
-              ]
-            },
-            {
-              "sha": "92cdb8f",
-              "message": "feat(erp): created methods for customer ACE-72",
-              "date": "2026-03-11T14:56:09Z",
-              "author": "meraso-nutra",
-              "pr_number": "261",
-              "tickets": [
-                {
-                  "id": "ACE-72",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
-                }
-              ]
-            },
-            {
-              "sha": "e5a5e20",
-              "message": "refactor(erp): endpoint type update order builder ACE-57",
-              "date": "2026-03-09T22:10:59Z",
-              "author": "meraso-nutra",
-              "pr_number": "259",
-              "tickets": [
-                {
-                  "id": "ACE-57",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-57"
                 }
               ]
             }
