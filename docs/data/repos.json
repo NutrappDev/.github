@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T17:52:07.523Z",
+  "generated_at": "2026-03-30T19:03:57.863Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -304,6 +304,11 @@
       "status": "Revisión QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
+    "ALCO-1442": {
+      "summary": "Mejorar experiencia de usuario en checkout",
+      "status": "Revisión QA",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALCO-1441": {
       "summary": "validar envio por campo creado en productos",
       "status": "Despliegue a QA",
@@ -497,11 +502,6 @@
     "ACE-53": {
       "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
       "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-8": {
-      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
-      "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
     }
   },
@@ -964,7 +964,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T17:51:47Z",
+      "last_push": "2026-03-30T19:03:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1004,13 +1004,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-27",
-        "sha": "a7bb0ee67473b13c238f85bcb7bdef05149651f2",
-        "date": "2026-03-27T13:49:58Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-27",
-        "body": "Release qa-2026-03-27\n"
+        "version": "qa-2026-03-30",
+        "sha": "f46c7e1946f50f95dac72e7953e91adc15e334a5",
+        "date": "2026-03-30T17:52:09Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-30",
+        "body": "Release qa-2026-03-30\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-27",
+          "sha": "a7bb0ee67473b13c238f85bcb7bdef05149651f2",
+          "date": "2026-03-27T13:49:58Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-27",
+          "body": "Release qa-2026-03-27\n"
+        },
         {
           "version": "qa-2026-03-26",
           "sha": "14b3bc56b685aba4d62e6c6ef41f65cef37e8ca9",
@@ -1031,19 +1038,25 @@
           "date": "2026-03-17T16:18:10Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-17",
           "body": "Release qa-2026-03-17\n"
-        },
-        {
-          "version": "qa-2026-03-12",
-          "sha": "8a1eded9915be6a5369fb5810eb252122444e58e",
-          "date": "2026-03-12T22:51:34Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-12",
-          "body": "Release qa-2026-03-12\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "74a5140",
+              "message": "fix(OrderError): improve error messaging for checkout process ALCO-1442",
+              "date": "2026-03-30T19:03:35Z",
+              "author": "CristiGB",
+              "pr_number": "389",
+              "tickets": [
+                {
+                  "id": "ALCO-1442",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1442"
+                }
+              ]
+            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -1686,8 +1699,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T17%3A52%3A06.389Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T17%3A52%3A06.390Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T19%3A03%3A56.541Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T19%3A03%3A56.541Z → 409 Conflict",
         "ci": null
       }
     },
