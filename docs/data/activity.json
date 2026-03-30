@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T21:19:15.096Z",
+  "generated_at": "2026-03-30T21:40:24.530Z",
   "window_days": 90,
   "developers": [
     {
@@ -505,17 +505,17 @@
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 8,
-      "prs_90d": 25,
-      "last_activity": "2026-03-26T23:11:53Z",
+      "prs_30d": 9,
+      "prs_90d": 26,
+      "last_activity": "2026-03-30T21:40:08Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 25
+          "prs": 26
         }
       ],
       "by_branch": {
-        "develop": 23,
+        "develop": 24,
         "qa": 2,
         "main": 0
       },
@@ -570,7 +570,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
