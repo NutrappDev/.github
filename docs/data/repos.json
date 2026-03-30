@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T17:32:33.923Z",
+  "generated_at": "2026-03-30T17:52:07.523Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -151,7 +151,7 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Aprobado por QA",
+      "status": "Pruebas de Regresión",
       "assignee": "Steven Leon"
     },
     "NCOL-639": {
@@ -269,11 +269,6 @@
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
     },
-    "ALMX-283": {
-      "summary": "BG | Historial de puntos | El total de puntos no de adapta a la tarjetas",
-      "status": "Despliegue a QA",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
       "status": "Despliegue a DEV",
@@ -289,11 +284,6 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "ALMX-267": {
-      "summary": "BG | quienes somos | Animación de fondo se deshabilita al dividir la pantalla",
-      "status": "En proceso",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
       "status": "Despliegue a PROD",
@@ -302,11 +292,6 @@
     "ALMX-246": {
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
       "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-239": {
-      "summary": "BG |  Carrito | Contador de la bolsa cambia incorrectamente al cambiar de módulo",
-      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-228": {
@@ -502,6 +487,21 @@
     "ACE-56": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
       "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-54": {
+      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-53": {
+      "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
+      "status": "Esperando Aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "ACE-8": {
+      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
+      "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
     }
   },
@@ -964,7 +964,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T17:30:53Z",
+      "last_push": "2026-03-30T17:51:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1042,60 +1042,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 9,
           "recent_commits": [
-            {
-              "sha": "6f07d03",
-              "message": "fix(OurValues): adjust animation durations for smoother transitions ALMX-267",
-              "date": "2026-03-30T16:45:46Z",
-              "author": "CristiGB",
-              "pr_number": "387",
-              "tickets": [
-                {
-                  "id": "ALMX-267",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-267"
-                }
-              ]
-            },
-            {
-              "sha": "74ef2bc",
-              "message": "fix(points): ajuste de modal de puntos ALMX-283",
-              "date": "2026-03-30T16:18:50Z",
-              "author": "fabianromerolu",
-              "pr_number": "386",
-              "tickets": [
-                {
-                  "id": "ALMX-283",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-283"
-                }
-              ]
-            },
-            {
-              "sha": "62a4706",
-              "message": "fix: ALMX-267 restore animation ",
-              "date": "2026-03-30T15:28:22Z",
-              "author": "CristiGB",
-              "pr_number": "385",
-              "tickets": [
-                {
-                  "id": "ALMX-267",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-267"
-                }
-              ]
-            },
-            {
-              "sha": "2694b0a",
-              "message": "fix(navbar): remove counter wiggle ALMX-239",
-              "date": "2026-03-27T19:24:47Z",
-              "author": "CristiGB",
-              "pr_number": "384",
-              "tickets": [
-                {
-                  "id": "ALMX-239",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-239"
-                }
-              ]
-            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -1201,8 +1149,16 @@
           ]
         },
         "to_production": {
-          "count": 24,
+          "count": 25,
           "recent_commits": [
+            {
+              "sha": "f46c7e1",
+              "message": "release: qa 2026 03 30",
+              "date": "2026-03-30T17:51:45Z",
+              "author": "CristiGB",
+              "pr_number": "388",
+              "tickets": []
+            },
             {
               "sha": "a7bb0ee",
               "message": "release: qa 2026 03 27",
@@ -1730,8 +1686,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T17%3A32%3A32.840Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T17%3A32%3A32.841Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T17%3A52%3A06.389Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T17%3A52%3A06.390Z → 409 Conflict",
         "ci": null
       }
     },
