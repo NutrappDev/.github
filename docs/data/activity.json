@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-03-30T17:26:15.417Z",
+  "generated_at": "2026-03-30T20:55:56.578Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 38,
-      "prs_90d": 92,
-      "last_activity": "2026-03-30T16:45:46Z",
+      "prs_30d": 41,
+      "prs_90d": 94,
+      "last_activity": "2026-03-30T20:55:41Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 69
-        },
-        {
-          "repo": "portal-nutrabiotics",
-          "prs": 8
+          "prs": 72
         },
         {
           "repo": "monorepo-alivia-backend",
           "prs": 8
+        },
+        {
+          "repo": "portal-nutrabiotics",
+          "prs": 7
         },
         {
           "repo": "sso-micuenta",
@@ -31,8 +31,8 @@
         }
       ],
       "by_branch": {
-        "develop": 50,
-        "qa": 28,
+        "develop": 51,
+        "qa": 29,
         "main": 14
       },
       "weekly": [
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 2
+          "prs": 5
         }
       ]
     },
@@ -661,13 +661,13 @@
     {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 7,
-      "prs_90d": 7,
-      "last_activity": "2026-03-30T17:26:00Z",
+      "prs_30d": 8,
+      "prs_90d": 8,
+      "last_activity": "2026-03-30T17:32:10Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 5
+          "prs": 6
         },
         {
           "repo": "fruto-web-nutra-mx",
@@ -679,7 +679,7 @@
         }
       ],
       "by_branch": {
-        "develop": 7,
+        "develop": 8,
         "qa": 0,
         "main": 0
       },
@@ -734,7 +734,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
