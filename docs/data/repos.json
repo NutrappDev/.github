@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T22:00:08.961Z",
+  "generated_at": "2026-03-30T22:49:53.770Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -301,7 +301,7 @@
     },
     "ALCO-1456": {
       "summary": "Agegar valor de descuento en el couponsLines",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1450": {
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T19:49:38Z",
+      "last_push": "2026-03-30T22:10:08Z",
       "topics": [
         "fase-tronco",
         "team-roble"
@@ -536,8 +536,8 @@
       "ci": {
         "status": "completed",
         "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23764442138",
-        "updated_at": "2026-03-30T19:49:53Z",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23770163264",
+        "updated_at": "2026-03-30T22:10:23Z",
         "name": "Deploy n8n Workflows"
       },
       "_errors": {
@@ -1712,8 +1712,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T22%3A00%3A07.250Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T22%3A00%3A07.251Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T22%3A49%3A52.844Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T22%3A49%3A52.845Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2813,7 +2813,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T21:18:57Z",
+      "last_push": "2026-03-30T22:49:33Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2877,8 +2877,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 50,
+          "count": 51,
           "recent_commits": [
+            {
+              "sha": "9cada39",
+              "message": "feat(erp): coupon lines ACE-65",
+              "date": "2026-03-30T22:49:32Z",
+              "author": "meraso-nutra",
+              "pr_number": "299",
+              "tickets": [
+                {
+                  "id": "ACE-65",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-65"
+                }
+              ]
+            },
             {
               "sha": "8a35bc7",
               "message": "feat(erp): epicor coupons ACE-65",
@@ -3188,19 +3201,6 @@
                 {
                   "id": "ACE-72",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
-                }
-              ]
-            },
-            {
-              "sha": "45051ce",
-              "message": "feat(events): integración de execution-manager y endpoints de monitoreo de eventos ACE-53",
-              "date": "2026-03-11T21:14:25Z",
-              "author": "jsandoval-dev",
-              "pr_number": "258",
-              "tickets": [
-                {
-                  "id": "ACE-53",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-53"
                 }
               ]
             }
