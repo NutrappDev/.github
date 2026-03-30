@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-30T16:19:10.816Z",
+  "generated_at": "2026-03-30T17:26:15.417Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 37,
-      "prs_90d": 91,
-      "last_activity": "2026-03-30T15:28:22Z",
+      "prs_30d": 38,
+      "prs_90d": 92,
+      "last_activity": "2026-03-30T16:45:46Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 68
+          "prs": 69
         },
         {
           "repo": "portal-nutrabiotics",
@@ -31,7 +31,7 @@
         }
       ],
       "by_branch": {
-        "develop": 49,
+        "develop": 50,
         "qa": 28,
         "main": 14
       },
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
@@ -422,12 +422,12 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 12,
-      "prs_90d": 46,
+      "prs_90d": 45,
       "last_activity": "2026-03-30T16:18:50Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 21
+          "prs": 20
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -443,7 +443,7 @@
         }
       ],
       "by_branch": {
-        "develop": 38,
+        "develop": 37,
         "qa": 7,
         "main": 1
       },
@@ -661,13 +661,13 @@
     {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 6,
-      "prs_90d": 6,
-      "last_activity": "2026-03-27T19:18:36Z",
+      "prs_30d": 7,
+      "prs_90d": 7,
+      "last_activity": "2026-03-30T17:26:00Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 4
+          "prs": 5
         },
         {
           "repo": "fruto-web-nutra-mx",
@@ -679,7 +679,7 @@
         }
       ],
       "by_branch": {
-        "develop": 6,
+        "develop": 7,
         "qa": 0,
         "main": 0
       },
@@ -734,7 +734,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
@@ -970,22 +970,18 @@
       "login": "Joredjs",
       "avatar_url": "https://avatars.githubusercontent.com/u/3341088?v=4",
       "prs_30d": 0,
-      "prs_90d": 4,
+      "prs_90d": 3,
       "last_activity": "2026-01-08T19:35:05Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
           "prs": 3
-        },
-        {
-          "repo": "SSO-keycloak",
-          "prs": 1
         }
       ],
       "by_branch": {
         "develop": 3,
         "qa": 0,
-        "main": 1
+        "main": 0
       },
       "weekly": [
         {
