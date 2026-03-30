@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T16:46:10.187Z",
+  "generated_at": "2026-03-30T17:32:33.923Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -126,7 +126,7 @@
     },
     "NE-151": {
       "summary": "Épica 5: Implementación “Mi cuenta” (Persona Natural) en Perfil Empresas – SSO B2B]",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
     "NE-74": {
@@ -228,6 +228,11 @@
       "summary": "BG | Línea Ética | Sección de 'Evidencias' mobile no respeta diseño aprobado",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
+    },
+    "NCOL-372": {
+      "summary": "BG | Tablet | Calidad | Espacio sin contenido en certificados",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "NCOL-363": {
       "summary": "BG | Inicio Sesión | No muestra imagen de perfil",
@@ -496,11 +501,6 @@
     },
     "ACE-56": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-54": {
-      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Esperando Aprobación",
       "assignee": "Jhelcy Sandoval"
     }
@@ -964,7 +964,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T16:45:48Z",
+      "last_push": "2026-03-30T17:30:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1730,8 +1730,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T16%3A46%3A09.020Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T16%3A46%3A09.020Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T17%3A32%3A32.840Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T17%3A32%3A32.841Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2463,7 +2463,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T16:07:50Z",
+      "last_push": "2026-03-30T17:32:12Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-02",
@@ -2534,8 +2534,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "afc0933",
+              "message": "feat(navbar): responsive design navbar NCOL-362",
+              "date": "2026-03-30T17:32:10Z",
+              "author": "mladino-source",
+              "pr_number": "68",
+              "tickets": [
+                {
+                  "id": "NCOL-362",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-362"
+                }
+              ]
+            },
+            {
+              "sha": "3c96d61",
+              "message": "refactor(NCOL-372): ajustes responsivo pagina calidad",
+              "date": "2026-03-30T17:26:00Z",
+              "author": "mladino-source",
+              "pr_number": "55",
+              "tickets": [
+                {
+                  "id": "NCOL-372",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-372"
+                }
+              ]
+            },
             {
               "sha": "d672ea6",
               "message": "refactor: agregar editorconfig, prettier, husky para validaciones y estandarizacion NCOL-655",
