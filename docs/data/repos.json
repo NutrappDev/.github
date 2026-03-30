@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T15:01:08.889Z",
+  "generated_at": "2026-03-30T15:28:50.592Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 29,
@@ -279,6 +279,11 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
+    "ALMX-267": {
+      "summary": "BG | quienes somos | Animación de fondo se deshabilita al dividir la pantalla",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
       "status": "Despliegue a PROD",
@@ -497,11 +502,6 @@
     "ACE-53": {
       "summary": "Librería ERP - Implementación de manejo de respuestas negativas y rechazos de API",
       "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-8": {
-      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
-      "status": "En Curso",
       "assignee": "Jhelcy Sandoval"
     }
   },
@@ -964,7 +964,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-27T19:24:49Z",
+      "last_push": "2026-03-30T15:28:25Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1042,8 +1042,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "62a4706",
+              "message": "fix: ALMX-267 restore animation ",
+              "date": "2026-03-30T15:28:22Z",
+              "author": "CristiGB",
+              "pr_number": "385",
+              "tickets": [
+                {
+                  "id": "ALMX-267",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-267"
+                }
+              ]
+            },
             {
               "sha": "2694b0a",
               "message": "fix(navbar): remove counter wiggle ALMX-239",
@@ -1691,8 +1704,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T15%3A01%3A07.413Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T15%3A01%3A07.414Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T15%3A28%3A49.428Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T15%3A28%3A49.428Z → 409 Conflict",
         "ci": null
       }
     },
