@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T18:56:09.875Z",
+  "generated_at": "2026-03-31T21:13:36.648Z",
   "window_days": 90,
   "developers": [
     {
@@ -167,6 +167,82 @@
       ]
     },
     {
+      "login": "meraso-nutra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
+      "prs_30d": 19,
+      "prs_90d": 27,
+      "last_activity": "2026-03-31T19:22:15Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 24
+        },
+        {
+          "repo": "microservice_payments",
+          "prs": 3
+        }
+      ],
+      "by_branch": {
+        "develop": 26,
+        "qa": 0,
+        "main": 1
+      },
+      "weekly": [
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 3
+        },
+        {
+          "week": "2026-W06",
+          "prs": 1
+        },
+        {
+          "week": "2026-W07",
+          "prs": 1
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 3
+        },
+        {
+          "week": "2026-W10",
+          "prs": 4
+        },
+        {
+          "week": "2026-W11",
+          "prs": 5
+        },
+        {
+          "week": "2026-W12",
+          "prs": 5
+        },
+        {
+          "week": "2026-W13",
+          "prs": 2
+        },
+        {
+          "week": "2026-W14",
+          "prs": 3
+        }
+      ]
+    },
+    {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
       "prs_30d": 18,
@@ -251,82 +327,6 @@
         {
           "week": "2026-W13",
           "prs": 5
-        },
-        {
-          "week": "2026-W14",
-          "prs": 2
-        }
-      ]
-    },
-    {
-      "login": "meraso-nutra",
-      "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 18,
-      "prs_90d": 26,
-      "last_activity": "2026-03-30T22:49:32Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 23
-        },
-        {
-          "repo": "microservice_payments",
-          "prs": 3
-        }
-      ],
-      "by_branch": {
-        "develop": 25,
-        "qa": 0,
-        "main": 1
-      },
-      "weekly": [
-        {
-          "week": "2026-W02",
-          "prs": 0
-        },
-        {
-          "week": "2026-W03",
-          "prs": 0
-        },
-        {
-          "week": "2026-W04",
-          "prs": 0
-        },
-        {
-          "week": "2026-W05",
-          "prs": 3
-        },
-        {
-          "week": "2026-W06",
-          "prs": 1
-        },
-        {
-          "week": "2026-W07",
-          "prs": 1
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 3
-        },
-        {
-          "week": "2026-W10",
-          "prs": 4
-        },
-        {
-          "week": "2026-W11",
-          "prs": 5
-        },
-        {
-          "week": "2026-W12",
-          "prs": 5
-        },
-        {
-          "week": "2026-W13",
-          "prs": 2
         },
         {
           "week": "2026-W14",
@@ -505,9 +505,9 @@
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 10,
-      "prs_90d": 25,
-      "last_activity": "2026-03-31T18:55:56Z",
+      "prs_30d": 11,
+      "prs_90d": 26,
+      "last_activity": "2026-03-31T21:13:23Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
@@ -522,18 +522,18 @@
           "prs": 2
         },
         {
-          "repo": "nutrabiotics-empresas",
-          "prs": 1
+          "repo": ".github",
+          "prs": 2
         },
         {
-          "repo": ".github",
+          "repo": "nutrabiotics-empresas",
           "prs": 1
         }
       ],
       "by_branch": {
         "develop": 15,
         "qa": 4,
-        "main": 6
+        "main": 7
       },
       "weekly": [
         {
@@ -586,7 +586,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 2
+          "prs": 3
         }
       ]
     },
