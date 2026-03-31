@@ -11,7 +11,8 @@
     "test":     { "label": "🧐 test",     "max_lines": 1000, "max_files": 50  },
     "release":  { "label": "🎯 release",  "max_lines": 5000, "max_files": 350 },
     "hotfix":   { "label": "🚑 hotfix",   "max_lines": 200,  "max_files": 10  },
-    "merge":    { "label": "🔗 merge",    "max_lines": 5000, "max_files": 350 }
+    "merge":    { "label": "🔗 merge",    "max_lines": 5000, "max_files": 350 },
+    "revert":   { "label": "↩️ revert",   "max_lines": 5000, "max_files": 350 }
   },
 
   "protected_branches": ["main", "qa", "develop"],
@@ -24,34 +25,37 @@
       "notes": "Squash merge para mantener historial limpio. Cada PR squasheado representa una unidad de trabajo con su ticket Jira."
     },
     "qa": {
-      "allowed_source_prefixes": ["release"],
-      "allowed_branch_pattern": "^release/qa-\\d{4}-\\d{2}-\\d{2}$",
+      "allowed_source_prefixes": ["release", "revert"],
+      "allowed_branch_pattern": "^(release/qa-\d{4}-\d{2}-\d{2}|revert/release-qa-.+)$",
       "merge_strategy": "merge",
       "require_jira_ticket": false,
-      "notes": "Solo acepta ramas release/qa-YYYY-MM-DD. Sin squash para preservar los commits cherry-picked desde develop y mantener trazabilidad completa."
+      "notes": "Acepta ramas release/qa-YYYY-MM-DD y revert/release-qa-YYYY-MM-DD. Sin squash para preservar trazabilidad completa."
     },
     "main": {
-      "allowed_source_prefixes": ["release", "hotfix"],
+      "allowed_source_prefixes": ["release", "hotfix", "revert"],
       "allowed_branch_patterns": [
-        "^release/prod-\\d{4}-\\d{2}-\\d{2}$",
-        "^hotfix/.+"
+        "^release/prod-\d{4}-\d{2}-\d{2}$",
+        "^hotfix/.+",
+        "^revert/release-prod-.+"
       ],
       "merge_strategy": "merge",
       "require_jira_ticket": false,
-      "notes": "Solo acepta ramas release/prod-YYYY-MM-DD (cherry-picks desde qa) y hotfix/TICKET-JIRA-descripcion. Sin squash para preservar trazabilidad completa."
+      "notes": "Acepta ramas release/prod-YYYY-MM-DD, hotfix/TICKET-descripcion y revert/release-prod-YYYY-MM-DD."
     }
   },
 
   "release_branch_naming": {
-    "to_qa":   "release/qa-YYYY-MM-DD",
-    "to_main": "release/prod-YYYY-MM-DD",
-    "notes": "Las ramas release son creadas manualmente antes de hacer cherry-picks. Un cherry-pick nunca va directo a qa o main."
+    "to_qa":         "release/qa-YYYY-MM-DD",
+    "to_main":       "release/prod-YYYY-MM-DD",
+    "revert_to_qa":  "revert/release-qa-YYYY-MM-DD",
+    "revert_to_main":"revert/release-prod-YYYY-MM-DD",
+    "notes": "Las ramas release son creadas manualmente antes de hacer cherry-picks. Las ramas revert se crean con el script scripts/revert-release.sh."
   },
 
   "size_check_blocks": false,
   "file_size_check_blocks": false,
 
-  "jira_ticket_skip_types": ["merge", "release"],
+  "jira_ticket_skip_types": ["merge", "release", "revert"],
 
   "hotfix_flow": {
     "notes": "hotfix/TICKET-JIRA-descripcion se crea desde main, se arregla, y va directo a main via PR (rama release/ no aplica para hotfixes). El fix también debe backportearse a develop via PR normal de tipo fix."
