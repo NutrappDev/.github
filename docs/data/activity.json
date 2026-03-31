@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-31T13:50:41.970Z",
+  "generated_at": "2026-03-31T17:23:22.654Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 41,
-      "prs_90d": 94,
-      "last_activity": "2026-03-30T20:55:41Z",
+      "prs_30d": 42,
+      "prs_90d": 95,
+      "last_activity": "2026-03-31T16:37:15Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 72
+          "prs": 73
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -31,7 +31,7 @@
         }
       ],
       "by_branch": {
-        "develop": 51,
+        "develop": 52,
         "qa": 29,
         "main": 14
       },
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W14",
-          "prs": 5
+          "prs": 6
         }
       ]
     },
@@ -575,6 +575,90 @@
       ]
     },
     {
+      "login": "jgaray-nutrapp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
+      "prs_30d": 9,
+      "prs_90d": 24,
+      "last_activity": "2026-03-31T17:23:04Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 14
+        },
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 7
+        },
+        {
+          "repo": "SSO-keycloak",
+          "prs": 2
+        },
+        {
+          "repo": "nutrabiotics-empresas",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 15,
+        "qa": 4,
+        "main": 5
+      },
+      "weekly": [
+        {
+          "week": "2026-W02",
+          "prs": 0
+        },
+        {
+          "week": "2026-W03",
+          "prs": 0
+        },
+        {
+          "week": "2026-W04",
+          "prs": 0
+        },
+        {
+          "week": "2026-W05",
+          "prs": 3
+        },
+        {
+          "week": "2026-W06",
+          "prs": 3
+        },
+        {
+          "week": "2026-W07",
+          "prs": 2
+        },
+        {
+          "week": "2026-W08",
+          "prs": 2
+        },
+        {
+          "week": "2026-W09",
+          "prs": 5
+        },
+        {
+          "week": "2026-W10",
+          "prs": 1
+        },
+        {
+          "week": "2026-W11",
+          "prs": 2
+        },
+        {
+          "week": "2026-W12",
+          "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 3
+        },
+        {
+          "week": "2026-W14",
+          "prs": 1
+        }
+      ]
+    },
+    {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
       "prs_30d": 9,
@@ -651,90 +735,6 @@
         {
           "week": "2026-W14",
           "prs": 3
-        }
-      ]
-    },
-    {
-      "login": "jgaray-nutrapp",
-      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 8,
-      "prs_90d": 23,
-      "last_activity": "2026-03-27T21:41:04Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 13
-        },
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 7
-        },
-        {
-          "repo": "SSO-keycloak",
-          "prs": 2
-        },
-        {
-          "repo": "nutrabiotics-empresas",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 15,
-        "qa": 3,
-        "main": 5
-      },
-      "weekly": [
-        {
-          "week": "2026-W02",
-          "prs": 0
-        },
-        {
-          "week": "2026-W03",
-          "prs": 0
-        },
-        {
-          "week": "2026-W04",
-          "prs": 0
-        },
-        {
-          "week": "2026-W05",
-          "prs": 3
-        },
-        {
-          "week": "2026-W06",
-          "prs": 3
-        },
-        {
-          "week": "2026-W07",
-          "prs": 2
-        },
-        {
-          "week": "2026-W08",
-          "prs": 2
-        },
-        {
-          "week": "2026-W09",
-          "prs": 5
-        },
-        {
-          "week": "2026-W10",
-          "prs": 1
-        },
-        {
-          "week": "2026-W11",
-          "prs": 2
-        },
-        {
-          "week": "2026-W12",
-          "prs": 2
-        },
-        {
-          "week": "2026-W13",
-          "prs": 3
-        },
-        {
-          "week": "2026-W14",
-          "prs": 0
         }
       ]
     },
