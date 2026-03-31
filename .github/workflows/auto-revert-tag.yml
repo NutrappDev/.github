@@ -1,0 +1,103 @@
+name: Auto Revert Tag
+
+# Workflow reutilizable. Crea un tag anotado cuando se mergea un PR de
+# revert/* a qa o main, documentando el revert en el historial de tags.
+#
+# Tag generado:
+#   revert-qa-YYYY-MM-DD   cuando el destino es qa
+#   revert-prod-YYYY-MM-DD cuando el destino es main
+#
+# Si ya existe un tag con esa fecha (dos reverts el mismo día),
+# agrega sufijo: revert-qa-YYYY-MM-DD-2, revert-qa-YYYY-MM-DD-3, etc.
+#
+# El cuerpo del tag indica qué release fue revertido y el tag original.
+#
+# Llamar desde otros repos en pr-checks.yml:
+#
+#   revert-tag:
+#     if: |
+#       github.event.pull_request.merged == true &&
+#       startsWith(github.head_ref, 'revert/')
+#     uses: NutrappDev/.github/.github/workflows/auto-revert-tag.yml@main
+#     secrets: inherit
+
+on:
+  workflow_call:
+
+jobs:
+  tag:
+    name: Create Revert Tag
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create revert tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE: ${{ github.event.pull_request.head.ref }}
+          TARGET: ${{ github.event.pull_request.base.ref }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Determinar prefijo del tag según rama destino
+          if [ "$TARGET" = "qa" ]; then
+            PREFIX="revert-qa"
+          elif [ "$TARGET" = "main" ]; then
+            PREFIX="revert-prod"
+          else
+            echo "Rama destino '$TARGET' no requiere tag de revert."
+            exit 0
+          fi
+
+          DATE=$(date -u +%Y-%m-%d)
+          TAG_NAME="${PREFIX}-${DATE}"
+
+          # Si ya existe un tag con esa fecha, agregar sufijo incremental
+          git fetch --tags
+          SUFFIX=1
+          CANDIDATE="$TAG_NAME"
+          while git tag | grep -qx "$CANDIDATE"; do
+            SUFFIX=$(( SUFFIX + 1 ))
+            CANDIDATE="${TAG_NAME}-${SUFFIX}"
+          done
+          TAG_NAME="$CANDIDATE"
+
+          # Detectar el tag de release original que fue revertido
+          # La rama sigue el patrón revert/release-qa-YYYY-MM-DD o revert/release-prod-YYYY-MM-DD
+          ORIGINAL_DATE=$(echo "$SOURCE" | grep -oP '\d{4}-\d{2}-\d{2}' | head -1 || true)
+          if [ "$TARGET" = "qa" ]; then
+            ORIGINAL_TAG="qa-${ORIGINAL_DATE}"
+          else
+            ORIGINAL_TAG="prod-${ORIGINAL_DATE}"
+          fi
+
+          # Verificar si el tag original existe
+          if git tag | grep -qx "$ORIGINAL_TAG"; then
+            ORIGINAL_TAG_LINE="Tag revertido: ${ORIGINAL_TAG}"
+          else
+            ORIGINAL_TAG_LINE="Tag revertido: no encontrado (rama: ${SOURCE})"
+          fi
+
+          # Construir cuerpo del tag
+          TAG_BODY="Revert aplicado sobre ${TARGET}
+
+${ORIGINAL_TAG_LINE}
+PR: #${PR_NUMBER}
+Título: ${PR_TITLE}"
+
+          # Crear tag anotado apuntando al HEAD de la rama destino
+          git fetch origin "$TARGET"
+          git tag -a "$TAG_NAME" "origin/$TARGET" -m "$TAG_BODY"
+          git push origin "$TAG_NAME"
+
+          echo "✅ Tag creado: $TAG_NAME"
+          echo "   $ORIGINAL_TAG_LINE"
