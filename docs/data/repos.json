@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-30T22:49:53.770Z",
+  "generated_at": "2026-03-31T16:37:45.552Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
-  "total_repos": 29,
+  "total_repos": 30,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -66,7 +66,7 @@
     },
     "PMO-2667": {
       "summary": "Alivia México: Fase de Desarrollo ¡Hagámoslo realidad!",
-      "status": "Revisión QA",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2651": {
@@ -114,6 +114,56 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "PALCO-73": {
+      "summary": "Manejo de Hormonas y envió de nuevos params a Epicor, desde librería ERP",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "PALCO-71": {
+      "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "PALCO-69": {
+      "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "PALCO-66": {
+      "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-64": {
+      "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-63": {
+      "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-62": {
+      "summary": "Datos de Orden - Datos de Orden - Integración de cupones, puntos, eventos y métodos de pago",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
+    "PALCO-53": {
+      "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-51": {
+      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-10": {
+      "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
+      "status": "Detenido",
+      "assignee": "Jhelcy Sandoval"
+    },
     "NE-225": {
       "summary": "BG | Campo Obligatorio | Escribe tu pregunta | No posee hover rojo",
       "status": "Despliegue a QA",
@@ -141,7 +191,7 @@
     },
     "NCOL-655": {
       "summary": "Implementar configuración de Prettier, EditorConfig y Husky para estandarización de código en el repositorio de Nutrabiotics Colombia",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NCOL-647": {
@@ -156,7 +206,7 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Steven Leon"
     },
     "NCOL-641": {
@@ -166,7 +216,7 @@
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Pruebas de Regresión",
+      "status": "Despliegue a PROD",
       "assignee": "Steven Leon"
     },
     "NCOL-637": {
@@ -289,6 +339,11 @@
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
+    "ALMX-254": {
+      "summary": "BG | Copiar enlace | No aparece mensaje de confirmación al copiar el enlace",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-246": {
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
       "status": "Actividad completada",
@@ -306,7 +361,7 @@
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1442": {
@@ -448,64 +503,45 @@
       "summary": "Quienes somos - Rol Medico y Paciente ",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-34": {
-      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-32": {
-      "summary": "BG | Abrir chat genera error del token",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-77": {
-      "summary": "Manejo de Hormonas y envió de nuevos params a Epicor, desde librería ERP",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
-    },
-    "ACE-74": {
-      "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
-    },
-    "ACE-72": {
-      "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
-      "status": "Esperando Aprobación",
-      "assignee": "Mario Eraso"
-    },
-    "ACE-69": {
-      "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-67": {
-      "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-66": {
-      "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "ACE-65": {
-      "summary": "Datos de Orden - Datos de Orden - Integración de cupones, puntos, eventos y métodos de pago",
-      "status": "En Curso",
-      "assignee": "Mario Eraso"
-    },
-    "ACE-56": {
-      "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
-      "status": "Esperando Aprobación",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
+    {
+      "name": "fruto-web-visita-digital",
+      "full_name": "NutrappDev/fruto-web-visita-digital",
+      "description": "Frontend visitador virtual - Visita Digital",
+      "url": "https://github.com/NutrappDev/fruto-web-visita-digital",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-03-31T15:28:20Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "tronco-automatizacion-interna",
       "full_name": "NutrappDev/tronco-automatizacion-interna",
@@ -639,7 +675,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T20:52:31Z",
+      "last_push": "2026-03-31T13:50:25Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -675,8 +711,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "686772a",
+              "message": "refactor(erp): refactorizar dashboard de monitoreo de transacciones ERP ACE-66",
+              "date": "2026-03-31T13:50:23Z",
+              "author": "jsandoval-dev",
+              "pr_number": "172",
+              "tickets": [
+                {
+                  "id": "ACE-66",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
+                }
+              ]
+            },
             {
               "sha": "a65baf7",
               "message": "fix(erp): corregir dashboard de monitoreo de transacciones ERP ACE-66",
@@ -964,7 +1013,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-30T20:55:43Z",
+      "last_push": "2026-03-31T16:37:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1042,8 +1091,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "63e7083",
+              "message": "feat: ALMX-254 clipboard message",
+              "date": "2026-03-31T16:37:15Z",
+              "author": "CristiGB",
+              "pr_number": "391",
+              "tickets": [
+                {
+                  "id": "ALMX-254",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-254"
+                }
+              ]
+            },
             {
               "sha": "679e2b3",
               "message": "feat(coupons): add discountValue to coupon ALCO-1456",
@@ -1712,8 +1774,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-30T22%3A49%3A52.844Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-30T22%3A49%3A52.845Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-31T16%3A37%3A44.214Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-31T16%3A37%3A44.214Z → 409 Conflict",
         "ci": null
       }
     },
