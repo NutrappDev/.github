@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T20:07:40.080Z",
+  "generated_at": "2026-04-01T21:00:51.350Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -331,7 +331,7 @@
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Felipe Berrio"
     },
     "ALMX-246": {
@@ -343,6 +343,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1451": {
+      "summary": "implementacion de descuento promocional",
+      "status": "Revisión QA",
+      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
@@ -509,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T19:51:07Z",
+      "last_push": "2026-04-01T21:00:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -587,8 +592,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "8604b3a",
+              "message": "feat(ProductDetailCard): implement medical discount display and pricing logic based on user purchase level ALCO-1451",
+              "date": "2026-04-01T20:48:23Z",
+              "author": "CristiGB",
+              "pr_number": "395",
+              "tickets": [
+                {
+                  "id": "ALCO-1451",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1451"
+                }
+              ]
+            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -2070,8 +2088,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T20%3A07%3A39.093Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T20%3A07%3A39.094Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T21%3A00%3A49.933Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T21%3A00%3A49.934Z → 409 Conflict",
         "ci": null
       }
     },
