@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T21:00:51.350Z",
+  "generated_at": "2026-04-01T21:08:14.240Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T21:00:26Z",
+      "last_push": "2026-04-01T21:07:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -524,6 +524,13 @@
         "body": "Release prod-2026-04-01\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-04-01-2",
+          "sha": "91f9d80573a96243a98e43145503cdf376714bd9",
+          "date": "2026-04-01T21:00:45Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-01-2",
+          "body": "Release prod-2026-04-01-2\n"
+        },
         {
           "version": "prod-2026-03-26",
           "sha": "a1348b2caabfbe35521c1324b8ba912c50f6b643",
@@ -544,13 +551,6 @@
           "date": "2026-03-24T22:03:55Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-24-2",
           "body": "Release prod-2026-03-24-2\n"
-        },
-        {
-          "version": "prod-2026-03-19",
-          "sha": "ce82986e320ad60d7d2d15d5d9cace46eda7dc40",
-          "date": "2026-03-19T19:55:16Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-19",
-          "body": "Release prod-2026-03-19\n"
         }
       ],
       "qa": {
@@ -592,21 +592,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
-            {
-              "sha": "8604b3a",
-              "message": "feat(ProductDetailCard): implement medical discount display and pricing logic based on user purchase level ALCO-1451",
-              "date": "2026-04-01T20:48:23Z",
-              "author": "CristiGB",
-              "pr_number": "395",
-              "tickets": [
-                {
-                  "id": "ALCO-1451",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1451"
-                }
-              ]
-            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -710,6 +697,27 @@
               ]
             },
             {
+              "sha": "908b0c9",
+              "message": "se ajusto la cantidad en la compra para que concuerde con el pdf",
+              "date": "2026-01-07T14:02:30Z",
+              "author": "fabianromerolu",
+              "pr_number": "270",
+              "tickets": []
+            },
+            {
+              "sha": "e77edcb",
+              "message": "feat: add moment day ALCO-1298",
+              "date": "2026-01-06T21:45:35Z",
+              "author": "CristiGB",
+              "pr_number": "268",
+              "tickets": [
+                {
+                  "id": "ALCO-1298",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1298"
+                }
+              ]
+            },
+            {
               "sha": "10c824e",
               "message": "text baner for cart",
               "date": "2026-01-06T20:37:04Z",
@@ -720,8 +728,21 @@
           ]
         },
         "to_production": {
-          "count": 26,
+          "count": 27,
           "recent_commits": [
+            {
+              "sha": "bce6bf3",
+              "message": "feat(ProductDetailCard): implement medical discount display and pricing logic based on user purchase level ALCO-1451 (#395)",
+              "date": "2026-04-01T21:07:51Z",
+              "author": "CristiGB",
+              "pr_number": "397",
+              "tickets": [
+                {
+                  "id": "ALCO-1451",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1451"
+                }
+              ]
+            },
             {
               "sha": "5778c5d",
               "message": "release: qa 2026 04 01",
@@ -957,14 +978,6 @@
               "date": "2026-01-07T14:50:20Z",
               "author": "fabianromerolu",
               "pr_number": "271",
-              "tickets": []
-            },
-            {
-              "sha": "f8a63e1",
-              "message": "Develop",
-              "date": "2026-01-06T21:57:08Z",
-              "author": "CristiGB",
-              "pr_number": "269",
               "tickets": []
             }
           ]
@@ -2088,8 +2101,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T21%3A00%3A49.933Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T21%3A00%3A49.934Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T21%3A08%3A13.228Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T21%3A08%3A13.228Z → 409 Conflict",
         "ci": null
       }
     },
