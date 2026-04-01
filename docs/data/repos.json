@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-01T19:51:09.111Z",
+  "generated_at": "2026-04-01T20:07:40.080Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
   "jira_tickets": {
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-222": {
@@ -166,7 +166,7 @@
     },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
     },
     "NE-197": {
@@ -509,7 +509,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T19:50:46Z",
+      "last_push": "2026-04-01T19:51:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -549,13 +549,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-30",
-        "sha": "f46c7e1946f50f95dac72e7953e91adc15e334a5",
-        "date": "2026-03-30T17:52:09Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-30",
-        "body": "Release qa-2026-03-30\n"
+        "version": "qa-2026-04-01",
+        "sha": "5778c5df66edc2309b5d1552630a303d8ec359c7",
+        "date": "2026-04-01T19:51:06Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-01",
+        "body": "Release qa-2026-04-01\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-30",
+          "sha": "f46c7e1946f50f95dac72e7953e91adc15e334a5",
+          "date": "2026-03-30T17:52:09Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-30",
+          "body": "Release qa-2026-03-30\n"
+        },
         {
           "version": "qa-2026-03-27",
           "sha": "a7bb0ee67473b13c238f85bcb7bdef05149651f2",
@@ -576,13 +583,6 @@
           "date": "2026-03-20T14:17:13Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-20",
           "body": "Release qa-2026-03-20\n"
-        },
-        {
-          "version": "qa-2026-03-17",
-          "sha": "ac9d08989bb679ac20222b55a0f23c9b02f48ba4",
-          "date": "2026-03-17T16:18:10Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
         }
       ],
       "pending": {
@@ -1449,7 +1449,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T19:37:37Z",
+      "last_push": "2026-04-01T20:07:18Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1485,8 +1485,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "24a3b9c",
+              "message": "feat(erp): agregar tabla de transacciones fallidas en dashboard ACE-54",
+              "date": "2026-04-01T20:07:16Z",
+              "author": "jsandoval-dev",
+              "pr_number": "174",
+              "tickets": [
+                {
+                  "id": "ACE-54",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
+                }
+              ]
+            },
             {
               "sha": "686772a",
               "message": "refactor(erp): refactorizar dashboard de monitoreo de transacciones ERP ACE-66",
@@ -2057,8 +2070,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T19%3A51%3A07.988Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T19%3A51%3A07.988Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T20%3A07%3A39.093Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T20%3A07%3A39.094Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2846,7 +2859,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T18:03:55Z",
+      "last_push": "2026-04-01T20:06:43Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
