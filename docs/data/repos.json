@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T17:03:46.324Z",
+  "generated_at": "2026-04-01T18:04:15.511Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -106,8 +106,8 @@
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "Detenido",
-      "assignee": "Kevin Aguilera"
+      "status": "Revisión QA",
+      "assignee": "Angie Paola Pedrozo Redondo"
     },
     "PALMX-22": {
       "summary": "Todos los perfiles - DK-Mulsión",
@@ -126,11 +126,6 @@
     },
     "PALCO-71": {
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
-    },
-    "PALCO-69": {
-      "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
@@ -503,9 +498,50 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
+    },
+    "ALCO-142": {
+      "summary": "Quienes somos - Rol Medico y Paciente ",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
+    {
+      "name": "fruto-web-visita-digital",
+      "full_name": "NutrappDev/fruto-web-visita-digital",
+      "description": "Frontend visitador virtual - Visita Digital",
+      "url": "https://github.com/NutrappDev/fruto-web-visita-digital",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-01T17:22:33Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
@@ -814,42 +850,6 @@
               ]
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-web-visita-digital",
-      "full_name": "NutrappDev/fruto-web-visita-digital",
-      "description": "Frontend visitador virtual - Visita Digital",
-      "url": "https://github.com/NutrappDev/fruto-web-visita-digital",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-31T15:28:20Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -2106,8 +2106,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T17%3A03%3A44.803Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T17%3A03%3A44.803Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T18%3A04%3A14.277Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T18%3A04%3A14.278Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2895,7 +2895,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T17:03:23Z",
+      "last_push": "2026-04-01T18:03:55Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2961,6 +2961,19 @@
         "to_qa": {
           "count": 53,
           "recent_commits": [
+            {
+              "sha": "7f761c6",
+              "message": "feat(erp): query epicor order PALCO-62",
+              "date": "2026-04-01T18:03:53Z",
+              "author": "meraso-nutra",
+              "pr_number": "303",
+              "tickets": [
+                {
+                  "id": "PALCO-62",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-62"
+                }
+              ]
+            },
             {
               "sha": "ba4c98d",
               "message": "refactor(execution-manager): eliminar retries y corregir duplicidad en procesamiento de eventos ACE-54",
@@ -3270,19 +3283,6 @@
                 {
                   "id": "ACE-54",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
-                }
-              ]
-            },
-            {
-              "sha": "a61e64e",
-              "message": "refactor(erp): updated normalize state ACE-72",
-              "date": "2026-03-13T13:44:56Z",
-              "author": "meraso-nutra",
-              "pr_number": "268",
-              "tickets": [
-                {
-                  "id": "ACE-72",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
                 }
               ]
             }
