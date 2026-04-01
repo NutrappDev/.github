@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T21:18:44.944Z",
+  "generated_at": "2026-04-01T17:03:46.324Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -56,7 +56,7 @@
     },
     "PMO-2690": {
       "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Steven Leon"
     },
     "PMO-2676": {
@@ -109,6 +109,11 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "PALMX-22": {
+      "summary": "Todos los perfiles - DK-Mulsión",
+      "status": "Despliegue a QA",
+      "assignee": "ISABEL GOMEZ"
+    },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Actividad completada",
@@ -116,52 +121,52 @@
     },
     "PALCO-73": {
       "summary": "Manejo de Hormonas y envió de nuevos params a Epicor, desde librería ERP",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "PALCO-71": {
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "PALCO-69": {
       "summary": "Creación y exposición de funciones para customer en librería ERP (crear y consultar)",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "PALCO-66": {
       "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-64": {
       "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-63": {
       "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-62": {
-      "summary": "Datos de Orden - Datos de Orden - Integración de cupones, puntos, eventos y métodos de pago",
-      "status": "En proceso",
+      "summary": "Datos de Orden - Datos de Orden - Integración de cupones, fletes, platas. ",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "PALCO-53": {
       "summary": "Librería ERP - Implementación de logs y auditoría de integración ERP",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-51": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-10": {
       "summary": "Sprint 2 (Mar 02 – Mar 20): Transaccionalidad de Órdenes (Sales Orders)",
-      "status": "Detenido",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-225": {
@@ -196,17 +201,17 @@
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-646": {
       "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Steven Leon"
     },
     "NCOL-641": {
@@ -216,7 +221,7 @@
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Steven Leon"
     },
     "NCOL-637": {
@@ -301,12 +306,12 @@
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Steven Leon"
     },
     "NCOL-5": {
       "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Steven Leon"
     },
     "DGWNC-1": {
@@ -341,7 +346,7 @@
     },
     "ALMX-254": {
       "summary": "BG | Copiar enlace | No aparece mensaje de confirmación al copiar el enlace",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-246": {
@@ -361,7 +366,7 @@
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "Detenido",
+      "status": "Esperando aprobación",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1442": {
@@ -498,11 +503,6 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "ALCO-142": {
-      "summary": "Quienes somos - Rol Medico y Paciente ",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
@@ -1332,7 +1332,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-31T16:37:17Z",
+      "last_push": "2026-04-01T16:17:23Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1410,8 +1410,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "c675d16",
+              "message": "fix(usePharmaceuticalInfo): prioritize liquid measurements in icon mapping PALMX-22",
+              "date": "2026-04-01T16:17:21Z",
+              "author": "CristiGB",
+              "pr_number": "392",
+              "tickets": [
+                {
+                  "id": "PALMX-22",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-22"
+                }
+              ]
+            },
             {
               "sha": "63e7083",
               "message": "feat: ALMX-254 clipboard message",
@@ -2093,8 +2106,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2025-12-31T21%3A18%3A43.686Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2025-12-31T21%3A18%3A43.686Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T17%3A03%3A44.803Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T17%3A03%3A44.803Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2882,7 +2895,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-31T19:22:17Z",
+      "last_push": "2026-04-01T17:03:23Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2946,8 +2959,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 52,
+          "count": 53,
           "recent_commits": [
+            {
+              "sha": "ba4c98d",
+              "message": "refactor(execution-manager): eliminar retries y corregir duplicidad en procesamiento de eventos ACE-54",
+              "date": "2026-04-01T17:03:20Z",
+              "author": "jsandoval-dev",
+              "pr_number": "302",
+              "tickets": [
+                {
+                  "id": "ACE-54",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
+                }
+              ]
+            },
             {
               "sha": "23e4162",
               "message": "feat(erp): new parameter for hormones PALCO-62",
@@ -3253,19 +3279,6 @@
               "date": "2026-03-13T13:44:56Z",
               "author": "meraso-nutra",
               "pr_number": "268",
-              "tickets": [
-                {
-                  "id": "ACE-72",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-72"
-                }
-              ]
-            },
-            {
-              "sha": "ddca3c7",
-              "message": "refactor(erp): added key in map ACE-72",
-              "date": "2026-03-12T23:23:04Z",
-              "author": "meraso-nutra",
-              "pr_number": "265",
               "tickets": [
                 {
                   "id": "ACE-72",
