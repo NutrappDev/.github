@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T21:07:55.337Z",
+  "generated_at": "2026-04-06T22:48:16.655Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -51,7 +51,7 @@
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2690": {
@@ -341,7 +341,7 @@
     },
     "ALMX-243": {
       "summary": "BG | Mis pedidos / Vista móvil | No se muestra imagen de referencia del producto en versión móvil",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-228": {
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-06T21:07:35Z",
+      "last_push": "2026-04-06T22:47:54Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -592,7 +592,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "c26fb9f",
@@ -716,24 +716,11 @@
               "author": "fabianromerolu",
               "pr_number": "270",
               "tickets": []
-            },
-            {
-              "sha": "e77edcb",
-              "message": "feat: add moment day ALCO-1298",
-              "date": "2026-01-06T21:45:35Z",
-              "author": "CristiGB",
-              "pr_number": "268",
-              "tickets": [
-                {
-                  "id": "ALCO-1298",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1298"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 27,
+          "count": 25,
           "recent_commits": [
             {
               "sha": "bce6bf3",
@@ -2119,8 +2106,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T21%3A07%3A54.201Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T21%3A07%3A54.202Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T22%3A48%3A15.621Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T22%3A48%3A15.621Z → 409 Conflict",
         "ci": null
       }
     },
