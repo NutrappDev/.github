@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T13:17:28.930Z",
+  "generated_at": "2026-04-06T13:28:16.877Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -2114,8 +2114,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T13%3A17%3A27.659Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T13%3A17%3A27.659Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T13%3A28%3A15.900Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T13%3A28%3A15.901Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2887,7 +2887,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T23:02:44Z",
+      "last_push": "2026-04-06T13:27:55Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2951,8 +2951,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 52,
+          "count": 53,
           "recent_commits": [
+            {
+              "sha": "ac2aa6c",
+              "message": "fix(prisma-outbox): ajustar MAX_PROCESSING_TIME a 5 minutos para evitar fallos prematuros ACE-54",
+              "date": "2026-04-06T13:27:53Z",
+              "author": "jsandoval-dev",
+              "pr_number": "304",
+              "tickets": [
+                {
+                  "id": "ACE-54",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
+                }
+              ]
+            },
             {
               "sha": "7f761c6",
               "message": "feat(erp): query epicor order PALCO-62",
@@ -3258,19 +3271,6 @@
               "date": "2026-03-13T19:25:23Z",
               "author": "jsandoval-dev",
               "pr_number": "269",
-              "tickets": [
-                {
-                  "id": "ACE-54",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
-                }
-              ]
-            },
-            {
-              "sha": "1587104",
-              "message": "feat(execution-manager): agregar estado processing para ejecuciones de eventos ACE-54",
-              "date": "2026-03-13T14:04:37Z",
-              "author": "jsandoval-dev",
-              "pr_number": "267",
               "tickets": [
                 {
                   "id": "ACE-54",
