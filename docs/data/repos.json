@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-01T21:08:14.240Z",
+  "generated_at": "2026-04-06T05:40:56.611Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -46,7 +46,7 @@
     },
     "QA-428": {
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
-      "status": "En proceso",
+      "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
     "PMO-2725": {
@@ -107,7 +107,7 @@
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
       "status": "Revisión QA",
-      "assignee": "Angie Paola Pedrozo Redondo"
+      "assignee": "Kevin Aguilera"
     },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -191,12 +191,12 @@
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-646": {
       "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
     },
     "NCOL-645": {
@@ -211,7 +211,7 @@
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "NCOL-637": {
@@ -296,12 +296,12 @@
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "NCOL-5": {
       "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "DGWNC-1": {
@@ -331,7 +331,7 @@
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Felipe Berrio"
     },
     "ALMX-246": {
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T21:07:53Z",
+      "last_push": "2026-04-01T21:08:14Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -2101,8 +2101,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-01T21%3A08%3A13.228Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-01T21%3A08%3A13.228Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T05%3A40%3A55.361Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T05%3A40%3A55.361Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2590,7 +2590,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "5258702",
@@ -2638,14 +2638,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
-            },
-            {
-              "sha": "57a0faa",
-              "message": "feat(auth): implement password reset with secure token validation",
-              "date": "2026-01-02T15:18:21Z",
-              "author": "Jhelcy-Sandoval",
-              "pr_number": "4",
-              "tickets": []
             }
           ]
         },
@@ -2679,7 +2671,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 5,
           "recent_commits": [
             {
               "sha": "0e0ff7e",
@@ -2727,14 +2719,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
-            },
-            {
-              "sha": "9f18948",
-              "message": "Feat/assistant management",
-              "date": "2026-01-02T15:19:30Z",
-              "author": "Jhelcy-Sandoval",
-              "pr_number": "24",
-              "tickets": []
             },
             {
               "sha": "8aef4eb",
@@ -2890,7 +2874,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T20:06:43Z",
+      "last_push": "2026-04-01T23:02:44Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2954,7 +2938,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 53,
+          "count": 52,
           "recent_commits": [
             {
               "sha": "7f761c6",
