@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T13:28:16.877Z",
+  "generated_at": "2026-04-06T21:07:55.337Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -56,7 +56,7 @@
     },
     "PMO-2690": {
       "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
-      "status": "Aprobado por QA",
+      "status": "Pruebas de Regresión",
       "assignee": "Steven Leon"
     },
     "PMO-2676": {
@@ -201,7 +201,7 @@
     },
     "NCOL-645": {
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "NCOL-641": {
@@ -281,7 +281,7 @@
     },
     "NCOL-372": {
       "summary": "BG | Tablet | Calidad | Espacio sin contenido en certificados",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NCOL-363": {
@@ -291,7 +291,7 @@
     },
     "NCOL-362": {
       "summary": "BG | Mobile | Logo pequeño en el header",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NCOL-8": {
@@ -339,6 +339,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "ALMX-243": {
+      "summary": "BG | Mis pedidos / Vista móvil | No se muestra imagen de referencia del producto en versión móvil",
+      "status": "En proceso",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "ALMX-228": {
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
@@ -346,7 +351,7 @@
     },
     "ALCO-1451": {
       "summary": "implementacion de descuento promocional",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1450": {
@@ -498,11 +503,6 @@
       "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-32": {
-      "summary": "BG | Abrir chat genera error del token",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T21:08:14Z",
+      "last_push": "2026-04-06T21:07:35Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-01",
@@ -594,6 +594,19 @@
         "to_qa": {
           "count": 12,
           "recent_commits": [
+            {
+              "sha": "c26fb9f",
+              "message": "fix(blog): seccion de blog corregida y mis pedidos ALMX-243",
+              "date": "2026-04-06T21:07:33Z",
+              "author": "fabianromerolu",
+              "pr_number": "399",
+              "tickets": [
+                {
+                  "id": "ALMX-243",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-243"
+                }
+              ]
+            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -716,14 +729,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1298"
                 }
               ]
-            },
-            {
-              "sha": "10c824e",
-              "message": "text baner for cart",
-              "date": "2026-01-06T20:37:04Z",
-              "author": "fabianromerolu",
-              "pr_number": "266",
-              "tickets": []
             }
           ]
         },
@@ -2114,8 +2119,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T13%3A28%3A15.900Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T13%3A28%3A15.901Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T21%3A07%3A54.201Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T21%3A07%3A54.202Z → 409 Conflict",
         "ci": null
       }
     },
