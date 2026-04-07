@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T22:48:16.655Z",
+  "generated_at": "2026-04-07T20:07:38.053Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -43,6 +43,11 @@
       "summary": "Evitar tantos llamados por patientid desde prescripciones con un endpoint que reciba la lista en sso",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "QA-772": {
+      "summary": "Scripts - Impacto Sostenible",
+      "status": "Actividad completada",
+      "assignee": "Carlos Ali Parra"
     },
     "QA-428": {
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
@@ -479,11 +484,6 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
-    "ALCO-392": {
-      "summary": "EP-03 -Aumentar las opciones de diagnóstico",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
     "ALCO-270": {
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
@@ -514,16 +514,30 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-06T22:47:54Z",
+      "last_push": "2026-04-07T19:24:12Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-04-01",
-        "sha": "651fda7eed68f31163af0c1c6dfa326c3361b88f",
-        "date": "2026-04-01T19:42:40Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-01",
-        "body": "Release prod-2026-04-01\n"
+        "version": "prod-2026-04-07",
+        "sha": "4d14624346b056df356d6adeeb89aad55f4dceaf",
+        "date": "2026-04-07T19:24:12Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-07",
+        "body": "Release prod-2026-04-07\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-04-06",
+          "sha": "54e5405c4d79b8bd3255c0c5535b337b04b6eb0c",
+          "date": "2026-04-06T22:48:11Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-06",
+          "body": "Release prod-2026-04-06\n"
+        },
+        {
+          "version": "prod-2026-04-01",
+          "sha": "651fda7eed68f31163af0c1c6dfa326c3361b88f",
+          "date": "2026-04-01T19:42:40Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-01",
+          "body": "Release prod-2026-04-01\n"
+        },
         {
           "version": "prod-2026-04-01-2",
           "sha": "91f9d80573a96243a98e43145503cdf376714bd9",
@@ -537,20 +551,6 @@
           "date": "2026-03-26T21:47:18Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-26",
           "body": "Release prod-2026-03-26\n"
-        },
-        {
-          "version": "prod-2026-03-24",
-          "sha": "ac65e48d16641d6d70f8f80581d6494c16eb46d5",
-          "date": "2026-03-24T16:36:25Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-24",
-          "body": "Release prod-2026-03-24\n"
-        },
-        {
-          "version": "prod-2026-03-24-2",
-          "sha": "307bd7f13bb1c514913e45c3e0c6cf6cbc163be3",
-          "date": "2026-03-24T22:03:55Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-03-24-2",
-          "body": "Release prod-2026-03-24-2\n"
         }
       ],
       "qa": {
@@ -592,7 +592,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "c26fb9f",
@@ -695,32 +695,11 @@
               "author": "fabianromerolu",
               "pr_number": "280",
               "tickets": []
-            },
-            {
-              "sha": "c730f8f",
-              "message": "Feat/ALCO-1299/new diagnosis",
-              "date": "2026-01-07T19:09:31Z",
-              "author": "fabianromerolu",
-              "pr_number": "272",
-              "tickets": [
-                {
-                  "id": "ALCO-1299",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1299"
-                }
-              ]
-            },
-            {
-              "sha": "908b0c9",
-              "message": "se ajusto la cantidad en la compra para que concuerde con el pdf",
-              "date": "2026-01-07T14:02:30Z",
-              "author": "fabianromerolu",
-              "pr_number": "270",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 25,
+          "count": 23,
           "recent_commits": [
             {
               "sha": "bce6bf3",
@@ -955,22 +934,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1308"
                 }
               ]
-            },
-            {
-              "sha": "c730f8f",
-              "message": "Develop",
-              "date": "2026-01-07T19:48:00Z",
-              "author": "fabianromerolu",
-              "pr_number": "273",
-              "tickets": []
-            },
-            {
-              "sha": "6c9ba12",
-              "message": "Develop",
-              "date": "2026-01-07T14:50:20Z",
-              "author": "fabianromerolu",
-              "pr_number": "271",
-              "tickets": []
             }
           ]
         }
@@ -1028,7 +991,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-06T13:17:06Z",
+      "last_push": "2026-04-07T20:07:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -1106,8 +1069,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 16,
           "recent_commits": [
+            {
+              "sha": "6bb0f9f",
+              "message": "test: validacion impacto QA-772",
+              "date": "2026-04-07T20:07:15Z",
+              "author": "CarlosParraQA",
+              "pr_number": "75",
+              "tickets": [
+                {
+                  "id": "QA-772",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-772"
+                }
+              ]
+            },
             {
               "sha": "fe82622",
               "message": "test: lighthouse y linea etica QA-428",
@@ -1652,7 +1628,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-26T21:50:20Z",
+      "last_push": "2026-04-07T19:33:27Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1991,7 +1967,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-03-25T16:49:10Z",
+      "last_push": "2026-04-07T15:49:48Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-20",
@@ -2106,8 +2082,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-06T22%3A48%3A15.621Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-06T22%3A48%3A15.621Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-07T20%3A07%3A37.147Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-07T20%3A07%3A37.148Z → 409 Conflict",
         "ci": null
       }
     },
