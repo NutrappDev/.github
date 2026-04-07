@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-07T19:24:05.857Z",
+  "generated_at": "2026-04-07T20:57:14.736Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 44,
-      "prs_90d": 101,
-      "last_activity": "2026-04-07T19:23:49Z",
+      "prs_30d": 45,
+      "prs_90d": 102,
+      "last_activity": "2026-04-07T20:56:58Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -23,7 +23,7 @@
         },
         {
           "repo": "sso-micuenta",
-          "prs": 5
+          "prs": 6
         },
         {
           "repo": "nutrabiotics-certificates-backend",
@@ -33,7 +33,7 @@
       "by_branch": {
         "develop": 53,
         "qa": 30,
-        "main": 18
+        "main": 19
       },
       "weekly": [
         {
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W15",
-          "prs": 2
+          "prs": 3
         }
       ]
     },
@@ -338,12 +338,12 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 13,
-      "prs_90d": 41,
+      "prs_90d": 40,
       "last_activity": "2026-04-06T21:07:33Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 16
+          "prs": 15
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -360,7 +360,7 @@
       ],
       "by_branch": {
         "develop": 35,
-        "qa": 5,
+        "qa": 4,
         "main": 1
       },
       "weekly": [
@@ -821,17 +821,17 @@
     {
       "login": "CarlosParraQA",
       "avatar_url": "https://avatars.githubusercontent.com/u/232940545?v=4",
-      "prs_30d": 2,
-      "prs_90d": 2,
-      "last_activity": "2026-04-06T13:17:04Z",
+      "prs_30d": 3,
+      "prs_90d": 3,
+      "last_activity": "2026-04-07T20:07:15Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
-          "prs": 2
+          "prs": 3
         }
       ],
       "by_branch": {
-        "develop": 2,
+        "develop": 3,
         "qa": 0,
         "main": 0
       },
@@ -886,7 +886,7 @@
         },
         {
           "week": "2026-W15",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
