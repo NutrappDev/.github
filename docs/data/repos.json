@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-07T21:20:32.643Z",
+  "generated_at": "2026-04-07T21:30:02.487Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -2082,7 +2082,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-07T15:49:48Z",
+      "last_push": "2026-04-07T21:29:39Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-20",
@@ -2122,10 +2122,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/23553056422",
-        "updated_at": "2026-03-25T16:52:39Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/24105362699",
+        "updated_at": "2026-04-07T21:29:45Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
       },
       "_errors": {
@@ -2197,8 +2197,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-07T21%3A20%3A31.575Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-07T21%3A20%3A31.576Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-07T21%3A30%3A01.081Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-07T21%3A30%3A01.081Z → 409 Conflict",
         "ci": null
       }
     },
