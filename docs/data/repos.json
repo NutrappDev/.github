@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T20:35:14.813Z",
+  "generated_at": "2026-04-08T21:09:56.576Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -113,6 +113,11 @@
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "PALMX-18": {
+      "summary": "Todos los perfiles - Banner inferiror suplementos: ajustar ya que menciona textos no permitidos",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -498,11 +503,6 @@
       "summary": "Quienes somos - Rol Medico y Paciente ",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -919,7 +919,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T20:26:13Z",
+      "last_push": "2026-04-08T21:09:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -997,8 +997,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "7cef4d0",
+              "message": "feat(CategoryInfo): banner suplementos MX - PALMX-18",
+              "date": "2026-04-08T21:09:31Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "403",
+              "tickets": [
+                {
+                  "id": "PALMX-18",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-18"
+                }
+              ]
+            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -2171,8 +2184,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T20%3A35%3A13.753Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T20%3A35%3A13.753Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A09%3A55.198Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A09%3A55.199Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2840,7 +2853,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T20:34:53Z",
+      "last_push": "2026-04-08T21:05:54Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
