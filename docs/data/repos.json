@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T20:26:10.983Z",
+  "generated_at": "2026-04-08T20:30:24.843Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -193,6 +193,11 @@
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "NCR-95": {
+      "summary": "Remover variables de entorno obsoletas de serverless.yml en ms-orders y ms-prescriptions",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "NCOL-655": {
       "summary": "Implementar configuración de Prettier, EditorConfig y Husky para estandarización de código en el repositorio de Nutrabiotics Colombia",
@@ -496,11 +501,6 @@
     },
     "AIA-34": {
       "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-32": {
-      "summary": "BG | Abrir chat genera error del token",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -919,7 +919,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T20:25:49Z",
+      "last_push": "2026-04-08T20:26:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -959,13 +959,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-01",
-        "sha": "5778c5df66edc2309b5d1552630a303d8ec359c7",
-        "date": "2026-04-01T19:51:06Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-01",
-        "body": "Release qa-2026-04-01\n"
+        "version": "qa-2026-04-08",
+        "sha": "fbd3b4f6920cca71e6f547083a0ea675255ca38b",
+        "date": "2026-04-08T20:26:12Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-08",
+        "body": "Release qa-2026-04-08\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-01",
+          "sha": "5778c5df66edc2309b5d1552630a303d8ec359c7",
+          "date": "2026-04-01T19:51:06Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-01",
+          "body": "Release qa-2026-04-01\n"
+        },
         {
           "version": "qa-2026-03-30",
           "sha": "f46c7e1946f50f95dac72e7953e91adc15e334a5",
@@ -986,13 +993,6 @@
           "date": "2026-03-26T14:16:06Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-26",
           "body": "Release qa-2026-03-26\n"
-        },
-        {
-          "version": "qa-2026-03-20",
-          "sha": "affd71ba2ef5bd8f2cba591695b7404345fb487e",
-          "date": "2026-03-20T14:17:13Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-20",
-          "body": "Release qa-2026-03-20\n"
         }
       ],
       "pending": {
@@ -2171,8 +2171,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T20%3A26%3A09.743Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T20%3A26%3A09.743Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T20%3A30%3A23.732Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T20%3A30%3A23.732Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2848,7 +2848,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T15:39:10Z",
+      "last_push": "2026-04-08T20:30:01Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2912,8 +2912,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 52,
+          "count": 53,
           "recent_commits": [
+            {
+              "sha": "8901135",
+              "message": "fix(serverless): remover variables Twilio obsoletas de ms-orders y ms-prescriptions NCR-95",
+              "date": "2026-04-08T20:29:59Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "305",
+              "tickets": [
+                {
+                  "id": "NCR-95",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-95"
+                }
+              ]
+            },
             {
               "sha": "ac2aa6c",
               "message": "fix(prisma-outbox): ajustar MAX_PROCESSING_TIME a 5 minutos para evitar fallos prematuros ACE-54",
@@ -3223,19 +3236,6 @@
                 {
                   "id": "ACE-8",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-8"
-                }
-              ]
-            },
-            {
-              "sha": "6bacfe3",
-              "message": "fix(erp): corregir envio de data de transacciones ACE-54",
-              "date": "2026-03-13T19:25:23Z",
-              "author": "jsandoval-dev",
-              "pr_number": "269",
-              "tickets": [
-                {
-                  "id": "ACE-54",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
                 }
               ]
             }
