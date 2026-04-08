@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T21:26:45.359Z",
+  "generated_at": "2026-04-08T21:35:39.018Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -344,6 +344,11 @@
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
     },
+    "ALMX-289": {
+      "summary": "Abril 2026 - Bitácora de despliegues a PROD - Alivia México",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
       "status": "Despliegue a DEV",
@@ -498,11 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -817,7 +817,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:23:46Z",
+      "last_push": "2026-04-08T21:35:16Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -845,8 +845,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "0d43470",
+              "message": "chore: Add missing newlines at the end of multiple files ALMX-289",
+              "date": "2026-04-08T21:35:14Z",
+              "author": "CristiGB",
+              "pr_number": "77",
+              "tickets": [
+                {
+                  "id": "ALMX-289",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-289"
+                }
+              ]
+            },
             {
               "sha": "d1bccc6",
               "message": "fix: Backup function for user role NE-197 ",
@@ -2197,8 +2210,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A26%3A44.008Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A26%3A44.008Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A35%3A37.836Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A35%3A37.836Z → 409 Conflict",
         "ci": null
       }
     },
