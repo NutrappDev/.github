@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T21:35:39.018Z",
+  "generated_at": "2026-04-08T21:56:27.064Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -116,12 +116,12 @@
     },
     "PALMX-23": {
       "summary": "Todos los perfiles - Banner inferior Cosméticos",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "PALMX-18": {
       "summary": "Todos los perfiles - Banner inferiror suplementos: ajustar ya que menciona textos no permitidos",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "PALMX-15": {
@@ -817,7 +817,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:35:16Z",
+      "last_push": "2026-04-08T21:56:06Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -845,8 +845,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "f1b2f9f",
+              "message": "chore: Remove unused TypeScript configuration files and update yarn.lock for dependency versions ALMX-289",
+              "date": "2026-04-08T21:56:04Z",
+              "author": "CristiGB",
+              "pr_number": "78",
+              "tickets": [
+                {
+                  "id": "ALMX-289",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-289"
+                }
+              ]
+            },
             {
               "sha": "0d43470",
               "message": "chore: Add missing newlines at the end of multiple files ALMX-289",
@@ -2210,8 +2223,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A35%3A37.836Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A35%3A37.836Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A56%3A26.182Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A56%3A26.182Z → 409 Conflict",
         "ci": null
       }
     },
