@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T20:30:24.843Z",
+  "generated_at": "2026-04-08T20:35:14.813Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -193,6 +193,11 @@
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "NCR-96": {
+      "summary": "Implementar fallback con Nodemailer y desactivar temporalmente el canal de WhatsApp en ms-notifications",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "NCR-95": {
       "summary": "Remover variables de entorno obsoletas de serverless.yml en ms-orders y ms-prescriptions",
@@ -496,11 +501,6 @@
     },
     "AIA-43": {
       "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-34": {
-      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -2171,8 +2171,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T20%3A30%3A23.732Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T20%3A30%3A23.732Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T20%3A35%3A13.753Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T20%3A35%3A13.753Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2645,7 +2645,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "0e0ff7e",
@@ -2693,14 +2693,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
-            },
-            {
-              "sha": "8aef4eb",
-              "message": "Refactor/aia 49 socket token connection",
-              "date": "2026-01-08T20:32:42Z",
-              "author": "Jhelcy-Sandoval",
-              "pr_number": "25",
-              "tickets": []
             }
           ]
         },
@@ -2848,7 +2840,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T20:30:01Z",
+      "last_push": "2026-04-08T20:34:53Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2912,8 +2904,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 53,
+          "count": 54,
           "recent_commits": [
+            {
+              "sha": "c766627",
+              "message": "feat(notifications): fallback SMTP con S3+Mustache y desactivar WhatsApp NCR-96",
+              "date": "2026-04-08T20:34:51Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "306",
+              "tickets": [
+                {
+                  "id": "NCR-96",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-96"
+                }
+              ]
+            },
             {
               "sha": "8901135",
               "message": "fix(serverless): remover variables Twilio obsoletas de ms-orders y ms-prescriptions NCR-95",
@@ -3223,19 +3228,6 @@
                 {
                   "id": "ACE-56",
                   "url": "https://nutrabiotics.atlassian.net/browse/ACE-56"
-                }
-              ]
-            },
-            {
-              "sha": "d369507",
-              "message": "refactor(orders): wip eslint ms orders ACE-8",
-              "date": "2026-03-16T16:47:57Z",
-              "author": "meraso-nutra",
-              "pr_number": "271",
-              "tickets": [
-                {
-                  "id": "ACE-8",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-8"
                 }
               ]
             }
