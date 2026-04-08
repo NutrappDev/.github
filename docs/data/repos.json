@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T21:09:56.576Z",
+  "generated_at": "2026-04-08T21:26:45.359Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -113,6 +113,11 @@
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "PALMX-23": {
+      "summary": "Todos los perfiles - Banner inferior Cosméticos",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "PALMX-18": {
       "summary": "Todos los perfiles - Banner inferiror suplementos: ajustar ya que menciona textos no permitidos",
@@ -498,11 +503,6 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "ALCO-142": {
-      "summary": "Quienes somos - Rol Medico y Paciente ",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
@@ -817,7 +817,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-07T20:57:09Z",
+      "last_push": "2026-04-08T21:23:46Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -919,7 +919,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:09:33Z",
+      "last_push": "2026-04-08T21:26:24Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -997,8 +997,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "3a26fa9",
+              "message": "feat(CategoryInfo): banner aceites MX - PALMX-23",
+              "date": "2026-04-08T21:26:22Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "404",
+              "tickets": [
+                {
+                  "id": "PALMX-23",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-23"
+                }
+              ]
+            },
             {
               "sha": "7cef4d0",
               "message": "feat(CategoryInfo): banner suplementos MX - PALMX-18",
@@ -2184,8 +2197,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A09%3A55.198Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A09%3A55.199Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A26%3A44.008Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A26%3A44.008Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2853,7 +2866,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:05:54Z",
+      "last_push": "2026-04-08T21:09:58Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
