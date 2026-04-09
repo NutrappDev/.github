@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T19:49:08.286Z",
+  "generated_at": "2026-04-09T20:44:50.070Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -123,26 +123,6 @@
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
-    },
-    "PALCO-66": {
-      "summary": "Portal - Funcionalidad de reactivación manual de transacciones",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "PALCO-64": {
-      "summary": "Portal - Implementación de métricas y visualización gráfica de transacciones",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "PALCO-63": {
-      "summary": "Portal - Desarrollo de Dashboard de monitoreo de transacciones ERP",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "PALCO-51": {
-      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
@@ -1819,7 +1799,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-01T20:07:18Z",
+      "last_push": "2026-04-09T20:44:39Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1838,13 +1818,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
-        "date": "2026-03-17T16:16:50Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
+        "version": "qa-2026-04-09",
+        "sha": "57dc2b6e731ed01d746d220327bb5465599a700d",
+        "date": "2026-04-09T20:44:38Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-09",
+        "body": "Release qa-2026-04-09\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-17",
+          "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
+          "date": "2026-03-17T16:16:50Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
+          "body": "Release qa-2026-03-17\n"
+        },
         {
           "version": "qa-2026-03-09",
           "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
@@ -1855,91 +1842,20 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
-          "recent_commits": [
-            {
-              "sha": "24a3b9c",
-              "message": "feat(erp): agregar tabla de transacciones fallidas en dashboard ACE-54",
-              "date": "2026-04-01T20:07:16Z",
-              "author": "jsandoval-dev",
-              "pr_number": "174",
-              "tickets": [
-                {
-                  "id": "ACE-54",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-54"
-                }
-              ]
-            },
-            {
-              "sha": "686772a",
-              "message": "refactor(erp): refactorizar dashboard de monitoreo de transacciones ERP ACE-66",
-              "date": "2026-03-31T13:50:23Z",
-              "author": "jsandoval-dev",
-              "pr_number": "172",
-              "tickets": [
-                {
-                  "id": "ACE-66",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
-                }
-              ]
-            },
-            {
-              "sha": "a65baf7",
-              "message": "fix(erp): corregir dashboard de monitoreo de transacciones ERP ACE-66",
-              "date": "2026-03-30T15:00:43Z",
-              "author": "jsandoval-dev",
-              "pr_number": "171",
-              "tickets": [
-                {
-                  "id": "ACE-66",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
-                }
-              ]
-            },
-            {
-              "sha": "ca268c9",
-              "message": "feat(erp): agregar reactivación manual de transacciones y vista de logs ACE-69",
-              "date": "2026-03-24T21:22:33Z",
-              "author": "jsandoval-dev",
-              "pr_number": "169",
-              "tickets": [
-                {
-                  "id": "ACE-69",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-69"
-                }
-              ]
-            },
-            {
-              "sha": "0ce8a3a",
-              "message": "feat(erp): conectar dashboard con endpoints reales de eventos ACE-67",
-              "date": "2026-03-16T21:46:10Z",
-              "author": "jsandoval-dev",
-              "pr_number": "165",
-              "tickets": [
-                {
-                  "id": "ACE-67",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-67"
-                }
-              ]
-            },
-            {
-              "sha": "882809a",
-              "message": "feat(erp): agregar dashboard de monitoreo con métricas y cola de transacciones ACE-66",
-              "date": "2026-03-11T22:41:33Z",
-              "author": "jsandoval-dev",
-              "pr_number": "162",
-              "tickets": [
-                {
-                  "id": "ACE-66",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ACE-66"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "57dc2b6",
+              "message": "release: qa 2026 04 09",
+              "date": "2026-04-09T20:44:27Z",
+              "author": "CristiGB",
+              "pr_number": "175",
+              "tickets": []
+            },
             {
               "sha": "5a835dc",
               "message": "release: qa 2026 03 17 SUP-272",
@@ -2189,8 +2105,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T19%3A49%3A07.221Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T19%3A49%3A07.221Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T20%3A44%3A49.133Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T20%3A44%3A49.134Z → 409 Conflict",
         "ci": null
       }
     },
