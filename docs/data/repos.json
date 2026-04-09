@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T21:56:27.064Z",
+  "generated_at": "2026-04-09T14:56:58.315Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -96,7 +96,7 @@
     },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2537": {
@@ -111,7 +111,7 @@
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "Detenido",
+      "status": "Esperando aprobación",
       "assignee": "Kevin Aguilera"
     },
     "PALMX-23": {
@@ -206,12 +206,12 @@
     },
     "NCR-96": {
       "summary": "Implementar fallback con Nodemailer y desactivar temporalmente el canal de WhatsApp en ms-notifications",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "NCR-95": {
       "summary": "Remover variables de entorno obsoletas de serverless.yml en ms-orders y ms-prescriptions",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "NCOL-655": {
@@ -343,11 +343,6 @@
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
-    },
-    "ALMX-289": {
-      "summary": "Abril 2026 - Bitácora de despliegues a PROD - Alivia México",
-      "status": "En proceso",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
@@ -503,9 +498,139 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
+    {
+      "name": "sso-micuenta",
+      "full_name": "NutrappDev/sso-micuenta",
+      "description": null,
+      "url": "https://github.com/NutrappDev/sso-micuenta",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-09T14:56:33Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-04-09",
+        "sha": "ff34d3f2129aaf49e4987d9e9d6616d5ed20b5e4",
+        "date": "2026-04-09T14:56:32Z",
+        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/prod-2026-04-09",
+        "body": "Release prod-2026-04-09\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-07",
+          "sha": "2e2f0dda5edee21fc7a1f57f959b1170096c7b08",
+          "date": "2026-04-07T20:57:08Z",
+          "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/prod-2026-04-07",
+          "body": "Release prod-2026-04-07\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-04-08",
+        "sha": "4c8b34060d718cc0b2350c6a9fdd1efe9670ad0f",
+        "date": "2026-04-08T22:12:14Z",
+        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-04-08",
+        "body": "Release qa-2026-04-08\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-19",
+          "sha": "3c750380de222c6a893d7f9dc99bb5aded19cadb",
+          "date": "2026-03-19T13:38:52Z",
+          "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-19",
+          "body": "Release qa-2026-03-19\n"
+        },
+        {
+          "version": "qa-2026-03-09",
+          "sha": "efffb0d5fbb380808c9d2fafde299b3a3d9c0af3",
+          "date": "2026-03-09T22:11:23Z",
+          "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-09",
+          "body": "Release qa-2026-03-09\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "d1bccc6",
+              "message": "fix: Backup function for user role NE-197 ",
+              "date": "2026-02-18T18:32:44Z",
+              "author": "k-aguilera",
+              "pr_number": "65",
+              "tickets": [
+                {
+                  "id": "NE-197",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "4c8b340",
+              "message": "release: qa 2026 04 08",
+              "date": "2026-04-08T22:12:03Z",
+              "author": "CristiGB",
+              "pr_number": "80",
+              "tickets": []
+            },
+            {
+              "sha": "3c75038",
+              "message": "release: qa 2026 03 18 ALMX-246",
+              "date": "2026-03-19T13:38:41Z",
+              "author": "k-aguilera",
+              "pr_number": "74",
+              "tickets": [
+                {
+                  "id": "ALMX-246",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-246"
+                }
+              ]
+            },
+            {
+              "sha": "efffb0d",
+              "message": "release: qa 2026 03 09 NE-151",
+              "date": "2026-03-09T22:11:13Z",
+              "author": "CristiGB",
+              "pr_number": "69",
+              "tickets": [
+                {
+                  "id": "NE-151",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
+                }
+              ]
+            },
+            {
+              "sha": "e8a8fc6",
+              "message": "Merge QA",
+              "date": "2026-02-16T20:30:20Z",
+              "author": "k-aguilera",
+              "pr_number": "61",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -798,134 +923,6 @@
         "to_production": {
           "count": 0,
           "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "sso-micuenta",
-      "full_name": "NutrappDev/sso-micuenta",
-      "description": null,
-      "url": "https://github.com/NutrappDev/sso-micuenta",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-08T21:56:06Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-07",
-        "sha": "2e2f0dda5edee21fc7a1f57f959b1170096c7b08",
-        "date": "2026-04-07T20:57:08Z",
-        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/prod-2026-04-07",
-        "body": "Release prod-2026-04-07\n"
-      },
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-03-19",
-        "sha": "3c750380de222c6a893d7f9dc99bb5aded19cadb",
-        "date": "2026-03-19T13:38:52Z",
-        "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-19",
-        "body": "Release qa-2026-03-19\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-03-09",
-          "sha": "efffb0d5fbb380808c9d2fafde299b3a3d9c0af3",
-          "date": "2026-03-09T22:11:23Z",
-          "url": "https://github.com/NutrappDev/sso-micuenta/releases/tag/qa-2026-03-09",
-          "body": "Release qa-2026-03-09\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "f1b2f9f",
-              "message": "chore: Remove unused TypeScript configuration files and update yarn.lock for dependency versions ALMX-289",
-              "date": "2026-04-08T21:56:04Z",
-              "author": "CristiGB",
-              "pr_number": "78",
-              "tickets": [
-                {
-                  "id": "ALMX-289",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-289"
-                }
-              ]
-            },
-            {
-              "sha": "0d43470",
-              "message": "chore: Add missing newlines at the end of multiple files ALMX-289",
-              "date": "2026-04-08T21:35:14Z",
-              "author": "CristiGB",
-              "pr_number": "77",
-              "tickets": [
-                {
-                  "id": "ALMX-289",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-289"
-                }
-              ]
-            },
-            {
-              "sha": "d1bccc6",
-              "message": "fix: Backup function for user role NE-197 ",
-              "date": "2026-02-18T18:32:44Z",
-              "author": "k-aguilera",
-              "pr_number": "65",
-              "tickets": [
-                {
-                  "id": "NE-197",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "3c75038",
-              "message": "release: qa 2026 03 18 ALMX-246",
-              "date": "2026-03-19T13:38:41Z",
-              "author": "k-aguilera",
-              "pr_number": "74",
-              "tickets": [
-                {
-                  "id": "ALMX-246",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-246"
-                }
-              ]
-            },
-            {
-              "sha": "efffb0d",
-              "message": "release: qa 2026 03 09 NE-151",
-              "date": "2026-03-09T22:11:13Z",
-              "author": "CristiGB",
-              "pr_number": "69",
-              "tickets": [
-                {
-                  "id": "NE-151",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
-                }
-              ]
-            },
-            {
-              "sha": "e8a8fc6",
-              "message": "Merge QA",
-              "date": "2026-02-16T20:30:20Z",
-              "author": "k-aguilera",
-              "pr_number": "61",
-              "tickets": []
-            }
-          ]
         }
       },
       "ci": null,
@@ -1386,7 +1383,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-07T20:07:17Z",
+      "last_push": "2026-04-09T14:22:08Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -2223,8 +2220,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-08T21%3A56%3A26.182Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-08T21%3A56%3A26.182Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T14%3A56%3A56.166Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T14%3A56%3A56.167Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2892,7 +2889,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:09:58Z",
+      "last_push": "2026-04-09T14:31:42Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
