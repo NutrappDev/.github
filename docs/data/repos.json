@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T16:03:30.359Z",
+  "generated_at": "2026-04-09T16:20:34.267Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -509,7 +509,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T15:11:08Z",
+      "last_push": "2026-04-09T16:11:41Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -973,7 +973,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T16:01:45Z",
+      "last_push": "2026-04-09T16:20:09Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -2194,8 +2194,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T16%3A03%3A28.563Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T16%3A03%3A28.563Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T16%3A20%3A32.612Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T16%3A20%3A32.612Z → 409 Conflict",
         "ci": null
       }
     },
