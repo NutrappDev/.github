@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T16:01:47.830Z",
+  "generated_at": "2026-04-09T16:03:30.359Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -164,16 +164,6 @@
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
-    "NE-225": {
-      "summary": "BG | Campo Obligatorio | Escribe tu pregunta | No posee hover rojo",
-      "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "NE-224": {
-      "summary": "BG | Catálogo / Productos | Se visualizan precios sin estar logueado",
-      "status": "Despliegue a QA",
-      "assignee": "Kevin Aguilera"
-    },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
       "status": "Actividad completada",
@@ -188,11 +178,6 @@
       "summary": "Épica 5: Implementación “Mi cuenta” (Persona Natural) en Perfil Empresas – SSO B2B]",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "NE-82": {
-      "summary": "Historia de Usuario: Construcción de formulario PQRSF de Nutrabiotics Empresas con integración a HubSpot",
-      "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
     },
     "NE-74": {
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
@@ -501,6 +486,16 @@
     },
     "AIA-43": {
       "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-34": {
+      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-32": {
+      "summary": "BG | Abrir chat genera error del token",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -978,7 +973,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T16:01:24Z",
+      "last_push": "2026-04-09T16:01:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -1018,13 +1013,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-08",
-        "sha": "fbd3b4f6920cca71e6f547083a0ea675255ca38b",
-        "date": "2026-04-08T20:26:12Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-08",
-        "body": "Release qa-2026-04-08\n"
+        "version": "qa-2026-04-09",
+        "sha": "f9beb0c5ea641a0d70ccda436d45e36181fb0f62",
+        "date": "2026-04-09T16:01:44Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-09",
+        "body": "Release qa-2026-04-09\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-08",
+          "sha": "fbd3b4f6920cca71e6f547083a0ea675255ca38b",
+          "date": "2026-04-08T20:26:12Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-08",
+          "body": "Release qa-2026-04-08\n"
+        },
         {
           "version": "qa-2026-04-01",
           "sha": "5778c5df66edc2309b5d1552630a303d8ec359c7",
@@ -1045,13 +1047,6 @@
           "date": "2026-03-27T13:49:58Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-27",
           "body": "Release qa-2026-03-27\n"
-        },
-        {
-          "version": "qa-2026-03-26",
-          "sha": "14b3bc56b685aba4d62e6c6ef41f65cef37e8ca9",
-          "date": "2026-03-26T14:16:06Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-26",
-          "body": "Release qa-2026-03-26\n"
         }
       ],
       "pending": {
@@ -1996,7 +1991,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T15:48:49Z",
+      "last_push": "2026-04-09T16:03:15Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -2007,13 +2002,20 @@
       },
       "production_history": [],
       "qa": {
-        "version": "qa-2026-03-17",
-        "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
-        "date": "2026-03-17T13:15:47Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-17",
-        "body": "Release qa-2026-03-17\n"
+        "version": "qa-2026-04-09",
+        "sha": "80e4b27db7a3c2313444c4855cae1487517e6001",
+        "date": "2026-04-09T16:03:15Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-09",
+        "body": "Release qa-2026-04-09\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-17",
+          "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
+          "date": "2026-03-17T13:15:47Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-17",
+          "body": "Release qa-2026-03-17\n"
+        },
         {
           "version": "qa-2026-03-13",
           "sha": "12c935c6bfab3dcbdb2d3befb65848eb15063989",
@@ -2024,47 +2026,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 1,
           "recent_commits": [
-            {
-              "sha": "2b22bfa",
-              "message": "fix: price unlogged NE-224",
-              "date": "2026-04-09T15:23:59Z",
-              "author": "k-aguilera",
-              "pr_number": "48",
-              "tickets": [
-                {
-                  "id": "NE-224",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-224"
-                }
-              ]
-            },
-            {
-              "sha": "7a8bf37",
-              "message": "feat(pqrs-form): integrar recarga controlada y estilos independientes en iframe HubSpot NE-82",
-              "date": "2026-04-07T21:20:09Z",
-              "author": "jsandoval-dev",
-              "pr_number": "46",
-              "tickets": [
-                {
-                  "id": "NE-82",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-82"
-                }
-              ]
-            },
-            {
-              "sha": "b7b7631",
-              "message": "fix(contact-form): mostrar borde rojo en campo obligatorio NE-225",
-              "date": "2026-03-25T20:03:05Z",
-              "author": "jsandoval-dev",
-              "pr_number": "44",
-              "tickets": [
-                {
-                  "id": "NE-225",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-225"
-                }
-              ]
-            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -2081,8 +2044,16 @@
           ]
         },
         "to_production": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "80e4b27",
+              "message": "release: qa-2026-04-09",
+              "date": "2026-04-09T16:03:02Z",
+              "author": "k-aguilera",
+              "pr_number": "49",
+              "tickets": []
+            },
             {
               "sha": "ebf0153",
               "message": "release: config build NE-221",
@@ -2223,8 +2194,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T16%3A01%3A46.462Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T16%3A01%3A46.462Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T16%3A03%3A28.563Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T16%3A03%3A28.563Z → 409 Conflict",
         "ci": null
       }
     },
