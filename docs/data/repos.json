@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T15:24:35.193Z",
+  "generated_at": "2026-04-09T16:01:47.830Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -114,16 +114,6 @@
       "status": "Esperando aprobación",
       "assignee": "Kevin Aguilera"
     },
-    "PALMX-23": {
-      "summary": "Todos los perfiles - Banner inferior Cosméticos",
-      "status": "Despliegue a QA",
-      "assignee": "Felipe Berrio"
-    },
-    "PALMX-18": {
-      "summary": "Todos los perfiles - Banner inferiror suplementos: ajustar ya que menciona textos no permitidos",
-      "status": "Despliegue a QA",
-      "assignee": "Felipe Berrio"
-    },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Actividad completada",
@@ -181,7 +171,7 @@
     },
     "NE-224": {
       "summary": "BG | Catálogo / Productos | Se visualizan precios sin estar logueado",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Kevin Aguilera"
     },
     "NE-221": {
@@ -211,12 +201,12 @@
     },
     "NCR-96": {
       "summary": "Implementar fallback con Nodemailer y desactivar temporalmente el canal de WhatsApp en ms-notifications",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCR-95": {
       "summary": "Remover variables de entorno obsoletas de serverless.yml en ms-orders y ms-prescriptions",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCOL-655": {
@@ -351,7 +341,7 @@
     },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-277": {
@@ -388,11 +378,6 @@
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
       "status": "Esperando aprobación",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-1441": {
-      "summary": "validar envio por campo creado en productos",
-      "status": "Despliegue a QA",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1440": {
       "summary": "crear campo en productos",
@@ -503,6 +488,21 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
+    "ALCO-142": {
+      "summary": "Quienes somos - Rol Medico y Paciente ",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "AIA-43": {
+      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -978,7 +978,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-08T21:26:24Z",
+      "last_push": "2026-04-09T16:01:24Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -1056,34 +1056,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 9,
           "recent_commits": [
-            {
-              "sha": "3a26fa9",
-              "message": "feat(CategoryInfo): banner aceites MX - PALMX-23",
-              "date": "2026-04-08T21:26:22Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "404",
-              "tickets": [
-                {
-                  "id": "PALMX-23",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-23"
-                }
-              ]
-            },
-            {
-              "sha": "7cef4d0",
-              "message": "feat(CategoryInfo): banner suplementos MX - PALMX-18",
-              "date": "2026-04-08T21:09:31Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "403",
-              "tickets": [
-                {
-                  "id": "PALMX-18",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-18"
-                }
-              ]
-            },
             {
               "sha": "dfd7bb6",
               "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
@@ -1094,19 +1068,6 @@
                 {
                   "id": "ALCO-1436",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1436"
-                }
-              ]
-            },
-            {
-              "sha": "574a314",
-              "message": "feat(cart): add inventariado property to CartItem ALCO-1441",
-              "date": "2026-03-25T20:32:13Z",
-              "author": "CristiGB",
-              "pr_number": "376",
-              "tickets": [
-                {
-                  "id": "ALCO-1441",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1441"
                 }
               ]
             },
@@ -1166,18 +1127,47 @@
               ]
             },
             {
+              "sha": "b40c82b",
+              "message": "Fix/create pdf",
+              "date": "2026-01-15T14:29:03Z",
+              "author": "CristiGB",
+              "pr_number": "281",
+              "tickets": []
+            },
+            {
               "sha": "a1cb695",
               "message": "dosis en plural dependiendo de la cantidad",
               "date": "2026-01-14T14:10:53Z",
               "author": "fabianromerolu",
               "pr_number": "280",
               "tickets": []
+            },
+            {
+              "sha": "907f8e9",
+              "message": "fix: clean cart PMO-2508",
+              "date": "2026-01-13T20:24:13Z",
+              "author": "CristiGB",
+              "pr_number": "278",
+              "tickets": [
+                {
+                  "id": "PMO-2508",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2508"
+                }
+              ]
             }
           ]
         },
         "to_production": {
-          "count": 22,
+          "count": 23,
           "recent_commits": [
+            {
+              "sha": "f9beb0c",
+              "message": "release: qa 2026 04 09",
+              "date": "2026-04-09T16:01:21Z",
+              "author": "CristiGB",
+              "pr_number": "405",
+              "tickets": []
+            },
             {
               "sha": "fbd3b4f",
               "message": "release: 2026 04 08",
@@ -2006,7 +1996,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T15:24:02Z",
+      "last_push": "2026-04-09T15:48:49Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -2233,8 +2223,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T15%3A24%3A32.960Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T15%3A24%3A32.961Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T16%3A01%3A46.462Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T16%3A01%3A46.462Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2902,7 +2892,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T14:31:42Z",
+      "last_push": "2026-04-09T15:56:45Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
