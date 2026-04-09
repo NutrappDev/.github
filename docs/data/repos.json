@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T14:56:58.315Z",
+  "generated_at": "2026-04-09T15:24:35.193Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -179,6 +179,11 @@
       "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
+    "NE-224": {
+      "summary": "BG | Catálogo / Productos | Se visualizan precios sin estar logueado",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
+    },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
       "status": "Actividad completada",
@@ -346,7 +351,7 @@
     },
     "ALMX-281": {
       "summary": "BG | Confirmación de compra | No se envía correo de confirmación en QA ni DEV",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALMX-277": {
@@ -498,14 +503,45 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-09T15:11:08Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "sso-micuenta",
       "full_name": "NutrappDev/sso-micuenta",
@@ -1383,7 +1419,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T14:22:08Z",
+      "last_push": "2026-04-09T15:10:32Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -1970,7 +2006,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-07T21:20:10Z",
+      "last_push": "2026-04-09T15:24:02Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -1998,8 +2034,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "2b22bfa",
+              "message": "fix: price unlogged NE-224",
+              "date": "2026-04-09T15:23:59Z",
+              "author": "k-aguilera",
+              "pr_number": "48",
+              "tickets": [
+                {
+                  "id": "NE-224",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-224"
+                }
+              ]
+            },
             {
               "sha": "7a8bf37",
               "message": "feat(pqrs-form): integrar recarga controlada y estilos independientes en iframe HubSpot NE-82",
@@ -2160,42 +2209,6 @@
       }
     },
     {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-20T13:50:14Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-api-erp",
       "full_name": "NutrappDev/tronco-api-erp",
       "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
@@ -2220,8 +2233,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T14%3A56%3A56.166Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T14%3A56%3A56.167Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T15%3A24%3A32.960Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T15%3A24%3A32.961Z → 409 Conflict",
         "ci": null
       }
     },
