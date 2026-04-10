@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-04-10T13:43:59.282Z",
+  "generated_at": "2026-04-10T15:14:09.477Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
   "jira_tickets": {
+    "SUP-281": {
+      "summary": "Implementar endpoint para generación de permisos de carga de imágenes en eventos (MS-events)",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
+    },
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
       "status": "Actividad completada",
@@ -101,7 +106,7 @@
     },
     "PMO-2537": {
       "summary": "SEO estandar para Academia de medicina funcional",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2508": {
@@ -121,7 +126,7 @@
     },
     "PALCO-71": {
       "summary": "Actualización de estado en la transaccion y adición de registros en transactionLogs, en el microservicio de Pagos",
-      "status": "Actividad completada",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NE-221": {
@@ -2131,8 +2136,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T13%3A43%3A58.204Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T13%3A43%3A58.204Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T15%3A14%3A08.369Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T15%3A14%3A08.370Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2800,7 +2805,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T19:48:56Z",
+      "last_push": "2026-04-10T15:13:47Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2864,8 +2869,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 19,
+          "count": 20,
           "recent_commits": [
+            {
+              "sha": "81c4bc6",
+              "message": "feat(events): implemented needed endpoints for events and tags management SUP-281",
+              "date": "2026-04-10T15:13:45Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "309",
+              "tickets": [
+                {
+                  "id": "SUP-281",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-281"
+                }
+              ]
+            },
             {
               "sha": "b3e0777",
               "message": "feat(build): logs estructurados de observabilidad en el pipeline de despliegue NCR-00",
