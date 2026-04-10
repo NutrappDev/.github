@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T15:14:09.477Z",
+  "generated_at": "2026-04-10T15:39:23.645Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -158,6 +158,11 @@
       "summary": "Épica 5 – Identificar y crear URLs/endpoints faltantes en NutraCore (Usuarios/Productos/Órdenes)",
       "status": "Por hacer",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
+    "NCOL-666": {
+      "summary": "Zona Ilumina | Cambio lote de ejemplo",
+      "status": "Despliegue a DEV",
+      "assignee": "Juan Medina"
     },
     "NCOL-655": {
       "summary": "Implementar configuración de Prettier, EditorConfig y Husky para estandarización de código en el repositorio de Nutrabiotics Colombia",
@@ -1513,7 +1518,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T18:43:14Z",
+      "last_push": "2026-04-10T15:38:58Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -1591,8 +1596,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 16,
+          "count": 17,
           "recent_commits": [
+            {
+              "sha": "a47238c",
+              "message": "fix(products): actualizar lote de ejemplo a 25-265 en landing calidad IL-51",
+              "date": "2026-04-10T15:38:55Z",
+              "author": "Dev-Juan-Medina-NutraApp",
+              "pr_number": "74",
+              "tickets": [
+                {
+                  "id": "IL-51",
+                  "url": "https://nutrabiotics.atlassian.net/browse/IL-51"
+                }
+              ]
+            },
             {
               "sha": "6bb0f9f",
               "message": "test: validacion impacto QA-772",
@@ -2136,8 +2154,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T15%3A14%3A08.369Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T15%3A14%3A08.370Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T15%3A39%3A22.399Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T15%3A39%3A22.399Z → 409 Conflict",
         "ci": null
       }
     },
