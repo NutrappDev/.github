@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-09T21:01:19.208Z",
+  "generated_at": "2026-04-10T13:43:59.282Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -176,7 +176,7 @@
     },
     "NCOL-641": {
       "summary": "BG | Carrusel de imágenes | Botón mal ubicado en la imagen número 2",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NCOL-639": {
@@ -334,6 +334,11 @@
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
+    "ALCO-1461": {
+      "summary": "BG | Diagnostico al crear plantilla | No aplica para herramientas funcionales",
+      "status": "Despliegue a DEV",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "ALCO-1451": {
       "summary": "implementacion de descuento promocional",
       "status": "Esperando aprobación",
@@ -421,7 +426,7 @@
     },
     "ALCO-898": {
       "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Detenido",
+      "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
@@ -477,6 +482,130 @@
   },
   "repos": [
     {
+      "name": "portal-nutrabiotics",
+      "full_name": "NutrappDev/portal-nutrabiotics",
+      "description": null,
+      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-10T13:43:37Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-04-09",
+        "sha": "a8605322c6599f77c781fe65cf03bf7d45b1a203",
+        "date": "2026-04-09T21:25:36Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-04-09",
+        "body": "Release prod-2026-04-09\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-03-26",
+          "sha": "b41d03cb494adeda70b8becb9f7ca25248416224",
+          "date": "2026-03-26T22:29:44Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-26",
+          "body": "Release prod-2026-03-26\n"
+        },
+        {
+          "version": "prod-2026-03-19",
+          "sha": "72ba199a333012694f73ccba845cce50e1b55f33",
+          "date": "2026-03-19T16:17:00Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-19",
+          "body": "Release prod-2026-03-19\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-04-09",
+        "sha": "57dc2b6e731ed01d746d220327bb5465599a700d",
+        "date": "2026-04-09T20:44:38Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-09",
+        "body": "Release qa-2026-04-09\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-03-17",
+          "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
+          "date": "2026-03-17T16:16:50Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
+          "body": "Release qa-2026-03-17\n"
+        },
+        {
+          "version": "qa-2026-03-09",
+          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
+          "date": "2026-03-09T21:53:49Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
+          "body": "Release qa-2026-03-09\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "6a04a5e",
+              "message": "feat(templates): products detail ALCO-1461",
+              "date": "2026-04-10T13:43:35Z",
+              "author": "fabianromerolu",
+              "pr_number": "178",
+              "tickets": [
+                {
+                  "id": "ALCO-1461",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1461"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "57dc2b6",
+              "message": "release: qa 2026 04 09",
+              "date": "2026-04-09T20:44:27Z",
+              "author": "CristiGB",
+              "pr_number": "175",
+              "tickets": []
+            },
+            {
+              "sha": "5a835dc",
+              "message": "release: qa 2026 03 17 SUP-272",
+              "date": "2026-03-17T16:16:37Z",
+              "author": "CristiGB",
+              "pr_number": "166",
+              "tickets": [
+                {
+                  "id": "SUP-272",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
+                }
+              ]
+            },
+            {
+              "sha": "d026f20",
+              "message": "release: QA2026-03-05 SUP-184",
+              "date": "2026-03-09T21:53:39Z",
+              "author": "CristiGB",
+              "pr_number": "160",
+              "tickets": [
+                {
+                  "id": "SUP-184",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -484,7 +613,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T21:00:56Z",
+      "last_push": "2026-04-09T21:01:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -494,6 +623,13 @@
         "body": "Release prod-2026-04-09\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-04-09-2",
+          "sha": "bf76828e4e0e0419b0ee7b7e10239cef597ae8ff",
+          "date": "2026-04-09T21:01:17Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-09-2",
+          "body": "Release prod-2026-04-09-2\n"
+        },
         {
           "version": "prod-2026-04-07",
           "sha": "4d14624346b056df356d6adeeb89aad55f4dceaf",
@@ -514,13 +650,6 @@
           "date": "2026-04-01T19:42:40Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-01",
           "body": "Release prod-2026-04-01\n"
-        },
-        {
-          "version": "prod-2026-04-01-2",
-          "sha": "91f9d80573a96243a98e43145503cdf376714bd9",
-          "date": "2026-04-01T21:00:45Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-01-2",
-          "body": "Release prod-2026-04-01-2\n"
         }
       ],
       "qa": {
@@ -1792,109 +1921,6 @@
       }
     },
     {
-      "name": "portal-nutrabiotics",
-      "full_name": "NutrappDev/portal-nutrabiotics",
-      "description": null,
-      "url": "https://github.com/NutrappDev/portal-nutrabiotics",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-09T20:44:39Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-03-26",
-        "sha": "b41d03cb494adeda70b8becb9f7ca25248416224",
-        "date": "2026-03-26T22:29:44Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-26",
-        "body": "Release prod-2026-03-26\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-03-19",
-          "sha": "72ba199a333012694f73ccba845cce50e1b55f33",
-          "date": "2026-03-19T16:17:00Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/prod-2026-03-19",
-          "body": "Release prod-2026-03-19\n"
-        }
-      ],
-      "qa": {
-        "version": "qa-2026-04-09",
-        "sha": "57dc2b6e731ed01d746d220327bb5465599a700d",
-        "date": "2026-04-09T20:44:38Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-09",
-        "body": "Release qa-2026-04-09\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-03-17",
-          "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
-          "date": "2026-03-17T16:16:50Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
-        },
-        {
-          "version": "qa-2026-03-09",
-          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
-          "date": "2026-03-09T21:53:49Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
-          "body": "Release qa-2026-03-09\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "57dc2b6",
-              "message": "release: qa 2026 04 09",
-              "date": "2026-04-09T20:44:27Z",
-              "author": "CristiGB",
-              "pr_number": "175",
-              "tickets": []
-            },
-            {
-              "sha": "5a835dc",
-              "message": "release: qa 2026 03 17 SUP-272",
-              "date": "2026-03-17T16:16:37Z",
-              "author": "CristiGB",
-              "pr_number": "166",
-              "tickets": [
-                {
-                  "id": "SUP-272",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-272"
-                }
-              ]
-            },
-            {
-              "sha": "d026f20",
-              "message": "release: QA2026-03-05 SUP-184",
-              "date": "2026-03-09T21:53:39Z",
-              "author": "CristiGB",
-              "pr_number": "160",
-              "tickets": [
-                {
-                  "id": "SUP-184",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -2105,8 +2131,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-09T21%3A01%3A17.948Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-09T21%3A01%3A17.949Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T13%3A43%3A58.204Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T13%3A43%3A58.204Z → 409 Conflict",
         "ci": null
       }
     },
