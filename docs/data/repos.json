@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T15:39:23.645Z",
+  "generated_at": "2026-04-10T15:41:11.166Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -58,6 +58,11 @@
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
+    },
+    "PMO-2765": {
+      "summary": "Superposición del Candy Box sobre el logo en el sitio web",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
@@ -1518,7 +1523,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-10T15:38:58Z",
+      "last_push": "2026-04-10T15:40:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -1596,8 +1601,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 17,
+          "count": 18,
           "recent_commits": [
+            {
+              "sha": "61238b7",
+              "message": "fix(header): [PMO-2765] move candy box below logo to prevent overlay",
+              "date": "2026-04-10T15:40:45Z",
+              "author": "mladino-source",
+              "pr_number": "76",
+              "tickets": [
+                {
+                  "id": "PMO-2765",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2765"
+                }
+              ]
+            },
             {
               "sha": "a47238c",
               "message": "fix(products): actualizar lote de ejemplo a 25-265 en landing calidad IL-51",
@@ -2154,8 +2172,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T15%3A39%3A22.399Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T15%3A39%3A22.399Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-10T15%3A41%3A10.120Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-10T15%3A41%3A10.120Z → 409 Conflict",
         "ci": null
       }
     },
