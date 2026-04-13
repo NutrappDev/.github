@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T21:21:46.935Z",
+  "generated_at": "2026-04-13T22:32:06.654Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -123,11 +123,6 @@
       "summary": "SEO estandar para Academia de medicina funcional",
       "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2508": {
-      "summary": "No permite eliminar Productos Doctor Elias Stambullie",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     },
     "PMO-2254": {
       "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
@@ -374,11 +369,6 @@
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
-    "ALCO-1490": {
-      "summary": "Ajuste Melatonina costos de envio",
-      "status": "En proceso",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALCO-1469": {
       "summary": "Crear la infraestructura base de tracking",
       "status": "Despliegue a DEV",
@@ -398,11 +388,6 @@
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-1436": {
-      "summary": "Adaptar consumo del servicio de notificaciones al nuevo endpoint centralizado",
-      "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -503,81 +488,24 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
+    "ALCO-142": {
+      "summary": "Quienes somos - Rol Medico y Paciente ",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "AIA-43": {
+      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
-    {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-04-13T20:34:25Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-13T20:21:41Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -586,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T14:37:35Z",
+      "last_push": "2026-04-13T22:15:03Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -717,6 +645,78 @@
         "updated_at": "2026-03-16T17:15:04Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-04-13T20:34:25Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-13T20:21:41Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -870,7 +870,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T21:21:25Z",
+      "last_push": "2026-04-13T22:31:46Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -951,32 +951,6 @@
           "count": 11,
           "recent_commits": [
             {
-              "sha": "ba79d64",
-              "message": "fix(shippingHandler): remove redundant free shipping condition check ALCO-1490",
-              "date": "2026-04-13T21:21:23Z",
-              "author": "CristiGB",
-              "pr_number": "411",
-              "tickets": [
-                {
-                  "id": "ALCO-1490",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1490"
-                }
-              ]
-            },
-            {
-              "sha": "8d1e040",
-              "message": "fix(blog): fix references ALCO-141",
-              "date": "2026-04-13T21:04:48Z",
-              "author": "fabianromerolu",
-              "pr_number": "410",
-              "tickets": [
-                {
-                  "id": "ALCO-141",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-141"
-                }
-              ]
-            },
-            {
               "sha": "226e66e",
               "message": "feat(tracking): GA4 e-commerce tracking infrastructure ALCO-1469",
               "date": "2026-04-13T17:21:23Z",
@@ -986,19 +960,6 @@
                 {
                   "id": "ALCO-1469",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1469"
-                }
-              ]
-            },
-            {
-              "sha": "dfd7bb6",
-              "message": "fix(notifications): corregir payload de notificación en compra con puntos ALCO-1436",
-              "date": "2026-03-27T14:24:51Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "383",
-              "tickets": [
-                {
-                  "id": "ALCO-1436",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1436"
                 }
               ]
             },
@@ -1045,6 +1006,30 @@
               ]
             },
             {
+              "sha": "2f164d8",
+              "message": "refactor: update shipping logic ",
+              "date": "2026-01-19T21:49:20Z",
+              "author": "CristiGB",
+              "pr_number": "286",
+              "tickets": []
+            },
+            {
+              "sha": "b1a0d91",
+              "message": "feat: add Duitama to shipping cities and update hormone prices in JSON",
+              "date": "2026-01-19T20:41:52Z",
+              "author": "CristiGB",
+              "pr_number": "285",
+              "tickets": []
+            },
+            {
+              "sha": "5ec5ae0",
+              "message": "feat: add optional menuTitle to terms and update headings rendering",
+              "date": "2026-01-15T16:00:27Z",
+              "author": "CristiGB",
+              "pr_number": "283",
+              "tickets": []
+            },
+            {
               "sha": "14c88d1",
               "message": "refactor: textos regulatorios ALCO-1279",
               "date": "2026-01-15T14:59:53Z",
@@ -1078,6 +1063,14 @@
         "to_production": {
           "count": 23,
           "recent_commits": [
+            {
+              "sha": "5dd75b2",
+              "message": "release: qa 2026 04 13",
+              "date": "2026-04-13T22:31:44Z",
+              "author": "CristiGB",
+              "pr_number": "412",
+              "tickets": []
+            },
             {
               "sha": "f9beb0c",
               "message": "release: qa 2026 04 09",
@@ -1293,19 +1286,6 @@
               "author": "CristiGB",
               "pr_number": "284",
               "tickets": []
-            },
-            {
-              "sha": "907f8e9",
-              "message": "fix: clean cart PMO-2508 (#278)",
-              "date": "2026-01-13T21:36:50Z",
-              "author": "CristiGB",
-              "pr_number": "279",
-              "tickets": [
-                {
-                  "id": "PMO-2508",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2508"
-                }
-              ]
             }
           ]
         }
