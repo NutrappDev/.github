@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T19:05:37.654Z",
+  "generated_at": "2026-04-13T19:06:11.446Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -142,6 +142,11 @@
     "PALCO-51": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-239": {
+      "summary": "Implementar consumo del endpoint POST /orders",
+      "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -496,11 +501,6 @@
     },
     "AIA-43": {
       "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-34": {
-      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -2005,7 +2005,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T14:54:28Z",
+      "last_push": "2026-04-13T19:05:38Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-26",
@@ -2040,8 +2040,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "2e27cc8",
+              "message": "feat(useBuildOrder): adaptar datos de la orden para envío a ms-ordenes NE-239",
+              "date": "2026-04-13T19:05:36Z",
+              "author": "jsandoval-dev",
+              "pr_number": "50",
+              "tickets": [
+                {
+                  "id": "NE-239",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-239"
+                }
+              ]
+            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -2208,8 +2221,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A05%3A36.367Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A05%3A36.368Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A06%3A10.340Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A06%3A10.340Z → 409 Conflict",
         "ci": null
       }
     },
