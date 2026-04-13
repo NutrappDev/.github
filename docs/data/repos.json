@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T20:37:51.309Z",
+  "generated_at": "2026-04-13T21:05:14.744Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -870,7 +870,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T17:21:25Z",
+      "last_push": "2026-04-13T21:04:50Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -948,8 +948,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "8d1e040",
+              "message": "fix(blog): fix references ALCO-141",
+              "date": "2026-04-13T21:04:48Z",
+              "author": "fabianromerolu",
+              "pr_number": "410",
+              "tickets": [
+                {
+                  "id": "ALCO-141",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-141"
+                }
+              ]
+            },
             {
               "sha": "226e66e",
               "message": "feat(tracking): GA4 e-commerce tracking infrastructure ALCO-1469",
@@ -2896,7 +2909,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T20:36:58Z",
+      "last_push": "2026-04-13T20:44:42Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
