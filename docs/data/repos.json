@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T22:38:14.629Z",
+  "generated_at": "2026-04-13T22:47:48.344Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -374,6 +374,11 @@
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
+    "ALCO-1470": {
+      "summary": "Integrar el tracking en el flujo de checkout",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "ALCO-1469": {
       "summary": "Crear la infraestructura base de tracking",
       "status": "Despliegue a DEV",
@@ -498,11 +503,6 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "ALCO-142": {
-      "summary": "Quienes somos - Rol Medico y Paciente ",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
@@ -746,7 +746,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T19:25:19Z",
+      "last_push": "2026-04-13T22:41:15Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -883,7 +883,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T22:35:42Z",
+      "last_push": "2026-04-13T22:47:27Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -961,8 +961,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "3e0820b",
+              "message": "feat(tracking): GA4 checkout funnel tracking - ALCO-1470",
+              "date": "2026-04-13T22:47:25Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "413",
+              "tickets": [
+                {
+                  "id": "ALCO-1470",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1470"
+                }
+              ]
+            },
             {
               "sha": "226e66e",
               "message": "feat(tracking): GA4 e-commerce tracking infrastructure ALCO-1469",
