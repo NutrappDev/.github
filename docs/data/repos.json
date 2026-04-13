@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T17:21:56.637Z",
+  "generated_at": "2026-04-13T19:05:37.654Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -139,6 +139,11 @@
       "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
+    "PALCO-51": {
+      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
       "status": "Actividad completada",
@@ -161,7 +166,7 @@
     },
     "NCR-12": {
       "summary": "Revisión de con Jorge para subir PR y pruebas desde monorepo dev al API Epicor pruebas",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "NCR-5": {
@@ -366,12 +371,12 @@
     },
     "ALCO-1451": {
       "summary": "implementacion de descuento promocional",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1450": {
       "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1436": {
@@ -496,11 +501,6 @@
     },
     "AIA-34": {
       "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-32": {
-      "summary": "BG | Abrir chat genera error del token",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     }
@@ -1546,7 +1546,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T15:57:31Z",
+      "last_push": "2026-04-13T19:01:04Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -2208,8 +2208,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T17%3A21%3A55.170Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T17%3A21%3A55.170Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A05%3A36.367Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A05%3A36.368Z → 409 Conflict",
         "ci": null
       }
     },
@@ -2877,7 +2877,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T06:33:44Z",
+      "last_push": "2026-04-13T19:05:10Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2941,8 +2941,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 21,
           "recent_commits": [
+            {
+              "sha": "c1e304a",
+              "message": "fix(build): corregir archivo de migración PALCO-51",
+              "date": "2026-04-13T19:05:08Z",
+              "author": "jsandoval-dev",
+              "pr_number": "310",
+              "tickets": [
+                {
+                  "id": "PALCO-51",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-51"
+                }
+              ]
+            },
             {
               "sha": "81c4bc6",
               "message": "feat(events): implemented needed endpoints for events and tags management SUP-281",
