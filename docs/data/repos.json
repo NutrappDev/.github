@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T19:06:11.446Z",
+  "generated_at": "2026-04-13T19:25:43.203Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -37,6 +37,11 @@
     "SUP-184": {
       "summary": "BG | Datos Personales | Ajustes en actualización de datos",
       "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "SUP-173": {
+      "summary": "BG | Usuario | Rechazando documentos | Queda en \"Por Validar\"",
+      "status": "En proceso",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -146,7 +151,7 @@
     },
     "NE-239": {
       "summary": "Implementar consumo del endpoint POST /orders",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -498,11 +503,6 @@
       "summary": "Quienes somos - Rol Medico y Paciente ",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -697,7 +697,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-10T13:43:37Z",
+      "last_push": "2026-04-13T19:25:19Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -747,8 +747,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "c1e1e28",
+              "message": "fix(users): enhance user identifier handling and validation in hooks and utils SUP-173",
+              "date": "2026-04-13T19:25:17Z",
+              "author": "CristiGB",
+              "pr_number": "179",
+              "tickets": [
+                {
+                  "id": "SUP-173",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-173"
+                }
+              ]
+            },
             {
               "sha": "6a04a5e",
               "message": "feat(templates): products detail ALCO-1461",
@@ -2221,8 +2234,8 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A06%3A10.340Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A06%3A10.340Z → 409 Conflict",
+        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A25%3A42.049Z → 409 Conflict",
+        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A25%3A42.049Z → 409 Conflict",
         "ci": null
       }
     },
