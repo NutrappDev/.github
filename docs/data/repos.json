@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T22:32:06.654Z",
+  "generated_at": "2026-04-13T22:38:14.629Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -41,7 +41,7 @@
     },
     "SUP-173": {
       "summary": "BG | Usuario | Rechazando documentos | Queda en \"Por Validar\"",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "SSO-161": {
@@ -142,6 +142,11 @@
     "PALCO-51": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-247": {
+      "summary": "Envío de órdenes a ERP mediante librería ERP",
+      "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-239": {
@@ -498,11 +503,6 @@
       "summary": "Quienes somos - Rol Medico y Paciente ",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T22:15:03Z",
+      "last_push": "2026-04-13T22:37:50Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -522,8 +522,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "aa41511",
+              "message": "feat(serverless): habilitar flujo de compras nutrabiotics empresas NE-247",
+              "date": "2026-04-13T22:37:49Z",
+              "author": "jsandoval-dev",
+              "pr_number": "63",
+              "tickets": [
+                {
+                  "id": "NE-247",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
+                }
+              ]
+            },
             {
               "sha": "519fa4b",
               "message": "fix(transaction): ajuste de transaction ALCO-1450",
@@ -870,7 +883,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T22:31:46Z",
+      "last_push": "2026-04-13T22:35:42Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -910,13 +923,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-09",
-        "sha": "f9beb0c5ea641a0d70ccda436d45e36181fb0f62",
-        "date": "2026-04-09T16:01:44Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-09",
-        "body": "Release qa-2026-04-09\n"
+        "version": "qa-2026-04-13",
+        "sha": "5dd75b20ec6c06f5f1f1e9351c3ede7cbc629e6d",
+        "date": "2026-04-13T22:32:08Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-13",
+        "body": "Release qa-2026-04-13\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-09",
+          "sha": "f9beb0c5ea641a0d70ccda436d45e36181fb0f62",
+          "date": "2026-04-09T16:01:44Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-09",
+          "body": "Release qa-2026-04-09\n"
+        },
         {
           "version": "qa-2026-04-08",
           "sha": "fbd3b4f6920cca71e6f547083a0ea675255ca38b",
@@ -937,13 +957,6 @@
           "date": "2026-03-30T17:52:09Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-30",
           "body": "Release qa-2026-03-30\n"
-        },
-        {
-          "version": "qa-2026-03-27",
-          "sha": "a7bb0ee67473b13c238f85bcb7bdef05149651f2",
-          "date": "2026-03-27T13:49:58Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-03-27",
-          "body": "Release qa-2026-03-27\n"
         }
       ],
       "pending": {
