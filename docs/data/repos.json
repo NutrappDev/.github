@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T19:25:43.203Z",
+  "generated_at": "2026-04-13T20:37:51.309Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -76,7 +76,7 @@
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2690": {
@@ -116,7 +116,7 @@
     },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2537": {
@@ -319,6 +319,11 @@
       "status": "Actividad completada",
       "assignee": "Sebastian Andres Alvarez Lambertinez"
     },
+    "FFCO-562": {
+      "summary": "Validar flujo completo de creación de órdenes",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "DGWNC-1": {
       "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
       "status": "Actividad completada",
@@ -498,14 +503,81 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "ALCO-142": {
-      "summary": "Quienes somos - Rol Medico y Paciente ",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-04-13T20:34:25Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-13T20:21:41Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -645,42 +717,6 @@
         "updated_at": "2026-03-16T17:15:04Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-10T22:56:31Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -912,7 +948,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "226e66e",
@@ -1010,19 +1046,6 @@
               "author": "fabianromerolu",
               "pr_number": "280",
               "tickets": []
-            },
-            {
-              "sha": "907f8e9",
-              "message": "fix: clean cart PMO-2508",
-              "date": "2026-01-13T20:24:13Z",
-              "author": "CristiGB",
-              "pr_number": "278",
-              "tickets": [
-                {
-                  "id": "PMO-2508",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2508"
-                }
-              ]
             }
           ]
         },
@@ -2210,36 +2233,6 @@
       }
     },
     {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-19T14:18:52Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": null,
-        "to_production": null
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=qa&per_page=100&since=2026-01-13T19%3A25%3A42.049Z → 409 Conflict",
-        "pending_to_production": "GET /repos/NutrappDev/tronco-api-erp/commits?sha=main&per_page=100&since=2026-01-13T19%3A25%3A42.049Z → 409 Conflict",
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-mcp-server",
       "full_name": "NutrappDev/tronco-mcp-server",
       "description": "Servidor Model Context Protocol",
@@ -2903,7 +2896,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T19:05:10Z",
+      "last_push": "2026-04-13T20:36:58Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2967,8 +2960,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 21,
+          "count": 22,
           "recent_commits": [
+            {
+              "sha": "7f2ffe6",
+              "message": "feat(erp): process farmacia data FFCO-562",
+              "date": "2026-04-13T20:36:55Z",
+              "author": "meraso-nutra",
+              "pr_number": "311",
+              "tickets": [
+                {
+                  "id": "FFCO-562",
+                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
+                }
+              ]
+            },
             {
               "sha": "c1e304a",
               "message": "fix(build): corregir archivo de migración PALCO-51",
