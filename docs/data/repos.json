@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T22:05:58.222Z",
+  "generated_at": "2026-04-14T22:31:26.769Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -379,6 +379,11 @@
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
+    "ALCO-1471": {
+      "summary": "Integrar el tracking de carrito y datos de sesión",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "ALCO-1470": {
       "summary": "Integrar el tracking en el flujo de checkout",
       "status": "Despliegue a DEV",
@@ -498,11 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-14T21:19:35Z",
+      "last_push": "2026-04-14T22:31:04Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -592,8 +592,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "b0ac1f1",
+              "message": "feat(tracking): integrar eventos GA4 de carrito y sesión ALCO-1471",
+              "date": "2026-04-14T22:31:02Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "414",
+              "tickets": [
+                {
+                  "id": "ALCO-1471",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1471"
+                }
+              ]
+            },
             {
               "sha": "3e0820b",
               "message": "feat(tracking): GA4 checkout funnel tracking - ALCO-1470",
