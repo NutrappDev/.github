@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-04-14T13:25:25.905Z",
+  "generated_at": "2026-04-14T14:52:10.140Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
   "jira_tickets": {
+    "SUP-285": {
+      "summary": "Ocultar botón \"Relanzar\" tras ejecución",
+      "status": "Despliegue a DEV",
+      "assignee": "Jhelcy Sandoval"
+    },
     "SUP-281": {
       "summary": "Desde Nutracore: implementar endpoint para generación de permisos de carga de imágenes en eventos (MS-events)",
       "status": "Despliegue a PROD",
@@ -176,7 +181,7 @@
     },
     "NCR-5": {
       "summary": "Épica 5 – Identificar y crear URLs/endpoints faltantes en NutraCore (Usuarios/Productos/Órdenes)",
-      "status": "Por hacer",
+      "status": "Detenido",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "NCOL-666": {
@@ -339,6 +344,16 @@
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
+    "CIMF-256": {
+      "summary": "Cronograma general y acceder al detalle de la agenda",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
+    },
+    "CIMF-237": {
+      "summary": "MCCT de actualización landing CIMF",
+      "status": "Detenido",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
@@ -488,24 +503,72 @@
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
       "status": "Revisión QA",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-402": {
-      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
-    },
-    "ALCO-142": {
-      "summary": "Quienes somos - Rol Medico y Paciente ",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-14T14:18:09Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "d4d92fe",
+              "message": "refactor: CIMF-237 initial sections",
+              "date": "2026-04-14T13:27:32Z",
+              "author": "k-aguilera",
+              "pr_number": "2",
+              "tickets": [
+                {
+                  "id": "CIMF-237",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-237"
+                }
+              ]
+            },
+            {
+              "sha": "8b985a6",
+              "message": "refactor: CIMF-256 Agenda and sede section",
+              "date": "2026-04-14T14:15:12Z",
+              "author": "k-aguilera",
+              "pr_number": "4",
+              "tickets": [
+                {
+                  "id": "CIMF-256",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-256"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-landing-amf",
       "full_name": "NutrappDev/fruto-landing-amf",
@@ -514,7 +577,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-14T13:25:01Z",
+      "last_push": "2026-04-14T13:25:23Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -546,42 +609,6 @@
               "tickets": []
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-14T11:29:30Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -797,7 +824,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T22:41:15Z",
+      "last_push": "2026-04-14T14:51:42Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -847,8 +874,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "c9cccc5",
+              "message": "feat(erp): ocultar boton relanzar tras ejecucion SUP-285",
+              "date": "2026-04-14T14:51:40Z",
+              "author": "jsandoval-dev",
+              "pr_number": "180",
+              "tickets": [
+                {
+                  "id": "SUP-285",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-285"
+                }
+              ]
+            },
             {
               "sha": "c1e1e28",
               "message": "fix(users): enhance user identifier handling and validation in hooks and utils SUP-173",
@@ -1012,7 +1052,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "3e0820b",
@@ -1125,14 +1165,6 @@
               "date": "2026-01-15T14:29:03Z",
               "author": "CristiGB",
               "pr_number": "281",
-              "tickets": []
-            },
-            {
-              "sha": "a1cb695",
-              "message": "dosis en plural dependiendo de la cantidad",
-              "date": "2026-01-14T14:10:53Z",
-              "author": "fabianromerolu",
-              "pr_number": "280",
               "tickets": []
             }
           ]
