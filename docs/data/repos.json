@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T19:50:27.594Z",
+  "generated_at": "2026-04-14T21:19:27.493Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -396,7 +396,7 @@
     },
     "ALCO-1461": {
       "summary": "BG | Diagnostico al crear plantilla | No aplica para herramientas funcionales",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1451": {
@@ -501,7 +501,7 @@
     },
     "ALCO-404": {
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
@@ -976,7 +976,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-14T17:37:24Z",
+      "last_push": "2026-04-14T21:19:02Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -1649,7 +1649,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T19:01:04Z",
+      "last_push": "2026-04-14T19:51:41Z",
       "topics": [],
       "production": {
         "version": "prod-2026-03-31",
@@ -3027,7 +3027,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 22,
+          "count": 21,
           "recent_commits": [
             {
               "sha": "e11c03b",
@@ -3299,19 +3299,6 @@
                 {
                   "id": "ALCO-1298",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1298"
-                }
-              ]
-            },
-            {
-              "sha": "81bc5f8",
-              "message": "fix(prescriptions): generar pdf en aws ALCO-1311",
-              "date": "2026-01-14T21:18:58Z",
-              "author": "fabianromerolu",
-              "pr_number": "203",
-              "tickets": [
-                {
-                  "id": "ALCO-1311",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1311"
                 }
               ]
             }
