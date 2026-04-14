@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T22:47:48.344Z",
+  "generated_at": "2026-04-14T13:25:25.905Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 30,
@@ -117,11 +117,6 @@
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
       "status": "Actividad completada",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2537": {
-      "summary": "SEO estandar para Academia de medicina funcional",
-      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2254": {
@@ -321,7 +316,7 @@
     },
     "FFCO-562": {
       "summary": "Validar flujo completo de creación de órdenes",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
     },
     "DGWNC-1": {
@@ -376,7 +371,7 @@
     },
     "ALCO-1470": {
       "summary": "Integrar el tracking en el flujo de checkout",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1469": {
@@ -503,9 +498,101 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
+    },
+    "ALCO-142": {
+      "summary": "Quienes somos - Rol Medico y Paciente ",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-amf",
+      "full_name": "NutrappDev/fruto-landing-amf",
+      "description": "Landing diplomado AMF",
+      "url": "https://github.com/NutrappDev/fruto-landing-amf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-14T13:25:01Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-04-14",
+        "sha": "bb05ddc8ba51d8e9f82d6e97a1c66a1762be0d49",
+        "date": "2026-04-14T13:25:23Z",
+        "url": "https://github.com/NutrappDev/fruto-landing-amf/releases/tag/qa-2026-04-14",
+        "body": "Release qa-2026-04-14\n"
+      },
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "bb05ddc",
+              "message": "release: qa-2026-04-07",
+              "date": "2026-04-14T13:24:58Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "2",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-14T11:29:30Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -678,42 +765,6 @@
       "topics": [
         "fase-tronco",
         "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-13T20:21:41Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
       ],
       "production": null,
       "production_history": [],
@@ -1439,56 +1490,6 @@
               "tickets": []
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-amf",
-      "full_name": "NutrappDev/fruto-landing-amf",
-      "description": "Landing diplomado AMF",
-      "url": "https://github.com/NutrappDev/fruto-landing-amf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-08T04:54:10Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "c8c5b62",
-              "message": "feat: seo estandar academia medicina funcional PMO-2537",
-              "date": "2026-03-27T19:18:36Z",
-              "author": "mladino-source",
-              "pr_number": "1",
-              "tickets": [
-                {
-                  "id": "PMO-2537",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2537"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -2928,7 +2929,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-13T20:44:42Z",
+      "last_push": "2026-04-14T03:47:03Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
