@@ -8,11 +8,13 @@ Si es tu primer PR en la organización, lee esta guía completa antes de empezar
 
 ```
 main
- ↑ release/prod-YYYY-MM-DD   (cherry-pick desde qa)
+ ↑ release/prod-YYYY-MM-DD    (cherry-pick desde qa)
  ↑ hotfix/TICKET-descripcion
+ ↑ revert/release-prod-YYYY-MM-DD
 
 qa
- ↑ release/qa-YYYY-MM-DD     (cherry-pick desde develop)
+ ↑ release/qa-YYYY-MM-DD      (cherry-pick desde develop)
+ ↑ revert/release-qa-YYYY-MM-DD
 
 develop
  ↑ feat/TICKET-descripcion
@@ -38,16 +40,17 @@ develop
 
 | Regla | Detalle |
 |-------|---------|
-| Fuentes permitidas | Solo `release/qa-YYYY-MM-DD` |
+| Fuentes permitidas | `release/qa-YYYY-MM-DD`, `revert/release-qa-YYYY-MM-DD` |
 | Merge | **Merge commit** (sin squash, sin rebase) |
-| Proceso | Cherry-pick desde develop → rama `release/qa-YYYY-MM-DD` → PR a qa |
+| Proceso release | Cherry-pick desde develop → rama `release/qa-YYYY-MM-DD` → PR a qa |
+| Proceso revert | `npm run revert-release -- <merge-commit>` → PR a qa |
 | Commit directo | ❌ Nunca |
 
 ### `main` — producción
 
 | Regla | Detalle |
 |-------|---------|
-| Fuentes permitidas | `release/prod-YYYY-MM-DD` o `hotfix/TICKET-descripcion` |
+| Fuentes permitidas | `release/prod-YYYY-MM-DD`, `hotfix/TICKET-descripcion`, `revert/release-prod-YYYY-MM-DD` |
 | Merge | **Merge commit** (sin squash, sin rebase) |
 | Proceso | Cherry-pick desde qa → rama `release/prod-YYYY-MM-DD` → PR a main |
 | Aprobaciones | 2 requeridas |
@@ -70,11 +73,14 @@ test/SUP-104-descripcion-corta
 release/qa-2025-01-15
 release/prod-2025-01-20
 hotfix/SUP-999-descripcion-corta
+revert/release-qa-2025-01-15
+revert/release-prod-2025-01-20
 ```
 
 - El ticket Jira va en **MAYÚSCULAS**
 - La descripción en **minúsculas con guiones**
-- Las ramas `release/` usan fecha, no ticket (agrupan varios)
+- Las ramas `release/` y `revert/` usan fecha, no ticket (agrupan varios)
+- Las ramas `revert/` se crean con `npm run revert-release`, no manualmente
 
 ### Commits — Conventional Commits
 
@@ -90,17 +96,18 @@ fix(api): corregir timeout en endpoint de usuarios SUP-456
 chore(deps): actualizar dependencias de seguridad SUP-789
 ```
 
-Tipos válidos: `feat` `fix` `refactor` `docs` `chore` `build` `test` `release` `hotfix` `merge`
+Tipos válidos: `feat` `fix` `refactor` `docs` `chore` `build` `test` `release` `hotfix` `merge` `revert`
 
 ### Títulos de PR
 
-Mismo formato que los commits. En PRs de release no se requiere ticket (agrupan varios):
+Mismo formato que los commits. En PRs de release y revert no se requiere ticket (agrupan varios):
 
 ```
 feat(auth): agregar login con Google SUP-123
 fix(api): corregir timeout en endpoint de usuarios SUP-456
 release: qa-2025-01-15
 release: prod-2025-01-20
+revert: release qa-2025-01-15
 ```
 
 ---
@@ -146,19 +153,28 @@ Solo en ramas `release/*`. Verifica antes del merge a qa o main:
 
 Los checks de validación (`validate`, `security`, `commitlint`, `release-validate`) se disparan automáticamente en todos los repos vía los rulesets de la org. No necesitas hacer nada para que aparezcan en tus PRs.
 
-Lo único que requiere configuración es el **auto-tag**: el tag `qa-YYYY-MM-DD` / `prod-YYYY-MM-DD` se crea automáticamente al mergear un PR de `release/*`, pero necesita el archivo `.github/workflows/pr-checks.yml` en tu repo.
+Lo único que requiere configuración adicional son dos archivos, que el script `scripts/deploy-pr-checks.sh` distribuye automáticamente a todos los repos:
 
-Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.yml) en `.github/workflows/pr-checks.yml` de tu repo. No necesitas cambiar nada.
+| Archivo | Rama | Propósito |
+|---------|------|-----------|
+| `.github/workflows/pr-checks.yml` | `qa`, `main` | Auto-tag al mergear `release/*` o `revert/*` |
+| `scripts/revert-release.sh` | `develop` | Script de revert de emergencia |
+
+Para distribuir manualmente a un repo específico:
+
+```bash
+./scripts/deploy-pr-checks.sh nombre-del-repo
+```
 
 **Si los checks de validación no aparecen o el PR quedó bloqueado inesperadamente:**
 1. Haz un push a tu rama — los checks se disparan automáticamente en el próximo evento del PR
 2. Verifica que GitHub Actions esté habilitado: **Settings → Actions → General → Allow all actions**
 3. Verifica que el PR apunte a `develop`, `qa` o `main` (otras ramas no disparan el workflow)
 
-**Si el auto-tag no se crea al mergear un release:**
+**Si el auto-tag no se crea al mergear un release o revert:**
 1. Verifica que el archivo esté en `.github/workflows/pr-checks.yml` (ruta exacta)
 2. Verifica que GitHub Actions esté habilitado en el repo
-3. Verifica que el PR sea de una rama `release/*` hacia `qa` o `main`
+3. Verifica que el PR sea de una rama `release/*` o `revert/*` hacia `qa` o `main`
 
 ---
 
@@ -183,6 +199,55 @@ Copia el contenido de [`_example-caller.yml`](.github/workflows/_example-caller.
 5. Push y PR: `gh pr create --base main --title "release: prod-YYYY-MM-DD"`
 6. **2 aprobaciones** → merge con **"Create a merge commit"** — el merge commit actúa como marcador exacto del despliegue
 7. El tag `prod-YYYY-MM-DD` se crea automáticamente al mergear
+
+---
+
+## Proceso de revert de release
+
+Usar cuando un release recién mergeado genera un error en `qa` o `main` y se necesita revertir de emergencia.
+
+> **No usar el botón de revert de GitHub** — la rama que genera no sigue la convención y no actualiza `affected.txt` correctamente.
+
+### Pasos
+
+1. Obtener el merge commit del release a revertir:
+
+   ```bash
+   git fetch --all
+   git log origin/qa --oneline | head -5
+   ```
+
+2. Ejecutar el script:
+
+   ```bash
+   npm run revert-release -- <merge-commit>
+   # o con descripción explícita:
+   npm run revert-release -- <merge-commit> release-qa-2025-01-15
+   ```
+
+3. Revisar y commitear:
+
+   ```bash
+   git diff --cached
+   git commit -m "revert: release qa-YYYY-MM-DD"
+   ```
+
+4. Push y PR a `qa`:
+
+   ```bash
+   gh pr create --base qa --title "revert: release qa-YYYY-MM-DD"
+   ```
+
+5. Al mergear → tag `revert-qa-YYYY-MM-DD` se crea automáticamente.
+
+### Por qué usar el script y no el botón de GitHub
+
+| | Botón de GitHub | `revert-release.sh` |
+|--|-----------------|---------------------|
+| Nombre de rama | `revert-NNN-release/qa-...` (inválido) | `revert/release-qa-YYYY-MM-DD` |
+| `affected.txt` | Queda con valor previo al release | Se restaura con los proyectos del release revertido |
+| Tag automático | No se crea | `revert-qa-YYYY-MM-DD` |
+| Validaciones org | Fallan | Pasan |
 
 ---
 
@@ -252,6 +317,6 @@ Definidos en [`.github/pr-config.json`](.github/pr-config.json):
 | `chore` | 250 | 16 |
 | `build` | 250 | 15 |
 | `test` | 1 000 | 50 |
-| `release` / `merge` | 5 000 | 350 |
+| `release` / `merge` / `revert` | 5 000 | 350 |
 
 Superarlos muestra una advertencia pero no bloquea el merge por defecto.
