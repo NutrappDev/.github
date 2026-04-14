@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # deploy-pr-checks.sh
 #
-# Despliega .github/workflows/pr-checks.yml en todos los repos activos de la org,
-# en las ramas develop, qa y main (las tres ramas base que reciben PRs).
+# Despliega en todos los repos activos de la org:
+#   1. .github/workflows/pr-checks.yml  — auto-tag de releases y reverts
+#   2. scripts/revert-release.sh        — script de revert de emergencia
+#
 # Es idempotente: si el archivo ya existe y es idéntico, lo omite.
 #
 # Requisitos:
@@ -25,13 +27,20 @@ export MSYS_NO_PATHCONV=1
 
 ORG="NutrappDev"
 TEMPLATE_REPO="NutrappDev/.github"
-TEMPLATE_PATH=".github/workflows/_example-caller.yml"
-TARGET_PATH=".github/workflows/pr-checks.yml"
-# Solo qa y main — pr-checks.yml solo contiene auto-tag, que se activa en PRs hacia qa/main.
-# develop no lo necesita: los checks de validación se disparan via rulesets org-level.
-TARGET_BRANCHES=("qa" "main")
-COMMIT_MSG="chore: agregar pr-checks para auto-tag de releases [skip ci]"
-COMMIT_MSG_UPDATE="chore: actualizar pr-checks (auto-tag de releases) [skip ci]"
+
+# Workflow de auto-tag (se despliega en qa y main)
+WORKFLOW_TEMPLATE_PATH=".github/workflows/_example-caller.yml"
+WORKFLOW_TARGET_PATH=".github/workflows/pr-checks.yml"
+WORKFLOW_BRANCHES=("qa" "main")
+WORKFLOW_COMMIT_MSG="chore: agregar pr-checks para auto-tag de releases [skip ci]"
+WORKFLOW_COMMIT_MSG_UPDATE="chore: actualizar pr-checks (auto-tag de releases y reverts) [skip ci]"
+
+# Script de revert (se despliega en develop)
+SCRIPT_TEMPLATE_PATH="scripts/revert-release.sh"
+SCRIPT_TARGET_PATH="scripts/revert-release.sh"
+SCRIPT_BRANCHES=("develop")
+SCRIPT_COMMIT_MSG="chore: agregar script revert-release para manejo de reverts de emergencia [skip ci]"
+SCRIPT_COMMIT_MSG_UPDATE="chore: actualizar revert-release.sh [skip ci]"
 
 # ─── Colores ──────────────────────────────────────────────────────────────────
 GREEN='\033[0;32m'
@@ -63,20 +72,26 @@ command -v gh  > /dev/null 2>&1 || { echo -e "${RED}❌ gh CLI no encontrado${NC
 command -v jq  > /dev/null 2>&1 || { echo -e "${RED}❌ jq no encontrado${NC}"; exit 1; }
 gh auth status > /dev/null 2>&1 || { echo -e "${RED}❌ No autenticado. Ejecutar: gh auth login${NC}"; exit 1; }
 
-# ─── Obtener contenido del template (base64) ──────────────────────────────────
+# ─── Cargar templates ─────────────────────────────────────────────────────────
 echo ""
-echo "Leyendo template desde ${TEMPLATE_REPO}..."
-TEMPLATE_CONTENT=$(gh api "repos/${TEMPLATE_REPO}/contents/${TEMPLATE_PATH}" --jq '.content' 2>/dev/null) || {
-  echo -e "${RED}❌ No se pudo leer el template. Verificar que existe: ${TEMPLATE_PATH}${NC}"
+echo "Leyendo templates desde ${TEMPLATE_REPO}..."
+
+WORKFLOW_CONTENT=$(gh api "repos/${TEMPLATE_REPO}/contents/${WORKFLOW_TEMPLATE_PATH}" --jq '.content' 2>/dev/null) || {
+  err "No se pudo leer el template de workflow: ${WORKFLOW_TEMPLATE_PATH}"
   exit 1
 }
-TEMPLATE_CONTENT=$(echo "$TEMPLATE_CONTENT" | tr -d '\n')
-TEMPLATE_SHA=$(gh api "repos/${TEMPLATE_REPO}/contents/${TEMPLATE_PATH}" --jq '.sha' 2>/dev/null)
+WORKFLOW_CONTENT=$(echo "$WORKFLOW_CONTENT" | tr -d '\n')
+
+SCRIPT_CONTENT=$(gh api "repos/${TEMPLATE_REPO}/contents/${SCRIPT_TEMPLATE_PATH}" --jq '.content' 2>/dev/null) || {
+  err "No se pudo leer el template del script: ${SCRIPT_TEMPLATE_PATH}"
+  exit 1
+}
+SCRIPT_CONTENT=$(echo "$SCRIPT_CONTENT" | tr -d '\n')
 
 echo ""
-echo "Org:     ${ORG}"
-echo "Template: ${TEMPLATE_PATH} (sha: ${TEMPLATE_SHA:0:7})"
-echo "Destino:  ${TARGET_PATH} en ramas: ${TARGET_BRANCHES[*]}"
+echo "Org:      ${ORG}"
+echo "Workflow: ${WORKFLOW_TARGET_PATH} → ramas: ${WORKFLOW_BRANCHES[*]}"
+echo "Script:   ${SCRIPT_TARGET_PATH}   → ramas: ${SCRIPT_BRANCHES[*]}"
 [ "$FORCE" = true ] && warn "Modo --force: se sobreescribirá aunque el contenido sea igual"
 echo "────────────────────────────────────────────────────────────────"
 
@@ -106,55 +121,55 @@ UPDATED=0
 SKIPPED=0
 ERRORS=0
 
-# ─── Función: desplegar en una rama específica ────────────────────────────────
-deploy_to_branch() {
+# ─── Función: desplegar un archivo en una rama ────────────────────────────────
+deploy_file() {
   local FULL_REPO="$1"
   local BRANCH="$2"
+  local TARGET_PATH="$3"
+  local CONTENT="$4"
+  local COMMIT_MSG_NEW="$5"
+  local COMMIT_MSG_UPD="$6"
 
-  # Verificar que la rama existe
   BRANCH_EXISTS=$(gh api "repos/${FULL_REPO}/branches/${BRANCH}" 2>/dev/null | jq -r '.name // empty' || true)
   if [ -z "$BRANCH_EXISTS" ]; then
-    printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GRAY}rama no existe — omitiendo${NC}")"
+    printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${GRAY}rama no existe — omitiendo${NC}")"
     return
   fi
 
-  # Verificar si el archivo ya existe en esa rama
   EXISTING=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}?ref=${BRANCH}" 2>/dev/null || true)
 
   if [ -n "$EXISTING" ]; then
     EXISTING_SHA=$(echo "$EXISTING" | jq -r '.sha')
     EXISTING_CONTENT=$(echo "$EXISTING" | jq -r '.content' | tr -d '\n')
 
-    if [ "$EXISTING_CONTENT" = "$TEMPLATE_CONTENT" ] && [ "$FORCE" = false ]; then
-      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GRAY}─  sin cambios${NC}")"
+    if [ "$EXISTING_CONTENT" = "$CONTENT" ] && [ "$FORCE" = false ]; then
+      printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${GRAY}─  sin cambios${NC}")"
       SKIPPED=$((SKIPPED + 1))
       return
     fi
 
-    RESULT=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
+    gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
       -X PUT \
-      -f message="$COMMIT_MSG_UPDATE" \
-      -f content="$TEMPLATE_CONTENT" \
+      -f message="$COMMIT_MSG_UPD" \
+      -f content="$CONTENT" \
       -f sha="$EXISTING_SHA" \
-      -f branch="$BRANCH" 2>&1) && {
-      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GREEN}✅ actualizado${NC}")"
+      -f branch="$BRANCH" > /dev/null 2>&1 && {
+      printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${GREEN}✅ actualizado${NC}")"
       UPDATED=$((UPDATED + 1))
     } || {
-      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${RED}❌ error al actualizar${NC}")"
-      info "$RESULT"
+      printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${RED}❌ error al actualizar${NC}")"
       ERRORS=$((ERRORS + 1))
     }
   else
-    RESULT=$(gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
+    gh api "repos/${FULL_REPO}/contents/${TARGET_PATH}" \
       -X PUT \
-      -f message="$COMMIT_MSG" \
-      -f content="$TEMPLATE_CONTENT" \
-      -f branch="$BRANCH" 2>&1) && {
-      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${GREEN}✅ creado${NC}")"
+      -f message="$COMMIT_MSG_NEW" \
+      -f content="$CONTENT" \
+      -f branch="$BRANCH" > /dev/null 2>&1 && {
+      printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${GREEN}✅ creado${NC}")"
       CREATED=$((CREATED + 1))
     } || {
-      printf "  %-10s %s\n" "[$BRANCH]" "$(echo -e "${RED}❌ error al crear${NC}")"
-      info "$RESULT"
+      printf "  %-10s %-40s %s\n" "[$BRANCH]" "$TARGET_PATH" "$(echo -e "${RED}❌ error al crear${NC}")"
       ERRORS=$((ERRORS + 1))
     }
   fi
@@ -166,8 +181,16 @@ for REPO in "${REPOS[@]}"; do
   FULL_REPO="${ORG}/${REPO}"
   echo "  ${REPO}"
 
-  for BRANCH in "${TARGET_BRANCHES[@]}"; do
-    deploy_to_branch "$FULL_REPO" "$BRANCH"
+  for BRANCH in "${WORKFLOW_BRANCHES[@]}"; do
+    deploy_file "$FULL_REPO" "$BRANCH" \
+      "$WORKFLOW_TARGET_PATH" "$WORKFLOW_CONTENT" \
+      "$WORKFLOW_COMMIT_MSG" "$WORKFLOW_COMMIT_MSG_UPDATE"
+  done
+
+  for BRANCH in "${SCRIPT_BRANCHES[@]}"; do
+    deploy_file "$FULL_REPO" "$BRANCH" \
+      "$SCRIPT_TARGET_PATH" "$SCRIPT_CONTENT" \
+      "$SCRIPT_COMMIT_MSG" "$SCRIPT_COMMIT_MSG_UPDATE"
   done
 
   echo ""
@@ -180,7 +203,6 @@ echo -e "  ${YELLOW}Actualizados: ${UPDATED}${NC}"
 echo -e "  ${GRAY}Sin cambios:  ${SKIPPED}${NC}"
 [ "$ERRORS" -gt 0 ] && echo -e "  ${RED}Errores:      ${ERRORS}${NC}"
 echo ""
-echo "El auto-tag se activará al mergear el próximo PR de release/* hacia qa o main."
-echo "Los checks de validación (validate, security, commitlint, release-validate)"
-echo "se disparan automáticamente via rulesets — no requieren este archivo."
+echo "Auto-tag activado en releases y reverts que mergeen a qa o main."
+echo "Script revert-release.sh disponible en develop de todos los repos."
 echo ""
