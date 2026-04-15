@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-15T14:23:23.496Z",
+  "generated_at": "2026-04-15T15:58:16.513Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 53,
+      "prs_30d": 54,
       "prs_90d": 107,
-      "last_activity": "2026-04-14T22:05:36Z",
+      "last_activity": "2026-04-15T15:57:58Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 82
+          "prs": 81
         },
         {
           "repo": "portal-nutrabiotics",
@@ -27,7 +27,7 @@
         },
         {
           "repo": "nutrabiotics-certificates-backend",
-          "prs": 2
+          "prs": 3
         }
       ],
       "by_branch": {
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W16",
-          "prs": 5
+          "prs": 6
         }
       ]
     },
@@ -694,12 +694,12 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 8,
-      "prs_90d": 37,
+      "prs_90d": 36,
       "last_activity": "2026-04-13T21:04:48Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 13
+          "prs": 12
         },
         {
           "repo": "microservice_payments",
@@ -715,7 +715,7 @@
         }
       ],
       "by_branch": {
-        "develop": 33,
+        "develop": 32,
         "qa": 3,
         "main": 1
       },
