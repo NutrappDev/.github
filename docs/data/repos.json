@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T17:53:32.317Z",
+  "generated_at": "2026-04-15T20:01:05.955Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3035,7 +3035,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T16:31:42Z",
+      "last_push": "2026-04-15T20:00:45Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3101,6 +3101,19 @@
         "to_qa": {
           "count": 19,
           "recent_commits": [
+            {
+              "sha": "8b4c19d",
+              "message": "refactor(erp): builder execution change FFCO-562",
+              "date": "2026-04-15T20:00:42Z",
+              "author": "meraso-nutra",
+              "pr_number": "316",
+              "tickets": [
+                {
+                  "id": "FFCO-562",
+                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
+                }
+              ]
+            },
             {
               "sha": "e11c03b",
               "message": "feat(orders): agregar estado para identificar guardado en epicor SUP-287",
@@ -3328,19 +3341,6 @@
               "date": "2026-01-15T20:48:34Z",
               "author": "fabianromerolu",
               "pr_number": "208",
-              "tickets": [
-                {
-                  "id": "ALCO-1331",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1331"
-                }
-              ]
-            },
-            {
-              "sha": "6bcb605",
-              "message": "feat: pdf_hormonal_v3 ALCO-1331",
-              "date": "2026-01-15T18:07:06Z",
-              "author": "fabianromerolu",
-              "pr_number": "207",
               "tickets": [
                 {
                   "id": "ALCO-1331",
