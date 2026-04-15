@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-15T21:32:26.013Z",
+  "generated_at": "2026-04-15T21:37:26.844Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 56,
-      "prs_90d": 108,
-      "last_activity": "2026-04-15T21:32:09Z",
+      "prs_30d": 57,
+      "prs_90d": 109,
+      "last_activity": "2026-04-15T21:37:08Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -23,7 +23,7 @@
         },
         {
           "repo": "nutrabiotics-certificates-backend",
-          "prs": 5
+          "prs": 6
         },
         {
           "repo": "monorepo-alivia-backend",
@@ -33,7 +33,7 @@
       "by_branch": {
         "develop": 52,
         "qa": 32,
-        "main": 24
+        "main": 25
       },
       "weekly": [
         {
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W16",
-          "prs": 9
+          "prs": 10
         }
       ]
     },
