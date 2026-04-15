@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T20:01:05.955Z",
+  "generated_at": "2026-04-15T21:44:33.548Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -74,6 +74,11 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2817": {
+      "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
+      "status": "Esperando aprobación",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "PMO-2813": {
       "summary": "Alivia Colombia - Banner de Alivia en el Home de Nutrabiotics.info",
       "status": "Despliegue a QA",
@@ -91,7 +96,7 @@
     },
     "PMO-2690": {
       "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
     "PMO-2676": {
@@ -329,11 +334,6 @@
       "status": "Detenido",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
-    "CA-31": {
-      "summary": "BG | Iniciar Sesión | error 500",
-      "status": "Despliegue a DEV",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
@@ -363,6 +363,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1492": {
+      "summary": "Actualizacion de productos en la bolsa",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1471": {
       "summary": "Integrar el tracking de carrito y datos de sesión",
@@ -498,11 +503,6 @@
       "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-34": {
-      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -514,64 +514,22 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T17:53:07Z",
+      "last_push": "2026-04-15T21:37:42Z",
       "topics": [],
-      "production": null,
+      "production": {
+        "version": "prod-2026-04-15",
+        "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
+        "date": "2026-04-15T21:37:22Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
+        "body": "Release prod-2026-04-15\n"
+      },
       "production_history": [],
       "qa": null,
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "f9aa873",
-              "message": "fix: CA-31 build",
-              "date": "2026-04-15T17:53:05Z",
-              "author": "CristiGB",
-              "pr_number": "90",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            },
-            {
-              "sha": "1996e49",
-              "message": "fix(webpack): remove TerserPlugin configuration CA-31",
-              "date": "2026-04-15T16:37:25Z",
-              "author": "CristiGB",
-              "pr_number": "89",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            },
-            {
-              "sha": "a3fa53f",
-              "message": "fix(serverless): add AWS credentials to environment variables CA-31",
-              "date": "2026-04-15T15:57:58Z",
-              "author": "CristiGB",
-              "pr_number": "88",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            },
-            {
-              "sha": "baa98e0",
-              "message": "feat(certificates): Add endpoint to list all certificates ",
-              "date": "2026-02-16T22:09:36Z",
-              "author": "CristiGB",
-              "pr_number": "86",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -1088,7 +1046,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T16:56:06Z",
+      "last_push": "2026-04-15T21:32:11Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -1166,8 +1124,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "b534d20",
+              "message": "fix: ALCO-1492 update cart",
+              "date": "2026-04-15T21:32:09Z",
+              "author": "CristiGB",
+              "pr_number": "417",
+              "tickets": [
+                {
+                  "id": "ALCO-1492",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1492"
+                }
+              ]
+            },
             {
               "sha": "b0ac1f1",
               "message": "feat(tracking): integrar eventos GA4 de carrito y sesión ALCO-1471",
@@ -1268,7 +1239,7 @@
           ]
         },
         "to_production": {
-          "count": 23,
+          "count": 22,
           "recent_commits": [
             {
               "sha": "5dd75b2",
@@ -1484,14 +1455,6 @@
               "date": "2026-01-19T22:16:36Z",
               "author": "CristiGB",
               "pr_number": "287",
-              "tickets": []
-            },
-            {
-              "sha": "5ec5ae0",
-              "message": "Develop",
-              "date": "2026-01-15T20:29:00Z",
-              "author": "CristiGB",
-              "pr_number": "284",
               "tickets": []
             }
           ]
@@ -3035,7 +2998,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T20:00:45Z",
+      "last_push": "2026-04-15T21:44:10Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3101,6 +3064,19 @@
         "to_qa": {
           "count": 19,
           "recent_commits": [
+            {
+              "sha": "5f56994",
+              "message": "fix(prescriptions): register pdf PMO-2817",
+              "date": "2026-04-15T21:44:08Z",
+              "author": "fabianromerolu",
+              "pr_number": "318",
+              "tickets": [
+                {
+                  "id": "PMO-2817",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
+                }
+              ]
+            },
             {
               "sha": "8b4c19d",
               "message": "refactor(erp): builder execution change FFCO-562",
@@ -3328,19 +3304,6 @@
               "date": "2026-01-15T22:01:12Z",
               "author": "fabianromerolu",
               "pr_number": "209",
-              "tickets": [
-                {
-                  "id": "ALCO-1331",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1331"
-                }
-              ]
-            },
-            {
-              "sha": "689535d",
-              "message": "feat: pdf_hormonal_v3 ALCO-1331",
-              "date": "2026-01-15T20:48:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "208",
               "tickets": [
                 {
                   "id": "ALCO-1331",
