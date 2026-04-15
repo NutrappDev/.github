@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-15T16:37:44.125Z",
+  "generated_at": "2026-04-15T21:32:26.013Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 55,
-      "prs_90d": 107,
-      "last_activity": "2026-04-15T16:37:25Z",
+      "prs_30d": 56,
+      "prs_90d": 108,
+      "last_activity": "2026-04-15T21:32:09Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -22,17 +22,17 @@
           "prs": 8
         },
         {
-          "repo": "monorepo-alivia-backend",
+          "repo": "nutrabiotics-certificates-backend",
           "prs": 5
         },
         {
-          "repo": "nutrabiotics-certificates-backend",
-          "prs": 4
+          "repo": "monorepo-alivia-backend",
+          "prs": 5
         }
       ],
       "by_branch": {
-        "develop": 50,
-        "qa": 33,
+        "develop": 52,
+        "qa": 32,
         "main": 24
       },
       "weekly": [
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W16",
-          "prs": 7
+          "prs": 9
         }
       ]
     },
@@ -454,12 +454,12 @@
       "login": "meraso-nutra",
       "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
       "prs_30d": 12,
-      "prs_90d": 29,
-      "last_activity": "2026-04-13T20:36:55Z",
+      "prs_90d": 30,
+      "last_activity": "2026-04-15T20:00:42Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 26
+          "prs": 27
         },
         {
           "repo": "microservice_payments",
@@ -467,7 +467,7 @@
         }
       ],
       "by_branch": {
-        "develop": 28,
+        "develop": 29,
         "qa": 0,
         "main": 1
       },
@@ -522,7 +522,7 @@
         },
         {
           "week": "2026-W16",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
@@ -694,7 +694,7 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 8,
-      "prs_90d": 36,
+      "prs_90d": 34,
       "last_activity": "2026-04-13T21:04:48Z",
       "by_repo": [
         {
@@ -711,11 +711,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 8
+          "prs": 6
         }
       ],
       "by_branch": {
-        "develop": 32,
+        "develop": 30,
         "qa": 3,
         "main": 1
       },
