@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T16:22:54.693Z",
+  "generated_at": "2026-04-16T16:58:01.412Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -364,6 +364,11 @@
       "status": "Actividad completada",
       "assignee": "Felipe Berrio"
     },
+    "ALMX-257": {
+      "summary": "BG | Productos | Se muestra mensaje de IVA aunque los productos no aplican",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-246": {
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
       "status": "Actividad completada",
@@ -381,22 +386,22 @@
     },
     "ALCO-1472": {
       "summary": "Configurar GTM, GA4 y dashboards de conversión",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1471": {
       "summary": "Integrar el tracking de carrito y datos de sesión",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1470": {
       "summary": "Integrar el tracking en el flujo de checkout",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1469": {
       "summary": "Crear la infraestructura base de tracking",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "ALCO-1451": {
@@ -498,11 +503,6 @@
       "summary": "Despliegues semanales del backend de Alivia Colombia a ambiente de producción - Enero 2026",
       "status": "Actividad completada",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
-    },
-    "ALCO-404": {
-      "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
-      "status": "Despliegue a PROD",
-      "assignee": "Fabián Mauricio Romero Lugo"
     }
   },
   "repos": [
@@ -1046,7 +1046,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T16:22:29Z",
+      "last_push": "2026-04-16T16:57:34Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -1124,8 +1124,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "8b4fe0a",
+              "message": "feat(payment): add subtotal excluding IVA and formatted IVA for Mexican orders ALMX-257",
+              "date": "2026-04-16T16:57:33Z",
+              "author": "CristiGB",
+              "pr_number": "420",
+              "tickets": [
+                {
+                  "id": "ALMX-257",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-257"
+                }
+              ]
+            },
             {
               "sha": "e565d06",
               "message": "feat(tracking): configurar GTM condicional por entorno ALCO-1472",
