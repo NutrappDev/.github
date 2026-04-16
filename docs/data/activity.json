@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-16T20:50:03.292Z",
+  "generated_at": "2026-04-16T21:28:50.850Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 57,
-      "prs_90d": 111,
-      "last_activity": "2026-04-16T16:57:33Z",
+      "prs_30d": 58,
+      "prs_90d": 112,
+      "last_activity": "2026-04-16T21:28:34Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 82
+          "prs": 83
         },
         {
           "repo": "portal-nutrabiotics",
@@ -32,7 +32,7 @@
       ],
       "by_branch": {
         "develop": 54,
-        "qa": 32,
+        "qa": 33,
         "main": 25
       },
       "weekly": [
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W16",
-          "prs": 12
+          "prs": 13
         }
       ]
     },
