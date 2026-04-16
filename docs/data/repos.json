@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T16:58:01.412Z",
+  "generated_at": "2026-04-16T18:00:57.830Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -101,7 +101,7 @@
     },
     "PMO-2704": {
       "summary": "Visualización precio de lista en mi dispensario",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2690": {
@@ -366,7 +366,7 @@
     },
     "ALMX-257": {
       "summary": "BG | Productos | Se muestra mensaje de IVA aunque los productos no aplican",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-246": {
@@ -1765,7 +1765,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T15:39:11Z",
+      "last_push": "2026-04-16T18:00:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -1822,8 +1822,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "3a22dba",
+              "message": "fix(orders): se corrige error de tipado SUP-286",
+              "date": "2026-04-16T18:00:43Z",
+              "author": "jsandoval-dev",
+              "pr_number": "185",
+              "tickets": [
+                {
+                  "id": "SUP-286",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
+                }
+              ]
+            },
             {
               "sha": "1509786",
               "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
@@ -3024,7 +3037,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T16:17:35Z",
+      "last_push": "2026-04-16T18:00:28Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3088,8 +3101,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 21,
           "recent_commits": [
+            {
+              "sha": "fc39a23",
+              "message": "refactor(erp): return when the order is completed FFCO-562",
+              "date": "2026-04-16T18:00:26Z",
+              "author": "meraso-nutra",
+              "pr_number": "321",
+              "tickets": [
+                {
+                  "id": "FFCO-562",
+                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
+                }
+              ]
+            },
             {
               "sha": "e2d30f9",
               "message": "refactor(erp): process completed orders FFCO-562",
