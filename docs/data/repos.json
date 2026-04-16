@@ -1,11 +1,16 @@
 {
-  "generated_at": "2026-04-16T15:03:46.411Z",
+  "generated_at": "2026-04-16T15:29:58.514Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
+      "status": "En proceso",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "SUP-286": {
+      "summary": "Botón para reenvío de órdenes fallidas a ERP",
       "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
@@ -76,7 +81,7 @@
     },
     "PMO-2817": {
       "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2813": {
@@ -498,11 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -2985,7 +2985,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T14:58:59Z",
+      "last_push": "2026-04-16T15:29:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3049,8 +3049,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 18,
+          "count": 19,
           "recent_commits": [
+            {
+              "sha": "93ff572",
+              "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
+              "date": "2026-04-16T15:29:29Z",
+              "author": "jsandoval-dev",
+              "pr_number": "319",
+              "tickets": [
+                {
+                  "id": "SUP-286",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
+                }
+              ]
+            },
             {
               "sha": "5f56994",
               "message": "fix(prescriptions): register pdf PMO-2817",
