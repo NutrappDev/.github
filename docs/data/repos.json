@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T15:29:58.514Z",
+  "generated_at": "2026-04-16T15:39:40.343Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1739,7 +1739,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T14:14:21Z",
+      "last_push": "2026-04-16T15:39:11Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -1796,8 +1796,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "1509786",
+              "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
+              "date": "2026-04-16T15:39:09Z",
+              "author": "jsandoval-dev",
+              "pr_number": "184",
+              "tickets": [
+                {
+                  "id": "SUP-286",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
+                }
+              ]
+            },
             {
               "sha": "00dbe02",
               "message": "feat(events): implementar funcionalidad de eventos y gestion de etiquetas SUP-274",
