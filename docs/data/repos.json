@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-16T16:18:07.925Z",
+  "generated_at": "2026-04-16T16:22:54.693Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -379,6 +379,11 @@
       "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
+    "ALCO-1472": {
+      "summary": "Configurar GTM, GA4 y dashboards de conversión",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
     "ALCO-1471": {
       "summary": "Integrar el tracking de carrito y datos de sesión",
       "status": "Despliegue a DEV",
@@ -498,11 +503,6 @@
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
       "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-402": {
-      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     }
   },
   "repos": [
@@ -1046,7 +1046,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T15:03:16Z",
+      "last_push": "2026-04-16T16:22:29Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -1124,8 +1124,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "e565d06",
+              "message": "feat(tracking): configurar GTM condicional por entorno ALCO-1472",
+              "date": "2026-04-16T16:22:27Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "416",
+              "tickets": [
+                {
+                  "id": "ALCO-1472",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1472"
+                }
+              ]
+            },
             {
               "sha": "f586790",
               "message": "feat(ProductCard): add discount display and pricing logic based on user purchase level PMO-2704",
