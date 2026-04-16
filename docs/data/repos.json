@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-15T21:44:33.548Z",
+  "generated_at": "2026-04-16T15:03:46.411Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -92,6 +92,11 @@
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
       "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2704": {
+      "summary": "Visualización precio de lista en mi dispensario",
+      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2690": {
@@ -321,7 +326,7 @@
     },
     "CIMF-262": {
       "summary": "Carrusel de imágenes de eventos anteriores",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Kevin Aguilera"
     },
     "CIMF-256": {
@@ -366,7 +371,7 @@
     },
     "ALCO-1492": {
       "summary": "Actualizacion de productos en la bolsa",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1471": {
@@ -498,14 +503,85 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-16T13:40:22Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "61dc9c2",
+              "message": "feat: CIMF-262 Carrousel past events",
+              "date": "2026-04-15T14:18:48Z",
+              "author": "k-aguilera",
+              "pr_number": "5",
+              "tickets": [
+                {
+                  "id": "CIMF-262",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-262"
+                }
+              ]
+            },
+            {
+              "sha": "d4d92fe",
+              "message": "refactor: CIMF-237 initial sections",
+              "date": "2026-04-14T13:27:32Z",
+              "author": "k-aguilera",
+              "pr_number": "2",
+              "tickets": [
+                {
+                  "id": "CIMF-237",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-237"
+                }
+              ]
+            },
+            {
+              "sha": "8b985a6",
+              "message": "refactor: CIMF-256 Agenda and sede section",
+              "date": "2026-04-14T14:15:12Z",
+              "author": "k-aguilera",
+              "pr_number": "4",
+              "tickets": [
+                {
+                  "id": "CIMF-256",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-256"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
@@ -563,82 +639,6 @@
         "to_qa": {
           "count": 0,
           "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-15T17:16:06Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "61dc9c2",
-              "message": "feat: CIMF-262 Carrousel past events",
-              "date": "2026-04-15T14:18:48Z",
-              "author": "k-aguilera",
-              "pr_number": "5",
-              "tickets": [
-                {
-                  "id": "CIMF-262",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-262"
-                }
-              ]
-            },
-            {
-              "sha": "d4d92fe",
-              "message": "refactor: CIMF-237 initial sections",
-              "date": "2026-04-14T13:27:32Z",
-              "author": "k-aguilera",
-              "pr_number": "2",
-              "tickets": [
-                {
-                  "id": "CIMF-237",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-237"
-                }
-              ]
-            },
-            {
-              "sha": "8b985a6",
-              "message": "refactor: CIMF-256 Agenda and sede section",
-              "date": "2026-04-14T14:15:12Z",
-              "author": "k-aguilera",
-              "pr_number": "4",
-              "tickets": [
-                {
-                  "id": "CIMF-256",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-256"
-                }
-              ]
-            }
-          ]
         },
         "to_production": {
           "count": 0,
@@ -1046,7 +1046,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T21:32:11Z",
+      "last_push": "2026-04-16T15:03:16Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -1124,8 +1124,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "f586790",
+              "message": "feat(ProductCard): add discount display and pricing logic based on user purchase level PMO-2704",
+              "date": "2026-04-16T15:03:14Z",
+              "author": "CristiGB",
+              "pr_number": "418",
+              "tickets": [
+                {
+                  "id": "PMO-2704",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2704"
+                }
+              ]
+            },
             {
               "sha": "b534d20",
               "message": "fix: ALCO-1492 update cart",
@@ -1726,7 +1739,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T12:42:39Z",
+      "last_push": "2026-04-16T14:14:21Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -2721,7 +2734,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 3,
           "recent_commits": [
             {
               "sha": "5258702",
@@ -2754,19 +2767,6 @@
                 {
                   "id": "AIA-34",
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-34"
-                }
-              ]
-            },
-            {
-              "sha": "d999ee7",
-              "message": "fix: implement streaming responses and optimize OpenAI service (AIA-32)",
-              "date": "2026-01-16T14:04:06Z",
-              "author": "Jhelcy-Sandoval",
-              "pr_number": "5",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
                 }
               ]
             }
@@ -2802,7 +2802,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 3,
           "recent_commits": [
             {
               "sha": "0e0ff7e",
@@ -2831,19 +2831,6 @@
               "date": "2026-01-19T16:13:49Z",
               "author": "jsandoval-dev",
               "pr_number": "27",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
-            },
-            {
-              "sha": "a06e5fe",
-              "message": "fix: separate useEffect hooks and improve streaming message handling (AIA-32)",
-              "date": "2026-01-16T14:12:41Z",
-              "author": "Jhelcy-Sandoval",
-              "pr_number": "26",
               "tickets": [
                 {
                   "id": "AIA-32",
@@ -2998,7 +2985,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T21:44:10Z",
+      "last_push": "2026-04-16T14:58:59Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3062,7 +3049,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 19,
+          "count": 18,
           "recent_commits": [
             {
               "sha": "5f56994",
@@ -3291,19 +3278,6 @@
               "date": "2026-01-19T13:39:47Z",
               "author": "fabianromerolu",
               "pr_number": "210",
-              "tickets": [
-                {
-                  "id": "ALCO-1331",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1331"
-                }
-              ]
-            },
-            {
-              "sha": "e3e889d",
-              "message": "feat(prescriptios): ajuste de pdf ALCO-1331",
-              "date": "2026-01-15T22:01:12Z",
-              "author": "fabianromerolu",
-              "pr_number": "209",
               "tickets": [
                 {
                   "id": "ALCO-1331",
