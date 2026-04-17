@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-17T13:50:53.161Z",
+  "generated_at": "2026-04-17T19:23:23.237Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -104,6 +104,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "PMO-2714": {
+      "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "PMO-2690": {
       "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
       "status": "Actividad completada",
@@ -156,6 +161,11 @@
     },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
+      "status": "Despliegue a DEV",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-243": {
+      "summary": "Implementar recepción de órdenes desde webhook de pagos",
       "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
@@ -493,16 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -2954,7 +2954,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T14:37:16Z",
+      "last_push": "2026-04-17T19:12:24Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2977,8 +2977,22 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "c41b8c5",
+              "message": "refactor(PMO-2714): restore products item in main navigation menu",
+              "date": "2026-04-17T19:12:21Z",
+              "author": "mladino-source",
+              "pr_number": "5",
+              "tickets": [
+                {
+                  "id": "PMO-2714",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2714"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 1,
@@ -3011,7 +3025,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-17T13:43:09Z",
+      "last_push": "2026-04-17T19:23:02Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3077,6 +3091,19 @@
         "to_qa": {
           "count": 22,
           "recent_commits": [
+            {
+              "sha": "e24b4ec",
+              "message": "feat(webhook): recepcion de ordenes desde webhook NE-243",
+              "date": "2026-04-17T19:23:00Z",
+              "author": "jsandoval-dev",
+              "pr_number": "322",
+              "tickets": [
+                {
+                  "id": "NE-243",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-243"
+                }
+              ]
+            },
             {
               "sha": "4dfd338",
               "message": "refactor(events): solucionar errores de lint microservicio events NCR-103",
@@ -3347,19 +3374,6 @@
                 {
                   "id": "ALCO-1305",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1305"
-                }
-              ]
-            },
-            {
-              "sha": "bf8a7d6",
-              "message": "feat(prescriptions): pdf hormonas ALCO-1331",
-              "date": "2026-01-19T13:39:47Z",
-              "author": "fabianromerolu",
-              "pr_number": "210",
-              "tickets": [
-                {
-                  "id": "ALCO-1331",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1331"
                 }
               ]
             }
