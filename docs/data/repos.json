@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-04-17T19:23:23.237Z",
+  "generated_at": "2026-04-20T05:51:06.961Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-286": {
       "summary": "Botón para reenvío de órdenes fallidas a ERP",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-285": {
       "summary": "Ocultar botón \"Relanzar\" tras ejecución",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-281": {
@@ -106,7 +106,7 @@
     },
     "PMO-2714": {
       "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
@@ -161,7 +161,7 @@
     },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-243": {
@@ -196,7 +196,7 @@
     },
     "NCR-103": {
       "summary": "ms- Eventos",
-      "status": "Despliegue a DEV",
+      "status": "Esperando aprobación",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-12": {
@@ -476,7 +476,7 @@
     },
     "ALCO-898": {
       "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Revisión QA",
+      "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
@@ -860,7 +860,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-17T13:50:29Z",
+      "last_push": "2026-04-20T03:43:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1335,7 +1335,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 7,
           "recent_commits": [
             {
               "sha": "d2b236a",
@@ -1402,27 +1402,11 @@
               "author": "CristiGB",
               "pr_number": "289",
               "tickets": []
-            },
-            {
-              "sha": "2f164d8",
-              "message": "refactor: update shipping logic ",
-              "date": "2026-01-19T21:49:20Z",
-              "author": "CristiGB",
-              "pr_number": "286",
-              "tickets": []
-            },
-            {
-              "sha": "b1a0d91",
-              "message": "feat: add Duitama to shipping cities and update hormone prices in JSON",
-              "date": "2026-01-19T20:41:52Z",
-              "author": "CristiGB",
-              "pr_number": "285",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 23,
+          "count": 22,
           "recent_commits": [
             {
               "sha": "56b34a0",
@@ -1638,14 +1622,6 @@
               "date": "2026-02-06T21:36:54Z",
               "author": "CristiGB",
               "pr_number": "309",
-              "tickets": []
-            },
-            {
-              "sha": "2f164d8",
-              "message": "refactor: update shipping logic  (#286)",
-              "date": "2026-01-19T22:16:36Z",
-              "author": "CristiGB",
-              "pr_number": "287",
               "tickets": []
             }
           ]
@@ -2828,7 +2804,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 2,
           "recent_commits": [
             {
               "sha": "0e0ff7e",
@@ -2850,19 +2826,6 @@
               "author": "jsandoval-dev",
               "pr_number": "28",
               "tickets": []
-            },
-            {
-              "sha": "9268caf",
-              "message": "fix(chat): optimize socket connection lifecycle and improve message handling (AIA-32)",
-              "date": "2026-01-19T16:13:49Z",
-              "author": "jsandoval-dev",
-              "pr_number": "27",
-              "tickets": [
-                {
-                  "id": "AIA-32",
-                  "url": "https://nutrabiotics.atlassian.net/browse/AIA-32"
-                }
-              ]
             }
           ]
         },
@@ -3025,7 +2988,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-17T19:23:02Z",
+      "last_push": "2026-04-20T05:34:16Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3089,8 +3052,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 22,
+          "count": 23,
           "recent_commits": [
+            {
+              "sha": "8801ac3",
+              "message": "feat(erp): endpoint to obtain customer and shipto FFCO-562",
+              "date": "2026-04-17T20:36:03Z",
+              "author": "meraso-nutra",
+              "pr_number": "323",
+              "tickets": [
+                {
+                  "id": "FFCO-562",
+                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
+                }
+              ]
+            },
             {
               "sha": "e24b4ec",
               "message": "feat(webhook): recepcion de ordenes desde webhook NE-243",
