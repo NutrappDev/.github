@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T05:51:06.961Z",
+  "generated_at": "2026-04-20T13:29:22.749Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -196,7 +196,7 @@
     },
     "NCR-103": {
       "summary": "ms- Eventos",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-12": {
@@ -476,7 +476,7 @@
     },
     "ALCO-898": {
       "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
@@ -603,7 +603,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T21:42:41Z",
+      "last_push": "2026-04-20T12:16:19Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -2988,7 +2988,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T05:34:16Z",
+      "last_push": "2026-04-20T13:28:57Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3054,6 +3054,19 @@
         "to_qa": {
           "count": 23,
           "recent_commits": [
+            {
+              "sha": "e5d0c06",
+              "message": "feat(events): add individual get for events and implemented missing attributes in tags SUP-281",
+              "date": "2026-04-20T13:28:54Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "314",
+              "tickets": [
+                {
+                  "id": "SUP-281",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-281"
+                }
+              ]
+            },
             {
               "sha": "8801ac3",
               "message": "feat(erp): endpoint to obtain customer and shipto FFCO-562",
@@ -3337,19 +3350,6 @@
                 {
                   "id": "ALCO-1311",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1311"
-                }
-              ]
-            },
-            {
-              "sha": "f92c9d0",
-              "message": "feat(prescriptions): new_functional_logic_ ALCO-1305",
-              "date": "2026-01-20T15:59:56Z",
-              "author": "fabianromerolu",
-              "pr_number": "211",
-              "tickets": [
-                {
-                  "id": "ALCO-1305",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1305"
                 }
               ]
             }
