@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-04-20T15:23:53.924Z",
+  "generated_at": "2026-04-20T22:54:56.085Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-292": {
+      "summary": "Bug actualizacion de pdf de autorizaciones",
+      "status": "En proceso",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
       "status": "Despliegue a QA",
@@ -91,7 +96,7 @@
     },
     "PMO-2770": {
       "summary": "Actualización  de información Pagina Nutrabiotics.info",
-      "status": "Despliegue a DEV",
+      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2765": {
@@ -101,7 +106,7 @@
     },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
-      "status": "Despliegue a DEV",
+      "status": "Revisión QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2725": {
@@ -111,7 +116,7 @@
     },
     "PMO-2714": {
       "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
@@ -161,7 +166,7 @@
     },
     "PALCO-51": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-247": {
@@ -326,7 +331,7 @@
     },
     "FFCO-562": {
       "summary": "Validar flujo completo de creación de órdenes",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "DGWNC-1": {
@@ -349,25 +354,10 @@
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
-    "CIMF-274": {
-      "summary": "Sección Preguntas frecuentes",
-      "status": "Despliegue a QA",
+    "CIMF-276": {
+      "summary": "Incidencia centralización de ajustes (dev)",
+      "status": "En proceso",
       "assignee": "Kevin Aguilera"
-    },
-    "CIMF-262": {
-      "summary": "Carrusel de imágenes de eventos anteriores",
-      "status": "Despliegue a QA",
-      "assignee": "Kevin Aguilera"
-    },
-    "CIMF-256": {
-      "summary": "Cronograma general y acceder al detalle de la agenda",
-      "status": "Despliegue a QA",
-      "assignee": "Kevin Aguilera"
-    },
-    "CIMF-237": {
-      "summary": "MCCT de actualización landing CIMF",
-      "status": "Detenido",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
@@ -503,6 +493,16 @@
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
       "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-402": {
+      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -514,7 +514,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-17T02:34:37Z",
+      "last_push": "2026-04-20T22:39:37Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -525,65 +525,35 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 1,
           "recent_commits": [
             {
-              "sha": "9cca074",
-              "message": "refactor: CIMF-274 sponsor section and refactor agenda",
-              "date": "2026-04-16T22:59:43Z",
+              "sha": "9cf17fa",
+              "message": "fix: ajustes generales CIMF-276",
+              "date": "2026-04-20T22:39:37Z",
               "author": "k-aguilera",
-              "pr_number": "6",
+              "pr_number": "8",
               "tickets": [
                 {
-                  "id": "CIMF-274",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-274"
-                }
-              ]
-            },
-            {
-              "sha": "61dc9c2",
-              "message": "feat: CIMF-262 Carrousel past events",
-              "date": "2026-04-15T14:18:48Z",
-              "author": "k-aguilera",
-              "pr_number": "5",
-              "tickets": [
-                {
-                  "id": "CIMF-262",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-262"
-                }
-              ]
-            },
-            {
-              "sha": "d4d92fe",
-              "message": "refactor: CIMF-237 initial sections",
-              "date": "2026-04-14T13:27:32Z",
-              "author": "k-aguilera",
-              "pr_number": "2",
-              "tickets": [
-                {
-                  "id": "CIMF-237",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-237"
-                }
-              ]
-            },
-            {
-              "sha": "8b985a6",
-              "message": "refactor: CIMF-256 Agenda and sede section",
-              "date": "2026-04-14T14:15:12Z",
-              "author": "k-aguilera",
-              "pr_number": "4",
-              "tickets": [
-                {
-                  "id": "CIMF-256",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-256"
+                  "id": "CIMF-276",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-276"
                 }
               ]
             }
           ]
         },
         "to_production": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
         }
       },
       "ci": null,
@@ -603,7 +573,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T15:23:27Z",
+      "last_push": "2026-04-20T22:36:35Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -667,8 +637,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "5f0abcd",
+              "message": "fix(authorizations): bug pdf SUP-292",
+              "date": "2026-04-20T21:08:18Z",
+              "author": "fabianromerolu",
+              "pr_number": "192",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
+            {
+              "sha": "c690c36",
+              "message": "refactor(points): points module PMO-2741",
+              "date": "2026-04-20T19:34:32Z",
+              "author": "fabianromerolu",
+              "pr_number": "190",
+              "tickets": [
+                {
+                  "id": "PMO-2741",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2741"
+                }
+              ]
+            },
             {
               "sha": "3518da3",
               "message": "refactor(points): points module PMO-2741",
@@ -1348,7 +1344,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 6,
           "recent_commits": [
             {
               "sha": "d2b236a",
@@ -1406,14 +1402,6 @@
               "date": "2026-01-23T16:30:45Z",
               "author": "CristiGB",
               "pr_number": "292",
-              "tickets": []
-            },
-            {
-              "sha": "aafdddf",
-              "message": "refactor: update useEffect dependencies in ProductCardHormonePrescription",
-              "date": "2026-01-20T19:24:02Z",
-              "author": "CristiGB",
-              "pr_number": "289",
               "tickets": []
             }
           ]
@@ -3001,7 +2989,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T13:28:57Z",
+      "last_push": "2026-04-20T22:54:35Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3065,8 +3053,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 23,
+          "count": 24,
           "recent_commits": [
+            {
+              "sha": "10e8898",
+              "message": "fix(prescriptions): bug pdf v2 SUP-292",
+              "date": "2026-04-20T22:54:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "326",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
+            {
+              "sha": "ffdf5f6",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-20T21:17:45Z",
+              "author": "fabianromerolu",
+              "pr_number": "325",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
             {
               "sha": "e5d0c06",
               "message": "feat(events): add individual get for events and implemented missing attributes in tags SUP-281",
@@ -3350,19 +3364,6 @@
                 {
                   "id": "DE-282",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-282"
-                }
-              ]
-            },
-            {
-              "sha": "d5f7337",
-              "message": "fix(prescriptions): ajuste pdf ALCO-1311",
-              "date": "2026-01-21T17:02:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "212",
-              "tickets": [
-                {
-                  "id": "ALCO-1311",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1311"
                 }
               ]
             }
