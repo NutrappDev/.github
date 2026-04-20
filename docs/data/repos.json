@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:29:22.749Z",
+  "generated_at": "2026-04-20T15:23:53.924Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -98,6 +98,11 @@
       "summary": "Superposición del Candy Box sobre el logo en el sitio web",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2741": {
+      "summary": "Base de Puntos Alivia",
+      "status": "Despliegue a DEV",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
@@ -498,11 +503,6 @@
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
       "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-402": {
-      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     }
   },
   "repos": [
@@ -603,7 +603,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T12:16:19Z",
+      "last_push": "2026-04-20T15:23:27Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -667,8 +667,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "3518da3",
+              "message": "refactor(points): points module PMO-2741",
+              "date": "2026-04-20T15:23:22Z",
+              "author": "fabianromerolu",
+              "pr_number": "188",
+              "tickets": [
+                {
+                  "id": "PMO-2741",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2741"
+                }
+              ]
+            },
             {
               "sha": "3a22dba",
               "message": "fix(orders): se corrige error de tipado SUP-286",
