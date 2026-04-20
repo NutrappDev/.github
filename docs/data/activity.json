@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T21:08:33.765Z",
+  "generated_at": "2026-04-20T21:18:02.354Z",
   "window_days": 90,
   "developers": [
     {
@@ -265,9 +265,9 @@
     {
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 11,
-      "prs_90d": 35,
-      "last_activity": "2026-04-20T21:08:18Z",
+      "prs_30d": 12,
+      "prs_90d": 36,
+      "last_activity": "2026-04-20T21:17:45Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -283,11 +283,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 4
+          "prs": 5
         }
       ],
       "by_branch": {
-        "develop": 31,
+        "develop": 32,
         "qa": 3,
         "main": 1
       },
@@ -342,7 +342,7 @@
         },
         {
           "week": "2026-W17",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
