@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T21:53:46.202Z",
+  "generated_at": "2026-04-21T22:03:04.308Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -301,11 +301,6 @@
     },
     "DE-49": {
       "summary": "Crear endpoints de actualización de eventos",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
-    },
-    "DE-12": {
-      "summary": "Crear Documentación de microservicio de eventos",
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
@@ -2863,7 +2858,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T21:43:29Z",
+      "last_push": "2026-04-21T22:02:42Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2927,8 +2922,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 25,
+          "count": 26,
           "recent_commits": [
+            {
+              "sha": "b259f9d",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-21T22:02:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "329",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
             {
               "sha": "3fd2449",
               "message": "refactor(notifications): organizar y refactorizar microservicio notifications NCR-105",
@@ -3238,19 +3246,6 @@
                 {
                   "id": "DE-309",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-309"
-                }
-              ]
-            },
-            {
-              "sha": "6e11a0d",
-              "message": "test(events): bruno documentation for events DE-282",
-              "date": "2026-01-28T18:57:49Z",
-              "author": "meraso-nutra",
-              "pr_number": "217",
-              "tickets": [
-                {
-                  "id": "DE-282",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-282"
                 }
               ]
             }
