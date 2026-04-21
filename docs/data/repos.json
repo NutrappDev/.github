@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T22:54:56.085Z",
+  "generated_at": "2026-04-21T14:43:03.618Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -176,7 +176,7 @@
     },
     "NE-243": {
       "summary": "Implementar recepción de órdenes desde webhook de pagos",
-      "status": "Despliegue a DEV",
+      "status": "Detenido",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-239": {
@@ -203,6 +203,11 @@
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "NCR-105": {
+      "summary": "ms- Notificaciones",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-103": {
       "summary": "ms- Eventos",
@@ -356,7 +361,7 @@
     },
     "CIMF-276": {
       "summary": "Incidencia centralización de ajustes (dev)",
-      "status": "En proceso",
+      "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
     "ALPE-218": {
@@ -498,11 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -573,7 +573,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T22:36:35Z",
+      "last_push": "2026-04-20T22:55:00Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -637,8 +637,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "8581d58",
+              "message": "fix(prescriptions): bug pdf v2 SUP-292",
+              "date": "2026-04-20T22:54:59Z",
+              "author": "fabianromerolu",
+              "pr_number": "193",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
             {
               "sha": "5f0abcd",
               "message": "fix(authorizations): bug pdf SUP-292",
@@ -869,7 +882,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T03:43:17Z",
+      "last_push": "2026-04-21T13:22:24Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1266,7 +1279,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-16T21:28:58Z",
+      "last_push": "2026-04-21T13:50:38Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -2805,7 +2818,7 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 1,
           "recent_commits": [
             {
               "sha": "0e0ff7e",
@@ -2819,14 +2832,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/AIA-57"
                 }
               ]
-            },
-            {
-              "sha": "6f186b5",
-              "message": "comentario para despliegue",
-              "date": "2026-01-21T14:17:12Z",
-              "author": "jsandoval-dev",
-              "pr_number": "28",
-              "tickets": []
             }
           ]
         },
@@ -2989,7 +2994,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T22:54:35Z",
+      "last_push": "2026-04-21T14:42:35Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3053,8 +3058,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 24,
+          "count": 25,
           "recent_commits": [
+            {
+              "sha": "3fd2449",
+              "message": "refactor(notifications): organizar y refactorizar microservicio notifications NCR-105",
+              "date": "2026-04-21T14:42:33Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "313",
+              "tickets": [
+                {
+                  "id": "NCR-105",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-105"
+                }
+              ]
+            },
             {
               "sha": "10e8898",
               "message": "fix(prescriptions): bug pdf v2 SUP-292",
