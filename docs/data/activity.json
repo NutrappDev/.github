@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T22:39:41.086Z",
+  "generated_at": "2026-04-21T23:23:37.961Z",
   "window_days": 90,
   "developers": [
     {
@@ -349,13 +349,13 @@
     {
       "login": "meraso-nutra",
       "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 11,
-      "prs_90d": 33,
-      "last_activity": "2026-04-17T20:36:03Z",
+      "prs_30d": 12,
+      "prs_90d": 34,
+      "last_activity": "2026-04-21T23:23:24Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 30
+          "prs": 31
         },
         {
           "repo": "microservice_payments",
@@ -363,7 +363,7 @@
         }
       ],
       "by_branch": {
-        "develop": 32,
+        "develop": 33,
         "qa": 0,
         "main": 1
       },
@@ -418,7 +418,7 @@
         },
         {
           "week": "2026-W17",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
