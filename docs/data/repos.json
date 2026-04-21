@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T21:48:25.820Z",
+  "generated_at": "2026-04-21T21:53:46.202Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -349,6 +349,11 @@
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
+    "ALCO-1493": {
+      "summary": "Restriccion dentro de la bolsa",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALCO-1451": {
       "summary": "implementacion de descuento promocional",
       "status": "Actividad completada",
@@ -691,7 +696,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T21:48:00Z",
+      "last_push": "2026-04-21T21:53:23Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -731,13 +736,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-16",
-        "sha": "56b34a0321543cb71d86950ddaf986d36d0a0e52",
-        "date": "2026-04-16T21:28:57Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-16",
-        "body": "Release qa-2026-04-16\n"
+        "version": "qa-2026-04-21",
+        "sha": "d501a79fba24a1bd9086be8b66eab1ae603786e7",
+        "date": "2026-04-21T21:48:26Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-21",
+        "body": "Release qa-2026-04-21\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-16",
+          "sha": "56b34a0321543cb71d86950ddaf986d36d0a0e52",
+          "date": "2026-04-16T21:28:57Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-16",
+          "body": "Release qa-2026-04-16\n"
+        },
         {
           "version": "qa-2026-04-13",
           "sha": "5dd75b20ec6c06f5f1f1e9351c3ede7cbc629e6d",
@@ -758,19 +770,25 @@
           "date": "2026-04-08T20:26:12Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-08",
           "body": "Release qa-2026-04-08\n"
-        },
-        {
-          "version": "qa-2026-04-01",
-          "sha": "5778c5df66edc2309b5d1552630a303d8ec359c7",
-          "date": "2026-04-01T19:51:06Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-01",
-          "body": "Release qa-2026-04-01\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "2c7d277",
+              "message": "fix(cart): enhance hormone handling in cart and prescription logic across multiple components ALCO-1493",
+              "date": "2026-04-21T21:53:21Z",
+              "author": "CristiGB",
+              "pr_number": "426",
+              "tickets": [
+                {
+                  "id": "ALCO-1493",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1493"
+                }
+              ]
+            },
             {
               "sha": "d2b236a",
               "message": "refactor(products): improve product unit calculation and enhance pres…",
