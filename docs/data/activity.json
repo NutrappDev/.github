@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-21T20:19:07.001Z",
+  "generated_at": "2026-04-21T22:39:41.086Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 52,
-      "prs_90d": 108,
-      "last_activity": "2026-04-21T20:04:17Z",
+      "prs_30d": 55,
+      "prs_90d": 111,
+      "last_activity": "2026-04-21T22:39:23Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 79
+          "prs": 82
         },
         {
           "repo": "portal-nutrabiotics",
@@ -31,8 +31,8 @@
         }
       ],
       "by_branch": {
-        "develop": 50,
-        "qa": 31,
+        "develop": 52,
+        "qa": 32,
         "main": 27
       },
       "weekly": [
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W17",
-          "prs": 1
+          "prs": 4
         }
       ]
     },
@@ -189,9 +189,9 @@
     {
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 14,
-      "prs_90d": 37,
-      "last_activity": "2026-04-20T22:54:59Z",
+      "prs_30d": 15,
+      "prs_90d": 38,
+      "last_activity": "2026-04-21T22:02:40Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -207,11 +207,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 5
+          "prs": 6
         }
       ],
       "by_branch": {
-        "develop": 33,
+        "develop": 34,
         "qa": 3,
         "main": 1
       },
@@ -266,7 +266,7 @@
         },
         {
           "week": "2026-W17",
-          "prs": 6
+          "prs": 7
         }
       ]
     },
@@ -507,6 +507,102 @@
       ]
     },
     {
+      "login": "jgaray-nutrapp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
+      "prs_30d": 11,
+      "prs_90d": 31,
+      "last_activity": "2026-04-21T21:01:57Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 15
+        },
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 8
+        },
+        {
+          "repo": "SSO-keycloak",
+          "prs": 2
+        },
+        {
+          "repo": "nutrabiotics-empresas",
+          "prs": 2
+        },
+        {
+          "repo": ".github",
+          "prs": 2
+        },
+        {
+          "repo": "microservice_payments",
+          "prs": 1
+        },
+        {
+          "repo": "fruto-landing-amf",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 15,
+        "qa": 7,
+        "main": 9
+      },
+      "weekly": [
+        {
+          "week": "2026-W05",
+          "prs": 3
+        },
+        {
+          "week": "2026-W06",
+          "prs": 3
+        },
+        {
+          "week": "2026-W07",
+          "prs": 2
+        },
+        {
+          "week": "2026-W08",
+          "prs": 2
+        },
+        {
+          "week": "2026-W09",
+          "prs": 5
+        },
+        {
+          "week": "2026-W10",
+          "prs": 1
+        },
+        {
+          "week": "2026-W11",
+          "prs": 2
+        },
+        {
+          "week": "2026-W12",
+          "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 3
+        },
+        {
+          "week": "2026-W14",
+          "prs": 4
+        },
+        {
+          "week": "2026-W15",
+          "prs": 1
+        },
+        {
+          "week": "2026-W16",
+          "prs": 2
+        },
+        {
+          "week": "2026-W17",
+          "prs": 1
+        }
+      ]
+    },
+    {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
       "prs_30d": 11,
@@ -679,102 +775,6 @@
         {
           "week": "2026-W17",
           "prs": 2
-        }
-      ]
-    },
-    {
-      "login": "jgaray-nutrapp",
-      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 10,
-      "prs_90d": 30,
-      "last_activity": "2026-04-14T14:55:56Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 15
-        },
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 8
-        },
-        {
-          "repo": "SSO-keycloak",
-          "prs": 2
-        },
-        {
-          "repo": ".github",
-          "prs": 2
-        },
-        {
-          "repo": "microservice_payments",
-          "prs": 1
-        },
-        {
-          "repo": "nutrabiotics-empresas",
-          "prs": 1
-        },
-        {
-          "repo": "fruto-landing-amf",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 15,
-        "qa": 7,
-        "main": 8
-      },
-      "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 3
-        },
-        {
-          "week": "2026-W06",
-          "prs": 3
-        },
-        {
-          "week": "2026-W07",
-          "prs": 2
-        },
-        {
-          "week": "2026-W08",
-          "prs": 2
-        },
-        {
-          "week": "2026-W09",
-          "prs": 5
-        },
-        {
-          "week": "2026-W10",
-          "prs": 1
-        },
-        {
-          "week": "2026-W11",
-          "prs": 2
-        },
-        {
-          "week": "2026-W12",
-          "prs": 2
-        },
-        {
-          "week": "2026-W13",
-          "prs": 3
-        },
-        {
-          "week": "2026-W14",
-          "prs": 4
-        },
-        {
-          "week": "2026-W15",
-          "prs": 1
-        },
-        {
-          "week": "2026-W16",
-          "prs": 2
-        },
-        {
-          "week": "2026-W17",
-          "prs": 0
         }
       ]
     },
