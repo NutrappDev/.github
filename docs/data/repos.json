@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T14:43:03.618Z",
+  "generated_at": "2026-04-21T17:41:46.798Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -89,18 +89,8 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "PMO-2813": {
-      "summary": "Alivia Colombia - Banner de Alivia en el Home de Nutrabiotics.info",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
     "PMO-2770": {
       "summary": "Actualización  de información Pagina Nutrabiotics.info",
-      "status": "Revisión QA",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2765": {
-      "summary": "Superposición del Candy Box sobre el logo en el sitio web",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
@@ -133,16 +123,6 @@
       "summary": "Alivia México: Fase de Desarrollo ¡Hagámoslo realidad!",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "PMO-2651": {
-      "summary": "Actualización Manual PTEE en Ingles",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2639": {
-      "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2634": {
       "summary": "Error en visualización de pacientes Alivia",
@@ -224,16 +204,6 @@
       "status": "Detenido",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
-    "NCOL-666": {
-      "summary": "Zona Ilumina | Cambio lote de ejemplo",
-      "status": "Despliegue a QA",
-      "assignee": "Juan Medina"
-    },
-    "NCOL-655": {
-      "summary": "Implementar configuración de Prettier, EditorConfig y Husky para estandarización de código en el repositorio de Nutrabiotics Colombia",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
       "status": "Actividad completada",
@@ -248,11 +218,6 @@
       "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "NCOL-641": {
-      "summary": "BG | Carrusel de imágenes | Botón mal ubicado en la imagen número 2",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
     },
     "NCOL-639": {
       "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
@@ -298,21 +263,6 @@
       "summary": "BUG | HOME | TABLET | Cambio de Banner",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "NCOL-372": {
-      "summary": "BG | Tablet | Calidad | Espacio sin contenido en certificados",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "NCOL-363": {
-      "summary": "BG | Inicio Sesión | No muestra imagen de perfil",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "NCOL-362": {
-      "summary": "BG | Mobile | Logo pequeño en el header",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
     },
     "NCOL-256": {
       "summary": "Creacion filtro por compuesto individual - catalogo de productos Nutrabiotcs Colombia",
@@ -503,6 +453,21 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
+    "AIA-43": {
+      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-34": {
+      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -882,7 +847,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T13:22:24Z",
+      "last_push": "2026-04-21T17:41:35Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -922,13 +887,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-03-25",
-        "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
-        "date": "2026-03-25T20:35:01Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
-        "body": "Release qa-2026-03-25\n"
+        "version": "qa-2026-04-21",
+        "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
+        "date": "2026-04-21T17:41:34Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
+        "body": "Release qa-2026-04-21\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-03-25",
+          "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
+          "date": "2026-03-25T20:35:01Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
+          "body": "Release qa-2026-03-25\n"
+        },
         {
           "version": "qa-2026-03-17",
           "sha": "2476952284e1f9c23971b0ebcc0c56945b6c5052",
@@ -949,18 +921,11 @@
           "date": "2026-03-03T19:46:57Z",
           "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-03",
           "body": "Release qa-2026-03-03\n\nFeatures (2):\nPR #27 by Jorge Garay - Agrega sección de banner de packs en página de educación con contenido configurable [PMO-2585]\nPR #36 by Steven León - Agrega atributos cy-data en pantalla de producto individual y corrige visualización de disclaimer [NCOL-573]\n\nFixes (2):\nPR #31 by Jorge Garay - Corrige mensajes de error en rojo en formulario de farmacovigilancia [NCOL-466]\nPR #35 by k-aguilera - Corrige configuración del calendario de eventos en la página principal [PMO-2254]\n"
-        },
-        {
-          "version": "qa-2026-02-24",
-          "sha": "d86ccd0d11f155f94a4f57db8343c987e5785727",
-          "date": "2026-02-25T00:17:15Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-02-24",
-          "body": "Release qa-2026-02-24\n\nOther (1):\nPR #25 by Jorge Garay - Actualiza links de políticas corporativas al bucket S3 y links directos de PDFs [PMO-2639]\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 8,
           "recent_commits": [
             {
               "sha": "ffcf1ba",
@@ -972,45 +937,6 @@
                 {
                   "id": "PMO-2770",
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2770"
-                }
-              ]
-            },
-            {
-              "sha": "27974fe",
-              "message": "fix: arreglar enlaces Alivia y agregar autoplay carrusel apps funcionales PMO-2813",
-              "date": "2026-04-13T15:57:29Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "77",
-              "tickets": [
-                {
-                  "id": "PMO-2813",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2813"
-                }
-              ]
-            },
-            {
-              "sha": "61238b7",
-              "message": "fix(header): [PMO-2765] move candy box below logo to prevent overlay",
-              "date": "2026-04-10T15:40:45Z",
-              "author": "mladino-source",
-              "pr_number": "76",
-              "tickets": [
-                {
-                  "id": "PMO-2765",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2765"
-                }
-              ]
-            },
-            {
-              "sha": "a47238c",
-              "message": "fix(products): actualizar lote de ejemplo a 25-265 en landing calidad IL-51",
-              "date": "2026-04-10T15:38:55Z",
-              "author": "Dev-Juan-Medina-NutraApp",
-              "pr_number": "74",
-              "tickets": [
-                {
-                  "id": "IL-51",
-                  "url": "https://nutrabiotics.atlassian.net/browse/IL-51"
                 }
               ]
             },
@@ -1041,97 +967,6 @@
               ]
             },
             {
-              "sha": "fab4d76",
-              "message": "fix(slider): center \"conoce más\" button in event slide NCOL-641",
-              "date": "2026-03-30T21:59:43Z",
-              "author": "mladino-source",
-              "pr_number": "69",
-              "tickets": [
-                {
-                  "id": "NCOL-641",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-641"
-                }
-              ]
-            },
-            {
-              "sha": "3e40bd7",
-              "message": "fix: arreglar errores notificados por eslint para permitir compilar en amplify NCOL-655",
-              "date": "2026-03-30T21:40:08Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "70",
-              "tickets": [
-                {
-                  "id": "NCOL-655",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-655"
-                }
-              ]
-            },
-            {
-              "sha": "afc0933",
-              "message": "feat(navbar): responsive design navbar NCOL-362",
-              "date": "2026-03-30T17:32:10Z",
-              "author": "mladino-source",
-              "pr_number": "68",
-              "tickets": [
-                {
-                  "id": "NCOL-362",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-362"
-                }
-              ]
-            },
-            {
-              "sha": "3c96d61",
-              "message": "refactor(NCOL-372): ajustes responsivo pagina calidad",
-              "date": "2026-03-30T17:26:00Z",
-              "author": "mladino-source",
-              "pr_number": "55",
-              "tickets": [
-                {
-                  "id": "NCOL-372",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-372"
-                }
-              ]
-            },
-            {
-              "sha": "d672ea6",
-              "message": "refactor: agregar editorconfig, prettier, husky para validaciones y estandarizacion NCOL-655",
-              "date": "2026-03-26T23:11:53Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "67",
-              "tickets": [
-                {
-                  "id": "NCOL-655",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-655"
-                }
-              ]
-            },
-            {
-              "sha": "256bd12",
-              "message": "feat: actualizacion manual PTEE en ingles PMO-2651",
-              "date": "2026-03-26T18:17:11Z",
-              "author": "mladino-source",
-              "pr_number": "66",
-              "tickets": [
-                {
-                  "id": "PMO-2651",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2651"
-                }
-              ]
-            },
-            {
-              "sha": "441a4c2",
-              "message": "feat(policy): actualizar configuracion de politicas PMO-2639",
-              "date": "2026-03-26T18:13:23Z",
-              "author": "mladino-source",
-              "pr_number": "64",
-              "tickets": [
-                {
-                  "id": "PMO-2639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
-                }
-              ]
-            },
-            {
               "sha": "cdc4d80",
               "message": "test: agregar scripts cypress QA-428",
               "date": "2026-03-26T13:37:00Z",
@@ -1141,32 +976,6 @@
                 {
                   "id": "QA-428",
                   "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
-                }
-              ]
-            },
-            {
-              "sha": "d3f8193",
-              "message": "fix(NCOL-363): no se muestra el perfil",
-              "date": "2026-03-20T20:38:50Z",
-              "author": "mladino-source",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "NCOL-363",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-363"
-                }
-              ]
-            },
-            {
-              "sha": "e2b41e2",
-              "message": "fix(NCOL-362): fix_responsive_in_navbar",
-              "date": "2026-03-20T20:35:04Z",
-              "author": "mladino-source",
-              "pr_number": "54",
-              "tickets": [
-                {
-                  "id": "NCOL-362",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-362"
                 }
               ]
             },
@@ -1215,8 +1024,16 @@
           ]
         },
         "to_production": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "60d8548",
+              "message": "release: deploy PRs a QA - 2026-04-20",
+              "date": "2026-04-21T17:41:21Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "80",
+              "tickets": []
+            },
             {
               "sha": "62432ea",
               "message": "release: deploy PRs #58, #59 a QA (NCOL-645, NCOL-639, PMO-2690)",
@@ -1279,7 +1096,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T13:50:38Z",
+      "last_push": "2026-04-21T15:10:40Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-14",
@@ -2994,7 +2811,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T14:42:35Z",
+      "last_push": "2026-04-21T16:35:36Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
