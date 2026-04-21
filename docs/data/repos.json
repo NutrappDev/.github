@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T21:02:19.811Z",
+  "generated_at": "2026-04-21T21:48:25.820Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -346,7 +346,7 @@
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "ALCO-1451": {
@@ -691,7 +691,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T20:18:53Z",
+      "last_push": "2026-04-21T21:48:00Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -772,19 +772,6 @@
           "count": 7,
           "recent_commits": [
             {
-              "sha": "faff4e2",
-              "message": "feat(seasonal-banner): update SeasonalTopBanner ALCO-1498",
-              "date": "2026-04-21T20:18:51Z",
-              "author": "mladino-source",
-              "pr_number": "424",
-              "tickets": [
-                {
-                  "id": "ALCO-1498",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1498"
-                }
-              ]
-            },
-            {
               "sha": "d2b236a",
               "message": "refactor(products): improve product unit calculation and enhance pres…",
               "date": "2026-02-26T21:58:33Z",
@@ -827,6 +814,14 @@
               ]
             },
             {
+              "sha": "95e3b90",
+              "message": "fix: add optional chaining for presentations in PrescriptionReview",
+              "date": "2026-01-23T21:06:10Z",
+              "author": "CristiGB",
+              "pr_number": "298",
+              "tickets": []
+            },
+            {
               "sha": "37187c9",
               "message": "feat: add quantity parsing logic to PrescriptionReview component",
               "date": "2026-01-23T19:40:42Z",
@@ -845,8 +840,21 @@
           ]
         },
         "to_production": {
-          "count": 22,
+          "count": 23,
           "recent_commits": [
+            {
+              "sha": "d501a79",
+              "message": "release: 2026 04 21 update SeasonalTopBanner ALCO-1498",
+              "date": "2026-04-21T21:47:58Z",
+              "author": "CristiGB",
+              "pr_number": "425",
+              "tickets": [
+                {
+                  "id": "ALCO-1498",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1498"
+                }
+              ]
+            },
             {
               "sha": "56b34a0",
               "message": "release: qa 2026 04 16",
@@ -2837,7 +2845,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T16:35:36Z",
+      "last_push": "2026-04-21T21:43:29Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
