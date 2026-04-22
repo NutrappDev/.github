@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T19:55:59.613Z",
+  "generated_at": "2026-04-22T22:17:55.029Z",
   "window_days": 90,
   "developers": [
     {
@@ -511,6 +511,90 @@
       ]
     },
     {
+      "login": "mladino-source",
+      "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
+      "prs_30d": 12,
+      "prs_90d": 14,
+      "last_activity": "2026-04-22T22:17:40Z",
+      "by_repo": [
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 9
+        },
+        {
+          "repo": "alivia",
+          "prs": 2
+        },
+        {
+          "repo": "fruto-web-nutra-mx",
+          "prs": 2
+        },
+        {
+          "repo": "fruto-landing-amf",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 14,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W05",
+          "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 4
+        },
+        {
+          "week": "2026-W14",
+          "prs": 3
+        },
+        {
+          "week": "2026-W15",
+          "prs": 1
+        },
+        {
+          "week": "2026-W16",
+          "prs": 2
+        },
+        {
+          "week": "2026-W17",
+          "prs": 2
+        }
+      ]
+    },
+    {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
       "prs_30d": 11,
@@ -591,90 +675,6 @@
         {
           "week": "2026-W14",
           "prs": 4
-        },
-        {
-          "week": "2026-W15",
-          "prs": 1
-        },
-        {
-          "week": "2026-W16",
-          "prs": 2
-        },
-        {
-          "week": "2026-W17",
-          "prs": 1
-        }
-      ]
-    },
-    {
-      "login": "mladino-source",
-      "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 11,
-      "prs_90d": 13,
-      "last_activity": "2026-04-21T20:18:51Z",
-      "by_repo": [
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 9
-        },
-        {
-          "repo": "fruto-web-nutra-mx",
-          "prs": 2
-        },
-        {
-          "repo": "alivia",
-          "prs": 1
-        },
-        {
-          "repo": "fruto-landing-amf",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 13,
-        "qa": 0,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
-          "prs": 2
-        },
-        {
-          "week": "2026-W13",
-          "prs": 4
-        },
-        {
-          "week": "2026-W14",
-          "prs": 3
         },
         {
           "week": "2026-W15",
@@ -785,13 +785,13 @@
     {
       "login": "Dev-Juan-Medina-NutraApp",
       "avatar_url": "https://avatars.githubusercontent.com/u/138901484?v=4",
-      "prs_30d": 3,
-      "prs_90d": 4,
-      "last_activity": "2026-04-10T15:38:55Z",
+      "prs_30d": 4,
+      "prs_90d": 5,
+      "last_activity": "2026-04-22T21:44:31Z",
       "by_repo": [
         {
           "repo": "Ilumina",
-          "prs": 2
+          "prs": 3
         },
         {
           "repo": "fruto-web-nutra-co",
@@ -801,7 +801,7 @@
       "by_branch": {
         "develop": 2,
         "qa": 0,
-        "main": 2
+        "main": 3
       },
       "weekly": [
         {
@@ -854,7 +854,79 @@
         },
         {
           "week": "2026-W17",
+          "prs": 1
+        }
+      ]
+    },
+    {
+      "login": "NicolasDaniloMunozAldana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/159373107?v=4",
+      "prs_30d": 3,
+      "prs_90d": 3,
+      "last_activity": "2026-04-22T22:16:17Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 3
+        }
+      ],
+      "by_branch": {
+        "develop": 3,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W05",
           "prs": 0
+        },
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
+        },
+        {
+          "week": "2026-W14",
+          "prs": 0
+        },
+        {
+          "week": "2026-W15",
+          "prs": 0
+        },
+        {
+          "week": "2026-W16",
+          "prs": 1
+        },
+        {
+          "week": "2026-W17",
+          "prs": 2
         }
       ]
     },
@@ -927,78 +999,6 @@
         {
           "week": "2026-W17",
           "prs": 0
-        }
-      ]
-    },
-    {
-      "login": "NicolasDaniloMunozAldana",
-      "avatar_url": "https://avatars.githubusercontent.com/u/159373107?v=4",
-      "prs_30d": 2,
-      "prs_90d": 2,
-      "last_activity": "2026-04-21T14:42:33Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 2
-        }
-      ],
-      "by_branch": {
-        "develop": 2,
-        "qa": 0,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
-          "prs": 0
-        },
-        {
-          "week": "2026-W13",
-          "prs": 0
-        },
-        {
-          "week": "2026-W14",
-          "prs": 0
-        },
-        {
-          "week": "2026-W15",
-          "prs": 0
-        },
-        {
-          "week": "2026-W16",
-          "prs": 1
-        },
-        {
-          "week": "2026-W17",
-          "prs": 1
         }
       ]
     },
