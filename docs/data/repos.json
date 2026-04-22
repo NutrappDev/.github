@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-21T22:03:04.308Z",
+  "generated_at": "2026-04-22T14:11:15.654Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
-      "status": "En proceso",
+      "status": "Revisión QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-287": {
@@ -184,6 +184,11 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "NCR-111": {
+      "summary": "Cambio de lógica para crear orden en Epicor",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "NCR-105": {
       "summary": "ms- Notificaciones",
       "status": "Despliegue a DEV",
@@ -198,11 +203,6 @@
       "summary": "Revisión de con Jorge para subir PR y pruebas desde monorepo dev al API Epicor pruebas",
       "status": "Actividad completada",
       "assignee": "Mario Eraso"
-    },
-    "NCR-5": {
-      "summary": "Épica 5 – Identificar y crear URLs/endpoints faltantes en NutraCore (Usuarios/Productos/Órdenes)",
-      "status": "Detenido",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -299,14 +299,14 @@
       "status": "Actividad completada",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
-    "DE-49": {
-      "summary": "Crear endpoints de actualización de eventos",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
+    "CIMF-277": {
+      "summary": "Ajuste de versión mobile CIMF",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
     },
     "CIMF-276": {
       "summary": "Incidencia centralización de ajustes (dev)",
-      "status": "Detenido",
+      "status": "En proceso",
       "assignee": "Kevin Aguilera"
     },
     "ALPE-218": {
@@ -341,12 +341,12 @@
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
-      "status": "Despliegue a QA",
+      "status": "Aprobado por QA",
       "assignee": "Miller Ladino Osorio"
     },
     "ALCO-1493": {
       "summary": "Restriccion dentro de la bolsa",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1451": {
@@ -431,7 +431,7 @@
     },
     "ALCO-898": {
       "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
@@ -451,7 +451,7 @@
     },
     "ALCO-404": {
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-402": {
@@ -476,6 +476,78 @@
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-22T13:45:58Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "78c284d",
+              "message": "fix: corregir responsive design en landing page CIMF-277",
+              "date": "2026-04-22T13:45:58Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "9",
+              "tickets": [
+                {
+                  "id": "CIMF-277",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-277"
+                }
+              ]
+            },
+            {
+              "sha": "9cf17fa",
+              "message": "fix: ajustes generales CIMF-276",
+              "date": "2026-04-20T22:39:37Z",
+              "author": "k-aguilera",
+              "pr_number": "8",
+              "tickets": [
+                {
+                  "id": "CIMF-276",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-276"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
@@ -691,7 +763,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T21:53:23Z",
+      "last_push": "2026-04-21T22:39:25Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -769,8 +841,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "3e0dbc9",
+              "message": "fix(prescription): add HormonesAdded component to patient view for imroved hormone management ALCO-1493",
+              "date": "2026-04-21T22:39:23Z",
+              "author": "CristiGB",
+              "pr_number": "427",
+              "tickets": [
+                {
+                  "id": "ALCO-1493",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1493"
+                }
+              ]
+            },
             {
               "sha": "2c7d277",
               "message": "fix(cart): enhance hormone handling in cart and prescription logic across multiple components ALCO-1493",
@@ -1082,65 +1167,6 @@
               "date": "2026-02-06T21:36:54Z",
               "author": "CristiGB",
               "pr_number": "309",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-20T22:39:37Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "9cf17fa",
-              "message": "fix: ajustes generales CIMF-276",
-              "date": "2026-04-20T22:39:37Z",
-              "author": "k-aguilera",
-              "pr_number": "8",
-              "tickets": [
-                {
-                  "id": "CIMF-276",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-276"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
               "tickets": []
             }
           ]
@@ -2858,7 +2884,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T22:02:42Z",
+      "last_push": "2026-04-22T14:10:48Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2922,8 +2948,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 26,
+          "count": 27,
           "recent_commits": [
+            {
+              "sha": "5c2e26b",
+              "message": "refactor(erp): variable farmacia env NCR-111",
+              "date": "2026-04-22T14:10:46Z",
+              "author": "meraso-nutra",
+              "pr_number": "331",
+              "tickets": [
+                {
+                  "id": "NCR-111",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                }
+              ]
+            },
+            {
+              "sha": "56de2be",
+              "message": "feat(erp): run erp with the transaction status NCR-111",
+              "date": "2026-04-21T23:23:24Z",
+              "author": "meraso-nutra",
+              "pr_number": "330",
+              "tickets": [
+                {
+                  "id": "NCR-111",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                }
+              ]
+            },
             {
               "sha": "b259f9d",
               "message": "fix(prescriptions): bug pdf SUP-292",
@@ -3220,32 +3272,6 @@
                 {
                   "id": "IAU-16",
                   "url": "https://nutrabiotics.atlassian.net/browse/IAU-16"
-                }
-              ]
-            },
-            {
-              "sha": "a5aa184",
-              "message": "fix(pipeline): ajuste validaciones [NCR-5]",
-              "date": "2026-02-03T13:05:02Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "225",
-              "tickets": [
-                {
-                  "id": "NCR-5",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-5"
-                }
-              ]
-            },
-            {
-              "sha": "2c0b3db",
-              "message": "feat(events): code indentation DE-309",
-              "date": "2026-02-02T15:04:14Z",
-              "author": "meraso-nutra",
-              "pr_number": "221",
-              "tickets": [
-                {
-                  "id": "DE-309",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-309"
                 }
               ]
             }
