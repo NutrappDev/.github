@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T14:11:15.654Z",
+  "generated_at": "2026-04-22T14:15:13.679Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -279,11 +279,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "IAU-16": {
-      "summary": "Actualizar estado de la orden según notificaciones de Wompi",
-      "status": "Actividad completada",
-      "assignee": "Sebastian Andres Alvarez Lambertinez"
-    },
     "FFCO-562": {
       "summary": "Validar flujo completo de creación de órdenes",
       "status": "Actividad completada",
@@ -476,6 +471,42 @@
     }
   },
   "repos": [
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-04-22T14:11:30Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-landing-cimf",
       "full_name": "NutrappDev/fruto-landing-cimf",
@@ -1953,42 +1984,6 @@
       }
     },
     {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-04-13T20:34:25Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "sso-micuenta",
       "full_name": "NutrappDev/sso-micuenta",
       "description": null,
@@ -2884,7 +2879,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T14:10:48Z",
+      "last_push": "2026-04-22T14:14:49Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2948,8 +2943,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 27,
+          "count": 28,
           "recent_commits": [
+            {
+              "sha": "efc311f",
+              "message": "refactor(webhook): evitar multiples conexiones configurando instancia singleton SUP-287",
+              "date": "2026-04-22T14:14:46Z",
+              "author": "jsandoval-dev",
+              "pr_number": "332",
+              "tickets": [
+                {
+                  "id": "SUP-287",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-287"
+                }
+              ]
+            },
             {
               "sha": "5c2e26b",
               "message": "refactor(erp): variable farmacia env NCR-111",
@@ -3259,19 +3267,6 @@
                 {
                   "id": "ALCO-1392",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1392"
-                }
-              ]
-            },
-            {
-              "sha": "a7c8eff",
-              "message": "fix(orders): corregir problemas de configuración N8N IAU-16",
-              "date": "2026-02-12T14:13:35Z",
-              "author": "jsandoval-dev",
-              "pr_number": "231",
-              "tickets": [
-                {
-                  "id": "IAU-16",
-                  "url": "https://nutrabiotics.atlassian.net/browse/IAU-16"
                 }
               ]
             }
