@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T16:54:36.194Z",
+  "generated_at": "2026-04-22T21:44:53.838Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -91,7 +91,7 @@
     },
     "PMO-2770": {
       "summary": "Actualización  de información Pagina Nutrabiotics.info",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2741": {
@@ -263,11 +263,6 @@
       "summary": "BUG | HOME | TABLET | Cambio de Banner",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "NCOL-256": {
-      "summary": "Creacion filtro por compuesto individual - catalogo de productos Nutrabiotcs Colombia",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
@@ -446,7 +441,7 @@
     },
     "ALCO-404": {
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-402": {
@@ -472,6 +467,39 @@
   },
   "repos": [
     {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-04-22T21:44:32Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -479,7 +507,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T15:19:38Z",
+      "last_push": "2026-04-22T21:43:28Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-22",
@@ -1013,7 +1041,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T21:02:10Z",
+      "last_push": "2026-04-22T21:10:56Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -2257,39 +2285,6 @@
       }
     },
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-03-28T02:21:21Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-mcp-server",
       "full_name": "NutrappDev/tronco-mcp-server",
       "description": "Servidor Model Context Protocol",
@@ -2879,7 +2874,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T16:54:11Z",
+      "last_push": "2026-04-22T19:55:44Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2945,6 +2940,19 @@
         "to_qa": {
           "count": 28,
           "recent_commits": [
+            {
+              "sha": "b30e9ff",
+              "message": "refactor(ffco): topic update woocommerce NCR-111",
+              "date": "2026-04-22T19:55:42Z",
+              "author": "meraso-nutra",
+              "pr_number": "334",
+              "tickets": [
+                {
+                  "id": "NCR-111",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                }
+              ]
+            },
             {
               "sha": "20885d1",
               "message": "refactor(erp): addition of logs to woo flow NCR-111",
@@ -3254,19 +3262,6 @@
                 {
                   "id": "NCR-12",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-12"
-                }
-              ]
-            },
-            {
-              "sha": "f696094",
-              "message": "feat(products): NCOL-602 filter products",
-              "date": "2026-02-25T20:52:50Z",
-              "author": "CristiGB",
-              "pr_number": "238",
-              "tickets": [
-                {
-                  "id": "NCOL-602",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-602"
                 }
               ]
             }
