@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T21:44:53.838Z",
+  "generated_at": "2026-04-22T22:16:43.143Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -189,6 +189,11 @@
       "status": "En proceso",
       "assignee": "Mario Eraso"
     },
+    "NCR-106": {
+      "summary": "ms- SSO",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
     "NCR-105": {
       "summary": "ms- Notificaciones",
       "status": "Despliegue a DEV",
@@ -198,11 +203,6 @@
       "summary": "ms- Eventos",
       "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
-    "NCR-12": {
-      "summary": "Revisión de con Jorge para subir PR y pruebas desde monorepo dev al API Epicor pruebas",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -2874,7 +2874,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T19:55:44Z",
+      "last_push": "2026-04-22T22:16:19Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2938,8 +2938,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 28,
+          "count": 29,
           "recent_commits": [
+            {
+              "sha": "e11f68b",
+              "message": "refactor(sso): organizar y refactorizar microservicio sso NCR-106",
+              "date": "2026-04-22T22:16:17Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "327",
+              "tickets": [
+                {
+                  "id": "NCR-106",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-106"
+                }
+              ]
+            },
             {
               "sha": "b30e9ff",
               "message": "refactor(ffco): topic update woocommerce NCR-111",
@@ -3249,19 +3262,6 @@
                 {
                   "id": "DE-338",
                   "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
-                }
-              ]
-            },
-            {
-              "sha": "e96b11c",
-              "message": "chore: agregar workflow de PR checks [skip ci] [NCR-12]",
-              "date": "2026-03-05T13:39:53Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "250",
-              "tickets": [
-                {
-                  "id": "NCR-12",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-12"
                 }
               ]
             }
