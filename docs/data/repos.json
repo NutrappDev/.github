@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T17:01:39.198Z",
+  "generated_at": "2026-04-23T20:41:07.223Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -159,11 +159,6 @@
       "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
-    "PALCO-51": {
-      "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
-    },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
       "status": "Despliegue a QA",
@@ -314,6 +309,11 @@
       "status": "En proceso",
       "assignee": "Kevin Aguilera"
     },
+    "CA-31": {
+      "summary": "BG | Iniciar Sesión | error 500",
+      "status": "Detenido",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
@@ -353,6 +353,11 @@
       "summary": "Corregir envío del evento purchase en GTM al finalizar compra",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
+    },
+    "ALCO-1515": {
+      "summary": "BG | Enlace | El enlace del texto no se muestra correctamente como en el wireframe de Figma",
+      "status": "Despliegue a QA",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -563,7 +568,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T17:01:17Z",
+      "last_push": "2026-04-23T19:19:52Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-22",
@@ -643,6 +648,19 @@
         "to_qa": {
           "count": 9,
           "recent_commits": [
+            {
+              "sha": "3f23d4c",
+              "message": "fix(articles): ref articles ALCO-1515",
+              "date": "2026-04-23T19:19:49Z",
+              "author": "fabianromerolu",
+              "pr_number": "436",
+              "tickets": [
+                {
+                  "id": "ALCO-1515",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1515"
+                }
+              ]
+            },
             {
               "sha": "21c1493",
               "message": "fix(payments): asegurar envio correcto del evento purchase a gtm ALCO-1516",
@@ -725,14 +743,6 @@
               "date": "2026-01-23T21:06:10Z",
               "author": "CristiGB",
               "pr_number": "298",
-              "tickets": []
-            },
-            {
-              "sha": "37187c9",
-              "message": "feat: add quantity parsing logic to PrescriptionReview component",
-              "date": "2026-01-23T19:40:42Z",
-              "author": "CristiGB",
-              "pr_number": "293",
               "tickets": []
             }
           ]
@@ -1513,7 +1523,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-15T21:37:42Z",
+      "last_push": "2026-04-23T20:40:43Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1527,8 +1537,35 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "22476bf",
+              "message": "fix(serverless): update CORS configuration to specify allowed origins and enable credentials in serverless.yml CA-31",
+              "date": "2026-04-23T20:40:40Z",
+              "author": "CristiGB",
+              "pr_number": "93",
+              "tickets": [
+                {
+                  "id": "CA-31",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
+                }
+              ]
+            },
+            {
+              "sha": "3327174",
+              "message": "fix(serverless): update CORS configuration in serverless.yml to allow all origins and specify allowed methods CA-31",
+              "date": "2026-04-23T20:10:57Z",
+              "author": "CristiGB",
+              "pr_number": "92",
+              "tickets": [
+                {
+                  "id": "CA-31",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 0,
@@ -2915,7 +2952,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T17:01:17Z",
+      "last_push": "2026-04-23T20:05:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2979,8 +3016,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 31,
+          "count": 32,
           "recent_commits": [
+            {
+              "sha": "2bc7380",
+              "message": "chore(serverless): configurar variables de entorno para despliegue PALCO-85",
+              "date": "2026-04-23T17:51:11Z",
+              "author": "jsandoval-dev",
+              "pr_number": "338",
+              "tickets": [
+                {
+                  "id": "PALCO-85",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
+                }
+              ]
+            },
             {
               "sha": "2f07f25",
               "message": "feat(erp): crear endpoint para obtener listas de precios desde epicor PALCO-85",
@@ -3290,19 +3340,6 @@
                 {
                   "id": "FFCO-562",
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "c1e304a",
-              "message": "fix(build): corregir archivo de migración PALCO-51",
-              "date": "2026-04-13T19:05:08Z",
-              "author": "jsandoval-dev",
-              "pr_number": "310",
-              "tickets": [
-                {
-                  "id": "PALCO-51",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-51"
                 }
               ]
             }
