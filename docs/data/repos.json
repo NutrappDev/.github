@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T21:03:07.846Z",
+  "generated_at": "2026-04-23T21:30:27.499Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -487,6 +487,68 @@
   },
   "repos": [
     {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-23T21:30:15Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-04-23",
+        "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
+        "date": "2026-04-23T21:30:15Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-23",
+        "body": "Release prod-2026-04-23\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-15",
+          "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
+          "date": "2026-04-15T21:37:22Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
+          "body": "Release prod-2026-04-15\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-04-23",
+        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
+        "date": "2026-04-23T21:02:54Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
+        "body": "Release qa-2026-04-23\n"
+      },
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "4a182e5",
+              "message": "release: qa 2026 04 23",
+              "date": "2026-04-23T21:02:43Z",
+              "author": "CristiGB",
+              "pr_number": "95",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "tronco-api-erp",
       "full_name": "NutrappDev/tronco-api-erp",
       "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
@@ -641,7 +703,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 8,
           "recent_commits": [
             {
               "sha": "3f23d4c",
@@ -730,14 +792,6 @@
               "date": "2026-01-26T21:28:47Z",
               "author": "CristiGB",
               "pr_number": "300",
-              "tickets": []
-            },
-            {
-              "sha": "95e3b90",
-              "message": "fix: add optional chaining for presentations in PrescriptionReview",
-              "date": "2026-01-23T21:06:10Z",
-              "author": "CristiGB",
-              "pr_number": "298",
               "tickets": []
             }
           ]
@@ -1497,60 +1551,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
                 }
               ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-backend",
-      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-23T21:02:54Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-15",
-        "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
-        "date": "2026-04-15T21:37:22Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
-        "body": "Release prod-2026-04-15\n"
-      },
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-04-23",
-        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
-        "date": "2026-04-23T21:02:54Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
-        "body": "Release qa-2026-04-23\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "4a182e5",
-              "message": "release: qa 2026 04 23",
-              "date": "2026-04-23T21:02:43Z",
-              "author": "CristiGB",
-              "pr_number": "95",
-              "tickets": []
             }
           ]
         }
@@ -2935,7 +2935,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T20:55:55Z",
+      "last_push": "2026-04-23T21:24:25Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
