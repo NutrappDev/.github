@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-22T22:16:43.143Z",
+  "generated_at": "2026-04-23T12:27:13.146Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -94,6 +94,11 @@
       "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
+    "PMO-2757": {
+      "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Colombia",
+      "status": "Despliegue a DEV",
+      "assignee": "Juan Medina"
+    },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
       "status": "Revisión QA",
@@ -186,7 +191,7 @@
     },
     "NCR-111": {
       "summary": "Cambio de lógica para crear orden en Epicor",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
     },
     "NCR-106": {
@@ -291,7 +296,7 @@
     },
     "CIMF-277": {
       "summary": "Ajuste de versión mobile CIMF",
-      "status": "Despliegue a QA",
+      "status": "En proceso",
       "assignee": "Steven Leon"
     },
     "CIMF-276": {
@@ -303,6 +308,11 @@
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
+    },
+    "ALMX-305": {
+      "summary": "BG | Bolsa de Compras | No se puede agregar productos a favoritos y no muestra mensaje de error",
+      "status": "En proceso",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
@@ -328,6 +338,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1514": {
+      "summary": "Reajuste de Montaje de Banner",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -507,7 +522,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T21:43:28Z",
+      "last_push": "2026-04-22T22:51:54Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-22",
@@ -585,8 +600,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "75070ac",
+              "message": "fix(cart): bugs alivia mx ALMX-305",
+              "date": "2026-04-22T22:51:52Z",
+              "author": "fabianromerolu",
+              "pr_number": "431",
+              "tickets": [
+                {
+                  "id": "ALMX-305",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-305"
+                }
+              ]
+            },
+            {
+              "sha": "2e7c64b",
+              "message": "feat(ALCO-1514): add SeasonalTopBanner overlay on hero video section",
+              "date": "2026-04-22T22:17:40Z",
+              "author": "mladino-source",
+              "pr_number": "430",
+              "tickets": [
+                {
+                  "id": "ALCO-1514",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1514"
+                }
+              ]
+            },
             {
               "sha": "3e0dbc9",
               "message": "fix(prescription): add HormonesAdded component to patient view for imroved hormone management ALCO-1493",
@@ -1557,7 +1598,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-21T17:41:35Z",
+      "last_push": "2026-04-23T12:26:49Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1635,8 +1676,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "0ec232c",
+              "message": "feat(nosotros): actualizar fundadores a copresidentes y ajustar ruta PMO-2757",
+              "date": "2026-04-23T12:26:46Z",
+              "author": "Dev-Juan-Medina-NutraApp",
+              "pr_number": "82",
+              "tickets": [
+                {
+                  "id": "PMO-2757",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2757"
+                }
+              ]
+            },
             {
               "sha": "ffcf1ba",
               "message": "fix(nutrabiotics): update Colombia WhatsApp number PMO-2770",
@@ -2874,7 +2928,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T22:16:19Z",
+      "last_push": "2026-04-23T04:18:24Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
