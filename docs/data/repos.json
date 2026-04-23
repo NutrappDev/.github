@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T12:27:13.146Z",
+  "generated_at": "2026-04-23T13:51:58.086Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -27,6 +27,11 @@
     "SUP-281": {
       "summary": "Desde Nutracore: implementar endpoint para generación de permisos de carga de imágenes en eventos (MS-events)",
       "status": "Despliegue a PROD",
+      "assignee": "Steven Leon"
+    },
+    "SUP-276": {
+      "summary": "Desarrollar módulo de gestión de etiquetas de eventos",
+      "status": "Despliegue a DEV",
       "assignee": "Steven Leon"
     },
     "SUP-274": {
@@ -91,12 +96,12 @@
     },
     "PMO-2770": {
       "summary": "Actualización  de información Pagina Nutrabiotics.info",
-      "status": "Revisión QA",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2757": {
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Colombia",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Juan Medina"
     },
     "PMO-2741": {
@@ -196,7 +201,7 @@
     },
     "NCR-106": {
       "summary": "ms- SSO",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-105": {
@@ -288,11 +293,6 @@
       "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "DE-338": {
-      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
-      "status": "Actividad completada",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "CIMF-277": {
       "summary": "Ajuste de versión mobile CIMF",
@@ -2928,7 +2928,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T04:18:24Z",
+      "last_push": "2026-04-23T13:51:34Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2992,8 +2992,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 29,
+          "count": 30,
           "recent_commits": [
+            {
+              "sha": "f7efa19",
+              "message": "fix(events): add CORS policy in ms-events to allow superadmin access SUP-276",
+              "date": "2026-04-23T13:51:32Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "336",
+              "tickets": [
+                {
+                  "id": "SUP-276",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-276"
+                }
+              ]
+            },
             {
               "sha": "e11f68b",
               "message": "refactor(sso): organizar y refactorizar microservicio sso NCR-106",
@@ -3303,19 +3316,6 @@
                 {
                   "id": "NCR-00",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-00"
-                }
-              ]
-            },
-            {
-              "sha": "e20f0ee",
-              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
-              "date": "2026-03-11T21:07:52Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "263",
-              "tickets": [
-                {
-                  "id": "DE-338",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
                 }
               ]
             }
