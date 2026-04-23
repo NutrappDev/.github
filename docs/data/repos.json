@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T17:01:22.026Z",
+  "generated_at": "2026-04-23T17:01:39.198Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -563,7 +563,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T17:00:57Z",
+      "last_push": "2026-04-23T17:01:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-22",
@@ -603,13 +603,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-21",
-        "sha": "d501a79fba24a1bd9086be8b66eab1ae603786e7",
-        "date": "2026-04-21T21:48:26Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-21",
-        "body": "Release qa-2026-04-21\n"
+        "version": "qa-2026-04-23",
+        "sha": "41125c81788ff85a3993b20dcfd6bf16f0cdf495",
+        "date": "2026-04-23T17:01:16Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-23",
+        "body": "Release qa-2026-04-23\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-21",
+          "sha": "d501a79fba24a1bd9086be8b66eab1ae603786e7",
+          "date": "2026-04-21T21:48:26Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-21",
+          "body": "Release qa-2026-04-21\n"
+        },
         {
           "version": "qa-2026-04-16",
           "sha": "56b34a0321543cb71d86950ddaf986d36d0a0e52",
@@ -630,13 +637,6 @@
           "date": "2026-04-09T16:01:44Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-09",
           "body": "Release qa-2026-04-09\n"
-        },
-        {
-          "version": "qa-2026-04-08",
-          "sha": "fbd3b4f6920cca71e6f547083a0ea675255ca38b",
-          "date": "2026-04-08T20:26:12Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-08",
-          "body": "Release qa-2026-04-08\n"
         }
       ],
       "pending": {
@@ -2915,7 +2915,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T15:17:57Z",
+      "last_push": "2026-04-23T17:01:17Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
