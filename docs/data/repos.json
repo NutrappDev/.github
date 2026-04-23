@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T13:51:58.086Z",
+  "generated_at": "2026-04-23T13:58:04.088Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -199,6 +199,11 @@
       "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
     },
+    "NCR-110": {
+      "summary": "Archivo automático de correos enviados desde ms-notifications",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
     "NCR-106": {
       "summary": "ms- SSO",
       "status": "Despliegue a QA",
@@ -341,7 +346,7 @@
     },
     "ALCO-1514": {
       "summary": "Reajuste de Montaje de Banner",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "ALCO-1498": {
@@ -2928,7 +2933,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T13:51:34Z",
+      "last_push": "2026-04-23T13:57:39Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2992,8 +2997,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 30,
+          "count": 31,
           "recent_commits": [
+            {
+              "sha": "6ab7532",
+              "message": "feat(notifications): archivo automático de correos enviados NCR-110",
+              "date": "2026-04-23T13:57:37Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "328",
+              "tickets": [
+                {
+                  "id": "NCR-110",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-110"
+                }
+              ]
+            },
             {
               "sha": "f7efa19",
               "message": "fix(events): add CORS policy in ms-events to allow superadmin access SUP-276",
@@ -3303,19 +3321,6 @@
                 {
                   "id": "SUP-281",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-281"
-                }
-              ]
-            },
-            {
-              "sha": "b3e0777",
-              "message": "feat(build): logs estructurados de observabilidad en el pipeline de despliegue NCR-00",
-              "date": "2026-03-17T17:13:34Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "276",
-              "tickets": [
-                {
-                  "id": "NCR-00",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-00"
                 }
               ]
             }
