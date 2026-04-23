@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T20:41:07.223Z",
+  "generated_at": "2026-04-23T21:03:07.846Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -308,11 +308,6 @@
       "summary": "Incidencia centralización de ajustes (dev)",
       "status": "En proceso",
       "assignee": "Kevin Aguilera"
-    },
-    "CA-31": {
-      "summary": "BG | Iniciar Sesión | error 500",
-      "status": "Detenido",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALPE-218": {
       "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
@@ -1523,7 +1518,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T20:40:43Z",
+      "last_push": "2026-04-23T21:02:54Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1533,43 +1528,31 @@
         "body": "Release prod-2026-04-15\n"
       },
       "production_history": [],
-      "qa": null,
+      "qa": {
+        "version": "qa-2026-04-23",
+        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
+        "date": "2026-04-23T21:02:54Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
+        "body": "Release qa-2026-04-23\n"
+      },
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "22476bf",
-              "message": "fix(serverless): update CORS configuration to specify allowed origins and enable credentials in serverless.yml CA-31",
-              "date": "2026-04-23T20:40:40Z",
-              "author": "CristiGB",
-              "pr_number": "93",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            },
-            {
-              "sha": "3327174",
-              "message": "fix(serverless): update CORS configuration in serverless.yml to allow all origins and specify allowed methods CA-31",
-              "date": "2026-04-23T20:10:57Z",
-              "author": "CristiGB",
-              "pr_number": "92",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
           "count": 0,
           "recent_commits": []
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "4a182e5",
+              "message": "release: qa 2026 04 23",
+              "date": "2026-04-23T21:02:43Z",
+              "author": "CristiGB",
+              "pr_number": "95",
+              "tickets": []
+            }
+          ]
         }
       },
       "ci": null,
@@ -2952,7 +2935,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T20:05:31Z",
+      "last_push": "2026-04-23T20:55:55Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3018,6 +3001,19 @@
         "to_qa": {
           "count": 32,
           "recent_commits": [
+            {
+              "sha": "71c70d2",
+              "message": "chore(erp): eliminar import ordertype no utilizado PALCO-85",
+              "date": "2026-04-23T20:55:52Z",
+              "author": "jsandoval-dev",
+              "pr_number": "340",
+              "tickets": [
+                {
+                  "id": "PALCO-85",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
+                }
+              ]
+            },
             {
               "sha": "2bc7380",
               "message": "chore(serverless): configurar variables de entorno para despliegue PALCO-85",
@@ -3327,19 +3323,6 @@
                 {
                   "id": "SUP-287",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-287"
-                }
-              ]
-            },
-            {
-              "sha": "7f2ffe6",
-              "message": "feat(erp): process farmacia data FFCO-562",
-              "date": "2026-04-13T20:36:55Z",
-              "author": "meraso-nutra",
-              "pr_number": "311",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
                 }
               ]
             }
