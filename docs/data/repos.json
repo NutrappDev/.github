@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T13:58:04.088Z",
+  "generated_at": "2026-04-23T17:01:22.026Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -154,6 +154,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "PALCO-85": {
+      "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
+      "status": "En proceso",
+      "assignee": "Jhelcy Sandoval"
+    },
     "PALCO-51": {
       "summary": "Librería ERP - Gestión y reprocesamiento de transacciones fallidas",
       "status": "Actividad completada",
@@ -201,12 +206,12 @@
     },
     "NCR-110": {
       "summary": "Archivo automático de correos enviados desde ms-notifications",
-      "status": "Despliegue a DEV",
+      "status": "Revisión QA",
       "assignee": "Felipe Berrio"
     },
     "NCR-106": {
       "summary": "ms- SSO",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-105": {
@@ -301,7 +306,7 @@
     },
     "CIMF-277": {
       "summary": "Ajuste de versión mobile CIMF",
-      "status": "En proceso",
+      "status": "Detenido",
       "assignee": "Steven Leon"
     },
     "CIMF-276": {
@@ -344,20 +349,15 @@
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
     },
-    "ALCO-1514": {
-      "summary": "Reajuste de Montaje de Banner",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
+    "ALCO-1516": {
+      "summary": "Corregir envío del evento purchase en GTM al finalizar compra",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
       "status": "Actividad completada",
       "assignee": "Miller Ladino Osorio"
-    },
-    "ALCO-1493": {
-      "summary": "Restriccion dentro de la bolsa",
-      "status": "Despliegue a QA",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1451": {
       "summary": "implementacion de descuento promocional",
@@ -441,7 +441,7 @@
     },
     "ALCO-898": {
       "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
@@ -487,6 +487,42 @@
   },
   "repos": [
     {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-04-23T14:35:37Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "Ilumina",
       "full_name": "NutrappDev/Ilumina",
       "description": null,
@@ -527,7 +563,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-22T22:51:54Z",
+      "last_push": "2026-04-23T17:00:57Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-22",
@@ -605,8 +641,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "21c1493",
+              "message": "fix(payments): asegurar envio correcto del evento purchase a gtm ALCO-1516",
+              "date": "2026-04-23T16:48:46Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "432",
+              "tickets": [
+                {
+                  "id": "ALCO-1516",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1516"
+                }
+              ]
+            },
             {
               "sha": "75070ac",
               "message": "fix(cart): bugs alivia mx ALMX-305",
@@ -617,45 +666,6 @@
                 {
                   "id": "ALMX-305",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-305"
-                }
-              ]
-            },
-            {
-              "sha": "2e7c64b",
-              "message": "feat(ALCO-1514): add SeasonalTopBanner overlay on hero video section",
-              "date": "2026-04-22T22:17:40Z",
-              "author": "mladino-source",
-              "pr_number": "430",
-              "tickets": [
-                {
-                  "id": "ALCO-1514",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1514"
-                }
-              ]
-            },
-            {
-              "sha": "3e0dbc9",
-              "message": "fix(prescription): add HormonesAdded component to patient view for imroved hormone management ALCO-1493",
-              "date": "2026-04-21T22:39:23Z",
-              "author": "CristiGB",
-              "pr_number": "427",
-              "tickets": [
-                {
-                  "id": "ALCO-1493",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1493"
-                }
-              ]
-            },
-            {
-              "sha": "2c7d277",
-              "message": "fix(cart): enhance hormone handling in cart and prescription logic across multiple components ALCO-1493",
-              "date": "2026-04-21T21:53:21Z",
-              "author": "CristiGB",
-              "pr_number": "426",
-              "tickets": [
-                {
-                  "id": "ALCO-1493",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1493"
                 }
               ]
             },
@@ -702,6 +712,14 @@
               ]
             },
             {
+              "sha": "c224d29",
+              "message": "feat: implement pluralization utility ",
+              "date": "2026-01-26T21:28:47Z",
+              "author": "CristiGB",
+              "pr_number": "300",
+              "tickets": []
+            },
+            {
               "sha": "95e3b90",
               "message": "fix: add optional chaining for presentations in PrescriptionReview",
               "date": "2026-01-23T21:06:10Z",
@@ -716,20 +734,20 @@
               "author": "CristiGB",
               "pr_number": "293",
               "tickets": []
-            },
-            {
-              "sha": "fcb230e",
-              "message": "Fix/banner nosotros",
-              "date": "2026-01-23T16:30:45Z",
-              "author": "CristiGB",
-              "pr_number": "292",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 23,
+          "count": 24,
           "recent_commits": [
+            {
+              "sha": "41125c8",
+              "message": "release: qa 2026 04 23",
+              "date": "2026-04-23T17:00:55Z",
+              "author": "CristiGB",
+              "pr_number": "433",
+              "tickets": []
+            },
             {
               "sha": "d501a79",
               "message": "release: 2026 04 21 update SeasonalTopBanner ALCO-1498",
@@ -960,42 +978,6 @@
               "tickets": []
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-04-22T14:17:03Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -2933,7 +2915,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-23T13:57:39Z",
+      "last_push": "2026-04-23T15:17:57Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2999,6 +2981,19 @@
         "to_qa": {
           "count": 31,
           "recent_commits": [
+            {
+              "sha": "2f07f25",
+              "message": "feat(erp): crear endpoint para obtener listas de precios desde epicor PALCO-85",
+              "date": "2026-04-23T17:01:16Z",
+              "author": "jsandoval-dev",
+              "pr_number": "337",
+              "tickets": [
+                {
+                  "id": "PALCO-85",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
+                }
+              ]
+            },
             {
               "sha": "6ab7532",
               "message": "feat(notifications): archivo automático de correos enviados NCR-110",
@@ -3308,19 +3303,6 @@
                 {
                   "id": "PALCO-51",
                   "url": "https://nutrabiotics.atlassian.net/browse/PALCO-51"
-                }
-              ]
-            },
-            {
-              "sha": "81c4bc6",
-              "message": "feat(events): implemented needed endpoints for events and tags management SUP-281",
-              "date": "2026-04-10T15:13:45Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "309",
-              "tickets": [
-                {
-                  "id": "SUP-281",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-281"
                 }
               ]
             }
