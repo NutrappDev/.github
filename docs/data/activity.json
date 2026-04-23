@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-23T17:51:28.454Z",
+  "generated_at": "2026-04-23T19:20:06.281Z",
   "window_days": 90,
   "developers": [
     {
@@ -189,13 +189,13 @@
     {
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 16,
-      "prs_90d": 39,
-      "last_activity": "2026-04-22T22:51:52Z",
+      "prs_30d": 17,
+      "prs_90d": 40,
+      "last_activity": "2026-04-23T19:19:49Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 13
+          "prs": 14
         },
         {
           "repo": "portal-nutrabiotics",
@@ -211,7 +211,7 @@
         }
       ],
       "by_branch": {
-        "develop": 35,
+        "develop": 36,
         "qa": 3,
         "main": 1
       },
@@ -266,7 +266,7 @@
         },
         {
           "week": "2026-W17",
-          "prs": 8
+          "prs": 9
         }
       ]
     },
@@ -425,7 +425,7 @@
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 13,
+      "prs_30d": 12,
       "prs_90d": 34,
       "last_activity": "2026-04-23T13:51:32Z",
       "by_repo": [
