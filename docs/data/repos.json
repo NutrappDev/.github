@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T14:41:19.060Z",
+  "generated_at": "2026-04-24T14:48:45.995Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -156,6 +156,11 @@
     },
     "PALCO-85": {
       "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
+      "status": "En proceso",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-84": {
+      "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
@@ -2972,7 +2977,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T13:42:21Z",
+      "last_push": "2026-04-24T14:48:23Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3038,6 +3043,19 @@
         "to_qa": {
           "count": 32,
           "recent_commits": [
+            {
+              "sha": "4fded41",
+              "message": "feat(auth): validar existencia de customer en epicor antes de creacion PALCO-84",
+              "date": "2026-04-24T14:48:21Z",
+              "author": "jsandoval-dev",
+              "pr_number": "342",
+              "tickets": [
+                {
+                  "id": "PALCO-84",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-84"
+                }
+              ]
+            },
             {
               "sha": "71c70d2",
               "message": "chore(erp): eliminar import ordertype no utilizado PALCO-85",
@@ -3347,19 +3365,6 @@
                 {
                   "id": "FFCO-562",
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "e11c03b",
-              "message": "feat(orders): agregar estado para identificar guardado en epicor SUP-287",
-              "date": "2026-04-14T19:50:02Z",
-              "author": "jsandoval-dev",
-              "pr_number": "315",
-              "tickets": [
-                {
-                  "id": "SUP-287",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-287"
                 }
               ]
             }
