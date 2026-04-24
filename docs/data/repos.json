@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T19:23:39.937Z",
+  "generated_at": "2026-04-24T19:29:46.671Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -299,6 +299,11 @@
       "status": "Despliegue a DEV",
       "assignee": "Juan Medina"
     },
+    "NCOL-378": {
+      "summary": "BG | Tablet | Farmacovigilancia | Espacio sin contenido en Objetivos",
+      "status": "Despliegue a DEV",
+      "assignee": "Juan Medina"
+    },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
       "status": "Actividad completada",
@@ -498,11 +503,6 @@
       "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-270": {
-      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
-      "status": "Actividad completada",
-      "assignee": "Francisco  Aguirre Tovar"
     }
   },
   "repos": [
@@ -1678,7 +1678,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T19:23:18Z",
+      "last_push": "2026-04-24T19:29:27Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1756,8 +1756,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "7686d65",
+              "message": "fix(farmacovigilancia): corregir layout horizontal de tabs en tablet NCOL-378",
+              "date": "2026-04-24T19:29:25Z",
+              "author": "Dev-Juan-Medina-NutraApp",
+              "pr_number": "84",
+              "tickets": [
+                {
+                  "id": "NCOL-378",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-378"
+                }
+              ]
+            },
             {
               "sha": "76d1960",
               "message": "fix(products): ajustar responsive de banners en tablet y mobile NCOL-380",
