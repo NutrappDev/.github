@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T20:22:25.351Z",
+  "generated_at": "2026-04-24T21:13:18.950Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -19,11 +19,6 @@
       "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
-    "SUP-285": {
-      "summary": "Ocultar botón \"Relanzar\" tras ejecución",
-      "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
-    },
     "SUP-281": {
       "summary": "Desde Nutracore: implementar endpoint para generación de permisos de carga de imágenes en eventos (MS-events)",
       "status": "Despliegue a PROD",
@@ -31,11 +26,6 @@
     },
     "SUP-276": {
       "summary": "Desarrollar módulo de gestión de etiquetas de eventos",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "SUP-274": {
-      "summary": "Implementar navegación del módulo de eventos en el portal",
       "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
@@ -314,6 +304,11 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "CIMF-281": {
+      "summary": "Incidencia centralización ajustes (22 de abril)",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
+    },
     "CIMF-277": {
       "summary": "Ajuste de versión mobile CIMF",
       "status": "Despliegue a DEV",
@@ -501,6 +496,91 @@
     }
   },
   "repos": [
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-24T20:30:35Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "6ad71dd",
+              "message": "fix: correciones de bug centralizados CIMF-281",
+              "date": "2026-04-24T20:30:35Z",
+              "author": "k-aguilera",
+              "pr_number": "10",
+              "tickets": [
+                {
+                  "id": "CIMF-281",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-281"
+                }
+              ]
+            },
+            {
+              "sha": "78c284d",
+              "message": "fix: corregir responsive design en landing page CIMF-277",
+              "date": "2026-04-22T13:45:58Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "9",
+              "tickets": [
+                {
+                  "id": "CIMF-277",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-277"
+                }
+              ]
+            },
+            {
+              "sha": "9cf17fa",
+              "message": "fix: ajustes generales CIMF-276",
+              "date": "2026-04-20T22:39:37Z",
+              "author": "k-aguilera",
+              "pr_number": "8",
+              "tickets": [
+                {
+                  "id": "CIMF-276",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-276"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -1102,78 +1182,6 @@
       }
     },
     {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-22T13:45:58Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "78c284d",
-              "message": "fix: corregir responsive design en landing page CIMF-277",
-              "date": "2026-04-22T13:45:58Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "9",
-              "tickets": [
-                {
-                  "id": "CIMF-277",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-277"
-                }
-              ]
-            },
-            {
-              "sha": "9cf17fa",
-              "message": "fix: ajustes generales CIMF-276",
-              "date": "2026-04-20T22:39:37Z",
-              "author": "k-aguilera",
-              "pr_number": "8",
-              "tickets": [
-                {
-                  "id": "CIMF-276",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-276"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -1388,7 +1396,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-20T22:55:00Z",
+      "last_push": "2026-04-24T21:13:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -1421,13 +1429,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-14",
-        "sha": "c7b738aac84c7536a3c97b4db5d78a973960fd6d",
-        "date": "2026-04-14T22:05:48Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-14",
-        "body": "Release qa-2026-04-14\n"
+        "version": "qa-2026-04-24",
+        "sha": "26db091c77b82c4574b67eaf7c48b949a7c8acac",
+        "date": "2026-04-24T21:13:07Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-24",
+        "body": "Release qa-2026-04-24\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-14",
+          "sha": "c7b738aac84c7536a3c97b4db5d78a973960fd6d",
+          "date": "2026-04-14T22:05:48Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-14",
+          "body": "Release qa-2026-04-14\n"
+        },
         {
           "version": "qa-2026-04-09",
           "sha": "57dc2b6e731ed01d746d220327bb5465599a700d",
@@ -1452,7 +1467,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "8581d58",
@@ -1505,64 +1520,20 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2741"
                 }
               ]
-            },
-            {
-              "sha": "3a22dba",
-              "message": "fix(orders): se corrige error de tipado SUP-286",
-              "date": "2026-04-16T18:00:43Z",
-              "author": "jsandoval-dev",
-              "pr_number": "185",
-              "tickets": [
-                {
-                  "id": "SUP-286",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
-                }
-              ]
-            },
-            {
-              "sha": "1509786",
-              "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
-              "date": "2026-04-16T15:39:09Z",
-              "author": "jsandoval-dev",
-              "pr_number": "184",
-              "tickets": [
-                {
-                  "id": "SUP-286",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
-                }
-              ]
-            },
-            {
-              "sha": "00dbe02",
-              "message": "feat(events): implementar funcionalidad de eventos y gestion de etiquetas SUP-274",
-              "date": "2026-04-15T12:42:37Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "181",
-              "tickets": [
-                {
-                  "id": "SUP-274",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-274"
-                }
-              ]
-            },
-            {
-              "sha": "c9cccc5",
-              "message": "feat(erp): ocultar boton relanzar tras ejecucion SUP-285",
-              "date": "2026-04-14T14:51:40Z",
-              "author": "jsandoval-dev",
-              "pr_number": "180",
-              "tickets": [
-                {
-                  "id": "SUP-285",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-285"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "26db091",
+              "message": "release: qa 2026 04 24",
+              "date": "2026-04-24T21:12:53Z",
+              "author": "CristiGB",
+              "pr_number": "194",
+              "tickets": []
+            },
             {
               "sha": "c7b738a",
               "message": "release: qa 2026 04 14",
@@ -3014,7 +2985,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T20:22:03Z",
+      "last_push": "2026-04-24T20:45:34Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
