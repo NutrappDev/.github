@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T21:13:18.950Z",
+  "generated_at": "2026-04-24T21:59:55.037Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -11,11 +11,6 @@
     },
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "SUP-286": {
-      "summary": "Botón para reenvío de órdenes fallidas a ERP",
       "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
@@ -304,6 +299,11 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "CIMF-282": {
+      "summary": "Favicón",
+      "status": "En proceso",
+      "assignee": "Kevin Aguilera"
+    },
     "CIMF-281": {
       "summary": "Incidencia centralización ajustes (22 de abril)",
       "status": "Despliegue a DEV",
@@ -504,7 +504,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T20:30:35Z",
+      "last_push": "2026-04-24T21:54:14Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -515,8 +515,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "f84fe8e",
+              "message": "fix: corrección de textos y adicion del favicon CIMF-282",
+              "date": "2026-04-24T21:44:55Z",
+              "author": "k-aguilera",
+              "pr_number": "11",
+              "tickets": [
+                {
+                  "id": "CIMF-282",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-282"
+                }
+              ]
+            },
             {
               "sha": "6ad71dd",
               "message": "fix: correciones de bug centralizados CIMF-281",
@@ -2985,7 +2998,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T20:45:34Z",
+      "last_push": "2026-04-24T21:59:33Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3049,8 +3062,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 34,
+          "count": 35,
           "recent_commits": [
+            {
+              "sha": "affedeb",
+              "message": "feat(erp): implementar creacion de customer en epicor e integracion con shipping PALCO-85",
+              "date": "2026-04-24T21:59:31Z",
+              "author": "jsandoval-dev",
+              "pr_number": "345",
+              "tickets": [
+                {
+                  "id": "PALCO-85",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
+                }
+              ]
+            },
             {
               "sha": "cdbe7bf",
               "message": "fix(notifications): corregir fire-and-forget en email archive para AWS Lambda NCR-110",
@@ -3360,19 +3386,6 @@
                 {
                   "id": "FFCO-562",
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "93ff572",
-              "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
-              "date": "2026-04-16T15:29:29Z",
-              "author": "jsandoval-dev",
-              "pr_number": "319",
-              "tickets": [
-                {
-                  "id": "SUP-286",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
                 }
               ]
             }
