@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T15:12:54.812Z",
+  "generated_at": "2026-04-24T17:46:44.734Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -88,6 +88,11 @@
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
+    },
+    "PMO-2873": {
+      "summary": "ADICIONAR CIUDAD EN ALIVIA",
+      "status": "Por hacer",
+      "assignee": "ISABEL GOMEZ"
     },
     "PMO-2817": {
       "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
@@ -199,9 +204,14 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "NCR-113": {
+      "summary": "Manejo de Factory e instancias desde libreria ERP",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "NCR-111": {
       "summary": "Cambio de lógica para crear orden en Epicor",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Mario Eraso"
     },
     "NCR-110": {
@@ -216,7 +226,7 @@
     },
     "NCR-105": {
       "summary": "ms- Notificaciones",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-103": {
@@ -316,7 +326,7 @@
     },
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
-      "status": "Detenido",
+      "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALPE-218": {
@@ -366,7 +376,7 @@
     },
     "ALCO-1513": {
       "summary": "BG | Descuentos | No se muestran correctamente",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALCO-1498": {
@@ -493,159 +503,9 @@
       "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
       "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
-    },
-    "AIA-34": {
-      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
-    {
-      "name": "nutrabiotics-certificates-backend",
-      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-23T22:45:42Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-23",
-        "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
-        "date": "2026-04-23T21:30:15Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-23",
-        "body": "Release prod-2026-04-23\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-04-15",
-          "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
-          "date": "2026-04-15T21:37:22Z",
-          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
-          "body": "Release prod-2026-04-15\n"
-        }
-      ],
-      "qa": {
-        "version": "qa-2026-04-23",
-        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
-        "date": "2026-04-23T21:02:54Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
-        "body": "Release qa-2026-04-23\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "e71538d",
-              "message": "fix(serverless): exclude AWS credentials from dotenv and update S3 credential validation for Lambda environments CA-31",
-              "date": "2026-04-23T22:33:56Z",
-              "author": "CristiGB",
-              "pr_number": "97",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "4a182e5",
-              "message": "release: qa 2026 04 23",
-              "date": "2026-04-23T21:02:43Z",
-              "author": "CristiGB",
-              "pr_number": "95",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-04-23T14:35:37Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-04-22T21:44:32Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
     {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
@@ -654,16 +514,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T15:12:33Z",
+      "last_push": "2026-04-24T17:46:24Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-04-22",
-        "sha": "1c898adb4ccd9f83277f28f6ccd7da23d562a66c",
-        "date": "2026-04-22T15:19:37Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-22",
-        "body": "Release prod-2026-04-22\n"
+        "version": "prod-2026-04-24",
+        "sha": "ab64b836f735cd6004e378f525f7668998827ad6",
+        "date": "2026-04-24T15:12:54Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-24",
+        "body": "Release prod-2026-04-24\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-04-22",
+          "sha": "1c898adb4ccd9f83277f28f6ccd7da23d562a66c",
+          "date": "2026-04-22T15:19:37Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-22",
+          "body": "Release prod-2026-04-22\n"
+        },
         {
           "version": "prod-2026-04-21",
           "sha": "6ed8ce11841ad0e8724a7222ed931fefda3d7cb6",
@@ -684,13 +551,6 @@
           "date": "2026-04-09T16:20:37Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-09",
           "body": "Release prod-2026-04-09\n"
-        },
-        {
-          "version": "prod-2026-04-09-2",
-          "sha": "bf76828e4e0e0419b0ee7b7e10239cef597ae8ff",
-          "date": "2026-04-09T21:01:17Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-09-2",
-          "body": "Release prod-2026-04-09-2\n"
         }
       ],
       "qa": {
@@ -732,8 +592,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "39cbc08",
+              "message": "feat(address): add \"Une\" to address and shipping city lists for Colombia PMO-2873",
+              "date": "2026-04-24T17:46:21Z",
+              "author": "CristiGB",
+              "pr_number": "440",
+              "tickets": [
+                {
+                  "id": "PMO-2873",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2873"
+                }
+              ]
+            },
             {
               "sha": "bf76865",
               "message": "fix(payments): asegurar productos y descuentos para rol medico ALCO-1513",
@@ -1079,6 +952,164 @@
               "tickets": []
             }
           ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-24T15:17:02Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-04-23",
+        "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
+        "date": "2026-04-23T21:30:15Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-23",
+        "body": "Release prod-2026-04-23\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-15",
+          "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
+          "date": "2026-04-15T21:37:22Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
+          "body": "Release prod-2026-04-15\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-04-23",
+        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
+        "date": "2026-04-23T21:02:54Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
+        "body": "Release qa-2026-04-23\n"
+      },
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "27f4d2f",
+              "message": "fix(serverless): add application/pdf to binary settings for Lambda handler CA-31",
+              "date": "2026-04-24T15:17:00Z",
+              "author": "CristiGB",
+              "pr_number": "98",
+              "tickets": [
+                {
+                  "id": "CA-31",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
+                }
+              ]
+            },
+            {
+              "sha": "e71538d",
+              "message": "fix(serverless): exclude AWS credentials from dotenv and update S3 credential validation for Lambda environments CA-31",
+              "date": "2026-04-23T22:33:56Z",
+              "author": "CristiGB",
+              "pr_number": "97",
+              "tickets": [
+                {
+                  "id": "CA-31",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "4a182e5",
+              "message": "release: qa 2026 04 23",
+              "date": "2026-04-23T21:02:43Z",
+              "author": "CristiGB",
+              "pr_number": "95",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-04-23T14:35:37Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-04-22T21:44:32Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
         }
       },
       "ci": null,
@@ -1647,7 +1678,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T04:28:31Z",
+      "last_push": "2026-04-24T16:46:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -2977,7 +3008,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T14:52:11Z",
+      "last_push": "2026-04-24T17:38:47Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3041,8 +3072,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 32,
+          "count": 33,
           "recent_commits": [
+            {
+              "sha": "3cc9e24",
+              "message": "refactor(erp): erp library instance NCR-113",
+              "date": "2026-04-24T17:38:45Z",
+              "author": "meraso-nutra",
+              "pr_number": "343",
+              "tickets": [
+                {
+                  "id": "NCR-113",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-113"
+                }
+              ]
+            },
             {
               "sha": "4fded41",
               "message": "feat(auth): validar existencia de customer en epicor antes de creacion PALCO-84",
@@ -3352,19 +3396,6 @@
                 {
                   "id": "PMO-2817",
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
-                }
-              ]
-            },
-            {
-              "sha": "8b4c19d",
-              "message": "refactor(erp): builder execution change FFCO-562",
-              "date": "2026-04-15T20:00:42Z",
-              "author": "meraso-nutra",
-              "pr_number": "316",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
                 }
               ]
             }
