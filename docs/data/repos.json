@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-24T17:46:44.734Z",
+  "generated_at": "2026-04-24T19:23:39.937Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -91,7 +91,7 @@
     },
     "PMO-2873": {
       "summary": "ADICIONAR CIUDAD EN ALIVIA",
-      "status": "Por hacer",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "PMO-2817": {
@@ -293,6 +293,11 @@
       "summary": "BUG | HOME | TABLET | Cambio de Banner",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
+    },
+    "NCOL-380": {
+      "summary": "BG | Tablet | Productos | Banner Principal sobresale de las dimensiones",
+      "status": "Despliegue a DEV",
+      "assignee": "Juan Medina"
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
@@ -498,11 +503,6 @@
       "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
       "status": "Actividad completada",
       "assignee": "Francisco  Aguirre Tovar"
-    },
-    "AIA-43": {
-      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
-      "status": "Actividad completada",
-      "assignee": "Jhelcy Sandoval"
     }
   },
   "repos": [
@@ -1678,7 +1678,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T16:46:45Z",
+      "last_push": "2026-04-24T19:23:18Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1756,8 +1756,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "76d1960",
+              "message": "fix(products): ajustar responsive de banners en tablet y mobile NCOL-380",
+              "date": "2026-04-24T19:23:17Z",
+              "author": "Dev-Juan-Medina-NutraApp",
+              "pr_number": "83",
+              "tickets": [
+                {
+                  "id": "NCOL-380",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-380"
+                }
+              ]
+            },
             {
               "sha": "0ec232c",
               "message": "feat(nosotros): actualizar fundadores a copresidentes y ajustar ruta PMO-2757",
