@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T13:18:27.700Z",
+  "generated_at": "2026-04-27T13:50:19.949Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -11,12 +11,12 @@
     },
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-286": {
       "summary": "Botón para reenvío de órdenes fallidas a ERP",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-272": {
@@ -149,6 +149,11 @@
       "status": "Despliegue a DEV",
       "assignee": "Steven Leon"
     },
+    "NE-300": {
+      "summary": "HU-16 Panel de cupo de crédito en el carrito [Desarrollo]",
+      "status": "En proceso",
+      "assignee": "Steven Leon"
+    },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
       "status": "Despliegue a QA",
@@ -188,6 +193,11 @@
       "summary": "Manejo de Factory e instancias desde libreria ERP",
       "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
+    },
+    "NCR-112": {
+      "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "NCR-111": {
       "summary": "Cambio de lógica para crear orden en Epicor",
@@ -1124,7 +1134,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T22:40:26Z",
+      "last_push": "2026-04-27T13:49:55Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1167,8 +1177,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "76360dd",
+              "message": "feat: resolver problemas de compilacion antes de implementacion del panel NE-300",
+              "date": "2026-04-27T13:49:53Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "53",
+              "tickets": [
+                {
+                  "id": "NE-300",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-300"
+                }
+              ]
+            },
             {
               "sha": "4219df0",
               "message": "feat: implementar paginacion en checkout NE-304",
@@ -2946,7 +2969,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T13:14:09Z",
+      "last_push": "2026-04-27T13:43:13Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3010,8 +3033,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 29,
+          "count": 30,
           "recent_commits": [
+            {
+              "sha": "a5315d0",
+              "message": "feat(notifications): agregar evento order.payment-link NCR-112",
+              "date": "2026-04-27T13:43:10Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "339",
+              "tickets": [
+                {
+                  "id": "NCR-112",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-112"
+                }
+              ]
+            },
             {
               "sha": "affedeb",
               "message": "feat(erp): implementar creacion de customer en epicor e integracion con shipping PALCO-85",
@@ -3321,19 +3357,6 @@
                 {
                   "id": "FFCO-562",
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "e11c03b",
-              "message": "feat(orders): agregar estado para identificar guardado en epicor SUP-287",
-              "date": "2026-04-14T19:50:02Z",
-              "author": "jsandoval-dev",
-              "pr_number": "315",
-              "tickets": [
-                {
-                  "id": "SUP-287",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-287"
                 }
               ]
             }
