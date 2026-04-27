@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T19:55:39.634Z",
+  "generated_at": "2026-04-27T20:37:54.035Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -321,7 +321,7 @@
     },
     "ALMX-305": {
       "summary": "BG | Bolsa de Compras | No se puede agregar productos a favoritos y no muestra mensaje de error",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-277": {
@@ -1134,7 +1134,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T13:49:55Z",
+      "last_push": "2026-04-27T20:37:30Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1177,8 +1177,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "8993516",
+              "message": "fix: corregir errores mostrados por Nextjs para garantizar compilación NE-304",
+              "date": "2026-04-27T20:37:28Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "55",
+              "tickets": [
+                {
+                  "id": "NE-304",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-304"
+                }
+              ]
+            },
             {
               "sha": "76360dd",
               "message": "feat: resolver problemas de compilacion antes de implementacion del panel NE-300",
@@ -1678,7 +1691,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 12,
           "recent_commits": [
             {
               "sha": "3208718",
@@ -1830,14 +1843,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/NCOL-551"
                 }
               ]
-            },
-            {
-              "sha": "b01357a",
-              "message": "se revisa y se pushea en cambio de nuevo en ambiente local OK",
-              "date": "2026-01-27T20:23:31Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "1",
-              "tickets": []
             }
           ]
         },
