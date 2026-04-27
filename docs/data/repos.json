@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T15:01:04.465Z",
+  "generated_at": "2026-04-27T19:55:39.634Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -59,6 +59,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "QA-779": {
+      "summary": "Scripts Eventos | Nutrabiotics",
+      "status": "Detenido",
+      "assignee": "Carlos Ali Parra"
+    },
     "QA-772": {
       "summary": "Scripts - Impacto Sostenible",
       "status": "Actividad completada",
@@ -68,11 +73,6 @@
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
-    },
-    "PMO-2817": {
-      "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2770": {
       "summary": "Actualización  de información Pagina Nutrabiotics.info",
@@ -351,8 +351,13 @@
     },
     "ALCO-1516": {
       "summary": "Corregir envío del evento purchase en GTM al finalizar compra",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
+    },
+    "ALCO-1512": {
+      "summary": "Re ajustar el desarrollo de los paso del checkout",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -484,7 +489,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T22:04:57Z",
+      "last_push": "2026-04-27T17:00:27Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -1595,7 +1600,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T13:18:04Z",
+      "last_push": "2026-04-27T19:55:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1673,8 +1678,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "3208718",
+              "message": "test: ajustes scripts por timeout QA-779",
+              "date": "2026-04-27T19:55:12Z",
+              "author": "CarlosParraQA",
+              "pr_number": "86",
+              "tickets": [
+                {
+                  "id": "QA-779",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-779"
+                }
+              ]
+            },
             {
               "sha": "b0d536c",
               "message": "fix: corregir slides del carrusel en pantallas con height bajo NCOL-677",
@@ -2964,7 +2982,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T15:00:41Z",
+      "last_push": "2026-04-27T16:11:34Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3028,8 +3046,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 31,
+          "count": 32,
           "recent_commits": [
+            {
+              "sha": "6b7d193",
+              "message": "feat(users): add endpoint to retrieve ERP customer by document number ALCO-1512",
+              "date": "2026-04-27T16:11:31Z",
+              "author": "CristiGB",
+              "pr_number": "347",
+              "tickets": [
+                {
+                  "id": "ALCO-1512",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1512"
+                }
+              ]
+            },
             {
               "sha": "ffa13d5",
               "message": "chore(notifications): disparar deploy ms-notifications NCR-112",
@@ -3339,19 +3370,6 @@
                 {
                   "id": "SUP-286",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
-                }
-              ]
-            },
-            {
-              "sha": "5f56994",
-              "message": "fix(prescriptions): register pdf PMO-2817",
-              "date": "2026-04-15T21:44:08Z",
-              "author": "fabianromerolu",
-              "pr_number": "318",
-              "tickets": [
-                {
-                  "id": "PMO-2817",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
                 }
               ]
             }
