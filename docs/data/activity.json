@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T06:18:04.624Z",
+  "generated_at": "2026-04-27T13:14:15.100Z",
   "window_days": 90,
   "developers": [
     {
@@ -609,13 +609,13 @@
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 8,
-      "prs_90d": 31,
-      "last_activity": "2026-04-21T21:01:57Z",
+      "prs_30d": 9,
+      "prs_90d": 32,
+      "last_activity": "2026-04-27T13:13:56Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 15
+          "prs": 16
         },
         {
           "repo": "fruto-web-nutra-co",
@@ -644,7 +644,7 @@
       ],
       "by_branch": {
         "develop": 15,
-        "qa": 7,
+        "qa": 8,
         "main": 9
       },
       "weekly": [
@@ -698,7 +698,7 @@
         },
         {
           "week": "2026-W18",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
