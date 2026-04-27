@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-04-24T22:40:38.083Z",
+  "generated_at": "2026-04-27T06:18:04.624Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 61,
-      "prs_90d": 116,
+      "prs_30d": 55,
+      "prs_90d": 114,
       "last_activity": "2026-04-24T21:12:53Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 80
+          "prs": 78
         },
         {
           "repo": "portal-nutrabiotics",
@@ -31,15 +31,11 @@
         }
       ],
       "by_branch": {
-        "develop": 54,
-        "qa": 34,
+        "develop": 53,
+        "qa": 33,
         "main": 28
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 6
-        },
         {
           "week": "2026-W06",
           "prs": 7
@@ -87,13 +83,17 @@
         {
           "week": "2026-W17",
           "prs": 16
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 22,
+      "prs_30d": 21,
       "prs_90d": 51,
       "last_activity": "2026-04-24T21:59:31Z",
       "by_repo": [
@@ -133,10 +133,6 @@
       },
       "weekly": [
         {
-          "week": "2026-W05",
-          "prs": 1
-        },
-        {
           "week": "2026-W06",
           "prs": 3
         },
@@ -183,89 +179,17 @@
         {
           "week": "2026-W17",
           "prs": 6
-        }
-      ]
-    },
-    {
-      "login": "meraso-nutra",
-      "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
-      "prs_30d": 16,
-      "prs_90d": 38,
-      "last_activity": "2026-04-24T17:38:45Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 35
         },
         {
-          "repo": "microservice_payments",
-          "prs": 3
-        }
-      ],
-      "by_branch": {
-        "develop": 37,
-        "qa": 0,
-        "main": 1
-      },
-      "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 3
-        },
-        {
-          "week": "2026-W06",
-          "prs": 1
-        },
-        {
-          "week": "2026-W07",
-          "prs": 1
-        },
-        {
-          "week": "2026-W08",
+          "week": "2026-W18",
           "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 3
-        },
-        {
-          "week": "2026-W10",
-          "prs": 4
-        },
-        {
-          "week": "2026-W11",
-          "prs": 5
-        },
-        {
-          "week": "2026-W12",
-          "prs": 5
-        },
-        {
-          "week": "2026-W13",
-          "prs": 2
-        },
-        {
-          "week": "2026-W14",
-          "prs": 4
-        },
-        {
-          "week": "2026-W15",
-          "prs": 0
-        },
-        {
-          "week": "2026-W16",
-          "prs": 5
-        },
-        {
-          "week": "2026-W17",
-          "prs": 5
         }
       ]
     },
     {
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
-      "prs_30d": 15,
+      "prs_30d": 14,
       "prs_90d": 40,
       "last_activity": "2026-04-23T19:19:49Z",
       "by_repo": [
@@ -292,10 +216,6 @@
         "main": 1
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 1
-        },
         {
           "week": "2026-W06",
           "prs": 5
@@ -343,6 +263,86 @@
         {
           "week": "2026-W17",
           "prs": 9
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
+        }
+      ]
+    },
+    {
+      "login": "meraso-nutra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/255401191?v=4",
+      "prs_30d": 14,
+      "prs_90d": 36,
+      "last_activity": "2026-04-24T17:38:45Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 33
+        },
+        {
+          "repo": "microservice_payments",
+          "prs": 3
+        }
+      ],
+      "by_branch": {
+        "develop": 35,
+        "qa": 0,
+        "main": 1
+      },
+      "weekly": [
+        {
+          "week": "2026-W06",
+          "prs": 1
+        },
+        {
+          "week": "2026-W07",
+          "prs": 1
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 3
+        },
+        {
+          "week": "2026-W10",
+          "prs": 4
+        },
+        {
+          "week": "2026-W11",
+          "prs": 5
+        },
+        {
+          "week": "2026-W12",
+          "prs": 5
+        },
+        {
+          "week": "2026-W13",
+          "prs": 2
+        },
+        {
+          "week": "2026-W14",
+          "prs": 4
+        },
+        {
+          "week": "2026-W15",
+          "prs": 0
+        },
+        {
+          "week": "2026-W16",
+          "prs": 5
+        },
+        {
+          "week": "2026-W17",
+          "prs": 5
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
@@ -384,10 +384,6 @@
         "main": 6
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 10
-        },
         {
           "week": "2026-W06",
           "prs": 11
@@ -435,13 +431,17 @@
         {
           "week": "2026-W17",
           "prs": 5
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 13,
+      "prs_30d": 11,
       "prs_90d": 40,
       "last_activity": "2026-04-24T20:22:01Z",
       "by_repo": [
@@ -460,10 +460,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
         {
           "week": "2026-W06",
           "prs": 0
@@ -511,97 +507,17 @@
         {
           "week": "2026-W17",
           "prs": 3
-        }
-      ]
-    },
-    {
-      "login": "mladino-source",
-      "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
-      "prs_30d": 12,
-      "prs_90d": 14,
-      "last_activity": "2026-04-22T22:17:40Z",
-      "by_repo": [
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 9
         },
         {
-          "repo": "alivia",
-          "prs": 2
-        },
-        {
-          "repo": "fruto-web-nutra-mx",
-          "prs": 2
-        },
-        {
-          "repo": "fruto-landing-amf",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 14,
-        "qa": 0,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W05",
+          "week": "2026-W18",
           "prs": 0
-        },
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
-          "prs": 2
-        },
-        {
-          "week": "2026-W13",
-          "prs": 4
-        },
-        {
-          "week": "2026-W14",
-          "prs": 3
-        },
-        {
-          "week": "2026-W15",
-          "prs": 1
-        },
-        {
-          "week": "2026-W16",
-          "prs": 2
-        },
-        {
-          "week": "2026-W17",
-          "prs": 2
         }
       ]
     },
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 11,
+      "prs_30d": 10,
       "prs_90d": 35,
       "last_activity": "2026-04-24T22:40:24Z",
       "by_repo": [
@@ -636,10 +552,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
         {
           "week": "2026-W06",
           "prs": 5
@@ -687,13 +599,17 @@
         {
           "week": "2026-W17",
           "prs": 5
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
     {
       "login": "jgaray-nutrapp",
       "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 11,
+      "prs_30d": 8,
       "prs_90d": 31,
       "last_activity": "2026-04-21T21:01:57Z",
       "by_repo": [
@@ -733,10 +649,6 @@
       },
       "weekly": [
         {
-          "week": "2026-W05",
-          "prs": 3
-        },
-        {
           "week": "2026-W06",
           "prs": 3
         },
@@ -783,13 +695,101 @@
         {
           "week": "2026-W17",
           "prs": 1
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
+        }
+      ]
+    },
+    {
+      "login": "mladino-source",
+      "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
+      "prs_30d": 8,
+      "prs_90d": 14,
+      "last_activity": "2026-04-22T22:17:40Z",
+      "by_repo": [
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 9
+        },
+        {
+          "repo": "alivia",
+          "prs": 2
+        },
+        {
+          "repo": "fruto-web-nutra-mx",
+          "prs": 2
+        },
+        {
+          "repo": "fruto-landing-amf",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 14,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 4
+        },
+        {
+          "week": "2026-W14",
+          "prs": 3
+        },
+        {
+          "week": "2026-W15",
+          "prs": 1
+        },
+        {
+          "week": "2026-W16",
+          "prs": 2
+        },
+        {
+          "week": "2026-W17",
+          "prs": 2
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
     {
       "login": "Dev-Juan-Medina-NutraApp",
       "avatar_url": "https://avatars.githubusercontent.com/u/138901484?v=4",
-      "prs_30d": 7,
+      "prs_30d": 5,
       "prs_90d": 8,
       "last_activity": "2026-04-24T19:29:25Z",
       "by_repo": [
@@ -809,10 +809,6 @@
       },
       "weekly": [
         {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
           "week": "2026-W06",
           "prs": 0
         },
@@ -859,6 +855,10 @@
         {
           "week": "2026-W17",
           "prs": 4
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
@@ -885,10 +885,6 @@
       },
       "weekly": [
         {
-          "week": "2026-W05",
-          "prs": 0
-        },
-        {
           "week": "2026-W06",
           "prs": 0
         },
@@ -935,13 +931,17 @@
         {
           "week": "2026-W17",
           "prs": 3
+        },
+        {
+          "week": "2026-W18",
+          "prs": 0
         }
       ]
     },
     {
       "login": "CarlosParraQA",
       "avatar_url": "https://avatars.githubusercontent.com/u/232940545?v=4",
-      "prs_30d": 3,
+      "prs_30d": 2,
       "prs_90d": 3,
       "last_activity": "2026-04-07T20:07:15Z",
       "by_repo": [
@@ -956,10 +956,6 @@
         "main": 0
       },
       "weekly": [
-        {
-          "week": "2026-W05",
-          "prs": 0
-        },
         {
           "week": "2026-W06",
           "prs": 0
@@ -1006,6 +1002,10 @@
         },
         {
           "week": "2026-W17",
+          "prs": 0
+        },
+        {
+          "week": "2026-W18",
           "prs": 0
         }
       ]
