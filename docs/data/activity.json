@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-27T13:43:28.462Z",
+  "generated_at": "2026-04-27T16:11:51.367Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 55,
-      "prs_90d": 114,
-      "last_activity": "2026-04-24T21:12:53Z",
+      "prs_30d": 56,
+      "prs_90d": 115,
+      "last_activity": "2026-04-27T16:11:31Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -27,11 +27,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 4
+          "prs": 5
         }
       ],
       "by_branch": {
-        "develop": 53,
+        "develop": 54,
         "qa": 33,
         "main": 28
       },
@@ -86,7 +86,7 @@
         },
         {
           "week": "2026-W18",
-          "prs": 0
+          "prs": 1
         }
       ]
     },
@@ -190,7 +190,7 @@
       "login": "fabianromerolu",
       "avatar_url": "https://avatars.githubusercontent.com/u/112957494?v=4",
       "prs_30d": 14,
-      "prs_90d": 40,
+      "prs_90d": 39,
       "last_activity": "2026-04-23T19:19:49Z",
       "by_repo": [
         {
@@ -207,12 +207,12 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 6
+          "prs": 5
         }
       ],
       "by_branch": {
         "develop": 36,
-        "qa": 3,
+        "qa": 2,
         "main": 1
       },
       "weekly": [
@@ -441,9 +441,9 @@
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 12,
-      "prs_90d": 41,
-      "last_activity": "2026-04-27T13:43:10Z",
+      "prs_30d": 13,
+      "prs_90d": 42,
+      "last_activity": "2026-04-27T15:00:38Z",
       "by_repo": [
         {
           "repo": "alivia",
@@ -451,11 +451,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 19
+          "prs": 20
         }
       ],
       "by_branch": {
-        "develop": 40,
+        "develop": 41,
         "qa": 1,
         "main": 0
       },
@@ -510,16 +510,16 @@
         },
         {
           "week": "2026-W18",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 11,
-      "prs_90d": 36,
-      "last_activity": "2026-04-27T13:18:02Z",
+      "prs_30d": 12,
+      "prs_90d": 37,
+      "last_activity": "2026-04-27T13:49:53Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
@@ -530,11 +530,11 @@
           "prs": 3
         },
         {
-          "repo": "portal-nutrabiotics",
-          "prs": 1
+          "repo": "nutrabiotics-empresas",
+          "prs": 2
         },
         {
-          "repo": "nutrabiotics-empresas",
+          "repo": "portal-nutrabiotics",
           "prs": 1
         },
         {
@@ -547,7 +547,7 @@
         }
       ],
       "by_branch": {
-        "develop": 32,
+        "develop": 33,
         "qa": 4,
         "main": 0
       },
@@ -602,7 +602,7 @@
         },
         {
           "week": "2026-W18",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
