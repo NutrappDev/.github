@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T13:50:19.949Z",
+  "generated_at": "2026-04-27T15:01:04.465Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -11,12 +11,12 @@
     },
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-286": {
       "summary": "Botón para reenvío de órdenes fallidas a ERP",
-      "status": "Revisión QA",
+      "status": "Detenido",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-272": {
@@ -146,7 +146,7 @@
     },
     "NE-304": {
       "summary": "HU-20 Paginación en el carrito [Desarrollo]",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NE-300": {
@@ -448,11 +448,6 @@
       "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-448": {
-      "summary": "Despliegues semanales del backend de Alivia Colombia a ambiente de producción - Enero 2026",
-      "status": "Actividad completada",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "ALCO-404": {
       "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
@@ -1367,7 +1362,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T21:13:07Z",
+      "last_push": "2026-04-27T14:47:05Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -2969,7 +2964,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T13:43:13Z",
+      "last_push": "2026-04-27T15:00:41Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3033,8 +3028,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 30,
+          "count": 31,
           "recent_commits": [
+            {
+              "sha": "ffa13d5",
+              "message": "chore(notifications): disparar deploy ms-notifications NCR-112",
+              "date": "2026-04-27T15:00:38Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "346",
+              "tickets": [
+                {
+                  "id": "NCR-112",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-112"
+                }
+              ]
+            },
             {
               "sha": "a5315d0",
               "message": "feat(notifications): agregar evento order.payment-link NCR-112",
@@ -3346,24 +3354,11 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
                 }
               ]
-            },
-            {
-              "sha": "8b4c19d",
-              "message": "refactor(erp): builder execution change FFCO-562",
-              "date": "2026-04-15T20:00:42Z",
-              "author": "meraso-nutra",
-              "pr_number": "316",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "54ef247",
@@ -3396,19 +3391,6 @@
               "author": "jgaray-nutrapp",
               "pr_number": "280",
               "tickets": []
-            },
-            {
-              "sha": "6e9ddc7",
-              "message": "hotfix(prescriptions): orden de prs ALCO-1319",
-              "date": "2026-01-27T14:35:05Z",
-              "author": "fabianromerolu",
-              "pr_number": "213",
-              "tickets": [
-                {
-                  "id": "ALCO-1319",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1319"
-                }
-              ]
             }
           ]
         }
