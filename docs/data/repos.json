@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T21:43:41.299Z",
+  "generated_at": "2026-04-28T22:48:01.472Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -620,7 +620,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "ecb8e3f",
@@ -722,14 +722,6 @@
               "date": "2026-01-28T23:06:04Z",
               "author": "CristiGB",
               "pr_number": "304",
-              "tickets": []
-            },
-            {
-              "sha": "0c7cb77",
-              "message": "feat: enhance input validation and max length handling ",
-              "date": "2026-01-28T21:49:48Z",
-              "author": "CristiGB",
-              "pr_number": "302",
               "tickets": []
             }
           ]
@@ -1369,7 +1361,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T21:10:07Z",
+      "last_push": "2026-04-28T22:47:41Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -1440,8 +1432,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "633e5a3",
+              "message": "feat(users): vistas de registro y estado de usuario en epicor PALCO-84",
+              "date": "2026-04-28T22:47:40Z",
+              "author": "jsandoval-dev",
+              "pr_number": "195",
+              "tickets": [
+                {
+                  "id": "PALCO-84",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-84"
+                }
+              ]
+            },
             {
               "sha": "cd05741",
               "message": "feat(orders): wizard de creación manual de órdenes desde Contact Center PMO-2613",
@@ -2989,7 +2994,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T21:41:04Z",
+      "last_push": "2026-04-28T22:47:34Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
