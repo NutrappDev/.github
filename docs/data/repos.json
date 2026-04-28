@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T17:35:22.052Z",
+  "generated_at": "2026-04-28T20:07:07.591Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -131,12 +131,12 @@
     },
     "PALCO-85": {
       "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-304": {
@@ -212,6 +212,11 @@
     "NCR-105": {
       "summary": "ms- Notificaciones",
       "status": "Despliegue a PROD",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
+    "NCR-100": {
+      "summary": "ms- Ordenes",
+      "status": "Despliegue a DEV",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCOL-677": {
@@ -547,7 +552,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T17:34:56Z",
+      "last_push": "2026-04-28T19:28:34Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-24",
@@ -1165,7 +1170,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T20:37:30Z",
+      "last_push": "2026-04-28T18:22:06Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1411,7 +1416,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T14:47:05Z",
+      "last_push": "2026-04-28T20:06:16Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -3018,7 +3023,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T17:11:21Z",
+      "last_push": "2026-04-28T20:06:28Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3098,6 +3103,19 @@
         "to_qa": {
           "count": 33,
           "recent_commits": [
+            {
+              "sha": "ee5f8d4",
+              "message": "refactor(orders): organizar y refactorizar microservicio ordenes NCR-100",
+              "date": "2026-04-28T20:06:25Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "324",
+              "tickets": [
+                {
+                  "id": "NCR-100",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-100"
+                }
+              ]
+            },
             {
               "sha": "e7ea903",
               "message": "feat(erp): created use case for shipto NCR-114",
@@ -3403,19 +3421,6 @@
               "date": "2026-04-16T18:00:26Z",
               "author": "meraso-nutra",
               "pr_number": "321",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "e2d30f9",
-              "message": "refactor(erp): process completed orders FFCO-562",
-              "date": "2026-04-16T16:17:33Z",
-              "author": "meraso-nutra",
-              "pr_number": "320",
               "tickets": [
                 {
                   "id": "FFCO-562",
