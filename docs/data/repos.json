@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T20:13:10.364Z",
+  "generated_at": "2026-04-28T21:43:41.299Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -114,6 +114,11 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
+    "PMO-2613": {
+      "summary": "Cargue de Pedidos a Alivia por el Contact Center",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "PMO-2585": {
       "summary": "Banners pack de medicina funcional - página de nutra",
       "status": "Actividad completada",
@@ -139,16 +144,6 @@
       "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
-    "NE-304": {
-      "summary": "HU-20 Paginación en el carrito [Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "NE-300": {
-      "summary": "HU-16 Panel de cupo de crédito en el carrito [Desarrollo]",
-      "status": "Despliegue a DEV",
-      "assignee": "Steven Leon"
-    },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
       "status": "Despliegue a QA",
@@ -157,11 +152,6 @@
     "NE-243": {
       "summary": "Implementar recepción de órdenes desde webhook de pagos",
       "status": "Detenido",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "NE-239": {
-      "summary": "Implementar consumo del endpoint POST /orders",
-      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -316,7 +306,7 @@
     },
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
-      "status": "Revisión QA",
+      "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
     "ALPE-218": {
@@ -1170,7 +1160,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T18:22:06Z",
+      "last_push": "2026-04-28T21:43:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1189,13 +1179,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-09",
-        "sha": "80e4b27db7a3c2313444c4855cae1487517e6001",
-        "date": "2026-04-09T16:03:15Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-09",
-        "body": "Release qa-2026-04-09\n"
+        "version": "qa-2026-04-28",
+        "sha": "80443f88ee8a9a244e8e552d5d5dde7ef0426a39",
+        "date": "2026-04-28T21:43:30Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-28",
+        "body": "Release qa-2026-04-28\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-09",
+          "sha": "80e4b27db7a3c2313444c4855cae1487517e6001",
+          "date": "2026-04-09T16:03:15Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-09",
+          "body": "Release qa-2026-04-09\n"
+        },
         {
           "version": "qa-2026-03-17",
           "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
@@ -1213,60 +1210,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 1,
           "recent_commits": [
-            {
-              "sha": "8993516",
-              "message": "fix: corregir errores mostrados por Nextjs para garantizar compilación NE-304",
-              "date": "2026-04-27T20:37:28Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "55",
-              "tickets": [
-                {
-                  "id": "NE-304",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-304"
-                }
-              ]
-            },
-            {
-              "sha": "76360dd",
-              "message": "feat: resolver problemas de compilacion antes de implementacion del panel NE-300",
-              "date": "2026-04-27T13:49:53Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "53",
-              "tickets": [
-                {
-                  "id": "NE-300",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-300"
-                }
-              ]
-            },
-            {
-              "sha": "4219df0",
-              "message": "feat: implementar paginacion en checkout NE-304",
-              "date": "2026-04-24T22:40:24Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "52",
-              "tickets": [
-                {
-                  "id": "NE-304",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-304"
-                }
-              ]
-            },
-            {
-              "sha": "2e27cc8",
-              "message": "feat(useBuildOrder): adaptar datos de la orden para envío a ms-ordenes NE-239",
-              "date": "2026-04-13T19:05:36Z",
-              "author": "jsandoval-dev",
-              "pr_number": "50",
-              "tickets": [
-                {
-                  "id": "NE-239",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-239"
-                }
-              ]
-            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -1283,8 +1228,16 @@
           ]
         },
         "to_production": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "80443f8",
+              "message": "release: qa-2026-04-28",
+              "date": "2026-04-28T21:43:17Z",
+              "author": "k-aguilera",
+              "pr_number": "56",
+              "tickets": []
+            },
             {
               "sha": "80e4b27",
               "message": "release: qa-2026-04-09",
@@ -1416,7 +1369,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T20:08:51Z",
+      "last_push": "2026-04-28T21:10:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -1487,8 +1440,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "cd05741",
+              "message": "feat(orders): wizard de creación manual de órdenes desde Contact Center PMO-2613",
+              "date": "2026-04-28T21:10:05Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "197",
+              "tickets": [
+                {
+                  "id": "PMO-2613",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2613"
+                }
+              ]
+            },
             {
               "sha": "8581d58",
               "message": "fix(prescriptions): bug pdf v2 SUP-292",
@@ -3023,7 +2989,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T20:12:49Z",
+      "last_push": "2026-04-28T21:41:04Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
