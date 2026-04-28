@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T17:11:28.308Z",
+  "generated_at": "2026-04-28T17:35:22.052Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -324,6 +324,11 @@
       "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
+    "ALMX-293": {
+      "summary": "BG | Interfaz | El botón de ingreso se sobrepone ante la imagen de Alivia",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Actividad completada",
@@ -542,7 +547,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T14:19:53Z",
+      "last_push": "2026-04-28T17:34:56Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-24",
@@ -620,8 +625,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "ecb8e3f",
+              "message": "fix(navbar): evitar solapamiento boton ingreso con logo alivia ALMX-293",
+              "date": "2026-04-28T17:34:53Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "442",
+              "tickets": [
+                {
+                  "id": "ALMX-293",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-293"
+                }
+              ]
+            },
             {
               "sha": "f8e0c38",
               "message": "feat: ALCO-1512 checkout",
@@ -3000,7 +3018,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T17:11:04Z",
+      "last_push": "2026-04-28T17:11:21Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3446,10 +3464,10 @@
         }
       },
       "ci": {
-        "status": "queued",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25067061106",
-        "updated_at": "2026-04-28T17:11:21Z",
+        "updated_at": "2026-04-28T17:11:46Z",
         "name": "pages build and deployment"
       },
       "_errors": {
