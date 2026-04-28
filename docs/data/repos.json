@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T20:37:54.035Z",
+  "generated_at": "2026-04-28T14:20:27.815Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -11,11 +11,6 @@
     },
     "SUP-287": {
       "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Detenido",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "SUP-286": {
-      "summary": "Botón para reenvío de órdenes fallidas a ERP",
       "status": "Detenido",
       "assignee": "Jhelcy Sandoval"
     },
@@ -151,7 +146,7 @@
     },
     "NE-300": {
       "summary": "HU-16 Panel de cupo de crédito en el carrito [Desarrollo]",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Steven Leon"
     },
     "NE-247": {
@@ -189,6 +184,11 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "NCR-114": {
+      "summary": "Crear caso de uso para ShipTo",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
     "NCR-113": {
       "summary": "Manejo de Factory e instancias desde libreria ERP",
       "status": "Esperando aprobación",
@@ -196,7 +196,7 @@
     },
     "NCR-112": {
       "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Felipe Berrio"
     },
     "NCR-111": {
@@ -216,7 +216,7 @@
     },
     "NCOL-677": {
       "summary": "BG | Diseño | Imagen del banner recortada y botón no visible",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NCOL-647": {
@@ -356,7 +356,7 @@
     },
     "ALCO-1512": {
       "summary": "Re ajustar el desarrollo de los paso del checkout",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1498": {
@@ -542,7 +542,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T20:21:52Z",
+      "last_push": "2026-04-28T14:19:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-24",
@@ -620,8 +620,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "f8e0c38",
+              "message": "feat: ALCO-1512 checkout",
+              "date": "2026-04-28T14:19:50Z",
+              "author": "CristiGB",
+              "pr_number": "444",
+              "tickets": [
+                {
+                  "id": "ALCO-1512",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1512"
+                }
+              ]
+            },
             {
               "sha": "21c1493",
               "message": "fix(payments): asegurar envio correcto del evento purchase a gtm ALCO-1516",
@@ -1613,7 +1626,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T19:55:13Z",
+      "last_push": "2026-04-27T22:10:56Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -2987,7 +3000,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T16:11:34Z",
+      "last_push": "2026-04-28T05:03:14Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3051,8 +3064,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 32,
+          "count": 33,
           "recent_commits": [
+            {
+              "sha": "e7ea903",
+              "message": "feat(erp): created use case for shipto NCR-114",
+              "date": "2026-04-27T22:41:21Z",
+              "author": "meraso-nutra",
+              "pr_number": "348",
+              "tickets": [
+                {
+                  "id": "NCR-114",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-114"
+                }
+              ]
+            },
             {
               "sha": "6b7d193",
               "message": "feat(users): add endpoint to retrieve ERP customer by document number ALCO-1512",
@@ -3362,19 +3388,6 @@
                 {
                   "id": "FFCO-562",
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
-            },
-            {
-              "sha": "93ff572",
-              "message": "feat(orders): reenvio de ordenes fallidas e identificador epicor SUP-286",
-              "date": "2026-04-16T15:29:29Z",
-              "author": "jsandoval-dev",
-              "pr_number": "319",
-              "tickets": [
-                {
-                  "id": "SUP-286",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-286"
                 }
               ]
             }
