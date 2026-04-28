@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T15:26:18.928Z",
+  "generated_at": "2026-04-28T17:11:28.308Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3000,7 +3000,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T15:25:52Z",
+      "last_push": "2026-04-28T17:11:04Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3023,6 +3023,20 @@
           "date": "2025-11-25T20:49:08Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/v1.0.0",
           "body": "Release v1.0.0: Primera versión en producción\n\nPrimer despliegue oficial a ambiente de producción desde QA.\nIncluye funcionalidad base del sistema validada en ambiente de pruebas.\n"
+        },
+        {
+          "version": "prod-2026-04-28",
+          "sha": "46f3ce5fa7b6715212223e8787611067cc3582a1",
+          "date": "2026-04-28T15:26:14Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-28",
+          "body": "Release prod-2026-04-28\n"
+        },
+        {
+          "version": "prod-2026-04-28-2",
+          "sha": "2249998b8d35f17500ca3d874481c2dab9f79a64",
+          "date": "2026-04-28T17:11:20Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-28-2",
+          "body": "Release prod-2026-04-28-2\n"
         }
       ],
       "qa": {
@@ -3432,10 +3446,10 @@
         }
       },
       "ci": {
-        "status": "in_progress",
+        "status": "queued",
         "conclusion": null,
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25061897495",
-        "updated_at": "2026-04-28T15:26:07Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25067061106",
+        "updated_at": "2026-04-28T17:11:21Z",
         "name": "pages build and deployment"
       },
       "_errors": {
