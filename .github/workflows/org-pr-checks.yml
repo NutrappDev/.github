@@ -994,7 +994,7 @@ jobs:
         run: |
           git fetch origin "$TARGET" "$ORIGIN_BRANCH"
 
-          PR_FILES=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null | sort || true)
+          PR_FILES=$(git diff --name-only "$BASE_SHA"..."$HEAD_SHA" 2>/dev/null | grep -v 'affected\.txt\|package-lock\.json' | sort || true)
 
           if [ -z "$PR_FILES" ]; then
             echo "val_a_ok=true" >> "$GITHUB_OUTPUT"
@@ -1032,7 +1032,7 @@ jobs:
             P_DATE=$(git log --format="%at" -1 "$P" 2>/dev/null || echo 0)
             [ "$P_DATE" -ge "$OLDEST_PR_DATE" ] && continue
 
-            P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | sort || true)
+            P_FILES=$(git diff "${P}^1" "$P" --name-only 2>/dev/null | grep -v 'affected\.txt\|package-lock\.json' | sort || true)
             [ -z "$P_FILES" ] && continue
 
             # Si el patch-id del commit pendiente ya está cubierto por un cherry-pick en este PR,
