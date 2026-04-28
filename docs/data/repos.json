@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T22:48:01.472Z",
+  "generated_at": "2026-04-28T23:14:02.414Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -482,6 +482,39 @@
   },
   "repos": [
     {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-04-28T23:06:55Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "fruto-landing-cimf",
       "full_name": "NutrappDev/fruto-landing-cimf",
       "description": "Landing del congreso internacional de Medicina funcional",
@@ -620,7 +653,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 8,
           "recent_commits": [
             {
               "sha": "ecb8e3f",
@@ -715,14 +748,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1391"
                 }
               ]
-            },
-            {
-              "sha": "82315b4",
-              "message": "fix: reduce maximum input length for product ",
-              "date": "2026-01-28T23:06:04Z",
-              "author": "CristiGB",
-              "pr_number": "304",
-              "tickets": []
             }
           ]
         },
@@ -1112,39 +1137,6 @@
       }
     },
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-04-22T21:44:32Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -1152,7 +1144,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T21:43:31Z",
+      "last_push": "2026-04-28T23:00:22Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -2994,7 +2986,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T22:47:34Z",
+      "last_push": "2026-04-28T23:13:41Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3072,8 +3064,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 33,
+          "count": 34,
           "recent_commits": [
+            {
+              "sha": "9d75fce",
+              "message": "fix(orders): corregir build-order-from-woocommerce.ts agregando woo_data NCR-100",
+              "date": "2026-04-28T23:13:39Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "353",
+              "tickets": [
+                {
+                  "id": "NCR-100",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-100"
+                }
+              ]
+            },
             {
               "sha": "ee5f8d4",
               "message": "refactor(orders): organizar y refactorizar microservicio ordenes NCR-100",
@@ -3383,19 +3388,6 @@
                 {
                   "id": "NE-243",
                   "url": "https://nutrabiotics.atlassian.net/browse/NE-243"
-                }
-              ]
-            },
-            {
-              "sha": "fc39a23",
-              "message": "refactor(erp): return when the order is completed FFCO-562",
-              "date": "2026-04-16T18:00:26Z",
-              "author": "meraso-nutra",
-              "pr_number": "321",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
                 }
               ]
             }
