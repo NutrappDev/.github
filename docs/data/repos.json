@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T14:20:27.815Z",
+  "generated_at": "2026-04-28T15:26:18.928Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -91,7 +91,7 @@
     },
     "PMO-2714": {
       "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
@@ -356,7 +356,7 @@
     },
     "ALCO-1512": {
       "summary": "Re ajustar el desarrollo de los paso del checkout",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALCO-1498": {
@@ -3000,7 +3000,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T05:03:14Z",
+      "last_push": "2026-04-28T15:25:52Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3432,10 +3432,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/23156421910",
-        "updated_at": "2026-03-16T17:14:24Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25061897495",
+        "updated_at": "2026-04-28T15:26:07Z",
         "name": "pages build and deployment"
       },
       "_errors": {
