@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T23:14:02.414Z",
+  "generated_at": "2026-04-29T03:46:02.953Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -144,14 +144,14 @@
       "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
+    "NE-318": {
+      "summary": "BUG: La información del usuario no se actualiza",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
+    },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
       "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "NE-243": {
-      "summary": "Implementar recepción de órdenes desde webhook de pagos",
-      "status": "Detenido",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -359,6 +359,11 @@
       "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
+    "ALCO-1511": {
+      "summary": "Creación de orden en ms-orders y ERP, atributo de la dirección",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
       "status": "Actividad completada",
@@ -489,7 +494,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "LocalCode",
-      "last_push": "2026-04-28T23:06:55Z",
+      "last_push": "2026-04-29T00:00:31Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1144,7 +1149,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T23:00:22Z",
+      "last_push": "2026-04-29T03:45:41Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1194,8 +1199,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "de1dc74",
+              "message": "fix: logged info user NE-318",
+              "date": "2026-04-29T03:45:39Z",
+              "author": "k-aguilera",
+              "pr_number": "57",
+              "tickets": [
+                {
+                  "id": "NE-318",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-318"
+                }
+              ]
+            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -2986,7 +3004,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T23:13:41Z",
+      "last_push": "2026-04-29T00:51:35Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3011,18 +3029,18 @@
           "body": "Release v1.0.0: Primera versión en producción\n\nPrimer despliegue oficial a ambiente de producción desde QA.\nIncluye funcionalidad base del sistema validada en ambiente de pruebas.\n"
         },
         {
+          "version": "prod-2026-04-29",
+          "sha": "43d724c2cda87b7fe5ebe84f50af07d9ad80a8d2",
+          "date": "2026-04-29T00:51:34Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-29",
+          "body": "Release prod-2026-04-29\n"
+        },
+        {
           "version": "prod-2026-04-28",
           "sha": "46f3ce5fa7b6715212223e8787611067cc3582a1",
           "date": "2026-04-28T15:26:14Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-28",
           "body": "Release prod-2026-04-28\n"
-        },
-        {
-          "version": "prod-2026-04-28-3",
-          "sha": "275770e800c9c7736a0f50ec2af05dadf617ba24",
-          "date": "2026-04-28T20:12:48Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-28-3",
-          "body": "Release prod-2026-04-28-3\n"
         }
       ],
       "qa": {
@@ -3064,8 +3082,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 34,
+          "count": 35,
           "recent_commits": [
+            {
+              "sha": "b06f57b",
+              "message": "feat(erp): addition param shiptoid ALCO-1511",
+              "date": "2026-04-28T23:26:41Z",
+              "author": "meraso-nutra",
+              "pr_number": "354",
+              "tickets": [
+                {
+                  "id": "ALCO-1511",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1511"
+                }
+              ]
+            },
             {
               "sha": "9d75fce",
               "message": "fix(orders): corregir build-order-from-woocommerce.ts agregando woo_data NCR-100",
@@ -3377,19 +3408,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
                 }
               ]
-            },
-            {
-              "sha": "e24b4ec",
-              "message": "feat(webhook): recepcion de ordenes desde webhook NE-243",
-              "date": "2026-04-17T19:23:00Z",
-              "author": "jsandoval-dev",
-              "pr_number": "322",
-              "tickets": [
-                {
-                  "id": "NE-243",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-243"
-                }
-              ]
             }
           ]
         },
@@ -3434,8 +3452,8 @@
       "ci": {
         "status": "completed",
         "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25075268760",
-        "updated_at": "2026-04-28T20:13:06Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25085407996",
+        "updated_at": "2026-04-29T00:51:53Z",
         "name": "pages build and deployment"
       },
       "_errors": {
