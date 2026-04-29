@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T20:00:49.647Z",
+  "generated_at": "2026-04-29T20:11:35.520Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -314,26 +314,6 @@
       "status": "Actividad completada",
       "assignee": "Maria Alejandra Pedraza Cardenas"
     },
-    "ALMX-305": {
-      "summary": "BG | Bolsa de Compras | No se puede agregar productos a favoritos y no muestra mensaje de error",
-      "status": "Despliegue a QA",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALMX-301": {
-      "summary": "BG | Responsividad | Al minimizar la página, el contenido se desordena",
-      "status": "Despliegue a QA",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
-    "ALMX-300": {
-      "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
-      "status": "Despliegue a QA",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
-    "ALMX-293": {
-      "summary": "BG | Interfaz | El botón de ingreso se sobrepone ante la imagen de Alivia",
-      "status": "Despliegue a QA",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Actividad completada",
@@ -358,11 +338,6 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
-    },
-    "ALCO-1516": {
-      "summary": "Corregir envío del evento purchase en GTM al finalizar compra",
-      "status": "Despliegue a QA",
-      "assignee": "Felipe Berrio"
     },
     "ALCO-1512": {
       "summary": "Re ajustar el desarrollo de los paso del checkout",
@@ -546,7 +521,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T20:00:27Z",
+      "last_push": "2026-04-29T20:11:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-29",
@@ -586,13 +561,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-24",
-        "sha": "fc5bc27f23b5e276bb5240e63029fcc7f98e334a",
-        "date": "2026-04-24T20:21:51Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-24",
-        "body": "Release qa-2026-04-24\n"
+        "version": "qa-2026-04-29",
+        "sha": "0a083362fb2d2977c5d80f3a5c132dcf0af21015",
+        "date": "2026-04-29T20:11:25Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-29",
+        "body": "Release qa-2026-04-29\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-24",
+          "sha": "fc5bc27f23b5e276bb5240e63029fcc7f98e334a",
+          "date": "2026-04-24T20:21:51Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-24",
+          "body": "Release qa-2026-04-24\n"
+        },
         {
           "version": "qa-2026-04-23",
           "sha": "41125c81788ff85a3993b20dcfd6bf16f0cdf495",
@@ -613,18 +595,11 @@
           "date": "2026-04-16T21:28:57Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-16",
           "body": "Release qa-2026-04-16\n"
-        },
-        {
-          "version": "qa-2026-04-13",
-          "sha": "5dd75b20ec6c06f5f1f1e9351c3ede7cbc629e6d",
-          "date": "2026-04-13T22:32:08Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-13",
-          "body": "Release qa-2026-04-13\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "76bd7d0",
@@ -653,45 +628,6 @@
               ]
             },
             {
-              "sha": "f5369b1",
-              "message": "fix(sections): corregir sección salud mental ALMX-300",
-              "date": "2026-04-29T15:41:44Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "445",
-              "tickets": [
-                {
-                  "id": "ALMX-300",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-300"
-                }
-              ]
-            },
-            {
-              "sha": "b2a10d6",
-              "message": "fix(responsive): corregir solapamiento del contenido al minimizar ALMX-301",
-              "date": "2026-04-29T15:41:23Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "446",
-              "tickets": [
-                {
-                  "id": "ALMX-301",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-301"
-                }
-              ]
-            },
-            {
-              "sha": "ecb8e3f",
-              "message": "fix(navbar): evitar solapamiento boton ingreso con logo alivia ALMX-293",
-              "date": "2026-04-28T17:34:53Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "442",
-              "tickets": [
-                {
-                  "id": "ALMX-293",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-293"
-                }
-              ]
-            },
-            {
               "sha": "f8e0c38",
               "message": "feat: ALCO-1512 checkout",
               "date": "2026-04-28T14:19:50Z",
@@ -701,32 +637,6 @@
                 {
                   "id": "ALCO-1512",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1512"
-                }
-              ]
-            },
-            {
-              "sha": "21c1493",
-              "message": "fix(payments): asegurar envio correcto del evento purchase a gtm ALCO-1516",
-              "date": "2026-04-23T16:48:46Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "432",
-              "tickets": [
-                {
-                  "id": "ALCO-1516",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1516"
-                }
-              ]
-            },
-            {
-              "sha": "75070ac",
-              "message": "fix(cart): bugs alivia mx ALMX-305",
-              "date": "2026-04-22T22:51:52Z",
-              "author": "fabianromerolu",
-              "pr_number": "431",
-              "tickets": [
-                {
-                  "id": "ALMX-305",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-305"
                 }
               ]
             },
@@ -771,12 +681,36 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1391"
                 }
               ]
+            },
+            {
+              "sha": "9e23c0d",
+              "message": "feat: add Hotjar tracking code for Alivia Colombia",
+              "date": "2026-02-06T21:22:04Z",
+              "author": "CristiGB",
+              "pr_number": "308",
+              "tickets": []
+            },
+            {
+              "sha": "ee98f21",
+              "message": "fix: update maximum base for free hormones shipping eligibility",
+              "date": "2026-02-02T15:47:00Z",
+              "author": "CristiGB",
+              "pr_number": "305",
+              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 25,
+          "count": 26,
           "recent_commits": [
+            {
+              "sha": "0a08336",
+              "message": "release: qa 2026 04 29",
+              "date": "2026-04-29T20:11:00Z",
+              "author": "CristiGB",
+              "pr_number": "450",
+              "tickets": []
+            },
             {
               "sha": "fc5bc27",
               "message": "release: qa 2026 04 24",
@@ -1013,14 +947,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
                 }
               ]
-            },
-            {
-              "sha": "51c4a1f",
-              "message": "Develop",
-              "date": "2026-02-06T21:36:54Z",
-              "author": "CristiGB",
-              "pr_number": "309",
-              "tickets": []
             }
           ]
         }
