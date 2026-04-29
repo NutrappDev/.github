@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T15:45:56.220Z",
+  "generated_at": "2026-04-29T16:32:13.990Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -148,6 +148,11 @@
       "summary": "BUG: La información del usuario no se actualiza",
       "status": "Despliegue a DEV",
       "assignee": "Kevin Aguilera"
+    },
+    "NE-301": {
+      "summary": "HU-17 Ocultamiento del panel de cupo para cliente de contado [Desarrollo]",
+      "status": "En proceso",
+      "assignee": "Steven Leon"
     },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
@@ -1180,7 +1185,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T03:45:41Z",
+      "last_push": "2026-04-29T16:31:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1230,8 +1235,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "9be1b3b",
+              "message": "feat: implementar panel de cupo para usuarios de credito y segmentacion de usuarios NE-301",
+              "date": "2026-04-29T16:31:43Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "58",
+              "tickets": [
+                {
+                  "id": "NE-301",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-301"
+                }
+              ]
+            },
             {
               "sha": "de1dc74",
               "message": "fix: logged info user NE-318",
@@ -1967,7 +1985,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-14T15:56:53Z",
+      "last_push": "2026-04-29T16:26:13Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -3481,10 +3499,10 @@
         }
       },
       "ci": {
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25118882431",
-        "updated_at": "2026-04-29T15:45:45Z",
+        "updated_at": "2026-04-29T15:45:56Z",
         "name": "pages build and deployment"
       },
       "_errors": {
