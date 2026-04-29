@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T20:11:35.520Z",
+  "generated_at": "2026-04-29T21:11:06.480Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1966,7 +1966,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T16:44:13Z",
+      "last_push": "2026-04-29T21:10:39Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1980,8 +1980,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "7fd4d73",
+              "message": "refactor(serverless): normalizar urls eliminando slash final en nutrabiotics empresas NE-247",
+              "date": "2026-04-29T21:10:37Z",
+              "author": "jsandoval-dev",
+              "pr_number": "66",
+              "tickets": [
+                {
+                  "id": "NE-247",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
+                }
+              ]
+            },
             {
               "sha": "aa41511",
               "message": "feat(serverless): habilitar flujo de compras nutrabiotics empresas NE-247",
