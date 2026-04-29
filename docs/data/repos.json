@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T03:46:02.953Z",
+  "generated_at": "2026-04-29T15:45:56.220Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -116,7 +116,7 @@
     },
     "PMO-2613": {
       "summary": "Cargue de Pedidos a Alivia por el Contact Center",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "PMO-2585": {
@@ -136,12 +136,12 @@
     },
     "PALCO-85": {
       "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
-      "status": "Despliegue a DEV",
+      "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
-      "status": "Despliegue a DEV",
+      "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-318": {
@@ -151,7 +151,7 @@
     },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
-      "status": "Despliegue a QA",
+      "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -206,7 +206,7 @@
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCOL-677": {
@@ -294,11 +294,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "FFCO-562": {
-      "summary": "Validar flujo completo de creación de órdenes",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
-    },
     "DGWNC-1": {
       "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
       "status": "Actividad completada",
@@ -319,9 +314,19 @@
       "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
+    "ALMX-301": {
+      "summary": "BG | Responsividad | Al minimizar la página, el contenido se desordena",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
+    "ALMX-300": {
+      "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
     "ALMX-293": {
       "summary": "BG | Interfaz | El botón de ingreso se sobrepone ante la imagen de Alivia",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-277": {
@@ -487,92 +492,6 @@
   },
   "repos": [
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-04-29T00:00:31Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-27T17:00:27Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -580,16 +499,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T19:28:34Z",
+      "last_push": "2026-04-29T15:41:46Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-04-24",
-        "sha": "ab64b836f735cd6004e378f525f7668998827ad6",
-        "date": "2026-04-24T15:12:54Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-24",
-        "body": "Release prod-2026-04-24\n"
+        "version": "prod-2026-04-29",
+        "sha": "156f0c6e9d608a10517f0cf74ab05d5f37763651",
+        "date": "2026-04-29T15:17:01Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-29",
+        "body": "Release prod-2026-04-29\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-04-24",
+          "sha": "ab64b836f735cd6004e378f525f7668998827ad6",
+          "date": "2026-04-24T15:12:54Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-24",
+          "body": "Release prod-2026-04-24\n"
+        },
         {
           "version": "prod-2026-04-22",
           "sha": "1c898adb4ccd9f83277f28f6ccd7da23d562a66c",
@@ -610,13 +536,6 @@
           "date": "2026-04-14T21:19:34Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-14",
           "body": "Release prod-2026-04-14\n"
-        },
-        {
-          "version": "prod-2026-04-09",
-          "sha": "9b2cbf24bc228ddd520efe0a747a1cf4670b9ef5",
-          "date": "2026-04-09T16:20:37Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-09",
-          "body": "Release prod-2026-04-09\n"
         }
       ],
       "qa": {
@@ -658,8 +577,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "f5369b1",
+              "message": "fix(sections): corregir sección salud mental ALMX-300",
+              "date": "2026-04-29T15:41:44Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "445",
+              "tickets": [
+                {
+                  "id": "ALMX-300",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-300"
+                }
+              ]
+            },
+            {
+              "sha": "b2a10d6",
+              "message": "fix(responsive): corregir solapamiento del contenido al minimizar ALMX-301",
+              "date": "2026-04-29T15:41:23Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "446",
+              "tickets": [
+                {
+                  "id": "ALMX-301",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-301"
+                }
+              ]
+            },
             {
               "sha": "ecb8e3f",
               "message": "fix(navbar): evitar solapamiento boton ingreso con logo alivia ALMX-293",
@@ -1002,6 +947,92 @@
               "date": "2026-02-06T21:36:54Z",
               "author": "CristiGB",
               "pr_number": "309",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-04-29T00:00:31Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-27T17:00:27Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
               "tickets": []
             }
           ]
@@ -1630,7 +1661,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-27T22:10:56Z",
+      "last_push": "2026-04-29T14:13:51Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -3004,7 +3035,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T00:51:35Z",
+      "last_push": "2026-04-29T15:45:45Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3036,11 +3067,11 @@
           "body": "Release prod-2026-04-29\n"
         },
         {
-          "version": "prod-2026-04-28",
-          "sha": "46f3ce5fa7b6715212223e8787611067cc3582a1",
-          "date": "2026-04-28T15:26:14Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-28",
-          "body": "Release prod-2026-04-28\n"
+          "version": "prod-2026-04-29-2",
+          "sha": "0fb23fafb73bda2d992a2b54002363b4021ba5ec",
+          "date": "2026-04-29T15:45:44Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-29-2",
+          "body": "Release prod-2026-04-29-2\n"
         }
       ],
       "qa": {
@@ -3082,8 +3113,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 35,
+          "count": 36,
           "recent_commits": [
+            {
+              "sha": "d7b4358",
+              "message": "refactor(woo): added parameter log ALCO-1511",
+              "date": "2026-04-29T15:12:29Z",
+              "author": "meraso-nutra",
+              "pr_number": "356",
+              "tickets": [
+                {
+                  "id": "ALCO-1511",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1511"
+                }
+              ]
+            },
             {
               "sha": "b06f57b",
               "message": "feat(erp): addition param shiptoid ALCO-1511",
@@ -3395,19 +3439,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
-            },
-            {
-              "sha": "8801ac3",
-              "message": "feat(erp): endpoint to obtain customer and shipto FFCO-562",
-              "date": "2026-04-17T20:36:03Z",
-              "author": "meraso-nutra",
-              "pr_number": "323",
-              "tickets": [
-                {
-                  "id": "FFCO-562",
-                  "url": "https://nutrabiotics.atlassian.net/browse/FFCO-562"
-                }
-              ]
             }
           ]
         },
@@ -3450,10 +3481,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25085407996",
-        "updated_at": "2026-04-29T00:51:53Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25118882431",
+        "updated_at": "2026-04-29T15:45:45Z",
         "name": "pages build and deployment"
       },
       "_errors": {
