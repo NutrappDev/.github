@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T16:32:13.990Z",
+  "generated_at": "2026-04-29T17:13:32.279Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -281,7 +281,7 @@
     },
     "NCOL-380": {
       "summary": "BG | Tablet | Productos | Banner Principal sobresale de las dimensiones",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Juan Medina"
     },
     "NCOL-378": {
@@ -321,12 +321,12 @@
     },
     "ALMX-301": {
       "summary": "BG | Responsividad | Al minimizar la página, el contenido se desordena",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-300": {
       "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-293": {
@@ -497,6 +497,48 @@
   },
   "repos": [
     {
+      "name": "tronco-automatizacion-interna",
+      "full_name": "NutrappDev/tronco-automatizacion-interna",
+      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
+      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-29T17:07:35Z",
+      "topics": [
+        "fase-tronco",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/25122890203",
+        "updated_at": "2026-04-29T17:08:01Z",
+        "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -504,7 +546,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T15:41:46Z",
+      "last_push": "2026-04-29T17:13:08Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-29",
@@ -582,8 +624,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "6d024af",
+              "message": "feat: ALCO-1512 checkout upgrade",
+              "date": "2026-04-29T17:13:06Z",
+              "author": "CristiGB",
+              "pr_number": "448",
+              "tickets": [
+                {
+                  "id": "ALCO-1512",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1512"
+                }
+              ]
+            },
             {
               "sha": "f5369b1",
               "message": "fix(sections): corregir sección salud mental ALMX-300",
@@ -1985,7 +2040,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T16:26:13Z",
+      "last_push": "2026-04-29T16:44:13Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2413,48 +2468,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "tronco-automatizacion-interna",
-      "full_name": "NutrappDev/tronco-automatizacion-interna",
-      "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
-      "url": "https://github.com/NutrappDev/tronco-automatizacion-interna",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-30T22:10:08Z",
-      "topics": [
-        "fase-tronco",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/23770163264",
-        "updated_at": "2026-03-30T22:10:23Z",
-        "name": "Deploy n8n Workflows"
-      },
       "_errors": {
         "production": null,
         "qa": null,
