@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-29T15:16:47.426Z",
+  "generated_at": "2026-04-29T15:41:53.483Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 58,
+      "prs_30d": 57,
       "prs_90d": 114,
       "last_activity": "2026-04-29T15:16:26Z",
       "by_repo": [
@@ -711,6 +711,82 @@
       ]
     },
     {
+      "login": "NicolasDaniloMunozAldana",
+      "avatar_url": "https://avatars.githubusercontent.com/u/159373107?v=4",
+      "prs_30d": 9,
+      "prs_90d": 9,
+      "last_activity": "2026-04-29T15:41:44Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 5
+        },
+        {
+          "repo": "alivia",
+          "prs": 4
+        }
+      ],
+      "by_branch": {
+        "develop": 9,
+        "qa": 0,
+        "main": 0
+      },
+      "weekly": [
+        {
+          "week": "2026-W06",
+          "prs": 0
+        },
+        {
+          "week": "2026-W07",
+          "prs": 0
+        },
+        {
+          "week": "2026-W08",
+          "prs": 0
+        },
+        {
+          "week": "2026-W09",
+          "prs": 0
+        },
+        {
+          "week": "2026-W10",
+          "prs": 0
+        },
+        {
+          "week": "2026-W11",
+          "prs": 0
+        },
+        {
+          "week": "2026-W12",
+          "prs": 0
+        },
+        {
+          "week": "2026-W13",
+          "prs": 0
+        },
+        {
+          "week": "2026-W14",
+          "prs": 0
+        },
+        {
+          "week": "2026-W15",
+          "prs": 0
+        },
+        {
+          "week": "2026-W16",
+          "prs": 1
+        },
+        {
+          "week": "2026-W17",
+          "prs": 3
+        },
+        {
+          "week": "2026-W18",
+          "prs": 5
+        }
+      ]
+    },
+    {
       "login": "mladino-source",
       "avatar_url": "https://avatars.githubusercontent.com/u/260505897?v=4",
       "prs_30d": 8,
@@ -791,82 +867,6 @@
         {
           "week": "2026-W18",
           "prs": 0
-        }
-      ]
-    },
-    {
-      "login": "NicolasDaniloMunozAldana",
-      "avatar_url": "https://avatars.githubusercontent.com/u/159373107?v=4",
-      "prs_30d": 7,
-      "prs_90d": 7,
-      "last_activity": "2026-04-28T23:13:39Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 5
-        },
-        {
-          "repo": "alivia",
-          "prs": 2
-        }
-      ],
-      "by_branch": {
-        "develop": 7,
-        "qa": 0,
-        "main": 0
-      },
-      "weekly": [
-        {
-          "week": "2026-W06",
-          "prs": 0
-        },
-        {
-          "week": "2026-W07",
-          "prs": 0
-        },
-        {
-          "week": "2026-W08",
-          "prs": 0
-        },
-        {
-          "week": "2026-W09",
-          "prs": 0
-        },
-        {
-          "week": "2026-W10",
-          "prs": 0
-        },
-        {
-          "week": "2026-W11",
-          "prs": 0
-        },
-        {
-          "week": "2026-W12",
-          "prs": 0
-        },
-        {
-          "week": "2026-W13",
-          "prs": 0
-        },
-        {
-          "week": "2026-W14",
-          "prs": 0
-        },
-        {
-          "week": "2026-W15",
-          "prs": 0
-        },
-        {
-          "week": "2026-W16",
-          "prs": 1
-        },
-        {
-          "week": "2026-W17",
-          "prs": 3
-        },
-        {
-          "week": "2026-W18",
-          "prs": 3
         }
       ]
     },
