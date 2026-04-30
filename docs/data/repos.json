@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-04-30T19:39:05.518Z",
+  "generated_at": "2026-04-30T22:45:35.710Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-293": {
+      "summary": "Agregar icono en la tabla de ordenes cuando la orden no esta en libreria ERP",
+      "status": "En proceso",
+      "assignee": "Jhelcy Sandoval"
+    },
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
       "status": "Aprobado por QA",
@@ -196,7 +201,7 @@
     },
     "NCR-110": {
       "summary": "Archivo automático de correos enviados desde ms-notifications",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Felipe Berrio"
     },
     "NCR-105": {
@@ -457,6 +462,67 @@
   },
   "repos": [
     {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-30T22:02:09Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "88100ec",
+              "message": "release:  qa-2026-04-30",
+              "date": "2026-04-30T20:56:41Z",
+              "author": "k-aguilera",
+              "pr_number": "15",
+              "tickets": []
+            },
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "tronco-automatizacion-interna",
       "full_name": "NutrappDev/tronco-automatizacion-interna",
       "description": "Flujos de automatización interna (n8n), scripts de integración Jira/GitHub y reportes operativos del equipo de Aplicaciones",
@@ -490,59 +556,6 @@
         "updated_at": "2026-04-29T18:42:56Z",
         "name": "Deploy n8n Workflows"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-30T16:05:28Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -1381,7 +1394,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T17:13:26Z",
+      "last_push": "2026-04-30T21:51:11Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1608,7 +1621,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T16:53:42Z",
+      "last_push": "2026-04-30T21:59:12Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -3006,7 +3019,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T15:45:45Z",
+      "last_push": "2026-04-30T22:45:15Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3084,8 +3097,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 36,
+          "count": 37,
           "recent_commits": [
+            {
+              "sha": "49c0705",
+              "message": "feat(event-monitoring): adaptar endpoint para funcionamiento en farmacia SUP-293",
+              "date": "2026-04-30T22:45:13Z",
+              "author": "jsandoval-dev",
+              "pr_number": "357",
+              "tickets": [
+                {
+                  "id": "SUP-293",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-293"
+                }
+              ]
+            },
             {
               "sha": "d7b4358",
               "message": "refactor(woo): added parameter log ALCO-1511",
@@ -3391,19 +3417,6 @@
               "date": "2026-04-20T22:54:34Z",
               "author": "fabianromerolu",
               "pr_number": "326",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "ffdf5f6",
-              "message": "fix(prescriptions): bug pdf SUP-292",
-              "date": "2026-04-20T21:17:45Z",
-              "author": "fabianromerolu",
-              "pr_number": "325",
               "tickets": [
                 {
                   "id": "SUP-292",
