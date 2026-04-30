@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T21:11:06.480Z",
+  "generated_at": "2026-04-30T12:56:39.646Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -69,16 +69,6 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
-    "PMO-2770": {
-      "summary": "Actualización  de información Pagina Nutrabiotics.info",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2757": {
-      "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Colombia",
-      "status": "Despliegue a QA",
-      "assignee": "Juan Medina"
-    },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
       "status": "Revisión QA",
@@ -118,16 +108,6 @@
       "summary": "Cargue de Pedidos a Alivia por el Contact Center",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
-    },
-    "PMO-2585": {
-      "summary": "Banners pack de medicina funcional - página de nutra",
-      "status": "Actividad completada",
-      "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2254": {
-      "summary": "Modificación calendario de eventos – NutraBiotics Colombia Educación",
-      "status": "Actividad completada",
-      "assignee": "Kevin Aguilera"
     },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -214,11 +194,6 @@
       "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
-    "NCOL-677": {
-      "summary": "BG | Diseño | Imagen del banner recortada y botón no visible",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
       "status": "Actividad completada",
@@ -269,25 +244,10 @@
       "status": "Actividad completada",
       "assignee": "Camilo Bastidas"
     },
-    "NCOL-466": {
-      "summary": "Educación: el carrusel de productos AMF es deslizable y no tiene flechas de navegación.",
-      "status": "Actividad completada",
-      "assignee": "Mario Eraso"
-    },
     "NCOL-424": {
       "summary": "BUG | HOME | TABLET | Cambio de Banner",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "NCOL-380": {
-      "summary": "BG | Tablet | Productos | Banner Principal sobresale de las dimensiones",
-      "status": "Despliegue a QA",
-      "assignee": "Juan Medina"
-    },
-    "NCOL-378": {
-      "summary": "BG | Tablet | Farmacovigilancia | Espacio sin contenido en Objetivos",
-      "status": "Despliegue a QA",
-      "assignee": "Juan Medina"
     },
     "NCOL-8": {
       "summary": "Data - HTML Detalle Productos",
@@ -346,7 +306,7 @@
     },
     "ALCO-1511": {
       "summary": "Creación de orden en ms-orders y ERP, atributo de la dirección",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
     },
     "ALCO-1498": {
@@ -521,7 +481,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T20:11:26Z",
+      "last_push": "2026-04-30T04:16:38Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-29",
@@ -1273,7 +1233,7 @@
           ]
         },
         "to_production": {
-          "count": 12,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "80443f8",
@@ -1371,14 +1331,6 @@
               "date": "2026-02-06T07:52:07Z",
               "author": "k-aguilera",
               "pr_number": "13",
-              "tickets": []
-            },
-            {
-              "sha": "7c04453",
-              "message": "merge: deploy develop to qa",
-              "date": "2026-01-30T09:38:28Z",
-              "author": "k-aguilera",
-              "pr_number": "10",
               "tickets": []
             }
           ]
@@ -1660,7 +1612,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T17:30:50Z",
+      "last_push": "2026-04-30T12:56:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -1700,13 +1652,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-21",
-        "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
-        "date": "2026-04-21T17:41:34Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
-        "body": "Release qa-2026-04-21\n"
+        "version": "qa-2026-04-30",
+        "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
+        "date": "2026-04-30T12:56:16Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-30",
+        "body": "Release qa-2026-04-30\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-21",
+          "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
+          "date": "2026-04-21T17:41:34Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
+          "body": "Release qa-2026-04-21\n"
+        },
         {
           "version": "qa-2026-03-25",
           "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
@@ -1727,18 +1686,11 @@
           "date": "2026-03-10T21:57:48Z",
           "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
           "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
-        },
-        {
-          "version": "qa-2026-03-03",
-          "sha": "8eaaf8bf89d741ac3a6aec31e67447757f3e16c8",
-          "date": "2026-03-03T19:46:57Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-03",
-          "body": "Release qa-2026-03-03\n\nFeatures (2):\nPR #27 by Jorge Garay - Agrega sección de banner de packs en página de educación con contenido configurable [PMO-2585]\nPR #36 by Steven León - Agrega atributos cy-data en pantalla de producto individual y corrige visualización de disclaimer [NCOL-573]\n\nFixes (2):\nPR #31 by Jorge Garay - Corrige mensajes de error en rojo en formulario de farmacovigilancia [NCOL-466]\nPR #35 by k-aguilera - Corrige configuración del calendario de eventos en la página principal [PMO-2254]\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 7,
           "recent_commits": [
             {
               "sha": "3208718",
@@ -1750,71 +1702,6 @@
                 {
                   "id": "QA-779",
                   "url": "https://nutrabiotics.atlassian.net/browse/QA-779"
-                }
-              ]
-            },
-            {
-              "sha": "b0d536c",
-              "message": "fix: corregir slides del carrusel en pantallas con height bajo NCOL-677",
-              "date": "2026-04-27T13:18:02Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "85",
-              "tickets": [
-                {
-                  "id": "NCOL-677",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-677"
-                }
-              ]
-            },
-            {
-              "sha": "7686d65",
-              "message": "fix(farmacovigilancia): corregir layout horizontal de tabs en tablet NCOL-378",
-              "date": "2026-04-24T19:29:25Z",
-              "author": "Dev-Juan-Medina-NutraApp",
-              "pr_number": "84",
-              "tickets": [
-                {
-                  "id": "NCOL-378",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-378"
-                }
-              ]
-            },
-            {
-              "sha": "76d1960",
-              "message": "fix(products): ajustar responsive de banners en tablet y mobile NCOL-380",
-              "date": "2026-04-24T19:23:17Z",
-              "author": "Dev-Juan-Medina-NutraApp",
-              "pr_number": "83",
-              "tickets": [
-                {
-                  "id": "NCOL-380",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-380"
-                }
-              ]
-            },
-            {
-              "sha": "0ec232c",
-              "message": "feat(nosotros): actualizar fundadores a copresidentes y ajustar ruta PMO-2757",
-              "date": "2026-04-23T12:26:46Z",
-              "author": "Dev-Juan-Medina-NutraApp",
-              "pr_number": "82",
-              "tickets": [
-                {
-                  "id": "PMO-2757",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2757"
-                }
-              ]
-            },
-            {
-              "sha": "ffcf1ba",
-              "message": "fix(nutrabiotics): update Colombia WhatsApp number PMO-2770",
-              "date": "2026-04-17T13:50:26Z",
-              "author": "mladino-source",
-              "pr_number": "79",
-              "tickets": [
-                {
-                  "id": "PMO-2770",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2770"
                 }
               ]
             },
@@ -1894,8 +1781,16 @@
           ]
         },
         "to_production": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "6f02aa7",
+              "message": "release: deploy PRs a QA - 2026-04-29",
+              "date": "2026-04-30T12:55:54Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "88",
+              "tickets": []
+            },
             {
               "sha": "60d8548",
               "message": "release: deploy PRs a QA - 2026-04-20",
@@ -1966,7 +1861,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T21:10:39Z",
+      "last_push": "2026-04-29T21:45:19Z",
       "topics": [],
       "production": null,
       "production_history": [],
