@@ -1,9 +1,450 @@
 {
-  "generated_at": "2026-04-30T13:04:32.568Z",
+  "generated_at": "2026-04-30T13:58:33.600Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
-  "jira_tickets": {},
+  "jira_tickets": {
+    "SUP-292": {
+      "summary": "Bug actualizacion de pdf de autorizaciones",
+      "status": "Revisión QA",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "SUP-287": {
+      "summary": "Indicador visual de órdenes cargadas en ERP",
+      "status": "Detenido",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "SUP-272": {
+      "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "SUP-222": {
+      "summary": "UX annotation Superadmin - Gestor de Productos Diseño",
+      "status": "Actividad completada",
+      "assignee": "Emily Alzate Garcia"
+    },
+    "SUP-220": {
+      "summary": "Descripciones",
+      "status": "Actividad completada",
+      "assignee": "Steven de la Rosa"
+    },
+    "SUP-208": {
+      "summary": "Conexiones API, Alivia y nutrabiotics.info productos",
+      "status": "Cancelado",
+      "assignee": "Steven de la Rosa"
+    },
+    "SUP-200": {
+      "summary": "Diseño de gestor \"Colaboradores\"",
+      "status": "Cancelado",
+      "assignee": "Emily Alzate Garcia"
+    },
+    "SUP-184": {
+      "summary": "BG | Datos Personales | Ajustes en actualización de datos",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "SSO-161": {
+      "summary": "BG | Cargar RUT | Botón no realiza acción",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "SSO-6": {
+      "summary": "Evitar tantos llamados por patientid desde prescripciones con un endpoint que reciba la lista en sso",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "QA-779": {
+      "summary": "Scripts Eventos | Nutrabiotics",
+      "status": "Detenido",
+      "assignee": "Carlos Ali Parra"
+    },
+    "QA-772": {
+      "summary": "Scripts - Impacto Sostenible",
+      "status": "Actividad completada",
+      "assignee": "Carlos Ali Parra"
+    },
+    "QA-428": {
+      "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
+      "status": "Actividad completada",
+      "assignee": "Carlos Ali Parra"
+    },
+    "PMO-2741": {
+      "summary": "Base de Puntos Alivia",
+      "status": "Revisión QA",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "PMO-2725": {
+      "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2714": {
+      "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
+      "status": "Aprobado por QA",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2690": {
+      "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "PMO-2676": {
+      "summary": "Categoría “Medicamentos” sin productos visibles",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "PMO-2667": {
+      "summary": "Alivia México: Fase de Desarrollo ¡Hagámoslo realidad!",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2639": {
+      "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2634": {
+      "summary": "Error en visualización de pacientes Alivia",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PMO-2613": {
+      "summary": "Cargue de Pedidos a Alivia por el Contact Center",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
+    "PALMX-15": {
+      "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "PALCO-85": {
+      "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-84": {
+      "summary": "Implementar validación previa de existencia del customer en Epicor",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-318": {
+      "summary": "BUG: La información del usuario no se actualiza",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
+    },
+    "NE-307": {
+      "summary": "HU-23 Paso Resumen del pedido en checkout de crédito [Diseño + Desarrollo]",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
+    },
+    "NE-301": {
+      "summary": "HU-17 Ocultamiento del panel de cupo para cliente de contado [Desarrollo]",
+      "status": "Despliegue a QA",
+      "assignee": "Steven Leon"
+    },
+    "NE-247": {
+      "summary": "Envío de órdenes a ERP mediante librería ERP",
+      "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-221": {
+      "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "NE-197": {
+      "summary": "HU-CAT-02 — Breadcrumb del catálogo",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "NE-151": {
+      "summary": "Épica 5: Implementación “Mi cuenta” (Persona Natural) en Perfil Empresas – SSO B2B]",
+      "status": "Actividad completada",
+      "assignee": "David Sarmiento"
+    },
+    "NE-74": {
+      "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
+      "status": "Detenido",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCR-114": {
+      "summary": "Crear caso de uso para ShipTo",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "NCR-113": {
+      "summary": "Manejo de Factory e instancias desde libreria ERP",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "NCR-112": {
+      "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
+      "status": "Despliegue a QA",
+      "assignee": "Felipe Berrio"
+    },
+    "NCR-111": {
+      "summary": "Cambio de lógica para crear orden en Epicor",
+      "status": "Actividad completada",
+      "assignee": "Mario Eraso"
+    },
+    "NCR-110": {
+      "summary": "Archivo automático de correos enviados desde ms-notifications",
+      "status": "Revisión QA",
+      "assignee": "Felipe Berrio"
+    },
+    "NCR-105": {
+      "summary": "ms- Notificaciones",
+      "status": "Despliegue a PROD",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
+    "NCR-100": {
+      "summary": "ms- Ordenes",
+      "status": "Despliegue a QA",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
+    "NCOL-647": {
+      "summary": "BG | Diseño botones \"Ver más\" no corresponden",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCOL-646": {
+      "summary": "BG | Layout | Se visualiza espacio en blanco innecesario en la página",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCOL-645": {
+      "summary": "Desarrollo de landing \"IM•PACTO Sostenible\" en la web Nutrabiotics Colombia",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-639": {
+      "summary": "BG | UI  | Se visualiza espacio en blanco innecesario en la página",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-637": {
+      "summary": "BG | Faltan meses en el calendario",
+      "status": "Cancelado",
+      "assignee": "Kevin Aguilera"
+    },
+    "NCOL-551": {
+      "summary": "Desarrollo Front End: Implementación de diseño y componentes login y registro.",
+      "status": "Actividad completada",
+      "assignee": "Wilson Mendoza"
+    },
+    "NCOL-544": {
+      "summary": " Aliados comerciales",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-543": {
+      "summary": "Contáctanos",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-538": {
+      "summary": "Los 6 principios de nuestras creaciones",
+      "status": "Actividad completada",
+      "assignee": "Richard Medina"
+    },
+    "NCOL-503": {
+      "summary": "No aparece menú lateral MOBILE - DATOS PERSONALES",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "NCOL-424": {
+      "summary": "BUG | HOME | TABLET | Cambio de Banner",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-8": {
+      "summary": "Data - HTML Detalle Productos",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-5": {
+      "summary": "Home | Ajuste a carrusel de productos",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "DGWNC-1": {
+      "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
+      "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "CA-31": {
+      "summary": "BG | Iniciar Sesión | error 500",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALPE-218": {
+      "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
+      "status": "Actividad completada",
+      "assignee": "Maria Alejandra Pedraza Cardenas"
+    },
+    "ALMX-308": {
+      "summary": "BG | Texto de error | Aparece \"$NaN\" en lugar de un valor numérico",
+      "status": "Despliegue a DEV",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALMX-277": {
+      "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
+      "status": "Actividad completada",
+      "assignee": "Felipe Berrio"
+    },
+    "ALMX-273": {
+      "summary": "BG | Checkout / Pasarela de pago | Redirección incorrecta a ambiente Develop cuando el pago es rechazado",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALMX-261": {
+      "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
+      "status": "Actividad completada",
+      "assignee": "Felipe Berrio"
+    },
+    "ALMX-246": {
+      "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALMX-228": {
+      "summary": "MCCT Alivia México",
+      "status": "Actividad completada",
+      "assignee": "David Sarmiento"
+    },
+    "ALCO-1512": {
+      "summary": "Re ajustar el desarrollo de los paso del checkout",
+      "status": "Despliegue a QA",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-1511": {
+      "summary": "Creación de orden en ms-orders y ERP, atributo de la dirección",
+      "status": "Esperando aprobación",
+      "assignee": "Mario Eraso"
+    },
+    "ALCO-1498": {
+      "summary": "Montaje de  Banner ",
+      "status": "Actividad completada",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "ALCO-1451": {
+      "summary": "implementacion de descuento promocional",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-1450": {
+      "summary": "Ajuste de creacion de ordenes en las pasarelas",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-1243": {
+      "summary": "Ajustar los productos destacados en el home",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1227": {
+      "summary": "Corrección del error de conexión a Base de datos",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
+    "ALCO-1226": {
+      "summary": "Al momento de ingresar como medico, no redirecciona a datos personales",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1218": {
+      "summary": "BG | Testosterona x100 | No calcula correctamente la dosis",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-1217": {
+      "summary": "BG | Plural Pumps | PDF",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-1210": {
+      "summary": "Agregar a la card de usuario el estado del usuario ",
+      "status": "Cancelado",
+      "assignee": "Mario Eraso"
+    },
+    "ALCO-1207": {
+      "summary": "Poner tilde en la \"e\" en palabra \"Bioidénticas\"",
+      "status": "Actividad completada",
+      "assignee": "David Sarmiento"
+    },
+    "ALCO-1202": {
+      "summary": "solicitud acceso wp  woocomerce  para operación",
+      "status": "Cancelado",
+      "assignee": null
+    },
+    "ALCO-1201": {
+      "summary": "Ajuste - que se pueda identificar en el reporte de ventas de Google Sheets si una orden es de hormonas o no",
+      "status": "Actividad completada",
+      "assignee": "Juan Felipe Churio De La Rosa"
+    },
+    "ALCO-1101": {
+      "summary": "Ajustar con Juan David las URL de los productos de Alivia y Nutrabiotics",
+      "status": "Actividad completada",
+      "assignee": "Camilo Bastidas"
+    },
+    "ALCO-1100": {
+      "summary": "Realizar una documentación técnica de front-end sobre Alivia",
+      "status": "Actividad completada",
+      "assignee": "Kevin Aguilera"
+    },
+    "ALCO-1043": {
+      "summary": "Actualizar la llamada del metodo lookup dentro de prescripciones para que sea optimizado el numero de peticiones al sso",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-910": {
+      "summary": "Arreglar placeholders en el checkout de Alivia",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-905": {
+      "summary": "Actualización de flujo de plantillas en Alivia",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-898": {
+      "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-897": {
+      "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-404": {
+      "summary": "EP-08 - Alivia Co - Plantillas / Aplicar el diseño propuesto en Portal Administrador",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "ALCO-402": {
+      "summary": "EP-02 - Un pum ( Singular) - Pums ( Plural)",
+      "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "ALCO-270": {
+      "summary": "Crear recibo descargable en la pantalla del resumen final (En PDF)",
+      "status": "Actividad completada",
+      "assignee": "Francisco  Aguirre Tovar"
+    },
+    "AIA-43": {
+      "summary": "BG | Recuperación de Contraseña | Validación de Correo No Registrado",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "AIA-34": {
+      "summary": "BG | Borrar Chat | Falta advertencia de ¿Estas seguro?",
+      "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    }
+  },
   "repos": [
     {
       "name": "tronco-automatizacion-interna",
@@ -726,7 +1167,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T16:31:45Z",
+      "last_push": "2026-04-30T13:57:49Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -776,8 +1217,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "17abe7b",
+              "message": "feat: implementar interfaz resumen del checkout diferenciando usuarios NE-307",
+              "date": "2026-04-30T13:57:47Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "59",
+              "tickets": [
+                {
+                  "id": "NE-307",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-307"
+                }
+              ]
+            },
             {
               "sha": "9be1b3b",
               "message": "feat: implementar panel de cupo para usuarios de credito y segmentacion de usuarios NE-301",
