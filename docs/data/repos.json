@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T13:58:33.600Z",
+  "generated_at": "2026-04-30T17:31:04.453Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -136,7 +136,7 @@
     },
     "NE-307": {
       "summary": "HU-23 Paso Resumen del pedido en checkout de crédito [Diseño + Desarrollo]",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NE-301": {
@@ -168,6 +168,11 @@
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "NCR-117": {
+      "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
+      "status": "Por hacer",
+      "assignee": "Felipe Berrio"
     },
     "NCR-114": {
       "summary": "Crear caso de uso para ShipTo",
@@ -454,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-29T18:42:35Z",
+      "last_push": "2026-04-30T16:09:48Z",
       "topics": [
         "fase-tronco",
         "team-roble"
@@ -479,6 +484,250 @@
         "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/25127303988",
         "updated_at": "2026-04-29T18:42:56Z",
         "name": "Deploy n8n Workflows"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-30T16:05:28Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
+      "description": null,
+      "url": "https://github.com/NutrappDev/microservice_payments",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-04-30T17:30:32Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-04-30",
+        "sha": "d7ecd7922132153c719f1e49295d39e4734c3372",
+        "date": "2026-04-30T14:08:20Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-30",
+        "body": "Release qa-2026-04-30\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-04-14",
+          "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
+          "date": "2026-04-14T14:56:10Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
+          "body": "Release qa-2026-04-14\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 10,
+          "recent_commits": [
+            {
+              "sha": "321ab15",
+              "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
+              "date": "2026-04-30T17:30:29Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "68",
+              "tickets": [
+                {
+                  "id": "NCR-117",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
+                }
+              ]
+            },
+            {
+              "sha": "7fd4d73",
+              "message": "refactor(serverless): normalizar urls eliminando slash final en nutrabiotics empresas NE-247",
+              "date": "2026-04-29T21:10:37Z",
+              "author": "jsandoval-dev",
+              "pr_number": "66",
+              "tickets": [
+                {
+                  "id": "NE-247",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
+                }
+              ]
+            },
+            {
+              "sha": "519fa4b",
+              "message": "fix(transaction): ajuste de transaction ALCO-1450",
+              "date": "2026-03-26T17:57:35Z",
+              "author": "fabianromerolu",
+              "pr_number": "60",
+              "tickets": [
+                {
+                  "id": "ALCO-1450",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
+                }
+              ]
+            },
+            {
+              "sha": "c1f8fa9",
+              "message": "fix(paypal): config paypal ALMX-273",
+              "date": "2026-03-12T15:42:44Z",
+              "author": "fabianromerolu",
+              "pr_number": "58",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "3b8f35b",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:55:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "57",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "54c2151",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:19:06Z",
+              "author": "fabianromerolu",
+              "pr_number": "56",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "55b8a10",
+              "message": "feat(paypal): agg environment ALMX-273",
+              "date": "2026-03-11T17:52:41Z",
+              "author": "fabianromerolu",
+              "pr_number": "54",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "f144cc7",
+              "message": "feat(paypal): ajustar paypal return url ALMX-273",
+              "date": "2026-03-09T21:35:02Z",
+              "author": "fabianromerolu",
+              "pr_number": "53",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "699d4c8",
+              "message": "Fix/paypal",
+              "date": "2026-02-26T13:38:30Z",
+              "author": "fabianromerolu",
+              "pr_number": "49",
+              "tickets": []
+            },
+            {
+              "sha": "9c01b2a",
+              "message": "Fix/paypal",
+              "date": "2026-02-25T19:58:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "48",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "d7ecd79",
+              "message": "release: qa-2026-04-29",
+              "date": "2026-04-30T14:08:06Z",
+              "author": "meraso-nutra",
+              "pr_number": "65",
+              "tickets": []
+            },
+            {
+              "sha": "8f4823f",
+              "message": "release: qa-2026-04-13",
+              "date": "2026-04-14T14:55:56Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "61",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
+        "updated_at": "2026-03-16T17:15:04Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
       "_errors": {
         "production": null,
@@ -982,59 +1231,6 @@
       }
     },
     {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-27T17:00:27Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
       "description": null,
@@ -1167,7 +1363,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T13:57:49Z",
+      "last_push": "2026-04-30T17:13:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1394,7 +1590,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-28T22:47:41Z",
+      "last_push": "2026-04-30T16:53:42Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -1465,8 +1661,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "4c2b33e",
+              "message": "fix(pdf): modal update SUP-292",
+              "date": "2026-04-30T16:53:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "198",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
             {
               "sha": "633e5a3",
               "message": "feat(users): vistas de registro y estado de usuario en epicor PALCO-84",
@@ -1899,181 +2108,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-29T21:45:19Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-04-14",
-        "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
-        "date": "2026-04-14T14:56:10Z",
-        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
-        "body": "Release qa-2026-04-14\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 10,
-          "recent_commits": [
-            {
-              "sha": "7fd4d73",
-              "message": "refactor(serverless): normalizar urls eliminando slash final en nutrabiotics empresas NE-247",
-              "date": "2026-04-29T21:10:37Z",
-              "author": "jsandoval-dev",
-              "pr_number": "66",
-              "tickets": [
-                {
-                  "id": "NE-247",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
-                }
-              ]
-            },
-            {
-              "sha": "aa41511",
-              "message": "feat(serverless): habilitar flujo de compras nutrabiotics empresas NE-247",
-              "date": "2026-04-13T22:37:49Z",
-              "author": "jsandoval-dev",
-              "pr_number": "63",
-              "tickets": [
-                {
-                  "id": "NE-247",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
-                }
-              ]
-            },
-            {
-              "sha": "519fa4b",
-              "message": "fix(transaction): ajuste de transaction ALCO-1450",
-              "date": "2026-03-26T17:57:35Z",
-              "author": "fabianromerolu",
-              "pr_number": "60",
-              "tickets": [
-                {
-                  "id": "ALCO-1450",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
-                }
-              ]
-            },
-            {
-              "sha": "c1f8fa9",
-              "message": "fix(paypal): config paypal ALMX-273",
-              "date": "2026-03-12T15:42:44Z",
-              "author": "fabianromerolu",
-              "pr_number": "58",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "3b8f35b",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:55:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "54c2151",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:19:06Z",
-              "author": "fabianromerolu",
-              "pr_number": "56",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "55b8a10",
-              "message": "feat(paypal): agg environment ALMX-273",
-              "date": "2026-03-11T17:52:41Z",
-              "author": "fabianromerolu",
-              "pr_number": "54",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "f144cc7",
-              "message": "feat(paypal): ajustar paypal return url ALMX-273",
-              "date": "2026-03-09T21:35:02Z",
-              "author": "fabianromerolu",
-              "pr_number": "53",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "699d4c8",
-              "message": "Fix/paypal",
-              "date": "2026-02-26T13:38:30Z",
-              "author": "fabianromerolu",
-              "pr_number": "49",
-              "tickets": []
-            },
-            {
-              "sha": "9c01b2a",
-              "message": "Fix/paypal",
-              "date": "2026-02-25T19:58:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "48",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "8f4823f",
-              "message": "release: qa-2026-04-13",
-              "date": "2026-04-14T14:55:56Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "61",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
-        "updated_at": "2026-03-16T17:15:04Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
-      },
       "_errors": {
         "production": null,
         "qa": null,
