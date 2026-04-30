@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-30T17:31:04.453Z",
+  "generated_at": "2026-04-30T19:39:05.518Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
-      "status": "Revisión QA",
+      "status": "Aprobado por QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-287": {
@@ -318,6 +318,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1517": {
+      "summary": "Revisión de fuentes de datos de Analytics y Search Console – Alivia",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "ALCO-1512": {
       "summary": "Re ajustar el desarrollo de los paso del checkout",
@@ -745,7 +750,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T13:04:02Z",
+      "last_push": "2026-04-30T19:38:42Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-29",
@@ -823,8 +828,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "5ff7252",
+              "message": "fix(ALCO-1517): review and validate analytics and search console data sources for Alivia",
+              "date": "2026-04-30T19:38:41Z",
+              "author": "mladino-source",
+              "pr_number": "443",
+              "tickets": [
+                {
+                  "id": "ALCO-1517",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1517"
+                }
+              ]
+            },
             {
               "sha": "6fd1a80",
               "message": "fix(points): style modal ALMX-308",
