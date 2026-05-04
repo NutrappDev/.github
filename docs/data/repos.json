@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T17:36:49.620Z",
+  "generated_at": "2026-05-04T17:54:33.503Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -132,6 +132,11 @@
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Esperando aprobación",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "NE-320": {
+      "summary": "BG | Formulario | Permite ingresar datos inválidos en múltiples campos",
+      "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-318": {
@@ -1396,7 +1401,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T17:19:04Z",
+      "last_push": "2026-05-04T17:54:05Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1446,8 +1451,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "03081c3",
+              "message": "fix(pqrs): corregir validacion que permite ingresar datos invalidos en multiples campos NE-320",
+              "date": "2026-05-04T17:54:03Z",
+              "author": "jsandoval-dev",
+              "pr_number": "64",
+              "tickets": [
+                {
+                  "id": "NE-320",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-320"
+                }
+              ]
+            },
             {
               "sha": "ee4ba7d",
               "message": "fix: actualizacion de la data formateada NE-306",
