@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T17:54:33.503Z",
+  "generated_at": "2026-05-04T18:06:07.455Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -143,6 +143,11 @@
       "summary": "BUG: La información del usuario no se actualiza",
       "status": "Despliegue a DEV",
       "assignee": "Kevin Aguilera"
+    },
+    "NE-314": {
+      "summary": "HU-30 Pantalla de error de pago en Wompi [Diseño + Desarrollo]",
+      "status": "Despliegue a QA",
+      "assignee": "Steven Leon"
     },
     "NE-313": {
       "summary": "HU-29 Confirmación exitosa de pago en Wompi [Diseño + Desarrollo]",
@@ -1401,7 +1406,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T17:54:05Z",
+      "last_push": "2026-05-04T18:05:43Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1451,8 +1456,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "71a47ea",
+              "message": "fix: resolver redireccion incorrecta en paso final checkout NE-314",
+              "date": "2026-05-04T18:05:41Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "65",
+              "tickets": [
+                {
+                  "id": "NE-314",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-314"
+                }
+              ]
+            },
             {
               "sha": "03081c3",
               "message": "fix(pqrs): corregir validacion que permite ingresar datos invalidos en multiples campos NE-320",
@@ -3033,7 +3051,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-17T19:12:24Z",
+      "last_push": "2026-05-04T17:59:40Z",
       "topics": [
         "fase-fruto",
         "team-roble"
