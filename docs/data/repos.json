@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T06:01:02.834Z",
+  "generated_at": "2026-05-04T13:48:20.910Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -141,7 +141,7 @@
     },
     "NE-313": {
       "summary": "HU-29 Confirmación exitosa de pago en Wompi [Diseño + Desarrollo]",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NE-307": {
@@ -186,7 +186,7 @@
     },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
-      "status": "Por hacer",
+      "status": "En proceso",
       "assignee": "Felipe Berrio"
     },
     "NCR-114": {
@@ -1396,7 +1396,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-01T04:21:33Z",
+      "last_push": "2026-05-04T13:47:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1446,8 +1446,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "6a40863",
+              "message": "feat: datos de facturacion NE-306",
+              "date": "2026-05-04T13:47:44Z",
+              "author": "k-aguilera",
+              "pr_number": "62",
+              "tickets": [
+                {
+                  "id": "NE-306",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
+                }
+              ]
+            },
             {
               "sha": "4439cd4",
               "message": "feat: implementar pantalla tras proceso de pago para usuarios de credito y contado NE-313",
