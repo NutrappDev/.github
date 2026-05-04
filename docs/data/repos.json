@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-30T22:45:35.710Z",
+  "generated_at": "2026-05-04T06:01:02.834Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-293": {
       "summary": "Agregar icono en la tabla de ordenes cuando la orden no esta en libreria ERP",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-292": {
@@ -139,10 +139,20 @@
       "status": "Despliegue a DEV",
       "assignee": "Kevin Aguilera"
     },
+    "NE-313": {
+      "summary": "HU-29 Confirmación exitosa de pago en Wompi [Diseño + Desarrollo]",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
+    },
     "NE-307": {
       "summary": "HU-23 Paso Resumen del pedido en checkout de crédito [Diseño + Desarrollo]",
       "status": "Despliegue a QA",
       "assignee": "Steven Leon"
+    },
+    "NE-306": {
+      "summary": "HU-22 Selección de dirección de entrega [Desarrollo]",
+      "status": "Despliegue a QA",
+      "assignee": "Kevin Aguilera"
     },
     "NE-301": {
       "summary": "HU-17 Ocultamiento del panel de cupo para cliente de contado [Desarrollo]",
@@ -296,7 +306,7 @@
     },
     "ALMX-308": {
       "summary": "BG | Texto de error | Aparece \"$NaN\" en lugar de un valor numérico",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-277": {
@@ -841,7 +851,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "5ff7252",
@@ -956,14 +966,6 @@
               "date": "2026-02-06T21:22:04Z",
               "author": "CristiGB",
               "pr_number": "308",
-              "tickets": []
-            },
-            {
-              "sha": "ee98f21",
-              "message": "fix: update maximum base for free hormones shipping eligibility",
-              "date": "2026-02-02T15:47:00Z",
-              "author": "CristiGB",
-              "pr_number": "305",
               "tickets": []
             }
           ]
@@ -1394,7 +1396,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T21:51:11Z",
+      "last_push": "2026-05-01T04:21:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1444,8 +1446,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "4439cd4",
+              "message": "feat: implementar pantalla tras proceso de pago para usuarios de credito y contado NE-313",
+              "date": "2026-05-01T04:21:31Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "61",
+              "tickets": [
+                {
+                  "id": "NE-313",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-313"
+                }
+              ]
+            },
+            {
+              "sha": "123f4d8",
+              "message": "feat:  datos de facturacion NE-306",
+              "date": "2026-05-01T00:12:42Z",
+              "author": "k-aguilera",
+              "pr_number": "60",
+              "tickets": [
+                {
+                  "id": "NE-306",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
+                }
+              ]
+            },
             {
               "sha": "17abe7b",
               "message": "feat: implementar interfaz resumen del checkout diferenciando usuarios NE-307",
