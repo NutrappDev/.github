@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T13:48:20.910Z",
+  "generated_at": "2026-05-04T17:36:49.620Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -186,7 +186,7 @@
     },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
-      "status": "En proceso",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCR-114": {
@@ -1396,7 +1396,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T13:47:47Z",
+      "last_push": "2026-05-04T17:19:04Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1446,8 +1446,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "ee4ba7d",
+              "message": "fix: actualizacion de la data formateada NE-306",
+              "date": "2026-05-04T14:42:19Z",
+              "author": "k-aguilera",
+              "pr_number": "63",
+              "tickets": [
+                {
+                  "id": "NE-306",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
+                }
+              ]
+            },
             {
               "sha": "6a40863",
               "message": "feat: datos de facturacion NE-306",
@@ -1662,7 +1675,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T21:59:12Z",
+      "last_push": "2026-05-04T17:36:15Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-16",
@@ -1733,8 +1746,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "a823e7d",
+              "message": "feat(orders): agregar icono y funcionalidad para orden no sincronizada con erp SUP-293",
+              "date": "2026-05-04T17:36:13Z",
+              "author": "jsandoval-dev",
+              "pr_number": "199",
+              "tickets": [
+                {
+                  "id": "SUP-293",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-293"
+                }
+              ]
+            },
             {
               "sha": "4c2b33e",
               "message": "fix(pdf): modal update SUP-292",
@@ -3060,7 +3086,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T22:45:15Z",
+      "last_push": "2026-05-04T15:23:27Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3508,8 +3534,8 @@
       "ci": {
         "status": "completed",
         "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25118882431",
-        "updated_at": "2026-04-29T15:45:56Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25327506489",
+        "updated_at": "2026-05-04T15:22:38Z",
         "name": "pages build and deployment"
       },
       "_errors": {
