@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T18:06:07.455Z",
+  "generated_at": "2026-05-04T19:38:17.412Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1406,7 +1406,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T18:05:43Z",
+      "last_push": "2026-05-04T19:37:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1456,8 +1456,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "7fe0a7e",
+              "message": "fix: arreglar redireccion tras transferencia fallida NE-314",
+              "date": "2026-05-04T19:37:31Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "67",
+              "tickets": [
+                {
+                  "id": "NE-314",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-314"
+                }
+              ]
+            },
+            {
+              "sha": "062a6a0",
+              "message": "chore: archivos no utilizados y bug de la bolsa navbar NE-306",
+              "date": "2026-05-04T19:29:42Z",
+              "author": "k-aguilera",
+              "pr_number": "66",
+              "tickets": [
+                {
+                  "id": "NE-306",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
+                }
+              ]
+            },
             {
               "sha": "71a47ea",
               "message": "fix: resolver redireccion incorrecta en paso final checkout NE-314",
@@ -3051,7 +3077,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T17:59:40Z",
+      "last_push": "2026-05-04T18:12:11Z",
       "topics": [
         "fase-fruto",
         "team-roble"
