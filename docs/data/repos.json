@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T19:38:17.412Z",
+  "generated_at": "2026-05-04T22:02:17.457Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -199,6 +199,11 @@
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
+    "NCR-116": {
+      "summary": "Documentos del médico no se guardan al registrarlo desde Contact Center",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "NCR-114": {
       "summary": "Crear caso de uso para ShipTo",
       "status": "Esperando aprobación",
@@ -221,7 +226,7 @@
     },
     "NCR-110": {
       "summary": "Archivo automático de correos enviados desde ms-notifications",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCR-105": {
@@ -3077,7 +3082,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T18:12:11Z",
+      "last_push": "2026-05-04T21:02:32Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3148,7 +3153,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T15:23:27Z",
+      "last_push": "2026-05-04T22:01:46Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3226,8 +3231,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 37,
+          "count": 38,
           "recent_commits": [
+            {
+              "sha": "fa8dfda",
+              "message": "feat(sso): ajustar upload de credenciales a pending con trazabilidad NCR-116",
+              "date": "2026-05-04T22:01:43Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "359",
+              "tickets": [
+                {
+                  "id": "NCR-116",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-116"
+                }
+              ]
+            },
             {
               "sha": "49c0705",
               "message": "feat(event-monitoring): adaptar endpoint para funcionamiento en farmacia SUP-293",
@@ -3537,19 +3555,6 @@
                 {
                   "id": "NCR-105",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-105"
-                }
-              ]
-            },
-            {
-              "sha": "10e8898",
-              "message": "fix(prescriptions): bug pdf v2 SUP-292",
-              "date": "2026-04-20T22:54:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "326",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             }
