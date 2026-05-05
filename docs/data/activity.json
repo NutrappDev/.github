@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-05T16:34:38.837Z",
+  "generated_at": "2026-05-05T19:21:47.475Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
       "prs_30d": 49,
-      "prs_90d": 112,
+      "prs_90d": 111,
       "last_activity": "2026-04-29T20:11:00Z",
       "by_repo": [
         {
@@ -27,11 +27,11 @@
         },
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 5
+          "prs": 4
         }
       ],
       "by_branch": {
-        "develop": 54,
+        "develop": 53,
         "qa": 32,
         "main": 26
       },
@@ -93,13 +93,13 @@
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 23,
-      "prs_90d": 55,
-      "last_activity": "2026-05-05T14:34:32Z",
+      "prs_30d": 24,
+      "prs_90d": 56,
+      "last_activity": "2026-05-05T19:21:28Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 26
+          "prs": 27
         },
         {
           "repo": "portal-nutrabiotics",
@@ -127,7 +127,7 @@
         }
       ],
       "by_branch": {
-        "develop": 54,
+        "develop": 55,
         "qa": 0,
         "main": 1
       },
@@ -182,20 +182,20 @@
         },
         {
           "week": "2026-W19",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
     {
       "login": "k-aguilera",
       "avatar_url": "https://avatars.githubusercontent.com/u/256123414?v=4",
-      "prs_30d": 22,
-      "prs_90d": 66,
-      "last_activity": "2026-05-05T16:34:13Z",
+      "prs_30d": 23,
+      "prs_90d": 67,
+      "last_activity": "2026-05-05T19:14:11Z",
       "by_repo": [
         {
           "repo": "nutrabiotics-empresas",
-          "prs": 36
+          "prs": 37
         },
         {
           "repo": "fruto-landing-cimf",
@@ -220,7 +220,7 @@
       ],
       "by_branch": {
         "develop": 42,
-        "qa": 18,
+        "qa": 19,
         "main": 6
       },
       "weekly": [
@@ -274,7 +274,7 @@
         },
         {
           "week": "2026-W19",
-          "prs": 4
+          "prs": 5
         }
       ]
     },
