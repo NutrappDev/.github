@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T14:34:58.054Z",
+  "generated_at": "2026-05-05T16:34:38.837Z",
   "window_days": 90,
   "developers": [
     {
@@ -189,13 +189,13 @@
     {
       "login": "k-aguilera",
       "avatar_url": "https://avatars.githubusercontent.com/u/256123414?v=4",
-      "prs_30d": 21,
-      "prs_90d": 65,
-      "last_activity": "2026-05-04T19:29:42Z",
+      "prs_30d": 22,
+      "prs_90d": 66,
+      "last_activity": "2026-05-05T16:34:13Z",
       "by_repo": [
         {
           "repo": "nutrabiotics-empresas",
-          "prs": 35
+          "prs": 36
         },
         {
           "repo": "fruto-landing-cimf",
@@ -219,7 +219,7 @@
         }
       ],
       "by_branch": {
-        "develop": 41,
+        "develop": 42,
         "qa": 18,
         "main": 6
       },
@@ -274,7 +274,7 @@
         },
         {
           "week": "2026-W19",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
