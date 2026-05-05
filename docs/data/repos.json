@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T22:00:15.097Z",
+  "generated_at": "2026-05-05T22:28:12.420Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1877,7 +1877,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T13:02:57Z",
+      "last_push": "2026-05-05T22:10:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-15",
@@ -2315,7 +2315,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-07T21:30:01Z",
+      "last_push": "2026-05-05T22:27:51Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-07",
@@ -2363,10 +2363,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/24105362699",
-        "updated_at": "2026-04-07T21:33:20Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/25405780506",
+        "updated_at": "2026-05-05T22:27:57Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
       },
       "_errors": {
