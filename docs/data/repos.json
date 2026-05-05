@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T19:14:46.060Z",
+  "generated_at": "2026-05-05T22:00:15.097Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -86,7 +86,7 @@
     },
     "PMO-2714": {
       "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
@@ -139,9 +139,9 @@
       "status": "Despliegue a DEV",
       "assignee": "Miller Ladino Osorio"
     },
-    "NE-247": {
-      "summary": "Envío de órdenes a ERP mediante librería ERP",
-      "status": "Esperando aprobación",
+    "NE-246": {
+      "summary": "Transformación de datos de orden para integración con ERP",
+      "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -164,6 +164,11 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "NCR-120": {
+      "summary": "Actualizar manejo de sourceId para órdenes de Farmacia",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
       "status": "Despliegue a PROD",
@@ -176,12 +181,12 @@
     },
     "NCR-114": {
       "summary": "Crear caso de uso para ShipTo",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-113": {
       "summary": "Manejo de Factory e instancias desde libreria ERP",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-112": {
@@ -191,18 +196,13 @@
     },
     "NCR-111": {
       "summary": "Cambio de lógica para crear orden en Epicor",
-      "status": "Actividad completada",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-110": {
       "summary": "Archivo automático de correos enviados desde ms-notifications",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
-    },
-    "NCR-105": {
-      "summary": "ms- Notificaciones",
-      "status": "Despliegue a PROD",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
@@ -331,7 +331,7 @@
     },
     "ALCO-1511": {
       "summary": "Creación de orden en ms-orders y ERP, atributo de la dirección",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "ALCO-1498": {
@@ -456,6 +456,199 @@
     }
   },
   "repos": [
+    {
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
+      "description": null,
+      "url": "https://github.com/NutrappDev/microservice_payments",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-05T20:01:40Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-05-05",
+        "sha": "60ce3ee28f330260494e4a0e2914e45b92e6716a",
+        "date": "2026-05-05T20:01:39Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-05-05",
+        "body": "Release qa-2026-05-05\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-04-30",
+          "sha": "d7ecd7922132153c719f1e49295d39e4734c3372",
+          "date": "2026-04-30T14:08:20Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-30",
+          "body": "Release qa-2026-04-30\n"
+        },
+        {
+          "version": "qa-2026-04-14",
+          "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
+          "date": "2026-04-14T14:56:10Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
+          "body": "Release qa-2026-04-14\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 9,
+          "recent_commits": [
+            {
+              "sha": "321ab15",
+              "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
+              "date": "2026-04-30T17:30:29Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "68",
+              "tickets": [
+                {
+                  "id": "NCR-117",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
+                }
+              ]
+            },
+            {
+              "sha": "519fa4b",
+              "message": "fix(transaction): ajuste de transaction ALCO-1450",
+              "date": "2026-03-26T17:57:35Z",
+              "author": "fabianromerolu",
+              "pr_number": "60",
+              "tickets": [
+                {
+                  "id": "ALCO-1450",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
+                }
+              ]
+            },
+            {
+              "sha": "c1f8fa9",
+              "message": "fix(paypal): config paypal ALMX-273",
+              "date": "2026-03-12T15:42:44Z",
+              "author": "fabianromerolu",
+              "pr_number": "58",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "3b8f35b",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:55:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "57",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "54c2151",
+              "message": "fix(paypal): config serveless ALMX-273",
+              "date": "2026-03-11T20:19:06Z",
+              "author": "fabianromerolu",
+              "pr_number": "56",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "55b8a10",
+              "message": "feat(paypal): agg environment ALMX-273",
+              "date": "2026-03-11T17:52:41Z",
+              "author": "fabianromerolu",
+              "pr_number": "54",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "f144cc7",
+              "message": "feat(paypal): ajustar paypal return url ALMX-273",
+              "date": "2026-03-09T21:35:02Z",
+              "author": "fabianromerolu",
+              "pr_number": "53",
+              "tickets": [
+                {
+                  "id": "ALMX-273",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
+                }
+              ]
+            },
+            {
+              "sha": "699d4c8",
+              "message": "Fix/paypal",
+              "date": "2026-02-26T13:38:30Z",
+              "author": "fabianromerolu",
+              "pr_number": "49",
+              "tickets": []
+            },
+            {
+              "sha": "9c01b2a",
+              "message": "Fix/paypal",
+              "date": "2026-02-25T19:58:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "48",
+              "tickets": []
+            }
+          ]
+        },
+        "to_production": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "60ce3ee",
+              "message": "release qa-2026-05-05",
+              "date": "2026-05-05T20:01:28Z",
+              "author": "meraso-nutra",
+              "pr_number": "69",
+              "tickets": []
+            },
+            {
+              "sha": "d7ecd79",
+              "message": "release: qa-2026-04-29",
+              "date": "2026-04-30T14:08:06Z",
+              "author": "meraso-nutra",
+              "pr_number": "65",
+              "tickets": []
+            },
+            {
+              "sha": "8f4823f",
+              "message": "release: qa-2026-04-13",
+              "date": "2026-04-14T14:55:56Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "61",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
+        "updated_at": "2026-03-16T17:15:04Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-web-ia-comercial",
       "full_name": "NutrappDev/fruto-web-ia-comercial",
@@ -589,197 +782,6 @@
         "url": "https://github.com/NutrappDev/tronco-automatizacion-interna/actions/runs/25127303988",
         "updated_at": "2026-04-29T18:42:56Z",
         "name": "Deploy n8n Workflows"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-04-30T17:30:32Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-04-30",
-        "sha": "d7ecd7922132153c719f1e49295d39e4734c3372",
-        "date": "2026-04-30T14:08:20Z",
-        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-30",
-        "body": "Release qa-2026-04-30\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-04-14",
-          "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
-          "date": "2026-04-14T14:56:10Z",
-          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
-          "body": "Release qa-2026-04-14\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 10,
-          "recent_commits": [
-            {
-              "sha": "321ab15",
-              "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
-              "date": "2026-04-30T17:30:29Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "68",
-              "tickets": [
-                {
-                  "id": "NCR-117",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
-                }
-              ]
-            },
-            {
-              "sha": "7fd4d73",
-              "message": "refactor(serverless): normalizar urls eliminando slash final en nutrabiotics empresas NE-247",
-              "date": "2026-04-29T21:10:37Z",
-              "author": "jsandoval-dev",
-              "pr_number": "66",
-              "tickets": [
-                {
-                  "id": "NE-247",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-247"
-                }
-              ]
-            },
-            {
-              "sha": "519fa4b",
-              "message": "fix(transaction): ajuste de transaction ALCO-1450",
-              "date": "2026-03-26T17:57:35Z",
-              "author": "fabianromerolu",
-              "pr_number": "60",
-              "tickets": [
-                {
-                  "id": "ALCO-1450",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
-                }
-              ]
-            },
-            {
-              "sha": "c1f8fa9",
-              "message": "fix(paypal): config paypal ALMX-273",
-              "date": "2026-03-12T15:42:44Z",
-              "author": "fabianromerolu",
-              "pr_number": "58",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "3b8f35b",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:55:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "54c2151",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:19:06Z",
-              "author": "fabianromerolu",
-              "pr_number": "56",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "55b8a10",
-              "message": "feat(paypal): agg environment ALMX-273",
-              "date": "2026-03-11T17:52:41Z",
-              "author": "fabianromerolu",
-              "pr_number": "54",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "f144cc7",
-              "message": "feat(paypal): ajustar paypal return url ALMX-273",
-              "date": "2026-03-09T21:35:02Z",
-              "author": "fabianromerolu",
-              "pr_number": "53",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "699d4c8",
-              "message": "Fix/paypal",
-              "date": "2026-02-26T13:38:30Z",
-              "author": "fabianromerolu",
-              "pr_number": "49",
-              "tickets": []
-            },
-            {
-              "sha": "9c01b2a",
-              "message": "Fix/paypal",
-              "date": "2026-02-25T19:58:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "48",
-              "tickets": []
-            }
-          ]
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "d7ecd79",
-              "message": "release: qa-2026-04-29",
-              "date": "2026-04-30T14:08:06Z",
-              "author": "meraso-nutra",
-              "pr_number": "65",
-              "tickets": []
-            },
-            {
-              "sha": "8f4823f",
-              "message": "release: qa-2026-04-13",
-              "date": "2026-04-14T14:55:56Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "61",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
-        "updated_at": "2026-03-16T17:15:04Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
       "_errors": {
         "production": null,
@@ -3014,7 +3016,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-05T17:48:01Z",
+      "last_push": "2026-05-05T21:59:51Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3092,8 +3094,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 38,
+          "count": 40,
           "recent_commits": [
+            {
+              "sha": "f9814d1",
+              "message": "refactor(ffco): new sourceid handling for farmacia NCR-120",
+              "date": "2026-05-05T21:59:49Z",
+              "author": "meraso-nutra",
+              "pr_number": "361",
+              "tickets": [
+                {
+                  "id": "NCR-120",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-120"
+                }
+              ]
+            },
+            {
+              "sha": "098a19d",
+              "message": "feat(erp): transformar datos de orden para integracion con erp NE-246",
+              "date": "2026-05-05T19:21:28Z",
+              "author": "jsandoval-dev",
+              "pr_number": "360",
+              "tickets": [
+                {
+                  "id": "NE-246",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-246"
+                }
+              ]
+            },
             {
               "sha": "fa8dfda",
               "message": "feat(sso): ajustar upload de credenciales a pending con trazabilidad NCR-116",
@@ -3390,32 +3418,6 @@
                 {
                   "id": "NCR-111",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
-                }
-              ]
-            },
-            {
-              "sha": "b259f9d",
-              "message": "fix(prescriptions): bug pdf SUP-292",
-              "date": "2026-04-21T22:02:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "329",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "3fd2449",
-              "message": "refactor(notifications): organizar y refactorizar microservicio notifications NCR-105",
-              "date": "2026-04-21T14:42:33Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "313",
-              "tickets": [
-                {
-                  "id": "NCR-105",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-105"
                 }
               ]
             }
