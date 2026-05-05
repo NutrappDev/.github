@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T22:28:12.420Z",
+  "generated_at": "2026-05-05T22:38:35.991Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -239,16 +239,6 @@
       "status": "Actividad completada",
       "assignee": "Wilson Mendoza"
     },
-    "NCOL-544": {
-      "summary": " Aliados comerciales",
-      "status": "Actividad completada",
-      "assignee": "Richard Medina"
-    },
-    "NCOL-543": {
-      "summary": "Contáctanos",
-      "status": "Actividad completada",
-      "assignee": "Richard Medina"
-    },
     "NCOL-538": {
       "summary": "Los 6 principios de nuestras creaciones",
       "status": "Actividad completada",
@@ -456,6 +446,345 @@
     }
   },
   "repos": [
+    {
+      "name": "fruto-web-nutra-co",
+      "full_name": "NutrappDev/fruto-web-nutra-co",
+      "description": "Página web externa de Nutrabiotics Colombia",
+      "url": "https://github.com/NutrappDev/fruto-web-nutra-co",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-05T22:38:17Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-05-05",
+        "sha": "9598bb9db090c5e3c6d4464fe55d1c8f97695bc9",
+        "date": "2026-05-05T22:38:16Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-05-05",
+        "body": "Release prod-2026-05-05\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-15",
+          "sha": "3f491d1d2405542198968a081b4c94afe7f14651",
+          "date": "2026-04-15T13:39:43Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-04-15",
+          "body": "Release prod-2026-04-15\n\nOther (1):\nPR #59 by Steven León - Actualiza número de WhatsApp en página Contáctanos para alinearlo con canales oficiales [PMO-2690]\n"
+        },
+        {
+          "version": "prod-2026-03-31",
+          "sha": "eecdab097dd9df683a7c69c784e6397fe085bc89",
+          "date": "2026-03-31T21:18:31Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-31",
+          "body": "Release prod-2026-03-31\n"
+        },
+        {
+          "version": "prod-2026-03-02",
+          "sha": "111cb63340d1526daaf73164ac4ecbc2f1a6bb54",
+          "date": "2026-03-02T22:17:17Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02",
+          "body": "Release prod-2026-03-02\n\nFixes (1):\nPR #21 by Steven León - Ajuste de breakpoints responsive y detección de hover para diferenciar tablets de desktop en banner de apps funcionales [NCOL-586]\n"
+        },
+        {
+          "version": "prod-2026-03-02-2",
+          "sha": "313699941d0742d8e755e85c140fffde2bcb7d6d",
+          "date": "2026-03-02T22:34:09Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02-2",
+          "body": "Release prod-2026-03-02-2\n\nFixes (1):\nPR #32 by Steven León - Corrige visualización de unidad de gramos en minúscula en títulos de productos con cantidad [PMO-2676]\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-04-30",
+        "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
+        "date": "2026-04-30T12:56:16Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-30",
+        "body": "Release qa-2026-04-30\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-04-21",
+          "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
+          "date": "2026-04-21T17:41:34Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
+          "body": "Release qa-2026-04-21\n"
+        },
+        {
+          "version": "qa-2026-03-25",
+          "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
+          "date": "2026-03-25T20:35:01Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
+          "body": "Release qa-2026-03-25\n"
+        },
+        {
+          "version": "qa-2026-03-17",
+          "sha": "2476952284e1f9c23971b0ebcc0c56945b6c5052",
+          "date": "2026-03-17T21:33:39Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-17",
+          "body": "Release qa-2026-03-17\n"
+        },
+        {
+          "version": "qa-2026-03-10",
+          "sha": "5b77fabacb6a21f00ea3a9cf880a59599be39a9b",
+          "date": "2026-03-10T21:57:48Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
+          "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 8,
+          "recent_commits": [
+            {
+              "sha": "480bb68",
+              "message": "fix(policies): add sagrilaft and ptee policy PMO-2639",
+              "date": "2026-04-30T13:02:55Z",
+              "author": "mladino-source",
+              "pr_number": "89",
+              "tickets": [
+                {
+                  "id": "PMO-2639",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
+                }
+              ]
+            },
+            {
+              "sha": "3208718",
+              "message": "test: ajustes scripts por timeout QA-779",
+              "date": "2026-04-27T19:55:12Z",
+              "author": "CarlosParraQA",
+              "pr_number": "86",
+              "tickets": [
+                {
+                  "id": "QA-779",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-779"
+                }
+              ]
+            },
+            {
+              "sha": "6bb0f9f",
+              "message": "test: validacion impacto QA-772",
+              "date": "2026-04-07T20:07:15Z",
+              "author": "CarlosParraQA",
+              "pr_number": "75",
+              "tickets": [
+                {
+                  "id": "QA-772",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-772"
+                }
+              ]
+            },
+            {
+              "sha": "fe82622",
+              "message": "test: lighthouse y linea etica QA-428",
+              "date": "2026-04-06T13:17:04Z",
+              "author": "CarlosParraQA",
+              "pr_number": "72",
+              "tickets": [
+                {
+                  "id": "QA-428",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
+                }
+              ]
+            },
+            {
+              "sha": "cdc4d80",
+              "message": "test: agregar scripts cypress QA-428",
+              "date": "2026-03-26T13:37:00Z",
+              "author": "CarlosParraQA",
+              "pr_number": "61",
+              "tickets": [
+                {
+                  "id": "QA-428",
+                  "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
+                }
+              ]
+            },
+            {
+              "sha": "6db76c8",
+              "message": "fix(products): arreglar validación botón me interesa en productos tipo medicamento NCOL-538",
+              "date": "2026-02-09T13:42:31Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "11",
+              "tickets": [
+                {
+                  "id": "NCOL-538",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-538"
+                }
+              ]
+            },
+            {
+              "sha": "0aeec58",
+              "message": "fix: ajustes al colSpan de 2 columnas para la vista tablet",
+              "date": "2026-02-12T18:57:46Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "19",
+              "tickets": []
+            },
+            {
+              "sha": "e7a7cc9",
+              "message": "fix: se corrigen estilos del formulario NCOL-551",
+              "date": "2026-02-11T21:22:10Z",
+              "author": "jsandoval-dev",
+              "pr_number": "16",
+              "tickets": [
+                {
+                  "id": "NCOL-551",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-551"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "6f02aa7",
+              "message": "release: deploy PRs a QA - 2026-04-29",
+              "date": "2026-04-30T12:55:54Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "88",
+              "tickets": []
+            },
+            {
+              "sha": "60d8548",
+              "message": "release: deploy PRs a QA - 2026-04-20",
+              "date": "2026-04-21T17:41:21Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "80",
+              "tickets": []
+            },
+            {
+              "sha": "62432ea",
+              "message": "release: deploy PRs #58, #59 a QA (NCOL-645, NCOL-639, PMO-2690)",
+              "date": "2026-03-25T20:34:49Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "60",
+              "tickets": [
+                {
+                  "id": "NCOL-645",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-645"
+                },
+                {
+                  "id": "NCOL-639",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-639"
+                },
+                {
+                  "id": "PMO-2690",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2690"
+                }
+              ]
+            },
+            {
+              "sha": "2476952",
+              "message": "release: deploy PR #44 a QA (NCOL-637, NCOL-646, NCOL-647)",
+              "date": "2026-03-17T21:33:24Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "51",
+              "tickets": [
+                {
+                  "id": "NCOL-637",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-637"
+                },
+                {
+                  "id": "NCOL-646",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-646"
+                },
+                {
+                  "id": "NCOL-647",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-647"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "SSO-keycloak",
+      "full_name": "NutrappDev/SSO-keycloak",
+      "description": null,
+      "url": "https://github.com/NutrappDev/SSO-keycloak",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-05T22:28:12Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-05-05",
+        "sha": "aa6f21e8bc1a080317e3180565c2dc9fbc16e001",
+        "date": "2026-05-05T22:28:11Z",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-05-05",
+        "body": "Release prod-2026-05-05\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-07",
+          "sha": "513a5175a1b41fb3df82e6691e7ec3ad4dc1fb82",
+          "date": "2026-04-07T21:30:00Z",
+          "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-04-07",
+          "body": "Release prod-2026-04-07\n"
+        },
+        {
+          "version": "prod-2026-03-20",
+          "sha": "8caa995770b198639d68df44a63b5db8101a7426",
+          "date": "2026-03-20T14:40:27Z",
+          "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-03-20",
+          "body": "Release prod-2026-03-20\n"
+        }
+      ],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "3144cdd",
+              "message": "fix: Adjust on cmd",
+              "date": "2026-02-16T20:40:41Z",
+              "author": "k-aguilera",
+              "pr_number": "38",
+              "tickets": []
+            },
+            {
+              "sha": "a673ab9",
+              "message": "Business type flow config",
+              "date": "2026-02-16T19:16:10Z",
+              "author": "k-aguilera",
+              "pr_number": "37",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/25405780506",
+        "updated_at": "2026-05-05T22:31:22Z",
+        "name": "Build & Deploy Keycloak (AWS Fargate)"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -1870,268 +2199,6 @@
       }
     },
     {
-      "name": "fruto-web-nutra-co",
-      "full_name": "NutrappDev/fruto-web-nutra-co",
-      "description": "Página web externa de Nutrabiotics Colombia",
-      "url": "https://github.com/NutrappDev/fruto-web-nutra-co",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-05T22:10:33Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-15",
-        "sha": "3f491d1d2405542198968a081b4c94afe7f14651",
-        "date": "2026-04-15T13:39:43Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-04-15",
-        "body": "Release prod-2026-04-15\n\nOther (1):\nPR #59 by Steven León - Actualiza número de WhatsApp en página Contáctanos para alinearlo con canales oficiales [PMO-2690]\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-03-31",
-          "sha": "eecdab097dd9df683a7c69c784e6397fe085bc89",
-          "date": "2026-03-31T21:18:31Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-31",
-          "body": "Release prod-2026-03-31\n"
-        },
-        {
-          "version": "prod-2026-03-02",
-          "sha": "111cb63340d1526daaf73164ac4ecbc2f1a6bb54",
-          "date": "2026-03-02T22:17:17Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02",
-          "body": "Release prod-2026-03-02\n\nFixes (1):\nPR #21 by Steven León - Ajuste de breakpoints responsive y detección de hover para diferenciar tablets de desktop en banner de apps funcionales [NCOL-586]\n"
-        },
-        {
-          "version": "prod-2026-03-02-2",
-          "sha": "313699941d0742d8e755e85c140fffde2bcb7d6d",
-          "date": "2026-03-02T22:34:09Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-03-02-2",
-          "body": "Release prod-2026-03-02-2\n\nFixes (1):\nPR #32 by Steven León - Corrige visualización de unidad de gramos en minúscula en títulos de productos con cantidad [PMO-2676]\n"
-        },
-        {
-          "version": "prod-2026-02-24",
-          "sha": "31b722317dce889d106a9994b438321f453ddd93",
-          "date": "2026-02-24T22:20:33Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/prod-2026-02-24",
-          "body": "Release prod-2026-02-24\n\nFixes (2):\nPR #5 by Steven León - Reemplaza carrusel apps funcionales con nueva implementación responsive en 3 breakpoints [NCOL-544]\nPR #9 by Steven León - Corrige carrusel videos doctores con modo infinito y consistencia visual [NCOL-543]\n"
-        }
-      ],
-      "qa": {
-        "version": "qa-2026-04-30",
-        "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
-        "date": "2026-04-30T12:56:16Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-30",
-        "body": "Release qa-2026-04-30\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-04-21",
-          "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
-          "date": "2026-04-21T17:41:34Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
-          "body": "Release qa-2026-04-21\n"
-        },
-        {
-          "version": "qa-2026-03-25",
-          "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
-          "date": "2026-03-25T20:35:01Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
-          "body": "Release qa-2026-03-25\n"
-        },
-        {
-          "version": "qa-2026-03-17",
-          "sha": "2476952284e1f9c23971b0ebcc0c56945b6c5052",
-          "date": "2026-03-17T21:33:39Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
-        },
-        {
-          "version": "qa-2026-03-10",
-          "sha": "5b77fabacb6a21f00ea3a9cf880a59599be39a9b",
-          "date": "2026-03-10T21:57:48Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
-          "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 8,
-          "recent_commits": [
-            {
-              "sha": "480bb68",
-              "message": "fix(policies): add sagrilaft and ptee policy PMO-2639",
-              "date": "2026-04-30T13:02:55Z",
-              "author": "mladino-source",
-              "pr_number": "89",
-              "tickets": [
-                {
-                  "id": "PMO-2639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
-                }
-              ]
-            },
-            {
-              "sha": "3208718",
-              "message": "test: ajustes scripts por timeout QA-779",
-              "date": "2026-04-27T19:55:12Z",
-              "author": "CarlosParraQA",
-              "pr_number": "86",
-              "tickets": [
-                {
-                  "id": "QA-779",
-                  "url": "https://nutrabiotics.atlassian.net/browse/QA-779"
-                }
-              ]
-            },
-            {
-              "sha": "6bb0f9f",
-              "message": "test: validacion impacto QA-772",
-              "date": "2026-04-07T20:07:15Z",
-              "author": "CarlosParraQA",
-              "pr_number": "75",
-              "tickets": [
-                {
-                  "id": "QA-772",
-                  "url": "https://nutrabiotics.atlassian.net/browse/QA-772"
-                }
-              ]
-            },
-            {
-              "sha": "fe82622",
-              "message": "test: lighthouse y linea etica QA-428",
-              "date": "2026-04-06T13:17:04Z",
-              "author": "CarlosParraQA",
-              "pr_number": "72",
-              "tickets": [
-                {
-                  "id": "QA-428",
-                  "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
-                }
-              ]
-            },
-            {
-              "sha": "cdc4d80",
-              "message": "test: agregar scripts cypress QA-428",
-              "date": "2026-03-26T13:37:00Z",
-              "author": "CarlosParraQA",
-              "pr_number": "61",
-              "tickets": [
-                {
-                  "id": "QA-428",
-                  "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
-                }
-              ]
-            },
-            {
-              "sha": "6db76c8",
-              "message": "fix(products): arreglar validación botón me interesa en productos tipo medicamento NCOL-538",
-              "date": "2026-02-09T13:42:31Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "11",
-              "tickets": [
-                {
-                  "id": "NCOL-538",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-538"
-                }
-              ]
-            },
-            {
-              "sha": "0aeec58",
-              "message": "fix: ajustes al colSpan de 2 columnas para la vista tablet",
-              "date": "2026-02-12T18:57:46Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "19",
-              "tickets": []
-            },
-            {
-              "sha": "e7a7cc9",
-              "message": "fix: se corrigen estilos del formulario NCOL-551",
-              "date": "2026-02-11T21:22:10Z",
-              "author": "jsandoval-dev",
-              "pr_number": "16",
-              "tickets": [
-                {
-                  "id": "NCOL-551",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-551"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "6f02aa7",
-              "message": "release: deploy PRs a QA - 2026-04-29",
-              "date": "2026-04-30T12:55:54Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "88",
-              "tickets": []
-            },
-            {
-              "sha": "60d8548",
-              "message": "release: deploy PRs a QA - 2026-04-20",
-              "date": "2026-04-21T17:41:21Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "80",
-              "tickets": []
-            },
-            {
-              "sha": "62432ea",
-              "message": "release: deploy PRs #58, #59 a QA (NCOL-645, NCOL-639, PMO-2690)",
-              "date": "2026-03-25T20:34:49Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "60",
-              "tickets": [
-                {
-                  "id": "NCOL-645",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-645"
-                },
-                {
-                  "id": "NCOL-639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-639"
-                },
-                {
-                  "id": "PMO-2690",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2690"
-                }
-              ]
-            },
-            {
-              "sha": "2476952",
-              "message": "release: deploy PR #44 a QA (NCOL-637, NCOL-646, NCOL-647)",
-              "date": "2026-03-17T21:33:24Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "51",
-              "tickets": [
-                {
-                  "id": "NCOL-637",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-637"
-                },
-                {
-                  "id": "NCOL-646",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-646"
-                },
-                {
-                  "id": "NCOL-647",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-647"
-                }
-              ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "fruto-landing-amf",
       "full_name": "NutrappDev/fruto-landing-amf",
       "description": "Landing diplomado AMF",
@@ -2299,76 +2366,6 @@
         }
       },
       "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "SSO-keycloak",
-      "full_name": "NutrappDev/SSO-keycloak",
-      "description": null,
-      "url": "https://github.com/NutrappDev/SSO-keycloak",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-05T22:27:51Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-07",
-        "sha": "513a5175a1b41fb3df82e6691e7ec3ad4dc1fb82",
-        "date": "2026-04-07T21:30:00Z",
-        "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-04-07",
-        "body": "Release prod-2026-04-07\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-03-20",
-          "sha": "8caa995770b198639d68df44a63b5db8101a7426",
-          "date": "2026-03-20T14:40:27Z",
-          "url": "https://github.com/NutrappDev/SSO-keycloak/releases/tag/prod-2026-03-20",
-          "body": "Release prod-2026-03-20\n"
-        }
-      ],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "3144cdd",
-              "message": "fix: Adjust on cmd",
-              "date": "2026-02-16T20:40:41Z",
-              "author": "k-aguilera",
-              "pr_number": "38",
-              "tickets": []
-            },
-            {
-              "sha": "a673ab9",
-              "message": "Business type flow config",
-              "date": "2026-02-16T19:16:10Z",
-              "author": "k-aguilera",
-              "pr_number": "37",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "in_progress",
-        "conclusion": null,
-        "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/25405780506",
-        "updated_at": "2026-05-05T22:27:57Z",
-        "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
       "_errors": {
         "production": null,
         "qa": null,
