@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-04T22:02:17.457Z",
+  "generated_at": "2026-05-05T19:14:46.060Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-293": {
       "summary": "Agregar icono en la tabla de ordenes cuando la orden no esta en libreria ERP",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
-      "status": "Aprobado por QA",
+      "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-287": {
@@ -134,40 +134,10 @@
       "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
     },
-    "NE-320": {
-      "summary": "BG | Formulario | Permite ingresar datos inválidos en múltiples campos",
+    "NMX-408": {
+      "summary": "BG | Aliados | Se deja un espacio en blanco de manera irregular en el carrusel",
       "status": "Despliegue a DEV",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "NE-318": {
-      "summary": "BUG: La información del usuario no se actualiza",
-      "status": "Despliegue a DEV",
-      "assignee": "Kevin Aguilera"
-    },
-    "NE-314": {
-      "summary": "HU-30 Pantalla de error de pago en Wompi [Diseño + Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "NE-313": {
-      "summary": "HU-29 Confirmación exitosa de pago en Wompi [Diseño + Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "NE-307": {
-      "summary": "HU-23 Paso Resumen del pedido en checkout de crédito [Diseño + Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "NE-306": {
-      "summary": "HU-22 Selección de dirección de entrega [Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Kevin Aguilera"
-    },
-    "NE-301": {
-      "summary": "HU-17 Ocultamiento del panel de cupo para cliente de contado [Desarrollo]",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
+      "assignee": "Miller Ladino Osorio"
     },
     "NE-247": {
       "summary": "Envío de órdenes a ERP mediante librería ERP",
@@ -201,7 +171,7 @@
     },
     "NCR-116": {
       "summary": "Documentos del médico no se guardan al registrarlo desde Contact Center",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "NCR-114": {
@@ -216,7 +186,7 @@
     },
     "NCR-112": {
       "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
     "NCR-111": {
@@ -236,7 +206,7 @@
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCOL-647": {
@@ -486,6 +456,45 @@
     }
   },
   "repos": [
+    {
+      "name": "fruto-web-ia-comercial",
+      "full_name": "NutrappDev/fruto-web-ia-comercial",
+      "description": null,
+      "url": "https://github.com/NutrappDev/fruto-web-ia-comercial",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-05T00:07:00Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/fruto-web-ia-comercial/actions/runs/25350480643",
+        "updated_at": "2026-05-05T00:07:42Z",
+        "name": "Deploy to GCP VM - Fruto Web IA Comercial"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-landing-cimf",
       "full_name": "NutrappDev/fruto-landing-cimf",
@@ -1411,7 +1420,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T19:37:33Z",
+      "last_push": "2026-05-05T19:14:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -1430,13 +1439,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-28",
-        "sha": "80443f88ee8a9a244e8e552d5d5dde7ef0426a39",
-        "date": "2026-04-28T21:43:30Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-28",
-        "body": "Release qa-2026-04-28\n"
+        "version": "qa-2026-05-05",
+        "sha": "369a750f4b9f5a0d44c69c83de16b12796fb20c8",
+        "date": "2026-05-05T19:14:25Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-05-05",
+        "body": "Release qa-2026-05-05\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-28",
+          "sha": "80443f88ee8a9a244e8e552d5d5dde7ef0426a39",
+          "date": "2026-04-28T21:43:30Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-28",
+          "body": "Release qa-2026-04-28\n"
+        },
         {
           "version": "qa-2026-04-09",
           "sha": "80e4b27db7a3c2313444c4855cae1487517e6001",
@@ -1461,151 +1477,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 1,
           "recent_commits": [
-            {
-              "sha": "7fe0a7e",
-              "message": "fix: arreglar redireccion tras transferencia fallida NE-314",
-              "date": "2026-05-04T19:37:31Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "67",
-              "tickets": [
-                {
-                  "id": "NE-314",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-314"
-                }
-              ]
-            },
-            {
-              "sha": "062a6a0",
-              "message": "chore: archivos no utilizados y bug de la bolsa navbar NE-306",
-              "date": "2026-05-04T19:29:42Z",
-              "author": "k-aguilera",
-              "pr_number": "66",
-              "tickets": [
-                {
-                  "id": "NE-306",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
-                }
-              ]
-            },
-            {
-              "sha": "71a47ea",
-              "message": "fix: resolver redireccion incorrecta en paso final checkout NE-314",
-              "date": "2026-05-04T18:05:41Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "65",
-              "tickets": [
-                {
-                  "id": "NE-314",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-314"
-                }
-              ]
-            },
-            {
-              "sha": "03081c3",
-              "message": "fix(pqrs): corregir validacion que permite ingresar datos invalidos en multiples campos NE-320",
-              "date": "2026-05-04T17:54:03Z",
-              "author": "jsandoval-dev",
-              "pr_number": "64",
-              "tickets": [
-                {
-                  "id": "NE-320",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-320"
-                }
-              ]
-            },
-            {
-              "sha": "ee4ba7d",
-              "message": "fix: actualizacion de la data formateada NE-306",
-              "date": "2026-05-04T14:42:19Z",
-              "author": "k-aguilera",
-              "pr_number": "63",
-              "tickets": [
-                {
-                  "id": "NE-306",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
-                }
-              ]
-            },
-            {
-              "sha": "6a40863",
-              "message": "feat: datos de facturacion NE-306",
-              "date": "2026-05-04T13:47:44Z",
-              "author": "k-aguilera",
-              "pr_number": "62",
-              "tickets": [
-                {
-                  "id": "NE-306",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
-                }
-              ]
-            },
-            {
-              "sha": "4439cd4",
-              "message": "feat: implementar pantalla tras proceso de pago para usuarios de credito y contado NE-313",
-              "date": "2026-05-01T04:21:31Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "61",
-              "tickets": [
-                {
-                  "id": "NE-313",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-313"
-                }
-              ]
-            },
-            {
-              "sha": "123f4d8",
-              "message": "feat:  datos de facturacion NE-306",
-              "date": "2026-05-01T00:12:42Z",
-              "author": "k-aguilera",
-              "pr_number": "60",
-              "tickets": [
-                {
-                  "id": "NE-306",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-306"
-                }
-              ]
-            },
-            {
-              "sha": "17abe7b",
-              "message": "feat: implementar interfaz resumen del checkout diferenciando usuarios NE-307",
-              "date": "2026-04-30T13:57:47Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "59",
-              "tickets": [
-                {
-                  "id": "NE-307",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-307"
-                }
-              ]
-            },
-            {
-              "sha": "9be1b3b",
-              "message": "feat: implementar panel de cupo para usuarios de credito y segmentacion de usuarios NE-301",
-              "date": "2026-04-29T16:31:43Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "58",
-              "tickets": [
-                {
-                  "id": "NE-301",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-301"
-                }
-              ]
-            },
-            {
-              "sha": "de1dc74",
-              "message": "fix: logged info user NE-318",
-              "date": "2026-04-29T03:45:39Z",
-              "author": "k-aguilera",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "NE-318",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-318"
-                }
-              ]
-            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -1622,8 +1495,16 @@
           ]
         },
         "to_production": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "369a750",
+              "message": "release: qa-2026-05-05",
+              "date": "2026-05-05T19:14:11Z",
+              "author": "k-aguilera",
+              "pr_number": "70",
+              "tickets": []
+            },
             {
               "sha": "80443f8",
               "message": "release: qa-2026-04-28",
@@ -1975,39 +1856,6 @@
               ]
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-web-ia-comercial",
-      "full_name": "NutrappDev/fruto-web-ia-comercial",
-      "description": null,
-      "url": "https://github.com/NutrappDev/fruto-web-ia-comercial",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/monorepo-import",
-      "last_push": "2026-04-15T17:20:37Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -3082,7 +2930,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T21:02:32Z",
+      "last_push": "2026-05-05T13:40:39Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3105,8 +2953,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "832969d",
+              "message": "fix(carousel): remove irregular whitespace in allies carousel NMX-408",
+              "date": "2026-05-05T13:40:36Z",
+              "author": "mladino-source",
+              "pr_number": "8",
+              "tickets": [
+                {
+                  "id": "NMX-408",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-408"
+                }
+              ]
+            },
             {
               "sha": "c41b8c5",
               "message": "refactor(PMO-2714): restore products item in main navigation menu",
@@ -3153,7 +3014,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-04T22:01:46Z",
+      "last_push": "2026-05-05T17:48:01Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
