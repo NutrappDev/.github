@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T22:38:35.991Z",
+  "generated_at": "2026-05-06T14:05:26.638Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -13,11 +13,6 @@
       "summary": "Bug actualizacion de pdf de autorizaciones",
       "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "SUP-287": {
-      "summary": "Indicador visual de órdenes cargadas en ERP",
-      "status": "Detenido",
-      "assignee": "Jhelcy Sandoval"
     },
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -74,6 +69,11 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2817": {
+      "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
       "status": "Revisión QA",
@@ -124,11 +124,6 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
-    "PALCO-85": {
-      "summary": "Desarrollar la invocación al endpoint de creación de customer en Epicor",
-      "status": "Esperando aprobación",
-      "assignee": "Jhelcy Sandoval"
-    },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Esperando aprobación",
@@ -166,7 +161,7 @@
     },
     "NCR-120": {
       "summary": "Actualizar manejo de sourceId para órdenes de Farmacia",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "Mario Eraso"
     },
     "NCR-117": {
@@ -179,30 +174,20 @@
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
-    "NCR-114": {
-      "summary": "Crear caso de uso para ShipTo",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
-    },
-    "NCR-113": {
-      "summary": "Manejo de Factory e instancias desde libreria ERP",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
-    },
     "NCR-112": {
       "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
     },
-    "NCR-111": {
-      "summary": "Cambio de lógica para crear orden en Epicor",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
-    },
     "NCR-110": {
       "summary": "Archivo automático de correos enviados desde ms-notifications",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
+    },
+    "NCR-105": {
+      "summary": "ms- Notificaciones",
+      "status": "Despliegue a PROD",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
@@ -269,15 +254,15 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "DE-338": {
+      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
+      "status": "Actividad completada",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
+    },
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALPE-218": {
-      "summary": "BG | Tu Bolsa | Salir a agregar productos el cupón promocional deja de incluirse en el cobro",
-      "status": "Actividad completada",
-      "assignee": "Maria Alejandra Pedraza Cardenas"
     },
     "ALMX-308": {
       "summary": "BG | Texto de error | Aparece \"$NaN\" en lugar de un valor numérico",
@@ -318,11 +303,6 @@
       "summary": "Re ajustar el desarrollo de los paso del checkout",
       "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-1511": {
-      "summary": "Creación de orden en ms-orders y ERP, atributo de la dirección",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -408,11 +388,6 @@
       "summary": "Actualización de flujo de plantillas en Alivia",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "ALCO-898": {
-      "summary": "Implementar estructura de disponibilidad temporal por reserva, para los productos en linea",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     },
     "ALCO-897": {
       "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
@@ -1128,7 +1103,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-30T19:38:42Z",
+      "last_push": "2026-05-06T03:17:23Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-29",
@@ -3013,7 +2988,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-05T21:59:51Z",
+      "last_push": "2026-05-06T14:05:05Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3053,13 +3028,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-27",
-        "sha": "54ef247b155af484d0ffe81d699936d6624f8775",
-        "date": "2026-04-27T13:14:08Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-04-27",
-        "body": "Release qa-2026-04-27\n"
+        "version": "qa-2026-05-06",
+        "sha": "8a0d3dc581c591f177c61d8a399014067ef24377",
+        "date": "2026-05-06T14:05:04Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-06",
+        "body": "Release qa-2026-05-06\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-27",
+          "sha": "54ef247b155af484d0ffe81d699936d6624f8775",
+          "date": "2026-04-27T13:14:08Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-04-27",
+          "body": "Release qa-2026-04-27\n"
+        },
         {
           "version": "qa-2026-04-09",
           "sha": "4462fed798b9f19982f91bab191eb30a348494bf",
@@ -3080,18 +3062,11 @@
           "date": "2026-03-18T15:39:34Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-18",
           "body": "Release qa-2026-03-18\n"
-        },
-        {
-          "version": "qa-2026-02-24",
-          "sha": "c9ae835452f3d6693f08883193684ab18976b95b",
-          "date": "2026-02-24T15:00:45Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-02-24",
-          "body": "Release qa-2026-02-24\n\nFeatures (2):\nPR #193 by Isabel Gomez Balvin - New PATCH /products/stock endpoint with batch update support and transaction handling [ALCO-1294]\nPR #195 by Isabel Gomez Balvin - Stock reservation system in products+orders to prevent race conditions in simultaneous purchases [ALCO-1293]\n\nFixes (1):\nPR #227 by Isabel Gomez Balvin - Added missing PRODUCTS_SERVICE_URL env var to orders serverless config fixing order creation [ALPE-218]\n\n---\nNOTA DE VALIDACION: Se detectaron commits pendientes anteriores que tocan los mismos archivos.\nLos conflictos relevantes ya fueron incluidos en el release de produccion del 2026-02-10.\nSe procede con documentacion de la advertencia segun decision del equipo.\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 40,
+          "count": 14,
           "recent_commits": [
             {
               "sha": "f9814d1",
@@ -3133,45 +3108,6 @@
               ]
             },
             {
-              "sha": "49c0705",
-              "message": "feat(event-monitoring): adaptar endpoint para funcionamiento en farmacia SUP-293",
-              "date": "2026-04-30T22:45:13Z",
-              "author": "jsandoval-dev",
-              "pr_number": "357",
-              "tickets": [
-                {
-                  "id": "SUP-293",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-293"
-                }
-              ]
-            },
-            {
-              "sha": "d7b4358",
-              "message": "refactor(woo): added parameter log ALCO-1511",
-              "date": "2026-04-29T15:12:29Z",
-              "author": "meraso-nutra",
-              "pr_number": "356",
-              "tickets": [
-                {
-                  "id": "ALCO-1511",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1511"
-                }
-              ]
-            },
-            {
-              "sha": "b06f57b",
-              "message": "feat(erp): addition param shiptoid ALCO-1511",
-              "date": "2026-04-28T23:26:41Z",
-              "author": "meraso-nutra",
-              "pr_number": "354",
-              "tickets": [
-                {
-                  "id": "ALCO-1511",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1511"
-                }
-              ]
-            },
-            {
               "sha": "9d75fce",
               "message": "fix(orders): corregir build-order-from-woocommerce.ts agregando woo_data NCR-100",
               "date": "2026-04-28T23:13:39Z",
@@ -3181,45 +3117,6 @@
                 {
                   "id": "NCR-100",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-100"
-                }
-              ]
-            },
-            {
-              "sha": "ee5f8d4",
-              "message": "refactor(orders): organizar y refactorizar microservicio ordenes NCR-100",
-              "date": "2026-04-28T20:06:25Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "324",
-              "tickets": [
-                {
-                  "id": "NCR-100",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-100"
-                }
-              ]
-            },
-            {
-              "sha": "e7ea903",
-              "message": "feat(erp): created use case for shipto NCR-114",
-              "date": "2026-04-27T22:41:21Z",
-              "author": "meraso-nutra",
-              "pr_number": "348",
-              "tickets": [
-                {
-                  "id": "NCR-114",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-114"
-                }
-              ]
-            },
-            {
-              "sha": "6b7d193",
-              "message": "feat(users): add endpoint to retrieve ERP customer by document number ALCO-1512",
-              "date": "2026-04-27T16:11:31Z",
-              "author": "CristiGB",
-              "pr_number": "347",
-              "tickets": [
-                {
-                  "id": "ALCO-1512",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1512"
                 }
               ]
             },
@@ -3250,19 +3147,6 @@
               ]
             },
             {
-              "sha": "affedeb",
-              "message": "feat(erp): implementar creacion de customer en epicor e integracion con shipping PALCO-85",
-              "date": "2026-04-24T21:59:31Z",
-              "author": "jsandoval-dev",
-              "pr_number": "345",
-              "tickets": [
-                {
-                  "id": "PALCO-85",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
-                }
-              ]
-            },
-            {
               "sha": "cdbe7bf",
               "message": "fix(notifications): corregir fire-and-forget en email archive para AWS Lambda NCR-110",
               "date": "2026-04-24T20:22:01Z",
@@ -3272,71 +3156,6 @@
                 {
                   "id": "NCR-110",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-110"
-                }
-              ]
-            },
-            {
-              "sha": "3cc9e24",
-              "message": "refactor(erp): erp library instance NCR-113",
-              "date": "2026-04-24T17:38:45Z",
-              "author": "meraso-nutra",
-              "pr_number": "343",
-              "tickets": [
-                {
-                  "id": "NCR-113",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-113"
-                }
-              ]
-            },
-            {
-              "sha": "4fded41",
-              "message": "feat(auth): validar existencia de customer en epicor antes de creacion PALCO-84",
-              "date": "2026-04-24T14:48:21Z",
-              "author": "jsandoval-dev",
-              "pr_number": "342",
-              "tickets": [
-                {
-                  "id": "PALCO-84",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-84"
-                }
-              ]
-            },
-            {
-              "sha": "71c70d2",
-              "message": "chore(erp): eliminar import ordertype no utilizado PALCO-85",
-              "date": "2026-04-23T20:55:52Z",
-              "author": "jsandoval-dev",
-              "pr_number": "340",
-              "tickets": [
-                {
-                  "id": "PALCO-85",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
-                }
-              ]
-            },
-            {
-              "sha": "2bc7380",
-              "message": "chore(serverless): configurar variables de entorno para despliegue PALCO-85",
-              "date": "2026-04-23T17:51:11Z",
-              "author": "jsandoval-dev",
-              "pr_number": "338",
-              "tickets": [
-                {
-                  "id": "PALCO-85",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
-                }
-              ]
-            },
-            {
-              "sha": "2f07f25",
-              "message": "feat(erp): crear endpoint para obtener listas de precios desde epicor PALCO-85",
-              "date": "2026-04-23T17:01:16Z",
-              "author": "jsandoval-dev",
-              "pr_number": "337",
-              "tickets": [
-                {
-                  "id": "PALCO-85",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-85"
                 }
               ]
             },
@@ -3354,75 +3173,96 @@
               ]
             },
             {
-              "sha": "b30e9ff",
-              "message": "refactor(ffco): topic update woocommerce NCR-111",
-              "date": "2026-04-22T19:55:42Z",
-              "author": "meraso-nutra",
-              "pr_number": "334",
+              "sha": "b259f9d",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-21T22:02:40Z",
+              "author": "fabianromerolu",
+              "pr_number": "329",
               "tickets": [
                 {
-                  "id": "NCR-111",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             },
             {
-              "sha": "20885d1",
-              "message": "refactor(erp): addition of logs to woo flow NCR-111",
-              "date": "2026-04-22T16:54:09Z",
-              "author": "meraso-nutra",
-              "pr_number": "333",
+              "sha": "3fd2449",
+              "message": "refactor(notifications): organizar y refactorizar microservicio notifications NCR-105",
+              "date": "2026-04-21T14:42:33Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "313",
               "tickets": [
                 {
-                  "id": "NCR-111",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                  "id": "NCR-105",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-105"
                 }
               ]
             },
             {
-              "sha": "efc311f",
-              "message": "refactor(webhook): evitar multiples conexiones configurando instancia singleton SUP-287",
-              "date": "2026-04-22T14:14:46Z",
-              "author": "jsandoval-dev",
-              "pr_number": "332",
+              "sha": "10e8898",
+              "message": "fix(prescriptions): bug pdf v2 SUP-292",
+              "date": "2026-04-20T22:54:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "326",
               "tickets": [
                 {
-                  "id": "SUP-287",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-287"
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             },
             {
-              "sha": "5c2e26b",
-              "message": "refactor(erp): variable farmacia env NCR-111",
-              "date": "2026-04-22T14:10:46Z",
-              "author": "meraso-nutra",
-              "pr_number": "331",
+              "sha": "ffdf5f6",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-20T21:17:45Z",
+              "author": "fabianromerolu",
+              "pr_number": "325",
               "tickets": [
                 {
-                  "id": "NCR-111",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             },
             {
-              "sha": "56de2be",
-              "message": "feat(erp): run erp with the transaction status NCR-111",
-              "date": "2026-04-21T23:23:24Z",
-              "author": "meraso-nutra",
-              "pr_number": "330",
+              "sha": "5f56994",
+              "message": "fix(prescriptions): register pdf PMO-2817",
+              "date": "2026-04-15T21:44:08Z",
+              "author": "fabianromerolu",
+              "pr_number": "318",
               "tickets": [
                 {
-                  "id": "NCR-111",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-111"
+                  "id": "PMO-2817",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
+                }
+              ]
+            },
+            {
+              "sha": "e20f0ee",
+              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
+              "date": "2026-03-11T21:07:52Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "263",
+              "tickets": [
+                {
+                  "id": "DE-338",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
                 }
               ]
             }
           ]
         },
         "to_production": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "8a0d3dc",
+              "message": "release: qa-2026-05-05",
+              "date": "2026-05-06T14:04:35Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "362",
+              "tickets": []
+            },
             {
               "sha": "54ef247",
               "message": "release: qa-2026-04-23",
