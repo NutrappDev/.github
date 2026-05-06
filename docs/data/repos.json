@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T17:38:01.055Z",
+  "generated_at": "2026-05-06T19:28:57.376Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -74,6 +74,11 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2883": {
+      "summary": "Conexión pixel landing CIMF 2026",
+      "status": "Detenido",
+      "assignee": "Michelle Carolina Castro Muñoz"
+    },
     "PMO-2817": {
       "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
       "status": "Actividad completada",
@@ -128,6 +133,11 @@
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "PALCO-91": {
+      "summary": "Conectar endpoints de shipping con ERP",
+      "status": "Despliegue a DEV",
+      "assignee": "Jhelcy Sandoval"
     },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
@@ -424,7 +434,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T17:33:39Z",
+      "last_push": "2026-05-06T18:40:36Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -435,8 +445,22 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "64ded2c",
+              "message": "feat: add pixel meta PMO-2883",
+              "date": "2026-05-06T18:40:36Z",
+              "author": "k-aguilera",
+              "pr_number": "17",
+              "tickets": [
+                {
+                  "id": "PMO-2883",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2883"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 3,
@@ -2939,7 +2963,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T17:37:29Z",
+      "last_push": "2026-05-06T19:28:29Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3017,8 +3041,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 16,
           "recent_commits": [
+            {
+              "sha": "d2b2fe8",
+              "message": "feat(shipping): conectar endpoints de shipping con erp PALCO-91",
+              "date": "2026-05-06T19:28:27Z",
+              "author": "jsandoval-dev",
+              "pr_number": "371",
+              "tickets": [
+                {
+                  "id": "PALCO-91",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-91"
+                }
+              ]
+            },
             {
               "sha": "7f9ed68",
               "message": "fix(events): corregir politica de cors para estandarizar con los demas microservicios SUP-282",
