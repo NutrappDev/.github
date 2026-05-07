@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T19:37:21.956Z",
+  "generated_at": "2026-05-07T20:33:17.993Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -21,7 +21,7 @@
     },
     "SUP-278": {
       "summary": "Implementar formulario de creación y edición de eventos",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "SUP-272": {
@@ -294,11 +294,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "DE-343": {
-      "summary": "Corregir fallo al agregar productos por validación incorrecta del campo brand - Nueva app Fruto/Web/IA",
-      "status": "Despliegue a PROD",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
     "DE-338": {
       "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
       "status": "Actividad completada",
@@ -464,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T19:30:33Z",
+      "last_push": "2026-05-07T20:22:06Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -472,33 +467,28 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
           "count": 1,
           "recent_commits": [
             {
-              "sha": "cdca583",
-              "message": "fix(products): corregir creacion producto DE-343",
-              "date": "2026-05-07T15:16:59Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "2",
-              "tickets": [
-                {
-                  "id": "DE-343",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-343"
-                }
-              ]
+              "sha": "a2d9e36",
+              "message": "release: qa 2026 05 07",
+              "date": "2026-05-07T19:39:15Z",
+              "author": "CristiGB",
+              "pr_number": "4",
+              "tickets": []
             }
           ]
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": {
         "status": "completed",
         "conclusion": "success",
-        "url": "https://github.com/NutrappDev/fruto-web-ia-comercial/actions/runs/25515678651",
-        "updated_at": "2026-05-07T19:14:42Z",
+        "url": "https://github.com/NutrappDev/fruto-web-ia-comercial/actions/runs/25519980916",
+        "updated_at": "2026-05-07T20:23:31Z",
         "name": "Deploy PRD - Fruto Web IA Comercial"
       },
       "_errors": {
@@ -649,7 +639,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T19:36:56Z",
+      "last_push": "2026-05-07T20:20:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -990,7 +980,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T20:57:53Z",
+      "last_push": "2026-05-07T20:32:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -3406,10 +3396,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25500726888",
-        "updated_at": "2026-05-07T14:04:14Z",
+        "status": "queued",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25520509038",
+        "updated_at": "2026-05-07T20:33:08Z",
         "name": "pages build and deployment"
       },
       "_errors": {
