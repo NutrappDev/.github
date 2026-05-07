@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T22:45:23.308Z",
+  "generated_at": "2026-05-07T22:47:37.876Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -223,21 +223,6 @@
       "summary": "Documentos del médico no se guardan al registrarlo desde Contact Center",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
-    },
-    "NCR-112": {
-      "summary": "Agregar evento de link de pago al catálogo de notificaciones y crear template en SendGrid — Contact Center",
-      "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-110": {
-      "summary": "Archivo automático de correos enviados desde ms-notifications",
-      "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-105": {
-      "summary": "ms- Notificaciones",
-      "status": "Esperando aprobación",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
@@ -464,7 +449,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "LocalCode",
-      "last_push": "2026-05-07T22:44:56Z",
+      "last_push": "2026-05-07T22:47:10Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -3043,7 +3028,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T22:43:11Z",
+      "last_push": "2026-05-07T22:45:49Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3083,13 +3068,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-06",
-        "sha": "8a0d3dc581c591f177c61d8a399014067ef24377",
-        "date": "2026-05-06T14:05:04Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-06",
-        "body": "Release qa-2026-05-06\n"
+        "version": "qa-2026-05-07",
+        "sha": "461180790e114951150f6c1b52000a31258e523f",
+        "date": "2026-05-07T22:45:48Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-07",
+        "body": "Release qa-2026-05-07\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-06",
+          "sha": "8a0d3dc581c591f177c61d8a399014067ef24377",
+          "date": "2026-05-06T14:05:04Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-06",
+          "body": "Release qa-2026-05-06\n"
+        },
         {
           "version": "qa-2026-04-27",
           "sha": "54ef247b155af484d0ffe81d699936d6624f8775",
@@ -3110,18 +3102,11 @@
           "date": "2026-03-26T21:51:50Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-26",
           "body": "Release qa-2026-03-26\n"
-        },
-        {
-          "version": "qa-2026-03-18",
-          "sha": "f213f562be04f6a5ca9296a494aa50b5ea38a5f1",
-          "date": "2026-03-18T15:39:34Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-18",
-          "body": "Release qa-2026-03-18\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 18,
+          "count": 13,
           "recent_commits": [
             {
               "sha": "700d030",
@@ -3241,58 +3226,6 @@
               ]
             },
             {
-              "sha": "ffa13d5",
-              "message": "chore(notifications): disparar deploy ms-notifications NCR-112",
-              "date": "2026-04-27T15:00:38Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "346",
-              "tickets": [
-                {
-                  "id": "NCR-112",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-112"
-                }
-              ]
-            },
-            {
-              "sha": "a5315d0",
-              "message": "feat(notifications): agregar evento order.payment-link NCR-112",
-              "date": "2026-04-27T13:43:10Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "339",
-              "tickets": [
-                {
-                  "id": "NCR-112",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-112"
-                }
-              ]
-            },
-            {
-              "sha": "cdbe7bf",
-              "message": "fix(notifications): corregir fire-and-forget en email archive para AWS Lambda NCR-110",
-              "date": "2026-04-24T20:22:01Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "344",
-              "tickets": [
-                {
-                  "id": "NCR-110",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-110"
-                }
-              ]
-            },
-            {
-              "sha": "6ab7532",
-              "message": "feat(notifications): archivo automático de correos enviados NCR-110",
-              "date": "2026-04-23T13:57:37Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "328",
-              "tickets": [
-                {
-                  "id": "NCR-110",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-110"
-                }
-              ]
-            },
-            {
               "sha": "b259f9d",
               "message": "fix(prescriptions): bug pdf SUP-292",
               "date": "2026-04-21T22:02:40Z",
@@ -3302,19 +3235,6 @@
                 {
                   "id": "SUP-292",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "3fd2449",
-              "message": "refactor(notifications): organizar y refactorizar microservicio notifications NCR-105",
-              "date": "2026-04-21T14:42:33Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "313",
-              "tickets": [
-                {
-                  "id": "NCR-105",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-105"
                 }
               ]
             },
@@ -3360,8 +3280,16 @@
           ]
         },
         "to_production": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "4611807",
+              "message": "release: qa-2026-05-07",
+              "date": "2026-05-07T22:45:38Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "375",
+              "tickets": []
+            },
             {
               "sha": "8a0d3dc",
               "message": "release: qa-2026-05-05",
