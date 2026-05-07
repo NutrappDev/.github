@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T20:35:28.564Z",
+  "generated_at": "2026-05-07T22:45:23.308Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -111,7 +111,7 @@
     },
     "PMO-2714": {
       "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Despliegue a PROD",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
@@ -197,6 +197,16 @@
     "NCR-123": {
       "summary": "Error en envío automático de correo de link de pago en ambiente de desarrollo",
       "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
+    "NCR-122": {
+      "summary": "Envío de credenciales en correo de bienvenida para médicos de Contact Center",
+      "status": "Por hacer",
+      "assignee": "Felipe Berrio"
+    },
+    "NCR-121": {
+      "summary": "Cambio de contraseña obligatorio en primer login no se aplica",
+      "status": "Por hacer",
       "assignee": "Felipe Berrio"
     },
     "NCR-120": {
@@ -293,11 +303,6 @@
       "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
       "status": "Actividad completada",
       "assignee": "Steven Leon"
-    },
-    "DE-338": {
-      "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
-      "status": "Actividad completada",
-      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
@@ -452,6 +457,39 @@
   },
   "repos": [
     {
+      "name": "Ilumina",
+      "full_name": "NutrappDev/Ilumina",
+      "description": null,
+      "url": "https://github.com/NutrappDev/Ilumina",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "LocalCode",
+      "last_push": "2026-05-07T22:44:56Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -537,7 +575,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 6,
           "recent_commits": [
             {
               "sha": "5ff7252",
@@ -606,19 +644,11 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
                 }
               ]
-            },
-            {
-              "sha": "9e23c0d",
-              "message": "feat: add Hotjar tracking code for Alivia Colombia",
-              "date": "2026-02-06T21:22:04Z",
-              "author": "CristiGB",
-              "pr_number": "308",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 27,
+          "count": 26,
           "recent_commits": [
             {
               "sha": "5fbee57",
@@ -1981,39 +2011,6 @@
       }
     },
     {
-      "name": "Ilumina",
-      "full_name": "NutrappDev/Ilumina",
-      "description": null,
-      "url": "https://github.com/NutrappDev/Ilumina",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "LocalCode",
-      "last_push": "2026-04-29T00:00:31Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
       "description": null,
@@ -3046,7 +3043,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T20:35:16Z",
+      "last_push": "2026-05-07T22:43:11Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3078,11 +3075,11 @@
           "body": "Release prod-2026-05-07\n"
         },
         {
-          "version": "prod-2026-05-07-4",
-          "sha": "d9a56ca0155a64821b20ba3162bb6b0107002c45",
-          "date": "2026-05-07T20:35:16Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-4",
-          "body": "Release prod-2026-05-07-4\n"
+          "version": "prod-2026-05-07-5",
+          "sha": "322ea1a847bdd28e20197b17b0240b90377f7e39",
+          "date": "2026-05-07T20:37:00Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-5",
+          "body": "Release prod-2026-05-07-5\n"
         }
       ],
       "qa": {
@@ -3124,8 +3121,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 17,
+          "count": 18,
           "recent_commits": [
+            {
+              "sha": "700d030",
+              "message": "feat(sso): incluir credenciales en correo bienvenida medico CC NCR-122",
+              "date": "2026-05-07T21:27:05Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "374",
+              "tickets": [
+                {
+                  "id": "NCR-122",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-122"
+                }
+              ]
+            },
+            {
+              "sha": "a9f982b",
+              "message": "fix(sso): respetar required_change_password en creacion Keycloak NCR-121",
+              "date": "2026-05-07T21:25:05Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "373",
+              "tickets": [
+                {
+                  "id": "NCR-121",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-121"
+                }
+              ]
+            },
             {
               "sha": "2944f9b",
               "message": "fix(notifications): agregar CORS_ORIGIN y template payment link NCR-123",
@@ -3333,19 +3356,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
                 }
               ]
-            },
-            {
-              "sha": "e20f0ee",
-              "message": "fix(workflow): quitando validaciones locales para usar las de la org [DE-338]",
-              "date": "2026-03-11T21:07:52Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "263",
-              "tickets": [
-                {
-                  "id": "DE-338",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-338"
-                }
-              ]
             }
           ]
         },
@@ -3396,10 +3406,10 @@
         }
       },
       "ci": {
-        "status": "in_progress",
-        "conclusion": null,
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25520607198",
-        "updated_at": "2026-05-07T20:35:20Z",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25523599328",
+        "updated_at": "2026-05-07T21:40:41Z",
         "name": "pages build and deployment"
       },
       "_errors": {
