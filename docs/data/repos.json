@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T22:39:32.249Z",
+  "generated_at": "2026-05-07T14:03:57.237Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -74,10 +74,20 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2898": {
+      "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "PMO-2817": {
       "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "PMO-2758": {
+      "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
@@ -144,9 +154,14 @@
       "status": "Despliegue a DEV",
       "assignee": "Miller Ladino Osorio"
     },
+    "NMX-401": {
+      "summary": "BG | Diseño | Espacio en blanco innecesario en la interfaz",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "NE-246": {
       "summary": "Transformación de datos de orden para integración con ERP",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "NE-221": {
@@ -176,7 +191,7 @@
     },
     "NCR-120": {
       "summary": "Actualizar manejo de sourceId para órdenes de Farmacia",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-117": {
@@ -434,7 +449,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T22:38:30Z",
+      "last_push": "2026-05-06T23:21:34Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -473,7 +488,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T21:58:20Z",
+      "last_push": "2026-05-07T03:35:39Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1222,7 +1237,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-05T22:38:17Z",
+      "last_push": "2026-05-07T03:10:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-05",
@@ -2029,7 +2044,7 @@
           ]
         },
         "to_production": {
-          "count": 12,
+          "count": 11,
           "recent_commits": [
             {
               "sha": "369a750",
@@ -2128,14 +2143,6 @@
               "author": "k-aguilera",
               "pr_number": "16",
               "tickets": []
-            },
-            {
-              "sha": "1b40c7d",
-              "message": "merge: integrate develop to qa",
-              "date": "2026-02-06T07:52:07Z",
-              "author": "k-aguilera",
-              "pr_number": "13",
-              "tickets": []
             }
           ]
         }
@@ -2208,7 +2215,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-09T14:56:33Z",
+      "last_push": "2026-05-07T13:50:08Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-09",
@@ -2880,7 +2887,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T22:31:15Z",
+      "last_push": "2026-05-07T13:47:33Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2903,8 +2910,47 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "16b33b3",
+              "message": "fix(design): remove unnecessary whitespace in interface layout NMX-401",
+              "date": "2026-05-07T13:47:30Z",
+              "author": "mladino-source",
+              "pr_number": "12",
+              "tickets": [
+                {
+                  "id": "NMX-401",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-401"
+                }
+              ]
+            },
+            {
+              "sha": "470e271",
+              "message": "fix(nosotros): rename fundadores to copresidentes section PMO-2758",
+              "date": "2026-05-07T13:40:49Z",
+              "author": "mladino-source",
+              "pr_number": "11",
+              "tickets": [
+                {
+                  "id": "PMO-2758",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2758"
+                }
+              ]
+            },
+            {
+              "sha": "2f139b6",
+              "message": "fix(home): deshabilitar testimonios  riesgo regulatorio PMO-2898",
+              "date": "2026-05-07T13:33:00Z",
+              "author": "mladino-source",
+              "pr_number": "9",
+              "tickets": [
+                {
+                  "id": "PMO-2898",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2898"
+                }
+              ]
+            },
             {
               "sha": "832969d",
               "message": "fix(carousel): remove irregular whitespace in allies carousel NMX-408",
@@ -2964,7 +3010,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T22:39:04Z",
+      "last_push": "2026-05-07T14:03:48Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -2989,18 +3035,18 @@
           "body": "Release v1.0.0: Primera versión en producción\n\nPrimer despliegue oficial a ambiente de producción desde QA.\nIncluye funcionalidad base del sistema validada en ambiente de pruebas.\n"
         },
         {
-          "version": "prod-2026-04-29",
-          "sha": "43d724c2cda87b7fe5ebe84f50af07d9ad80a8d2",
-          "date": "2026-04-29T00:51:34Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-29",
-          "body": "Release prod-2026-04-29\n"
+          "version": "prod-2026-05-07",
+          "sha": "467a8d86d089087b606c2fdab4bfb532a82d494a",
+          "date": "2026-05-07T14:03:31Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07",
+          "body": "Release prod-2026-05-07\n"
         },
         {
-          "version": "prod-2026-04-29-2",
-          "sha": "0fb23fafb73bda2d992a2b54002363b4021ba5ec",
-          "date": "2026-04-29T15:45:44Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-04-29-2",
-          "body": "Release prod-2026-04-29-2\n"
+          "version": "prod-2026-05-07-2",
+          "sha": "467a8d86d089087b606c2fdab4bfb532a82d494a",
+          "date": "2026-05-07T14:03:44Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-2",
+          "body": "Release prod-2026-05-07-2\n"
         }
       ],
       "qa": {
@@ -3314,10 +3360,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25327506489",
-        "updated_at": "2026-05-04T15:22:38Z",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25500726888",
+        "updated_at": "2026-05-07T14:03:51Z",
         "name": "pages build and deployment"
       },
       "_errors": {
