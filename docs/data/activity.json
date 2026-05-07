@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T21:25:23.111Z",
+  "generated_at": "2026-05-07T21:27:24.679Z",
   "window_days": 90,
   "developers": [
     {
@@ -477,13 +477,13 @@
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 18,
-      "prs_90d": 47,
-      "last_activity": "2026-05-07T21:25:05Z",
+      "prs_30d": 19,
+      "prs_90d": 48,
+      "last_activity": "2026-05-07T21:27:05Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
-          "prs": 23
+          "prs": 24
         },
         {
           "repo": "alivia",
@@ -499,7 +499,7 @@
         }
       ],
       "by_branch": {
-        "develop": 46,
+        "develop": 47,
         "qa": 1,
         "main": 0
       },
@@ -554,7 +554,7 @@
         },
         {
           "week": "2026-W19",
-          "prs": 3
+          "prs": 4
         }
       ]
     },
