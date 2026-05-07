@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T14:03:57.237Z",
+  "generated_at": "2026-05-07T16:17:04.037Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -83,6 +83,11 @@
       "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
+    },
+    "PMO-2800": {
+      "summary": "Novedades en revisión catalogo  - Fitoterapeuticos",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
     },
     "PMO-2758": {
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
@@ -284,6 +289,11 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "DE-343": {
+      "summary": "Corregir fallo al agregar productos por validación incorrecta del campo brand - Nueva app Fruto/Web/IA",
+      "status": "Despliegue a PROD",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
     "DE-338": {
       "summary": "Validaciones generales de seguridad en todos los repositorios de la organización",
       "status": "Actividad completada",
@@ -449,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-06T23:21:34Z",
+      "last_push": "2026-05-07T15:52:22Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -457,8 +467,22 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "cdca583",
+              "message": "fix(products): corregir creacion producto DE-343",
+              "date": "2026-05-07T15:16:59Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "2",
+              "tickets": [
+                {
+                  "id": "DE-343",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-343"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 0,
@@ -467,10 +491,10 @@
       },
       "ci": {
         "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/fruto-web-ia-comercial/actions/runs/25350480643",
-        "updated_at": "2026-05-05T00:07:42Z",
-        "name": "Deploy to GCP VM - Fruto Web IA Comercial"
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/fruto-web-ia-comercial/actions/runs/25506767310",
+        "updated_at": "2026-05-07T15:52:39Z",
+        "name": "Deploy to GCP VM - Fruto Web IA Comercial -PRD"
       },
       "_errors": {
         "production": null,
@@ -1237,7 +1261,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T03:10:07Z",
+      "last_push": "2026-05-07T16:16:34Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-05",
@@ -1315,8 +1339,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "c48c3ea",
+              "message": "fix: eliminar ver mas producto individual y ajuste pre-line evento individual PMO-2800",
+              "date": "2026-05-07T16:16:31Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "91",
+              "tickets": [
+                {
+                  "id": "PMO-2800",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2800"
+                }
+              ]
+            },
             {
               "sha": "480bb68",
               "message": "fix(policies): add sagrilaft and ptee policy PMO-2639",
@@ -2044,7 +2081,7 @@
           ]
         },
         "to_production": {
-          "count": 11,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "369a750",
@@ -2126,22 +2163,6 @@
               "date": "2026-02-21T00:39:34Z",
               "author": "k-aguilera",
               "pr_number": "24",
-              "tickets": []
-            },
-            {
-              "sha": "3a100af",
-              "message": "integrate develop to qa",
-              "date": "2026-02-06T15:37:43Z",
-              "author": "k-aguilera",
-              "pr_number": "21",
-              "tickets": []
-            },
-            {
-              "sha": "5b89384",
-              "message": "integrate develop to qa",
-              "date": "2026-02-06T14:17:49Z",
-              "author": "k-aguilera",
-              "pr_number": "16",
               "tickets": []
             }
           ]
@@ -3010,7 +3031,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T14:03:48Z",
+      "last_push": "2026-05-07T14:03:58Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3360,10 +3381,10 @@
         }
       },
       "ci": {
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25500726888",
-        "updated_at": "2026-05-07T14:03:51Z",
+        "updated_at": "2026-05-07T14:04:14Z",
         "name": "pages build and deployment"
       },
       "_errors": {
