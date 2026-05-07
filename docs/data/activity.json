@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-07T20:37:14.375Z",
+  "generated_at": "2026-05-07T21:25:23.111Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 53,
-      "prs_90d": 117,
+      "prs_30d": 52,
+      "prs_90d": 116,
       "last_activity": "2026-05-07T20:32:43Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 79
+          "prs": 78
         },
         {
           "repo": "portal-nutrabiotics",
@@ -35,7 +35,7 @@
         }
       ],
       "by_branch": {
-        "develop": 53,
+        "develop": 52,
         "qa": 34,
         "main": 30
       },
@@ -97,7 +97,7 @@
     {
       "login": "k-aguilera",
       "avatar_url": "https://avatars.githubusercontent.com/u/256123414?v=4",
-      "prs_30d": 27,
+      "prs_30d": 26,
       "prs_90d": 61,
       "last_activity": "2026-05-07T17:26:15Z",
       "by_repo": [
@@ -189,7 +189,7 @@
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 24,
+      "prs_30d": 23,
       "prs_90d": 55,
       "last_activity": "2026-05-06T19:28:27Z",
       "by_repo": [
@@ -477,16 +477,16 @@
     {
       "login": "Felipe-Berrio-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/253507062?v=4",
-      "prs_30d": 17,
-      "prs_90d": 46,
-      "last_activity": "2026-05-06T22:39:02Z",
+      "prs_30d": 18,
+      "prs_90d": 47,
+      "last_activity": "2026-05-07T21:25:05Z",
       "by_repo": [
         {
-          "repo": "alivia",
-          "prs": 22
+          "repo": "monorepo-alivia-backend",
+          "prs": 23
         },
         {
-          "repo": "monorepo-alivia-backend",
+          "repo": "alivia",
           "prs": 22
         },
         {
@@ -499,7 +499,7 @@
         }
       ],
       "by_branch": {
-        "develop": 45,
+        "develop": 46,
         "qa": 1,
         "main": 0
       },
@@ -554,7 +554,7 @@
         },
         {
           "week": "2026-W19",
-          "prs": 2
+          "prs": 3
         }
       ]
     },
