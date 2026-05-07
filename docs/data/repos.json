@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-07T20:33:39.770Z",
+  "generated_at": "2026-05-07T20:35:28.564Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3046,7 +3046,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T20:33:28Z",
+      "last_push": "2026-05-07T20:35:16Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3078,11 +3078,11 @@
           "body": "Release prod-2026-05-07\n"
         },
         {
-          "version": "prod-2026-05-07-3",
-          "sha": "148cf2d648298a5a9374c815bc0fcf45967ec25c",
-          "date": "2026-05-07T20:33:27Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-3",
-          "body": "Release prod-2026-05-07-3\n"
+          "version": "prod-2026-05-07-4",
+          "sha": "d9a56ca0155a64821b20ba3162bb6b0107002c45",
+          "date": "2026-05-07T20:35:16Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-4",
+          "body": "Release prod-2026-05-07-4\n"
         }
       ],
       "qa": {
@@ -3398,8 +3398,8 @@
       "ci": {
         "status": "in_progress",
         "conclusion": null,
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25520509038",
-        "updated_at": "2026-05-07T20:33:34Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25520607198",
+        "updated_at": "2026-05-07T20:35:20Z",
         "name": "pages build and deployment"
       },
       "_errors": {
