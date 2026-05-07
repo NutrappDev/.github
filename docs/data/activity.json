@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-07T17:26:33.500Z",
+  "generated_at": "2026-05-07T20:37:14.375Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 51,
-      "prs_90d": 114,
-      "last_activity": "2026-05-06T21:58:08Z",
+      "prs_30d": 53,
+      "prs_90d": 117,
+      "last_activity": "2026-05-07T20:32:43Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 78
+          "prs": 79
         },
         {
           "repo": "portal-nutrabiotics",
@@ -28,12 +28,16 @@
         {
           "repo": "monorepo-alivia-backend",
           "prs": 4
+        },
+        {
+          "repo": "fruto-web-ia-comercial",
+          "prs": 2
         }
       ],
       "by_branch": {
         "develop": 53,
-        "qa": 33,
-        "main": 28
+        "qa": 34,
+        "main": 30
       },
       "weekly": [
         {
@@ -86,7 +90,7 @@
         },
         {
           "week": "2026-W19",
-          "prs": 3
+          "prs": 6
         }
       ]
     },
@@ -281,9 +285,9 @@
     {
       "login": "Steven-Leon-007",
       "avatar_url": "https://avatars.githubusercontent.com/u/72713481?v=4",
-      "prs_30d": 20,
-      "prs_90d": 41,
-      "last_activity": "2026-05-07T16:16:31Z",
+      "prs_30d": 21,
+      "prs_90d": 42,
+      "last_activity": "2026-05-07T19:36:55Z",
       "by_repo": [
         {
           "repo": "fruto-web-nutra-co",
@@ -299,7 +303,7 @@
         },
         {
           "repo": "portal-nutrabiotics",
-          "prs": 1
+          "prs": 2
         },
         {
           "repo": "fruto-web-nutra-mx",
@@ -311,7 +315,7 @@
         }
       ],
       "by_branch": {
-        "develop": 36,
+        "develop": 37,
         "qa": 5,
         "main": 0
       },
@@ -366,7 +370,107 @@
         },
         {
           "week": "2026-W19",
+          "prs": 5
+        }
+      ]
+    },
+    {
+      "login": "jgaray-nutrapp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
+      "prs_30d": 20,
+      "prs_90d": 41,
+      "last_activity": "2026-05-07T20:36:46Z",
+      "by_repo": [
+        {
+          "repo": "monorepo-alivia-backend",
+          "prs": 22
+        },
+        {
+          "repo": "fruto-web-nutra-co",
+          "prs": 8
+        },
+        {
+          "repo": "fruto-landing-cimf",
+          "prs": 3
+        },
+        {
+          "repo": "SSO-keycloak",
+          "prs": 2
+        },
+        {
+          "repo": "nutrabiotics-empresas",
+          "prs": 2
+        },
+        {
+          "repo": ".github",
+          "prs": 2
+        },
+        {
+          "repo": "microservice_payments",
+          "prs": 1
+        },
+        {
+          "repo": "fruto-landing-amf",
+          "prs": 1
+        }
+      ],
+      "by_branch": {
+        "develop": 9,
+        "qa": 9,
+        "main": 23
+      },
+      "weekly": [
+        {
+          "week": "2026-W07",
+          "prs": 2
+        },
+        {
+          "week": "2026-W08",
+          "prs": 2
+        },
+        {
+          "week": "2026-W09",
+          "prs": 5
+        },
+        {
+          "week": "2026-W10",
+          "prs": 1
+        },
+        {
+          "week": "2026-W11",
+          "prs": 2
+        },
+        {
+          "week": "2026-W12",
+          "prs": 2
+        },
+        {
+          "week": "2026-W13",
+          "prs": 3
+        },
+        {
+          "week": "2026-W14",
           "prs": 4
+        },
+        {
+          "week": "2026-W15",
+          "prs": 1
+        },
+        {
+          "week": "2026-W16",
+          "prs": 2
+        },
+        {
+          "week": "2026-W17",
+          "prs": 1
+        },
+        {
+          "week": "2026-W18",
+          "prs": 8
+        },
+        {
+          "week": "2026-W19",
+          "prs": 8
         }
       ]
     },
@@ -451,106 +555,6 @@
         {
           "week": "2026-W19",
           "prs": 2
-        }
-      ]
-    },
-    {
-      "login": "jgaray-nutrapp",
-      "avatar_url": "https://avatars.githubusercontent.com/u/253970873?v=4",
-      "prs_30d": 17,
-      "prs_90d": 38,
-      "last_activity": "2026-05-07T14:03:29Z",
-      "by_repo": [
-        {
-          "repo": "monorepo-alivia-backend",
-          "prs": 19
-        },
-        {
-          "repo": "fruto-web-nutra-co",
-          "prs": 8
-        },
-        {
-          "repo": "fruto-landing-cimf",
-          "prs": 3
-        },
-        {
-          "repo": "SSO-keycloak",
-          "prs": 2
-        },
-        {
-          "repo": "nutrabiotics-empresas",
-          "prs": 2
-        },
-        {
-          "repo": ".github",
-          "prs": 2
-        },
-        {
-          "repo": "microservice_payments",
-          "prs": 1
-        },
-        {
-          "repo": "fruto-landing-amf",
-          "prs": 1
-        }
-      ],
-      "by_branch": {
-        "develop": 9,
-        "qa": 9,
-        "main": 20
-      },
-      "weekly": [
-        {
-          "week": "2026-W07",
-          "prs": 2
-        },
-        {
-          "week": "2026-W08",
-          "prs": 2
-        },
-        {
-          "week": "2026-W09",
-          "prs": 5
-        },
-        {
-          "week": "2026-W10",
-          "prs": 1
-        },
-        {
-          "week": "2026-W11",
-          "prs": 2
-        },
-        {
-          "week": "2026-W12",
-          "prs": 2
-        },
-        {
-          "week": "2026-W13",
-          "prs": 3
-        },
-        {
-          "week": "2026-W14",
-          "prs": 4
-        },
-        {
-          "week": "2026-W15",
-          "prs": 1
-        },
-        {
-          "week": "2026-W16",
-          "prs": 2
-        },
-        {
-          "week": "2026-W17",
-          "prs": 1
-        },
-        {
-          "week": "2026-W18",
-          "prs": 8
-        },
-        {
-          "week": "2026-W19",
-          "prs": 5
         }
       ]
     },
@@ -957,7 +961,7 @@
     {
       "login": "CarlosParraQA",
       "avatar_url": "https://avatars.githubusercontent.com/u/232940545?v=4",
-      "prs_30d": 2,
+      "prs_30d": 1,
       "prs_90d": 4,
       "last_activity": "2026-04-27T19:55:12Z",
       "by_repo": [
