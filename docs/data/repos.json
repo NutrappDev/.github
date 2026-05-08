@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-05-08T16:41:33.068Z",
+  "generated_at": "2026-05-08T19:10:02.960Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-296": {
+      "summary": "Cierre de ajustes del wizard de creación de órdenes (PMO-2613)",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "SUP-293": {
       "summary": "Agregar icono en la tabla de ordenes cuando la orden no esta en libreria ERP",
       "status": "Despliegue a QA",
@@ -147,6 +152,11 @@
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Actividad completada",
+      "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-20": {
+      "summary": "Integración con empresa de transporte",
+      "status": "En proceso",
       "assignee": "Jhelcy Sandoval"
     },
     "NMX-408": {
@@ -1345,7 +1355,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T20:20:36Z",
+      "last_push": "2026-05-08T19:07:26Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1423,8 +1433,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "d8c2aa9",
+              "message": "feat(portal): wizard de orden manual para Contact Center SUP-296",
+              "date": "2026-05-08T17:27:30Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "203",
+              "tickets": [
+                {
+                  "id": "SUP-296",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-296"
+                }
+              ]
+            },
             {
               "sha": "38aa412",
               "message": "fix: corregir error de fechas para eventos del mismo dia SUP-278",
@@ -3026,7 +3049,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T13:51:02Z",
+      "last_push": "2026-05-08T19:09:32Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3104,8 +3127,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 15,
+          "count": 16,
           "recent_commits": [
+            {
+              "sha": "fba427b",
+              "message": "feat(logistics): integracion de transporte, webhooks y endpoints logisticos PALCO-20",
+              "date": "2026-05-08T19:09:30Z",
+              "author": "jsandoval-dev",
+              "pr_number": "378",
+              "tickets": [
+                {
+                  "id": "PALCO-20",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-20"
+                }
+              ]
+            },
             {
               "sha": "7229490",
               "message": "refactor(payload): use of cleanpayload NCR-126",
