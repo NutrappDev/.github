@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T03:22:08.277Z",
+  "generated_at": "2026-05-08T13:51:25.020Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -454,7 +454,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "LocalCode",
-      "last_push": "2026-05-08T03:21:49Z",
+      "last_push": "2026-05-08T03:51:45Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -487,7 +487,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T20:33:15Z",
+      "last_push": "2026-05-08T04:28:15Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -3033,7 +3033,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T22:52:11Z",
+      "last_push": "2026-05-08T13:51:02Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3111,8 +3111,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 15,
           "recent_commits": [
+            {
+              "sha": "7229490",
+              "message": "refactor(payload): use of cleanpayload NCR-126",
+              "date": "2026-05-08T13:50:59Z",
+              "author": "meraso-nutra",
+              "pr_number": "377",
+              "tickets": [
+                {
+                  "id": "NCR-126",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-126"
+                }
+              ]
+            },
             {
               "sha": "0454dd8",
               "message": "refactor(ffco): ms-orders id management for farmacia NCR-126",
