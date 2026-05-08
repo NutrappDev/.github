@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T19:10:02.960Z",
+  "generated_at": "2026-05-08T20:52:07.235Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -196,6 +196,11 @@
     },
     "NCR-126": {
       "summary": "Ajuste de ID de ordenes de Farmacia en ms-orders",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
+    "NCR-124": {
+      "summary": "Revisar manejo de Ciudad y Departamento desde la librería ERP",
       "status": "En proceso",
       "assignee": "Mario Eraso"
     },
@@ -3049,7 +3054,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T19:09:32Z",
+      "last_push": "2026-05-08T20:51:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3127,8 +3132,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 16,
+          "count": 17,
           "recent_commits": [
+            {
+              "sha": "34116f4",
+              "message": "feat(geo): geoconfig library management NCR-124",
+              "date": "2026-05-08T20:51:29Z",
+              "author": "meraso-nutra",
+              "pr_number": "379",
+              "tickets": [
+                {
+                  "id": "NCR-124",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-124"
+                }
+              ]
+            },
             {
               "sha": "fba427b",
               "message": "feat(logistics): integracion de transporte, webhooks y endpoints logisticos PALCO-20",
