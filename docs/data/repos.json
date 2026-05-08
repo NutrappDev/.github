@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T13:51:25.020Z",
+  "generated_at": "2026-05-08T16:08:00.098Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -16,7 +16,7 @@
     },
     "SUP-282": {
       "summary": "Desde Nutracore: implementar endpoint para edición de eventos (MS-events)",
-      "status": "Despliegue a PROD",
+      "status": "Esperando aprobación",
       "assignee": "Steven Leon"
     },
     "SUP-278": {
@@ -108,11 +108,6 @@
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "PMO-2714": {
-      "summary": "Restaurar ítem “Productos” en el menú principal — Sitio web Nutrabiotics México",
-      "status": "Despliegue a QA",
-      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2690": {
       "summary": "CAMBIO DE NÚMERO DE WHATSAPP EN PAGINA WEB NUTRABIOTICS COLOMBIA",
@@ -231,7 +226,7 @@
     },
     "NCR-100": {
       "summary": "ms- Ordenes",
-      "status": "Esperando aprobación",
+      "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "NCOL-647": {
@@ -2910,7 +2905,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-07T13:47:33Z",
+      "last_push": "2026-05-08T16:07:40Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2924,16 +2919,24 @@
       },
       "production_history": [],
       "qa": {
-        "version": "qa-2026-04-15",
-        "sha": "a1dd62d48f1335079543e4b5ea50afd2467278a3",
-        "date": "2026-04-15T14:23:20Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-mx/releases/tag/qa-2026-04-15",
-        "body": "Release qa-2026-04-15\n"
+        "version": "qa-2026-05-08",
+        "sha": "0bf240bb13a43e47b9544d255d71ed7b969ee1c1",
+        "date": "2026-05-08T16:07:39Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-mx/releases/tag/qa-2026-05-08",
+        "body": "Release qa-2026-05-08\n"
       },
-      "qa_history": [],
+      "qa_history": [
+        {
+          "version": "qa-2026-04-15",
+          "sha": "a1dd62d48f1335079543e4b5ea50afd2467278a3",
+          "date": "2026-04-15T14:23:20Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-mx/releases/tag/qa-2026-04-15",
+          "body": "Release qa-2026-04-15\n"
+        }
+      ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "16b33b3",
@@ -2986,25 +2989,20 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/NMX-408"
                 }
               ]
-            },
-            {
-              "sha": "c41b8c5",
-              "message": "refactor(PMO-2714): restore products item in main navigation menu",
-              "date": "2026-04-17T19:12:21Z",
-              "author": "mladino-source",
-              "pr_number": "5",
-              "tickets": [
-                {
-                  "id": "PMO-2714",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2714"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "0bf240b",
+              "message": "release: deploy PRs a QA - 2026-05-08",
+              "date": "2026-05-08T16:07:27Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "13",
+              "tickets": []
+            },
             {
               "sha": "a1dd62d",
               "message": "release: deploy PRs a QA - 2026-04-15",
