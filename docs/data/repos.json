@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T06:14:30.886Z",
+  "generated_at": "2026-05-11T13:58:43.121Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -138,6 +138,11 @@
       "summary": "Cargue de Pedidos a Alivia por el Contact Center",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
+    },
+    "PALMX-41": {
+      "summary": "Completar Ajustes de la configuración del IVA",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -749,7 +754,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T04:28:15Z",
+      "last_push": "2026-05-11T13:58:09Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -827,8 +832,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "5bbc4b1",
+              "message": "feat(payments): implement Mexico-specific pricing calculations and utilities for IVA handling PALMX-41",
+              "date": "2026-05-11T13:58:06Z",
+              "author": "CristiGB",
+              "pr_number": "459",
+              "tickets": [
+                {
+                  "id": "PALMX-41",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-41"
+                }
+              ]
+            },
             {
               "sha": "5ff7252",
               "message": "fix(ALCO-1517): review and validate analytics and search console data sources for Alivia",
