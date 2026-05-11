@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-11T17:17:23.219Z",
+  "generated_at": "2026-05-11T17:26:30.014Z",
   "window_days": 90,
   "developers": [
     {
@@ -97,9 +97,9 @@
     {
       "login": "jsandoval-dev",
       "avatar_url": "https://avatars.githubusercontent.com/u/255405079?v=4",
-      "prs_30d": 25,
-      "prs_90d": 57,
-      "last_activity": "2026-05-11T17:16:47Z",
+      "prs_30d": 26,
+      "prs_90d": 58,
+      "last_activity": "2026-05-11T17:26:01Z",
       "by_repo": [
         {
           "repo": "monorepo-alivia-backend",
@@ -107,7 +107,7 @@
         },
         {
           "repo": "portal-nutrabiotics",
-          "prs": 11
+          "prs": 12
         },
         {
           "repo": "nutrabiotics-empresas",
@@ -131,7 +131,7 @@
         }
       ],
       "by_branch": {
-        "develop": 56,
+        "develop": 57,
         "qa": 0,
         "main": 1
       },
@@ -186,7 +186,7 @@
         },
         {
           "week": "2026-W20",
-          "prs": 1
+          "prs": 2
         }
       ]
     },
