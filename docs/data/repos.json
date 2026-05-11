@@ -1,12 +1,17 @@
 {
-  "generated_at": "2026-05-11T13:58:43.121Z",
+  "generated_at": "2026-05-11T18:15:57.679Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-297": {
+      "summary": "Ajuste de prop usada en la columna ID del Portal Admin",
+      "status": "Despliegue a DEV",
+      "assignee": "Jhelcy Sandoval"
+    },
     "SUP-296": {
       "summary": "Cierre de ajustes del wizard de creación de órdenes (PMO-2613)",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "SUP-293": {
@@ -129,20 +134,10 @@
       "status": "Revisión QA",
       "assignee": "Miller Ladino Osorio"
     },
-    "PMO-2634": {
-      "summary": "Error en visualización de pacientes Alivia",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
-    },
     "PMO-2613": {
       "summary": "Cargue de Pedidos a Alivia por el Contact Center",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
-    },
-    "PALMX-41": {
-      "summary": "Completar Ajustes de la configuración del IVA",
-      "status": "En proceso",
-      "assignee": "ISABEL GOMEZ"
     },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
@@ -754,7 +749,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-11T13:58:09Z",
+      "last_push": "2026-05-11T18:15:33Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -835,19 +830,6 @@
           "count": 7,
           "recent_commits": [
             {
-              "sha": "5bbc4b1",
-              "message": "feat(payments): implement Mexico-specific pricing calculations and utilities for IVA handling PALMX-41",
-              "date": "2026-05-11T13:58:06Z",
-              "author": "CristiGB",
-              "pr_number": "459",
-              "tickets": [
-                {
-                  "id": "PALMX-41",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-41"
-                }
-              ]
-            },
-            {
               "sha": "5ff7252",
               "message": "fix(ALCO-1517): review and validate analytics and search console data sources for Alivia",
               "date": "2026-04-30T19:38:41Z",
@@ -877,6 +859,32 @@
               "tickets": []
             },
             {
+              "sha": "a3421bb",
+              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228",
+              "date": "2026-02-19T22:57:42Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "316",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            },
+            {
+              "sha": "fc05958",
+              "message": "docs(terms): agregar términos y condiciones para México ALMX-228",
+              "date": "2026-02-19T21:56:46Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "315",
+              "tickets": [
+                {
+                  "id": "ALMX-228",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
+                }
+              ]
+            },
+            {
               "sha": "c4e5fb6",
               "message": "fix/ALCO-1390_templates",
               "date": "2026-02-16T21:43:08Z",
@@ -901,25 +909,20 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1391"
                 }
               ]
-            },
-            {
-              "sha": "5d48295",
-              "message": "fix: normalize patient data PMO-2634",
-              "date": "2026-02-10T16:48:58Z",
-              "author": "CristiGB",
-              "pr_number": "310",
-              "tickets": [
-                {
-                  "id": "PMO-2634",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2634"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 26,
+          "count": 27,
           "recent_commits": [
+            {
+              "sha": "74e83af",
+              "message": "release: qa 2026 05 11",
+              "date": "2026-05-11T18:15:31Z",
+              "author": "CristiGB",
+              "pr_number": "460",
+              "tickets": []
+            },
             {
               "sha": "5fbee57",
               "message": "release: qa 2026 05 06",
@@ -1151,14 +1154,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
                 }
               ]
-            },
-            {
-              "sha": "bfe2410",
-              "message": "Develop",
-              "date": "2026-02-16T22:04:03Z",
-              "author": "fabianromerolu",
-              "pr_number": "314",
-              "tickets": []
             }
           ]
         }
@@ -1360,7 +1355,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T19:07:26Z",
+      "last_push": "2026-05-11T17:26:03Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1438,8 +1433,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "5abf341",
+              "message": "fix(erp): corregir envio de datos de farmacia y ajustes en portal admin SUP-297",
+              "date": "2026-05-11T17:26:01Z",
+              "author": "jsandoval-dev",
+              "pr_number": "204",
+              "tickets": [
+                {
+                  "id": "SUP-297",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-297"
+                }
+              ]
+            },
             {
               "sha": "d8c2aa9",
               "message": "feat(portal): wizard de orden manual para Contact Center SUP-296",
@@ -2928,7 +2936,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-10T20:36:33Z",
+      "last_push": "2026-05-11T16:53:24Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2959,8 +2967,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "cedb13d",
+              "message": "fix(breadcrumb): update breadcrumb label from \"Nuestros Fundadores\" to \"Nuestros Copresidentes\" PMO-2758",
+              "date": "2026-05-11T16:53:22Z",
+              "author": "mladino-source",
+              "pr_number": "15",
+              "tickets": [
+                {
+                  "id": "PMO-2758",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2758"
+                }
+              ]
+            },
             {
               "sha": "16b33b3",
               "message": "fix(design): remove unnecessary whitespace in interface layout NMX-401",
@@ -3054,7 +3075,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T20:51:31Z",
+      "last_push": "2026-05-11T17:16:48Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3132,8 +3153,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 17,
+          "count": 18,
           "recent_commits": [
+            {
+              "sha": "57cb9dd",
+              "message": "fix(event-monitoring): ajustar guardado de eventos de farmacia SUP-297",
+              "date": "2026-05-11T17:16:47Z",
+              "author": "jsandoval-dev",
+              "pr_number": "380",
+              "tickets": [
+                {
+                  "id": "SUP-297",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-297"
+                }
+              ]
+            },
             {
               "sha": "34116f4",
               "message": "feat(geo): geoconfig library management NCR-124",
