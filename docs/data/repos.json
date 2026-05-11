@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T20:52:07.235Z",
+  "generated_at": "2026-05-11T06:14:30.886Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -86,7 +86,7 @@
     },
     "PMO-2898": {
       "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2817": {
@@ -166,7 +166,7 @@
     },
     "NMX-401": {
       "summary": "BG | Diseño | Espacio en blanco innecesario en la interfaz",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NE-246": {
@@ -268,11 +268,6 @@
       "summary": "Desarrollo Front End: Implementación de diseño y componentes login y registro.",
       "status": "Actividad completada",
       "assignee": "Wilson Mendoza"
-    },
-    "NCOL-538": {
-      "summary": "Los 6 principios de nuestras creaciones",
-      "status": "Actividad completada",
-      "assignee": "Richard Medina"
     },
     "NCOL-503": {
       "summary": "No aparece menú lateral MOBILE - DATOS PERSONALES",
@@ -537,7 +532,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 8,
           "recent_commits": [
             {
               "sha": "c48c3ea",
@@ -614,19 +609,6 @@
                 {
                   "id": "QA-428",
                   "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
-                }
-              ]
-            },
-            {
-              "sha": "6db76c8",
-              "message": "fix(products): arreglar validación botón me interesa en productos tipo medicamento NCOL-538",
-              "date": "2026-02-09T13:42:31Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "11",
-              "tickets": [
-                {
-                  "id": "NCOL-538",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-538"
                 }
               ]
             },
@@ -2928,7 +2910,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T16:07:40Z",
+      "last_push": "2026-05-10T20:36:33Z",
       "topics": [
         "fase-fruto",
         "team-roble"
