@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T13:57:45.563Z",
+  "generated_at": "2026-05-12T15:12:49.460Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -88,6 +88,11 @@
       "summary": "Actualizar Scripts ambiente QA/Prod - Nutrabiotics",
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
+    },
+    "PMO-2934": {
+      "summary": "BOTÓN DE IR A PAGAR NO LO LLEVA A PAGAR ALIVIA",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
     },
     "PMO-2913": {
       "summary": "Actualización de contenido regulatorio – Sección Productos Mexico",
@@ -467,6 +472,75 @@
   },
   "repos": [
     {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-12T14:45:16Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "73c83ca",
+              "message": "release: qa-2026-05-06",
+              "date": "2026-05-06T20:03:06Z",
+              "author": "k-aguilera",
+              "pr_number": "18",
+              "tickets": []
+            },
+            {
+              "sha": "88100ec",
+              "message": "release:  qa-2026-04-30",
+              "date": "2026-04-30T20:56:41Z",
+              "author": "k-aguilera",
+              "pr_number": "15",
+              "tickets": []
+            },
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
       "description": "Página web externa de Nutrabiotics Colombia",
@@ -769,7 +843,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T13:57:22Z",
+      "last_push": "2026-05-12T15:12:16Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -847,8 +921,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "ed5494e",
+              "message": "fix(checkout): permitir llenado manual al fallar erp PMO-2934",
+              "date": "2026-05-12T14:54:33Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "463",
+              "tickets": [
+                {
+                  "id": "PMO-2934",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2934"
+                }
+              ]
+            },
             {
               "sha": "9261c11",
               "message": "fix(sections): mostrar mensaje sin articulos ALMX-300",
@@ -1704,75 +1791,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-184"
                 }
               ]
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-06T21:12:45Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "73c83ca",
-              "message": "release: qa-2026-05-06",
-              "date": "2026-05-06T20:03:06Z",
-              "author": "k-aguilera",
-              "pr_number": "18",
-              "tickets": []
-            },
-            {
-              "sha": "88100ec",
-              "message": "release:  qa-2026-04-30",
-              "date": "2026-04-30T20:56:41Z",
-              "author": "k-aguilera",
-              "pr_number": "15",
-              "tickets": []
-            },
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
             }
           ]
         }
