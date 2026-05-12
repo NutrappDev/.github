@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-11T18:15:57.679Z",
+  "generated_at": "2026-05-12T13:16:13.524Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-297": {
       "summary": "Ajuste de prop usada en la columna ID del Portal Admin",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "SUP-296": {
@@ -89,6 +89,16 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2913": {
+      "summary": "Actualización de contenido regulatorio – Sección Productos Mexico",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2902": {
+      "summary": "ADICIONAR CIUDAD EN ALIVIA",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
     "PMO-2898": {
       "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
       "status": "Despliegue a QA",
@@ -139,6 +149,11 @@
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
+    "PALMX-40": {
+      "summary": "Revisión Paypal pasarela sin logueo (Embebido)",
+      "status": "Despliegue a DEV",
+      "assignee": "ISABEL GOMEZ"
+    },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Actividad completada",
@@ -161,7 +176,7 @@
     },
     "NMX-408": {
       "summary": "BG | Aliados | Se deja un espacio en blanco de manera irregular en el carrusel",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NMX-401": {
@@ -196,12 +211,12 @@
     },
     "NCR-126": {
       "summary": "Ajuste de ID de ordenes de Farmacia en ms-orders",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Mario Eraso"
     },
     "NCR-124": {
       "summary": "Revisar manejo de Ciudad y Departamento desde la librería ERP",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Mario Eraso"
     },
     "NCR-123": {
@@ -454,7 +469,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-08T16:41:25Z",
+      "last_push": "2026-05-11T19:28:42Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -749,7 +764,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-11T18:15:33Z",
+      "last_push": "2026-05-12T13:15:44Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -789,13 +804,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-06",
-        "sha": "5fbee5784efff04edbafe51c4d77dce239b0c413",
-        "date": "2026-05-06T14:49:58Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-06",
-        "body": "Release qa-2026-05-06\n"
+        "version": "qa-2026-05-11",
+        "sha": "74e83aff0ba138472e1e75151fde7f34129317cc",
+        "date": "2026-05-11T18:15:54Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-11",
+        "body": "Release qa-2026-05-11\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-06",
+          "sha": "5fbee5784efff04edbafe51c4d77dce239b0c413",
+          "date": "2026-05-06T14:49:58Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-06",
+          "body": "Release qa-2026-05-06\n"
+        },
         {
           "version": "qa-2026-04-29",
           "sha": "0a083362fb2d2977c5d80f3a5c132dcf0af21015",
@@ -816,19 +838,51 @@
           "date": "2026-04-23T17:01:16Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-23",
           "body": "Release qa-2026-04-23\n"
-        },
-        {
-          "version": "qa-2026-04-21",
-          "sha": "d501a79fba24a1bd9086be8b66eab1ae603786e7",
-          "date": "2026-04-21T21:48:26Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-21",
-          "body": "Release qa-2026-04-21\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "5b28b63",
+              "message": "feat(ciudades): añadir ciudad el retiro PMO-2902",
+              "date": "2026-05-12T13:15:41Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "458",
+              "tickets": [
+                {
+                  "id": "PMO-2902",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2902"
+                }
+              ]
+            },
+            {
+              "sha": "d085bd5",
+              "message": "feat: enhance InputSelectDropdown search functionality and update payment total calculation PALMX-40",
+              "date": "2026-05-12T13:01:44Z",
+              "author": "CristiGB",
+              "pr_number": "462",
+              "tickets": [
+                {
+                  "id": "PALMX-40",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-40"
+                }
+              ]
+            },
+            {
+              "sha": "54055c0",
+              "message": "feat: PALMX-40 paypal without login",
+              "date": "2026-05-11T21:52:48Z",
+              "author": "CristiGB",
+              "pr_number": "461",
+              "tickets": [
+                {
+                  "id": "PALMX-40",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALMX-40"
+                }
+              ]
+            },
             {
               "sha": "5ff7252",
               "message": "fix(ALCO-1517): review and validate analytics and search console data sources for Alivia",
@@ -913,7 +967,7 @@
           ]
         },
         "to_production": {
-          "count": 27,
+          "count": 26,
           "recent_commits": [
             {
               "sha": "74e83af",
@@ -2936,7 +2990,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-11T16:53:24Z",
+      "last_push": "2026-05-11T23:27:26Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -2967,8 +3021,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "1d84c2a",
+              "message": "fix(breadcrumb): update label to Nuestros Copresidentes #PMO-2758",
+              "date": "2026-05-11T23:27:25Z",
+              "author": "mladino-source",
+              "pr_number": "18",
+              "tickets": [
+                {
+                  "id": "PMO-2758",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2758"
+                }
+              ]
+            },
+            {
+              "sha": "589a284",
+              "message": "fix(regulatory-content): replace non-compliant phrases in products tab per COFEPRIS resolution [PMO-2913]",
+              "date": "2026-05-11T20:54:05Z",
+              "author": "mladino-source",
+              "pr_number": "16",
+              "tickets": [
+                {
+                  "id": "PMO-2913",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2913"
+                }
+              ]
+            },
             {
               "sha": "cedb13d",
               "message": "fix(breadcrumb): update breadcrumb label from \"Nuestros Fundadores\" to \"Nuestros Copresidentes\" PMO-2758",
