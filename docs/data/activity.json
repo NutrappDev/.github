@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-12T16:18:04.906Z",
+  "generated_at": "2026-05-12T17:23:30.057Z",
   "window_days": 90,
   "developers": [
     {
       "login": "CristiGB",
       "avatar_url": "https://avatars.githubusercontent.com/u/66337816?v=4",
-      "prs_30d": 48,
-      "prs_90d": 119,
-      "last_activity": "2026-05-12T16:17:40Z",
+      "prs_30d": 49,
+      "prs_90d": 120,
+      "last_activity": "2026-05-12T17:23:12Z",
       "by_repo": [
         {
           "repo": "alivia",
-          "prs": 81
+          "prs": 82
         },
         {
           "repo": "portal-nutrabiotics",
@@ -36,7 +36,7 @@
       ],
       "by_branch": {
         "develop": 55,
-        "qa": 33,
+        "qa": 34,
         "main": 31
       },
       "weekly": [
@@ -90,7 +90,7 @@
         },
         {
           "week": "2026-W20",
-          "prs": 6
+          "prs": 7
         }
       ]
     },
@@ -193,9 +193,9 @@
     {
       "login": "k-aguilera",
       "avatar_url": "https://avatars.githubusercontent.com/u/256123414?v=4",
-      "prs_30d": 23,
-      "prs_90d": 60,
-      "last_activity": "2026-05-07T17:26:15Z",
+      "prs_30d": 25,
+      "prs_90d": 62,
+      "last_activity": "2026-05-12T16:48:20Z",
       "by_repo": [
         {
           "repo": "nutrabiotics-empresas",
@@ -203,7 +203,7 @@
         },
         {
           "repo": "fruto-landing-cimf",
-          "prs": 13
+          "prs": 15
         },
         {
           "repo": "sso-micuenta",
@@ -223,7 +223,7 @@
         }
       ],
       "by_branch": {
-        "develop": 35,
+        "develop": 37,
         "qa": 17,
         "main": 8
       },
@@ -278,7 +278,7 @@
         },
         {
           "week": "2026-W20",
-          "prs": 0
+          "prs": 2
         }
       ]
     },
