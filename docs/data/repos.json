@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T13:16:13.524Z",
+  "generated_at": "2026-05-12T13:57:45.563Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -96,7 +96,7 @@
     },
     "PMO-2902": {
       "summary": "ADICIONAR CIUDAD EN ALIVIA",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "PMO-2898": {
@@ -211,12 +211,12 @@
     },
     "NCR-126": {
       "summary": "Ajuste de ID de ordenes de Farmacia en ms-orders",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-124": {
       "summary": "Revisar manejo de Ciudad y Departamento desde la librería ERP",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a PROD",
       "assignee": "Mario Eraso"
     },
     "NCR-123": {
@@ -313,6 +313,11 @@
       "summary": "BG | Iniciar Sesión | error 500",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
+    },
+    "ALMX-300": {
+      "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
+      "status": "Despliegue a DEV",
+      "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
@@ -764,7 +769,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T13:15:44Z",
+      "last_push": "2026-05-12T13:57:22Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-07",
@@ -842,8 +847,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "9261c11",
+              "message": "fix(sections): mostrar mensaje sin articulos ALMX-300",
+              "date": "2026-05-12T13:57:09Z",
+              "author": "NicolasDaniloMunozAldana",
+              "pr_number": "452",
+              "tickets": [
+                {
+                  "id": "ALMX-300",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-300"
+                }
+              ]
+            },
             {
               "sha": "5b28b63",
               "message": "feat(ciudades): añadir ciudad el retiro PMO-2902",
