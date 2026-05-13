@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T18:37:05.991Z",
+  "generated_at": "2026-05-13T19:05:59.211Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -296,7 +296,7 @@
     },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
@@ -638,7 +638,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T17:23:37Z",
+      "last_push": "2026-05-13T18:37:29Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-12",
@@ -1174,7 +1174,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
             {
               "sha": "3208718",
@@ -1227,14 +1227,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/QA-428"
                 }
               ]
-            },
-            {
-              "sha": "0aeec58",
-              "message": "fix: ajustes al colSpan de 2 columnas para la vista tablet",
-              "date": "2026-02-12T18:57:46Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "19",
-              "tickets": []
             }
           ]
         },
@@ -3174,7 +3166,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T17:42:05Z",
+      "last_push": "2026-05-13T19:05:47Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3199,18 +3191,18 @@
           "body": "Release v1.0.0: Primera versión en producción\n\nPrimer despliegue oficial a ambiente de producción desde QA.\nIncluye funcionalidad base del sistema validada en ambiente de pruebas.\n"
         },
         {
+          "version": "prod-2026-05-13",
+          "sha": "d954514d8e4f4106a5fc2c533d305a46be5cade0",
+          "date": "2026-05-13T19:05:46Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-13",
+          "body": "Release prod-2026-05-13\n"
+        },
+        {
           "version": "prod-2026-05-07",
           "sha": "467a8d86d089087b606c2fdab4bfb532a82d494a",
           "date": "2026-05-07T14:03:31Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07",
           "body": "Release prod-2026-05-07\n"
-        },
-        {
-          "version": "prod-2026-05-07-5",
-          "sha": "322ea1a847bdd28e20197b17b0240b90377f7e39",
-          "date": "2026-05-07T20:37:00Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07-5",
-          "body": "Release prod-2026-05-07-5\n"
         }
       ],
       "qa": {
@@ -3571,10 +3563,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25523599328",
-        "updated_at": "2026-05-07T21:40:41Z",
+        "status": "queued",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25820399321",
+        "updated_at": "2026-05-13T19:05:49Z",
         "name": "pages build and deployment"
       },
       "_errors": {
