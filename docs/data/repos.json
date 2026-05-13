@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-13T20:05:59.080Z",
+  "generated_at": "2026-05-13T21:51:46.406Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-298": {
       "summary": "Fallback manual cuando Epicor ERP no está disponible",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "SUP-297": {
@@ -291,7 +291,7 @@
     },
     "CIMF-284": {
       "summary": "Sección Agenda",
-      "status": "Despliegue a DEV",
+      "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
     "CA-31": {
@@ -3174,7 +3174,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T19:40:11Z",
+      "last_push": "2026-05-13T21:51:32Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3206,11 +3206,11 @@
           "body": "Release prod-2026-05-13\n"
         },
         {
-          "version": "prod-2026-05-07",
-          "sha": "467a8d86d089087b606c2fdab4bfb532a82d494a",
-          "date": "2026-05-07T14:03:31Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-07",
-          "body": "Release prod-2026-05-07\n"
+          "version": "prod-2026-05-13-2",
+          "sha": "c77ed127a7e13cb4dae3b196040a62b007af947d",
+          "date": "2026-05-13T21:51:31Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/prod-2026-05-13-2",
+          "body": "Release prod-2026-05-13-2\n"
         }
       ],
       "qa": {
@@ -3571,10 +3571,10 @@
         }
       },
       "ci": {
-        "status": "completed",
-        "conclusion": "success",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25820399321",
-        "updated_at": "2026-05-13T19:06:04Z",
+        "status": "queued",
+        "conclusion": null,
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25828506938",
+        "updated_at": "2026-05-13T21:51:35Z",
         "name": "pages build and deployment"
       },
       "_errors": {
