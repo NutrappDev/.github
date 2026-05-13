@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-05-13T19:08:58.934Z",
+  "generated_at": "2026-05-13T19:28:31.807Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-298": {
+      "summary": "Fallback manual cuando Epicor ERP no está disponible",
+      "status": "Por hacer",
+      "assignee": "Felipe Berrio"
+    },
     "SUP-297": {
       "summary": "Ajuste de prop usada en la columna ID del Portal Admin",
       "status": "Despliegue a QA",
@@ -301,7 +306,7 @@
     },
     "ALMX-324": {
       "summary": "BG | Mobile | Botones desajustados",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
@@ -1532,7 +1537,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T17:59:13Z",
+      "last_push": "2026-05-13T19:28:11Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1610,8 +1615,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 12,
           "recent_commits": [
+            {
+              "sha": "8652b7c",
+              "message": "fix(portal): fallback manual cuando ERP no está disponible en Step 3 SUP-298",
+              "date": "2026-05-13T19:28:09Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "205",
+              "tickets": [
+                {
+                  "id": "SUP-298",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-298"
+                }
+              ]
+            },
             {
               "sha": "5abf341",
               "message": "fix(erp): corregir envio de datos de farmacia y ajustes en portal admin SUP-297",
