@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-13T19:28:31.807Z",
+  "generated_at": "2026-05-13T20:05:59.080Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-298": {
       "summary": "Fallback manual cuando Epicor ERP no está disponible",
-      "status": "Por hacer",
+      "status": "En proceso",
       "assignee": "Felipe Berrio"
     },
     "SUP-297": {
@@ -201,7 +201,7 @@
     },
     "NCR-128": {
       "summary": "Soporte de pagos Wompi para Órdenes del Contact Center",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "NCR-127": {
@@ -302,11 +302,6 @@
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
       "status": "Despliegue a QA",
-      "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-324": {
-      "summary": "BG | Mobile | Botones desajustados",
-      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
@@ -643,7 +638,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T19:08:34Z",
+      "last_push": "2026-05-13T20:05:29Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-12",
@@ -683,13 +678,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-12",
-        "sha": "41ee627ac7c30ebd43306ece5b0e0c19a3e648d4",
-        "date": "2026-05-12T17:23:37Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-12",
-        "body": "Release qa-2026-05-12\n"
+        "version": "qa-2026-05-13",
+        "sha": "5d7f88251eb9a4d700c6dca4fc900ee146638718",
+        "date": "2026-05-13T20:05:28Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-13",
+        "body": "Release qa-2026-05-13\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-12",
+          "sha": "41ee627ac7c30ebd43306ece5b0e0c19a3e648d4",
+          "date": "2026-05-12T17:23:37Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-12",
+          "body": "Release qa-2026-05-12\n"
+        },
         {
           "version": "qa-2026-05-11",
           "sha": "74e83aff0ba138472e1e75151fde7f34129317cc",
@@ -710,32 +712,12 @@
           "date": "2026-04-29T20:11:25Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-29",
           "body": "Release qa-2026-04-29\n"
-        },
-        {
-          "version": "qa-2026-04-24",
-          "sha": "fc5bc27f23b5e276bb5240e63029fcc7f98e334a",
-          "date": "2026-04-24T20:21:51Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-24",
-          "body": "Release qa-2026-04-24\n"
         }
       ],
       "pending": {
         "to_qa": {
           "count": 11,
           "recent_commits": [
-            {
-              "sha": "7fba2b5",
-              "message": "fix(checkout): update z-index and layout for PaymentInfo and PaypalMxButtons ALMX-324",
-              "date": "2026-05-13T19:08:32Z",
-              "author": "CristiGB",
-              "pr_number": "467",
-              "tickets": [
-                {
-                  "id": "ALMX-324",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-324"
-                }
-              ]
-            },
             {
               "sha": "9261c11",
               "message": "fix(sections): mostrar mensaje sin articulos ALMX-300",
@@ -755,6 +737,14 @@
               "date": "2026-02-26T21:58:33Z",
               "author": "CristiGB",
               "pr_number": "327",
+              "tickets": []
+            },
+            {
+              "sha": "4980261",
+              "message": "fix/FormAndCheckout",
+              "date": "2026-02-26T13:38:39Z",
+              "author": "fabianromerolu",
+              "pr_number": "326",
               "tickets": []
             },
             {
@@ -844,8 +834,16 @@
           ]
         },
         "to_production": {
-          "count": 27,
+          "count": 28,
           "recent_commits": [
+            {
+              "sha": "5d7f882",
+              "message": "release: qa 2026 05 13",
+              "date": "2026-05-13T20:05:02Z",
+              "author": "CristiGB",
+              "pr_number": "468",
+              "tickets": []
+            },
             {
               "sha": "41ee627",
               "message": "release: qa 2026 05 12",
@@ -1071,14 +1069,6 @@
               "date": "2026-02-25T20:53:59Z",
               "author": "CristiGB",
               "pr_number": "325",
-              "tickets": []
-            },
-            {
-              "sha": "8c8a5b7",
-              "message": "Develop",
-              "date": "2026-02-24T21:58:52Z",
-              "author": "CristiGB",
-              "pr_number": "321",
               "tickets": []
             }
           ]
@@ -3184,7 +3174,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T19:05:47Z",
+      "last_push": "2026-05-13T19:40:11Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
