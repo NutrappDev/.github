@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T21:51:46.406Z",
+  "generated_at": "2026-05-13T22:46:26.577Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -293,6 +293,11 @@
       "summary": "Sección Agenda",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "CA-36": {
+      "summary": "Configuracion vpc para backend certificados",
+      "status": "En proceso",
+      "assignee": "Richard Medina"
     },
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
@@ -2150,7 +2155,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T14:11:31Z",
+      "last_push": "2026-05-13T22:45:51Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-23",
@@ -2178,8 +2183,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "b733c05",
+              "message": "fix(serverless): enhance stage configuration and add VPC permissions for Lambda functions in serverless.yml CA-36",
+              "date": "2026-05-13T22:45:49Z",
+              "author": "CristiGB",
+              "pr_number": "100",
+              "tickets": [
+                {
+                  "id": "CA-36",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-36"
+                }
+              ]
+            },
             {
               "sha": "3771585",
               "message": "fix(employees): replace Error with appropriate exceptions in employee service and update date validation in DTO CA-30",
@@ -3174,7 +3192,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T21:51:32Z",
+      "last_push": "2026-05-13T21:59:47Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3571,10 +3589,10 @@
         }
       },
       "ci": {
-        "status": "queued",
-        "conclusion": null,
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25828506938",
-        "updated_at": "2026-05-13T21:51:35Z",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25828886917",
+        "updated_at": "2026-05-13T22:00:23Z",
         "name": "pages build and deployment"
       },
       "_errors": {
