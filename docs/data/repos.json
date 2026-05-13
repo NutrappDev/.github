@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T19:05:59.211Z",
+  "generated_at": "2026-05-13T19:08:58.934Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -299,6 +299,11 @@
       "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
+    "ALMX-324": {
+      "summary": "BG | Mobile | Botones desajustados",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
+    },
     "ALMX-300": {
       "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
       "status": "Despliegue a DEV",
@@ -408,11 +413,6 @@
       "summary": "Actualizar la llamada del metodo lookup dentro de prescripciones para que sea optimizado el numero de peticiones al sso",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-910": {
-      "summary": "Arreglar placeholders en el checkout de Alivia",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-905": {
       "summary": "Actualización de flujo de plantillas en Alivia",
@@ -638,7 +638,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T18:37:29Z",
+      "last_push": "2026-05-13T19:08:34Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-12",
@@ -718,6 +718,19 @@
         "to_qa": {
           "count": 11,
           "recent_commits": [
+            {
+              "sha": "7fba2b5",
+              "message": "fix(checkout): update z-index and layout for PaymentInfo and PaypalMxButtons ALMX-324",
+              "date": "2026-05-13T19:08:32Z",
+              "author": "CristiGB",
+              "pr_number": "467",
+              "tickets": [
+                {
+                  "id": "ALMX-324",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-324"
+                }
+              ]
+            },
             {
               "sha": "9261c11",
               "message": "fix(sections): mostrar mensaje sin articulos ALMX-300",
@@ -820,19 +833,6 @@
                 {
                   "id": "ALCO-1390",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1390"
-                }
-              ]
-            },
-            {
-              "sha": "62c85fc",
-              "message": "refactor/ALCO-1391_placeholders_checkout",
-              "date": "2026-02-16T21:42:53Z",
-              "author": "fabianromerolu",
-              "pr_number": "313",
-              "tickets": [
-                {
-                  "id": "ALCO-1391",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1391"
                 }
               ]
             }
@@ -3563,10 +3563,10 @@
         }
       },
       "ci": {
-        "status": "queued",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "success",
         "url": "https://github.com/NutrappDev/monorepo-alivia-backend/actions/runs/25820399321",
-        "updated_at": "2026-05-13T19:05:49Z",
+        "updated_at": "2026-05-13T19:06:04Z",
         "name": "pages build and deployment"
       },
       "_errors": {
