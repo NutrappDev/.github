@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T22:45:56.370Z",
+  "generated_at": "2026-05-13T18:37:05.991Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -104,11 +104,6 @@
       "status": "Actividad completada",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
-    "PMO-2800": {
-      "summary": "Novedades en revisión catalogo  - Fitoterapeuticos",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
     "PMO-2758": {
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
       "status": "Despliegue a QA",
@@ -133,11 +128,6 @@
       "summary": "Alivia México: Fase de Desarrollo ¡Hagámoslo realidad!",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "PMO-2639": {
-      "summary": "Actualización manuales SAGRILAFT y PTEE en página web",
-      "status": "Revisión QA",
-      "assignee": "Miller Ladino Osorio"
     },
     "PMO-2613": {
       "summary": "Cargue de Pedidos a Alivia por el Contact Center",
@@ -174,6 +164,11 @@
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
+    "NE-295": {
+      "summary": "HU-11 Detalle de producto PDP con información regulatoria [Diseño + Desarrollo]",
+      "status": "Detenido",
+      "assignee": "Kevin Aguilera"
+    },
     "NE-246": {
       "summary": "Transformación de datos de orden para integración con ERP",
       "status": "Despliegue a PROD",
@@ -198,6 +193,11 @@
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
+    },
+    "NCR-128": {
+      "summary": "Soporte de pagos Wompi para Órdenes del Contact Center",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
     },
     "NCR-127": {
       "summary": "Mejoras en Registro y Notificaciones del Contact Center",
@@ -284,26 +284,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "NCOL-257": {
-      "summary": "Filtro catálogo de productos publico - Nutrabiotics Colombia",
-      "status": "Despliegue a DEV",
-      "assignee": "Steven Leon"
-    },
-    "NCOL-8": {
-      "summary": "Data - HTML Detalle Productos",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
-    "NCOL-5": {
-      "summary": "Home | Ajuste a carrusel de productos",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
-    "DGWNC-1": {
-      "summary": "Implementación de archivo CODEOWNERS en el repositorio del activo Nutrabiotics Colombia",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
     "CIMF-284": {
       "summary": "Sección Agenda",
       "status": "Despliegue a DEV",
@@ -312,6 +292,11 @@
     "CA-31": {
       "summary": "BG | Iniciar Sesión | error 500",
       "status": "Actividad completada",
+      "assignee": "ISABEL GOMEZ"
+    },
+    "CA-30": {
+      "summary": "Certificados automaticos | Revisión de usuarios",
+      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
@@ -466,6 +451,89 @@
     }
   },
   "repos": [
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-05-13T16:21:59Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-13T14:11:51Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "47d72d4",
+              "message": "fix(employes):  improve API error response structure CA-30",
+              "date": "2026-05-13T14:11:48Z",
+              "author": "CristiGB",
+              "pr_number": "30",
+              "tickets": [
+                {
+                  "id": "CA-30",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "fruto-landing-cimf",
       "full_name": "NutrappDev/fruto-landing-cimf",
@@ -1028,7 +1096,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T22:45:36Z",
+      "last_push": "2026-05-13T14:51:56Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1068,13 +1136,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-30",
-        "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
-        "date": "2026-04-30T12:56:16Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-30",
-        "body": "Release qa-2026-04-30\n"
+        "version": "qa-2026-05-13",
+        "sha": "a12b206aa5bad1b80759148e545255048e53716d",
+        "date": "2026-05-13T14:51:55Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-13",
+        "body": "Release qa-2026-05-13\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-30",
+          "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
+          "date": "2026-04-30T12:56:16Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-30",
+          "body": "Release qa-2026-04-30\n"
+        },
         {
           "version": "qa-2026-04-21",
           "sha": "60d854800a1b8915dc4e9fa46d0e1b0fa3bef9e6",
@@ -1095,58 +1170,12 @@
           "date": "2026-03-17T21:33:39Z",
           "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-17",
           "body": "Release qa-2026-03-17\n"
-        },
-        {
-          "version": "qa-2026-03-10",
-          "sha": "5b77fabacb6a21f00ea3a9cf880a59599be39a9b",
-          "date": "2026-03-10T21:57:48Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-10",
-          "body": "Release qa-2026-03-10\n\nFixes (2):\nPR #37 by Steven León - Corrige carruseles del home con Swiper independiente para mostrar flechas correctamente [NCOL-5]\nPR #40 by Steven León - Unifica título de vista individual de productos en un solo elemento para desktop y mobile [NCOL-573]\n\nOther (1):\nPR #38 by Steven León - Agrega archivo CODEOWNERS para definir responsables automáticos de revisión [NCOL-635]\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 5,
           "recent_commits": [
-            {
-              "sha": "2c130a9",
-              "message": "feat: implementar filtros avanzados al catalogo de productos publico NCOL-257",
-              "date": "2026-05-12T22:45:34Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "93",
-              "tickets": [
-                {
-                  "id": "NCOL-257",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-257"
-                }
-              ]
-            },
-            {
-              "sha": "c48c3ea",
-              "message": "fix: eliminar ver mas producto individual y ajuste pre-line evento individual PMO-2800",
-              "date": "2026-05-07T16:16:31Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "91",
-              "tickets": [
-                {
-                  "id": "PMO-2800",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2800"
-                }
-              ]
-            },
-            {
-              "sha": "480bb68",
-              "message": "fix(policies): add sagrilaft and ptee policy PMO-2639",
-              "date": "2026-04-30T13:02:55Z",
-              "author": "mladino-source",
-              "pr_number": "89",
-              "tickets": [
-                {
-                  "id": "PMO-2639",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2639"
-                }
-              ]
-            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
@@ -1210,8 +1239,16 @@
           ]
         },
         "to_production": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "a12b206",
+              "message": "release: deploy PRs a QA - 2026-05-12",
+              "date": "2026-05-13T14:51:40Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "94",
+              "tickets": []
+            },
             {
               "sha": "6f02aa7",
               "message": "release: deploy PRs a QA - 2026-04-29",
@@ -1503,7 +1540,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-11T17:26:03Z",
+      "last_push": "2026-05-13T17:59:13Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -2113,7 +2150,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-04-24T15:17:02Z",
+      "last_push": "2026-05-13T14:11:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-23",
@@ -2141,8 +2178,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "3771585",
+              "message": "fix(employees): replace Error with appropriate exceptions in employee service and update date validation in DTO CA-30",
+              "date": "2026-05-13T14:11:28Z",
+              "author": "CristiGB",
+              "pr_number": "99",
+              "tickets": [
+                {
+                  "id": "CA-30",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
+                }
+              ]
+            },
             {
               "sha": "27f4d2f",
               "message": "fix(serverless): add application/pdf to binary settings for Lambda handler CA-31",
@@ -2195,42 +2245,6 @@
       }
     },
     {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-04-23T14:35:37Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-empresas",
       "full_name": "NutrappDev/nutrabiotics-empresas",
       "description": null,
@@ -2238,7 +2252,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T20:54:44Z",
+      "last_push": "2026-05-13T18:36:35Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -2295,8 +2309,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "af179bc",
+              "message": "refactor: qa bug resolution NE-295",
+              "date": "2026-05-13T18:36:33Z",
+              "author": "k-aguilera",
+              "pr_number": "73",
+              "tickets": [
+                {
+                  "id": "NE-295",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-295"
+                }
+              ]
+            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -2942,39 +2969,6 @@
       }
     },
     {
-      "name": "nutrabiotics-certificates-admin",
-      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-16T17:14:06Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "tronco-api-crm",
       "full_name": "NutrappDev/tronco-api-crm",
       "description": "Integración del CRM con Mensajería",
@@ -3180,7 +3174,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T22:37:11Z",
+      "last_push": "2026-05-13T17:42:05Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3258,8 +3252,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 19,
+          "count": 20,
           "recent_commits": [
+            {
+              "sha": "8f9590f",
+              "message": "fix(orders): soportar prefijo CCCO en webhook Wompi NCR-128",
+              "date": "2026-05-13T16:37:22Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "384",
+              "tickets": [
+                {
+                  "id": "NCR-128",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-128"
+                }
+              ]
+            },
             {
               "sha": "a15fd34",
               "message": "fix(sso): propagar origin CC y corregir template welcome NCR-127",
