@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T15:23:39.392Z",
+  "generated_at": "2026-05-14T16:03:59.732Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1612,7 +1612,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T19:28:11Z",
+      "last_push": "2026-05-14T15:53:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -2000,7 +2000,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T15:23:01Z",
+      "last_push": "2026-05-14T16:03:20Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2029,8 +2029,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "255b69c",
+              "message": "fix(serverless): adjustment in plugins DE-353",
+              "date": "2026-05-14T16:03:17Z",
+              "author": "meraso-nutra",
+              "pr_number": "71",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "32c7e72",
               "message": "chore(dependencies): dependency changes serverless v3 management DE-353",
@@ -2248,7 +2261,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T18:36:35Z",
+      "last_push": "2026-05-14T15:49:22Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
