@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T22:46:26.577Z",
+  "generated_at": "2026-05-14T15:23:39.392Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -156,7 +156,7 @@
     },
     "PALCO-20": {
       "summary": "Integración con empresa de transporte",
-      "status": "En proceso",
+      "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
     },
     "NMX-408": {
@@ -289,20 +289,15 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "DE-353": {
+      "summary": "Revision del microservicio de pagos",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
+    },
     "CIMF-284": {
       "summary": "Sección Agenda",
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
-    },
-    "CA-36": {
-      "summary": "Configuracion vpc para backend certificados",
-      "status": "En proceso",
-      "assignee": "Richard Medina"
-    },
-    "CA-31": {
-      "summary": "BG | Iniciar Sesión | error 500",
-      "status": "Actividad completada",
-      "assignee": "ISABEL GOMEZ"
     },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
@@ -457,42 +452,6 @@
   },
   "repos": [
     {
-      "name": "tronco-api-erp",
-      "full_name": "NutrappDev/tronco-api-erp",
-      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
-      "url": "https://github.com/NutrappDev/tronco-api-erp",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "feat/PALCO-10-inicializar-repositorio",
-      "last_push": "2026-05-13T16:21:59Z",
-      "topics": [
-        "fase-tronco",
-        "team-manglar"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-admin",
       "full_name": "NutrappDev/nutrabiotics-certificates-admin",
       "description": null,
@@ -500,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T14:11:51Z",
+      "last_push": "2026-05-14T00:05:38Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -524,6 +483,127 @@
               ]
             }
           ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-backend",
+      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-13T23:04:19Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-05-13",
+        "sha": "ad231a18a2b35f8b0129334983a15b8d3384911e",
+        "date": "2026-05-13T23:04:18Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-05-13",
+        "body": "Release prod-2026-05-13\n"
+      },
+      "production_history": [
+        {
+          "version": "prod-2026-04-23",
+          "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
+          "date": "2026-04-23T21:30:15Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-23",
+          "body": "Release prod-2026-04-23\n"
+        },
+        {
+          "version": "prod-2026-04-15",
+          "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
+          "date": "2026-04-15T21:37:22Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
+          "body": "Release prod-2026-04-15\n"
+        }
+      ],
+      "qa": {
+        "version": "qa-2026-05-13",
+        "sha": "042e534bbe153e8ddada416b6c9460a60e875a9f",
+        "date": "2026-05-13T22:58:07Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-05-13",
+        "body": "Release qa-2026-05-13\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-04-23",
+          "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
+          "date": "2026-04-23T21:02:54Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
+          "body": "Release qa-2026-04-23\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "042e534",
+              "message": "release: qa 2026 05 13",
+              "date": "2026-05-13T22:57:49Z",
+              "author": "CristiGB",
+              "pr_number": "101",
+              "tickets": []
+            },
+            {
+              "sha": "4a182e5",
+              "message": "release: qa 2026 04 23",
+              "date": "2026-04-23T21:02:43Z",
+              "author": "CristiGB",
+              "pr_number": "95",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "tronco-api-erp",
+      "full_name": "NutrappDev/tronco-api-erp",
+      "description": "APIs de los diferentes ERPs con los que se integra el nutracore",
+      "url": "https://github.com/NutrappDev/tronco-api-erp",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "feat/PALCO-10-inicializar-repositorio",
+      "last_push": "2026-05-13T16:21:59Z",
+      "topics": [
+        "fase-tronco",
+        "team-manglar"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 0,
@@ -1920,7 +2000,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-05T20:01:40Z",
+      "last_push": "2026-05-14T15:23:01Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1949,8 +2029,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "32c7e72",
+              "message": "chore(dependencies): dependency changes serverless v3 management DE-353",
+              "date": "2026-05-14T15:22:59Z",
+              "author": "meraso-nutra",
+              "pr_number": "70",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "321ab15",
               "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
@@ -2139,121 +2232,6 @@
         "updated_at": "2026-04-29T18:42:56Z",
         "name": "Deploy n8n Workflows"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-backend",
-      "full_name": "NutrappDev/nutrabiotics-certificates-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-13T22:45:51Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-04-23",
-        "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
-        "date": "2026-04-23T21:30:15Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-23",
-        "body": "Release prod-2026-04-23\n"
-      },
-      "production_history": [
-        {
-          "version": "prod-2026-04-15",
-          "sha": "c3ccd853652317d834bef7a95c5ad70cd58bb925",
-          "date": "2026-04-15T21:37:22Z",
-          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-04-15",
-          "body": "Release prod-2026-04-15\n"
-        }
-      ],
-      "qa": {
-        "version": "qa-2026-04-23",
-        "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
-        "date": "2026-04-23T21:02:54Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-04-23",
-        "body": "Release qa-2026-04-23\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "b733c05",
-              "message": "fix(serverless): enhance stage configuration and add VPC permissions for Lambda functions in serverless.yml CA-36",
-              "date": "2026-05-13T22:45:49Z",
-              "author": "CristiGB",
-              "pr_number": "100",
-              "tickets": [
-                {
-                  "id": "CA-36",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-36"
-                }
-              ]
-            },
-            {
-              "sha": "3771585",
-              "message": "fix(employees): replace Error with appropriate exceptions in employee service and update date validation in DTO CA-30",
-              "date": "2026-05-13T14:11:28Z",
-              "author": "CristiGB",
-              "pr_number": "99",
-              "tickets": [
-                {
-                  "id": "CA-30",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
-                }
-              ]
-            },
-            {
-              "sha": "27f4d2f",
-              "message": "fix(serverless): add application/pdf to binary settings for Lambda handler CA-31",
-              "date": "2026-04-24T15:17:00Z",
-              "author": "CristiGB",
-              "pr_number": "98",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            },
-            {
-              "sha": "e71538d",
-              "message": "fix(serverless): exclude AWS credentials from dotenv and update S3 credential validation for Lambda environments CA-31",
-              "date": "2026-04-23T22:33:56Z",
-              "author": "CristiGB",
-              "pr_number": "97",
-              "tickets": [
-                {
-                  "id": "CA-31",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-31"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "4a182e5",
-              "message": "release: qa 2026 04 23",
-              "date": "2026-04-23T21:02:43Z",
-              "author": "CristiGB",
-              "pr_number": "95",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -3027,7 +3005,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-12T20:31:09Z",
+      "last_push": "2026-05-14T14:00:36Z",
       "topics": [
         "fase-fruto",
         "team-roble"
