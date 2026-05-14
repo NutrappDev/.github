@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T21:01:08.502Z",
+  "generated_at": "2026-05-14T21:10:19.372Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -447,53 +447,6 @@
   },
   "repos": [
     {
-      "name": "nutrabiotics-certificates-admin",
-      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-14T00:05:38Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "47d72d4",
-              "message": "fix(employes):  improve API error response structure CA-30",
-              "date": "2026-05-13T14:11:48Z",
-              "author": "CristiGB",
-              "pr_number": "30",
-              "tickets": [
-                {
-                  "id": "CA-30",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-backend",
       "full_name": "NutrappDev/nutrabiotics-certificates-backend",
       "description": null,
@@ -501,16 +454,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T21:00:54Z",
+      "last_push": "2026-05-14T21:10:05Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-05-13",
-        "sha": "ad231a18a2b35f8b0129334983a15b8d3384911e",
-        "date": "2026-05-13T23:04:18Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-05-13",
-        "body": "Release prod-2026-05-13\n"
+        "version": "prod-2026-05-14",
+        "sha": "381f8f2146b4c20c87b0ac507d947ec128b764d3",
+        "date": "2026-05-14T21:10:04Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-05-14",
+        "body": "Release prod-2026-05-14\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-05-13",
+          "sha": "ad231a18a2b35f8b0129334983a15b8d3384911e",
+          "date": "2026-05-13T23:04:18Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/prod-2026-05-13",
+          "body": "Release prod-2026-05-13\n"
+        },
         {
           "version": "prod-2026-04-23",
           "sha": "44b70bb4860f57411c1af7a89fb0973a2273f87d",
@@ -582,6 +542,53 @@
               "tickets": []
             }
           ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-14T00:05:38Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "47d72d4",
+              "message": "fix(employes):  improve API error response structure CA-30",
+              "date": "2026-05-13T14:11:48Z",
+              "author": "CristiGB",
+              "pr_number": "30",
+              "tickets": [
+                {
+                  "id": "CA-30",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
         }
       },
       "ci": null,
