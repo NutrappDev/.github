@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-05-14T20:08:48.492Z",
+  "generated_at": "2026-05-14T20:20:25.744Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-299": {
+      "summary": "PDF de prescripción hormonal muestra datos incorrectos en órdenes del Contact Center",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "SUP-298": {
       "summary": "Fallback manual cuando Epicor ERP no está disponible",
       "status": "Despliegue a DEV",
@@ -1602,7 +1607,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T19:44:21Z",
+      "last_push": "2026-05-14T20:20:02Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1680,8 +1685,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 13,
           "recent_commits": [
+            {
+              "sha": "18b7256",
+              "message": "refactor(SUP-299): PDF prescripcion correcta, precio medico, QR en detalle y refactor useManualOrder",
+              "date": "2026-05-14T20:20:00Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "207",
+              "tickets": [
+                {
+                  "id": "SUP-299",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-299"
+                }
+              ]
+            },
             {
               "sha": "8652b7c",
               "message": "fix(portal): fallback manual cuando ERP no está disponible en Step 3 SUP-298",
