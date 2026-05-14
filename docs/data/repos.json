@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T21:10:19.372Z",
+  "generated_at": "2026-05-14T22:29:17.022Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -2030,7 +2030,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T20:08:06Z",
+      "last_push": "2026-05-14T22:28:54Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2059,8 +2059,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 16,
+          "count": 17,
           "recent_commits": [
+            {
+              "sha": "026c11b",
+              "message": "fix(npm): npm handling update DE-353",
+              "date": "2026-05-14T22:28:52Z",
+              "author": "meraso-nutra",
+              "pr_number": "77",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "308d423",
               "message": "fix(package): serverless esbuild version change DE-353",
