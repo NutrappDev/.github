@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T17:27:19.324Z",
+  "generated_at": "2026-05-14T20:08:48.492Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -1602,7 +1602,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T16:47:28Z",
+      "last_push": "2026-05-14T19:44:21Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1990,7 +1990,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T17:26:43Z",
+      "last_push": "2026-05-14T20:08:06Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2019,8 +2019,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 16,
           "recent_commits": [
+            {
+              "sha": "308d423",
+              "message": "fix(package): serverless esbuild version change DE-353",
+              "date": "2026-05-14T20:08:04Z",
+              "author": "meraso-nutra",
+              "pr_number": "76",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "a066c66",
+              "message": "fix(serverless): removed serverless build DE-353",
+              "date": "2026-05-14T18:57:27Z",
+              "author": "meraso-nutra",
+              "pr_number": "75",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "ece8453",
               "message": "fix(serverless): change in dynamic plugin handling DE-353",
@@ -3021,7 +3047,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T14:00:36Z",
+      "last_push": "2026-05-14T19:36:11Z",
       "topics": [
         "fase-fruto",
         "team-roble"
