@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T16:55:42.315Z",
+  "generated_at": "2026-05-14T17:27:19.324Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -296,12 +296,12 @@
     },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
       "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-277": {
@@ -1990,7 +1990,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T16:49:25Z",
+      "last_push": "2026-05-14T17:26:43Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2019,8 +2019,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 12,
+          "count": 14,
           "recent_commits": [
+            {
+              "sha": "ece8453",
+              "message": "fix(serverless): change in dynamic plugin handling DE-353",
+              "date": "2026-05-14T17:26:41Z",
+              "author": "meraso-nutra",
+              "pr_number": "74",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "05327c4",
+              "message": "build(build): command change in post build DE-353",
+              "date": "2026-05-14T16:56:48Z",
+              "author": "meraso-nutra",
+              "pr_number": "73",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "709df69",
               "message": "build(build): install command change DE-353",
@@ -3160,7 +3186,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T21:59:47Z",
+      "last_push": "2026-05-14T16:59:31Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
