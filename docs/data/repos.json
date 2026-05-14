@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T20:20:25.744Z",
+  "generated_at": "2026-05-14T20:54:41.583Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -299,6 +299,11 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
+    "CA-36": {
+      "summary": "Configuracion vpc para backend certificados",
+      "status": "En proceso",
+      "assignee": "Richard Medina"
+    },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
       "status": "Revisión QA",
@@ -501,7 +506,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T23:04:19Z",
+      "last_push": "2026-05-14T20:54:14Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-13",
@@ -544,8 +549,22 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "e41b5e3",
+              "message": "fix(serverless): update VPC security group and subnet IDs in serverless.yml for production environments CA-36",
+              "date": "2026-05-14T20:54:12Z",
+              "author": "CristiGB",
+              "pr_number": "103",
+              "tickets": [
+                {
+                  "id": "CA-36",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-36"
+                }
+              ]
+            }
+          ]
         },
         "to_production": {
           "count": 2,
@@ -718,7 +737,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T20:05:29Z",
+      "last_push": "2026-05-14T20:42:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-12",
