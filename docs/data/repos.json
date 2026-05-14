@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T20:54:41.583Z",
+  "generated_at": "2026-05-14T21:01:08.502Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -299,11 +299,6 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
-    "CA-36": {
-      "summary": "Configuracion vpc para backend certificados",
-      "status": "En proceso",
-      "assignee": "Richard Medina"
-    },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
       "status": "Revisión QA",
@@ -506,7 +501,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T20:54:14Z",
+      "last_push": "2026-05-14T21:00:54Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-13",
@@ -532,13 +527,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-13",
-        "sha": "042e534bbe153e8ddada416b6c9460a60e875a9f",
-        "date": "2026-05-13T22:58:07Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-05-13",
-        "body": "Release qa-2026-05-13\n"
+        "version": "qa-2026-05-14",
+        "sha": "83a32f779e33a755e1adb143cf562e20688bac11",
+        "date": "2026-05-14T21:00:54Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-05-14",
+        "body": "Release qa-2026-05-14\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-13",
+          "sha": "042e534bbe153e8ddada416b6c9460a60e875a9f",
+          "date": "2026-05-13T22:58:07Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-certificates-backend/releases/tag/qa-2026-05-13",
+          "body": "Release qa-2026-05-13\n"
+        },
         {
           "version": "qa-2026-04-23",
           "sha": "4a182e5ba381382429ff43865e2bc14d663eb4b1",
@@ -549,26 +551,20 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "e41b5e3",
-              "message": "fix(serverless): update VPC security group and subnet IDs in serverless.yml for production environments CA-36",
-              "date": "2026-05-14T20:54:12Z",
-              "author": "CristiGB",
-              "pr_number": "103",
-              "tickets": [
-                {
-                  "id": "CA-36",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-36"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "83a32f7",
+              "message": "release: qa 2026 05 14",
+              "date": "2026-05-14T21:00:33Z",
+              "author": "CristiGB",
+              "pr_number": "104",
+              "tickets": []
+            },
             {
               "sha": "042e534",
               "message": "release: qa 2026 05 13",
