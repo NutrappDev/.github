@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T15:29:45.067Z",
+  "generated_at": "2026-05-15T16:07:49.589Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -338,6 +338,11 @@
       "summary": "MCCT Alivia México",
       "status": "Actividad completada",
       "assignee": "David Sarmiento"
+    },
+    "ALCO-1540": {
+      "summary": "Refactor checkout Alivia Colombia: compra de hormona y pacientes por referencia",
+      "status": "Por hacer",
+      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -3317,7 +3322,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T16:59:31Z",
+      "last_push": "2026-05-15T16:07:20Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3395,8 +3400,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 21,
           "recent_commits": [
+            {
+              "sha": "fecd67c",
+              "message": "feat(checkout): newCheckout hormones ALCO-1540",
+              "date": "2026-05-15T16:07:17Z",
+              "author": "fabianromerolu",
+              "pr_number": "387",
+              "tickets": [
+                {
+                  "id": "ALCO-1540",
+                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1540"
+                }
+              ]
+            },
             {
               "sha": "8f9590f",
               "message": "fix(orders): soportar prefijo CCCO en webhook Wompi NCR-128",
