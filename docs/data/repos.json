@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T14:50:45.179Z",
+  "generated_at": "2026-05-15T15:29:45.067Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -419,11 +419,6 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
-    "ALCO-905": {
-      "summary": "Actualización de flujo de plantillas en Alivia",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
-    },
     "ALCO-897": {
       "summary": "Realizar método de actualizar stock de productos en el servicio de producto",
       "status": "Actividad completada",
@@ -452,6 +447,39 @@
   },
   "repos": [
     {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-15T15:18:51Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -459,7 +487,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T14:08:22Z",
+      "last_push": "2026-05-15T15:23:07Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -537,7 +565,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 11,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "9261c11",
@@ -636,19 +664,6 @@
                 {
                   "id": "ALMX-228",
                   "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
-            },
-            {
-              "sha": "c4e5fb6",
-              "message": "fix/ALCO-1390_templates",
-              "date": "2026-02-16T21:43:08Z",
-              "author": "fabianromerolu",
-              "pr_number": "312",
-              "tickets": [
-                {
-                  "id": "ALCO-1390",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1390"
                 }
               ]
             }
@@ -2035,7 +2050,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T14:50:19Z",
+      "last_push": "2026-05-15T15:29:20Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2064,8 +2079,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 20,
+          "count": 21,
           "recent_commits": [
+            {
+              "sha": "7fa6153",
+              "message": "fix(pg): handling pg in database DE-353",
+              "date": "2026-05-15T15:29:17Z",
+              "author": "meraso-nutra",
+              "pr_number": "81",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "e4c284f",
               "message": "fix(serverless): update serverless v4 bundling DE-353",
@@ -2853,39 +2881,6 @@
       "is_fork": false,
       "default_branch": "main",
       "last_push": "2026-03-16T17:15:09Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-03-16T17:15:04Z",
       "topics": [],
       "production": null,
       "production_history": [],
