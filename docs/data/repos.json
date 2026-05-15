@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-14T23:12:19.755Z",
+  "generated_at": "2026-05-15T14:50:45.179Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-299": {
       "summary": "PDF de prescripción hormonal muestra datos incorrectos en órdenes del Contact Center",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "SUP-298": {
@@ -163,6 +163,11 @@
       "summary": "Integración con empresa de transporte",
       "status": "Esperando aprobación",
       "assignee": "Jhelcy Sandoval"
+    },
+    "NMX-418": {
+      "summary": "Ajustar los profesionales de Dirección Médica ( Avalado )",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "NMX-408": {
       "summary": "BG | Aliados | Se deja un espacio en blanco de manera irregular en el carrusel",
@@ -454,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T23:06:51Z",
+      "last_push": "2026-05-15T14:08:22Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -2030,7 +2035,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T23:11:55Z",
+      "last_push": "2026-05-15T14:50:19Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2059,8 +2064,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 18,
+          "count": 20,
           "recent_commits": [
+            {
+              "sha": "e4c284f",
+              "message": "fix(serverless): update serverless v4 bundling DE-353",
+              "date": "2026-05-15T14:50:16Z",
+              "author": "meraso-nutra",
+              "pr_number": "80",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "10c0974",
+              "message": "fix(serverless): serverless stack management v4 DE-353",
+              "date": "2026-05-15T13:59:22Z",
+              "author": "meraso-nutra",
+              "pr_number": "79",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
             {
               "sha": "c33e8fb",
               "message": "fix(package): updated version of serverless offline DE-353",
@@ -2382,7 +2413,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T16:55:26Z",
+      "last_push": "2026-05-15T09:13:46Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -3113,7 +3144,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T19:36:11Z",
+      "last_push": "2026-05-15T14:41:15Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3144,8 +3175,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "581db62",
+              "message": "fix: actualizar profesional de Dirección Médica México [NMX-418]",
+              "date": "2026-05-15T14:41:13Z",
+              "author": "mladino-source",
+              "pr_number": "22",
+              "tickets": [
+                {
+                  "id": "NMX-418",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-418"
+                }
+              ]
+            },
             {
               "sha": "1d84c2a",
               "message": "fix(breadcrumb): update label to Nuestros Copresidentes #PMO-2758",
