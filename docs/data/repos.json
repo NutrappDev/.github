@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-05-15T16:12:53.715Z",
+  "generated_at": "2026-05-15T20:22:32.755Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-300": {
+      "summary": "Página de confirmación de compra y sincronización automática de estado con Wompi",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "SUP-299": {
       "summary": "PDF de prescripción hormonal muestra datos incorrectos en órdenes del Contact Center",
       "status": "Despliegue a DEV",
@@ -201,7 +206,7 @@
     },
     "NE-74": {
       "summary": "Crear página de Contactos y primeras 2 pantallas de Checkout (Nutrabiotics Empresas)",
-      "status": "Detenido",
+      "status": "Revisión QA",
       "assignee": "Kevin Aguilera"
     },
     "NCR-128": {
@@ -311,7 +316,7 @@
     },
     "ALMX-300": {
       "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
-      "status": "Despliegue a QA",
+      "status": "Revisión QA",
       "assignee": "Nicolas Danilo Muñoz Aldana"
     },
     "ALMX-277": {
@@ -459,7 +464,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T16:07:55Z",
+      "last_push": "2026-05-15T17:26:17Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -1654,7 +1659,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-14T20:20:02Z",
+      "last_push": "2026-05-15T20:22:09Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1732,8 +1737,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 14,
           "recent_commits": [
+            {
+              "sha": "1fec687",
+              "message": "feat(SUP-300): página de confirmación + sync Wompi + ajustes PDF/toast/tipo persona",
+              "date": "2026-05-15T20:22:07Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "209",
+              "tickets": [
+                {
+                  "id": "SUP-300",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-300"
+                }
+              ]
+            },
             {
               "sha": "18b7256",
               "message": "refactor(SUP-299): PDF prescripcion correcta, precio medico, QR en detalle y refactor useManualOrder",
@@ -2446,7 +2464,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T09:13:46Z",
+      "last_push": "2026-05-15T18:29:52Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
