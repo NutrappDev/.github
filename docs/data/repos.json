@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T20:22:32.755Z",
+  "generated_at": "2026-05-15T20:47:26.284Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -183,6 +183,11 @@
       "summary": "BG | Diseño | Espacio en blanco innecesario en la interfaz",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
+    },
+    "NE-269": {
+      "summary": "Flujo C Pago de contado Modificar cantidades y eliminar productos de la bolsa",
+      "status": "Despliegue a DEV",
+      "assignee": "Kevin Aguilera"
     },
     "NE-246": {
       "summary": "Transformación de datos de orden para integración con ERP",
@@ -2464,7 +2469,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T18:29:52Z",
+      "last_push": "2026-05-15T20:47:03Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -2521,8 +2526,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
+          "count": 2,
           "recent_commits": [
+            {
+              "sha": "e6cbb7c",
+              "message": "fix: correción del flujo de usuario de contado NE-269 ",
+              "date": "2026-05-15T20:47:01Z",
+              "author": "k-aguilera",
+              "pr_number": "76",
+              "tickets": [
+                {
+                  "id": "NE-269",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NE-269"
+                }
+              ]
+            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
