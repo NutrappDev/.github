@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T20:47:26.284Z",
+  "generated_at": "2026-05-15T21:06:17.046Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -268,6 +268,11 @@
       "summary": "ms- Ordenes",
       "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
+    },
+    "NCOL-695": {
+      "summary": "Habilitar imagenes en el calendario",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -1228,7 +1233,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-13T14:51:56Z",
+      "last_push": "2026-05-15T21:05:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1306,8 +1311,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "52379fb",
+              "message": "fix(events): corregir errores de renderizado de informacion y agregar conexion en campos NCOL-695",
+              "date": "2026-05-15T21:05:50Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "95",
+              "tickets": [
+                {
+                  "id": "NCOL-695",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-695"
+                }
+              ]
+            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
@@ -1664,7 +1682,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T20:22:09Z",
+      "last_push": "2026-05-15T21:04:05Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
