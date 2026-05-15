@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T21:06:17.046Z",
+  "generated_at": "2026-05-15T21:27:45.501Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -42,11 +42,6 @@
     "SUP-282": {
       "summary": "Desde Nutracore: implementar endpoint para edición de eventos (MS-events)",
       "status": "Actividad completada",
-      "assignee": "Steven Leon"
-    },
-    "SUP-278": {
-      "summary": "Implementar formulario de creación y edición de eventos",
-      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "SUP-272": {
@@ -1682,7 +1677,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T21:04:05Z",
+      "last_push": "2026-05-15T21:27:32Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1722,13 +1717,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-04-24",
-        "sha": "26db091c77b82c4574b67eaf7c48b949a7c8acac",
-        "date": "2026-04-24T21:13:07Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-24",
-        "body": "Release qa-2026-04-24\n"
+        "version": "qa-2026-05-15",
+        "sha": "c6f05dce2f236ccd1837b3c92e0a505c5340a89f",
+        "date": "2026-05-15T21:27:32Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-05-15",
+        "body": "Release qa-2026-05-15\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-04-24",
+          "sha": "26db091c77b82c4574b67eaf7c48b949a7c8acac",
+          "date": "2026-04-24T21:13:07Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-24",
+          "body": "Release qa-2026-04-24\n"
+        },
         {
           "version": "qa-2026-04-14",
           "sha": "c7b738aac84c7536a3c97b4db5d78a973960fd6d",
@@ -1749,18 +1751,11 @@
           "date": "2026-03-17T16:16:50Z",
           "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
           "body": "Release qa-2026-03-17\n"
-        },
-        {
-          "version": "qa-2026-03-09",
-          "sha": "d026f2064b28d19fae35f05b3c1e31a90fd4ee13",
-          "date": "2026-03-09T21:53:49Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-09",
-          "body": "Release qa-2026-03-09\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 13,
           "recent_commits": [
             {
               "sha": "1fec687",
@@ -1824,19 +1819,6 @@
                 {
                   "id": "SUP-296",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-296"
-                }
-              ]
-            },
-            {
-              "sha": "38aa412",
-              "message": "fix: corregir error de fechas para eventos del mismo dia SUP-278",
-              "date": "2026-05-07T19:36:55Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "201",
-              "tickets": [
-                {
-                  "id": "SUP-278",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-278"
                 }
               ]
             },
@@ -1947,8 +1929,16 @@
           ]
         },
         "to_production": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "c6f05dc",
+              "message": "release: qa 2026 05 15",
+              "date": "2026-05-15T21:27:20Z",
+              "author": "CristiGB",
+              "pr_number": "210",
+              "tickets": []
+            },
             {
               "sha": "26db091",
               "message": "release: qa 2026 04 24",
