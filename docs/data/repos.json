@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T21:27:45.501Z",
+  "generated_at": "2026-05-15T21:30:30.693Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -118,6 +118,11 @@
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2748": {
+      "summary": "Certificados automáticos | Error cargue de información",
+      "status": "Despliegue a DEV",
+      "assignee": "ISABEL GOMEZ"
     },
     "PMO-2741": {
       "summary": "Base de Puntos Alivia",
@@ -461,6 +466,66 @@
     }
   },
   "repos": [
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-15T21:30:07Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "120cb66",
+              "message": "feat: Implement centralized error handling and authentication context with error boundary component PMO-2748",
+              "date": "2026-05-15T21:30:06Z",
+              "author": "CristiGB",
+              "pr_number": "31",
+              "tickets": [
+                {
+                  "id": "PMO-2748",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2748"
+                }
+              ]
+            },
+            {
+              "sha": "47d72d4",
+              "message": "fix(employes):  improve API error response structure CA-30",
+              "date": "2026-05-13T14:11:48Z",
+              "author": "CristiGB",
+              "pr_number": "30",
+              "tickets": [
+                {
+                  "id": "CA-30",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "nutrapp-gestion-proyectos-backend",
       "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
@@ -1030,53 +1095,6 @@
               "tickets": []
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-admin",
-      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-14T00:05:38Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "47d72d4",
-              "message": "fix(employes):  improve API error response structure CA-30",
-              "date": "2026-05-13T14:11:48Z",
-              "author": "CristiGB",
-              "pr_number": "30",
-              "tickets": [
-                {
-                  "id": "CA-30",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
