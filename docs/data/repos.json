@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-15T21:55:28.906Z",
+  "generated_at": "2026-05-18T06:24:33.532Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-300": {
       "summary": "Página de confirmación de compra y sincronización automática de estado con Wompi",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "SUP-299": {
@@ -316,7 +316,7 @@
     },
     "DE-353": {
       "summary": "Revision del microservicio de pagos",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Mario Eraso"
     },
     "CIMF-284": {
@@ -755,7 +755,7 @@
           ]
         },
         "to_production": {
-          "count": 28,
+          "count": 27,
           "recent_commits": [
             {
               "sha": "5d7f882",
@@ -1251,7 +1251,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T21:55:08Z",
+      "last_push": "2026-05-15T22:13:48Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1649,7 +1649,7 @@
           ]
         },
         "to_production": {
-          "count": 4,
+          "count": 3,
           "recent_commits": [
             {
               "sha": "4c8b340",
@@ -1684,14 +1684,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/NE-151"
                 }
               ]
-            },
-            {
-              "sha": "e8a8fc6",
-              "message": "Merge QA",
-              "date": "2026-02-16T20:30:20Z",
-              "author": "k-aguilera",
-              "pr_number": "61",
-              "tickets": []
             }
           ]
         }
@@ -2078,25 +2070,8 @@
           "recent_commits": []
         },
         "to_production": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "3144cdd",
-              "message": "fix: Adjust on cmd",
-              "date": "2026-02-16T20:40:41Z",
-              "author": "k-aguilera",
-              "pr_number": "38",
-              "tickets": []
-            },
-            {
-              "sha": "a673ab9",
-              "message": "Business type flow config",
-              "date": "2026-02-16T19:16:10Z",
-              "author": "k-aguilera",
-              "pr_number": "37",
-              "tickets": []
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         }
       },
       "ci": {
