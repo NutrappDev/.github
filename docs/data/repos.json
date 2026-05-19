@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T19:40:52.420Z",
+  "generated_at": "2026-05-19T21:36:35.072Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -319,11 +319,6 @@
       "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
-    "ALMX-300": {
-      "summary": "BG | Sección de Salud | No se ve información en Salud Mental y Genética",
-      "status": "Revisión QA",
-      "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Actividad completada",
@@ -457,39 +452,6 @@
   },
   "repos": [
     {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-19T16:32:43Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "nutrabiotics-certificates-admin",
       "full_name": "NutrappDev/nutrabiotics-certificates-admin",
       "description": null,
@@ -497,7 +459,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T21:30:07Z",
+      "last_push": "2026-05-19T21:34:02Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -550,6 +512,39 @@
       }
     },
     {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-19T19:57:46Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -557,7 +552,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T18:06:55Z",
+      "last_push": "2026-05-19T21:36:10Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -635,7 +630,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 9,
           "recent_commits": [
             {
               "sha": "552dca7",
@@ -651,28 +646,15 @@
               ]
             },
             {
-              "sha": "dc80e6f",
-              "message": "feat(checkout): newCheckout hormones ALCO-1540",
-              "date": "2026-05-15T16:12:23Z",
-              "author": "fabianromerolu",
-              "pr_number": "471",
+              "sha": "4fadcd2",
+              "message": "fix(shipping): update shipping cost thresholds for Mexico PMO-2667",
+              "date": "2026-03-03T14:46:16Z",
+              "author": "CristiGB",
+              "pr_number": "329",
               "tickets": [
                 {
-                  "id": "ALCO-1540",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1540"
-                }
-              ]
-            },
-            {
-              "sha": "9261c11",
-              "message": "fix(sections): mostrar mensaje sin articulos ALMX-300",
-              "date": "2026-05-12T13:57:09Z",
-              "author": "NicolasDaniloMunozAldana",
-              "pr_number": "452",
-              "tickets": [
-                {
-                  "id": "ALMX-300",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-300"
+                  "id": "PMO-2667",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2667"
                 }
               ]
             },
@@ -740,8 +722,16 @@
           ]
         },
         "to_production": {
-          "count": 27,
+          "count": 28,
           "recent_commits": [
+            {
+              "sha": "549df88",
+              "message": "release: qa 2026 05 19",
+              "date": "2026-05-19T21:36:08Z",
+              "author": "CristiGB",
+              "pr_number": "474",
+              "tickets": []
+            },
             {
               "sha": "5d7f882",
               "message": "release: qa 2026 05 13",
@@ -967,14 +957,6 @@
               "date": "2026-02-27T16:05:12Z",
               "author": "CristiGB",
               "pr_number": "328",
-              "tickets": []
-            },
-            {
-              "sha": "6c17fbe",
-              "message": "Develop",
-              "date": "2026-02-25T20:53:59Z",
-              "author": "CristiGB",
-              "pr_number": "325",
               "tickets": []
             }
           ]
