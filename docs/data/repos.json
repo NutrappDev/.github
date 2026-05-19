@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T22:17:49.038Z",
+  "generated_at": "2026-05-19T22:28:51.216Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -113,11 +113,6 @@
       "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
-    },
-    "PMO-2817": {
-      "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2758": {
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
@@ -3279,7 +3274,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T22:09:07Z",
+      "last_push": "2026-05-19T22:28:26Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3357,8 +3352,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 25,
+          "count": 26,
           "recent_commits": [
+            {
+              "sha": "382cda1",
+              "message": "feat(prescriptions): purchase-templates PMO-2909",
+              "date": "2026-05-19T22:28:24Z",
+              "author": "fabianromerolu",
+              "pr_number": "393",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "80c8420",
               "message": "chore(notifications): trigger redeploy after env vars setup PALCO-20",
@@ -3668,19 +3676,6 @@
                 {
                   "id": "SUP-292",
                   "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "5f56994",
-              "message": "fix(prescriptions): register pdf PMO-2817",
-              "date": "2026-04-15T21:44:08Z",
-              "author": "fabianromerolu",
-              "pr_number": "318",
-              "tickets": [
-                {
-                  "id": "PMO-2817",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
                 }
               ]
             }
