@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T22:06:01.165Z",
+  "generated_at": "2026-05-19T22:09:32.943Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3328,7 +3328,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T22:05:40Z",
+      "last_push": "2026-05-19T22:09:07Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3406,8 +3406,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 24,
+          "count": 25,
           "recent_commits": [
+            {
+              "sha": "80c8420",
+              "message": "chore(notifications): trigger redeploy after env vars setup PALCO-20",
+              "date": "2026-05-19T22:09:04Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "391",
+              "tickets": [
+                {
+                  "id": "PALCO-20",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-20"
+                }
+              ]
+            },
             {
               "sha": "31bcd33",
               "message": "feat(prescriptions): purchase-templates PMO-2909",
