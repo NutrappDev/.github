@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T21:36:35.072Z",
+  "generated_at": "2026-05-19T21:41:49.355Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -314,11 +314,6 @@
       "status": "Detenido",
       "assignee": "Kevin Aguilera"
     },
-    "CA-30": {
-      "summary": "Certificados automaticos | Revisión de usuarios",
-      "status": "Despliegue a PROD",
-      "assignee": "ISABEL GOMEZ"
-    },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Actividad completada",
@@ -459,15 +454,21 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T21:34:02Z",
+      "last_push": "2026-05-19T21:41:37Z",
       "topics": [],
       "production": null,
       "production_history": [],
-      "qa": null,
+      "qa": {
+        "version": "qa-2026-05-19",
+        "sha": "c3e07525c88260aa6ee8e98ee218a8686ab14ecb",
+        "date": "2026-05-19T21:41:36Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
+      },
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 1,
           "recent_commits": [
             {
               "sha": "120cb66",
@@ -481,25 +482,21 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2748"
                 }
               ]
-            },
-            {
-              "sha": "47d72d4",
-              "message": "fix(employes):  improve API error response structure CA-30",
-              "date": "2026-05-13T14:11:48Z",
-              "author": "CristiGB",
-              "pr_number": "30",
-              "tickets": [
-                {
-                  "id": "CA-30",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CA-30"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 0,
-          "recent_commits": []
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "c3e0752",
+              "message": "release: qa 2026 05 19",
+              "date": "2026-05-19T21:41:24Z",
+              "author": "CristiGB",
+              "pr_number": "32",
+              "tickets": []
+            }
+          ]
         }
       },
       "ci": null,
@@ -552,7 +549,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T21:36:10Z",
+      "last_push": "2026-05-19T21:36:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -592,13 +589,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-13",
-        "sha": "5d7f88251eb9a4d700c6dca4fc900ee146638718",
-        "date": "2026-05-13T20:05:28Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-13",
-        "body": "Release qa-2026-05-13\n"
+        "version": "qa-2026-05-19",
+        "sha": "549df88b9beb9c270d7db9603fc02225b4787cc7",
+        "date": "2026-05-19T21:36:30Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-13",
+          "sha": "5d7f88251eb9a4d700c6dca4fc900ee146638718",
+          "date": "2026-05-13T20:05:28Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-13",
+          "body": "Release qa-2026-05-13\n"
+        },
         {
           "version": "qa-2026-05-12",
           "sha": "41ee627ac7c30ebd43306ece5b0e0c19a3e648d4",
@@ -619,13 +623,6 @@
           "date": "2026-05-06T14:49:58Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-06",
           "body": "Release qa-2026-05-06\n"
-        },
-        {
-          "version": "qa-2026-04-29",
-          "sha": "0a083362fb2d2977c5d80f3a5c132dcf0af21015",
-          "date": "2026-04-29T20:11:25Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-29",
-          "body": "Release qa-2026-04-29\n"
         }
       ],
       "pending": {
