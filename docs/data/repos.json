@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T14:14:09.982Z",
+  "generated_at": "2026-05-19T18:07:18.807Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -36,7 +36,7 @@
     },
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
-      "status": "Despliegue a PROD",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-282": {
@@ -104,6 +104,11 @@
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
+    "PMO-2909": {
+      "summary": "Actualización dosificaciones por unidades en Hormonas Bioidenticas (prioridad Melatonina)",
+      "status": "En proceso",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "PMO-2898": {
       "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
       "status": "Despliegue a QA",
@@ -161,12 +166,12 @@
     },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
-      "status": "Actividad completada",
+      "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-20": {
       "summary": "Integración con empresa de transporte",
-      "status": "Esperando aprobación",
+      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "NMX-418": {
@@ -316,7 +321,7 @@
     },
     "CA-30": {
       "summary": "Certificados automaticos | Revisión de usuarios",
-      "status": "Revisión QA",
+      "status": "Despliegue a PROD",
       "assignee": "ISABEL GOMEZ"
     },
     "ALMX-300": {
@@ -343,11 +348,6 @@
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALMX-228": {
-      "summary": "MCCT Alivia México",
-      "status": "Actividad completada",
-      "assignee": "David Sarmiento"
     },
     "ALCO-1540": {
       "summary": "Refactor checkout Alivia Colombia: compra de hormona y pacientes por referencia",
@@ -462,6 +462,39 @@
   },
   "repos": [
     {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-19T16:32:43Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "nutrabiotics-certificates-admin",
       "full_name": "NutrappDev/nutrabiotics-certificates-admin",
       "description": null,
@@ -522,39 +555,6 @@
       }
     },
     {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-15T17:26:17Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "alivia",
       "full_name": "NutrappDev/alivia",
       "description": null,
@@ -562,7 +562,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T16:12:26Z",
+      "last_push": "2026-05-19T18:06:55Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -601,12 +601,60 @@
           "body": "Release prod-2026-04-29\n"
         }
       ],
-      "qa": null,
-      "qa_history": [],
+      "qa": {
+        "version": "qa-2026-05-13",
+        "sha": "5d7f88251eb9a4d700c6dca4fc900ee146638718",
+        "date": "2026-05-13T20:05:28Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-13",
+        "body": "Release qa-2026-05-13\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-05-12",
+          "sha": "41ee627ac7c30ebd43306ece5b0e0c19a3e648d4",
+          "date": "2026-05-12T17:23:37Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-12",
+          "body": "Release qa-2026-05-12\n"
+        },
+        {
+          "version": "qa-2026-05-11",
+          "sha": "74e83aff0ba138472e1e75151fde7f34129317cc",
+          "date": "2026-05-11T18:15:54Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-11",
+          "body": "Release qa-2026-05-11\n"
+        },
+        {
+          "version": "qa-2026-05-06",
+          "sha": "5fbee5784efff04edbafe51c4d77dce239b0c413",
+          "date": "2026-05-06T14:49:58Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-06",
+          "body": "Release qa-2026-05-06\n"
+        },
+        {
+          "version": "qa-2026-04-29",
+          "sha": "0a083362fb2d2977c5d80f3a5c132dcf0af21015",
+          "date": "2026-04-29T20:11:25Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-29",
+          "body": "Release qa-2026-04-29\n"
+        }
+      ],
       "pending": {
         "to_qa": {
           "count": 10,
           "recent_commits": [
+            {
+              "sha": "552dca7",
+              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
+              "date": "2026-05-19T18:06:50Z",
+              "author": "fabianromerolu",
+              "pr_number": "472",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "dc80e6f",
               "message": "feat(checkout): newCheckout hormones ALCO-1540",
@@ -693,19 +741,6 @@
               "author": "fabianromerolu",
               "pr_number": "318",
               "tickets": []
-            },
-            {
-              "sha": "a3421bb",
-              "message": "docs(terms): correcciones de formato y texto en términos México ALMX-228",
-              "date": "2026-02-19T22:57:42Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "316",
-              "tickets": [
-                {
-                  "id": "ALMX-228",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-228"
-                }
-              ]
             }
           ]
         },
@@ -2884,7 +2919,10 @@
       "qa": null,
       "qa_history": [],
       "pending": {
-        "to_qa": null,
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
         "to_production": {
           "count": 0,
           "recent_commits": []
@@ -2894,7 +2932,7 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": "fetch failed",
+        "pending_to_qa": null,
         "pending_to_production": null,
         "ci": null
       }
