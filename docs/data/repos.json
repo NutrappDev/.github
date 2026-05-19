@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T18:55:39.442Z",
+  "generated_at": "2026-05-19T19:40:52.420Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3343,7 +3343,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T18:55:20Z",
+      "last_push": "2026-05-19T19:40:20Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3421,8 +3421,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 22,
+          "count": 23,
           "recent_commits": [
+            {
+              "sha": "b4303a4",
+              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
+              "date": "2026-05-19T19:40:18Z",
+              "author": "fabianromerolu",
+              "pr_number": "389",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "c7e3278",
               "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
