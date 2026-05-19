@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T22:09:32.943Z",
+  "generated_at": "2026-05-19T22:17:49.038Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -128,11 +128,6 @@
       "summary": "Certificados automáticos | Error cargue de información",
       "status": "Revisión QA",
       "assignee": "ISABEL GOMEZ"
-    },
-    "PMO-2741": {
-      "summary": "Base de Puntos Alivia",
-      "status": "Revisión QA",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2725": {
       "summary": "Alivia Perú: Configuración de fletes provisionales (Lima) - Prueba de Ruta",
@@ -1643,7 +1638,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T18:55:11Z",
+      "last_push": "2026-05-19T22:17:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1683,13 +1678,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-15",
-        "sha": "c6f05dce2f236ccd1837b3c92e0a505c5340a89f",
-        "date": "2026-05-15T21:27:32Z",
-        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-05-15",
-        "body": "Release qa-2026-05-15\n"
+        "version": "qa-2026-05-19",
+        "sha": "7f1cb24e63f5af17bd2c004b65c3fabbf810f6f1",
+        "date": "2026-05-19T22:17:35Z",
+        "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-15",
+          "sha": "c6f05dce2f236ccd1837b3c92e0a505c5340a89f",
+          "date": "2026-05-15T21:27:32Z",
+          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-05-15",
+          "body": "Release qa-2026-05-15\n"
+        },
         {
           "version": "qa-2026-04-24",
           "sha": "26db091c77b82c4574b67eaf7c48b949a7c8acac",
@@ -1710,18 +1712,11 @@
           "date": "2026-04-09T20:44:38Z",
           "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-04-09",
           "body": "Release qa-2026-04-09\n"
-        },
-        {
-          "version": "qa-2026-03-17",
-          "sha": "5a835dce6114cf0626fb3cbe2e1f876e17342b4e",
-          "date": "2026-03-17T16:16:50Z",
-          "url": "https://github.com/NutrappDev/portal-nutrabiotics/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 14,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "e45766d",
@@ -1852,64 +1847,20 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/PMO-2613"
                 }
               ]
-            },
-            {
-              "sha": "8581d58",
-              "message": "fix(prescriptions): bug pdf v2 SUP-292",
-              "date": "2026-04-20T22:54:59Z",
-              "author": "fabianromerolu",
-              "pr_number": "193",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "5f0abcd",
-              "message": "fix(authorizations): bug pdf SUP-292",
-              "date": "2026-04-20T21:08:18Z",
-              "author": "fabianromerolu",
-              "pr_number": "192",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "c690c36",
-              "message": "refactor(points): points module PMO-2741",
-              "date": "2026-04-20T19:34:32Z",
-              "author": "fabianromerolu",
-              "pr_number": "190",
-              "tickets": [
-                {
-                  "id": "PMO-2741",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2741"
-                }
-              ]
-            },
-            {
-              "sha": "3518da3",
-              "message": "refactor(points): points module PMO-2741",
-              "date": "2026-04-20T15:23:22Z",
-              "author": "fabianromerolu",
-              "pr_number": "188",
-              "tickets": [
-                {
-                  "id": "PMO-2741",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2741"
-                }
-              ]
             }
           ]
         },
         "to_production": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "7f1cb24",
+              "message": "release: qa 2026 05 19",
+              "date": "2026-05-19T22:17:23Z",
+              "author": "CristiGB",
+              "pr_number": "212",
+              "tickets": []
+            },
             {
               "sha": "c6f05dc",
               "message": "release: qa 2026 05 15",
