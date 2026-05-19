@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T22:28:51.216Z",
+  "generated_at": "2026-05-19T23:30:50.679Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -151,7 +151,7 @@
     },
     "PALCO-91": {
       "summary": "Conectar endpoints de shipping con ERP",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Jhelcy Sandoval"
     },
     "PALCO-84": {
@@ -178,11 +178,6 @@
       "summary": "BG | Diseño | Espacio en blanco innecesario en la interfaz",
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
-    },
-    "NE-269": {
-      "summary": "Flujo C Pago de contado Modificar cantidades y eliminar productos de la bolsa",
-      "status": "Despliegue a DEV",
-      "assignee": "Kevin Aguilera"
     },
     "NE-246": {
       "summary": "Transformación de datos de orden para integración con ERP",
@@ -2385,7 +2380,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T20:47:03Z",
+      "last_push": "2026-05-19T23:30:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-04-21",
@@ -2404,13 +2399,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-14",
-        "sha": "fc7ef225050937330ee2c13ee2bc549a370770e1",
-        "date": "2026-05-14T16:55:25Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-05-14",
-        "body": "Release qa-2026-05-14\n"
+        "version": "qa-2026-05-19",
+        "sha": "e637056c19899eb7c56430511799a538ad3060c2",
+        "date": "2026-05-19T23:30:35Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-14",
+          "sha": "fc7ef225050937330ee2c13ee2bc549a370770e1",
+          "date": "2026-05-14T16:55:25Z",
+          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-05-14",
+          "body": "Release qa-2026-05-14\n"
+        },
         {
           "version": "qa-2026-05-05",
           "sha": "369a750f4b9f5a0d44c69c83de16b12796fb20c8",
@@ -2431,32 +2433,12 @@
           "date": "2026-04-09T16:03:15Z",
           "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-04-09",
           "body": "Release qa-2026-04-09\n"
-        },
-        {
-          "version": "qa-2026-03-17",
-          "sha": "ebf01530498d088c0335b3014e88cba3a3da6d97",
-          "date": "2026-03-17T13:15:47Z",
-          "url": "https://github.com/NutrappDev/nutrabiotics-empresas/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 1,
           "recent_commits": [
-            {
-              "sha": "e6cbb7c",
-              "message": "fix: correción del flujo de usuario de contado NE-269 ",
-              "date": "2026-05-15T20:47:01Z",
-              "author": "k-aguilera",
-              "pr_number": "76",
-              "tickets": [
-                {
-                  "id": "NE-269",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-269"
-                }
-              ]
-            },
             {
               "sha": "199eb6a",
               "message": "feat: flujo de checkout 2 primeros pasos NE-74",
@@ -2473,8 +2455,16 @@
           ]
         },
         "to_production": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "e637056",
+              "message": "release: qa-2026-05-19",
+              "date": "2026-05-19T23:30:23Z",
+              "author": "k-aguilera",
+              "pr_number": "77",
+              "tickets": []
+            },
             {
               "sha": "fc7ef22",
               "message": "release: qa-2026-05-13",
