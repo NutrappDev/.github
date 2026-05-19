@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T21:41:49.355Z",
+  "generated_at": "2026-05-19T22:03:47.293Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -454,9 +454,15 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T21:41:37Z",
+      "last_push": "2026-05-19T22:03:32Z",
       "topics": [],
-      "production": null,
+      "production": {
+        "version": "prod-2026-05-19",
+        "sha": "d05e1fc830420376a906efa9176fd648b045142a",
+        "date": "2026-05-19T22:03:31Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/prod-2026-05-19",
+        "body": "Release prod-2026-05-19\n"
+      },
       "production_history": [],
       "qa": {
         "version": "qa-2026-05-19",
@@ -3322,7 +3328,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T19:40:20Z",
+      "last_push": "2026-05-19T22:00:08Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
