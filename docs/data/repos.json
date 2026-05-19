@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T18:07:18.807Z",
+  "generated_at": "2026-05-19T18:55:39.442Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -201,11 +201,6 @@
     },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
-      "status": "Actividad completada",
-      "assignee": "Kevin Aguilera"
-    },
-    "NE-197": {
-      "summary": "HU-CAT-02 — Breadcrumb del catálogo",
       "status": "Actividad completada",
       "assignee": "Kevin Aguilera"
     },
@@ -1603,22 +1598,8 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "d1bccc6",
-              "message": "fix: Backup function for user role NE-197 ",
-              "date": "2026-02-18T18:32:44Z",
-              "author": "k-aguilera",
-              "pr_number": "65",
-              "tickets": [
-                {
-                  "id": "NE-197",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-197"
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "recent_commits": []
         },
         "to_production": {
           "count": 3,
@@ -1677,7 +1658,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T21:27:32Z",
+      "last_push": "2026-05-19T18:55:11Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -1755,8 +1736,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 14,
           "recent_commits": [
+            {
+              "sha": "e45766d",
+              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
+              "date": "2026-05-19T18:55:09Z",
+              "author": "fabianromerolu",
+              "pr_number": "211",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "1fec687",
               "message": "feat(SUP-300): página de confirmación + sync Wompi + ajustes PDF/toast/tipo persona",
@@ -3349,7 +3343,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T16:07:20Z",
+      "last_push": "2026-05-19T18:55:20Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3427,8 +3421,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 21,
+          "count": 22,
           "recent_commits": [
+            {
+              "sha": "c7e3278",
+              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
+              "date": "2026-05-19T18:55:18Z",
+              "author": "fabianromerolu",
+              "pr_number": "388",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "fecd67c",
               "message": "feat(checkout): newCheckout hormones ALCO-1540",
