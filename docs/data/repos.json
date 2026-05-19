@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-18T06:24:33.532Z",
+  "generated_at": "2026-05-19T14:14:09.982Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -268,16 +268,6 @@
       "summary": "ms- Ordenes",
       "status": "Despliegue a PROD",
       "assignee": "Nicolas Danilo Muñoz Aldana"
-    },
-    "NCOL-696": {
-      "summary": "Actualización del boton inscribete",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
-    },
-    "NCOL-695": {
-      "summary": "Habilitar imagenes en el calendario",
-      "status": "Despliegue a QA",
-      "assignee": "Steven Leon"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -611,43 +601,8 @@
           "body": "Release prod-2026-04-29\n"
         }
       ],
-      "qa": {
-        "version": "qa-2026-05-13",
-        "sha": "5d7f88251eb9a4d700c6dca4fc900ee146638718",
-        "date": "2026-05-13T20:05:28Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-13",
-        "body": "Release qa-2026-05-13\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-05-12",
-          "sha": "41ee627ac7c30ebd43306ece5b0e0c19a3e648d4",
-          "date": "2026-05-12T17:23:37Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-12",
-          "body": "Release qa-2026-05-12\n"
-        },
-        {
-          "version": "qa-2026-05-11",
-          "sha": "74e83aff0ba138472e1e75151fde7f34129317cc",
-          "date": "2026-05-11T18:15:54Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-11",
-          "body": "Release qa-2026-05-11\n"
-        },
-        {
-          "version": "qa-2026-05-06",
-          "sha": "5fbee5784efff04edbafe51c4d77dce239b0c413",
-          "date": "2026-05-06T14:49:58Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-05-06",
-          "body": "Release qa-2026-05-06\n"
-        },
-        {
-          "version": "qa-2026-04-29",
-          "sha": "0a083362fb2d2977c5d80f3a5c132dcf0af21015",
-          "date": "2026-04-29T20:11:25Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/qa-2026-04-29",
-          "body": "Release qa-2026-04-29\n"
-        }
-      ],
+      "qa": null,
+      "qa_history": [],
       "pending": {
         "to_qa": {
           "count": 10,
@@ -1251,7 +1206,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T22:13:48Z",
+      "last_push": "2026-05-19T14:13:47Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1291,13 +1246,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-13",
-        "sha": "a12b206aa5bad1b80759148e545255048e53716d",
-        "date": "2026-05-13T14:51:55Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-13",
-        "body": "Release qa-2026-05-13\n"
+        "version": "qa-2026-05-19",
+        "sha": "b4ecec876fbb575cedf23492dfeff5ff6db910f5",
+        "date": "2026-05-19T14:13:46Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-13",
+          "sha": "a12b206aa5bad1b80759148e545255048e53716d",
+          "date": "2026-05-13T14:51:55Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-13",
+          "body": "Release qa-2026-05-13\n"
+        },
         {
           "version": "qa-2026-04-30",
           "sha": "6f02aa766c79de412841f7cf36bf47e2d7be7a1a",
@@ -1318,45 +1280,12 @@
           "date": "2026-03-25T20:35:01Z",
           "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
           "body": "Release qa-2026-03-25\n"
-        },
-        {
-          "version": "qa-2026-03-17",
-          "sha": "2476952284e1f9c23971b0ebcc0c56945b6c5052",
-          "date": "2026-03-17T21:33:39Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-17",
-          "body": "Release qa-2026-03-17\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 4,
           "recent_commits": [
-            {
-              "sha": "906033e",
-              "message": "fix(events): corregir visualización de imagen del evento en mobile NCOL-696",
-              "date": "2026-05-15T21:55:06Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "96",
-              "tickets": [
-                {
-                  "id": "NCOL-696",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-696"
-                }
-              ]
-            },
-            {
-              "sha": "52379fb",
-              "message": "fix(events): corregir errores de renderizado de informacion y agregar conexion en campos NCOL-695",
-              "date": "2026-05-15T21:05:50Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "95",
-              "tickets": [
-                {
-                  "id": "NCOL-695",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-695"
-                }
-              ]
-            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
@@ -1412,8 +1341,16 @@
           ]
         },
         "to_production": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "b4ecec8",
+              "message": "release: deploy PRs a QA - 2026-05-15",
+              "date": "2026-05-19T14:13:26Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "97",
+              "tickets": []
+            },
             {
               "sha": "a12b206",
               "message": "release: deploy PRs a QA - 2026-05-12",
@@ -2947,10 +2884,7 @@
       "qa": null,
       "qa_history": [],
       "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
+        "to_qa": null,
         "to_production": {
           "count": 0,
           "recent_commits": []
@@ -2960,7 +2894,7 @@
       "_errors": {
         "production": null,
         "qa": null,
-        "pending_to_qa": null,
+        "pending_to_qa": "fetch failed",
         "pending_to_production": null,
         "ci": null
       }
