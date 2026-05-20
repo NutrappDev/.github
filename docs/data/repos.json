@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T13:39:00.585Z",
+  "generated_at": "2026-05-20T13:39:20.839Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -421,6 +421,276 @@
     }
   },
   "repos": [
+    {
+      "name": "microservice_payments",
+      "full_name": "NutrappDev/microservice_payments",
+      "description": null,
+      "url": "https://github.com/NutrappDev/microservice_payments",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-20T13:39:02Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-05-20",
+        "sha": "49800ea1ec0c9f1c78c33cfad2027624da160b71",
+        "date": "2026-05-20T13:39:01Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-05-20",
+        "body": "Release qa-2026-05-20\n"
+      },
+      "qa_history": [
+        {
+          "version": "qa-2026-05-05",
+          "sha": "60ce3ee28f330260494e4a0e2914e45b92e6716a",
+          "date": "2026-05-05T20:01:39Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-05-05",
+          "body": "Release qa-2026-05-05\n"
+        },
+        {
+          "version": "qa-2026-04-30",
+          "sha": "d7ecd7922132153c719f1e49295d39e4734c3372",
+          "date": "2026-04-30T14:08:20Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-30",
+          "body": "Release qa-2026-04-30\n"
+        },
+        {
+          "version": "qa-2026-04-14",
+          "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
+          "date": "2026-04-14T14:56:10Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
+          "body": "Release qa-2026-04-14\n"
+        }
+      ],
+      "pending": {
+        "to_qa": {
+          "count": 13,
+          "recent_commits": [
+            {
+              "sha": "7fa6153",
+              "message": "fix(pg): handling pg in database DE-353",
+              "date": "2026-05-15T15:29:17Z",
+              "author": "meraso-nutra",
+              "pr_number": "81",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "e4c284f",
+              "message": "fix(serverless): update serverless v4 bundling DE-353",
+              "date": "2026-05-15T14:50:16Z",
+              "author": "meraso-nutra",
+              "pr_number": "80",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "10c0974",
+              "message": "fix(serverless): serverless stack management v4 DE-353",
+              "date": "2026-05-15T13:59:22Z",
+              "author": "meraso-nutra",
+              "pr_number": "79",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "c33e8fb",
+              "message": "fix(package): updated version of serverless offline DE-353",
+              "date": "2026-05-14T23:11:53Z",
+              "author": "meraso-nutra",
+              "pr_number": "78",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "026c11b",
+              "message": "fix(npm): npm handling update DE-353",
+              "date": "2026-05-14T22:28:52Z",
+              "author": "meraso-nutra",
+              "pr_number": "77",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "308d423",
+              "message": "fix(package): serverless esbuild version change DE-353",
+              "date": "2026-05-14T20:08:04Z",
+              "author": "meraso-nutra",
+              "pr_number": "76",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "a066c66",
+              "message": "fix(serverless): removed serverless build DE-353",
+              "date": "2026-05-14T18:57:27Z",
+              "author": "meraso-nutra",
+              "pr_number": "75",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "ece8453",
+              "message": "fix(serverless): change in dynamic plugin handling DE-353",
+              "date": "2026-05-14T17:26:41Z",
+              "author": "meraso-nutra",
+              "pr_number": "74",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "05327c4",
+              "message": "build(build): command change in post build DE-353",
+              "date": "2026-05-14T16:56:48Z",
+              "author": "meraso-nutra",
+              "pr_number": "73",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "709df69",
+              "message": "build(build): install command change DE-353",
+              "date": "2026-05-14T16:37:56Z",
+              "author": "meraso-nutra",
+              "pr_number": "72",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "255b69c",
+              "message": "fix(serverless): adjustment in plugins DE-353",
+              "date": "2026-05-14T16:03:17Z",
+              "author": "meraso-nutra",
+              "pr_number": "71",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "32c7e72",
+              "message": "chore(dependencies): dependency changes serverless v3 management DE-353",
+              "date": "2026-05-14T15:22:59Z",
+              "author": "meraso-nutra",
+              "pr_number": "70",
+              "tickets": [
+                {
+                  "id": "DE-353",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
+                }
+              ]
+            },
+            {
+              "sha": "321ab15",
+              "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
+              "date": "2026-04-30T17:30:29Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "68",
+              "tickets": [
+                {
+                  "id": "NCR-117",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "49800ea",
+              "message": "release: qa 2026 05 20",
+              "date": "2026-05-20T13:38:43Z",
+              "author": "CristiGB",
+              "pr_number": "82",
+              "tickets": []
+            },
+            {
+              "sha": "60ce3ee",
+              "message": "release qa-2026-05-05",
+              "date": "2026-05-05T20:01:28Z",
+              "author": "meraso-nutra",
+              "pr_number": "69",
+              "tickets": []
+            },
+            {
+              "sha": "d7ecd79",
+              "message": "release: qa-2026-04-29",
+              "date": "2026-04-30T14:08:06Z",
+              "author": "meraso-nutra",
+              "pr_number": "65",
+              "tickets": []
+            },
+            {
+              "sha": "8f4823f",
+              "message": "release: qa-2026-04-13",
+              "date": "2026-04-14T14:55:56Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "61",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": {
+        "status": "completed",
+        "conclusion": "failure",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
+        "updated_at": "2026-03-16T17:15:04Z",
+        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
+      },
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "nutrapp-gestion-proyectos-backend",
       "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
@@ -1962,269 +2232,6 @@
         "url": "https://github.com/NutrappDev/SSO-keycloak/actions/runs/25405780506",
         "updated_at": "2026-05-05T22:31:22Z",
         "name": "Build & Deploy Keycloak (AWS Fargate)"
-      },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "microservice_payments",
-      "full_name": "NutrappDev/microservice_payments",
-      "description": null,
-      "url": "https://github.com/NutrappDev/microservice_payments",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-20T13:38:46Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-05-05",
-        "sha": "60ce3ee28f330260494e4a0e2914e45b92e6716a",
-        "date": "2026-05-05T20:01:39Z",
-        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-05-05",
-        "body": "Release qa-2026-05-05\n"
-      },
-      "qa_history": [
-        {
-          "version": "qa-2026-04-30",
-          "sha": "d7ecd7922132153c719f1e49295d39e4734c3372",
-          "date": "2026-04-30T14:08:20Z",
-          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-30",
-          "body": "Release qa-2026-04-30\n"
-        },
-        {
-          "version": "qa-2026-04-14",
-          "sha": "8f4823f9eeb9b83c57cea327ea7866d7de057bab",
-          "date": "2026-04-14T14:56:10Z",
-          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/qa-2026-04-14",
-          "body": "Release qa-2026-04-14\n"
-        }
-      ],
-      "pending": {
-        "to_qa": {
-          "count": 13,
-          "recent_commits": [
-            {
-              "sha": "7fa6153",
-              "message": "fix(pg): handling pg in database DE-353",
-              "date": "2026-05-15T15:29:17Z",
-              "author": "meraso-nutra",
-              "pr_number": "81",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "e4c284f",
-              "message": "fix(serverless): update serverless v4 bundling DE-353",
-              "date": "2026-05-15T14:50:16Z",
-              "author": "meraso-nutra",
-              "pr_number": "80",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "10c0974",
-              "message": "fix(serverless): serverless stack management v4 DE-353",
-              "date": "2026-05-15T13:59:22Z",
-              "author": "meraso-nutra",
-              "pr_number": "79",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "c33e8fb",
-              "message": "fix(package): updated version of serverless offline DE-353",
-              "date": "2026-05-14T23:11:53Z",
-              "author": "meraso-nutra",
-              "pr_number": "78",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "026c11b",
-              "message": "fix(npm): npm handling update DE-353",
-              "date": "2026-05-14T22:28:52Z",
-              "author": "meraso-nutra",
-              "pr_number": "77",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "308d423",
-              "message": "fix(package): serverless esbuild version change DE-353",
-              "date": "2026-05-14T20:08:04Z",
-              "author": "meraso-nutra",
-              "pr_number": "76",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "a066c66",
-              "message": "fix(serverless): removed serverless build DE-353",
-              "date": "2026-05-14T18:57:27Z",
-              "author": "meraso-nutra",
-              "pr_number": "75",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "ece8453",
-              "message": "fix(serverless): change in dynamic plugin handling DE-353",
-              "date": "2026-05-14T17:26:41Z",
-              "author": "meraso-nutra",
-              "pr_number": "74",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "05327c4",
-              "message": "build(build): command change in post build DE-353",
-              "date": "2026-05-14T16:56:48Z",
-              "author": "meraso-nutra",
-              "pr_number": "73",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "709df69",
-              "message": "build(build): install command change DE-353",
-              "date": "2026-05-14T16:37:56Z",
-              "author": "meraso-nutra",
-              "pr_number": "72",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "255b69c",
-              "message": "fix(serverless): adjustment in plugins DE-353",
-              "date": "2026-05-14T16:03:17Z",
-              "author": "meraso-nutra",
-              "pr_number": "71",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "32c7e72",
-              "message": "chore(dependencies): dependency changes serverless v3 management DE-353",
-              "date": "2026-05-14T15:22:59Z",
-              "author": "meraso-nutra",
-              "pr_number": "70",
-              "tickets": [
-                {
-                  "id": "DE-353",
-                  "url": "https://nutrabiotics.atlassian.net/browse/DE-353"
-                }
-              ]
-            },
-            {
-              "sha": "321ab15",
-              "message": "feat(payments): agregar dominios admin nutrabiotics a cors permitidos NCR-117",
-              "date": "2026-04-30T17:30:29Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "68",
-              "tickets": [
-                {
-                  "id": "NCR-117",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "49800ea",
-              "message": "release: qa 2026 05 20",
-              "date": "2026-05-20T13:38:43Z",
-              "author": "CristiGB",
-              "pr_number": "82",
-              "tickets": []
-            },
-            {
-              "sha": "60ce3ee",
-              "message": "release qa-2026-05-05",
-              "date": "2026-05-05T20:01:28Z",
-              "author": "meraso-nutra",
-              "pr_number": "69",
-              "tickets": []
-            },
-            {
-              "sha": "d7ecd79",
-              "message": "release: qa-2026-04-29",
-              "date": "2026-04-30T14:08:06Z",
-              "author": "meraso-nutra",
-              "pr_number": "65",
-              "tickets": []
-            },
-            {
-              "sha": "8f4823f",
-              "message": "release: qa-2026-04-13",
-              "date": "2026-04-14T14:55:56Z",
-              "author": "jgaray-nutrapp",
-              "pr_number": "61",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": {
-        "status": "completed",
-        "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/23156460965",
-        "updated_at": "2026-03-16T17:15:04Z",
-        "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
       "_errors": {
         "production": null,
