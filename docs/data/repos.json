@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T20:05:00.204Z",
+  "generated_at": "2026-05-20T21:30:47.634Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -289,11 +289,6 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
-    "NCOL-257": {
-      "summary": "Filtro catálogo de productos publico - Nutrabiotics Colombia",
-      "status": "Pruebas de Regresión",
-      "assignee": "Steven Leon"
-    },
     "DE-353": {
       "summary": "Revision del microservicio de pagos",
       "status": "Despliegue a DEV",
@@ -426,6 +421,135 @@
     }
   },
   "repos": [
+    {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-20T21:14:40Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-20T21:06:40Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 2,
+          "recent_commits": [
+            {
+              "sha": "0638422",
+              "message": "feat: delete unused file CIMF-284",
+              "date": "2026-05-12T16:48:20Z",
+              "author": "k-aguilera",
+              "pr_number": "21",
+              "tickets": [
+                {
+                  "id": "CIMF-284",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
+                }
+              ]
+            },
+            {
+              "sha": "3876bf4",
+              "message": "feat: organizacion de agenda CIMF-284 ",
+              "date": "2026-05-12T16:40:07Z",
+              "author": "k-aguilera",
+              "pr_number": "20",
+              "tickets": [
+                {
+                  "id": "CIMF-284",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "73c83ca",
+              "message": "release: qa-2026-05-06",
+              "date": "2026-05-06T20:03:06Z",
+              "author": "k-aguilera",
+              "pr_number": "18",
+              "tickets": []
+            },
+            {
+              "sha": "88100ec",
+              "message": "release:  qa-2026-04-30",
+              "date": "2026-04-30T20:56:41Z",
+              "author": "k-aguilera",
+              "pr_number": "15",
+              "tickets": []
+            },
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
     {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
@@ -709,39 +833,6 @@
         "updated_at": "2026-05-20T16:21:00Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-20T06:04:29Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -1394,102 +1485,6 @@
       }
     },
     {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-12T16:48:20Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 2,
-          "recent_commits": [
-            {
-              "sha": "0638422",
-              "message": "feat: delete unused file CIMF-284",
-              "date": "2026-05-12T16:48:20Z",
-              "author": "k-aguilera",
-              "pr_number": "21",
-              "tickets": [
-                {
-                  "id": "CIMF-284",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
-                }
-              ]
-            },
-            {
-              "sha": "3876bf4",
-              "message": "feat: organizacion de agenda CIMF-284 ",
-              "date": "2026-05-12T16:40:07Z",
-              "author": "k-aguilera",
-              "pr_number": "20",
-              "tickets": [
-                {
-                  "id": "CIMF-284",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "73c83ca",
-              "message": "release: qa-2026-05-06",
-              "date": "2026-05-06T20:03:06Z",
-              "author": "k-aguilera",
-              "pr_number": "18",
-              "tickets": []
-            },
-            {
-              "sha": "88100ec",
-              "message": "release:  qa-2026-04-30",
-              "date": "2026-04-30T20:56:41Z",
-              "author": "k-aguilera",
-              "pr_number": "15",
-              "tickets": []
-            },
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "fruto-web-nutra-co",
       "full_name": "NutrappDev/fruto-web-nutra-co",
       "description": "Página web externa de Nutrabiotics Colombia",
@@ -1497,7 +1492,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T20:04:36Z",
+      "last_push": "2026-05-20T21:30:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1537,13 +1532,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-19",
-        "sha": "b4ecec876fbb575cedf23492dfeff5ff6db910f5",
-        "date": "2026-05-19T14:13:46Z",
-        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-19",
-        "body": "Release qa-2026-05-19\n"
+        "version": "qa-2026-05-20",
+        "sha": "632922580e77c05ca6fb3224260f9ef8cce4f1c9",
+        "date": "2026-05-20T21:30:35Z",
+        "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-20",
+        "body": "Release qa-2026-05-20\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-19",
+          "sha": "b4ecec876fbb575cedf23492dfeff5ff6db910f5",
+          "date": "2026-05-19T14:13:46Z",
+          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-05-19",
+          "body": "Release qa-2026-05-19\n"
+        },
         {
           "version": "qa-2026-05-13",
           "sha": "a12b206aa5bad1b80759148e545255048e53716d",
@@ -1564,32 +1566,12 @@
           "date": "2026-04-21T17:41:34Z",
           "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-04-21",
           "body": "Release qa-2026-04-21\n"
-        },
-        {
-          "version": "qa-2026-03-25",
-          "sha": "62432ea652ae95595ba3c3973336beda7dba0b46",
-          "date": "2026-03-25T20:35:01Z",
-          "url": "https://github.com/NutrappDev/fruto-web-nutra-co/releases/tag/qa-2026-03-25",
-          "body": "Release qa-2026-03-25\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 4,
           "recent_commits": [
-            {
-              "sha": "de64867",
-              "message": "fix: corregir errores de filtros y bloquear filtrado avanzado para medicamentos NCOL-257",
-              "date": "2026-05-20T20:04:34Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "98",
-              "tickets": [
-                {
-                  "id": "NCOL-257",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-257"
-                }
-              ]
-            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
@@ -1645,8 +1627,16 @@
           ]
         },
         "to_production": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "6329225",
+              "message": "release: deploy PRs a QA - 2026-05-20",
+              "date": "2026-05-20T21:30:20Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "99",
+              "tickets": []
+            },
             {
               "sha": "b4ecec8",
               "message": "release: deploy PRs a QA - 2026-05-15",
