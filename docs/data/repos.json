@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T23:30:50.679Z",
+  "generated_at": "2026-05-20T13:39:00.585Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -36,7 +36,7 @@
     },
     "SUP-292": {
       "summary": "Bug actualizacion de pdf de autorizaciones",
-      "status": "Despliegue a QA",
+      "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "SUP-282": {
@@ -296,18 +296,13 @@
     },
     "CIMF-284": {
       "summary": "Sección Agenda",
-      "status": "Detenido",
+      "status": "En proceso",
       "assignee": "Kevin Aguilera"
     },
     "ALMX-277": {
       "summary": "BG | Catálogo de productos | No se muestra Bien el título del producto",
       "status": "Actividad completada",
       "assignee": "Felipe Berrio"
-    },
-    "ALMX-273": {
-      "summary": "BG | Checkout / Pasarela de pago | Redirección incorrecta a ambiente Develop cuando el pago es rechazado",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALMX-261": {
       "summary": "BG | Selector de País | No se muestran las banderas de Colombia y Perú en el indicador",
@@ -333,11 +328,6 @@
       "summary": "implementacion de descuento promocional",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-1450": {
-      "summary": "Ajuste de creacion de ordenes en las pasarelas",
-      "status": "Actividad completada",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1243": {
       "summary": "Ajustar los productos destacados en el home",
@@ -432,6 +422,39 @@
   },
   "repos": [
     {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-20T06:04:29Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
       "name": "nutrabiotics-certificates-admin",
       "full_name": "NutrappDev/nutrabiotics-certificates-admin",
       "description": null,
@@ -488,39 +511,6 @@
               "tickets": []
             }
           ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-19T19:57:46Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
         }
       },
       "ci": null,
@@ -1989,7 +1979,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T15:29:20Z",
+      "last_push": "2026-05-20T13:38:46Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -2018,7 +2008,7 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 21,
+          "count": 13,
           "recent_commits": [
             {
               "sha": "7fa6153",
@@ -2188,106 +2178,20 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-117"
                 }
               ]
-            },
-            {
-              "sha": "519fa4b",
-              "message": "fix(transaction): ajuste de transaction ALCO-1450",
-              "date": "2026-03-26T17:57:35Z",
-              "author": "fabianromerolu",
-              "pr_number": "60",
-              "tickets": [
-                {
-                  "id": "ALCO-1450",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1450"
-                }
-              ]
-            },
-            {
-              "sha": "c1f8fa9",
-              "message": "fix(paypal): config paypal ALMX-273",
-              "date": "2026-03-12T15:42:44Z",
-              "author": "fabianromerolu",
-              "pr_number": "58",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "3b8f35b",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:55:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "57",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "54c2151",
-              "message": "fix(paypal): config serveless ALMX-273",
-              "date": "2026-03-11T20:19:06Z",
-              "author": "fabianromerolu",
-              "pr_number": "56",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "55b8a10",
-              "message": "feat(paypal): agg environment ALMX-273",
-              "date": "2026-03-11T17:52:41Z",
-              "author": "fabianromerolu",
-              "pr_number": "54",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "f144cc7",
-              "message": "feat(paypal): ajustar paypal return url ALMX-273",
-              "date": "2026-03-09T21:35:02Z",
-              "author": "fabianromerolu",
-              "pr_number": "53",
-              "tickets": [
-                {
-                  "id": "ALMX-273",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALMX-273"
-                }
-              ]
-            },
-            {
-              "sha": "699d4c8",
-              "message": "Fix/paypal",
-              "date": "2026-02-26T13:38:30Z",
-              "author": "fabianromerolu",
-              "pr_number": "49",
-              "tickets": []
-            },
-            {
-              "sha": "9c01b2a",
-              "message": "Fix/paypal",
-              "date": "2026-02-25T19:58:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "48",
-              "tickets": []
             }
           ]
         },
         "to_production": {
-          "count": 3,
+          "count": 4,
           "recent_commits": [
+            {
+              "sha": "49800ea",
+              "message": "release: qa 2026 05 20",
+              "date": "2026-05-20T13:38:43Z",
+              "author": "CristiGB",
+              "pr_number": "82",
+              "tickets": []
+            },
             {
               "sha": "60ce3ee",
               "message": "release qa-2026-05-05",
@@ -3264,7 +3168,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T22:28:26Z",
+      "last_push": "2026-05-20T13:38:25Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3342,8 +3246,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 26,
+          "count": 27,
           "recent_commits": [
+            {
+              "sha": "51fb2dd",
+              "message": "feat(prescriptions): se agregan loggers en pdfs PMO-2909",
+              "date": "2026-05-20T13:38:22Z",
+              "author": "fabianromerolu",
+              "pr_number": "395",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "382cda1",
               "message": "feat(prescriptions): purchase-templates PMO-2909",
@@ -3649,19 +3566,6 @@
               "date": "2026-04-20T22:54:34Z",
               "author": "fabianromerolu",
               "pr_number": "326",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "ffdf5f6",
-              "message": "fix(prescriptions): bug pdf SUP-292",
-              "date": "2026-04-20T21:17:45Z",
-              "author": "fabianromerolu",
-              "pr_number": "325",
               "tickets": [
                 {
                   "id": "SUP-292",
