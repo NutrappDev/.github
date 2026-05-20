@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T16:21:22.464Z",
+  "generated_at": "2026-05-20T19:15:08.252Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -166,7 +166,7 @@
     },
     "NMX-418": {
       "summary": "Ajustar los profesionales de Dirección Médica ( Avalado )",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
     "NMX-408": {
@@ -821,7 +821,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T21:36:31Z",
+      "last_push": "2026-05-20T19:14:43Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -902,6 +902,19 @@
           "count": 9,
           "recent_commits": [
             {
+              "sha": "4060f55",
+              "message": "feat(checkout): return units hormonas PMO-2909",
+              "date": "2026-05-20T19:14:41Z",
+              "author": "fabianromerolu",
+              "pr_number": "475",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
+            {
               "sha": "552dca7",
               "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
               "date": "2026-05-19T18:06:50Z",
@@ -979,14 +992,6 @@
                   "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1394"
                 }
               ]
-            },
-            {
-              "sha": "0d5355c",
-              "message": "checkout mx terminado",
-              "date": "2026-02-23T19:13:13Z",
-              "author": "fabianromerolu",
-              "pr_number": "318",
-              "tickets": []
             }
           ]
         },
