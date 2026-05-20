@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T15:57:03.615Z",
+  "generated_at": "2026-05-20T16:21:22.464Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -429,7 +429,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T15:44:12Z",
+      "last_push": "2026-05-20T16:21:02Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-20",
@@ -439,6 +439,13 @@
         "body": "Release prod-2026-05-20\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-05-20-3",
+          "sha": "cdefcdc85d7b6d3f4033124a4049a169d312eac7",
+          "date": "2026-05-20T16:21:00Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/prod-2026-05-20-3",
+          "body": "Release prod-2026-05-20-3\n"
+        },
         {
           "version": "prod-2026-05-20-2",
           "sha": "af8011ee88ea558ffd25cf6f1298017bd2468cb9",
@@ -693,8 +700,8 @@
       "ci": {
         "status": "completed",
         "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/26173459018",
-        "updated_at": "2026-05-20T15:44:15Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/26175427135",
+        "updated_at": "2026-05-20T16:21:00Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
       "_errors": {
