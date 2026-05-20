@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T15:09:54.933Z",
+  "generated_at": "2026-05-20T15:43:15.822Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -429,7 +429,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T15:09:31Z",
+      "last_push": "2026-05-20T15:37:53Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-20",
@@ -3181,7 +3181,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T13:38:25Z",
+      "last_push": "2026-05-20T15:42:46Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3259,8 +3259,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 27,
+          "count": 28,
           "recent_commits": [
+            {
+              "sha": "25e327e",
+              "message": "feat(prescriptions): logger en servicio PMO-2909",
+              "date": "2026-05-20T15:42:44Z",
+              "author": "fabianromerolu",
+              "pr_number": "396",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "51fb2dd",
               "message": "feat(prescriptions): se agregan loggers en pdfs PMO-2909",
@@ -3566,19 +3579,6 @@
               "date": "2026-04-21T22:02:40Z",
               "author": "fabianromerolu",
               "pr_number": "329",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "10e8898",
-              "message": "fix(prescriptions): bug pdf v2 SUP-292",
-              "date": "2026-04-20T22:54:34Z",
-              "author": "fabianromerolu",
-              "pr_number": "326",
               "tickets": [
                 {
                   "id": "SUP-292",
