@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T15:44:29.301Z",
+  "generated_at": "2026-05-20T15:57:03.615Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -3189,7 +3189,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T15:42:46Z",
+      "last_push": "2026-05-20T15:56:33Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3267,8 +3267,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 28,
+          "count": 29,
           "recent_commits": [
+            {
+              "sha": "2f1dbd1",
+              "message": "feat(prescriptions): logger en servicio PMO-2909",
+              "date": "2026-05-20T15:56:31Z",
+              "author": "fabianromerolu",
+              "pr_number": "397",
+              "tickets": [
+                {
+                  "id": "PMO-2909",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
+                }
+              ]
+            },
             {
               "sha": "25e327e",
               "message": "feat(prescriptions): logger en servicio PMO-2909",
@@ -3578,19 +3591,6 @@
                 {
                   "id": "NCR-100",
                   "url": "https://nutrabiotics.atlassian.net/browse/NCR-100"
-                }
-              ]
-            },
-            {
-              "sha": "b259f9d",
-              "message": "fix(prescriptions): bug pdf SUP-292",
-              "date": "2026-04-21T22:02:40Z",
-              "author": "fabianromerolu",
-              "pr_number": "329",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             }
