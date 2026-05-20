@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T19:15:08.252Z",
+  "generated_at": "2026-05-20T20:05:00.204Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -287,6 +287,11 @@
     "NCOL-424": {
       "summary": "BUG | HOME | TABLET | Cambio de Banner",
       "status": "Actividad completada",
+      "assignee": "Steven Leon"
+    },
+    "NCOL-257": {
+      "summary": "Filtro catálogo de productos publico - Nutrabiotics Colombia",
+      "status": "Pruebas de Regresión",
       "assignee": "Steven Leon"
     },
     "DE-353": {
@@ -1492,7 +1497,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T14:13:47Z",
+      "last_push": "2026-05-20T20:04:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1570,8 +1575,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "de64867",
+              "message": "fix: corregir errores de filtros y bloquear filtrado avanzado para medicamentos NCOL-257",
+              "date": "2026-05-20T20:04:34Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "98",
+              "tickets": [
+                {
+                  "id": "NCOL-257",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-257"
+                }
+              ]
+            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
