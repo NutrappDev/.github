@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-21T17:16:00.990Z",
+  "generated_at": "2026-05-21T19:06:41.477Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
     "SUP-301": {
       "summary": "Ajustes al flujo manual de creación de órdenes",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "SUP-300": {
@@ -111,7 +111,7 @@
     },
     "PMO-2909": {
       "summary": "Actualización dosificaciones por unidades en Hormonas Bioidenticas (prioridad Melatonina)",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "Fabián Mauricio Romero Lugo"
     },
     "PMO-2898": {
@@ -294,6 +294,11 @@
       "status": "Actividad completada",
       "assignee": "Steven Leon"
     },
+    "DE-355": {
+      "summary": "Endpoint para verificar y completar orden por referencia Wompi",
+      "status": "Despliegue a DEV",
+      "assignee": "Felipe Berrio"
+    },
     "DE-353": {
       "summary": "Revision del microservicio de pagos",
       "status": "Despliegue a DEV",
@@ -439,7 +444,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:15:42Z",
+      "last_push": "2026-05-21T19:06:12Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-21",
@@ -503,8 +508,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 13,
+          "count": 14,
           "recent_commits": [
+            {
+              "sha": "6f601b0",
+              "message": "feat(payments): endpoint verify-and-complete-by-reference para wompi DE-355",
+              "date": "2026-05-21T19:06:09Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "87",
+              "tickets": [
+                {
+                  "id": "DE-355",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-355"
+                }
+              ]
+            },
             {
               "sha": "7fa6153",
               "message": "fix(pg): handling pg in database DE-353",
@@ -1522,7 +1540,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T21:30:36Z",
+      "last_push": "2026-05-21T17:30:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -3252,7 +3270,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T15:56:33Z",
+      "last_push": "2026-05-21T17:44:24Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
