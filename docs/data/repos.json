@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T14:03:52.672Z",
+  "generated_at": "2026-05-21T17:11:39.887Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -581,7 +581,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T05:24:31Z",
+      "last_push": "2026-05-21T17:03:24Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-20",
@@ -940,7 +940,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T19:14:43Z",
+      "last_push": "2026-05-21T17:11:15Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-14",
@@ -1115,7 +1115,7 @@
           ]
         },
         "to_production": {
-          "count": 28,
+          "count": 27,
           "recent_commits": [
             {
               "sha": "549df88",
@@ -3067,7 +3067,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-15T14:41:15Z",
+      "last_push": "2026-05-21T17:10:41Z",
       "topics": [
         "fase-fruto",
         "team-roble"
