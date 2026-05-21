@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T20:13:07.396Z",
+  "generated_at": "2026-05-21T22:16:26.411Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -43,11 +43,6 @@
       "summary": "Bug actualizacion de pdf de autorizaciones",
       "status": "Despliegue a PROD",
       "assignee": "Fabián Mauricio Romero Lugo"
-    },
-    "SUP-282": {
-      "summary": "Desde Nutracore: implementar endpoint para edición de eventos (MS-events)",
-      "status": "Actividad completada",
-      "assignee": "Steven Leon"
     },
     "SUP-272": {
       "summary": "BG | Crear Usuario | Admin |No permite crear usuario y no muestra mensaje de advertencia",
@@ -119,6 +114,11 @@
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
+    "PMO-2817": {
+      "summary": "ERROR CARGA PRESCRIPCIONES ALCO-2882",
+      "status": "Actividad completada",
+      "assignee": "Fabián Mauricio Romero Lugo"
+    },
     "PMO-2758": {
       "summary": "Actualización de nomenclatura – Sección Nosotros | Nutrabiotics Mexico",
       "status": "Despliegue a QA",
@@ -154,19 +154,9 @@
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
     },
-    "PALCO-91": {
-      "summary": "Conectar endpoints de shipping con ERP",
-      "status": "Despliegue a PROD",
-      "assignee": "Jhelcy Sandoval"
-    },
     "PALCO-84": {
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Despliegue a QA",
-      "assignee": "Jhelcy Sandoval"
-    },
-    "PALCO-20": {
-      "summary": "Integración con empresa de transporte",
-      "status": "Actividad completada",
       "assignee": "Jhelcy Sandoval"
     },
     "NMX-418": {
@@ -184,11 +174,6 @@
       "status": "Despliegue a QA",
       "assignee": "Miller Ladino Osorio"
     },
-    "NE-246": {
-      "summary": "Transformación de datos de orden para integración con ERP",
-      "status": "Despliegue a PROD",
-      "assignee": "Jhelcy Sandoval"
-    },
     "NE-221": {
       "summary": "BG | Pedido | Botón “Hacer pedido” no redirige a ningún módulo en ambiente QA",
       "status": "Actividad completada",
@@ -204,59 +189,14 @@
       "status": "Revisión QA",
       "assignee": "Kevin Aguilera"
     },
-    "NCR-130": {
-      "summary": "Guardar el agente del Contact Center que crea cada orden",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-128": {
-      "summary": "Soporte de pagos Wompi para Órdenes del Contact Center",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
     "NCR-127": {
       "summary": "Mejoras en Registro y Notificaciones del Contact Center",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-126": {
-      "summary": "Ajuste de ID de ordenes de Farmacia en ms-orders",
       "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
-    },
-    "NCR-124": {
-      "summary": "Revisar manejo de Ciudad y Departamento desde la librería ERP",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
-    },
-    "NCR-123": {
-      "summary": "Error en envío automático de correo de link de pago en ambiente de desarrollo",
-      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
-    },
-    "NCR-122": {
-      "summary": "Envío de credenciales en correo de bienvenida para médicos de Contact Center",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-121": {
-      "summary": "Cambio de contraseña obligatorio en primer login no se aplica",
-      "status": "Despliegue a DEV",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-120": {
-      "summary": "Actualizar manejo de sourceId para órdenes de Farmacia",
-      "status": "Despliegue a PROD",
-      "assignee": "Mario Eraso"
     },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
       "status": "Despliegue a PROD",
-      "assignee": "Felipe Berrio"
-    },
-    "NCR-116": {
-      "summary": "Documentos del médico no se guardan al registrarlo desde Contact Center",
-      "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
     "NCOL-647": {
@@ -328,11 +268,6 @@
       "summary": "BG | Región | Se muestra Nutrabiotics Colombia en lugar de Nutrabiotics México",
       "status": "Actividad completada",
       "assignee": "ISABEL GOMEZ"
-    },
-    "ALCO-1540": {
-      "summary": "Refactor checkout Alivia Colombia: compra de hormona y pacientes por referencia",
-      "status": "Por hacer",
-      "assignee": "Fabián Mauricio Romero Lugo"
     },
     "ALCO-1498": {
       "summary": "Montaje de  Banner ",
@@ -3092,7 +3027,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:10:41Z",
+      "last_push": "2026-05-21T21:48:10Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3270,7 +3205,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T20:12:41Z",
+      "last_push": "2026-05-21T22:16:13Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3310,13 +3245,20 @@
         }
       ],
       "qa": {
-        "version": "qa-2026-05-07",
-        "sha": "461180790e114951150f6c1b52000a31258e523f",
-        "date": "2026-05-07T22:45:48Z",
-        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-07",
-        "body": "Release qa-2026-05-07\n"
+        "version": "qa-2026-05-21",
+        "sha": "56e48f0de97cd42a36418b76a226fb418b3f2760",
+        "date": "2026-05-21T22:16:12Z",
+        "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-21",
+        "body": "Release qa-2026-05-21\n"
       },
       "qa_history": [
+        {
+          "version": "qa-2026-05-07",
+          "sha": "461180790e114951150f6c1b52000a31258e523f",
+          "date": "2026-05-07T22:45:48Z",
+          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-05-07",
+          "body": "Release qa-2026-05-07\n"
+        },
         {
           "version": "qa-2026-05-06",
           "sha": "8a0d3dc581c591f177c61d8a399014067ef24377",
@@ -3337,162 +3279,12 @@
           "date": "2026-04-09T19:48:56Z",
           "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-04-09",
           "body": "Release qa-2026-04-09\n"
-        },
-        {
-          "version": "qa-2026-03-26",
-          "sha": "0c7bd1e1bb180df2e2975d3a959bde85112e18c4",
-          "date": "2026-03-26T21:51:50Z",
-          "url": "https://github.com/NutrappDev/monorepo-alivia-backend/releases/tag/qa-2026-03-26",
-          "body": "Release qa-2026-03-26\n"
         }
       ],
       "pending": {
         "to_qa": {
-          "count": 30,
+          "count": 5,
           "recent_commits": [
-            {
-              "sha": "4dadd23",
-              "message": "feat(orders): trazabilidad del agente Contact Center en Order NCR-130",
-              "date": "2026-05-21T20:12:37Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "398",
-              "tickets": [
-                {
-                  "id": "NCR-130",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-130"
-                }
-              ]
-            },
-            {
-              "sha": "2f1dbd1",
-              "message": "feat(prescriptions): logger en servicio PMO-2909",
-              "date": "2026-05-20T15:56:31Z",
-              "author": "fabianromerolu",
-              "pr_number": "397",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "25e327e",
-              "message": "feat(prescriptions): logger en servicio PMO-2909",
-              "date": "2026-05-20T15:42:44Z",
-              "author": "fabianromerolu",
-              "pr_number": "396",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "51fb2dd",
-              "message": "feat(prescriptions): se agregan loggers en pdfs PMO-2909",
-              "date": "2026-05-20T13:38:22Z",
-              "author": "fabianromerolu",
-              "pr_number": "395",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "382cda1",
-              "message": "feat(prescriptions): purchase-templates PMO-2909",
-              "date": "2026-05-19T22:28:24Z",
-              "author": "fabianromerolu",
-              "pr_number": "393",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "80c8420",
-              "message": "chore(notifications): trigger redeploy after env vars setup PALCO-20",
-              "date": "2026-05-19T22:09:04Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "391",
-              "tickets": [
-                {
-                  "id": "PALCO-20",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-20"
-                }
-              ]
-            },
-            {
-              "sha": "31bcd33",
-              "message": "feat(prescriptions): purchase-templates PMO-2909",
-              "date": "2026-05-19T22:05:38Z",
-              "author": "fabianromerolu",
-              "pr_number": "392",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "b4303a4",
-              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
-              "date": "2026-05-19T19:40:18Z",
-              "author": "fabianromerolu",
-              "pr_number": "389",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "c7e3278",
-              "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
-              "date": "2026-05-19T18:55:18Z",
-              "author": "fabianromerolu",
-              "pr_number": "388",
-              "tickets": [
-                {
-                  "id": "PMO-2909",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2909"
-                }
-              ]
-            },
-            {
-              "sha": "fecd67c",
-              "message": "feat(checkout): newCheckout hormones ALCO-1540",
-              "date": "2026-05-15T16:07:17Z",
-              "author": "fabianromerolu",
-              "pr_number": "387",
-              "tickets": [
-                {
-                  "id": "ALCO-1540",
-                  "url": "https://nutrabiotics.atlassian.net/browse/ALCO-1540"
-                }
-              ]
-            },
-            {
-              "sha": "8f9590f",
-              "message": "fix(orders): soportar prefijo CCCO en webhook Wompi NCR-128",
-              "date": "2026-05-13T16:37:22Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "384",
-              "tickets": [
-                {
-                  "id": "NCR-128",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-128"
-                }
-              ]
-            },
             {
               "sha": "a15fd34",
               "message": "fix(sso): propagar origin CC y corregir template welcome NCR-127",
@@ -3520,166 +3312,57 @@
               ]
             },
             {
-              "sha": "34116f4",
-              "message": "feat(geo): geoconfig library management NCR-124",
-              "date": "2026-05-08T20:51:29Z",
-              "author": "meraso-nutra",
-              "pr_number": "379",
+              "sha": "10e8898",
+              "message": "fix(prescriptions): bug pdf v2 SUP-292",
+              "date": "2026-04-20T22:54:34Z",
+              "author": "fabianromerolu",
+              "pr_number": "326",
               "tickets": [
                 {
-                  "id": "NCR-124",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-124"
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             },
             {
-              "sha": "fba427b",
-              "message": "feat(logistics): integracion de transporte, webhooks y endpoints logisticos PALCO-20",
-              "date": "2026-05-08T19:09:30Z",
-              "author": "jsandoval-dev",
-              "pr_number": "378",
+              "sha": "ffdf5f6",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-20T21:17:45Z",
+              "author": "fabianromerolu",
+              "pr_number": "325",
               "tickets": [
                 {
-                  "id": "PALCO-20",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-20"
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
                 }
               ]
             },
             {
-              "sha": "7229490",
-              "message": "refactor(payload): use of cleanpayload NCR-126",
-              "date": "2026-05-08T13:50:59Z",
-              "author": "meraso-nutra",
-              "pr_number": "377",
+              "sha": "5f56994",
+              "message": "fix(prescriptions): register pdf PMO-2817",
+              "date": "2026-04-15T21:44:08Z",
+              "author": "fabianromerolu",
+              "pr_number": "318",
               "tickets": [
                 {
-                  "id": "NCR-126",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-126"
-                }
-              ]
-            },
-            {
-              "sha": "0454dd8",
-              "message": "refactor(ffco): ms-orders id management for farmacia NCR-126",
-              "date": "2026-05-07T22:52:10Z",
-              "author": "meraso-nutra",
-              "pr_number": "376",
-              "tickets": [
-                {
-                  "id": "NCR-126",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-126"
-                }
-              ]
-            },
-            {
-              "sha": "700d030",
-              "message": "feat(sso): incluir credenciales en correo bienvenida medico CC NCR-122",
-              "date": "2026-05-07T21:27:05Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "374",
-              "tickets": [
-                {
-                  "id": "NCR-122",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-122"
-                }
-              ]
-            },
-            {
-              "sha": "a9f982b",
-              "message": "fix(sso): respetar required_change_password en creacion Keycloak NCR-121",
-              "date": "2026-05-07T21:25:05Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "373",
-              "tickets": [
-                {
-                  "id": "NCR-121",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-121"
-                }
-              ]
-            },
-            {
-              "sha": "2944f9b",
-              "message": "fix(notifications): agregar CORS_ORIGIN y template payment link NCR-123",
-              "date": "2026-05-06T22:39:02Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "372",
-              "tickets": [
-                {
-                  "id": "NCR-123",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-123"
-                }
-              ]
-            },
-            {
-              "sha": "d2b2fe8",
-              "message": "feat(shipping): conectar endpoints de shipping con erp PALCO-91",
-              "date": "2026-05-06T19:28:27Z",
-              "author": "jsandoval-dev",
-              "pr_number": "371",
-              "tickets": [
-                {
-                  "id": "PALCO-91",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-91"
-                }
-              ]
-            },
-            {
-              "sha": "7f9ed68",
-              "message": "fix(events): corregir politica de cors para estandarizar con los demas microservicios SUP-282",
-              "date": "2026-05-06T17:37:28Z",
-              "author": "Steven-Leon-007",
-              "pr_number": "370",
-              "tickets": [
-                {
-                  "id": "SUP-282",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-282"
-                }
-              ]
-            },
-            {
-              "sha": "f9814d1",
-              "message": "refactor(ffco): new sourceid handling for farmacia NCR-120",
-              "date": "2026-05-05T21:59:49Z",
-              "author": "meraso-nutra",
-              "pr_number": "361",
-              "tickets": [
-                {
-                  "id": "NCR-120",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-120"
-                }
-              ]
-            },
-            {
-              "sha": "098a19d",
-              "message": "feat(erp): transformar datos de orden para integracion con erp NE-246",
-              "date": "2026-05-05T19:21:28Z",
-              "author": "jsandoval-dev",
-              "pr_number": "360",
-              "tickets": [
-                {
-                  "id": "NE-246",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NE-246"
-                }
-              ]
-            },
-            {
-              "sha": "fa8dfda",
-              "message": "feat(sso): ajustar upload de credenciales a pending con trazabilidad NCR-116",
-              "date": "2026-05-04T22:01:43Z",
-              "author": "Felipe-Berrio-dev",
-              "pr_number": "359",
-              "tickets": [
-                {
-                  "id": "NCR-116",
-                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-116"
+                  "id": "PMO-2817",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2817"
                 }
               ]
             }
           ]
         },
         "to_production": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "56e48f0",
+              "message": "release: qa-2026-05-21",
+              "date": "2026-05-21T22:15:57Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "399",
+              "tickets": []
+            },
             {
               "sha": "4611807",
               "message": "release: qa-2026-05-07",
