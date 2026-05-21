@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-05-20T21:30:47.634Z",
+  "generated_at": "2026-05-21T14:03:52.672Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
   "jira_tickets": {
+    "SUP-301": {
+      "summary": "Ajustes al flujo manual de creación de órdenes",
+      "status": "En proceso",
+      "assignee": "Felipe Berrio"
+    },
     "SUP-300": {
       "summary": "Página de confirmación de compra y sincronización automática de estado con Wompi",
       "status": "Despliegue a DEV",
@@ -294,9 +299,14 @@
       "status": "Despliegue a DEV",
       "assignee": "Mario Eraso"
     },
+    "CIMF-289": {
+      "summary": "2da parte ajustes",
+      "status": "Despliegue a QA",
+      "assignee": "Kevin Aguilera"
+    },
     "CIMF-284": {
       "summary": "Sección Agenda",
-      "status": "En proceso",
+      "status": "Despliegue a QA",
       "assignee": "Kevin Aguilera"
     },
     "ALMX-277": {
@@ -429,7 +439,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T21:14:40Z",
+      "last_push": "2026-05-21T03:40:39Z",
       "topics": [],
       "production": null,
       "production_history": [],
@@ -462,7 +472,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T21:06:40Z",
+      "last_push": "2026-05-20T21:36:35Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -473,8 +483,21 @@
       "qa_history": [],
       "pending": {
         "to_qa": {
-          "count": 2,
+          "count": 3,
           "recent_commits": [
+            {
+              "sha": "6d8ea75",
+              "message": "fix: configuraciones diseno y agenda CIMF-289 ",
+              "date": "2026-05-20T21:36:36Z",
+              "author": "k-aguilera",
+              "pr_number": "23",
+              "tickets": [
+                {
+                  "id": "CIMF-289",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-289"
+                }
+              ]
+            },
             {
               "sha": "0638422",
               "message": "feat: delete unused file CIMF-284",
@@ -558,7 +581,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-20T16:21:02Z",
+      "last_push": "2026-05-21T05:24:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-20",
@@ -1922,7 +1945,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-19T22:17:36Z",
+      "last_push": "2026-05-21T14:03:19Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -2000,8 +2023,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 10,
+          "count": 11,
           "recent_commits": [
+            {
+              "sha": "b49ed09",
+              "message": "refactor(SUP-301): alinear wizard manual hormonas con Alivia 1:1",
+              "date": "2026-05-21T14:03:16Z",
+              "author": "Felipe-Berrio-dev",
+              "pr_number": "214",
+              "tickets": [
+                {
+                  "id": "SUP-301",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-301"
+                }
+              ]
+            },
             {
               "sha": "e45766d",
               "message": "feat(checkout): ajuste de dosificación de hormonas PMO-2909",
