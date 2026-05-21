@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T17:11:39.887Z",
+  "generated_at": "2026-05-21T17:16:00.990Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -432,148 +432,6 @@
   },
   "repos": [
     {
-      "name": "nutrapp-gestion-proyectos-backend",
-      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-21T03:40:39Z",
-      "topics": [],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 0,
-          "recent_commits": []
-        },
-        "to_production": {
-          "count": 0,
-          "recent_commits": []
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "fruto-landing-cimf",
-      "full_name": "NutrappDev/fruto-landing-cimf",
-      "description": "Landing del congreso internacional de Medicina funcional",
-      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-20T21:36:35Z",
-      "topics": [
-        "fase-fruto",
-        "team-roble"
-      ],
-      "production": null,
-      "production_history": [],
-      "qa": null,
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 3,
-          "recent_commits": [
-            {
-              "sha": "6d8ea75",
-              "message": "fix: configuraciones diseno y agenda CIMF-289 ",
-              "date": "2026-05-20T21:36:36Z",
-              "author": "k-aguilera",
-              "pr_number": "23",
-              "tickets": [
-                {
-                  "id": "CIMF-289",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-289"
-                }
-              ]
-            },
-            {
-              "sha": "0638422",
-              "message": "feat: delete unused file CIMF-284",
-              "date": "2026-05-12T16:48:20Z",
-              "author": "k-aguilera",
-              "pr_number": "21",
-              "tickets": [
-                {
-                  "id": "CIMF-284",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
-                }
-              ]
-            },
-            {
-              "sha": "3876bf4",
-              "message": "feat: organizacion de agenda CIMF-284 ",
-              "date": "2026-05-12T16:40:07Z",
-              "author": "k-aguilera",
-              "pr_number": "20",
-              "tickets": [
-                {
-                  "id": "CIMF-284",
-                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 4,
-          "recent_commits": [
-            {
-              "sha": "73c83ca",
-              "message": "release: qa-2026-05-06",
-              "date": "2026-05-06T20:03:06Z",
-              "author": "k-aguilera",
-              "pr_number": "18",
-              "tickets": []
-            },
-            {
-              "sha": "88100ec",
-              "message": "release:  qa-2026-04-30",
-              "date": "2026-04-30T20:56:41Z",
-              "author": "k-aguilera",
-              "pr_number": "15",
-              "tickets": []
-            },
-            {
-              "sha": "40a0e8a",
-              "message": "release: qa-2026-04-24",
-              "date": "2026-04-24T22:04:57Z",
-              "author": "k-aguilera",
-              "pr_number": "12",
-              "tickets": []
-            },
-            {
-              "sha": "89acf6c",
-              "message": "release: qa-2026-04-17",
-              "date": "2026-04-20T15:32:59Z",
-              "author": "k-aguilera",
-              "pr_number": "7",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
       "name": "microservice_payments",
       "full_name": "NutrappDev/microservice_payments",
       "description": null,
@@ -581,16 +439,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:03:24Z",
+      "last_push": "2026-05-21T17:15:42Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-05-20",
-        "sha": "11751dd3ce480e49e5a9f7293b77d8d047bbb500",
-        "date": "2026-05-20T15:09:30Z",
-        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/prod-2026-05-20",
-        "body": "Release prod-2026-05-20\n"
+        "version": "prod-2026-05-21",
+        "sha": "94dd0a628cdf08f9c71604e817e1ec3a1119a77d",
+        "date": "2026-05-21T17:15:41Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/prod-2026-05-21",
+        "body": "Release prod-2026-05-21\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-05-20",
+          "sha": "11751dd3ce480e49e5a9f7293b77d8d047bbb500",
+          "date": "2026-05-20T15:09:30Z",
+          "url": "https://github.com/NutrappDev/microservice_payments/releases/tag/prod-2026-05-20",
+          "body": "Release prod-2026-05-20\n"
+        },
         {
           "version": "prod-2026-05-20-3",
           "sha": "cdefcdc85d7b6d3f4033124a4049a169d312eac7",
@@ -852,78 +717,10 @@
       "ci": {
         "status": "completed",
         "conclusion": "failure",
-        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/26175427135",
-        "updated_at": "2026-05-20T16:21:00Z",
+        "url": "https://github.com/NutrappDev/microservice_payments/actions/runs/26241521094",
+        "updated_at": "2026-05-21T17:15:50Z",
         "name": "Build, Deploy to AWS Fargate & Terraform Infra"
       },
-      "_errors": {
-        "production": null,
-        "qa": null,
-        "pending_to_qa": null,
-        "pending_to_production": null,
-        "ci": null
-      }
-    },
-    {
-      "name": "nutrabiotics-certificates-admin",
-      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
-      "description": null,
-      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
-      "is_archived": false,
-      "is_fork": false,
-      "default_branch": "main",
-      "last_push": "2026-05-19T22:03:32Z",
-      "topics": [],
-      "production": {
-        "version": "prod-2026-05-19",
-        "sha": "d05e1fc830420376a906efa9176fd648b045142a",
-        "date": "2026-05-19T22:03:31Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/prod-2026-05-19",
-        "body": "Release prod-2026-05-19\n"
-      },
-      "production_history": [],
-      "qa": {
-        "version": "qa-2026-05-19",
-        "sha": "c3e07525c88260aa6ee8e98ee218a8686ab14ecb",
-        "date": "2026-05-19T21:41:36Z",
-        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/qa-2026-05-19",
-        "body": "Release qa-2026-05-19\n"
-      },
-      "qa_history": [],
-      "pending": {
-        "to_qa": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "120cb66",
-              "message": "feat: Implement centralized error handling and authentication context with error boundary component PMO-2748",
-              "date": "2026-05-15T21:30:06Z",
-              "author": "CristiGB",
-              "pr_number": "31",
-              "tickets": [
-                {
-                  "id": "PMO-2748",
-                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2748"
-                }
-              ]
-            }
-          ]
-        },
-        "to_production": {
-          "count": 1,
-          "recent_commits": [
-            {
-              "sha": "c3e0752",
-              "message": "release: qa 2026 05 19",
-              "date": "2026-05-19T21:41:24Z",
-              "author": "CristiGB",
-              "pr_number": "32",
-              "tickets": []
-            }
-          ]
-        }
-      },
-      "ci": null,
       "_errors": {
         "production": null,
         "qa": null,
@@ -940,16 +737,23 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:11:15Z",
+      "last_push": "2026-05-21T17:11:41Z",
       "topics": [],
       "production": {
-        "version": "prod-2026-05-14",
-        "sha": "411e73acfeb9a3a8b9110e9ed8ad420d04be6dcb",
-        "date": "2026-05-14T23:06:50Z",
-        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-05-14",
-        "body": "Release prod-2026-05-14\n"
+        "version": "prod-2026-05-21",
+        "sha": "3db0e90f2494b4a6bade3d8d8fd35d6deef6444d",
+        "date": "2026-05-21T17:11:40Z",
+        "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-05-21",
+        "body": "Release prod-2026-05-21\n"
       },
       "production_history": [
+        {
+          "version": "prod-2026-05-14",
+          "sha": "411e73acfeb9a3a8b9110e9ed8ad420d04be6dcb",
+          "date": "2026-05-14T23:06:50Z",
+          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-05-14",
+          "body": "Release prod-2026-05-14\n"
+        },
         {
           "version": "prod-2026-05-12",
           "sha": "abd88dbc47e5faa63ab741ea8c1551fcba1de847",
@@ -970,13 +774,6 @@
           "date": "2026-05-06T20:57:52Z",
           "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-05-06",
           "body": "Release prod-2026-05-06\n"
-        },
-        {
-          "version": "prod-2026-04-29",
-          "sha": "156f0c6e9d608a10517f0cf74ab05d5f37763651",
-          "date": "2026-04-29T15:17:01Z",
-          "url": "https://github.com/NutrappDev/alivia/releases/tag/prod-2026-04-29",
-          "body": "Release prod-2026-04-29\n"
         }
       ],
       "qa": {
@@ -1350,6 +1147,216 @@
               "date": "2026-02-27T16:05:12Z",
               "author": "CristiGB",
               "pr_number": "328",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrapp-gestion-proyectos-backend",
+      "full_name": "NutrappDev/nutrapp-gestion-proyectos-backend",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrapp-gestion-proyectos-backend",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-21T03:40:39Z",
+      "topics": [],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 0,
+          "recent_commits": []
+        },
+        "to_production": {
+          "count": 0,
+          "recent_commits": []
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "fruto-landing-cimf",
+      "full_name": "NutrappDev/fruto-landing-cimf",
+      "description": "Landing del congreso internacional de Medicina funcional",
+      "url": "https://github.com/NutrappDev/fruto-landing-cimf",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-20T21:36:35Z",
+      "topics": [
+        "fase-fruto",
+        "team-roble"
+      ],
+      "production": null,
+      "production_history": [],
+      "qa": null,
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 3,
+          "recent_commits": [
+            {
+              "sha": "6d8ea75",
+              "message": "fix: configuraciones diseno y agenda CIMF-289 ",
+              "date": "2026-05-20T21:36:36Z",
+              "author": "k-aguilera",
+              "pr_number": "23",
+              "tickets": [
+                {
+                  "id": "CIMF-289",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-289"
+                }
+              ]
+            },
+            {
+              "sha": "0638422",
+              "message": "feat: delete unused file CIMF-284",
+              "date": "2026-05-12T16:48:20Z",
+              "author": "k-aguilera",
+              "pr_number": "21",
+              "tickets": [
+                {
+                  "id": "CIMF-284",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
+                }
+              ]
+            },
+            {
+              "sha": "3876bf4",
+              "message": "feat: organizacion de agenda CIMF-284 ",
+              "date": "2026-05-12T16:40:07Z",
+              "author": "k-aguilera",
+              "pr_number": "20",
+              "tickets": [
+                {
+                  "id": "CIMF-284",
+                  "url": "https://nutrabiotics.atlassian.net/browse/CIMF-284"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 4,
+          "recent_commits": [
+            {
+              "sha": "73c83ca",
+              "message": "release: qa-2026-05-06",
+              "date": "2026-05-06T20:03:06Z",
+              "author": "k-aguilera",
+              "pr_number": "18",
+              "tickets": []
+            },
+            {
+              "sha": "88100ec",
+              "message": "release:  qa-2026-04-30",
+              "date": "2026-04-30T20:56:41Z",
+              "author": "k-aguilera",
+              "pr_number": "15",
+              "tickets": []
+            },
+            {
+              "sha": "40a0e8a",
+              "message": "release: qa-2026-04-24",
+              "date": "2026-04-24T22:04:57Z",
+              "author": "k-aguilera",
+              "pr_number": "12",
+              "tickets": []
+            },
+            {
+              "sha": "89acf6c",
+              "message": "release: qa-2026-04-17",
+              "date": "2026-04-20T15:32:59Z",
+              "author": "k-aguilera",
+              "pr_number": "7",
+              "tickets": []
+            }
+          ]
+        }
+      },
+      "ci": null,
+      "_errors": {
+        "production": null,
+        "qa": null,
+        "pending_to_qa": null,
+        "pending_to_production": null,
+        "ci": null
+      }
+    },
+    {
+      "name": "nutrabiotics-certificates-admin",
+      "full_name": "NutrappDev/nutrabiotics-certificates-admin",
+      "description": null,
+      "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin",
+      "is_archived": false,
+      "is_fork": false,
+      "default_branch": "main",
+      "last_push": "2026-05-19T22:03:32Z",
+      "topics": [],
+      "production": {
+        "version": "prod-2026-05-19",
+        "sha": "d05e1fc830420376a906efa9176fd648b045142a",
+        "date": "2026-05-19T22:03:31Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/prod-2026-05-19",
+        "body": "Release prod-2026-05-19\n"
+      },
+      "production_history": [],
+      "qa": {
+        "version": "qa-2026-05-19",
+        "sha": "c3e07525c88260aa6ee8e98ee218a8686ab14ecb",
+        "date": "2026-05-19T21:41:36Z",
+        "url": "https://github.com/NutrappDev/nutrabiotics-certificates-admin/releases/tag/qa-2026-05-19",
+        "body": "Release qa-2026-05-19\n"
+      },
+      "qa_history": [],
+      "pending": {
+        "to_qa": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "120cb66",
+              "message": "feat: Implement centralized error handling and authentication context with error boundary component PMO-2748",
+              "date": "2026-05-15T21:30:06Z",
+              "author": "CristiGB",
+              "pr_number": "31",
+              "tickets": [
+                {
+                  "id": "PMO-2748",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2748"
+                }
+              ]
+            }
+          ]
+        },
+        "to_production": {
+          "count": 1,
+          "recent_commits": [
+            {
+              "sha": "c3e0752",
+              "message": "release: qa 2026 05 19",
+              "date": "2026-05-19T21:41:24Z",
+              "author": "CristiGB",
+              "pr_number": "32",
               "tickets": []
             }
           ]
