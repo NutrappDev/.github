@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T16:11:24.733Z",
+  "generated_at": "2026-05-22T20:40:55.838Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -158,6 +158,11 @@
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
+    },
+    "PALCO-19": {
+      "summary": "Sincronización de números de embarque y estados de salida de mercancía.",
+      "status": "En proceso",
+      "assignee": "Mario Eraso"
     },
     "NMX-428": {
       "summary": "🔄 Alineación de ambientes: Nutrabiotics.mx",
@@ -1485,7 +1490,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T15:49:45Z",
+      "last_push": "2026-05-22T20:33:17Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1915,7 +1920,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T14:03:19Z",
+      "last_push": "2026-05-22T20:30:37Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -3220,7 +3225,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T16:10:54Z",
+      "last_push": "2026-05-22T20:40:25Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3298,8 +3303,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "4fcf602",
+              "message": "feat(erp): use case get shipment PALCO-19",
+              "date": "2026-05-22T20:40:24Z",
+              "author": "meraso-nutra",
+              "pr_number": "404",
+              "tickets": [
+                {
+                  "id": "PALCO-19",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PALCO-19"
+                }
+              ]
+            },
             {
               "sha": "6c226ac",
               "message": "feat(erp): logic created in lib erp to save epicor id NCR-131",
