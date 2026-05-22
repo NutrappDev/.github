@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T23:30:55.790Z",
+  "generated_at": "2026-05-22T16:11:24.733Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -158,6 +158,11 @@
       "summary": "Implementar validación previa de existencia del customer en Epicor",
       "status": "Despliegue a QA",
       "assignee": "Jhelcy Sandoval"
+    },
+    "NMX-428": {
+      "summary": "🔄 Alineación de ambientes: Nutrabiotics.mx",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
     },
     "NMX-418": {
       "summary": "Ajustar los profesionales de Dirección Médica ( Avalado )",
@@ -695,7 +700,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:11:41Z",
+      "last_push": "2026-05-22T08:17:48Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-21",
@@ -1480,7 +1485,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T17:30:31Z",
+      "last_push": "2026-05-22T15:49:45Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -2401,7 +2406,7 @@
           ]
         },
         "to_production": {
-          "count": 11,
+          "count": 10,
           "recent_commits": [
             {
               "sha": "e637056",
@@ -2491,14 +2496,6 @@
               "date": "2026-02-25T13:12:32Z",
               "author": "k-aguilera",
               "pr_number": "27",
-              "tickets": []
-            },
-            {
-              "sha": "8cb24a1",
-              "message": "Merge to QA",
-              "date": "2026-02-21T00:39:34Z",
-              "author": "k-aguilera",
-              "pr_number": "24",
               "tickets": []
             }
           ]
@@ -3032,7 +3029,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T21:48:10Z",
+      "last_push": "2026-05-22T15:42:51Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3063,8 +3060,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "eb61a63",
+              "message": "refactor: realizar ajustes necesarios para actualizar el proyecto NMX-428",
+              "date": "2026-05-22T15:42:47Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "24",
+              "tickets": [
+                {
+                  "id": "NMX-428",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NMX-428"
+                }
+              ]
+            },
             {
               "sha": "581db62",
               "message": "fix: actualizar profesional de Dirección Médica México [NMX-418]",
@@ -3210,7 +3220,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T23:30:29Z",
+      "last_push": "2026-05-22T16:10:54Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3288,8 +3298,34 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "6c226ac",
+              "message": "feat(erp): logic created in lib erp to save epicor id NCR-131",
+              "date": "2026-05-22T16:10:52Z",
+              "author": "meraso-nutra",
+              "pr_number": "401",
+              "tickets": [
+                {
+                  "id": "NCR-131",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-131"
+                }
+              ]
+            },
+            {
+              "sha": "ffdf5f6",
+              "message": "fix(prescriptions): bug pdf SUP-292",
+              "date": "2026-04-20T21:17:45Z",
+              "author": "fabianromerolu",
+              "pr_number": "325",
+              "tickets": [
+                {
+                  "id": "SUP-292",
+                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
+                }
+              ]
+            },
             {
               "sha": "fc4a70f",
               "message": "feat(erp): wip add epicor id to ms irders db NCR-131",
@@ -3335,19 +3371,6 @@
               "date": "2026-04-20T22:54:34Z",
               "author": "fabianromerolu",
               "pr_number": "326",
-              "tickets": [
-                {
-                  "id": "SUP-292",
-                  "url": "https://nutrabiotics.atlassian.net/browse/SUP-292"
-                }
-              ]
-            },
-            {
-              "sha": "ffdf5f6",
-              "message": "fix(prescriptions): bug pdf SUP-292",
-              "date": "2026-04-20T21:17:45Z",
-              "author": "fabianromerolu",
-              "pr_number": "325",
               "tickets": [
                 {
                   "id": "SUP-292",
