@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T22:28:57.798Z",
+  "generated_at": "2026-05-22T22:49:31.035Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -117,6 +117,11 @@
     "PMO-2898": {
       "summary": "Deshabilitación de testimonios en Home – Nutrabiotics México (Riesgo regulatorio)",
       "status": "Despliegue a QA",
+      "assignee": "Miller Ladino Osorio"
+    },
+    "PMO-2893": {
+      "summary": "Colocar banner promocional del CIMF 2026 en el home de la página de Nutrabitocs",
+      "status": "Despliegue a DEV",
       "assignee": "Miller Ladino Osorio"
     },
     "PMO-2817": {
@@ -1515,7 +1520,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T22:28:31Z",
+      "last_push": "2026-05-22T22:49:04Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1593,8 +1598,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 6,
+          "count": 7,
           "recent_commits": [
+            {
+              "sha": "50393b6",
+              "message": "fix(banner): add CIMF 2026 promotional banner  #PMO-2893",
+              "date": "2026-05-22T22:49:03Z",
+              "author": "mladino-source",
+              "pr_number": "101",
+              "tickets": [
+                {
+                  "id": "PMO-2893",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2893"
+                }
+              ]
+            },
             {
               "sha": "b358943",
               "message": "fix(farmacovigilancia): and trigger display on button click NCOL-681",
