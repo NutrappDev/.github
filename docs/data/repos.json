@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:51:13.717Z",
+  "generated_at": "2026-05-22T20:54:37.874Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -208,6 +208,11 @@
       "summary": "Mejoras en Registro y Notificaciones del Contact Center",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
+    },
+    "NCR-125": {
+      "summary": "Datos del usuario desde Keycloak",
+      "status": "En proceso",
+      "assignee": "ISABEL GOMEZ"
     },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
@@ -3230,7 +3235,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:50:48Z",
+      "last_push": "2026-05-22T20:54:09Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3308,8 +3313,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "d8ff7e6",
+              "message": "feat(users): prioritize Keycloak data with fallback to database NCR-125",
+              "date": "2026-05-22T20:54:07Z",
+              "author": "CristiGB",
+              "pr_number": "402",
+              "tickets": [
+                {
+                  "id": "NCR-125",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCR-125"
+                }
+              ]
+            },
             {
               "sha": "e3cb0d8",
               "message": "docs: actualizar arquitectura, cicd y setup local DE-354",
