@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T22:49:31.035Z",
+  "generated_at": "2026-05-22T22:56:53.115Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -233,6 +233,11 @@
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
+    },
+    "NCOL-687": {
+      "summary": "BG | Acceso Tribu | Mobile | No se muestra mensaje de error y redirige a la pantalla de inicio",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "NCOL-681": {
       "summary": "BG | Formulario | El botón no tiene uso, ya que el formulario se despliega automáticamente",
@@ -1520,7 +1525,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T22:49:04Z",
+      "last_push": "2026-05-22T22:56:30Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1598,8 +1603,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 7,
+          "count": 8,
           "recent_commits": [
+            {
+              "sha": "1e189b6",
+              "message": "fix(redirect-links): show error message redirecting to home on mobile #NCOL-687",
+              "date": "2026-05-22T22:56:28Z",
+              "author": "mladino-source",
+              "pr_number": "103",
+              "tickets": [
+                {
+                  "id": "NCOL-687",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-687"
+                }
+              ]
+            },
             {
               "sha": "50393b6",
               "message": "fix(banner): add CIMF 2026 promotional banner  #PMO-2893",
