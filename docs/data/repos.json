@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T22:16:50.697Z",
+  "generated_at": "2026-05-22T22:28:57.798Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -221,13 +221,18 @@
     },
     "NCR-125": {
       "summary": "Datos del usuario desde Keycloak",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "ISABEL GOMEZ"
     },
     "NCR-117": {
       "summary": "El portal de administración no puede procesar pagos por bloqueo de seguridad",
       "status": "Despliegue a PROD",
       "assignee": "Felipe Berrio"
+    },
+    "NCOL-681": {
+      "summary": "BG | Formulario | El botón no tiene uso, ya que el formulario se despliega automáticamente",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
     },
     "NCOL-647": {
       "summary": "BG | Diseño botones \"Ver más\" no corresponden",
@@ -1510,7 +1515,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T22:16:23Z",
+      "last_push": "2026-05-22T22:28:31Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1588,8 +1593,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 5,
+          "count": 6,
           "recent_commits": [
+            {
+              "sha": "b358943",
+              "message": "fix(farmacovigilancia): and trigger display on button click NCOL-681",
+              "date": "2026-05-22T22:28:30Z",
+              "author": "mladino-source",
+              "pr_number": "102",
+              "tickets": [
+                {
+                  "id": "NCOL-681",
+                  "url": "https://nutrabiotics.atlassian.net/browse/NCOL-681"
+                }
+              ]
+            },
             {
               "sha": "72a92df",
               "message": "fix(banners): update redirect links for Congreso l PMO-2923",
