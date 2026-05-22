@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:40:55.838Z",
+  "generated_at": "2026-05-22T20:51:13.717Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -253,6 +253,11 @@
       "summary": "Endpoint para verificar y completar orden por referencia Wompi",
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
+    },
+    "DE-354": {
+      "summary": "Crear workflow para IA en PRs",
+      "status": "En proceso",
+      "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "DE-353": {
       "summary": "Revision del microservicio de pagos",
@@ -1490,7 +1495,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:33:17Z",
+      "last_push": "2026-05-22T20:50:21Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -3225,7 +3230,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:40:25Z",
+      "last_push": "2026-05-22T20:50:48Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
@@ -3303,8 +3308,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 8,
+          "count": 9,
           "recent_commits": [
+            {
+              "sha": "e3cb0d8",
+              "message": "docs: actualizar arquitectura, cicd y setup local DE-354",
+              "date": "2026-05-22T20:50:46Z",
+              "author": "jgaray-nutrapp",
+              "pr_number": "403",
+              "tickets": [
+                {
+                  "id": "DE-354",
+                  "url": "https://nutrabiotics.atlassian.net/browse/DE-354"
+                }
+              ]
+            },
             {
               "sha": "4fcf602",
               "message": "feat(erp): use case get shipment PALCO-19",
