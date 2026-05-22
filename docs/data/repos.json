@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T20:54:37.874Z",
+  "generated_at": "2026-05-22T22:16:50.697Z",
   "organization": "NutrappDev",
   "jira_base_url": "https://nutrabiotics.atlassian.net/browse",
   "total_repos": 31,
@@ -99,6 +99,11 @@
       "status": "Actividad completada",
       "assignee": "Carlos Ali Parra"
     },
+    "PMO-2923": {
+      "summary": "Actualización de redirección de banners – Congreso Medicina Funcional",
+      "status": "Despliegue a DEV",
+      "assignee": "Miller Ladino Osorio"
+    },
     "PMO-2913": {
       "summary": "Actualización de contenido regulatorio – Sección Productos Mexico",
       "status": "Despliegue a QA",
@@ -149,6 +154,11 @@
       "status": "Despliegue a DEV",
       "assignee": "Felipe Berrio"
     },
+    "PMO-2256": {
+      "summary": "Modificación calendario de eventos – NutraBiotics Mexico Educación",
+      "status": "Despliegue a DEV",
+      "assignee": "Steven Leon"
+    },
     "PALMX-15": {
       "summary": "Configuración inicial Mexico ( mi cuenta) Apuntamiento Alivia - Nutrabiotics Mexico",
       "status": "Actividad completada",
@@ -166,7 +176,7 @@
     },
     "NMX-428": {
       "summary": "🔄 Alineación de ambientes: Nutrabiotics.mx",
-      "status": "Despliegue a DEV",
+      "status": "Despliegue a QA",
       "assignee": "Steven Leon"
     },
     "NMX-418": {
@@ -201,7 +211,7 @@
     },
     "NCR-131": {
       "summary": "Crear campo para almacenar ID de Epicor",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "Mario Eraso"
     },
     "NCR-127": {
@@ -211,7 +221,7 @@
     },
     "NCR-125": {
       "summary": "Datos del usuario desde Keycloak",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "ISABEL GOMEZ"
     },
     "NCR-117": {
@@ -261,7 +271,7 @@
     },
     "DE-354": {
       "summary": "Crear workflow para IA en PRs",
-      "status": "En proceso",
+      "status": "Despliegue a DEV",
       "assignee": "JORGE EDUARDO GARAY GUTIERREZ"
     },
     "DE-353": {
@@ -404,7 +414,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-21T19:06:12Z",
+      "last_push": "2026-05-22T21:12:36Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-21",
@@ -1500,7 +1510,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:50:21Z",
+      "last_push": "2026-05-22T22:16:23Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-08",
@@ -1578,8 +1588,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 4,
+          "count": 5,
           "recent_commits": [
+            {
+              "sha": "72a92df",
+              "message": "fix(banners): update redirect links for Congreso l PMO-2923",
+              "date": "2026-05-22T22:16:21Z",
+              "author": "mladino-source",
+              "pr_number": "100",
+              "tickets": [
+                {
+                  "id": "PMO-2923",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2923"
+                }
+              ]
+            },
             {
               "sha": "3208718",
               "message": "test: ajustes scripts por timeout QA-779",
@@ -1930,7 +1953,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:30:37Z",
+      "last_push": "2026-05-22T21:08:46Z",
       "topics": [],
       "production": {
         "version": "prod-2026-05-06",
@@ -3044,7 +3067,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T15:42:51Z",
+      "last_push": "2026-05-22T22:10:26Z",
       "topics": [
         "fase-fruto",
         "team-roble"
@@ -3075,8 +3098,21 @@
       ],
       "pending": {
         "to_qa": {
-          "count": 9,
+          "count": 10,
           "recent_commits": [
+            {
+              "sha": "b68c212",
+              "message": "feat(events): implementar calendario de eventos en la web de NutraMX PMO-2256",
+              "date": "2026-05-22T22:10:24Z",
+              "author": "Steven-Leon-007",
+              "pr_number": "25",
+              "tickets": [
+                {
+                  "id": "PMO-2256",
+                  "url": "https://nutrabiotics.atlassian.net/browse/PMO-2256"
+                }
+              ]
+            },
             {
               "sha": "eb61a63",
               "message": "refactor: realizar ajustes necesarios para actualizar el proyecto NMX-428",
@@ -3235,7 +3271,7 @@
       "is_archived": false,
       "is_fork": false,
       "default_branch": "main",
-      "last_push": "2026-05-22T20:54:09Z",
+      "last_push": "2026-05-22T21:52:32Z",
       "topics": [],
       "production": {
         "version": "v2.0.0",
