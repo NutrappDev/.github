@@ -9,8 +9,6 @@ on:
   schedule:
     - cron: "30 5 * * 1"  # Semanal, lunes 5:30 AM UTC (justo después de repos.json a las 5:00)
   workflow_dispatch:
-  repository_dispatch:
-    types: [deployment-completed]  # Mismo evento que dispara repos.json
 
 jobs:
   generate:
